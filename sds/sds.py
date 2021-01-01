@@ -16,7 +16,7 @@ class Stack:
         self.__stack.insert(0, x)
 
     def empty(self):
-        if self.__stack == []:
+        if len(self.__stack) == 0:
             return True
         else:
             return False
@@ -37,6 +37,7 @@ class Stack:
 
     def dup(self):
         self.__stack.insert(0, self.__stack[0])
+
     def get_stack(self):
         return self.__stack
 
@@ -59,12 +60,13 @@ class Queue:
         del self.__queue[0]
 
     def empty(self):
-        if self.__queue == []:
+        if len(self.__queue) == 0:
             return True
         else:
             return False
 
     def length(self):
         return len(self.__queue)
-    def get_Queue(self):
+
+    def get_queue(self):
         return self.__queue
