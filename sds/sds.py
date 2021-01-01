@@ -6,8 +6,7 @@ class Stack:
         except KeyError:
             self.__stack = []
         except TypeError:
-            self.__stack = []
-            self.__stack.append(ls['ls'])
+            self.__stack = [ls['ls']]
 
     def pop(self):
         del self.__stack[0]
@@ -50,8 +49,7 @@ class Queue:
         except KeyError:
             self.__queue = []
         except TypeError:
-            self.__queue = []
-            self.__queue.append(ls['ls'])
+            self.__queue = [ls['ls']]
 
     def enqueue(self, x):
         self.__queue.append(x)
