@@ -8,6 +8,14 @@ class Stack:
         except TypeError:
             self.__stack = [ls['ls']]
 
+    @property
+    def stack(self):
+        return self.__stack
+
+    @stack.setter
+    def stack(self, x):
+        self.__stack.append(x)
+
     def pop(self):
         del self.__stack[0]
 
