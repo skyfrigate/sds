@@ -1,0 +1,22 @@
+[project]
+name = "sds"
+version = "0.1.0"
+description = "Tools for using and manipulating simple basic data structures"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "bandit>=1.8.6",
+    "black>=25.11.0",
+    "isort>=7.0.0",
+    "lint>=1.2.1",
+    "mypy>=1.18.2",
+    "pytest>=9.0.1",
+    "pytest-cov>=7.0.0",
+    "tox>=4.32.0",
+    "tox-uv>=1.29.0",
+]
+docs = [
+    "sphinx>=8.1.3",
+]
