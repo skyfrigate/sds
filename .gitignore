@@ -1,12 +1,4 @@
-# Django #
-*.log
-*.pot
-*.pyc
-__pycache__
-db.sqlite3
-media
-
-# Backup files # 
+# Backup files #
 *.bak 
 
 # If you are using PyCharm # 
@@ -23,11 +15,17 @@ media
 .idea/**/gradle.xml 
 .idea/**/libraries 
 .idea/
-*.iws /out/ 
+*.iws /out/
 
-# Python # 
-*.py[cod] 
-*$py.class 
+## Python
+.cache
+.pytest_cache/
+*.py[cod]
+*$py.class
+*.so
+.Python
+# Python #
+*$py.class
 
 # Distribution / packaging 
 .Python build/ 
@@ -55,19 +53,30 @@ pip-log.txt
 pip-delete-this-directory.txt 
 
 # Unit test / coverage reports 
-htmlcov/ 
-.tox/ 
-.coverage 
-.coverage.* 
-.cache 
-.pytest_cache/ 
-nosetests.xml 
-coverage.xml 
-*.cover 
+
+nosetests.xml
 .hypothesis/
-tests/coverage
+
+## Tox
+.tox/
+.tox-config/.tox
+
+## Coverage
+*.cover
+.coverage 
+.coverage.*
+coverage.xml
+htmlcov/
+tests/coverage/
 coverage/
 
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
 
 # Jupyter Notebook 
 .ipynb_checkpoints 

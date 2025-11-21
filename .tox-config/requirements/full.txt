@@ -1,0 +1,8 @@
+mypy
+bandit
+black
+flake8
+isort
+pytest
+pytest-cov
+tox
