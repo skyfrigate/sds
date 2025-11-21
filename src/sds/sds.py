@@ -2,11 +2,11 @@ class Stack:
 
     def __init__(self, **ls):
         try:
-            self.__stack = list(ls['ls'])
+            self.__stack = list(ls["ls"])
         except KeyError:
             self.__stack = []
         except TypeError:
-            self.__stack = [ls['ls']]
+            self.__stack = [ls["ls"]]
 
     @property
     def stack(self):
@@ -53,11 +53,11 @@ class Queue:
 
     def __init__(self, **ls):
         try:
-            self.__queue = list(ls['ls'])
+            self.__queue = list(ls["ls"])
         except KeyError:
             self.__queue = []
         except TypeError:
-            self.__queue = [ls['ls']]
+            self.__queue = [ls["ls"]]
 
     def enqueue(self, x):
         self.__queue.append(x)
