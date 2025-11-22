@@ -126,8 +126,8 @@ generate_coverage() {
             pytest --import-mode=importlib \
             --cov=sds \
             --cov-report=term-missing \
-            --cov-report=xml:coverage/tox-coverage.xml \
-            --cov-report=html:coverage/tox-coverage_html tests; then
+            --cov-report=xml:coverage/coverage.xml \
+            --cov-report=html:coverage/coverage_html tests; then
             log_error "Coverage generation failed with ${coverage_env}"
             return 1
         fi
@@ -138,8 +138,8 @@ generate_coverage() {
     # Afficher les chemins des rapports
     echo ""
     log_info "Coverage reports:"
-    [[ -f "coverage/tox-coverage.xml" ]] && log_info "  - XML: coverage/tox-coverage.xml"
-    [[ -d "coverage/tox-coverage_html" ]] && log_info "  - HTML: coverage/tox-coverage_html/index.html"
+    [[ -f "coverage/coverage.xml" ]] && log_info "  - XML: coverage/coverage.xml"
+    [[ -d "coverage/coverage_html" ]] && log_info "  - HTML: coverage/coverage_html/index.html"
     
     return 0
 }
