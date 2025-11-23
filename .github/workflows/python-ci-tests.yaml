@@ -1,0 +1,44 @@
+name: Python CI - Tests
+
+on:
+  workflow_run:
+    workflows: ["Python CI - Quality"]
+    types:
+      - completed
+    branches:
+      - '**'
+
+jobs:
+  tests:
+    name: Run Tests (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    
+    # Ne s'exécute que si le workflow Quality Check a réussi
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.9', '3.10', '3.11', '3.12']
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Install tox
+        run: |
+          uv pip install --system tox tox-uv
+      
+      - name: Run tests with tox
+        run: |
+          tox -e ci-tests
+        env:
+          TOXENV: py${{ matrix.python-version }}
