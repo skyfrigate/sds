@@ -32,9 +32,7 @@ jobs:
       
       - name: Install uv
         uses: astral-sh/setup-uv@v4
-        with:
-          enable-cache: true
-      
+
       - name: Install tox
         run: |
           uv pip install --system tox tox-uv
