@@ -24,7 +24,9 @@
 py310
 py311
 #py312
+py313
+py314
 
 # Exemples pour le futur :
-# py313
+# py315
 # pypy310
