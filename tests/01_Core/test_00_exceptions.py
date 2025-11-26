@@ -6,7 +6,7 @@ from sds.core.exceptions import (
     DataStructureError,
     EmptyStructureError,
     FullStructureError,
-    IndexError,
+    IndexStructureError,
     InvalidOperationError,
 )
 
@@ -26,7 +26,7 @@ from sds.core.exceptions import (
             "Cannot add to full structure",
         ),
         (InvalidOperationError, [Exception, DataStructureError], "Invalid operation"),
-        (IndexError, [Exception, DataStructureError], "Index out of range"),
+        (IndexStructureError, [Exception, DataStructureError], "Index out of range"),
     ],
 )
 def test_data_structure_exception(class_name, class_hierarchy, default_message):
@@ -62,7 +62,7 @@ def test_data_structure_exception(class_name, class_hierarchy, default_message):
             "Operation interdite",
         ),
         (
-            IndexError,
+            IndexStructureError,
             [Exception, DataStructureError],
             "Index out of range",
             "N'est pas dans le segment d'index",

@@ -31,7 +31,7 @@ class InvalidOperationError(DataStructureError):
         super().__init__(self.message)
 
 
-class IndexError(DataStructureError):
+class IndexStructureError(DataStructureError):
     """Exception raised when an invalid index is accessed."""
 
     def __init__(self, message: str = "Index out of range"):
