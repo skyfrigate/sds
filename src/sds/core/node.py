@@ -36,9 +36,9 @@ class Node:
 
     Attributes
     ----------
-    data : Any
+    _data : Any
         The data stored in the node (read/write via property).
-    next : Node or None
+    _next : Node or None
         Reference to the next node in the list (read/write via property).
 
     Examples
@@ -220,11 +220,11 @@ class DoublyNode:
 
     Attributes
     ----------
-    data : Any
+    _data : Any
         The data stored in the node (read/write via property).
-    next : DoublyNode or None
+    _next : DoublyNode or None
         Reference to the next node in the list (read/write via property).
-    prev : DoublyNode or None
+    _prev : DoublyNode or None
         Reference to the previous node in the list (read/write via property).
 
     Examples
