@@ -3,15 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-sds documentation
-=================
+Overview
+========
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+Advanced **Simple Data Structures** is a toolbox to manage and explore enhanced data structures such as lists, trees or
+graphs, and, usefully algorithms.
+
 
 
 .. toctree::
-   :maxdepth: 2
+   api
+   indices
+   :maxdepth: 3
    :caption: Contents:
 
