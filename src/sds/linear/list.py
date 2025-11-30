@@ -66,8 +66,8 @@ from ..core.exceptions import (
     EmptyStructureError,
 )
 from ..core.exceptions import IndexStructureError as SDSIndexError
-from ..core.node import DoublyNode, Node
 from .interfaces import AbstractLinkedList
+from .node import DoublyNode, SimpleNode
 
 
 class LinkedList(AbstractLinkedList):
@@ -141,10 +141,10 @@ class LinkedList(AbstractLinkedList):
     def __init__(self):
         """Initialize an empty singly linked list."""
         super().__init__()
-        self._head: Optional[Node] = None
+        self._head: Optional[SimpleNode] = None
 
     @property
-    def head(self) -> Optional[Node]:
+    def head(self) -> Optional[SimpleNode]:
         """Get the first node in the list.
 
         Returns
@@ -367,7 +367,7 @@ class LinkedList(AbstractLinkedList):
         node = self._get_node(index)
         node.data = value
 
-    def _get_node(self, index: int) -> Node:
+    def _get_node(self, index: int) -> SimpleNode:
         """Get the node at the specified index.
 
         This is an internal helper method used by __getitem__ and __setitem__.
@@ -404,10 +404,10 @@ class LinkedList(AbstractLinkedList):
             )
 
         # After the emptiness and bounds checks above, head must be non-None
-        current: Node = cast(Node, self._head)
+        current: SimpleNode = cast(SimpleNode, self._head)
         for _ in range(index):
             # We remain within bounds, so next is guaranteed non-None
-            current = cast(Node, current.next)
+            current = cast(SimpleNode, current.next)
 
         return current
 
@@ -432,7 +432,7 @@ class LinkedList(AbstractLinkedList):
         -----
         Time complexity: O(1)
         """
-        new_node = Node(item, self._head)
+        new_node = SimpleNode(item, self._head)
         self._head = new_node
         self._size += 1
 
@@ -458,15 +458,15 @@ class LinkedList(AbstractLinkedList):
         Time complexity: O(n)
         This implementation must traverse the entire list to find the end.
         """
-        new_node = Node(item)
+        new_node = SimpleNode(item)
 
         if self.is_empty():
             self._head = new_node
         else:
             # list not empty -> _head is not None
-            current: Node = cast(Node, self._head)
+            current: SimpleNode = cast(SimpleNode, self._head)
             while current.next is not None:
-                current = cast(Node, current.next)
+                current = cast(SimpleNode, current.next)
             current.next = new_node
 
         self._size += 1
@@ -509,7 +509,7 @@ class LinkedList(AbstractLinkedList):
             self.prepend(item)
         else:
             prev_node = self._get_node(index - 1)
-            new_node = Node(item, prev_node.next)
+            new_node = SimpleNode(item, prev_node.next)
             prev_node.next = new_node
             self._size += 1
 
@@ -544,7 +544,7 @@ class LinkedList(AbstractLinkedList):
             raise EmptyStructureError("Cannot remove from empty list")
 
         # Non-empty implies _head is not None
-        head: Node = cast(Node, self._head)
+        head: SimpleNode = cast(SimpleNode, self._head)
         data = head.data
         self._head = head.next
         self._size -= 1
@@ -585,15 +585,15 @@ class LinkedList(AbstractLinkedList):
             return self.remove_first()
 
         # At least two nodes exist
-        current: Node = cast(Node, self._head)
+        current: SimpleNode = cast(SimpleNode, self._head)
         # Move until current is the penultimate node
         while True:
-            nxt: Node = cast(Node, current.next)
+            nxt: SimpleNode = cast(SimpleNode, current.next)
             if nxt.next is None:
                 break
             current = nxt
 
-        data = cast(Node, current.next).data
+        data = cast(SimpleNode, current.next).data
         current.next = None
         self._size -= 1
         return data
@@ -636,13 +636,13 @@ class LinkedList(AbstractLinkedList):
         if self.is_empty():
             raise EmptyStructureError("Cannot remove from empty list")
 
-        head: Node = cast(Node, self._head)
+        head: SimpleNode = cast(SimpleNode, self._head)
         if head.data == item:
             return self.remove_first()
 
-        current: Node = cast(Node, self._head)
+        current: SimpleNode = cast(SimpleNode, self._head)
         while current.next is not None:
-            nxt: Node = cast(Node, current.next)
+            nxt: SimpleNode = cast(SimpleNode, current.next)
             if nxt.data == item:
                 data = nxt.data
                 current.next = nxt.next
@@ -700,7 +700,7 @@ class LinkedList(AbstractLinkedList):
             return self.remove_first()
 
         prev_node = self._get_node(index - 1)
-        target: Node = cast(Node, prev_node.next)
+        target: SimpleNode = cast(SimpleNode, prev_node.next)
         data = target.data
         prev_node.next = target.next
         self._size -= 1
@@ -1601,15 +1601,15 @@ class CircularLinkedList(AbstractLinkedList):
     def __init__(self):
         """Initialize an empty circular linked list."""
         super().__init__()
-        self._tail: Optional[Node] = None
+        self._tail: Optional[SimpleNode] = None
 
     @property
-    def tail(self) -> Optional[Node]:
+    def tail(self) -> Optional[SimpleNode]:
         """Get the last node in the list.
 
         Returns
         -------
-        Node or None
+        SimpleNode or None
             The last node, or None if the list is empty.
 
         Examples
@@ -1632,12 +1632,12 @@ class CircularLinkedList(AbstractLinkedList):
         return self._tail
 
     @property
-    def head(self) -> Optional[Node]:
+    def head(self) -> Optional[SimpleNode]:
         """Get the first node in the list.
 
         Returns
         -------
-        Node or None
+        SimpleNode or None
             The first node (tail.next), or None if the list is empty.
 
         Examples
@@ -1701,10 +1701,10 @@ class CircularLinkedList(AbstractLinkedList):
         if self.is_empty():
             return
 
-        current: Node = cast(Node, self.head)
+        current: SimpleNode = cast(SimpleNode, self.head)
         for _ in range(self._size):
             yield current.data
-            current = cast(Node, current.next)
+            current = cast(SimpleNode, current.next)
 
     def __contains__(self, item: Any) -> bool:
         """Return True if item is in the list.
@@ -1845,7 +1845,7 @@ class CircularLinkedList(AbstractLinkedList):
         node = self._get_node(index)
         node.data = value
 
-    def _get_node(self, index: int) -> Node:
+    def _get_node(self, index: int) -> SimpleNode:
         """Get the node at the specified index.
 
         This is an internal helper method.
@@ -1857,7 +1857,7 @@ class CircularLinkedList(AbstractLinkedList):
 
         Returns
         -------
-        Node
+        SimpleNode
             The node at the specified index.
 
         Raises
@@ -1881,9 +1881,9 @@ class CircularLinkedList(AbstractLinkedList):
                 f"Index {index} out of range for list of size {self._size}"
             )
 
-        current: Node = cast(Node, self.head)
+        current: SimpleNode = cast(SimpleNode, self.head)
         for _ in range(index):
-            current = cast(Node, current.next)
+            current = cast(SimpleNode, current.next)
 
         return current
 
@@ -1908,14 +1908,14 @@ class CircularLinkedList(AbstractLinkedList):
         -----
         Time complexity: O(1)
         """
-        new_node = Node(item)
+        new_node = SimpleNode(item)
 
         if self.is_empty():
             new_node.next = new_node  # Point to itself
             self._tail = new_node
         else:
-            new_node.next = cast(Node, self.head)
-            cast(Node, self._tail).next = new_node
+            new_node.next = cast(SimpleNode, self.head)
+            cast(SimpleNode, self._tail).next = new_node
 
         self._size += 1
 
@@ -1940,14 +1940,14 @@ class CircularLinkedList(AbstractLinkedList):
         -----
         Time complexity: O(1)
         """
-        new_node = Node(item)
+        new_node = SimpleNode(item)
 
         if self.is_empty():
             new_node.next = new_node  # Point to itself
             self._tail = new_node
         else:
-            new_node.next = cast(Node, self.head)
-            cast(Node, self._tail).next = new_node
+            new_node.next = cast(SimpleNode, self.head)
+            cast(SimpleNode, self._tail).next = new_node
             self._tail = new_node
 
         self._size += 1
@@ -1992,8 +1992,8 @@ class CircularLinkedList(AbstractLinkedList):
             self.append(item)
         else:
             prev_node = self._get_node(index - 1)
-            next_node: Optional[Node] = prev_node.next
-            new_node = Node(item, next_node)
+            next_node: Optional[SimpleNode] = prev_node.next
+            new_node = SimpleNode(item, next_node)
             prev_node.next = new_node
             self._size += 1
 
@@ -2027,13 +2027,13 @@ class CircularLinkedList(AbstractLinkedList):
         if self.is_empty():
             raise EmptyStructureError("Cannot remove from empty list")
 
-        head: Node = cast(Node, self.head)
+        head: SimpleNode = cast(SimpleNode, self.head)
         data = head.data
 
         if self._size == 1:
             self._tail = None
         else:
-            cast(Node, self._tail).next = cast(Node, head.next)
+            cast(SimpleNode, self._tail).next = cast(SimpleNode, head.next)
 
         self._size -= 1
         return data
@@ -2073,12 +2073,12 @@ class CircularLinkedList(AbstractLinkedList):
             return self.remove_first()
 
         # Find second to last node
-        current: Node = cast(Node, self.head)
+        current: SimpleNode = cast(SimpleNode, self.head)
         while current.next != self._tail:
-            current = cast(Node, current.next)
+            current = cast(SimpleNode, current.next)
 
-        data = cast(Node, self._tail).data
-        current.next = cast(Node, self.head)
+        data = cast(SimpleNode, self._tail).data
+        current.next = cast(SimpleNode, self.head)
         self._tail = current
         self._size -= 1
         return data
@@ -2121,12 +2121,12 @@ class CircularLinkedList(AbstractLinkedList):
         if self.is_empty():
             raise EmptyStructureError("Cannot remove from empty list")
 
-        if cast(Node, self.head).data == item:
+        if cast(SimpleNode, self.head).data == item:
             return self.remove_first()
 
-        current: Node = cast(Node, self.head)
+        current: SimpleNode = cast(SimpleNode, self.head)
         for _ in range(self._size - 1):
-            nxt: Node = cast(Node, current.next)
+            nxt: SimpleNode = cast(SimpleNode, current.next)
             if nxt.data == item:
                 data = nxt.data
                 if nxt == self._tail:
@@ -2186,7 +2186,7 @@ class CircularLinkedList(AbstractLinkedList):
             return self.remove_first()
 
         prev_node = self._get_node(index - 1)
-        target: Node = cast(Node, prev_node.next)
+        target: SimpleNode = cast(SimpleNode, prev_node.next)
         data = target.data
 
         if target == self._tail:
@@ -2227,11 +2227,11 @@ class CircularLinkedList(AbstractLinkedList):
         if self.is_empty():
             return -1
 
-        current: Node = cast(Node, self.head)
+        current: SimpleNode = cast(SimpleNode, self.head)
         for index in range(self._size):
             if current.data == item:
                 return index
-            current = cast(Node, current.next)
+            current = cast(SimpleNode, current.next)
 
         return -1
 
@@ -2259,12 +2259,12 @@ class CircularLinkedList(AbstractLinkedList):
         if self.is_empty() or self._size == 1:
             return
 
-        prev: Node = cast(Node, self._tail)
-        current: Node = cast(Node, self.head)
-        new_tail: Node = current
+        prev: SimpleNode = cast(SimpleNode, self._tail)
+        current: SimpleNode = cast(SimpleNode, self.head)
+        new_tail: SimpleNode = current
 
         for _ in range(self._size):
-            next_node: Node = cast(Node, current.next)
+            next_node: SimpleNode = cast(SimpleNode, current.next)
             current.next = prev
             prev = current
             current = next_node
@@ -2320,4 +2320,4 @@ class CircularLinkedList(AbstractLinkedList):
 
         # Move tail forward by steps positions
         for _ in range(steps):
-            self._tail = cast(Node, cast(Node, self._tail).next)
+            self._tail = cast(SimpleNode, cast(SimpleNode, self._tail).next)

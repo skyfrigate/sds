@@ -61,6 +61,7 @@ from typing import Any, Callable, Iterator, Optional, cast
 from ..core.exceptions import EmptyStructureError
 from ..core.interfaces import LinearCollection
 from ..core.node import Node
+from . import SimpleNode
 from .list import DoublyLinkedList, LinkedList
 
 
@@ -533,7 +534,8 @@ class PriorityQueue(LinearCollection):
         key : callable, optional
             Function to extract priority from items. Default is identity.
         """
-        self._head: Optional[Node] = None
+        # Head points to a SimpleNode chain
+        self._head: Optional[SimpleNode] = None
         self._size: int = 0
         self._reverse = reverse
         self._key = key if key else lambda x: x
@@ -558,14 +560,14 @@ class PriorityQueue(LinearCollection):
 
     def __iter__(self) -> Iterator[Any]:
         """Iterate over elements in priority order."""
-        current = self._head
+        current: Optional[SimpleNode] = self._head
         while current is not None:
             yield current.data
             current = current.next
 
     def __contains__(self, item: Any) -> bool:
         """Return True if item is in the queue."""
-        current = self._head
+        current: Optional[SimpleNode] = self._head
         while current is not None:
             if current.data == item:
                 return True
@@ -606,17 +608,18 @@ class PriorityQueue(LinearCollection):
         -----
         Time complexity: O(n)
         """
-        new_node = Node(item)
+        new_node = SimpleNode(item)
 
-        if self._head is None or self._compare(item, cast(Node, self._head).data):
+        if self._head is None or self._compare(item, self._head.data):
             new_node.next = self._head
             self._head = new_node
         else:
-            current: Node = cast(Node, self._head)
+            current: SimpleNode = self._head
             while current.next is not None and not self._compare(
-                item, cast(Node, current.next).data
+                item, current.next.data
             ):
-                current = cast(Node, current.next)
+                # mypy knows current.next is SimpleNode here by narrowing
+                current = cast(SimpleNode, current.next)
 
             new_node.next = current.next
             current.next = new_node
@@ -643,7 +646,7 @@ class PriorityQueue(LinearCollection):
         if self.is_empty():
             raise EmptyStructureError("Cannot dequeue from empty priority queue")
 
-        head: Node = cast(Node, self._head)
+        head: SimpleNode = cast(SimpleNode, self._head)
         data = head.data
         self._head = head.next
         self._size -= 1
@@ -679,13 +682,13 @@ class PriorityQueue(LinearCollection):
         if self.is_empty():
             raise EmptyStructureError("Cannot remove from empty priority queue")
 
-        head: Node = cast(Node, self._head)
+        head: SimpleNode = cast(SimpleNode, self._head)
         if head.data == item:
             return self.dequeue()
 
-        current: Node = head
+        current: SimpleNode = head
         while current.next is not None:
-            nxt: Node = cast(Node, current.next)
+            nxt: SimpleNode = cast(SimpleNode, current.next)
             if nxt.data == item:
                 data = nxt.data
                 current.next = nxt.next

@@ -13,11 +13,10 @@ from .exceptions import (
     InvalidOperationError,
 )
 from .interfaces import Collection, LinearCollection
-from .node import DoublyNode, Node
+from .node import Node
 
 __all__ = [
     "Node",
-    "DoublyNode",
     "Collection",
     "LinearCollection",
     "EmptyStructureError",

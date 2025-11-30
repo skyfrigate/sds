@@ -11,10 +11,13 @@ This module provides implementations of fundamental linear data structures:
 """
 
 from .list import CircularLinkedList, DoublyLinkedList, LinkedList
+from .node import DoublyNode, SimpleNode
 from .queue import Deque, PriorityQueue, Queue
 from .stack import Stack
 
 __all__ = [
+    "SimpleNode",
+    "DoublyNode",
     "LinkedList",
     "DoublyLinkedList",
     "CircularLinkedList",
