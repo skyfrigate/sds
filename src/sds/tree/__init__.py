@@ -62,7 +62,7 @@ sds.linear : Linear data structures.
 
 from .balanced import AVLTree, RedBlackTree
 from .binary import BinarySearchTree, BinaryTree
-from .heap import MinHeap, MaxHeap, HeapPriorityQueue
+from .heap import HeapPriorityQueue, MaxHeap, MinHeap
 from .node import AVLNode, BinaryNode, RedBlackNode, TreeNode
 
 __all__ = [
