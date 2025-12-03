@@ -56,11 +56,11 @@ sds.core.node : Abstract base Node class.
 sds.trees : Tree implementations using these nodes.
 """
 
-from typing import Any, List, Optional
+from typing import Any, Dict, List, Optional
 
 from ..core.node import Node
 
-__all__ = ["AVLNode", "BinaryNode", "RedBlackNode", "TreeNode"]
+__all__ = ["AVLNode", "BinaryNode", "BTreeNode", "RedBlackNode", "TreeNode", "TrieNode"]
 
 
 class BinaryNode(Node):
@@ -672,3 +672,82 @@ class RedBlackNode(BinaryNode):
         """Initialize a Red-Black node."""
         super().__init__(data, left, right, parent)
         self.color: str = color
+
+
+class BTreeNode:
+    """Node for B-Tree structure.
+
+    A B-Tree node contains:
+    - Multiple keys (sorted)
+    - Multiple child pointers
+    - A flag indicating if it's a leaf
+
+    Attributes
+    ----------
+    keys : List[Any]
+        Sorted list of keys in the node.
+    children : List[BTreeNode]
+        List of child nodes.
+    is_leaf : bool
+        True if this is a leaf node.
+
+    Examples
+    --------
+    >>> node = BTreeNode(is_leaf=True)
+    >>> node.keys = [10, 20, 30]
+    >>> len(node.keys)
+    3
+    """
+
+    __slots__ = ("keys", "children", "is_leaf")
+
+    def __init__(self, is_leaf: bool = False):
+        """Initialize a B-Tree node.
+
+        Parameters
+        ----------
+        is_leaf : bool, optional
+            Whether this is a leaf node. Default is False.
+        """
+        self.keys: List[Any] = []
+        self.children: List["BTreeNode"] = []
+        self.is_leaf: bool = is_leaf
+
+    def __repr__(self) -> str:
+        """Return string representation."""
+        return f"BTreeNode(keys={self.keys}, leaf={self.is_leaf})"
+
+
+class TrieNode:
+    """Node for Trie data structure.
+
+    Each node represents a character in a string. Nodes have:
+    - A dictionary mapping characters to child nodes
+    - A flag indicating if this node marks the end of a word
+
+    Attributes
+    ----------
+    children : Dict[str, TrieNode]
+        Mapping from characters to child nodes.
+    is_end_of_word : bool
+        True if this node marks the end of a valid word.
+
+    Examples
+    --------
+    >>> node = TrieNode()
+    >>> node.children['a'] = TrieNode()
+    >>> node.is_end_of_word = True
+    """
+
+    __slots__ = ("children", "is_end_of_word")
+
+    def __init__(self):
+        """Initialize a Trie node."""
+        self.children: Dict[str, "TrieNode"] = {}
+        self.is_end_of_word: bool = False
+
+    def __repr__(self) -> str:
+        """Return string representation."""
+        return (
+            f"TrieNode(children={len(self.children)}, " f"is_end={self.is_end_of_word})"
+        )

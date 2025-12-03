@@ -3,7 +3,8 @@
 import pytest
 
 from sds.core.node import Node
-from sds.tree.node import BinaryNode, TreeNode
+from sds.tree import TrieNode
+from sds.tree.node import BinaryNode, BTreeNode, TreeNode
 
 # =============================================================================
 # BinaryNode Tests
@@ -466,3 +467,37 @@ class TestTreeNodeVariousDataTypes:
         """Test that tree node accepts various data types."""
         node = TreeNode(sample_values)
         assert node.data == sample_values
+
+
+class TestBTreeNodeCreation:
+    """Test BTreeNode creation."""
+
+    def test_create_leaf_node(self) -> None:
+        """Test creating a leaf node."""
+        node = BTreeNode(is_leaf=True)
+        assert node.is_leaf is True
+        assert node.keys == []
+        assert node.children == []
+
+    def test_create_internal_node(self) -> None:
+        """Test creating an internal node."""
+        node = BTreeNode(is_leaf=False)
+        assert node.is_leaf is False
+
+
+class TestTrieNodeCreation:
+    """Test TrieNode creation."""
+
+    def test_create_trie_node(self) -> None:
+        """Test creating a trie node."""
+        node = TrieNode()
+        assert node.children == {}
+        assert node.is_end_of_word is False
+
+    def test_trie_node_add_child(self) -> None:
+        """Test adding child to trie node."""
+        node = TrieNode()
+        child = TrieNode()
+        node.children["a"] = child
+        assert "a" in node.children
+        assert node.children["a"] is child
