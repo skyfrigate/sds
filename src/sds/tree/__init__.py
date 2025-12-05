@@ -23,10 +23,14 @@ BinaryNode
     Node for binary tree structures.
 TreeNode
     Node for general tree structures.
+BTreeNode
+    Node for B-Tree structures with multiple keys.
 AVLNode
     Node for AVL tree with height tracking.
 RedBlackNode
     Node for Red-Black tree with color attribute.
+TrieNode
+    Node for Trie structures.
 BinaryTree
     Simple binary tree implementation.
 BinarySearchTree
@@ -35,25 +39,21 @@ AVLTree
     Self-balancing AVL tree.
 RedBlackTree
     Self-balancing Red-Black tree.
+Tree
+    General tree (n-ary) implementation.
 MinHeap
     Min-heap implementation.
 MaxHeap
     Max-heap implementation.
 HeapPriorityQueue
     Optimized priority queue using min-heap.
+Trie
+    Trie (prefix tree) implementation.
+SegmentTree
+    Segment tree for range queries.
 
 Examples
 --------
-Using a B-Tree (for databases):
-
->>> from sds.tree import BTree
->>> btree = BTree(order=3)
->>> for i in [10, 20, 30, 40, 50]:
-...     btree.insert(i)
->>> 30 in btree
-True
->>> list(btree)
-[10, 20, 30, 40, 50]
 
 Using a Segment Tree (for range queries):
 
@@ -145,6 +145,7 @@ Using a Heap-based Priority Queue (optimized for performance):
 >>> pq.dequeue()
 ('high priority', 1)
 
+
 Note: For simple use cases with small datasets, you can also use
 sds.linear.queue.PriorityQueue which has O(n) enqueue but simpler code.
 
@@ -156,10 +157,9 @@ sds.linear : Linear data structures.
 
 from .balanced import AVLTree, RedBlackTree
 from .binary import BinarySearchTree, BinaryTree
-from .btree import BTree
 from .general import Tree
 from .heap import HeapPriorityQueue, MaxHeap, MinHeap
-from .node import AVLNode, BinaryNode, BTreeNode, RedBlackNode, TreeNode, TrieNode
+from .node import AVLNode, BinaryNode, RedBlackNode, TreeNode, TrieNode
 from .segment_tree import SegmentTree
 from .trie import Trie
 
@@ -167,7 +167,6 @@ __all__ = [
     # Nodes
     "AVLNode",
     "BinaryNode",
-    "BTreeNode",
     "RedBlackNode",
     "TreeNode",
     "TrieNode",
@@ -178,7 +177,6 @@ __all__ = [
     "BinarySearchTree",
     "RedBlackTree",
     "Trie",
-    "BTree",
     "SegmentTree",
     # Heaps
     "MinHeap",

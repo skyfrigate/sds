@@ -61,17 +61,19 @@ Space Complexity: O(4n) ≈ O(n)
 
 See Also
 --------
+sds.tree.interfaces.AbstractSegmentTree : Abstract base class.
 sds.tree.binary : Binary tree implementations.
 """
 
-from typing import Any, Callable, List, Optional
+from typing import Any, Callable, Iterator, List, Optional, Union
 
 from ..core.exceptions import InvalidOperationError
+from .interfaces import AbstractSegmentTree
 
 __all__ = ["SegmentTree"]
 
 
-class SegmentTree:
+class SegmentTree(AbstractSegmentTree):
     """Segment Tree for efficient range queries.
 
     A segment tree is a binary tree used for storing intervals (segments).
@@ -83,10 +85,33 @@ class SegmentTree:
     - Leaf nodes represent individual array elements
     - Internal nodes represent merged results of their children
 
+    Parameters
+    ----------
+    arr : List[Any]
+        The underlying array for range queries.
+    operation : str or callable, optional
+        The operation to perform. Can be:
+        - 'sum': Range sum queries
+        - 'min': Range minimum queries
+        - 'max': Range maximum queries
+        - callable: Custom binary operation
+        Default is 'sum'.
+    identity : Any, optional
+        Identity element for the operation.
+        - For sum: 0
+        - For min: float('inf')
+        - For max: float('-inf')
+        - For custom: must be provided
+
     Attributes
     ----------
     size : int
-        The size of the underlying array.
+        The size of the underlying array (read-only property).
+
+    Raises
+    ------
+    ValueError
+        If array is empty or operation is invalid.
 
     Examples
     --------
@@ -118,13 +143,22 @@ class SegmentTree:
 
     Custom operations:
 
-    >>> def gcd_op(a, b):
+    >>> def gcd_op(a: int, b: int) -> int:
     ...     import math
     ...     return math.gcd(a, b)
     >>> arr = [12, 18, 24, 30]
     >>> tree = SegmentTree(arr, operation=gcd_op, identity=0)
     >>> tree.query(0, 3)  # GCD of all elements
     6
+
+    Array-like access:
+
+    >>> tree = SegmentTree([1, 2, 3])
+    >>> tree[1]
+    2
+    >>> tree[1] = 10
+    >>> tree[1]
+    10
 
     Notes
     -----
@@ -137,22 +171,16 @@ class SegmentTree:
 
     See Also
     --------
+    AbstractSegmentTree : Abstract base class defining the interface.
     sds.tree.binary : Binary tree structures.
     """
-
-    # Type declarations for instance attributes (for static type checkers)
-    _operation: Callable[[Any, Any], Any]
-    _identity: Any
-    _n: int
-    _arr: List[Any]
-    _tree: List[Any]
 
     def __init__(
         self,
         arr: List[Any],
-        operation: str = "sum",
+        operation: Union[str, Callable[[Any, Any], Any]] = "sum",
         identity: Optional[Any] = None,
-    ):
+    ) -> None:
         """Initialize a segment tree.
 
         Parameters
@@ -160,50 +188,37 @@ class SegmentTree:
         arr : List[Any]
             The underlying array for range queries.
         operation : str or callable, optional
-            The operation to perform. Can be:
-            - 'sum': Range sum queries
-            - 'min': Range minimum queries
-            - 'max': Range maximum queries
-            - callable: Custom binary operation
-            Default is 'sum'.
+            The operation to perform. Default is 'sum'.
         identity : Any, optional
             Identity element for the operation.
-            - For sum: 0
-            - For min: float('inf')
-            - For max: float('-inf')
-            - For custom: must be provided
 
         Raises
         ------
         ValueError
             If array is empty or operation is invalid.
-
-        Examples
-        --------
-        >>> tree = SegmentTree([1, 2, 3, 4], operation='sum')
-        >>> tree = SegmentTree([5, 2, 8], operation='min')
-        >>> tree = SegmentTree([1, 9, 3], operation='max')
         """
+        super().__init__()
+
         if not arr:
             raise ValueError("Cannot create segment tree from empty array")
 
-        self._n = len(arr)
-        self._arr = arr.copy()
+        self._size = len(arr)
+        self._arr: List[Any] = list(arr)  # Create a copy
 
         # Set up operation and identity
         if isinstance(operation, str):
             self._setup_builtin_operation(operation)
         elif callable(operation):
-            self._operation = operation
+            self._operation: Callable[[Any, Any], Any] = operation
             if identity is None:
                 raise ValueError("Identity element required for custom operation")
-            self._identity = identity
+            self._identity: Any = identity
         else:
             raise ValueError("Operation must be string or callable")
 
         # Build tree (size = 4*n is safe for any n)
-        self._tree: List[Any] = [self._identity] * (4 * self._n)
-        self._build(0, 0, self._n - 1)
+        self._tree: List[Any] = [self._identity] * (4 * self._size)
+        self._build(0, 0, self._size - 1)
 
     def _setup_builtin_operation(self, operation: str) -> None:
         """Set up built-in operations.
@@ -212,6 +227,11 @@ class SegmentTree:
         ----------
         operation : str
             Operation name ('sum', 'min', 'max').
+
+        Raises
+        ------
+        ValueError
+            If operation is not recognized.
         """
         if operation == "sum":
             self._operation = lambda a, b: a + b
@@ -239,8 +259,12 @@ class SegmentTree:
         >>> tree = SegmentTree([1, 2, 3])
         >>> tree.size
         3
+
+        Notes
+        -----
+        Time complexity: O(1)
         """
-        return self._n
+        return self._size
 
     def _build(self, node: int, start: int, end: int) -> None:
         """Build the segment tree recursively.
@@ -253,6 +277,11 @@ class SegmentTree:
             Start index of the segment.
         end : int
             End index of the segment.
+
+        Notes
+        -----
+        Time complexity: O(n)
+        This is an internal method called during initialization.
         """
         if start == end:
             # Leaf node
@@ -272,7 +301,7 @@ class SegmentTree:
             )
 
     def query(self, left: int, right: int) -> Any:
-        """Query the result for a range.
+        """Query the result for a range [left, right].
 
         Parameters
         ----------
@@ -303,12 +332,12 @@ class SegmentTree:
         -----
         Time complexity: O(log n)
         """
-        if left < 0 or right >= self._n or left > right:
+        if left < 0 or right >= self._size or left > right:
             raise InvalidOperationError(
-                f"Invalid range: [{left}, {right}] for array of size {self._n}"
+                f"Invalid range: [{left}, {right}] for array of size {self._size}"
             )
 
-        return self._query_recursive(0, 0, self._n - 1, left, right)
+        return self._query_recursive(0, 0, self._size - 1, left, right)
 
     def _query_recursive(
         self, node: int, start: int, end: int, left: int, right: int
@@ -332,6 +361,10 @@ class SegmentTree:
         -------
         Any
             Query result for the range.
+
+        Notes
+        -----
+        This is an internal helper method for query().
         """
         # No overlap
         if right < start or left > end:
@@ -379,13 +412,13 @@ class SegmentTree:
         -----
         Time complexity: O(log n)
         """
-        if index < 0 or index >= self._n:
+        if index < 0 or index >= self._size:
             raise InvalidOperationError(
-                f"Index {index} out of bounds for array of size {self._n}"
+                f"Index {index} out of bounds for array of size {self._size}"
             )
 
         self._arr[index] = value
-        self._update_recursive(0, 0, self._n - 1, index, value)
+        self._update_recursive(0, 0, self._size - 1, index, value)
 
     def _update_recursive(
         self, node: int, start: int, end: int, index: int, value: Any
@@ -404,6 +437,10 @@ class SegmentTree:
             Index to update.
         value : Any
             New value.
+
+        Notes
+        -----
+        This is an internal helper method for update().
         """
         if start == end:
             # Leaf node
@@ -451,9 +488,9 @@ class SegmentTree:
         -----
         Time complexity: O(1)
         """
-        if index < 0 or index >= self._n:
+        if index < 0 or index >= self._size:
             raise InvalidOperationError(
-                f"Index {index} out of bounds for array of size {self._n}"
+                f"Index {index} out of bounds for array of size {self._size}"
             )
         return self._arr[index]
 
@@ -476,7 +513,56 @@ class SegmentTree:
         -----
         Time complexity: O(n)
         """
-        return self._arr.copy()
+        return list(self._arr)
+
+    def is_empty(self) -> bool:
+        """Return True if the tree is empty.
+
+        Returns
+        -------
+        bool
+            True if the tree contains no elements, False otherwise.
+
+        Examples
+        --------
+        >>> tree = SegmentTree([1, 2, 3])
+        >>> tree.is_empty()
+        False
+        >>> tree.clear()
+        >>> tree.is_empty()
+        True
+
+        Notes
+        -----
+        Time complexity: O(1)
+        """
+        return self._size == 0
+
+    def clear(self) -> None:
+        """Remove all elements from the segment tree.
+
+        After this operation, the tree will be empty and size will be 0.
+
+        Examples
+        --------
+        >>> tree = SegmentTree([1, 2, 3])
+        >>> len(tree)
+        3
+        >>> tree.clear()
+        >>> len(tree)
+        0
+        >>> tree.is_empty()
+        True
+
+        Notes
+        -----
+        Time complexity: O(1)
+        After clearing, the tree cannot be used for queries or updates
+        until reconstructed.
+        """
+        self._size = 0
+        self._arr = []
+        self._tree = []
 
     def __len__(self) -> int:
         """Return the size of the array.
@@ -491,51 +577,67 @@ class SegmentTree:
         >>> tree = SegmentTree([1, 2, 3])
         >>> len(tree)
         3
-        """
-        return self._n
 
-    def __getitem__(self, index: int) -> Any:
-        """Get value at index using array notation.
+        Notes
+        -----
+        Time complexity: O(1)
+        """
+        return self._size
+
+    def __iter__(self) -> Iterator[Any]:
+        """Return an iterator over the array elements.
+
+        Yields
+        ------
+        Any
+            Elements from the underlying array in order.
+
+        Examples
+        --------
+        >>> tree = SegmentTree([1, 2, 3])
+        >>> list(tree)
+        [1, 2, 3]
+        >>> for item in tree:
+        ...     print(item)
+        1
+        2
+        3
+
+        Notes
+        -----
+        Time complexity: O(n) for complete iteration
+        """
+        return iter(self._arr)
+
+    def __contains__(self, item: Any) -> bool:
+        """Check if item is in the array.
 
         Parameters
         ----------
-        index : int
-            Index to access.
+        item : Any
+            Item to search for.
 
         Returns
         -------
-        Any
-            Value at the index.
+        bool
+            True if item is found, False otherwise.
 
         Examples
         --------
         >>> tree = SegmentTree([1, 2, 3])
-        >>> tree[1]
-        2
+        >>> 2 in tree
+        True
+        >>> 5 in tree
+        False
+
+        Notes
+        -----
+        Time complexity: O(n)
         """
-        return self.get(index)
-
-    def __setitem__(self, index: int, value: Any) -> None:
-        """Update value at index using array notation.
-
-        Parameters
-        ----------
-        index : int
-            Index to update.
-        value : Any
-            New value.
-
-        Examples
-        --------
-        >>> tree = SegmentTree([1, 2, 3])
-        >>> tree[1] = 10
-        >>> tree[1]
-        10
-        """
-        self.update(index, value)
+        return item in self._arr
 
     def __repr__(self) -> str:
-        """Return string representation.
+        """Return detailed string representation.
 
         Returns
         -------
@@ -547,8 +649,12 @@ class SegmentTree:
         >>> tree = SegmentTree([1, 2, 3])
         >>> repr(tree)
         'SegmentTree(size=3)'
+
+        Notes
+        -----
+        Time complexity: O(1)
         """
-        return f"SegmentTree(size={self._n})"
+        return f"SegmentTree(size={self._size})"
 
     def __str__(self) -> str:
         """Return string showing current array.
@@ -563,5 +669,9 @@ class SegmentTree:
         >>> tree = SegmentTree([1, 2, 3])
         >>> str(tree)
         'SegmentTree: [1, 2, 3]'
+
+        Notes
+        -----
+        Time complexity: O(n)
         """
         return f"SegmentTree: {self._arr}"

@@ -55,12 +55,12 @@ sds.tree.binary_tree : Concrete binary tree implementations.
 """
 
 from abc import abstractmethod
-from typing import Any, Iterator, Optional
+from typing import Any, Iterator, List, Optional
 
 from ..core.interfaces import Collection
 from .node import BinaryNode
 
-__all__ = ["AbstractTree", "AbstractBinaryTree"]
+__all__ = ["AbstractTree", "AbstractBinaryTree", "AbstractSegmentTree"]
 
 
 class AbstractTree(Collection):
@@ -549,3 +549,190 @@ class AbstractBinaryTree(AbstractTree):
         inorder_traversal : Depth-first inorder traversal.
         """
         pass
+
+
+class AbstractSegmentTree(Collection):
+    """Abstract base class for segment tree structures.
+
+    Segment trees are data structures for efficient range queries on arrays.
+    This abstract class defines the interface that all segment tree
+    implementations must provide.
+
+    A segment tree supports:
+    - Range queries (sum, min, max, etc.) in O(log n)
+    - Point updates in O(log n)
+    - Array-like access to underlying data
+
+    Attributes
+    ----------
+    size : int
+        The size of the underlying array (read-only property).
+
+    Methods
+    -------
+    query(left, right)
+        Query the result for a range.
+    update(index, value)
+        Update a single element.
+    get(index)
+        Get value at index.
+    to_array()
+        Get the current array representation.
+
+    Examples
+    --------
+    Concrete implementations must provide all abstract methods:
+
+    >>> class MySegmentTree(AbstractSegmentTree):
+    ...     def __init__(self, arr):
+    ...         self._arr = arr
+    ...         self._size = len(arr)
+    ...     def query(self, left, right):
+    ...         return sum(self._arr[left:right+1])
+    ...     # ... other methods
+
+    Notes
+    -----
+    All segment tree implementations should maintain:
+    - O(log n) query time
+    - O(log n) update time
+    - O(n) space complexity
+
+    See Also
+    --------
+    SegmentTree : Concrete segment tree implementation.
+    Collection : Base interface for all collections.
+    """
+
+    def __init__(self) -> None:
+        """Initialize abstract segment tree."""
+        self._size = 0
+
+    @property
+    @abstractmethod
+    def size(self) -> int:
+        """Get the size of the underlying array.
+
+        Returns
+        -------
+        int
+            Size of the array.
+        """
+        pass
+
+    @abstractmethod
+    def query(self, left: int, right: int) -> Any:
+        """Query the result for a range [left, right].
+
+        Parameters
+        ----------
+        left : int
+            Start index of the range (inclusive).
+        right : int
+            End index of the range (inclusive).
+
+        Returns
+        -------
+        Any
+            Result of the operation on the range.
+
+        Raises
+        ------
+        InvalidOperationError
+            If range is invalid.
+
+        Notes
+        -----
+        Time complexity: O(log n)
+        """
+        pass
+
+    @abstractmethod
+    def update(self, index: int, value: Any) -> None:
+        """Update a single element in the array.
+
+        Parameters
+        ----------
+        index : int
+            Index of the element to update.
+        value : Any
+            New value.
+
+        Raises
+        ------
+        InvalidOperationError
+            If index is out of bounds.
+
+        Notes
+        -----
+        Time complexity: O(log n)
+        """
+        pass
+
+    @abstractmethod
+    def get(self, index: int) -> Any:
+        """Get the value at a specific index.
+
+        Parameters
+        ----------
+        index : int
+            Index to query.
+
+        Returns
+        -------
+        Any
+            Value at the index.
+
+        Raises
+        ------
+        InvalidOperationError
+            If index is out of bounds.
+
+        Notes
+        -----
+        Time complexity: O(1)
+        """
+        pass
+
+    @abstractmethod
+    def to_array(self) -> List[Any]:
+        """Get the current array representation.
+
+        Returns
+        -------
+        List[Any]
+            Copy of the underlying array.
+
+        Notes
+        -----
+        Time complexity: O(n)
+        """
+        pass
+
+    # Override __getitem__ and __setitem__ with concrete implementations
+    def __getitem__(self, index: int) -> Any:
+        """Get value at index using array notation.
+
+        Parameters
+        ----------
+        index : int
+            Index to access.
+
+        Returns
+        -------
+        Any
+            Value at the index.
+        """
+        return self.get(index)
+
+    def __setitem__(self, index: int, value: Any) -> None:
+        """Update value at index using array notation.
+
+        Parameters
+        ----------
+        index : int
+            Index to update.
+        value : Any
+            New value.
+        """
+        self.update(index, value)

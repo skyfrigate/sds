@@ -15,6 +15,7 @@
 """Tests for Segment Tree implementation."""
 
 import math
+import random
 
 import pytest
 
@@ -31,10 +32,13 @@ class TestSegmentTreeCreation:
         tree = SegmentTree(arr)
         assert tree.size == 5
         assert len(tree) == 5
+        assert not tree.is_empty()
 
     def test_create_empty_array_raises_error(self) -> None:
         """Test creating from empty array raises error."""
-        with pytest.raises(ValueError):
+        with pytest.raises(
+            ValueError, match="Cannot create segment tree from empty array"
+        ):
             SegmentTree([])
 
     def test_create_with_sum_operation(self) -> None:
@@ -54,13 +58,13 @@ class TestSegmentTreeCreation:
 
     def test_create_with_invalid_operation(self) -> None:
         """Test creating with invalid operation raises error."""
-        with pytest.raises(ValueError):
+        with pytest.raises(ValueError, match="Unknown operation: invalid"):
             SegmentTree([1, 2, 3], operation="invalid")
 
     def test_create_with_custom_operation(self) -> None:
         """Test creating with custom operation."""
 
-        def multiply(a, b):
+        def multiply(a: int, b: int) -> int:
             return a * b
 
         tree = SegmentTree([2, 3, 4], operation=multiply, identity=1)
@@ -68,8 +72,22 @@ class TestSegmentTreeCreation:
 
     def test_custom_operation_without_identity_raises_error(self) -> None:
         """Test custom operation without identity raises error."""
-        with pytest.raises(ValueError):
+        with pytest.raises(
+            ValueError, match="Identity element required for custom operation"
+        ):
             SegmentTree([1, 2, 3], operation=lambda a, b: a + b)
+
+    def test_create_with_non_callable_non_string_operation(self) -> None:
+        """Test creating with invalid operation type raises error."""
+        with pytest.raises(ValueError, match="Operation must be string or callable"):
+            SegmentTree([1, 2, 3], operation=123)  # type: ignore
+
+    def test_original_array_not_modified(self) -> None:
+        """Test that original array is not modified."""
+        arr = [1, 2, 3, 4, 5]
+        tree = SegmentTree(arr)
+        tree.update(2, 100)
+        assert arr[2] == 3  # Original unchanged
 
 
 class TestSegmentTreeSumQueries:
@@ -179,14 +197,22 @@ class TestSegmentTreeUpdate:
     def test_update_out_of_bounds_raises_error(self) -> None:
         """Test updating out of bounds raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError):
+        with pytest.raises(InvalidOperationError, match="Index 5 out of bounds"):
             tree.update(5, 10)
 
     def test_update_negative_index_raises_error(self) -> None:
         """Test updating negative index raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError):
+        with pytest.raises(InvalidOperationError, match="Index -1 out of bounds"):
             tree.update(-1, 10)
+
+    def test_update_affects_only_relevant_queries(self) -> None:
+        """Test update only affects queries that include that index."""
+        tree = SegmentTree([1, 2, 3, 4, 5], operation="sum")
+        original_sum_0_1 = tree.query(0, 1)
+        tree.update(3, 100)
+        assert tree.query(0, 1) == original_sum_0_1  # Unchanged
+        assert tree.query(3, 4) == 105  # Changed
 
 
 class TestSegmentTreeQueryValidation:
@@ -195,20 +221,26 @@ class TestSegmentTreeQueryValidation:
     def test_query_invalid_range_raises_error(self) -> None:
         """Test querying invalid range raises error."""
         tree = SegmentTree([1, 2, 3, 4, 5])
-        with pytest.raises(InvalidOperationError):
+        with pytest.raises(InvalidOperationError, match="Invalid range"):
             tree.query(3, 1)  # left > right
 
     def test_query_out_of_bounds_raises_error(self) -> None:
         """Test querying out of bounds raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError):
+        with pytest.raises(InvalidOperationError, match="Invalid range"):
             tree.query(0, 5)
 
     def test_query_negative_index_raises_error(self) -> None:
         """Test querying negative index raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError):
+        with pytest.raises(InvalidOperationError, match="Invalid range"):
             tree.query(-1, 2)
+
+    def test_query_both_indices_out_of_bounds(self) -> None:
+        """Test querying with both indices out of bounds."""
+        tree = SegmentTree([1, 2, 3])
+        with pytest.raises(InvalidOperationError, match="Invalid range"):
+            tree.query(10, 20)
 
 
 class TestSegmentTreeGetSet:
@@ -224,16 +256,27 @@ class TestSegmentTreeGetSet:
     def test_get_out_of_bounds_raises_error(self) -> None:
         """Test getting out of bounds raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError):
+        with pytest.raises(InvalidOperationError, match="Index 5 out of bounds"):
             tree.get(5)
 
-    def test_array_indexing(self) -> None:
-        """Test array-style indexing."""
+    def test_get_negative_index_raises_error(self) -> None:
+        """Test getting negative index raises error."""
+        tree = SegmentTree([1, 2, 3])
+        with pytest.raises(InvalidOperationError, match="Index -1 out of bounds"):
+            tree.get(-1)
+
+    def test_array_indexing_get(self) -> None:
+        """Test array-style indexing for get."""
         tree = SegmentTree([1, 2, 3, 4, 5])
         assert tree[0] == 1
         assert tree[2] == 3
+
+    def test_array_indexing_set(self) -> None:
+        """Test array-style indexing for set."""
+        tree = SegmentTree([1, 2, 3, 4, 5])
         tree[1] = 10
         assert tree[1] == 10
+        assert tree.query(0, 2) == 14  # 1+10+3
 
     def test_to_array(self) -> None:
         """Test converting to array."""
@@ -241,6 +284,92 @@ class TestSegmentTreeGetSet:
         tree.update(1, 10)
         arr = tree.to_array()
         assert arr == [1, 10, 3]
+
+    def test_to_array_returns_copy(self) -> None:
+        """Test that to_array returns a copy."""
+        tree = SegmentTree([1, 2, 3])
+        arr = tree.to_array()
+        arr[0] = 999
+        assert tree.get(0) == 1  # Tree unchanged
+
+
+class TestSegmentTreeCollectionInterface:
+    """Test Collection interface methods."""
+
+    def test_len(self) -> None:
+        """Test __len__ method."""
+        tree = SegmentTree([1, 2, 3, 4, 5])
+        assert len(tree) == 5
+
+    def test_is_empty_false(self) -> None:
+        """Test is_empty returns False for non-empty tree."""
+        tree = SegmentTree([1, 2, 3])
+        assert not tree.is_empty()
+
+    def test_is_empty_after_clear(self) -> None:
+        """Test is_empty returns True after clear."""
+        tree = SegmentTree([1, 2, 3])
+        tree.clear()
+        assert tree.is_empty()
+
+    def test_clear(self) -> None:
+        """Test clear method."""
+        tree = SegmentTree([1, 2, 3, 4, 5])
+        assert len(tree) == 5
+        tree.clear()
+        assert len(tree) == 0
+        assert tree.is_empty()
+
+    def test_clear_resets_all_data(self) -> None:
+        """Test that clear resets all internal data."""
+        tree = SegmentTree([1, 2, 3])
+        tree.clear()
+        assert tree.size == 0
+        assert tree.to_array() == []
+
+    def test_iter(self) -> None:
+        """Test __iter__ method."""
+        tree = SegmentTree([1, 2, 3, 4, 5])
+        result = list(tree)
+        assert result == [1, 2, 3, 4, 5]
+
+    def test_iter_after_updates(self) -> None:
+        """Test iteration after updates."""
+        tree = SegmentTree([1, 2, 3])
+        tree.update(1, 10)
+        result = list(tree)
+        assert result == [1, 10, 3]
+
+    def test_contains_true(self) -> None:
+        """Test __contains__ when item exists."""
+        tree = SegmentTree([1, 2, 3, 4, 5])
+        assert 3 in tree
+        assert 1 in tree
+
+    def test_contains_false(self) -> None:
+        """Test __contains__ when item doesn't exist."""
+        tree = SegmentTree([1, 2, 3, 4, 5])
+        assert 10 not in tree
+        assert 0 not in tree
+
+    def test_contains_after_update(self) -> None:
+        """Test __contains__ after update."""
+        tree = SegmentTree([1, 2, 3])
+        assert 2 in tree
+        tree.update(1, 10)
+        assert 2 not in tree
+        assert 10 in tree
+
+    def test_bool_non_empty(self) -> None:
+        """Test __bool__ for non-empty tree."""
+        tree = SegmentTree([1, 2, 3])
+        assert bool(tree) is True
+
+    def test_bool_after_clear(self) -> None:
+        """Test __bool__ after clear."""
+        tree = SegmentTree([1, 2, 3])
+        tree.clear()
+        assert bool(tree) is False
 
 
 class TestSegmentTreeStringRepresentation:
@@ -250,6 +379,11 @@ class TestSegmentTreeStringRepresentation:
         """Test repr."""
         tree = SegmentTree([1, 2, 3])
         assert repr(tree) == "SegmentTree(size=3)"
+
+    def test_repr_single_element(self) -> None:
+        """Test repr with single element."""
+        tree = SegmentTree([42])
+        assert repr(tree) == "SegmentTree(size=1)"
 
     def test_str(self) -> None:
         """Test str."""
@@ -262,6 +396,12 @@ class TestSegmentTreeStringRepresentation:
         tree.update(1, 10)
         assert str(tree) == "SegmentTree: [1, 10, 3]"
 
+    def test_str_after_clear(self) -> None:
+        """Test str after clear."""
+        tree = SegmentTree([1, 2, 3])
+        tree.clear()
+        assert str(tree) == "SegmentTree: []"
+
 
 class TestSegmentTreeCustomOperations:
     """Test custom operations."""
@@ -269,16 +409,26 @@ class TestSegmentTreeCustomOperations:
     def test_gcd_operation(self) -> None:
         """Test GCD operation."""
 
-        def gcd_op(a, b):
+        def gcd_op(a: int, b: int) -> int:
             return math.gcd(a, b)
 
         tree = SegmentTree([12, 18, 24, 30], operation=gcd_op, identity=0)
         assert tree.query(0, 3) == 6
 
+    def test_gcd_partial_range(self) -> None:
+        """Test GCD on partial range."""
+
+        def gcd_op(a: int, b: int) -> int:
+            return math.gcd(a, b)
+
+        tree = SegmentTree([12, 18, 24, 30], operation=gcd_op, identity=0)
+        assert tree.query(0, 1) == 6  # gcd(12, 18)
+        assert tree.query(2, 3) == 6  # gcd(24, 30)
+
     def test_multiply_operation(self) -> None:
         """Test multiplication operation."""
 
-        def mult(a, b):
+        def mult(a: int, b: int) -> int:
             return a * b
 
         tree = SegmentTree([2, 3, 4], operation=mult, identity=1)
@@ -288,12 +438,30 @@ class TestSegmentTreeCustomOperations:
     def test_lcm_operation(self) -> None:
         """Test LCM operation."""
 
-        def lcm_op(a, b):
+        def lcm_op(a: int, b: int) -> int:
             return abs(a * b) // math.gcd(a, b)
 
         tree = SegmentTree([4, 6, 8], operation=lcm_op, identity=1)
         result = tree.query(0, 2)
         assert result == 24
+
+    def test_bitwise_or_operation(self) -> None:
+        """Test bitwise OR operation."""
+
+        def or_op(a: int, b: int) -> int:
+            return a | b
+
+        tree = SegmentTree([1, 2, 4, 8], operation=or_op, identity=0)
+        assert tree.query(0, 3) == 15  # 1|2|4|8
+
+    def test_bitwise_and_operation(self) -> None:
+        """Test bitwise AND operation."""
+
+        def and_op(a: int, b: int) -> int:
+            return a & b
+
+        tree = SegmentTree([7, 6, 4], operation=and_op, identity=-1)
+        assert tree.query(0, 2) == 4  # 7&6&4
 
 
 class TestSegmentTreeEdgeCases:
@@ -319,11 +487,21 @@ class TestSegmentTreeEdgeCases:
         assert tree.query(0, 3) == 20
         assert tree.query(1, 2) == 10
 
-    def test_negative_numbers(self) -> None:
+    def test_negative_numbers_sum(self) -> None:
         """Test with negative numbers."""
         tree = SegmentTree([-5, -2, -8, -1], operation="sum")
         assert tree.query(0, 3) == -16
         tree.update(0, 10)
+        assert tree.query(0, 3) == -1
+
+    def test_negative_numbers_min(self) -> None:
+        """Test min with negative numbers."""
+        tree = SegmentTree([-5, -2, -8, -1], operation="min")
+        assert tree.query(0, 3) == -8
+
+    def test_negative_numbers_max(self) -> None:
+        """Test max with negative numbers."""
+        tree = SegmentTree([-5, -2, -8, -1], operation="max")
         assert tree.query(0, 3) == -1
 
     def test_floating_point_numbers(self) -> None:
@@ -331,12 +509,23 @@ class TestSegmentTreeEdgeCases:
         tree = SegmentTree([1.5, 2.5, 3.5], operation="sum")
         assert tree.query(0, 2) == 7.5
 
+    def test_floating_point_precision(self) -> None:
+        """Test floating point precision."""
+        tree = SegmentTree([0.1, 0.2, 0.3], operation="sum")
+        result = tree.query(0, 2)
+        assert abs(result - 0.6) < 1e-10
+
     def test_zero_values(self) -> None:
         """Test with zeros."""
         tree = SegmentTree([0, 0, 0], operation="sum")
         assert tree.query(0, 2) == 0
         tree.update(1, 5)
         assert tree.query(0, 2) == 5
+
+    def test_mixed_positive_negative_zero(self) -> None:
+        """Test with mixed positive, negative, and zero."""
+        tree = SegmentTree([-5, 0, 5, -3, 0, 3], operation="sum")
+        assert tree.query(0, 5) == 0
 
 
 class TestSegmentTreeRealWorldScenarios:
@@ -395,6 +584,21 @@ class TestSegmentTreeRealWorldScenarios:
         tree.update(3, 115)  # Price spike
         assert tree.query(0, 6) == 115
 
+    def test_inventory_tracking(self) -> None:
+        """Test inventory level tracking."""
+        inventory = [50, 30, 40, 20, 60]
+        tree = SegmentTree(inventory, operation="sum")
+
+        # Total inventory
+        assert tree.query(0, 4) == 200
+
+        # Warehouse 1-3
+        assert tree.query(1, 3) == 90
+
+        # Restock
+        tree.update(3, 50)
+        assert tree.query(0, 4) == 230
+
 
 class TestSegmentTreePerformance:
     """Test performance characteristics."""
@@ -430,6 +634,12 @@ class TestSegmentTreePerformance:
         assert tree.query(0, 99) == 1000  # 100 * 10
         assert tree.query(0, 999) == 1900  # 100*10 + 900*1
 
+    def test_very_large_array(self) -> None:
+        """Test with very large array."""
+        arr = list(range(10000))
+        tree = SegmentTree(arr, operation="sum")
+        assert tree.query(0, 9999) == sum(range(10000))
+
 
 class TestSegmentTreeComplexScenarios:
     """Test complex usage scenarios."""
@@ -450,16 +660,13 @@ class TestSegmentTreeComplexScenarios:
         """Test overlapping range queries."""
         tree = SegmentTree([1, 2, 3, 4, 5], operation="sum")
 
-        assert tree.query(0, 2) == 6
-        assert tree.query(1, 3) == 9
-        assert tree.query(2, 4) == 12
-        # Sum of all three should equal sum of unique elements
-        # But they overlap, so we can't add them directly
+        assert tree.query(0, 2) == 6  # 1+2+3
+        assert tree.query(1, 3) == 9  # 2+3+4
+        assert tree.query(2, 4) == 12  # 3+4+5
 
     def test_segment_tree_maintains_correctness(self) -> None:
         """Test that segment tree maintains correctness."""
-        import random
-
+        random.seed(42)  # For reproducibility
         arr = [random.randint(1, 100) for _ in range(50)]
         tree = SegmentTree(arr, operation="sum")
 
@@ -488,3 +695,107 @@ class TestSegmentTreeComplexScenarios:
 
         assert min_tree.query(0, 5) == 2
         assert max_tree.query(0, 5) == 10
+
+    def test_multiple_trees_independent(self) -> None:
+        """Test that multiple trees are independent."""
+        arr1 = [1, 2, 3]
+        arr2 = [4, 5, 6]
+
+        tree1 = SegmentTree(arr1, operation="sum")
+        tree2 = SegmentTree(arr2, operation="sum")
+
+        tree1.update(0, 10)
+        assert tree1.query(0, 2) == 15  # 10+2+3
+        assert tree2.query(0, 2) == 15  # 4+5+6 unchanged
+
+    def test_sequential_updates_correctness(self) -> None:
+        """Test sequential updates maintain correctness."""
+        tree = SegmentTree([1, 2, 3, 4, 5], operation="sum")
+
+        for i in range(5):
+            tree.update(i, i * 10)
+            expected = sum(j * 10 if j <= i else j + 1 for j in range(5))
+            assert tree.query(0, 4) == expected
+
+
+class TestSegmentTreeTypeVariety:
+    """Test with various data types."""
+
+    def test_string_concatenation(self) -> None:
+        """Test with string concatenation."""
+
+        def concat(a: str, b: str) -> str:
+            return a + b
+
+        tree = SegmentTree(["a", "b", "c", "d"], operation=concat, identity="")
+        assert tree.query(0, 3) == "abcd"
+        assert tree.query(1, 2) == "bc"
+
+    def test_list_concatenation(self) -> None:
+        """Test with list concatenation."""
+
+        def list_concat(a: list, b: list) -> list:
+            return a + b
+
+        tree = SegmentTree([[1], [2], [3]], operation=list_concat, identity=[])
+        assert tree.query(0, 2) == [1, 2, 3]
+
+    def test_tuple_values(self) -> None:
+        """Test with tuple values for sum."""
+        tree = SegmentTree([(1, 2), (3, 4), (5, 6)], operation="sum")
+        result = tree.query(0, 2)
+        assert result == (1, 2, 3, 4, 5, 6)
+
+
+class TestSegmentTreeAbstractInterface:
+    """Test AbstractSegmentTree interface compliance."""
+
+    def test_implements_size_property(self) -> None:
+        """Test size property is implemented."""
+        tree = SegmentTree([1, 2, 3])
+        assert hasattr(tree, "size")
+        assert tree.size == 3
+
+    def test_implements_query_method(self) -> None:
+        """Test query method is implemented."""
+        tree = SegmentTree([1, 2, 3])
+        assert hasattr(tree, "query")
+        assert callable(tree.query)
+
+    def test_implements_update_method(self) -> None:
+        """Test update method is implemented."""
+        tree = SegmentTree([1, 2, 3])
+        assert hasattr(tree, "update")
+        assert callable(tree.update)
+
+    def test_implements_get_method(self) -> None:
+        """Test get method is implemented."""
+        tree = SegmentTree([1, 2, 3])
+        assert hasattr(tree, "get")
+        assert callable(tree.get)
+
+    def test_implements_to_array_method(self) -> None:
+        """Test to_array method is implemented."""
+        tree = SegmentTree([1, 2, 3])
+        assert hasattr(tree, "to_array")
+        assert callable(tree.to_array)
+
+    def test_implements_collection_interface(self) -> None:
+        """Test Collection interface methods."""
+        tree = SegmentTree([1, 2, 3])
+        assert hasattr(tree, "__len__")
+        assert hasattr(tree, "__iter__")
+        assert hasattr(tree, "__contains__")
+        assert hasattr(tree, "clear")
+        assert hasattr(tree, "is_empty")
+
+    def test_getitem_delegates_to_get(self) -> None:
+        """Test __getitem__ uses get method."""
+        tree = SegmentTree([1, 2, 3])
+        assert tree[1] == tree.get(1)
+
+    def test_setitem_delegates_to_update(self) -> None:
+        """Test __setitem__ uses update method."""
+        tree = SegmentTree([1, 2, 3])
+        tree[1] = 10
+        assert tree.get(1) == 10
