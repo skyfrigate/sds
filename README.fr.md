@@ -9,7 +9,7 @@
 
 Une bibliothèque Python complète et pédagogique de structures de données fondamentales, implémentées avec des principes de programmation orientée objet et une documentation exhaustive.
 
-## 🎯 Objectifs
+## Objectifs
 
 - **Pédagogique** : Code clair et bien documenté pour l'apprentissage
 - **Complet** : Couverture exhaustive des structures de données classiques
@@ -17,19 +17,7 @@ Une bibliothèque Python complète et pédagogique de structures de données fon
 - **Testé** : Couverture de tests complète avec pytest
 - **Performant** : Utilisation de `__slots__` pour l'optimisation mémoire
 
-## 📦 Installation
-
-```bash
-# Installation depuis le dépôt
-pip install git+https://github.com/votre-username/sds.git
-
-# Installation en mode développement
-git clone https://github.com/votre-username/sds.git
-cd sds
-pip install -e .
-```
-
-## 🏗️ Architecture
+## Architecture
 
 Le projet est organisé en modules thématiques :
 
@@ -41,9 +29,9 @@ sds/
 └── graphs/         # Structures de graphes (graphes, arêtes, algorithmes)
 ```
 
-## 📚 Structures disponibles
+## Structures disponibles
 
-### 🔗 Nœuds (Nodes) - `sds.core.node`
+### Nœuds (Nodes) - `sds.core.node`
 
 Tous les types de nœuds héritent d'une classe abstraite `Node` commune utilisant un système unifié de références (`_refs`).
 
@@ -58,27 +46,7 @@ Tous les types de nœuds héritent d'une classe abstraite `Node` commune utilisa
 #### Nœuds de graphes - `sds.graphs.node`
 - **`GraphNode`** : Nœud pour graphes (identifiant unique, pas de références internes)
 
-```python
-from sds.linear.node import SimpleNode, DoublyNode
-from sds.tree.node import BinaryNode, TreeNode
-from sds.graph.node import GraphNode
-
-# Liste chaînée simple
-node1 = SimpleNode(1)
-node2 = SimpleNode(2)
-node1.next = node2
-
-# Arbre binaire
-root = BinaryNode(10)
-root.left = BinaryNode(5)
-root.right = BinaryNode(15)
-
-# Graphe
-node_a = GraphNode("A", "node_a")
-node_b = GraphNode("B", "node_b")
-```
-
-### 📋 Structures linéaires - `sds.linear`
+### Structures linéaires - `sds.linear`
 
 #### Listes chaînées - `sds.linear.list`
 - **`LinkedList`** : Liste chaînée simple
@@ -92,47 +60,11 @@ node_b = GraphNode("B", "node_b")
   - Méthode `rotate()` pour rotation en O(1)
   - Dernier nœud pointe vers le premier
 
-```python
-from sds.linear.list import LinkedList, DoublyLinkedList, CircularLinkedList
-
-# Liste simple
-ll = LinkedList()
-ll.append(1)
-ll.append(2)
-ll.prepend(0)
-print(list(ll))  # [0, 1, 2]
-
-# Liste doublement chaînée
-dll = DoublyLinkedList()
-dll.append(1)
-dll.append(2)
-print(list(reversed(dll)))  # [2, 1]
-
-# Liste circulaire
-cll = CircularLinkedList()
-cll.append(1)
-cll.append(2)
-cll.append(3)
-cll.rotate(1)
-print(list(cll))  # [2, 3, 1]
-```
-
 #### Pile - `sds.linear.stack`
 - **`Stack`** : Pile LIFO (Last In First Out)
   - Opérations : `push()`, `pop()`, `peek()`
   - Toutes les opérations en O(1)
   - Utilise `LinkedList` en interne
-
-```python
-from sds.linear.stack import Stack
-
-stack = Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-print(stack.pop())  # 3
-print(stack.peek()) # 2
-```
 
 #### Files - `sds.linear.queue`
 - **`Queue`** : File FIFO (First In First Out)
@@ -146,30 +78,7 @@ print(stack.peek()) # 2
   - Élément avec priorité minimale défilé en premier
   - `enqueue()` en O(n), `dequeue()` en O(1)
 
-```python
-from sds.linear.queue import Queue, Deque, PriorityQueue
-
-# File FIFO
-queue = Queue()
-queue.enqueue(1)
-queue.enqueue(2)
-print(queue.dequeue())  # 1
-
-# Deque
-deque = Deque()
-deque.add_front(1)
-deque.add_rear(2)
-print(list(deque))  # [1, 2]
-
-# File de priorité
-pq = PriorityQueue()
-pq.enqueue(5)
-pq.enqueue(1)
-pq.enqueue(3)
-print(pq.dequeue())  # 1 (priorité minimale)
-```
-
-### 🌳 Structures arborescentes - `sds.trees`
+### Structures arborescentes - `sds.trees`
 
 #### Arbres de base
 - **`BinaryTree`** : Arbre binaire simple *(à venir)*
@@ -206,7 +115,7 @@ print(pq.dequeue())  # 1 (priorité minimale)
   - Requêtes de plage efficaces
 - **`BTree`** : Arbre B pour bases de données *(à venir)*
 
-### 🕸️ Structures de graphes - `sds.graphs`
+###️ Structures de graphes - `sds.graphs`
 
 #### Nœuds et arêtes
 - **`GraphNode`** : Nœud de graphe avec identifiant unique
@@ -220,17 +129,7 @@ print(pq.dequeue())  # 1 (priorité minimale)
 - **`UndirectedGraph`** : Graphe non orienté *(à venir)*
 - **`WeightedGraph`** : Graphe pondéré *(à venir)*
 
-```python
-from sds.graph.node import GraphNode
-
-# Création de nœuds
-node_a = GraphNode("A", "node_a")
-node_b = GraphNode("B", "node_b")
-
-# Les connexions seront gérées par Edge et Graph
-```
-
-## 🧪 Tests
+## Tests
 
 Le projet utilise pytest avec une couverture de tests complète :
 
@@ -251,13 +150,13 @@ pytest -v
 Structure des tests :
 ```
 tests/
-├── 01_core/        # Tests pour core (Node abstraite, interfaces, exceptions)
-├── 02_linear/      # Tests pour structures linéaires
-├── 03_trees/       # Tests pour structures arborescentes
-└── 04_graphs/      # Tests pour structures de graphes
+├── 01_Core/        # Tests pour core (Node abstraite, interfaces, exceptions)
+├── 02_Linear/      # Tests pour structures linéaires
+├── 03_Tree/       # Tests pour structures arborescentes
+└── 04_Graph/      # Tests pour structures de graphes
 ```
 
-## 🔍 Analyse statique
+## Analyse statique
 
 Le projet est entièrement typé et vérifié avec MyPy et Flake8 :
 
@@ -272,20 +171,7 @@ flake8 sds/ --max-line-length=88
 mypy --strict sds/ && flake8 sds/ --max-line-length=88
 ```
 
-## 📖 Documentation
-
-La documentation utilise le format NumPy pour les docstrings et peut être générée avec Sphinx :
-
-```bash
-# Installer les dépendances de documentation
-pip install sphinx numpydoc sphinx-rtd-theme
-
-# Générer la documentation
-cd docs
-sphinx-build -b html . _build
-```
-
-## 🤝 Contribution
+## Contribution
 
 Les contributions sont les bienvenues ! Veuillez suivre ces guidelines :
 
@@ -303,9 +189,9 @@ Les contributions sont les bienvenues ! Veuillez suivre ces guidelines :
 - ✅ Docstrings au format NumPy
 - ✅ Utilisation de `__slots__` pour optimisation mémoire
 
-## 📋 Roadmap
+## Roadmap
 
-### ✅ Phase 1 : Fondations (Complétée)
+### Phase 1 : Fondations (Complétée)
 - [x] Architecture modulaire
 - [x] Nœuds abstraits avec système `_refs` unifié
 - [x] Nœuds pour listes (SimpleNode, DoublyNode)
@@ -314,48 +200,45 @@ Les contributions sont les bienvenues ! Veuillez suivre ces guidelines :
 - [x] Structures linéaires complètes
 - [x] Tests exhaustifs pour linear
 
-### 🚧 Phase 2 : Arbres (En cours)
-- [ ] Interfaces abstraites (AbstractTree, AbstractBinaryTree)
-- [ ] BinaryTree et BinarySearchTree
-- [ ] MinHeap et MaxHeap
-- [ ] AVLTree
-- [ ] RedBlackTree
-- [ ] Trie
-- [ ] Tests exhaustifs pour trees
+### Phase 2 : Arbres (Complétée)
+- [x] Interfaces abstraites (AbstractTree, AbstractBinaryTree)
+- [x] BinaryTree et BinarySearchTree
+- [x] B-Tree
+- [x] MinHeap et MaxHeap
+- [x] AVLTree
+- [x] RedBlackTree
+- [x] Segment Tree
+- [x] Trie
+- [x] Tests exhaustifs pour trees
 
-### 📅 Phase 3 : Graphes (Planifiée)
+### Phase 3 : Graphes (Planifiée)
 - [ ] Edge, DirectedEdge, WeightedEdge
 - [ ] Graph, DirectedGraph, UndirectedGraph
 - [ ] Algorithmes : DFS, BFS, Dijkstra, Kruskal
 - [ ] Tests exhaustifs pour graphs
 
-### 🔮 Phase 4 : Structures avancées (Planifiée)
+### Phase 4 : Structures avancées (Planifiée)
 - [ ] Union-Find (Disjoint Set)
 - [ ] Bloom Filter
 - [ ] Skip List
-- [ ] Segment Tree
-- [ ] B-Tree
 
-## 📄 Licence
+## Licence
 
 Ce projet est sous licence Apache 2.0 - voir le fichier [LICENSE](LICENSE.md) pour plus de détails.
 
-## 👥 Auteurs
-
-- **Votre Nom** - *Travail initial* - [votre-github](https://github.com/votre-username)
-
-## 🙏 Remerciements
+## Remerciements
 
 - Inspiré par les cours de structures de données classiques
 - Conçu pour l'apprentissage et l'enseignement
-- Merci à la communauté Python pour les outils exceptionnels (pytest, mypy, flake8)
+- Merci à la communauté Python pour les outils exceptionnels ([pytest](https://docs.pytest.org/en/stable/), 
+  [mypy](https://mypy-lang.org/), [flake8](https://flake8.pycqa.org/en/latest/), 
+  [bandit](https://bandit.readthedocs.io/en/latest/))
 
 ## 📚 Ressources
 
 - [Documentation Python](https://docs.python.org/3/)
 - [Type Hints PEP 484](https://www.python.org/dev/peps/pep-0484/)
 - [NumPy Docstring Guide](https://numpydoc.readthedocs.io/en/latest/format.html)
-- [Introduction to Algorithms (CLRS)](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
 
 ---
 
