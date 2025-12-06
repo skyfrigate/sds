@@ -81,41 +81,41 @@ Tous les types de nœuds héritent d'une classe abstraite `Node` commune utilisa
 ### Structures arborescentes - `sds.trees`
 
 #### Arbres de base
-- **`BinaryTree`** : Arbre binaire simple *(à venir)*
+- **`BinaryTree`** : Arbre binaire simple
   - Parcours : inorder, preorder, postorder, level-order
   - Opérations : hauteur, nombre de nœuds, recherche
-- **`BinarySearchTree` (BST)** : Arbre binaire de recherche *(à venir)*
+- **`BinarySearchTree` (BST)** : Arbre binaire de recherche
   - Propriété : left < parent < right
   - Recherche, insertion, suppression
   - O(log n) en moyenne, O(n) pire cas
-- **`GeneralTree`** : Arbre général (n-aire) *(à venir)*
+- **`GeneralTree`** : Arbre général (n-aire)
   - Nombre variable d'enfants par nœud
   - Parcours DFS/BFS
 
 #### Arbres équilibrés
-- **`AVLTree`** : Arbre AVL auto-équilibré *(à venir)*
+- **`AVLTree`** : Arbre AVL auto-équilibré
   - Garantie O (log n) pour toutes les opérations
   - Rotations automatiques après insertion/suppression
-- **`RedBlackTree`** : Arbre Rouge-Noir *(à venir)*
+- **`RedBlackTree`** : Arbre Rouge-Noir
   - Auto-équilibré avec propriétés de couleur
   - Moins de rotations que pour un AVLTree
 
 #### Tas (Heaps)
-- **`MinHeap`** : Tas minimum *(à venir)*
+- **`MinHeap`** : Tas minimum
   - Parent ≤ enfants
   - Extract-min en O(log n)
-- **`MaxHeap`** : Tas maximum *(à venir)*
+- **`MaxHeap`** : Tas maximum
   - Parent ≥ enfants
   - Extract-max en O(log n)
 
 #### Arbres spécialisés
-- **`Trie`** : Arbre préfixe pour chaînes *(à venir)*
+- **`Trie`** : Arbre préfixe pour chaînes
   - Auto-complétion, recherche de préfixe
-- **`SegmentTree`** : Arbre de segments *(à venir)*
+- **`SegmentTree`** : Arbre de segments
   - Requêtes de plage efficaces
-- **`BTree`** : Arbre B pour bases de données *(à venir)*
+- **`BTree`** : Arbre B pour bases de données
 
-###️ Structures de graphes - `sds.graphs`
+### Structures de graphes - `sds.graphs`
 
 #### Nœuds et arêtes
 - **`GraphNode`** : Nœud de graphe avec identifiant unique

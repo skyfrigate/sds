@@ -83,39 +83,55 @@ All node types inherit from a common abstract `Node` class using a unified refer
 ### Tree Structures - `sds.trees`
 
 #### Basic Trees
-- **`BinaryTree`**: Simple binary tree *(coming soon)*
+- **`BinaryTree`**: Simple binary tree
   - Traversals: inorder, preorder, postorder, level-order
   - Operations: height, node count, search
-- **`BinarySearchTree` (BST)**: Binary search tree *(coming soon)*
+- **`BinarySearchTree` (BST)**: Binary search tree
   - Property: left < parent < right
   - Search, insertion, deletion
   - O(log n) average, O(n) worst case
-- **`GeneralTree`**: General (n-ary) tree *(coming soon)*
+- **`GeneralTree`**: General (n-ary) tree
   - Variable number of children per node
   - DFS/BFS traversal
 
 #### Balanced Trees
-- **`AVLTree`**: Self-balancing AVL tree *(coming soon)*
+- **`AVLTree`**: Self-balancing AVL tree
   - Guaranteed O(log n) for all operations
   - Automatic rotations after insertion/deletion
-- **`RedBlackTree`**: Red-Black tree *(coming soon)*
+- **`RedBlackTree`**: Red-Black tree
   - Self-balancing with color properties
   - Fewer rotations than AVL
 
 #### Heaps
-- **`MinHeap`**: Minimum heap *(coming soon)*
+- **`MinHeap`**: Minimum heap
   - Parent ≤ children
   - Extract-min in O(log n)
-- **`MaxHeap`**: Maximum heap *(coming soon)*
+- **`MaxHeap`**: Maximum heap
   - Parent ≥ children
   - Extract-max in O(log n)
 
 #### Specialized Trees
-- **`Trie`**: Prefix tree for strings *(coming soon)*
+- **`Trie`**: Prefix tree for strings
   - Auto-completion, prefix search
-- **`SegmentTree`**: Segment tree *(coming soon)*
+- **`SegmentTree`**: Segment tree
   - Efficient range queries
-- **`BTree`**: B-tree for databases *(coming soon)*
+- **`BTree`**: B-tree for databases
+
+### Graph structures - `sds.graphs`
+
+#### Nodes and edges
+- **`GraphNode`**: Graph node with unique identifier
+- **`Edge`**: Edge between two nodes *(coming soon)*
+- **`DirectedEdge`**: Directed edge *(coming soon)*
+- **`WeightedEdge`**: Weighted edge *(coming soon)*
+
+#### Graphs
+- **`Graph`**: Basic graph *(coming soon)*
+- **`DirectedGraph`**: Directed graph *(coming soon)*
+- **`UndirectedGraph`**: Undirected graph *(coming soon)*
+- **`WeightedGraph`**: Weighted graph *(coming soon)*
+
+Translated with DeepL.com (free version)
 
 ## Testing
 
