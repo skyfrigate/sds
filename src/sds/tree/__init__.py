@@ -157,9 +157,10 @@ sds.linear : Linear data structures.
 
 from .balanced import AVLTree, RedBlackTree
 from .binary import BinarySearchTree, BinaryTree
+from .btree import BTree
 from .general import Tree
 from .heap import HeapPriorityQueue, MaxHeap, MinHeap
-from .node import AVLNode, BinaryNode, RedBlackNode, TreeNode, TrieNode
+from .node import AVLNode, BinaryNode, BTreeNode, RedBlackNode, TreeNode, TrieNode
 from .segment_tree import SegmentTree
 from .trie import Trie
 
@@ -167,6 +168,7 @@ __all__ = [
     # Nodes
     "AVLNode",
     "BinaryNode",
+    "BTreeNode",
     "RedBlackNode",
     "TreeNode",
     "TrieNode",
@@ -175,6 +177,7 @@ __all__ = [
     "AVLTree",
     "BinaryTree",
     "BinarySearchTree",
+    "BTree",
     "RedBlackTree",
     "Trie",
     "SegmentTree",
