@@ -1,26 +1,34 @@
 [project]
-name = "sds"
+name = "sds-tools"
 version = "0.1.0"
 description = "Tools for using and manipulating simple basic data structures"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+]
 
 [dependency-groups]
 dev = [
     "bandit>=1.8.6",
-    "black>=25.11.0",
+    "black>=25.12.0",
     "isort>=7.0.0",
     "lint>=1.2.1",
-    "mypy>=1.18.2",
-    "pytest>=9.0.1",
+    "mypy>=1.19.0",
+    "pyrefly>=0.45.0",
+    "pytest>=9.0.2",
     "pytest-cov>=7.0.0",
-    "ruff>=0.14.6",
+    "ruff==0.14.8",
     "tox>=4.32.0",
     "tox-uv>=1.29.0",
 ]
 docs = [
+    "myst-parser>=4.0.1",
     "sphinx>=8.1.3",
+    "sphinx-copybutton>=0.5.2",
+    "sphinx-design>=0.6.1",
+    "sphinx-intl>=2.3.2",
     "sphinx-rtd-theme>=3.0.2",
+    "sphinx-tabs>=3.4.7",
+    "sphinxcontrib-mermaid>=2.0.0rc1",
 ]
 
 [tool.coverage.xml]

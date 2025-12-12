@@ -24,8 +24,6 @@
 *$py.class
 *.so
 .Python
-# Python #
-*$py.class
 
 # Distribution / packaging 
 .Python build/ 
