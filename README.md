@@ -121,17 +121,19 @@ All node types inherit from a common abstract `Node` class using a unified refer
 
 #### Nodes and edges
 - **`GraphNode`**: Graph node with unique identifier
-- **`Edge`**: Edge between two nodes *(coming soon)*
-- **`DirectedEdge`**: Directed edge *(coming soon)*
-- **`WeightedEdge`**: Weighted edge *(coming soon)*
+- **`Edge`**: Edge between two nodes
+- **`DirectedEdge`**: Directed edge
+- **`WeightedEdge`**: Weighted edge
 
 #### Graphs
-- **`Graph`**: Basic graph *(coming soon)*
-- **`DirectedGraph`**: Directed graph *(coming soon)*
-- **`UndirectedGraph`**: Undirected graph *(coming soon)*
-- **`WeightedGraph`**: Weighted graph *(coming soon)*
+- **`Graph`**: Basic graph
+- **`DirectedGraph`**: Directed graph
+- **`UndirectedGraph`**: Undirected graph
+- **`WeightedGraph`**: Weighted graph
+- **`WeightedDirectedGraph`**: a hybridation of Weighted and Directed graph
+- **`AdjacencyListGraph`**: Graph with adjacency list
+- **`AdjacencyMatrixGraph`**: Graph with adjacency 2D matrix
 
-Translated with DeepL.com (free version)
 
 ## Testing
 
@@ -215,11 +217,11 @@ Contributions are welcome! Please follow these guidelines:
 - [x] Segment Tree
 - [x] Exhaustive tests for trees
 
-### Phase 3: Graphs (Planned)
-- [ ] Edge, DirectedEdge, WeightedEdge
-- [ ] Graph, DirectedGraph, UndirectedGraph
-- [ ] Algorithms: DFS, BFS, Dijkstra, Kruskal
-- [ ] Exhaustive tests for graphs
+### Phase 3: Graphs (Completed)
+- [x] Edge, DirectedEdge, WeightedEdge
+- [x] Graph, DirectedGraph, UndirectedGraph
+- [x] Algorithms: DFS, BFS, Dijkstra, Kruskal
+- [x] Exhaustive tests for graphs
 
 ### Phase 4: Advanced Structures (Planned)
 - [ ] Union-Find (Disjoint Set)

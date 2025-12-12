@@ -119,15 +119,18 @@ Tous les types de nœuds héritent d'une classe abstraite `Node` commune utilisa
 
 #### Nœuds et arêtes
 - **`GraphNode`** : Nœud de graphe avec identifiant unique
-- **`Edge`** : Arête entre deux nœuds *(à venir)*
-- **`DirectedEdge`** : Arc orienté *(à venir)*
-- **`WeightedEdge`** : Arête pondérée *(à venir)*
+- **`Edge`** : Arête entre deux nœuds
+- **`DirectedEdge`** : Arc orienté
+- **`WeightedEdge`** : Arête pondérée
 
 #### Graphes
-- **`Graph`** : Graphe de base *(à venir)*
-- **`DirectedGraph`** : Graphe orienté *(à venir)*
-- **`UndirectedGraph`** : Graphe non orienté *(à venir)*
-- **`WeightedGraph`** : Graphe pondéré *(à venir)*
+- **`Graph`** : Graphe de base
+- **`DirectedGraph`** : Graphe orienté
+- **`UndirectedGraph`** : Graphe non orienté
+- **`WeightedGraph`** : Graphe pondéré
+- **`WeightedDirectedGraph`**: Graphe pondéré et orienté
+- **`AdjacencyListGraph`**: Liste d'adjacence (famille des graphes)
+- **`AdjacencyMatrixGraph`**: Matrice d'adjacence (famille des graphes finis)
 
 ## Tests
 
@@ -211,11 +214,11 @@ Les contributions sont les bienvenues ! Veuillez suivre ces guidelines :
 - [x] Trie
 - [x] Tests exhaustifs pour trees
 
-### Phase 3 : Graphes (Planifiée)
-- [ ] Edge, DirectedEdge, WeightedEdge
-- [ ] Graph, DirectedGraph, UndirectedGraph
-- [ ] Algorithmes : DFS, BFS, Dijkstra, Kruskal
-- [ ] Tests exhaustifs pour graphs
+### Phase 3 : Graphes (Complétée)
+- [x] Edge, DirectedEdge, WeightedEdge
+- [x] Graph, DirectedGraph, UndirectedGraph
+- [x] Algorithmes : DFS, BFS, Dijkstra, Kruskal
+- [x] Tests exhaustifs pour graphs
 
 ### Phase 4 : Structures avancées (Planifiée)
 - [ ] Union-Find (Disjoint Set)

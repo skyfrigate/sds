@@ -220,11 +220,11 @@ class AVLTree(AbstractBinaryTree):
             raise RuntimeError(
                 "AVL rotate_right precondition failed: left child is None"
             )
-        B = cast(Optional[AVLNode], y.right)
+        rot = cast(Optional[AVLNode], y.right)
 
         # Perform rotation
         y.right = z
-        z.left = B
+        z.left = rot
 
         # Update heights
         self._update_height(z)
