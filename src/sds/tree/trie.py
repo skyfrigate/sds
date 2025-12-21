@@ -506,7 +506,7 @@ class Trie(Collection):
         if self.is_empty():
             return ""
 
-        prefix = []
+        prefix: List[str] = []
         node = self._root
 
         while len(node.children) == 1 and not node.is_end_of_word:
@@ -623,12 +623,12 @@ class Trie(Collection):
         """
         return self._size == 0
 
-    def __contains__(self, word: str) -> bool:
+    def __contains__(self, item: object) -> bool:
         """Check if a word is in the trie.
 
         Parameters
         ----------
-        word : str
+        item : object
             The word to check.
 
         Returns
@@ -645,7 +645,9 @@ class Trie(Collection):
         >>> "world" in trie
         False
         """
-        return self.search(word)
+        if not isinstance(item, str):
+            return False
+        return self.search(item)
 
     def __iter__(self) -> Iterator[str]:
         """Iterate over all words in the trie.
