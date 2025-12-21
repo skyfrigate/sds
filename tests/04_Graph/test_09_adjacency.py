@@ -22,6 +22,7 @@ internal representations.
 import pytest
 
 from sds.graph import AdjacencyListGraph, AdjacencyMatrixGraph, Edge, GraphNode
+from sds.linear import SimpleNode
 
 
 class TestAdjacencyListGraphCreation:
@@ -84,6 +85,21 @@ class TestAdjacencyListBasicOperations:
         g.add_node(n1)
         assert g.has_node(n1)
         assert g.node_count() == 1
+
+    def test_add_invalid_node(self):
+        """Test adding invalid nodes."""
+        g = AdjacencyListGraph()
+        invalid_node = SimpleNode("Not a GraphNode")
+        with pytest.raises(TypeError, match="Expected GraphNode, got SimpleNode"):
+            g.add_node(invalid_node)
+
+    def test_add_again_node(self) -> None:
+        """Test adding nodes twice."""
+        g = AdjacencyListGraph()
+        n1 = GraphNode("A", "n1")
+        g.add_node(n1)
+        with pytest.raises(ValueError, match="Node n1 already exists in graph"):
+            g.add_node(n1)
 
     def test_add_edge(self) -> None:
         """Test adding edges."""
