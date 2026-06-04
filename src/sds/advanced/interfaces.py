@@ -36,13 +36,22 @@ sds.core.interfaces : Core collection interfaces.
 sds.advanced.disjoint_set : Concrete disjoint set implementation.
 """
 
-from abc import ABC, abstractmethod
-from typing import Any, List, Set
+from abc import abstractmethod
+from typing import Any, Iterator, List, Optional, Set
 
-__all__ = ["AbstractDisjointSet", "AbstractProbabilisticSet"]
+from ..core.interfaces import Collection
+
+__all__ = [
+    "AbstractDisjointSet",
+    "AbstractProbabilisticSet",
+    "AbstractSkipList",
+    "AbstractHashTable",
+    "AbstractLRUCache",
+    "AbstractFenwickTree",
+]
 
 
-class AbstractDisjointSet(ABC):
+class AbstractDisjointSet(Collection):
     """Abstract base class for Disjoint Set (Union-Find) data structure.
 
     A disjoint-set data structure maintains a collection of disjoint sets
@@ -216,7 +225,7 @@ class AbstractDisjointSet(ABC):
         pass
 
 
-class AbstractProbabilisticSet(ABC):
+class AbstractProbabilisticSet(Collection):
     """Abstract base class for probabilistic set membership structures.
 
     Probabilistic structures like Bloom Filters trade perfect accuracy
@@ -283,5 +292,452 @@ class AbstractProbabilisticSet(ABC):
         Notes
         -----
         Higher fill ratios increase false positive probability.
+        """
+        pass
+
+
+class AbstractSkipList(Collection):
+    """Abstract base class for the Skip List probabilistic data structure.
+
+    A skip list is a probabilistic sorted data structure that allows
+    O(log n) average-case search, insertion, and deletion by maintaining
+    multiple levels of linked lists, each a subset of the level below.
+
+    Notes
+    -----
+    Implementations should:
+    - Use a geometric distribution (probability p) to select node height.
+    - Maintain a sentinel head node of maximum height.
+    - Support forward iteration in sorted order.
+
+    Time complexity (average, with p=0.5):
+    - search: O(log n)
+    - insert: O(log n)
+    - delete: O(log n)
+    - __contains__: O(log n)
+
+    Space complexity: O(n log n) expected.
+
+    See Also
+    --------
+    SkipList : Concrete implementation.
+    """
+
+    @abstractmethod
+    def insert(self, key: Any, value: Any = None) -> None:
+        """Insert a key-value pair into the skip list.
+
+        Parameters
+        ----------
+        key : Any
+            Comparable key to insert. Must support ``<`` and ``==``.
+        value : Any, optional
+            Associated value. Defaults to None.
+
+        Notes
+        -----
+        Time complexity: O(log n) average.
+        """
+        pass
+
+    @abstractmethod
+    def delete(self, key: Any) -> bool:
+        """Remove the node with the given key.
+
+        Parameters
+        ----------
+        key : Any
+            Key to remove.
+
+        Returns
+        -------
+        bool
+            True if the key was found and removed, False otherwise.
+
+        Notes
+        -----
+        Time complexity: O(log n) average.
+        """
+        pass
+
+    @abstractmethod
+    def search(self, key: Any) -> Optional[Any]:
+        """Return the value associated with the given key.
+
+        Parameters
+        ----------
+        key : Any
+            Key to search for.
+
+        Returns
+        -------
+        Any or None
+            The associated value if found, None otherwise.
+
+        Notes
+        -----
+        Time complexity: O(log n) average.
+        """
+        pass
+
+    @abstractmethod
+    def __contains__(self, key: Any) -> bool:
+        """Test whether the given key exists in the skip list.
+
+        Parameters
+        ----------
+        key : Any
+            Key to test.
+
+        Returns
+        -------
+        bool
+            True if the key is present.
+
+        Notes
+        -----
+        Time complexity: O(log n) average.
+        """
+        pass
+
+    @abstractmethod
+    def __len__(self) -> int:
+        """Return the number of key-value pairs in the skip list.
+
+        Returns
+        -------
+        int
+            Number of elements.
+        """
+        pass
+
+    @abstractmethod
+    def __iter__(self) -> Iterator[Any]:
+        """Iterate over keys in sorted ascending order.
+
+        Yields
+        ------
+        Any
+            Keys in sorted order.
+        """
+        pass
+
+
+class AbstractHashTable(Collection):
+    """Abstract base class for hash table data structures.
+
+    A hash table maps keys to values using a hash function to compute an
+    index into an array of buckets or slots. Concrete subclasses implement
+    different collision-resolution strategies.
+
+    Notes
+    -----
+    Two classical collision-resolution strategies are supported:
+
+    - **Separate chaining**: each slot holds a list of (key, value) pairs.
+      Worst-case O(n) per operation, O(1) average with a good hash function
+      and load factor ≤ 1.
+    - **Open addressing** (linear probing): all entries live in the array;
+      collisions are resolved by probing subsequent slots.
+      Worst-case O(n), O(1) average for load factor < 0.7.
+
+    Both implementations resize automatically when the load factor exceeds
+    a configurable threshold.
+
+    See Also
+    --------
+    HashTableChaining : Separate-chaining implementation.
+    HashTableOpenAddressing : Open-addressing (linear probing) implementation.
+    """
+
+    @abstractmethod
+    def put(self, key: Any, value: Any) -> None:
+        """Insert or update a key-value pair.
+
+        Parameters
+        ----------
+        key : Any
+            Hashable key.
+        value : Any
+            Value to associate with *key*.
+
+        Notes
+        -----
+        Time complexity: O(1) average, O(n) worst case.
+        """
+        pass
+
+    @abstractmethod
+    def get(self, key: Any) -> Optional[Any]:
+        """Return the value associated with *key*, or None if absent.
+
+        Parameters
+        ----------
+        key : Any
+            Key to look up.
+
+        Returns
+        -------
+        Any or None
+            Associated value, or None if the key is not present.
+
+        Notes
+        -----
+        Time complexity: O(1) average, O(n) worst case.
+        """
+        pass
+
+    @abstractmethod
+    def delete(self, key: Any) -> bool:
+        """Remove the entry with the given key.
+
+        Parameters
+        ----------
+        key : Any
+            Key to remove.
+
+        Returns
+        -------
+        bool
+            True if the key was found and removed, False otherwise.
+
+        Notes
+        -----
+        Time complexity: O(1) average, O(n) worst case.
+        """
+        pass
+
+    @abstractmethod
+    def __contains__(self, key: Any) -> bool:
+        """Test whether *key* exists in the table.
+
+        Parameters
+        ----------
+        key : Any
+            Key to test.
+
+        Returns
+        -------
+        bool
+            True if present.
+        """
+        pass
+
+    @abstractmethod
+    def __len__(self) -> int:
+        """Return the number of key-value pairs stored.
+
+        Returns
+        -------
+        int
+            Number of entries.
+        """
+        pass
+
+    @abstractmethod
+    def __iter__(self) -> Iterator[Any]:
+        """Iterate over all keys.
+
+        Yields
+        ------
+        Any
+            Keys in unspecified order.
+        """
+        pass
+
+
+class AbstractLRUCache(Collection):
+    """Abstract base class for a Least Recently Used (LRU) cache.
+
+    An LRU cache stores a bounded number of key-value pairs. When the cache
+    is full and a new key must be inserted, the least recently used entry
+    (the one not accessed for the longest time) is evicted.
+
+    Every ``get`` and ``put`` operation counts as a "use" and moves the
+    accessed entry to the most-recently-used position.
+
+    Notes
+    -----
+    The canonical implementation combines a doubly-linked list (for O(1)
+    eviction) with a hash map (for O(1) lookup), giving O(1) amortised
+    time for both ``get`` and ``put``.
+
+    See Also
+    --------
+    LRUCache : Concrete implementation.
+    """
+
+    @abstractmethod
+    def get(self, key: Any) -> Optional[Any]:
+        """Return the value for *key* and mark it as most recently used.
+
+        Parameters
+        ----------
+        key : Any
+            Key to look up.
+
+        Returns
+        -------
+        Any or None
+            Stored value, or None if the key is not in the cache.
+
+        Notes
+        -----
+        Time complexity: O(1).
+        """
+        pass
+
+    @abstractmethod
+    def put(self, key: Any, value: Any) -> None:
+        """Insert or update a key-value pair.
+
+        If *key* already exists its value is updated and it is marked as
+        most recently used. If the cache is at capacity, the least recently
+        used entry is evicted before insertion.
+
+        Parameters
+        ----------
+        key : Any
+            Hashable key.
+        value : Any
+            Value to store.
+
+        Notes
+        -----
+        Time complexity: O(1).
+        """
+        pass
+
+    @abstractmethod
+    def __contains__(self, key: Any) -> bool:
+        """Test whether *key* is currently in the cache.
+
+        Parameters
+        ----------
+        key : Any
+            Key to test.
+
+        Returns
+        -------
+        bool
+            True if present (does **not** update recency).
+        """
+        pass
+
+    @abstractmethod
+    def __len__(self) -> int:
+        """Return the number of entries currently in the cache.
+
+        Returns
+        -------
+        int
+            Number of live entries (≤ capacity).
+        """
+        pass
+
+
+class AbstractFenwickTree(Collection):
+    """Abstract base class for the Fenwick Tree (Binary Indexed Tree).
+
+    A Fenwick Tree supports two operations on a mutable sequence of numbers:
+
+    - **Point update**: add a delta to a single element.
+    - **Prefix sum query**: compute the sum of elements from index 1 to i.
+
+    Both operations run in O(log n) time using bitwise manipulation of indices.
+
+    Notes
+    -----
+    Indexing is **1-based** by convention: valid indices are ``1 .. size``.
+
+    See Also
+    --------
+    FenwickTree : Concrete implementation.
+    """
+
+    @abstractmethod
+    def update(self, i: int, delta: float) -> None:
+        """Add *delta* to the element at index *i*.
+
+        Parameters
+        ----------
+        i : int
+            1-based index (1 ≤ i ≤ size).
+        delta : float
+            Value to add (may be negative).
+
+        Raises
+        ------
+        IndexError
+            If *i* is out of range.
+
+        Notes
+        -----
+        Time complexity: O(log n).
+        """
+        pass
+
+    @abstractmethod
+    def prefix_sum(self, i: int) -> float:
+        """Return the sum of elements from index 1 to *i* (inclusive).
+
+        Parameters
+        ----------
+        i : int
+            1-based upper bound (1 ≤ i ≤ size).
+
+        Returns
+        -------
+        float
+            Sum of elements at positions 1, 2, …, i.
+
+        Raises
+        ------
+        IndexError
+            If *i* is out of range.
+
+        Notes
+        -----
+        Time complexity: O(log n).
+        """
+        pass
+
+    @abstractmethod
+    def range_sum(self, left: int, right: int) -> float:
+        """Return the sum of elements from index *left* to *right* (inclusive).
+
+        Parameters
+        ----------
+        left : int
+            1-based lower bound.
+        right : int
+            1-based upper bound.
+
+        Returns
+        -------
+        float
+            Sum of elements at positions left, left+1, …, right.
+
+        Raises
+        ------
+        IndexError
+            If either index is out of range.
+        ValueError
+            If left > right.
+
+        Notes
+        -----
+        Time complexity: O(log n).
+        """
+        pass
+
+    @abstractmethod
+    def __len__(self) -> int:
+        """Return the size of the underlying sequence.
+
+        Returns
+        -------
+        int
+            Number of elements (1-based indexing: valid range is 1..n).
         """
         pass
