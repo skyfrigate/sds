@@ -535,3 +535,78 @@ class TestEdgeCases:
         sets = ds.get_sets()
         assert len(sets) == 1
         assert 42 in sets[0]
+
+
+# ---------------------------------------------------------------------------
+# TestCollectionInterface
+# ---------------------------------------------------------------------------
+
+
+class TestCollectionInterface:
+    """Test Collection interface compliance for DisjointSet."""
+
+    def test_is_collection(self) -> None:
+        """DisjointSet satisfies the Collection interface."""
+        from sds.core.interfaces import Collection
+
+        assert isinstance(DisjointSet(), Collection)
+
+    def test_is_empty_on_new(self) -> None:
+        """is_empty() returns True on a freshly created set."""
+        ds = DisjointSet()
+        assert ds.is_empty() is True
+
+    def test_is_empty_after_make_set(self) -> None:
+        """is_empty() returns False after adding an element."""
+        ds = DisjointSet()
+        ds.make_set(1)
+        assert ds.is_empty() is False
+
+    def test_bool_empty(self) -> None:
+        """bool(ds) is False when empty."""
+        ds = DisjointSet()
+        assert not ds
+
+    def test_bool_non_empty(self) -> None:
+        """bool(ds) is True when non-empty."""
+        ds = DisjointSet()
+        ds.make_set(1)
+        assert ds
+
+    def test_clear_empties(self) -> None:
+        """clear() removes all elements."""
+        ds = DisjointSet()
+        for i in range(5):
+            ds.make_set(i)
+        ds.clear()
+        assert len(ds) == 0
+        assert ds.is_empty() is True
+
+    def test_clear_resets_sets_count(self) -> None:
+        """clear() resets the number of disjoint sets to 0."""
+        ds = DisjointSet()
+        for i in range(3):
+            ds.make_set(i)
+        ds.clear()
+        assert ds.count_sets() == 0
+
+    def test_iter_yields_all_elements(self) -> None:
+        """__iter__ yields all elements added via make_set."""
+        ds = DisjointSet()
+        elements = [1, "a", (1, 2)]
+        for e in elements:
+            ds.make_set(e)
+        assert set(ds) == set(elements)
+
+    def test_iter_empty(self) -> None:
+        """Iterating over an empty DisjointSet yields nothing."""
+        assert list(DisjointSet()) == []
+
+    def test_clear_allows_reuse(self) -> None:
+        """DisjointSet is fully usable after clear()."""
+        ds = DisjointSet()
+        ds.make_set(1)
+        ds.clear()
+        ds.make_set(2)
+        assert 2 in ds
+        assert len(ds) == 1

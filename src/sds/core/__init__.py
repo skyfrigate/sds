@@ -10,16 +10,21 @@ This module provides the fundamental building blocks used across all data struct
 from .exceptions import (
     EmptyStructureError,
     FullStructureError,
+    IndexStructureError,
     InvalidOperationError,
 )
 from .interfaces import Collection, LinearCollection
 from .node import Node
 
 __all__ = [
+    # Node
     "Node",
+    # Interfaces
     "Collection",
     "LinearCollection",
+    # Exceptions
     "EmptyStructureError",
     "FullStructureError",
+    "IndexStructureError",
     "InvalidOperationError",
 ]
