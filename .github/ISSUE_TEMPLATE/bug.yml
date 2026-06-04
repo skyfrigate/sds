@@ -1,0 +1,165 @@
+name: "🐛 Bug"
+description: >
+  Report an incorrect behaviour, an exception, or an unexpected result.
+title: "[BUG] "
+labels:
+  - "type: bug"
+  - "status: triage"
+  - "priority: high"
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Summary"
+      description: "One sentence: what happens vs what should happen."
+      placeholder: >
+        When calling `MyClass.build()` with an empty config dict,
+        the function raises `KeyError` instead of returning a typed error.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected behaviour"
+      placeholder: >
+        Raise `ConfigError` with an explicit message describing the missing key.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: "Observed behaviour"
+      placeholder: |
+        ```
+        Traceback (most recent call last):
+          File "repro.py", line 12, in <module>
+            result = MyClass.build({})
+          File "src/mypackage/core.py", line 42, in build
+            return config["key"]
+        KeyError: 'key'
+        ```
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: "Reproduction steps"
+      description: >
+        Minimal Python code reproducing the issue (MCVE).
+        A failing pytest test is ideal.
+      placeholder: |
+        ```python
+        import pytest
+        from mypackage import MyClass, ConfigError
+
+        def test_repro_empty_config():
+            with pytest.raises(ConfigError):
+                MyClass.build({})  # raises KeyError instead
+        ```
+      render: markdown
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: "Python version"
+      description: "Output of `python --version`."
+      placeholder: "Python 3.12.3"
+    validations:
+      required: true
+
+  - type: input
+    id: package-version
+    attributes:
+      label: "Package version"
+      description: "Output of `pip show <package> | grep Version`."
+      placeholder: "0.1.1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: "Environment"
+      description: "OS, relevant dependencies and their versions."
+      placeholder: |
+        - OS: Ubuntu 24.04 / macOS 15 / Windows 11
+        - pip: 24.x
+        - Relevant deps: dependency-a==1.2.3, dependency-b==4.5.6
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: "Operating system"
+      options:
+        - "Linux"
+        - "macOS"
+        - "Windows"
+        - "Other"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: "Affected module(s)"
+      description: "Apply the matching `scope:` labels manually after creation."
+      options:
+        - label: "`api` — public interface"
+        - label: "`cli` — command-line interface"
+        - label: "`docs` — docstrings, examples"
+        - label: "`tests` — pytest, coverage"
+        - label: "`ci` — tox, pipeline"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Severity"
+      description: "`priority: high` is applied by default. Adjust if needed."
+      options:
+        - "high — unhandled exception, data corruption, public regression"
+        - "medium — incorrect behaviour, workaround available"
+        - "low — cosmetic, imprecise error message"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: "Estimated fix effort"
+      description: "Apply the matching `effort:` label after creation."
+      options:
+        - "XS — typo, missing guard clause"
+        - "S  — localised fix (1 module)"
+        - "M  — multi-module fix"
+        - "L  — refactoring required"
+        - "XL — architectural impact"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: breaking-fix
+    attributes:
+      label: "Is the fix a breaking change?"
+      description: "If yes, also add `type: breaking`."
+      options:
+        - "No — transparent fix"
+        - "Yes — API change required"
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: "Additional context"
+      description: "Full traceback, logs, config files used, `pip freeze` output, etc."
+    validations:
+      required: false

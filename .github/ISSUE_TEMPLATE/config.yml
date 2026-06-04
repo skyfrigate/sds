@@ -1,0 +1,16 @@
+blank_issues_enabled: true
+
+contact_links:
+  - name: "💬 General question or idea"
+    url: https://github.com/biface/REPO/discussions
+    about: >
+      For usage questions, informal proposals, or experience reports —
+      please use Discussions rather than opening an issue.
+
+  - name: "📖 API Documentation"
+    url: https://REPO.readthedocs.io
+    about: "Check the full documentation on ReadTheDocs before opening an issue."
+
+  - name: "📦 PyPI"
+    url: https://pypi.org/project/PACKAGE/
+    about: "Published versions and release history."
