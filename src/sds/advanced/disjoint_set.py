@@ -87,7 +87,7 @@ sds.algorithms.graph.spanning_tree.kruskal : Uses DisjointSet for MST.
 sds.algorithms.graph.connectivity : Uses DisjointSet for components.
 """
 
-from typing import Any, Dict, List, Set
+from typing import Any, Dict, Iterator, List, Set
 
 from .interfaces import AbstractDisjointSet
 
@@ -198,6 +198,46 @@ class DisjointSet(AbstractDisjointSet):
         1
         """
         return self._num_sets
+
+    def is_empty(self) -> bool:
+        """Return True if no elements have been added.
+
+        Returns
+        -------
+        bool
+            True if len(self) == 0.
+
+        Notes
+        -----
+        Time complexity: O(1).
+        """
+        return len(self._parent) == 0
+
+    def clear(self) -> None:
+        """Remove all elements and sets.
+
+        Notes
+        -----
+        Time complexity: O(1).
+        """
+        self._parent.clear()
+        self._rank.clear()
+        self._set_size.clear()
+        self._num_sets = 0
+
+    def __iter__(self) -> "Iterator[Any]":
+        """Iterate over all elements in the structure.
+
+        Yields
+        ------
+        Any
+            Elements in unspecified order.
+
+        Notes
+        -----
+        Time complexity: O(n).
+        """
+        return iter(self._parent)
 
     def make_set(self, element: Any) -> None:
         """Create a new set containing only the given element.
@@ -399,7 +439,7 @@ class DisjointSet(AbstractDisjointSet):
         -----
         Time complexity: O(α(n)) amortized.
         """
-        return self.find(x) == self.find(y)
+        return bool(self.find(x) == self.find(y))
 
     def get_sets(self) -> List[Set[Any]]:
         """Get all disjoint sets.
