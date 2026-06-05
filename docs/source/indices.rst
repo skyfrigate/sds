@@ -1,6 +1,7 @@
+==================
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+* :ref:`genindex` — General index
+* :ref:`modindex` — Module index
+* :ref:`search` — Search in documentation
