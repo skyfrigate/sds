@@ -1,0 +1,112 @@
+=======================
+Version 0.1.0 (2024-12)
+=======================
+
+*Release Date: December 2024*
+
+This is the initial public release of SDS-Tools.
+
+Overview
+========
+
+First stable release providing core linear and tree data structures
+with comprehensive documentation and test coverage.
+
+Added
+=====
+
+Core Module
+-----------
+
+* Base ``Node`` abstraction class
+* ``Collection`` and ``LinearCollection`` interfaces
+* Core exception hierarchy (``EmptyStructureError``, etc.)
+
+Linear Structures
+-----------------
+
+* **Stack** - LIFO data structure
+
+  * Array-based implementation
+  * O(1) push/pop operations
+  * Dynamic resizing
+
+* **Queue** - FIFO data structure
+
+  * Circular array implementation
+  * O(1) enqueue/dequeue operations
+
+* **Deque** - Double-ended queue
+
+  * Operations at both ends in O(1)
+
+* **Linked Lists**
+
+  * Singly linked list
+  * Doubly linked list
+  * Circular linked list variants
+
+Tree Structures
+---------------
+
+* **Binary Tree** - Basic binary tree implementation
+* **Binary Search Tree** - Ordered binary tree
+* **AVL Tree** - Self-balancing BST
+
+Documentation
+-------------
+
+* Complete API reference with NumPy-style docstrings
+* User guides with theoretical foundations
+* Algorithm complexity analysis
+* Practical usage examples
+* Mermaid diagrams for visualization
+
+Testing
+-------
+
+* 90%+ code coverage
+* Unit tests for all data structures
+* Performance benchmarks
+* Edge case testing
+
+Changed
+=======
+
+* N/A (initial release)
+
+Deprecated
+==========
+
+* N/A (initial release)
+
+Removed
+=======
+
+* N/A (initial release)
+
+Fixed
+=====
+
+* N/A (initial release)
+
+Security
+========
+
+* N/A (initial release)
+
+Known Issues
+============
+
+* None at this time
+
+Contributors
+============
+
+* skyfrigate
+* biface
+
+Acknowledgments
+===============
+
+Special thanks to the Python community for inspiration and feedback.
