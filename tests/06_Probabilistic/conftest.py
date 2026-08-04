@@ -34,6 +34,19 @@ def sprinkler() -> RandomVariable:
 
 
 @pytest.fixture
+def wet_grass() -> RandomVariable:
+    """Binary RandomVariable: WetGrass in {true, false}.
+
+    Returns
+    -------
+    RandomVariable
+        A binary variable named "WetGrass", conventionally depending on
+        both Rain and Sprinkler.
+    """
+    return RandomVariable("WetGrass", ("true", "false"))
+
+
+@pytest.fixture
 def weather() -> RandomVariable:
     """Ternary RandomVariable: Weather in {sunny, rainy, cloudy}.
 
