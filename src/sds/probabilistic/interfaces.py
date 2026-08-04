@@ -188,6 +188,38 @@ class AbstractGraphicalModel(Collection, ABC):
         pass
 
     @abstractmethod
+    def factors_for(self, variable: RandomVariable) -> Iterator[Factor]:
+        """Iterate over every factor whose scope includes ``variable``.
+
+        Parameters
+        ----------
+        variable : RandomVariable
+            Variable to query.
+
+        Yields
+        ------
+        Factor
+            Each factor that references ``variable`` anywhere in its scope.
+
+        Raises
+        ------
+        ValueError
+            If ``variable`` is not part of the model.
+
+        Notes
+        -----
+        This is the generic, model-agnostic query that inference algorithms
+        (Variable Elimination, Belief Propagation, ...) need to find every
+        factor touching a variable before combining them. It differs from a
+        Bayesian network's own ``get_cpt(variable)``: ``get_cpt`` returns the
+        single CPT *assigned to* ``variable``, whereas ``factors_for`` also
+        returns other factors that merely *reference* it — for instance, in
+        a Bayesian network, ``factors_for(rain)`` includes both ``Rain``'s
+        own CPT and any child's CPT that conditions on ``Rain``.
+        """
+        pass
+
+    @abstractmethod
     def joint(self, assignment: Mapping[RandomVariable, Any]) -> float:
         """Evaluate the model's potential for a full joint assignment.
 
