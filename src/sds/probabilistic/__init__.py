@@ -36,6 +36,8 @@ RandomVariable
     A discrete random variable with a finite domain of states.
 Factor
     A potential table mapping joint assignments to non-negative values.
+BayesianNetwork
+    Directed acyclic graphical model with per-variable CPTs.
 
 Abstract Interfaces
 -------------------
@@ -64,20 +66,33 @@ Define two variables and a factor over their joint scope:
 >>> cpt.value({rain: "true", sprinkler: "false"})
 0.99
 
+Build a small Bayesian network and evaluate a joint assignment (the CPT's
+scope must start with the conditioned variable itself):
+
+>>> from sds.probabilistic import BayesianNetwork
+>>> bn = BayesianNetwork()
+>>> bn.add_variable(rain)
+>>> bn.add_variable(sprinkler)
+>>> bn.add_edge(rain, sprinkler)
+>>> bn.set_cpt(rain, Factor((rain,), {("true",): 0.2, ("false",): 0.8}))
+>>> sprinkler_cpt = Factor((sprinkler, rain), {
+...     (s, r): table[(r, s)] for r in rain.domain for s in sprinkler.domain
+... })
+>>> bn.set_cpt(sprinkler, sprinkler_cpt)
+>>> round(bn.joint({rain: "true", sprinkler: "false"}), 4)
+0.198
+
 Notes
 -----
-Concrete structures — ``BayesianNetwork``, ``MarkovRandomField`` — are not
-yet implemented in this module; only the shared building blocks
-(``RandomVariable``, ``Factor``) and the abstract interfaces are available
-so far. ``HiddenMarkovModel`` is planned separately and is intentionally
-not part of the ``AbstractGraphicalModel`` hierarchy — its sequential
-structure (hidden states, observations, transition/emission matrices)
-does not map onto a generic scope-of-variables factor model.
+``MarkovRandomField`` is not yet implemented in this module. ``HiddenMarkovModel``
+is planned separately and is intentionally not part of the
+``AbstractGraphicalModel`` hierarchy — its sequential structure (hidden
+states, observations, transition/emission matrices) does not map onto a
+generic scope-of-variables factor model.
 
-Topology for ``AbstractBayesianNetwork`` and ``AbstractMarkovRandomField``
-implementations is expected to compose ``sds.graph`` classes
-(``DirectedGraph`` and ``Graph`` respectively) rather than reimplement
-adjacency.
+``BayesianNetwork`` composes ``sds.graph.DirectedGraph`` for topology
+rather than reimplementing adjacency; ``AbstractMarkovRandomField``
+implementations are expected to do the same with ``sds.graph.Graph``.
 
 See Also
 --------
@@ -94,6 +109,7 @@ References
        MIT Press. Chapter 10: Directed Graphical Models.
 """
 
+from .bayesian_network import BayesianNetwork
 from .factor import Factor
 from .interfaces import (
     AbstractBayesianNetwork,
@@ -106,6 +122,8 @@ __all__ = [
     # Building blocks
     "RandomVariable",
     "Factor",
+    # Concrete structures
+    "BayesianNetwork",
     # Abstract interfaces
     "AbstractGraphicalModel",
     "AbstractBayesianNetwork",
