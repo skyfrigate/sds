@@ -58,6 +58,7 @@ class TestAbstractGraphicalModelInterface:
             "variables",
             "add_factor",
             "factors",
+            "factors_for",
             "joint",
         }
         abstract_methods = {
@@ -127,6 +128,11 @@ class _MinimalGraphicalModel(AbstractGraphicalModel):
     def factors(self) -> Iterator[Factor]:
         return iter(self._factors)
 
+    def factors_for(self, variable: RandomVariable) -> Iterator[Factor]:
+        for factor in self._factors:
+            if variable in factor.scope:
+                yield factor
+
     def joint(self, assignment: Mapping[RandomVariable, Any]) -> float:
         result = 1.0
         for factor in self._factors:
@@ -170,6 +176,22 @@ class TestConcreteGraphicalModel:
         model = _MinimalGraphicalModel()
         with pytest.raises(ValueError, match="not in the model"):
             model.add_factor(Factor((rain,), {("true",): 0.2, ("false",): 0.8}))
+
+    def test_factors_for_returns_only_matching_scope(
+        self,
+        rain: RandomVariable,
+        sprinkler: RandomVariable,
+        binary_cpt_table: dict,
+    ) -> None:
+        """Test that factors_for() filters by scope membership."""
+        model = _MinimalGraphicalModel()
+        model.add_variable(rain)
+        model.add_variable(sprinkler)
+        joint_factor = Factor((rain, sprinkler), binary_cpt_table)
+        model.add_factor(joint_factor)
+
+        assert list(model.factors_for(rain)) == [joint_factor]
+        assert list(model.factors_for(sprinkler)) == [joint_factor]
 
 
 # ============================================================================

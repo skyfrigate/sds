@@ -250,6 +250,19 @@ class BayesianNetwork(AbstractBayesianNetwork):
         """See AbstractGraphicalModel.factors."""
         return iter(self._cpts.values())
 
+    def factors_for(self, variable: RandomVariable) -> Iterator[Factor]:
+        """See AbstractGraphicalModel.factors_for.
+
+        For a Bayesian network this returns ``variable``'s own CPT (if set)
+        together with every other CPT that conditions on ``variable`` as a
+        parent — not just ``get_cpt(variable)``.
+        """
+        if not self.has_variable(variable):
+            raise ValueError(f"'{variable.name}' is not in the network")
+        for factor in self._cpts.values():
+            if variable in factor.scope:
+                yield factor
+
     def get_cpt(self, variable: RandomVariable) -> Factor:
         """Retrieve the CPT assigned to ``variable``.
 
@@ -267,6 +280,10 @@ class BayesianNetwork(AbstractBayesianNetwork):
         ------
         KeyError
             If no CPT has been set for ``variable`` yet.
+
+        See Also
+        --------
+        factors_for : All factors referencing ``variable``, not just its own CPT.
         """
         return self._cpts[variable.name]
 
