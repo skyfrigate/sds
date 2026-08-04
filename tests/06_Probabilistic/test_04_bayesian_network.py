@@ -361,6 +361,57 @@ class TestConditionalProbabilityTables:
         with pytest.raises(KeyError):
             bn.get_cpt(rain)
 
+    def test_factors_for_includes_own_cpt(self, rain: RandomVariable) -> None:
+        """Test that factors_for() includes the variable's own CPT."""
+        bn = BayesianNetwork()
+        bn.add_variable(rain)
+        rain_cpt = Factor((rain,), {("true",): 0.2, ("false",): 0.8})
+        bn.set_cpt(rain, rain_cpt)
+        assert list(bn.factors_for(rain)) == [rain_cpt]
+
+    def test_factors_for_includes_children_cpts_referencing_it(
+        self,
+        rain: RandomVariable,
+        sprinkler: RandomVariable,
+        binary_cpt_table: dict,
+    ) -> None:
+        """Test that factors_for(parent) also returns children's CPTs.
+
+        This is the behavior that distinguishes factors_for() from
+        get_cpt(): Rain's own CPT does not mention Sprinkler, but
+        Sprinkler's CPT does mention Rain (as a parent), so
+        factors_for(rain) must return both.
+        """
+        bn = BayesianNetwork()
+        bn.add_variable(rain)
+        bn.add_variable(sprinkler)
+        bn.add_edge(rain, sprinkler)
+
+        rain_cpt = Factor((rain,), {("true",): 0.2, ("false",): 0.8})
+        sprinkler_table = {
+            (s, r): binary_cpt_table[(r, s)]
+            for r in rain.domain
+            for s in sprinkler.domain
+        }
+        sprinkler_cpt = Factor((sprinkler, rain), sprinkler_table)
+        bn.set_cpt(rain, rain_cpt)
+        bn.set_cpt(sprinkler, sprinkler_cpt)
+
+        assert set(bn.factors_for(rain)) == {rain_cpt, sprinkler_cpt}
+        assert set(bn.factors_for(sprinkler)) == {sprinkler_cpt}
+
+    def test_factors_for_unknown_variable_raises(self, rain: RandomVariable) -> None:
+        """Test that factors_for() on an unregistered variable raises."""
+        bn = BayesianNetwork()
+        with pytest.raises(ValueError, match="not in the network"):
+            list(bn.factors_for(rain))
+
+    def test_factors_for_empty_before_any_cpt_set(self, rain: RandomVariable) -> None:
+        """Test that factors_for() yields nothing before any CPT is set."""
+        bn = BayesianNetwork()
+        bn.add_variable(rain)
+        assert list(bn.factors_for(rain)) == []
+
 
 class TestJoint:
     """Test joint() probability evaluation."""
