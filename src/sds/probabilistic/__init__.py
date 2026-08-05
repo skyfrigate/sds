@@ -54,6 +54,9 @@ AbstractBayesianNetwork
     Directed, acyclic graphical model with locally normalized CPTs.
 AbstractMarkovRandomField
     Undirected graphical model with (generally unnormalized) potentials.
+AbstractHiddenMarkovModel
+    Sequential model, independent from AbstractGraphicalModel (see its
+    own docstring for why).
 
 Examples
 --------
@@ -133,8 +136,7 @@ a second variable sharing its domain):
 
 Notes
 -----
-``MarkovRandomField`` is not yet implemented in this module. ``HiddenMarkovModel``
-is planned separately and is intentionally not part of the
+``HiddenMarkovModel`` is intentionally not part of the
 ``AbstractGraphicalModel`` hierarchy — its sequential structure (hidden
 states, observations, transition/emission matrices) does not map onto a
 generic scope-of-variables factor model. See
@@ -169,6 +171,7 @@ from .hidden_markov_model import HiddenMarkovModel
 from .interfaces import (
     AbstractBayesianNetwork,
     AbstractGraphicalModel,
+    AbstractHiddenMarkovModel,
     AbstractMarkovRandomField,
 )
 from .markov_random_field import MarkovRandomField
@@ -186,6 +189,7 @@ __all__ = [
     "AbstractGraphicalModel",
     "AbstractBayesianNetwork",
     "AbstractMarkovRandomField",
+    "AbstractHiddenMarkovModel",
 ]
 
 __version__ = "0.1.0"
