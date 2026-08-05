@@ -1,0 +1,357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: 2025-12-13 17:52+0100\n"
+"Last-Translator: \n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/index.rst:94
+msgid "User Guide"
+msgstr "Guide utilisateur"
+
+#: ../../source/index.rst:103
+msgid "Data Structures"
+msgstr "Structures de données"
+
+#: ../../source/index.rst:113
+msgid "API Reference"
+msgstr "Bibliothèque des modules"
+
+#: ../../source/index.rst:127
+msgid "Development"
+msgstr "Développement"
+
+#: ../../source/index.rst:136
+#, fuzzy
+msgid "Documentation tools"
+msgstr "Structure du document"
+
+#: ../../source/index.rst:4 371a2c92ef3646cfa2fb18cf8a06015a
+msgid "Welcome to SDS-Tools Documentation!"
+msgstr "Bienvenue dans la documentation SDS-Tools"
+
+#: ../../source/index.rst:7 edf9b52ce6474cd2b9d6261f68ee1cd6
+msgid "About This Project"
+msgstr "A propos de ce projet"
+
+#: ../../source/index.rst:9 124a76cbdca540dba4613e4aeaaa0696
+msgid ""
+"This package was designed to revisit fundamental algorithms through the "
+"implementation of basic data structures: linear structures, trees, and "
+"graphs. The project also serves as a practical exploration of static code"
+" analysis techniques using AI-assisted development."
+msgstr ""
+"Ce package a été conçu pour revisiter les algorithmes fondamentaux à "
+"travers la mise en œuvre de structures de données de base : structures "
+"linéaires, arbres et graphes. Le projet sert également d'exploration "
+"pratique des techniques d'analyse de code statique à l'aide du "
+"développement assisté par l'IA."
+
+#: ../../source/index.rst:13 7397a06aab9c42c0813dc6be76dc994a
+msgid ""
+"**SDS-Tools** (Simple Data Structures) is a comprehensive Python library "
+"providing educational and production-ready implementations of advanced "
+"data structures not available in the standard library."
+msgstr ""
+"**SDS-Tools** (Simple Data Structures) est une bibliothèque Python "
+"complète qui fournit des implémentations éducatives et prêtes à l'emploi "
+"de structures de données avancées qui ne sont pas disponibles dans la "
+"bibliothèque standard."
+
+#: ../../source/index.rst:17 37c6af022d4a4488b316fa4ead601c88
+msgid "This library implements a wide range of data structures including:"
+msgstr ""
+"Cette bibliothèque implémente un large éventail de structures de données,"
+" notamment :"
+
+#: ../../source/index.rst:19 8e09ff0d6fd54efc90600cb5a5bc0151
+msgid "**Linear structures**: Stack, Queue, Deque, Priority Queue, Linked Lists"
+msgstr ""
+"**Structures linéaires** : pile, file d'attente, file double, file "
+"d'attente prioritaire, listes chaînées"
+
+#: ../../source/index.rst:20 5688077b9b4e43a08dc8cdca881a6458
+msgid ""
+"**Tree structures**: Binary Trees, BST, AVL, Red-Black Trees, Heaps, "
+"B-Trees, Tries"
+msgstr ""
+"**Structures arborescentes** : Arbres binaires simples, de recherche "
+"(ABR/BST), de recherche automatiquement équilibrés, arbres bicolores (dit"
+" aussi rouge-noir), tas, arbres B et trie ou arbres préfixés. "
+
+#: ../../source/index.rst:21 4e4a3e68acd841cb99abe539990d73c4
+msgid ""
+"**Graph structures**: Directed/Undirected Graphs, Weighted Graphs, "
+"Adjacency representations"
+msgstr ""
+"**Structures en graphe** : graphe orienté ou non, pondérés et "
+"représentation par adjacence."
+
+#: ../../source/index.rst:22 b8064562c55e4908819ca3c55d1fac30
+msgid ""
+"**Advanced structures**: Union-Find, Bloom Filters, Skip Lists, Hash "
+"Tables"
+msgstr ""
+"**Structures complexes** : ensemble disjoint, filtre de bloom, liste à "
+"enjambements, tableau associatif"
+
+#: ../../source/index.rst:25 6cac7bbfdf544ef19eb82fd0bacd7abb
+msgid "This documentation is available in multiple languages and versions."
+msgstr "Cette documentation est disponible dans plusieurs langues et versions."
+
+#: ../../source/index.rst:27 ec719eb2871846c3a5de76c30bbc2e4a
+msgid "Current version: |version|"
+msgstr "Version actuelle: [version]"
+
+#: ../../source/index.rst:28 3c817b61c52040f88d411a069e26da23
+msgid "Current language: English (also available in French)"
+msgstr "Langue du document: Français (aussi disponible en anglais)"
+
+#: ../../source/index.rst:29 1bec3ead17114b699c7f40a5d95cfc36
+msgid "Project started: 2019"
+msgstr "Projet initié en 2019"
+
+#: ../../source/index.rst:30 78659514a332434eb55161cef97e4a88
+msgid "Authors: skyfrigate & biface"
+msgstr "Auteurs: skyfrigate & biface"
+
+#: ../../source/index.rst:33 2aea82e2aa514b548d44a9bc07f86b81
+msgid "Quick Start"
+msgstr "Premiers pas"
+
+#: ../../source/index.rst:36 254b148a09a746db828994c7442c2251
+msgid "Installation"
+msgstr "Installtion"
+
+#: ../../source/index.rst:42 ad49b4465e4b4afc9ea2d6dd8f0df85d
+msgid "Basic usage example:"
+msgstr "Exemple simple d'utilisation :"
+
+#: ../../source/index.rst:58 20ca80ec852c40638388abd6ce239023
+msgid "Features"
+msgstr "Caractéristiques"
+
+#: ../../source/index.rst:60 42474143fd3e4794bb289d8f085afd9b
+msgid "✓ **Type-safe implementations** with proper abstractions"
+msgstr ""
+"✓ **Implémentation sure avec contrôle des types** et classe abstraites "
+"appropriée"
+
+#: ../../source/index.rst:62 e5869bdf0ea64b7fb4917f3465b04328
+msgid "✓ **Comprehensive test coverage**"
+msgstr "✓ **Couverture complète des tests**"
+
+#: ../../source/index.rst:64 f2d94dda8f484604a1a28d2d03675d4f
+msgid "✓ **NumPy-style docstrings** for clear documentation"
+msgstr ""
+"✓ **Documentation du code avec le format Numpy** pour une documentation "
+"claire"
+
+#: ../../source/index.rst:66 08215eff338b41fb98f73f1ae4bddf97
+msgid "✓ **Performance-optimized** algorithms"
+msgstr "✓ **Recherche de l'optimisation** des algorithmes"
+
+#: ../../source/index.rst:68 33d4c2a6b9d740ffa10b4d4d4a0ca0a8
+msgid "✓ **Educational and production-ready**"
+msgstr "✓ **Pédagogique et prêt à l'emploi**"
+
+#: ../../source/index.rst:70 95d8c263fbb94c98b8d1aea6e363aef7
+msgid "✓ **Python 3.10+** support"
+msgstr "✓ Compatible avec **Python 3.10** ou supérieur"
+
+#: ../../source/index.rst:72 a7cafaf3459f4ddf915ccac3a942004c
+msgid "✓ **AI-assisted development** for code quality analysis"
+msgstr ""
+"✓ **Utilisation et assistance au développement d'IA** pour renforcer la "
+"qualité et l'analyse du code"
+
+#: ../../source/index.rst:75 d0990904052640a38675672597526d26
+msgid "Documentation Structure"
+msgstr "Structure du document"
+
+#: ../../source/index.rst:77 04dbd2d8f7304d0dbb101345cbc25146
+msgid "This documentation is organized into several sections:"
+msgstr "Ce document est organisé en plusieurs sections"
+
+#: ../../source/index.rst:79 14012e6dfaa44fb8bd4b3f8ec7b0fae6
+#, fuzzy
+msgid "**User Guide**"
+msgstr "Guide utilisateur"
+
+#: ../../source/index.rst:80 078b7d1e1c7a4db9905cd75afebb62b5
+msgid ""
+"Step-by-step guides for using the library, with theoretical background, "
+"algorithmic descriptions, and practical examples. Includes a "
+"comprehensive class hierarchy diagram showing the relationships between "
+"all data structures."
+msgstr ""
+"Guides conçu pour une utilisation de la bibliothèque, avec des "
+"informations théoriques, des descriptions algorithmiques et des exemples "
+"pratiques. Il comprend un diagramme complet de la hiérarchie des classes "
+"montrant les relations entre toutes les structures de données."
+
+#: ../../source/index.rst:84 8e25e46d540b42fba19423bfb5f96d33
+#, fuzzy
+msgid "**API Reference**"
+msgstr "Bibliothèque des modules"
+
+#: ../../source/index.rst:85 da187ef315eb42db864b404b4aa6d076
+msgid ""
+"Complete technical documentation auto-generated from source code "
+"docstrings. Organized by module family (core, linear, tree, graphs, "
+"advanced, algorithms)."
+msgstr ""
+"La documentation technique est produite automatiquement à partir des "
+"éléments de description des classes, méthodes et fonctions. Elle est "
+"organisée selon les modules (core, linear, tree, graph, advanced,...)"
+
+#: ../../source/index.rst:88 7c10a4d2afbf4b03a57a782ea9262500
+msgid "**Changelog**"
+msgstr "**Journal des modifications**"
+
+#: ../../source/index.rst:89 dc1d884709a3426b95deaab90eedbff5
+msgid "Version history with features, improvements, and deprecations."
+msgstr ""
+"Historique des version avec les caractéristiques, améliorations et "
+"dépréciation."
+
+#: ../../source/index.rst:92 bc40a909dd52471487c7b195a973ce74
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: ../../source/index.rst:144 ae15baaaf0f84f74973867e4de3202fc
+msgid "About the Project"
+msgstr "A propos du projet"
+
+#: ../../source/index.rst:146 309861301f4d4d8da574601806b36e40
+msgid ""
+"**SDS-Tools** has been developed since 2019 by skyfrigate and biface as "
+"an educational project to explore fundamental data structures and "
+"algorithms. The project emphasizes:"
+msgstr ""
+"**SDS-Tools** est développé depuis 2019 par skyfrigate et biface comme un"
+" projet pédagogique pour explorer et comprendre les structures de données"
+" de base et les algorithmes associés. Ce projet met l'accent sur :"
+
+#: ../../source/index.rst:150 672e615aefab4900a8a32ec2924a91da
+msgid ""
+"**Clear, well-documented implementations** following NumPy docstring "
+"conventions"
+msgstr ""
+"**Un documentation du code claire et précise** en respectant le format "
+"Numpy pour le style de documentation"
+
+#: ../../source/index.rst:151 fad72baee78f482687ecb6cb3a0942b3
+msgid "**Comprehensive test coverage** ensuring reliability"
+msgstr "**Une couverture complète par les tests** afin d'en vérifier sa faibilité"
+
+#: ../../source/index.rst:152 b216e3a9a6cb4ba7a4566f0787a940d7
+msgid "**Modern Python practices** with type hints and proper abstractions"
+msgstr "**Pratique du codage** avec un renforcement du typage"
+
+#: ../../source/index.rst:153 355aead0151d4ab69a2d3ec56a61e137
+msgid "**AI-assisted development** for exploring static code analysis techniques"
+msgstr ""
+"**Une assistance au développement par l'IA** pour approfondir les "
+"techniques d'analyse statique"
+
+#: ../../source/index.rst:155 59be815994f545de9c3e933f646c5a7a
+msgid ""
+"The project serves both as a learning resource for understanding data "
+"structures and as a practical library for production use."
+msgstr ""
+"Le projet a la double ambition de ressource pédagogique pour comprendre "
+"les structures de données et de bibliothèque pratique pour une "
+"utilisation en production."
+
+#: ../../source/index.rst:159 9b1dec3857a445bcb450bef258d8a1ef
+msgid "Support"
+msgstr "Support"
+
+#: ../../source/index.rst:161 3c10264098a542459bddc21c15a7973e
+msgid "**Documentation**: https://sds-tools.readthedocs.io"
+msgstr "**Documentation** : https://sds-tools.readthedocs.io"
+
+#: ../../source/index.rst:162 01ac100ff05c4de790b326186aed74eb
+msgid "**Source Code**: https://github.com/skyfrigate/sds"
+msgstr "**Code source** : https://github.com/skyfrigate/sds"
+
+#: ../../source/index.rst:163 228c90119a4d4f5bb49d1728d6ee617c
+msgid "**Issue Tracker**: https://github.com/skyfrigate/sds/issues"
+msgstr "**Suivi des incidents** : https://github.com/skyfrigate/sds/issues"
+
+#: ../../source/index.rst:164 e115fa6d28ec46119c82412b8fcd165a
+msgid "**Discussions**: https://github.com/skyfrigate/sds/discussions"
+msgstr "**Discussions**: https://github.com/skyfrigate/sds/discussions"
+
+#: ../../source/index.rst:167 16c0e27ee88847ce9101278d54c3fc5d
+msgid "License"
+msgstr "Licence"
+
+#: ../../source/index.rst:169 0cfa8c88cdf640e89668d744044c5dc5
+msgid ""
+"This project is licensed under the Apache License 2.0 - see the "
+":doc:`license` file for details."
+msgstr ""
+"Ce projet est développé sous Apache License 2.0 - c.f. le fichier "
+":doc:`license` pour plus de détails."
+
+#: ../../source/index.rst:171 7d3be6c9fbf64d57b73ec1bfaa2525d4
+msgid "Copyright 2019-2024 skyfrigate & biface"
+msgstr "Copyright 2019-2024 skyfrigate & biface"
+
+#: ../../source/index.rst:173 cd3e31ebd10844dda21e0ae7fd06af48
+msgid ""
+"Licensed under the Apache License, Version 2.0 (the \"License\"); you may"
+" not use this file except in compliance with the License. You may obtain "
+"a copy of the License at"
+msgstr ""
+"Développé sous la licence Apache License, Version 2.0 (the \"License\"); "
+"vous ne pouvez utiliser ce fichier que conformément à la licence. Vous "
+"pouvez obtenir une copie de la licence à l'adresse suivante :"
+
+#: ../../source/index.rst:177 ad48f7ec46704fb9b407cd1e1a3eb447
+msgid "http://www.apache.org/licenses/LICENSE-2.0"
+msgstr "http://www.apache.org/licenses/LICENSE-2.0 (en anglais)"
+
+#: ../../source/index.rst:179 9a8f4851208a4ea489752caa28785ebd
+msgid ""
+"Unless required by applicable law or agreed to in writing, software "
+"distributed under the License is distributed on an \"AS IS\" BASIS, "
+"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. "
+"See the License for the specific language governing permissions and "
+"limitations under the License."
+msgstr ""
+"Sauf si la loi applicable l'exige ou si cela a été convenu par écrit, les"
+" logiciels distribués sous licence sont distribués « TELS QUELS », SANS "
+"GARANTIE NI CONDITION D'AUCUNE SORTE, expresse ou implicite. Consultez la"
+" licence pour connaître les termes spécifiques régissant les "
+"autorisations et les limitations en vertu de la licence."
+
+#~ msgid "Indices and Tables"
+#~ msgstr "Index et tables"
+
+#~ msgid ":ref:`genindex` - Complete index of all classes and functions"
+#~ msgstr ":ref:`genindex` - Index complet des classes et fonctions"
+
+#~ msgid ":ref:`modindex` - Quick access to all modules"
+#~ msgstr ":ref:`modindex` - Accès rapide aux modules"
+
+#~ msgid ":ref:`search` - Search the documentation"
+#~ msgstr ":ref:`search` - Recherche dans la documentation"
+

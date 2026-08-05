@@ -1,0 +1,308 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:5
+#: 048fde9d784b488f9e7a8376c1e4d1e5
+msgid "Bloom Filter — User Guide"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:9
+#: 2ccea844c75f43a596e6401c20b5c014
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:12
+#: d67ebe84ce784a68a8f3ea04e5cbf6ad
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:14
+#: 719ed0edf4f44fb98187d80a37c9d081
+msgid ""
+"A **Bloom Filter** is a space-efficient probabilistic data structure that"
+" tests whether an element is a member of a set. It stores only a compact "
+"bit array and guarantees:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:18
+#: 717ed5d06a664945b06b6939d6b0adbf
+msgid "**No false negatives**: if ``x not in bf``, *x* is definitely absent."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:19
+#: 29964d682d3343d1a0576746549ccb3b
+msgid ""
+"**Possible false positives**: if ``x in bf``, *x* is *probably* (but not "
+"certainly) present."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:23
+#: e27d42be2be046678566e824a68bf960
+msgid "Mathematical Foundations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:26
+#: 933e69008a0f4a36a2f91ba5ef3ccb27
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:28
+#: bbd88fd41db141728dc23a20357f242d
+msgid "A Bloom Filter for universe :math:`U` is a triple :math:`(m, k, h)` where:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:30
+#: b64777adc5d042b4aada79baaef3fb87
+msgid ":math:`m` — size of the bit array"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:31
+#: 43e37798881a42d098c9dfc24e4b04f4
+msgid ""
+":math:`k` — number of hash functions :math:`h_1, \\ldots, h_k : U \\to "
+"[0, m)`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:32
+#: 0ea10536e5cb4907a64065dc0c5efbf9
+msgid "A bit array :math:`B[0..m-1]`, initialised to 0"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:34
+#: a61482d26cbf46e980e812881e5b3437
+msgid "**Insert** :math:`x \\in U`:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:36
+#: 529ec012d76f474da43e0fae8c5703f7
+msgid "\\forall i \\in [1, k] : B[h_i(x)] \\leftarrow 1"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:40
+#: 379524922b18463894c24819ca1c249c
+msgid "**Test** membership of :math:`x`:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:42
+#: da46d98022464f1286804173670cacc1
+msgid "x \\in S \\iff \\forall i \\in [1, k] : B[h_i(x)] = 1"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:47
+#: f9c935a4f72b41dc88c82661129922a0
+msgid "False Positive Rate"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:49
+#: 4420bcca99044acf99201201fbcb97b1
+msgid ""
+"For :math:`n` elements inserted into a filter of :math:`m` bits with "
+":math:`k` hash functions:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:52
+#: 15210bc8e56c49b69ff9a34ec335e957
+#, python-brace-format
+msgid "P_{fp} \\approx \\left(1 - e^{-kn/m}\\right)^k"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:57
+#: 502ed047e3ee417fae9378107c395035
+msgid "Optimal Parameters"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:59
+#: c33afd8d8365429ea20b25aece64be51
+msgid "For :math:`n` elements and target false positive rate :math:`p`:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:61
+#: f249b6739b3e453f9cde523046c1f63c
+#, python-brace-format
+msgid ""
+"m^* = \\left\\lceil \\frac{-n \\ln p}{(\\ln 2)^2} \\right\\rceil\n"
+"\\qquad\n"
+"k^* = \\left\\lfloor \\frac{m}{n} \\ln 2 \\right\\rfloor"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:68
+#: 091bea42e0ef4bc6b6de92c12f08aeb9
+msgid "Double Hashing"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:70
+#: 95383692073f4a23b8114b2398a0657b
+msgid ""
+"Instead of :math:`k` independent hash functions, the implementation uses "
+"**double hashing** (Kirsch & Mitzenmacher, 2006):"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:73
+#: 00d0b5f6ae194f0390c188b01c639c28
+msgid "h_i(x) = (h_1(x) + i \\cdot h_2(x)) \\bmod m"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:77
+#: d47c62084be742fca455659034ebcf85
+msgid "where :math:`h_1` = SHA-256 and :math:`h_2` = MD5 (non-cryptographic use)."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:80
+#: 2c7f8f8f505a4327b61544438583ab26
+msgid "SDS Implementation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:113
+#: bab28c18e6534c02a6ccf22d3a0c1208
+msgid "Usage"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:116
+#: 6524877276fe418d8898641bc49db695
+msgid "Construction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:118
+#: 578fe6776b8647618b97e5ccb4e388d1
+msgid "Using optimal parameters (recommended):"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:129
+#: 7e7dd1f94ad64ea7b785746004694acb
+msgid "With explicit parameters:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:136
+#: b179ae1c2a1347f6b2ddc08e711518f8
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:160
+#: 2ff820904e45495f9568dad0e27d24ab
+msgid "Set Operations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:181
+#: 49b2969537c84d94af537309451e68e0
+msgid "Real-World Use Cases"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:184
+#: 140182ce1eaa48f48243a49700a0285a
+msgid "Stream Deduplication"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:200
+#: c909e825c26c42b1a38fa146816d53f7
+msgid "Cache Pre-Filter"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:214
+#: 5797af216c474d5ebdd893e66dbb4d77
+msgid "Distributed Filter Merge"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:225
+#: b68f81a34ec340b49f6a7147a39641bf
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:227
+#: 6ae4965378c543f3b0f4b85bec1e612a
+msgid "✅ Use ``optimal_params`` to size the filter correctly for your workload."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:229
+#: 2142a9d197394d6cb024b070c7dbfad1
+msgid ""
+"✅ Monitor ``estimated_fill_ratio()`` — beyond 0.5, the false positive "
+"rate rises sharply."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:232
+#: 1b876303b2ac4a7c83778bdffdd28de7
+msgid "✅ Use ``x not in bf`` as a fast guard before an expensive exact lookup."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:234
+#: 44a5141d4c7745d9b6a6321dbc3d505a
+msgid "❌ Do not assume a ``True`` result is exact — it is probabilistic."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:236
+#: 7a7d7a2ecb9b461c988a057038cbf02d
+msgid ""
+"❌ Do not use for deletions — the standard Bloom Filter does not support "
+"``delete``."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:240
+#: 91f8b2bde0a742409cfcd54e2d1921f0
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:242
+#: 851011ae3de44604b29436be528056bc
+msgid ""
+"Bloom, B. H. (1970). \"Space/time trade-offs in hash coding with "
+"allowable errors\". *Communications of the ACM*, 13(7), 422-426. DOI: "
+"`10.1145/362686.362692 <https://doi.org/10.1145/362686.362692>`_"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:246
+#: 0639d17ea1d14bf39795b88a89db6c7b
+msgid ""
+"Broder, A., & Mitzenmacher, M. (2004). \"Network Applications of Bloom "
+"Filters: A Survey\". *Internet Mathematics*, 1(4), 485-509. "
+"https://www.eecs.harvard.edu/~michaelm/postscripts/im2005b.pdf"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:250
+#: 0fd0943ca89a41a1bceb3490f98e51af
+msgid ""
+"Kirsch, A., & Mitzenmacher, M. (2006). \"Less Hashing, Same Performance: "
+"Building a Better Bloom Filter\". *ESA 2006*. "
+"https://www.eecs.harvard.edu/~kirsch/pubs/bbbf/esa06.pdf"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:254
+#: 07acd26252184e21939b07a2306098fe
+msgid ""
+"Shaffer, C. A., et al. *OpenDSA: Open Data Structures and Algorithms*. "
+"https://opendsa-server.cs.vt.edu/"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:258
+#: ef472d2759164be4ac9ba3d556f963e9
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:260
+#: d1e4661baee345b19cb9bf499bd24ecc
+msgid ":ref:`api_advanced_bloom_filter` — API Reference"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/bloom_filter.rst:261
+#: 61bb27f060e848b7902983af97faac6f
+msgid ":ref:`guide_advanced_count_min_sketch` — Frequency estimation over streams"
+msgstr ""
+

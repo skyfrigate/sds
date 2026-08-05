@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:2
+#: 8a52daf6dcca42f1931321c939a0dab0
+msgid "sds.tree.MinHeap"
+msgstr ""
+
+#: 2523f2e7f50b4fe19c97c0e43a80da22 of sds.tree.heap.MinHeap:1
+msgid "Min-heap implementation using array representation."
+msgstr ""
+
+#: 986ad279ef544898a1a28307a449be3f of sds.tree.heap.MinHeap:3
+msgid ""
+"A min-heap is a complete binary tree where each parent node is less than "
+"or equal to its children. The minimum element is always at the root."
+msgstr ""
+
+#: d71be2ab680045798e60f4019741dfee of sds.tree.heap.MinHeap:9
+msgid "The number of elements in the heap (read-only property)."
+msgstr ""
+
+#: c59988cfffa14ad592c10cad1e1a843c of sds.tree.heap.MinHeap
+msgid "type"
+msgstr ""
+
+#: 51652292214d4bb08984f72e3c373d3f of sds.tree.heap.MinHeap:11
+msgid "int"
+msgstr ""
+
+#: 0cc2d4a8c4ca46a691c446b6d1fd8d90 319fdf363ea64f408fd7599afb25ea3f
+#: 3a9204065d444a829410c07dd66c9185 6d8f3e0de3b64267be1c0d00a7c74dde
+#: a83ed5b389794f4f9466e5ed446a0e28 aed9bd56b0c846b9873883cb39866944
+#: b71425ba70b044f3bfb5c657ec33a6bf bc0298592e06478fa05ec6bcaf1673ac
+#: bf5fb63fe08b4c7f88f3a465deaf1a8e c685b41ba1bb4e2ab73e08a61adff2ee
+#: cfaebea7158d4b4ab0460107a2c516e7 df0d941163804be6a19717778f2f8ef5
+#: e0e758fc88a644ef821b7a3bf384bebc e1305f226a194857a816006741dd37ff of
+#: sds.tree.MinHeap.size:6 sds.tree.heap.MinHeap:13
+#: sds.tree.heap.MinHeap.__contains__:9 sds.tree.heap.MinHeap.__init__:6
+#: sds.tree.heap.MinHeap.__iter__:5 sds.tree.heap.MinHeap.__len__:6
+#: sds.tree.heap.MinHeap.__repr__:6 sds.tree.heap.MinHeap.__str__:6
+#: sds.tree.heap.MinHeap.clear:3 sds.tree.heap.MinHeap.extract:8
+#: sds.tree.heap.MinHeap.insert:6 sds.tree.heap.MinHeap.is_empty:6
+#: sds.tree.heap.MinHeap.peek:8
+msgid "Examples"
+msgstr ""
+
+#: ac2e6c5f22a8495cb8559f2278aca00f of sds.tree.heap.MinHeap:15
+msgid "Create and use a min-heap:"
+msgstr ""
+
+#: 53832f64b881498681db22e6567c0176 of sds.tree.heap.MinHeap:29
+msgid "Build heap from list:"
+msgstr ""
+
+#: 21190ffdbecd4ff18ceab9caecf77e8a 5819c006e90a47f6918832aa58df07fe
+#: 62ad2594db874191868e36ad9f269597 6ad9254942604127bbeeb925e39a44ee
+#: 9d6de908baf74826998c155c02ce3e58 ad9e442541df4f8492bb357e50cf17ac
+#: f089b16ff79043989a37db70bd6db7ae of sds.tree.heap.MinHeap:37
+#: sds.tree.heap.MinHeap.__contains__:17 sds.tree.heap.MinHeap.__iter__:11
+#: sds.tree.heap.MinHeap.clear:10 sds.tree.heap.MinHeap.extract:16
+#: sds.tree.heap.MinHeap.insert:14 sds.tree.heap.MinHeap.peek:16
+msgid "Notes"
+msgstr ""
+
+#: 84d7a24bfe9b47ca98a2fd766df4f515 of sds.tree.heap.MinHeap:39
+msgid ""
+"Time Complexity: - insert: O(log n) - extract: O(log n) - peek: O(1) - "
+"Building from list: O(n)"
+msgstr ""
+
+#: b70dac14974b46a0b8b8e77a7768fb6c of sds.tree.heap.MinHeap:45
+msgid "Space Complexity: O(n)"
+msgstr ""
+
+#: f07e5ee4c74d434aa7e932b097fe6710 of sds.tree.heap.MinHeap:49
+msgid ":obj:`MaxHeap`"
+msgstr ""
+
+#: 022b4dab3ff1483e8911f1cb9ea98cd4 of sds.tree.heap.MinHeap:50
+msgid "Max-heap implementation."
+msgstr ""
+
+#: ef2a46a67c0c4307aac88b0956a812a8 of sds.tree.heap.MinHeap:52
+msgid ":obj:`PriorityQueue`"
+msgstr ""
+
+#: 2ba4ad2d990c4deb832ee3f7ecd945f6 of sds.tree.heap.MinHeap:53
+msgid "Priority queue using min-heap."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: 632cb31be1b64ebcb85da48bed00cca0 7043c071f21e49ef8bbb787c16385dc3
+#: fc972f18fea94bcc8ebfda0a9107398a of sds.tree.heap.MinHeap.__init__:1
+msgid "Initialize a min-heap."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst
+#: 1deec161628e4922a998ef6a8cdc6307 4286796b502648ab81cf799d8a528d9e
+#: 80de5790652d48b4be81a2f8a1531a66 cc0cc66ad6be4abf9ab34c159ce23109
+msgid "Parameters"
+msgstr ""
+
+#: 79be883eeb184d72bf2e9bebe80fd70c dc64e12b0e5a44ca82e08a099f9d75d0 of
+#: sds.tree.heap.MinHeap.__init__:3
+msgid "Initial items to heapify. Default is None (empty heap)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:13
+#: 3dd2faa95f6844559f7ef8a8c10399fd
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: a41052f1760647c1aa0510700261f5e5
+msgid ":py:obj:`__init__ <sds.tree.MinHeap.__init__>`\\ \\(\\[items\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: 34ce4df358c34362ab7897a58f839ad5
+msgid ":py:obj:`clear <sds.tree.MinHeap.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: 221c037e060a42899bae8b0b9223b350 f6a23fd8b463489d80185a51e14129c4 of
+#: sds.tree.heap.MinHeap.clear:1
+msgid "Remove all elements from the heap."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: dd2f21a0d8f34edfb54a5353794f6f56
+msgid ":py:obj:`extract <sds.tree.MinHeap.extract>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: 4df65ef2d95941abb9399117ef805d86 7812b82e0977496da2f55311a7b3f07d of
+#: sds.tree.heap.MinHeap.extract:1
+msgid "Remove and return the minimum element."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: ad48594189784f51809faa0653a1bf78
+msgid ":py:obj:`insert <sds.tree.MinHeap.insert>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: 04f58c8ecfc340bcb81f86aae6aaaa34 f179848d382a4216a8601f27e274a2bb of
+#: sds.tree.heap.MinHeap.insert:1
+msgid "Insert an item into the heap."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: 2a431379451647a290142d6943c72a44
+msgid ":py:obj:`is_empty <sds.tree.MinHeap.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: 65c53e0bd9a84115a90dab1f36cbe3c7 d00a6eeed1ef48a6abf92f80313c4736 of
+#: sds.tree.heap.MinHeap.is_empty:1
+msgid "Check if the heap is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: 1788e8dc514144f79628615a8b79ca23
+msgid ":py:obj:`peek <sds.tree.MinHeap.peek>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:26:<autosummary>:1
+#: 0471e685024c40afbe6ee7991df819e8 b847755a4e5f450cad85622a266a1714 of
+#: sds.tree.heap.MinHeap.peek:1
+msgid "Return the minimum element without removing it."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst:28
+#: f8a93787150b40c480b9491da799d073
+msgid "Attributes"
+msgstr ""
+
+#: ffb2e9f970324930a5461b9a603950b4 of
+#: sds.tree.heap.MinHeap.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.MinHeap.size>`\\"
+msgstr ""
+
+#: c4f50e4c4fe34112810115a0de2de948 faa15c8bb18940b2865346c8e0060e94 of
+#: sds.tree.MinHeap.size:1 sds.tree.heap.MinHeap.__init__:1:<autosummary>:1
+msgid "Get the number of elements in the heap."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst
+#: 13b8182383f346ad854183ff0966a8ac 4046480d1311430f80e6c7dd7b920621
+#: 5d1303bc292a47e9a127fbcb320d0936 6a690b36a03e44848df9caa305dd0921
+#: 7579776066124880a9f0d49504abe5ec ce95c8d80a0c4112b3e17984b3cf0a70
+#: ef86be5dd0ff4f339663de022b56c9dc f262a8b5a9c2462fadf2f19d1a111729
+msgid "Returns"
+msgstr ""
+
+#: c5970b82be884af990c89dde33dde5ad dd819740c3d7446a81ace22819066736 of
+#: sds.tree.MinHeap.size:3 sds.tree.heap.MinHeap.__len__:3
+msgid "The number of elements."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst
+#: 1527ed04a72a42039e0247a59992dfe9 7574975fa7a14503890d3fa64635b37c
+#: 82b6cb0eb8084a87a94b3cf1506f8173 993d21aa7e634cbd84a0a46ae12d2c54
+#: c26dca343d544f3cae4ab4f613e90a65 e895176d4c9c43a9b090964970e3fc00
+#: f0dd540531184b9c94ca363299b4163f f0ea39c2bf7741e68d44eced5d2fbedd
+msgid "Return type"
+msgstr ""
+
+#: f3aeeb7dc7874ae98a3dcfd480b2d70c of sds.tree.heap.MinHeap.insert:3
+msgid "The item to insert. Must be comparable."
+msgstr ""
+
+#: db5b5cff60ef43f6917f80122db5244c df121c51bb5a44cda6cb75b74cfc0742 of
+#: sds.tree.heap.MinHeap.extract:18 sds.tree.heap.MinHeap.insert:16
+msgid "Time complexity: O(log n)"
+msgstr ""
+
+#: 03798d5bd75544679e4e42bf70e1c316 802b2ca4199843c793d53d2dc3b83ff9 of
+#: sds.tree.heap.MinHeap.extract:3 sds.tree.heap.MinHeap.peek:3
+msgid "The minimum element."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.MinHeap.rst
+#: 1ee61c56d10548a1bbf6d07491806b16 822741d2bff64906af05454580232aa8
+msgid "Raises"
+msgstr ""
+
+#: 5c499bfe2d7c4674ae19f880da8d7c1f b51b4e8de03741c483f2ddf7ffb24072 of
+#: sds.tree.heap.MinHeap.extract:6 sds.tree.heap.MinHeap.peek:6
+msgid "If the heap is empty."
+msgstr ""
+
+#: 64121460ab654c38b651c0af3cfaf2e5 e61373f80f68434aa06268ed47fbabca of
+#: sds.tree.heap.MinHeap.clear:12 sds.tree.heap.MinHeap.peek:18
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: e347d4c7bf584fe9b825adbf13674754 of sds.tree.heap.MinHeap.__len__:1
+msgid "Return the number of elements in the heap."
+msgstr ""
+
+#: 5b5627e6ef234d4a90cc0a786d860f08 of sds.tree.heap.MinHeap.is_empty:3
+msgid "True if empty, False otherwise."
+msgstr ""
+
+#: a82c9f405f7242739adf832c3dc37802 of sds.tree.heap.MinHeap.__iter__:1
+msgid "Iterate over heap elements (not in sorted order)."
+msgstr ""
+
+#: 748ea545055f4d8b9e159efab998b2b8 of sds.tree.heap.MinHeap.__iter__
+msgid "Yields"
+msgstr ""
+
+#: a3f0bc4de77a4a4597ebefac42e1a53e of sds.tree.heap.MinHeap.__iter__:3
+msgid "*Any* -- Elements from the heap."
+msgstr ""
+
+#: 8f42120466074de88b27d2076c488e54 of sds.tree.heap.MinHeap.__iter__:13
+msgid ""
+"This returns elements in heap order (array order), not sorted order. For "
+"sorted order, repeatedly call extract()."
+msgstr ""
+
+#: 46c18e6a2a4a408a9e5c740627971cce of sds.tree.heap.MinHeap.__contains__:1
+msgid "Check if item is in the heap."
+msgstr ""
+
+#: c7a68ca4e82b4a80940aee6ab5323061 of sds.tree.heap.MinHeap.__contains__:3
+msgid "The item to search for."
+msgstr ""
+
+#: 880f17b5e9c041d2a3e8ddce66b56cfb of sds.tree.heap.MinHeap.__contains__:6
+msgid "True if found, False otherwise."
+msgstr ""
+
+#: 9406f9f446c54f81bf04cad63c8ae28a of sds.tree.heap.MinHeap.__contains__:19
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 1015742cc8de403aa58341f9ad542a50 of sds.tree.heap.MinHeap.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: bc35ffba533341d6b83adea7e1d56192 f2b5e92671d3426ba0196d7dbb3b496c of
+#: sds.tree.heap.MinHeap.__repr__:3 sds.tree.heap.MinHeap.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 3ee5eb2e8b8f42688ff5d606873ec9aa of sds.tree.heap.MinHeap.__str__:1
+msgid "Return string showing heap contents."
+msgstr ""
+

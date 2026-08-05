@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/core/index.rst:5 cb697b9252274966a398bf05fe9d8fda
+msgid "Core Module (sds.core)"
+msgstr ""
+
+#: ../../source/api/core/index.rst:9 0b398f4ef19a4c04acb75cfee61f60c0
+msgid ""
+"The core module provides fundamental abstractions and base classes used "
+"throughout the SDS library. This includes abstract base classes for "
+"collections, nodes, and common exceptions."
+msgstr ""
+
+#: ../../source/api/core/index.rst:14 c04b536722184dd28c0152ac9d6cf1d1
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/core/index.rst:16 68eac68aa30c45c9882a9f05c5331fc8
+msgid "The core module establishes the foundational architecture:"
+msgstr ""
+
+#: ../../source/api/core/index.rst:18 5f8f8c2991434ac1bfb3f428c8dae138
+msgid "**Abstract base classes** for all data structures"
+msgstr ""
+
+#: ../../source/api/core/index.rst:19 bf74e448241e44f2bbfaaa3dd4cf230f
+msgid "**Node abstractions** inherited by all specialized nodes"
+msgstr ""
+
+#: ../../source/api/core/index.rst:20 c118d4bf951246d998aaafd7eefff3e7
+msgid "**Exception hierarchy** for consistent error handling"
+msgstr ""
+
+#: ../../source/api/core/index.rst:21 c7f285123fb84d9fbb8e599c1276d34b
+msgid "**Common interfaces** ensuring API consistency"
+msgstr ""
+
+#: ../../source/api/core/index.rst:24 b762a71e96dd447a9dc73c975dfdc8a7
+msgid "Module Contents"
+msgstr ""
+
+#: ../../source/api/core/index.rst:33:<autosummary>:1
+#: 14c1e88542e84c59819d5df5c932a571
+msgid ":py:obj:`sds.core.node <sds.core.node>`"
+msgstr ""
+
+#: ../../source/api/core/index.rst:33:<autosummary>:1
+#: 4b20af8727f44354bc7a498bbfdbbb7e
+msgid "Abstract base node class for all data structures."
+msgstr ""
+
+#: ../../source/api/core/index.rst:33:<autosummary>:1
+#: cd60e86769b74674a59dc35056dfd4f1
+msgid ":py:obj:`sds.core.interfaces <sds.core.interfaces>`"
+msgstr ""
+
+#: ../../source/api/core/index.rst:33:<autosummary>:1
+#: 402c6a80a3734056bd531f3599c22e33
+msgid "Abstract base classes defining interfaces for data structures."
+msgstr ""
+
+#: ../../source/api/core/index.rst:33:<autosummary>:1
+#: 838fce4855cd42c3be297ca3be9bc47f
+msgid ":py:obj:`sds.core.exceptions <sds.core.exceptions>`"
+msgstr ""
+
+#: ../../source/api/core/index.rst:33:<autosummary>:1
+#: 174cb0fce99344999acbf1bad31b8898
+msgid "Custom exceptions for data structures."
+msgstr ""
+
+#: ../../source/api/core/index.rst:35 92bd0b4a07ea45afb02cf245bdc00e64
+msgid "Submodules"
+msgstr ""
+
+#: ../../source/api/core/index.rst:45 e6eee62041b84e44bb6aec853bafd332
+msgid "Related Documentation"
+msgstr ""
+
+#: ../../source/api/core/index.rst:47 8e9332233e424cd9a616e0e3c890a358
+msgid ":doc:`../linear/index` - Linear structures using core abstractions"
+msgstr ""
+
+#: ../../source/api/core/index.rst:48 ec6e9bcbb1ec4bbba73ab0396b03b72b
+msgid ":doc:`../tree/index` - Tree structures using core abstractions"
+msgstr ""
+
+#: ../../source/api/core/index.rst:49 75c46cfdfbf1465ba78c62a335a24343
+msgid ":doc:`../../guide/index` - User guides"
+msgstr ""
+

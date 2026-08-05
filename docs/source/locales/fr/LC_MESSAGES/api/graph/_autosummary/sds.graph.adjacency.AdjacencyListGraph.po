@@ -1,0 +1,437 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:2
+#: 7405412bbb7b4bd58cd8da3ee7bc791c
+msgid "sds.graph.adjacency.AdjacencyListGraph"
+msgstr ""
+
+#: b50e7f2d29fc42fc82274c5ed6713fde of sds.graph.adjacency.AdjacencyListGraph:1
+msgid "Explicit adjacency list graph implementation."
+msgstr ""
+
+#: bf99aba4cbca48bfa5e52427f51059f1 of sds.graph.adjacency.AdjacencyListGraph:3
+msgid ""
+"This implementation makes adjacency list representation explicit, storing"
+" neighbors for each node in a dictionary of sets. While similar to the "
+"base Graph class, this version emphasizes the adjacency list structure."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst
+#: 373e76df5ee2466d916e2327d74695b2 74d2577002c64ade98ce02dcbc93c385
+#: 8e098b1584174ed0a78698ec1fb49304 8e0e90d7acc14715abfa327a5529d1e6
+msgid "Parameters"
+msgstr ""
+
+#: 7fc01b2ccf684dbcaef55a2555e0684b of sds.graph.adjacency.AdjacencyListGraph:8
+msgid "If True, allows multiple edges between same nodes. Default is False."
+msgstr ""
+
+#: f810f25092fc4c6aa7074eaa67c42f73 of
+#: sds.graph.adjacency.AdjacencyListGraph:13
+msgid "Whether multiple edges are allowed (read-only property)."
+msgstr ""
+
+#: 7ce5e6a3964849da986a8b8917a03ca1 of sds.graph.adjacency.AdjacencyListGraph
+msgid "type"
+msgstr ""
+
+#: a81595f7acd8445099559d60c750784d of
+#: sds.graph.adjacency.AdjacencyListGraph:15
+msgid "bool"
+msgstr ""
+
+#: 2084b0a0b5504e539d089b3b9b37c329 43f136cb728642df86de6303541be0a4 of
+#: sds.graph.adjacency.AdjacencyListGraph:17
+#: sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list:11
+msgid "Examples"
+msgstr ""
+
+#: 86d6db92db73472799b283d196fb4540 of
+#: sds.graph.adjacency.AdjacencyListGraph:19
+msgid "Create and use adjacency list graph:"
+msgstr ""
+
+#: 1cbee2ec3f994331b3a18c79a8d7de6f of
+#: sds.graph.adjacency.AdjacencyListGraph:30
+msgid "Notes"
+msgstr ""
+
+#: ec19cf3b664f409bb3eafec431edb59f of
+#: sds.graph.adjacency.AdjacencyListGraph:32
+msgid ""
+"Time Complexity: - add_node: O(1) - add_edge: O(1) amortized - has_edge: "
+"O(1) amortized - neighbors: O(degree)"
+msgstr ""
+
+#: 9ea9a32dbc984e7eb217e522145d6848 of
+#: sds.graph.adjacency.AdjacencyListGraph:38
+msgid "Space Complexity: O(V + E) Memory-efficient for sparse graphs."
+msgstr ""
+
+#: 42ee1ddbd4fa46b2b047ca9df12837c3 of
+#: sds.graph.adjacency.AdjacencyListGraph:43
+msgid ":obj:`Graph`"
+msgstr ""
+
+#: ec56d34fe33b4c36b0af7398d1d1ff42 of
+#: sds.graph.adjacency.AdjacencyListGraph:44
+msgid "Base graph implementation."
+msgstr ""
+
+#: 2c4ee55e922f484ca2a9a8eafb8e750b of
+#: sds.graph.adjacency.AdjacencyListGraph:46
+msgid ":obj:`AdjacencyMatrixGraph`"
+msgstr ""
+
+#: 740e51d58fbf4de0b063c8f74c1a1bf5 of
+#: sds.graph.adjacency.AdjacencyListGraph:47
+msgid "Matrix-based representation."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 31bbf5d753ea4126ac2d17ee4c111fde 4ff3c9fb43ba47fbab6f499027fb1049
+#: e19c358b7d5c401e92372388618e095e of
+#: sds.graph.adjacency.AdjacencyListGraph.__init__:1
+msgid "Initialize an empty adjacency list graph."
+msgstr ""
+
+#: 733a9f0885224a45946cd64817d9d6bc 9a9fa6acdedc45579b4726ca5033c532 of
+#: sds.graph.adjacency.AdjacencyListGraph.__init__:3
+msgid "Allow multiple edges between same nodes. Default is False."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:13
+#: 570341db2faa4dc9bc5a144e4af250f5
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: ca41dd055ea345c097582a615dea2094
+msgid ""
+":py:obj:`__init__ <sds.graph.adjacency.AdjacencyListGraph.__init__>`\\ "
+"\\(\\[allow\\_multi\\_edges\\]\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 0b916f837a9f412ea98c102f164b54d3
+msgid ""
+":py:obj:`add_edge <sds.graph.adjacency.AdjacencyListGraph.add_edge>`\\ "
+"\\(edge\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 489e65ab52c84e04afa55f38a225242d c24ef5ad5773439fbcaa44686766586e of
+#: sds.graph.adjacency.AdjacencyListGraph.add_edge:1
+msgid "Add an edge to the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 37c6d8b6a0a44e7084230536f50b4c55
+msgid ""
+":py:obj:`add_node <sds.graph.adjacency.AdjacencyListGraph.add_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 6cbe9cefbecd4b6784acd51596bbca0a f6a5a1d130bf420d9461fd36704f02ec of
+#: sds.graph.adjacency.AdjacencyListGraph.add_node:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 62f1c71165594f59ab7e62ae435cda90
+msgid ":py:obj:`clear <sds.graph.adjacency.AdjacencyListGraph.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 65fdce564fcb4032a11ba0acd309b1cf b78540e148644be29bcf7db11d6f42dd of
+#: sds.graph.adjacency.AdjacencyListGraph.clear:1
+msgid "Remove all nodes and edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: a12ca760e1634eff9d0496a91835ff91
+msgid ""
+":py:obj:`degree <sds.graph.adjacency.AdjacencyListGraph.degree>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 90096307950345a7ba2b962d999d1657 e8672de8ec2a4f77a3fa49903cffcaca of
+#: sds.graph.adjacency.AdjacencyListGraph.degree:1
+msgid "Get the degree of a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: fb4a6666860143749a8476e1ee56ffa3
+msgid ""
+":py:obj:`edge_count "
+"<sds.graph.adjacency.AdjacencyListGraph.edge_count>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 481a58d2099147d490adb9fedb54e4db dcf510b7f76c4c7284416f50020ab619 of
+#: sds.graph.adjacency.AdjacencyListGraph.edge_count:1
+msgid "Get the number of edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 2cccc6a7e66346b3a7d7579f5083d953
+msgid ":py:obj:`edges <sds.graph.adjacency.AdjacencyListGraph.edges>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 991c4a32f70948c9934a33c2ba93e5dc fd69b8a4b4e24f7f8c57af3309c452bd of
+#: sds.graph.adjacency.AdjacencyListGraph.edges:1
+msgid "Get all edges in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 8f8648d2d1064bb5b458d1a0fa9261e4
+msgid ""
+":py:obj:`get_adjacency_list "
+"<sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list>`\\ "
+"\\(node\\_id\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 0e1b5b156e2d4be5870d5de484e394df 575372dcc45d4ec3ad921a0510fd5b62 of
+#: sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list:1
+msgid "Get the adjacency list for a specific node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 859be1904194448b888d676270f7a5e0
+msgid ""
+":py:obj:`get_edge <sds.graph.adjacency.AdjacencyListGraph.get_edge>`\\ "
+"\\(node1\\, node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: bc06736dd4684b04ad99456f5cbeeaa7 c01ee32a2e83457ab166bf90bbae101c of
+#: sds.graph.adjacency.AdjacencyListGraph.get_edge:1
+msgid "Get the edge between two nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: f3bae11a31574bafab3b495c960eac67
+msgid ""
+":py:obj:`get_node_by_id "
+"<sds.graph.adjacency.AdjacencyListGraph.get_node_by_id>`\\ "
+"\\(node\\_id\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 616bafaee28d472fa195de3f2d5a52f3 9582a3c07eb74f12b775b637e9127f3c of
+#: sds.graph.adjacency.AdjacencyListGraph.get_node_by_id:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 4219ed33380e4ed9818b71f603fb1805
+msgid ""
+":py:obj:`has_edge <sds.graph.adjacency.AdjacencyListGraph.has_edge>`\\ "
+"\\(node1\\, node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 87f0f0e173a547eca60fcadade1886e6 acbc412c0d73435a853d1f8654a8d6a6 of
+#: sds.graph.adjacency.AdjacencyListGraph.has_edge:1
+msgid "Check if an edge exists between two nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 14b7c6e7a5b3457390345ec16c6a7c35
+msgid ""
+":py:obj:`has_node <sds.graph.adjacency.AdjacencyListGraph.has_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 9418a1638e564edd8c7a11486f7a5976 fdcd93281e104dd5811d72344564d834 of
+#: sds.graph.adjacency.AdjacencyListGraph.has_node:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 105d364cd03d49a385ae0db4baaaa103
+msgid ""
+":py:obj:`is_connected "
+"<sds.graph.adjacency.AdjacencyListGraph.is_connected>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 6bc4cc88bfd54526b2d3daccd8fb8951 942a0f03c3524149890202ad82b03ecd of
+#: sds.graph.adjacency.AdjacencyListGraph.is_connected:1
+msgid "Check if the graph is connected."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 52a0e5c9817449089bdc3b6e2e428db5
+msgid ""
+":py:obj:`is_empty <sds.graph.adjacency.AdjacencyListGraph.is_empty>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 27b5a2c3bbf84a6497b87cc953ce22ac cb89d5631dfa4407b0a7354107d53e03 of
+#: sds.graph.adjacency.AdjacencyListGraph.is_empty:1
+msgid "Check if the graph is empty."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: d17cfe8570bb48c8bcefc673a6a358ae
+msgid ""
+":py:obj:`neighbors <sds.graph.adjacency.AdjacencyListGraph.neighbors>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 682450089f63433e897f03d309976fea bdad3a0470a1424f8d889fb25dbb3cdd of
+#: sds.graph.adjacency.AdjacencyListGraph.neighbors:1
+msgid "Get all neighbors of a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 454c461153c24935a31a211fbe523851
+msgid ""
+":py:obj:`node_count "
+"<sds.graph.adjacency.AdjacencyListGraph.node_count>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 0852fbdfd35c42558b5d5077580a316f f3d120283d354adfad3effcb8385d0f9 of
+#: sds.graph.adjacency.AdjacencyListGraph.node_count:1
+msgid "Get the number of nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: ad791ca280634d8e8e390ed1732af5c0
+msgid ":py:obj:`nodes <sds.graph.adjacency.AdjacencyListGraph.nodes>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 72d706b56fcb41fbab14c22add4ba363 bc148dc25500465e83ff73a4a0c416ee of
+#: sds.graph.adjacency.AdjacencyListGraph.nodes:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: b416fb43c0984623a00ff52881f25737
+msgid ""
+":py:obj:`remove_edge "
+"<sds.graph.adjacency.AdjacencyListGraph.remove_edge>`\\ \\(edge\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 71ec9f647ea44381a09bec94eb6ace68 b8a5c46ec36b47f3b983a9db98f471f6 of
+#: sds.graph.adjacency.AdjacencyListGraph.remove_edge:1
+msgid "Remove an edge from the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 670d510a42494b4dbfffeea7cce45a22
+msgid ""
+":py:obj:`remove_node "
+"<sds.graph.adjacency.AdjacencyListGraph.remove_node>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:39:<autosummary>:1
+#: 73f433056c98458caad29977d5ed178f 7e0e760242904522bcbc58bc32fa5047 of
+#: sds.graph.adjacency.AdjacencyListGraph.remove_node:1
+msgid "Remove a node and all its incident edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst:41
+#: 5076ef128a8745ff982d3e16c1f49cfe
+msgid "Attributes"
+msgstr ""
+
+#: 620d819e194f46f590097511fa46a50f of
+#: sds.graph.adjacency.AdjacencyListGraph.__init__:1:<autosummary>:1
+msgid ""
+":py:obj:`allow_multi_edges "
+"<sds.graph.adjacency.AdjacencyListGraph.allow_multi_edges>`\\"
+msgstr ""
+
+#: 21a699d0959d46f1a4999b77628b8dd9 fcf2315be20b4758aa67e917bd87dc09 of
+#: sds.graph.adjacency.AdjacencyListGraph.__init__:1:<autosummary>:1
+#: sds.graph.adjacency.AdjacencyListGraph.allow_multi_edges:1
+msgid "Check if multigraph mode is enabled."
+msgstr ""
+
+#: 56206c8d056a45e0901718ace6f9810d of
+#: sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list:3
+msgid "ID of the node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst
+#: 8ae433cf2be647aaa7f889346398dc93
+msgid "Returns"
+msgstr ""
+
+#: 7dcb26506e754440ab2f4faff7ba3d31 of
+#: sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list:6
+msgid "Set of neighbor node IDs."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst
+#: 884457daf1414e5c9f680dc34c4088cb
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.adjacency.AdjacencyListGraph.rst
+#: 9923a4718d8f4531b322e2eb2800fe0f
+msgid "Raises"
+msgstr ""
+
+#: c9c1bf2285794999ba75b62d2aa8cb02 of
+#: sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list:9
+msgid "If node is not in the graph."
+msgstr ""
+
+#: 5e630000c38a47b58b30a06131fce071 of
+#: sds.graph.adjacency.AdjacencyListGraph.__len__:1
+msgid "Return the number of nodes."
+msgstr ""
+
+#: 9bcfd4915a0d4f5d8b69e8d703192df7 of
+#: sds.graph.adjacency.AdjacencyListGraph.__contains__:1
+msgid "Check if node is in the graph."
+msgstr ""
+
+#: 241d45798c91471680df8b0f8a868fa5 of
+#: sds.graph.adjacency.AdjacencyListGraph.__iter__:1
+msgid "Iterate over nodes."
+msgstr ""
+
+#: 53d83226f9e548f4b0151e55615b2f55 of
+#: sds.graph.adjacency.AdjacencyListGraph.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: cbec0e15f0e24ee79bec97955241adb4 of
+#: sds.graph.adjacency.AdjacencyListGraph.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+

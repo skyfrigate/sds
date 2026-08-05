@@ -1,0 +1,887 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:2
+#: 9b66a71f97d04946854d6d10ba1bb359
+msgid "sds.graph.directed.DirectedGraph"
+msgstr ""
+
+#: 24124119d3bd46c5b434db1b9aed596d of sds.graph.directed.DirectedGraph:1
+msgid "Directed graph using adjacency list representation."
+msgstr ""
+
+#: 710ba505e870423382e538da6c44f954 of sds.graph.directed.DirectedGraph:3
+msgid ""
+"A directed graph has edges with explicit direction from source to target."
+" This implementation maintains separate adjacency lists for incoming and "
+"outgoing edges for efficient degree queries."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst
+#: 0ee23f81792e46c79ef2648800d5db98 16c204f4af124859ab549cea187fb666
+#: 23a6bb69c5354127bc11edc67f1aae25 2b8f2471fca14adf9b7961ef0510bd05
+#: 46a310c6bb4c40cda66e2612c0f65e81 626cb8bbd9524fcc964f25a218dbd804
+#: 6c0b32f07ed348adb711bda3b9576852 82984dd7ef294d1ebeea46d51b7db0bb
+#: 8306e1df6be64bacacb75865299bcc18 8a39521321154f4a8e1a88f8f71e6530
+#: 953c353c524c4d91b173d54dd115a6ef 98552fe241a9442b8a0b20551669cb99
+#: c32dcc3019c243718d3de42baca63d1c ca17cacce4a543f782fc2fc2d9e133bd
+#: d4500d06c76f4746959da7ab5685de3b dd6e4a70b43943649c34116e583fd425
+#: e3f707bba53f4e7f95db7eb016c49be6 ece0508368814dd78d2e88ec8c4b62f1
+msgid "Parameters"
+msgstr ""
+
+#: 394badd63dd64e6796f809520d640f35 of sds.graph.directed.DirectedGraph:7
+msgid ""
+"If True, allows multiple edges from same source to same target. Default "
+"is False (simple directed graph)."
+msgstr ""
+
+#: d030136fdaed42c18844cd4f3f8b092e of sds.graph.directed.DirectedGraph:13
+msgid "Whether multiple edges are allowed (read-only property)."
+msgstr ""
+
+#: 03c6b502c92741e7bc8fba53c11fe110 of sds.graph.directed.DirectedGraph
+msgid "type"
+msgstr ""
+
+#: 53578f89f5824f12874b616b96d58c54 of sds.graph.directed.DirectedGraph:15
+msgid "bool"
+msgstr ""
+
+#: 04998fbfefb94503a46d580dc3d6aea7 168255b30ee34462a1d72f6edfe735e8
+#: 16a899b2c4e34de4ab359574eb4f2e5a 2ea34a3f422f44fcb77f911adf5eb16e
+#: 37f27b8c1d8540a68f733d485ab0297f 3ab53f1595084f01993baaeebc3b6547
+#: 510bef45c4bc4bfa924f3407439d3b90 5c104e8b2a0b4fae9da58de1e75dc873
+#: 5f8d61f8ba784d0ab9183c83899472ed 69ad1277b6e245098d1ad09c1f0f55e5
+#: 6ce367476e6a4fc7b9e5a8a400a044f6 6dc4198cd6aa41e683fdb21ac7b991fc
+#: 79e6a3635763400c805cff59b8fb6e8e 88a408e8b0f5480cb5d48df51c7e6127
+#: 90d48a1507404df4b50863761f42557b 969f678d5f3642de9f7cee6f6b44ffb6
+#: 972d19b5bcb24ae0869ba91ade9670b5 a303807cf1c44d1d8bc8446c25c375b2
+#: b403918c65ef4f4eb4dc5b2718eff115 df1642567fe44a93b918a4809c9dbc8e
+#: f74db18e5271449d82b34e7fb7980560 of sds.graph.directed.DirectedGraph:17
+#: sds.graph.directed.DirectedGraph.__init__:6
+#: sds.graph.directed.DirectedGraph.__repr__:6
+#: sds.graph.directed.DirectedGraph.__str__:6
+#: sds.graph.directed.DirectedGraph.add_edge:9
+#: sds.graph.directed.DirectedGraph.add_node:9
+#: sds.graph.directed.DirectedGraph.allow_multi_edges:6
+#: sds.graph.directed.DirectedGraph.degree:11
+#: sds.graph.directed.DirectedGraph.get_edge:12
+#: sds.graph.directed.DirectedGraph.has_edge:11
+#: sds.graph.directed.DirectedGraph.has_node:9
+#: sds.graph.directed.DirectedGraph.in_degree:11
+#: sds.graph.directed.DirectedGraph.is_acyclic:6
+#: sds.graph.directed.DirectedGraph.is_connected:9
+#: sds.graph.directed.DirectedGraph.neighbors:12
+#: sds.graph.directed.DirectedGraph.out_degree:11
+#: sds.graph.directed.DirectedGraph.predecessors:10
+#: sds.graph.directed.DirectedGraph.remove_edge:8
+#: sds.graph.directed.DirectedGraph.remove_node:8
+#: sds.graph.directed.DirectedGraph.successors:10
+msgid "Examples"
+msgstr ""
+
+#: e88b60780ccf4b6ebf6e698c23efc734 of sds.graph.directed.DirectedGraph:19
+msgid "Create a simple directed graph:"
+msgstr ""
+
+#: 85cc3adfe59b4945ac3c37d06fa56bfd of sds.graph.directed.DirectedGraph:32
+msgid "Create a multi-digraph:"
+msgstr ""
+
+#: 7a4e1974e2604a25bc9da967d05b43e7 of sds.graph.directed.DirectedGraph:42
+msgid "Check for cycles:"
+msgstr ""
+
+#: 084ae5b4cc374401b4a086dd529cb7b8 0eff8d1576134785b3ae530a0c0b7eb0
+#: 1310498e7e114cc9bd3703b93de4c16b 1e866f1592db49e2b667e804b6bb99c9
+#: 35e9c9c2f718465c9a91272a17769aca 367562537d1e4561ae386426f8e78120
+#: 4987a279baa34f60a7b705e519cb7f18 4b29e21a2f064b7ea8a905e77b55ba99
+#: 54e04ff20a2144ab8a79dfc7667786ae 5e7f976f3be94b5ba799a6ad61848a69
+#: 5e8021264db54e339501ab1676d00cd4 62be82932e0a45248cdbfee341aed686
+#: 762a2a9894b64341bb5a58791325ca69 7aee36ec168144b9898214bd42109589
+#: 8c771a8f681049369de36b3ec150dc57 9e525b88196e4189a4177695ba201dbf
+#: bc2fd0bd03d54d5d897090c7eabbe5a1 c28a86559c74493bb1f4efe6d879ce59
+#: c7eae69bc84a4be6a12a8515e36694de cfb79b164e6046b4bbaed8e661b7695f
+#: da675f077fff4e2eba7d3e7b5ad71dea ddf3aef0f94949739d1efd9a67f4c0b1
+#: f6da1715ff454f0a8e1b499ada6e72b5 of sds.graph.directed.DirectedGraph:49
+#: sds.graph.directed.DirectedGraph.add_edge:22
+#: sds.graph.directed.DirectedGraph.add_node:17
+#: sds.graph.directed.DirectedGraph.clear:3
+#: sds.graph.directed.DirectedGraph.degree:24
+#: sds.graph.directed.DirectedGraph.edge_count:6
+#: sds.graph.directed.DirectedGraph.edges:5
+#: sds.graph.directed.DirectedGraph.get_edge:25
+#: sds.graph.directed.DirectedGraph.get_node_by_id:9
+#: sds.graph.directed.DirectedGraph.has_edge:24
+#: sds.graph.directed.DirectedGraph.has_node:19
+#: sds.graph.directed.DirectedGraph.in_degree:24
+#: sds.graph.directed.DirectedGraph.is_acyclic:23
+#: sds.graph.directed.DirectedGraph.is_connected:20
+#: sds.graph.directed.DirectedGraph.is_empty:6
+#: sds.graph.directed.DirectedGraph.neighbors:26
+#: sds.graph.directed.DirectedGraph.node_count:6
+#: sds.graph.directed.DirectedGraph.nodes:5
+#: sds.graph.directed.DirectedGraph.out_degree:24
+#: sds.graph.directed.DirectedGraph.predecessors:24
+#: sds.graph.directed.DirectedGraph.remove_edge:21
+#: sds.graph.directed.DirectedGraph.remove_node:20
+#: sds.graph.directed.DirectedGraph.successors:24
+msgid "Notes"
+msgstr ""
+
+#: d6eb53130b9e48eb8851a7afaca21517 of sds.graph.directed.DirectedGraph:51
+msgid ""
+"Time Complexity: - add_node: O(1) - remove_node: O(in_degree + out_degree"
+" + E) - add_edge: O(1) or O(out_degree) if checking duplicates - "
+"in_degree/out_degree: O(1) amortized - predecessors/successors: O(degree)"
+" - is_acyclic: O(V + E) with caching"
+msgstr ""
+
+#: 17f4868125bb40289264f0315abbec8f of sds.graph.directed.DirectedGraph:59
+msgid "Space Complexity: O(V + E)"
+msgstr ""
+
+#: f4113bdcd3ef40509a11716839e213e1 of sds.graph.directed.DirectedGraph:63
+msgid ":obj:`Graph`"
+msgstr ""
+
+#: bd4b15560b784595b3a416fa35790504 of sds.graph.directed.DirectedGraph:64
+msgid "For undirected graphs."
+msgstr ""
+
+#: 782d9e0574434877a6a189c28c0839c8 of sds.graph.directed.DirectedGraph:66
+msgid ":obj:`AbstractDirectedGraph`"
+msgstr ""
+
+#: f513c3c2c1754f74b3e6fa4756dfbb56 of sds.graph.directed.DirectedGraph:67
+msgid "Interface definition."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 1e20fa2a45f54e3d8c5ab3f9897d0e43 37a32f3037c74def8527d927a8242051
+#: fe323a57b8e94149bcc520811adc1665 of
+#: sds.graph.directed.DirectedGraph.__init__:1
+msgid "Initialize an empty directed graph."
+msgstr ""
+
+#: 9960c4cc4fe3451facb90a85e00e5aa6 e863ea8753674adb936594ca3accd5d3 of
+#: sds.graph.directed.DirectedGraph.__init__:3
+msgid "Allow multiple edges between same source/target. Default is False."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:13
+#: 0a0cd41820594cf4a84328598fd1fe7e
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: b22d4c5bfc554342b4788de6a467c581
+msgid ""
+":py:obj:`__init__ <sds.graph.directed.DirectedGraph.__init__>`\\ "
+"\\(\\[allow\\_multi\\_edges\\]\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 1a7412c3b46f4c839153bbe16f616767
+msgid ""
+":py:obj:`add_edge <sds.graph.directed.DirectedGraph.add_edge>`\\ "
+"\\(edge\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 693413761f5a4de79ab175297352df07 ab1361b19dc142dd86a71102eb47b98b of
+#: sds.graph.directed.DirectedGraph.add_edge:1
+msgid "Add a directed edge to the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: aba1c7c6c8da45629ac3842a00a8e14e
+msgid ""
+":py:obj:`add_node <sds.graph.directed.DirectedGraph.add_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: cfa80c1d19f14c4387fe6422e5df276d de117c1c7420450781b9488cecedeb3c of
+#: sds.graph.directed.DirectedGraph.add_node:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 4397ef8fac064821bd997633518d6294
+msgid ":py:obj:`clear <sds.graph.directed.DirectedGraph.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 52033405771542b0871b10a6f4a0561a 53c3145a48d945c5a355e44ecc48c9a4 of
+#: sds.graph.directed.DirectedGraph.clear:1
+msgid "Remove all nodes and edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: c017d6c2bb1546d09b0d4f08c850f4df
+msgid ":py:obj:`degree <sds.graph.directed.DirectedGraph.degree>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 92fb7ada83eb4bc2b9f3e8c1d17a2d10 ecef29bf16a14b87997d891740de7857 of
+#: sds.graph.directed.DirectedGraph.degree:1
+msgid "Get total degree of a node (in-degree + out-degree)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 312ae1a3c7964abba872ead70e6ed619
+msgid ""
+":py:obj:`edge_count <sds.graph.directed.DirectedGraph.edge_count>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 023a262425cd49078797accf59280702 d949424f5d75479190ba20e11d9e906b of
+#: sds.graph.directed.DirectedGraph.edge_count:1
+msgid "Get the number of edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: b2aaefc6549c48eabdda404d3163ddeb
+msgid ":py:obj:`edges <sds.graph.directed.DirectedGraph.edges>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 12ba1cf9defe406c953831b705c02de1 27d539356dce4465af9774c37095a14a of
+#: sds.graph.directed.DirectedGraph.edges:1
+msgid "Get all edges in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: b5a45fc92fd6494085d32a9f76097e47
+msgid ""
+":py:obj:`get_edge <sds.graph.directed.DirectedGraph.get_edge>`\\ "
+"\\(node1\\, node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 140af3167cf94114aa1d81308a7cddd9 b6b2117fc9c4461ca91d7f5849496115 of
+#: sds.graph.directed.DirectedGraph.get_edge:1
+msgid "Get the directed edge from node1 to node2."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 9060310a81734e25a652a18b9d18f138
+msgid ""
+":py:obj:`get_node_by_id "
+"<sds.graph.directed.DirectedGraph.get_node_by_id>`\\ \\(node\\_id\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 2f6a0c52f3f14655a02f15a62c7f4f5c ccaad318a0514194824a21a2f8d561ff of
+#: sds.graph.directed.DirectedGraph.get_node_by_id:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: cb68a7d53a2c4c8cb18aedf4200e92a2
+msgid ""
+":py:obj:`has_edge <sds.graph.directed.DirectedGraph.has_edge>`\\ "
+"\\(node1\\, node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 6f92dbf447ac46d69b8d9cb0effe045a d17c7e7899ea4967b40d83726b6ab4d7 of
+#: sds.graph.directed.DirectedGraph.has_edge:1
+msgid "Check if a directed edge exists from node1 to node2."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 2e811ae5f1184993945d4922249a56b4
+msgid ""
+":py:obj:`has_node <sds.graph.directed.DirectedGraph.has_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 25c27291218c4772bf2e78052db114ce 3b918496411143b5bd40dd21ad3c3ff7 of
+#: sds.graph.directed.DirectedGraph.has_node:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 69345306df4b4b35bd2a2c0f8e2bbf21
+msgid ""
+":py:obj:`in_degree <sds.graph.directed.DirectedGraph.in_degree>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 02d8320bb0ed45cfbbec236a297b4261 8c78ca8e0eb641548cd6f6926cb74161 of
+#: sds.graph.directed.DirectedGraph.in_degree:1
+msgid "Get in-degree of a node (number of incoming edges)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: fcba560cd32b4a429c5d1afb7634f277
+msgid ""
+":py:obj:`is_acyclic <sds.graph.directed.DirectedGraph.is_acyclic>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 72a4c798d4f54a3aa9b659be647d42c5 d2765c5143544b4381bf788ed75b70c0 of
+#: sds.graph.directed.DirectedGraph.is_acyclic:1
+msgid "Check if the graph is acyclic (DAG)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 737be75fb3a3448b8f33a8681e98b989
+msgid ""
+":py:obj:`is_connected <sds.graph.directed.DirectedGraph.is_connected>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 75a2fb3163184032ae7597f2a4ffbc1b 8b332132c3fb42009a8c38414a6cd45e of
+#: sds.graph.directed.DirectedGraph.is_connected:1
+msgid "Check if the graph is weakly connected."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: b49d5238f3754fc197122d725fbeb8d7
+msgid ":py:obj:`is_empty <sds.graph.directed.DirectedGraph.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 02f63c5e8a6f4c71aa5c871a1b738b68 fe717d85c81e472bb91559463a162d49 of
+#: sds.graph.directed.DirectedGraph.is_empty:1
+msgid "Check if the graph is empty."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 0b42d4bcb2bf4e9e92b6cb96026dfed6
+msgid ""
+":py:obj:`neighbors <sds.graph.directed.DirectedGraph.neighbors>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 165003cd4af34f2bb7779104097daf98 3b2ba66d323743afb1771b5009c88530 of
+#: sds.graph.directed.DirectedGraph.neighbors:1
+msgid "Get all successors (outgoing neighbors) of a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 1f1c1b2e88664980b47922faa1f5bac0
+msgid ""
+":py:obj:`node_count <sds.graph.directed.DirectedGraph.node_count>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 0b78cbe1ff5a40af884bd37a06e4276c 9a72216be6a34c78b2c360057135697a of
+#: sds.graph.directed.DirectedGraph.node_count:1
+msgid "Get the number of nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 5e32d9b0241646869fa9fb562eadb4ac
+msgid ":py:obj:`nodes <sds.graph.directed.DirectedGraph.nodes>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 5240e4da94af4b2795a0983355774471 9a36ee813180457d8a657ed1565f6d94 of
+#: sds.graph.directed.DirectedGraph.nodes:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: e3df37988d63479099fda885e9a98538
+msgid ""
+":py:obj:`out_degree <sds.graph.directed.DirectedGraph.out_degree>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 06e15a2fd92f40fda9e034fc8f6f6b4e 1df8496b4d264c65b62013aa20c550af of
+#: sds.graph.directed.DirectedGraph.out_degree:1
+msgid "Get out-degree of a node (number of outgoing edges)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: d0cbe2915dd5440cbdea6e5ddd85cd09
+msgid ""
+":py:obj:`predecessors <sds.graph.directed.DirectedGraph.predecessors>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: c2b68e48cbf1405da3afb090a06bcf04 d5fb8cb4f4f541df838750043ff1c549 of
+#: sds.graph.directed.DirectedGraph.predecessors:1
+msgid "Get all predecessors (nodes with edges to this node)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 4e93b2879d6c405595e385c3f07ddfd5
+msgid ""
+":py:obj:`remove_edge <sds.graph.directed.DirectedGraph.remove_edge>`\\ "
+"\\(edge\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 35de0d4be4704373b072e17f8c781729 f730897ba8094ede8d1882f2eda0f27b of
+#: sds.graph.directed.DirectedGraph.remove_edge:1
+msgid "Remove a directed edge from the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 44f1eb48fe6244e5941a56842db59ed2
+msgid ""
+":py:obj:`remove_node <sds.graph.directed.DirectedGraph.remove_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 2f2b03c262024fd1be1620dea4404407 9af2ab22585749f1ad9c519c2763dc3b of
+#: sds.graph.directed.DirectedGraph.remove_node:1
+msgid "Remove a node and all its incident edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 8228327f8a7f442d8357e9fcffd36ece
+msgid ""
+":py:obj:`successors <sds.graph.directed.DirectedGraph.successors>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:43:<autosummary>:1
+#: 0a8be038894d438484f7a54575035390 51ab63de81294904b2031bcf98e820f7 of
+#: sds.graph.directed.DirectedGraph.successors:1
+msgid "Get all successors (nodes with edges from this node)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst:45
+#: 4ff3432df73a4689aeb2e741c5383bbe
+msgid "Attributes"
+msgstr ""
+
+#: 9ab6f11b9c9d4a7b825a92c91660be38 of
+#: sds.graph.directed.DirectedGraph.__init__:1:<autosummary>:1
+msgid ""
+":py:obj:`allow_multi_edges "
+"<sds.graph.directed.DirectedGraph.allow_multi_edges>`\\"
+msgstr ""
+
+#: 85230d5c65f84eab842268ff4128c9ba ee0e1d7dca9147a68e065f1f7b32cc26 of
+#: sds.graph.directed.DirectedGraph.__init__:1:<autosummary>:1
+#: sds.graph.directed.DirectedGraph.allow_multi_edges:1
+msgid "Check if multi-digraph mode is enabled."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst
+#: 01042a39668d4466beceacd0baa8df35 0231f37c32714c2c95f44d820f647dac
+#: 0365afa841cd450fae2b93fe7c9709d0 44e8ba650abb4c9484865d828a1000d2
+#: 4535ff0091604318b9d9415b2477a70f 4bb13b7ad4f54cca89b26ded25be163e
+#: 76620dffd5f34821968f4d7178040f26 79ef9ddc9d3e471b8c2036284609aabc
+#: 7b665d52ebbb425f8f14713d2fd2a2c9 a83faf50c28b4370a479cd6884744b09
+#: ab045cd2f9c44bf38c7e15c9c9b8b58e ab50bc59e7124836b4e4bf28cf5cc683
+#: b512f767386a4faa954ebcd3937223b3 cd00e7e32b32440aadb40d4b403111b9
+#: d6232e98fad44bcabdf898caea454c3c e0f214fbf5e84130aa8d828ff7637804
+#: f8b05065f1d24d4ebd89d1312dca2df9
+msgid "Returns"
+msgstr ""
+
+#: 5d726b7b9c754dd2b8b26e7115b91f98 of
+#: sds.graph.directed.DirectedGraph.allow_multi_edges:3
+msgid "True if multiple edges are allowed."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst
+#: 1f9abe8cb3764fcca5779ad251d85eca 34cb06688fb647fca0d26348d0058dac
+#: 410c093d63c5426698df66281f3a69ed 4dbc1eb55882477cbc799f1bf4f9efa6
+#: 53aeb0e961104a1d9a868d9f54876e23 583bee8f8b2c40418e3ff747c6168d01
+#: 7c21a720fbe943cd9ea75f7756be8472 93a089fe9ca244b8b42129dea9669499
+#: 94d87a29264a42ee937de2b30afb1b2b 98cc85c6f3604f868845b3a4d9b26ca9
+#: a6690cb85516409ab586f499b5916167 b1b58fd3cf0a4c4f942c6dceedffcb5e
+#: b87cb141aec14775ba42a913c99565b5 c4198c4af7f84f249caf8affa5da428d
+#: cd744db000c94da1a20be46cfb7b0339 dc1c2d25859f4bd694609fb2475f6283
+#: e130d9480da14e9abf66fd873d767c96
+msgid "Return type"
+msgstr ""
+
+#: 95481f7173a44a828a34f32f3c13aa9d of
+#: sds.graph.directed.DirectedGraph.add_node:3
+msgid "Node to add."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.directed.DirectedGraph.rst
+#: 19d31d5aa15f4d15a21aafdd5853ac2f 2d8c68936291495d89c3f8142e6a1360
+#: 3637bff6ecca4823bbaca1a020f581de 38eb56c56cb54433b2733518cb116595
+#: 3c31c566ba104d9fac0526d39e107c4b 57534eb40fb548bf9842feb8524c3b8c
+#: 70c16a70a5594bf7be2948674b01af7b 7db50b7dbbca48b1a685bb0ef393fe49
+#: bbb782de8292471e9c118ebb693b63eb bdc94530a66940f3ad5b6eee8d301071
+msgid "Raises"
+msgstr ""
+
+#: 1aa2607463a8473caa341efdab4b7169 of
+#: sds.graph.directed.DirectedGraph.add_node:6
+msgid "If node is not a GraphNode."
+msgstr ""
+
+#: bbf8f85e8ea44ff89bbebc3bf6d283e4 of
+#: sds.graph.directed.DirectedGraph.add_node:7
+msgid "If node already exists in the graph."
+msgstr ""
+
+#: 36f19790552a4a50980e95837a557136 4d187a7d4e5f4d588eea5594fa016f31
+#: 5d76dfeaa3c246498183a5439ac86c20 6ceb1efe134145e1b94c2fb479b21f51
+#: c6d3bb05a0314ce4b76ddd63cf776c2f f63ebca9d6ec475ea1f3df3b2fc60c34
+#: fa6901ebde044fbd996f435ce9ac051d of
+#: sds.graph.directed.DirectedGraph.add_node:19
+#: sds.graph.directed.DirectedGraph.clear:5
+#: sds.graph.directed.DirectedGraph.edge_count:8
+#: sds.graph.directed.DirectedGraph.get_node_by_id:11
+#: sds.graph.directed.DirectedGraph.has_node:21
+#: sds.graph.directed.DirectedGraph.is_empty:8
+#: sds.graph.directed.DirectedGraph.node_count:8
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: f74d7c8f2de640a297a8ac70ac8ef93a of
+#: sds.graph.directed.DirectedGraph.remove_node:3
+msgid "Node to remove."
+msgstr ""
+
+#: 16dcd369619040f9b92cc6a1e60c91c8 2e5f77904b3c4708a7dd13ed40520430
+#: 58c9c65b16c94cad903d3d3277f1c27e 83310364c9524c5abc651b6551645989
+#: 8fa1697069da4a25b9a5fe093bd4a01d b7aeb68b0f07478da672b74d6aebbfa6
+#: fc8158ac38314ad4b5d77f0e5b557b34 of
+#: sds.graph.directed.DirectedGraph.degree:9
+#: sds.graph.directed.DirectedGraph.in_degree:9
+#: sds.graph.directed.DirectedGraph.neighbors:10
+#: sds.graph.directed.DirectedGraph.out_degree:9
+#: sds.graph.directed.DirectedGraph.predecessors:8
+#: sds.graph.directed.DirectedGraph.remove_node:6
+#: sds.graph.directed.DirectedGraph.successors:8
+msgid "If node is not in the graph."
+msgstr ""
+
+#: a067463b2d204a198142614526075d68 of
+#: sds.graph.directed.DirectedGraph.remove_node:22
+msgid "Time complexity: O(in_degree + out_degree + E)"
+msgstr ""
+
+#: d955ba31150844b7a96e318927a37f13 f467af2c692a442ea66d7ab99898175d of
+#: sds.graph.directed.DirectedGraph.__contains__:3
+#: sds.graph.directed.DirectedGraph.has_node:3
+msgid "Node to check."
+msgstr ""
+
+#: 36b3f1a32edb402fb0379d4b9d936c59 89547b2628bd40d4b9f8e73237a20bd8 of
+#: sds.graph.directed.DirectedGraph.__contains__:6
+#: sds.graph.directed.DirectedGraph.has_node:6
+msgid "True if node is in the graph."
+msgstr ""
+
+#: c8de1f237af04fec8a87c783bea528ba of
+#: sds.graph.directed.DirectedGraph.add_edge:3
+msgid "Directed edge to add."
+msgstr ""
+
+#: c9ced402e49242a4b15ef36fcd44c984 of
+#: sds.graph.directed.DirectedGraph.add_edge:6
+msgid "If edge is not a DirectedEdge."
+msgstr ""
+
+#: 8b6cb749164448be82021c889b5cc9f6 of
+#: sds.graph.directed.DirectedGraph.add_edge:7
+msgid ""
+"If source or target node is not in graph, or if edge already     exists "
+"in simple directed graph."
+msgstr ""
+
+#: f92b566a1644488cadc3c1fa7f74f7ed of
+#: sds.graph.directed.DirectedGraph.add_edge:24
+msgid "Time complexity: O(1) for multi-digraph, O(out_degree) for simple."
+msgstr ""
+
+#: 89fb69ef2109442e85693b81f755e4fa of
+#: sds.graph.directed.DirectedGraph.remove_edge:3
+msgid "Edge to remove (must be DirectedEdge for proper direction)."
+msgstr ""
+
+#: 60cdb58ce29647098f38fa04129036d3 of
+#: sds.graph.directed.DirectedGraph.remove_edge:6
+msgid "If edge is not in the graph."
+msgstr ""
+
+#: 28d981d417084498b9aab642f49d7949 of
+#: sds.graph.directed.DirectedGraph.remove_edge:23
+msgid "Time complexity: O(E) to find edge, O(1) to update adjacency."
+msgstr ""
+
+#: ae12d67ca237482ea4e36b62f5cdbac9 ca57551c9bb542f98e239966e335d88c of
+#: sds.graph.directed.DirectedGraph.get_edge:3
+#: sds.graph.directed.DirectedGraph.has_edge:3
+msgid "Source node."
+msgstr ""
+
+#: 88df9c9ff7c6438ab885d28f744a0d0b b28de5320dd14c42bea484ce45dd77f4 of
+#: sds.graph.directed.DirectedGraph.get_edge:5
+#: sds.graph.directed.DirectedGraph.has_edge:5
+msgid "Target node."
+msgstr ""
+
+#: 6ba181dfa737483ea3798da16e77ab2a of
+#: sds.graph.directed.DirectedGraph.has_edge:8
+msgid "True if edge from node1 to node2 exists."
+msgstr ""
+
+#: cfb5566d96f34a2b92dd9b2ae6963719 of
+#: sds.graph.directed.DirectedGraph.has_edge:26
+msgid "Time complexity: O(1) amortized using adjacency set."
+msgstr ""
+
+#: 35a58ca1a19046789deb0e423f5d317c of
+#: sds.graph.directed.DirectedGraph.get_edge:8
+msgid ""
+"The directed edge if it exists, None otherwise. For multi-digraphs, "
+"returns first edge found."
+msgstr ""
+
+#: c9f8d01b665a42d4a393680105dfd777 of
+#: sds.graph.directed.DirectedGraph.get_edge:27
+msgid "Time complexity: O(E) in worst case."
+msgstr ""
+
+#: 46a838ca0c1b491ca82c9c8526beab2b of
+#: sds.graph.directed.DirectedGraph.neighbors:3
+msgid "For directed graphs, neighbors() returns successors by convention."
+msgstr ""
+
+#: c6b53e734d9442839d722f39883b95b5 of
+#: sds.graph.directed.DirectedGraph.neighbors:5
+msgid "Node to get neighbors for."
+msgstr ""
+
+#: 10532940acf341bcb3f2d01811fe6b71 1611a01fd1df49d0a80e9a0ce3c99360
+#: 183f6b3636c341a7af4a284e607a9405 3fd66d685ab44cdeb0bf6f3bee011194
+#: 49cb69e9262c47aca2a55815faf9ddca a1e20a7ee27a4952a280501ebbe72a27 of
+#: sds.graph.directed.DirectedGraph.__iter__
+#: sds.graph.directed.DirectedGraph.edges
+#: sds.graph.directed.DirectedGraph.neighbors
+#: sds.graph.directed.DirectedGraph.nodes
+#: sds.graph.directed.DirectedGraph.predecessors
+#: sds.graph.directed.DirectedGraph.successors
+msgid "Yields"
+msgstr ""
+
+#: 18b3accee19244a6b6b130ed4842fe9d 9be473738aac4a63b4f98769c80f8c0a of
+#: sds.graph.directed.DirectedGraph.neighbors:8
+#: sds.graph.directed.DirectedGraph.successors:6
+msgid "*GraphNode* -- Successor nodes."
+msgstr ""
+
+#: 14d2ea4aca594c76b9a2899d932eb201 of
+#: sds.graph.directed.DirectedGraph.neighbors:28
+msgid ""
+"Time complexity: O(out_degree(node)) neighbors() is equivalent to "
+"successors() for directed graphs."
+msgstr ""
+
+#: ba12d0f4c14e46fe98da9eeb4198249f of
+#: sds.graph.directed.DirectedGraph.degree:3
+msgid "Node to get degree for."
+msgstr ""
+
+#: 979a2cafd293425ca04db15e9aef148c of
+#: sds.graph.directed.DirectedGraph.degree:6
+msgid "Total degree (number of incoming + outgoing edges)."
+msgstr ""
+
+#: 0808469df2e9499d9cfabb2a747a87da of
+#: sds.graph.directed.DirectedGraph.degree:26
+msgid ""
+"Time complexity: O(1) amortized. For multi-digraphs, counts each edge "
+"separately."
+msgstr ""
+
+#: f2bc0315b9d14279bd8f10c5136bba4c of
+#: sds.graph.directed.DirectedGraph.in_degree:3
+msgid "Node to get in-degree for."
+msgstr ""
+
+#: 1cb1bbd761a044a781eba4eff44a619b of
+#: sds.graph.directed.DirectedGraph.in_degree:6
+msgid "Number of edges pointing to this node."
+msgstr ""
+
+#: 2aee64cdad314d72b1f48a65cc2507b7 70e9875988524d51a5f1881482902578 of
+#: sds.graph.directed.DirectedGraph.in_degree:26
+#: sds.graph.directed.DirectedGraph.out_degree:26
+msgid "Time complexity: O(1) amortized."
+msgstr ""
+
+#: 30cba0a0ad4f42c28c33de8b1e2aff5c of
+#: sds.graph.directed.DirectedGraph.out_degree:3
+msgid "Node to get out-degree for."
+msgstr ""
+
+#: 15d69bafbcbe4589b258ec0e874697b7 of
+#: sds.graph.directed.DirectedGraph.out_degree:6
+msgid "Number of edges from this node."
+msgstr ""
+
+#: 56f428d386074a3ba64a541a0b569dfd of
+#: sds.graph.directed.DirectedGraph.predecessors:3
+msgid "Node to get predecessors for."
+msgstr ""
+
+#: e2779c1d11b14e9cbc6c319d817119c8 of
+#: sds.graph.directed.DirectedGraph.predecessors:6
+msgid "*GraphNode* -- Predecessor nodes."
+msgstr ""
+
+#: 54a7b8a37f474dd9af5cd3b4c7014ed9 of
+#: sds.graph.directed.DirectedGraph.predecessors:26
+msgid "Time complexity: O(in_degree(node))"
+msgstr ""
+
+#: 4185d361d2154511998ca37e88f8eabc of
+#: sds.graph.directed.DirectedGraph.successors:3
+msgid "Node to get successors for."
+msgstr ""
+
+#: c4815ef050e34f939be42f72a7e6f538 of
+#: sds.graph.directed.DirectedGraph.successors:26
+msgid "Time complexity: O(out_degree(node))"
+msgstr ""
+
+#: 5b695ff3190c4537bd95f86c4dc6ce0d of
+#: sds.graph.directed.DirectedGraph.is_acyclic:3
+msgid "True if graph has no cycles (is a DAG)."
+msgstr ""
+
+#: 851070eaac30462a9f97ea5dc98af53c of
+#: sds.graph.directed.DirectedGraph.is_acyclic:17
+msgid "Add cycle:"
+msgstr ""
+
+#: 127da776b6f64b6ca13b258d549e77ec of
+#: sds.graph.directed.DirectedGraph.is_acyclic:25
+msgid ""
+"Time complexity: O(V + E) with caching. Uses DFS with coloring to detect "
+"back edges."
+msgstr ""
+
+#: 86d085254fd3489cb3142be32278cb24 fc951207c4a243f1871cf5d933e78daf of
+#: sds.graph.directed.DirectedGraph.__iter__:3
+#: sds.graph.directed.DirectedGraph.nodes:3
+msgid "*GraphNode* -- All nodes in the graph."
+msgstr ""
+
+#: a1a1d63740014b269dc69ed2df62ebf6 of sds.graph.directed.DirectedGraph.nodes:7
+msgid "Time complexity: O(V)"
+msgstr ""
+
+#: 0023d9a2943542e79efa915f4389f659 of sds.graph.directed.DirectedGraph.edges:3
+msgid "*Edge* -- All directed edges in the graph."
+msgstr ""
+
+#: 81c23faacd0b4e8c924aa2379609371c of sds.graph.directed.DirectedGraph.edges:7
+msgid "Time complexity: O(E)"
+msgstr ""
+
+#: a9998c0ef0f347dda1bde4a452881d99 c46e2ca833ad492fafc3d3e9464f3a5b of
+#: sds.graph.directed.DirectedGraph.__len__:3
+#: sds.graph.directed.DirectedGraph.node_count:3
+msgid "Number of nodes."
+msgstr ""
+
+#: 68b5cde42f414f88b79d8fd4d8d3990e of
+#: sds.graph.directed.DirectedGraph.edge_count:3
+msgid "Number of directed edges."
+msgstr ""
+
+#: f4292c9d5a5a469fbb1ffee54668bbd8 of
+#: sds.graph.directed.DirectedGraph.is_connected:3
+msgid ""
+"A directed graph is weakly connected if replacing all directed edges with"
+" undirected edges results in a connected graph."
+msgstr ""
+
+#: 8602b9c542094d5a8c4ff3f759cc2bfc of
+#: sds.graph.directed.DirectedGraph.is_connected:6
+msgid "True if weakly connected."
+msgstr ""
+
+#: ddd6b6383f7943f0953453c9246f222e of
+#: sds.graph.directed.DirectedGraph.is_connected:22
+msgid ""
+"Time complexity: O(V + E) with caching. Uses BFS treating edges as "
+"undirected."
+msgstr ""
+
+#: 77ffafc5972b44cfb1fb0e2f70cfa3cf of
+#: sds.graph.directed.DirectedGraph.get_node_by_id:3
+msgid "ID of the node to retrieve."
+msgstr ""
+
+#: a56a649de84c418dbee2fbc1b8d944f3 of
+#: sds.graph.directed.DirectedGraph.get_node_by_id:6
+msgid "The node if found, None otherwise."
+msgstr ""
+
+#: 7ce87ac92ccb4e8a990d0a64851ab603 of
+#: sds.graph.directed.DirectedGraph.is_empty:3
+msgid "True if graph has no nodes."
+msgstr ""
+
+#: ce6ffc5e235c4344ac8fd674cb113ad1 of
+#: sds.graph.directed.DirectedGraph.__len__:1
+msgid "Return the number of nodes."
+msgstr ""
+
+#: 86ed118b98bb41f4bd5f4f9ca07fbd10 of
+#: sds.graph.directed.DirectedGraph.__contains__:1
+msgid "Check if node is in the graph."
+msgstr ""
+
+#: b5dc9df3b20a449098489104b4d22bee of
+#: sds.graph.directed.DirectedGraph.__iter__:1
+msgid "Iterate over nodes in the graph."
+msgstr ""
+
+#: 90819f9ae06b46998f6cc8cdd1ab3a11 of
+#: sds.graph.directed.DirectedGraph.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 7b1d2d7b507b42aa9711ebd6df1c3c1e 9c7ebd7546b14f1f88f1627da93a7031 of
+#: sds.graph.directed.DirectedGraph.__repr__:3
+#: sds.graph.directed.DirectedGraph.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: db30711ac16b4208985b8888a99bbc8f of
+#: sds.graph.directed.DirectedGraph.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+

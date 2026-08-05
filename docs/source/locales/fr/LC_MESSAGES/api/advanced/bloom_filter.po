@@ -1,0 +1,677 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: 2026-06-05 10:00+0200\n"
+"Last-Translator: biface <biface@skyfrigate.dev>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/advanced/bloom_filter.rst:5
+#: 285c64cb1b314d7d9dd21f48f1332b84
+msgid "Bloom Filter"
+msgstr "Filtre de Bloom"
+
+#: deb7cdcf43ff4425ad37873ae42f0fc3 of sds.advanced.bloom_filter.BloomFilter:1
+msgid "Bases: :py:class:`~sds.advanced.interfaces.AbstractProbabilisticSet`"
+msgstr "Bases : :py:class:`~sds.advanced.interfaces.AbstractProbabilisticSet`"
+
+#: 081819a262464428a62f569641e23c3c of sds.advanced.bloom_filter.BloomFilter:1
+msgid "Space-efficient probabilistic set membership structure."
+msgstr "Structure probabiliste compacte de test d'appartenance à un ensemble."
+
+#: 1a084d3567504fecb3aca87355377654 of sds.advanced.bloom_filter.BloomFilter:3
+msgid ""
+"A Bloom filter uses k independent hash functions and a bit array of m "
+"bits to represent a set. Adding an element sets k bits; querying checks "
+"if all k bits are set."
+msgstr "Un filtre de Bloom utilise k fonctions de hachage indépendantes et un tableau de m bits pour représenter un ensemble. L'ajout d'un élément positionne k bits ; le test vérifie que tous les k bits sont à 1."
+
+#: d23a2b630ff843c49ca157ed65a8312c of sds.advanced.bloom_filter.BloomFilter:7
+msgid ""
+"**No false negatives**: if ``item in bf`` returns False, the item is "
+"definitely not in the set."
+msgstr "**Aucun faux négatif** : si ``item in bf`` retourne False, l'élément est définitivement absent de l'ensemble."
+
+#: 2f13f0430a7044ee8e647e39af694421 of sds.advanced.bloom_filter.BloomFilter:9
+msgid ""
+"**Possible false positives**: if ``item in bf`` returns True, the item is"
+" *probably* (but not certainly) in the set."
+msgstr "**Faux positifs possibles** : si ``item in bf`` retourne True, l'élément est *probablement* (mais pas certainement) dans l'ensemble."
+
+#: ../../source/api/advanced/bloom_filter.rst 0b0ce079319141378e9e87bf41342dcc
+#: 268ab1a96d3a4959879f5a47c34bb903 3d0cb27d0e5a4826bd53b91a6d57f556
+#: 53e3adb21ff246a1a52e157cd7983375 5809374784c04cc099643d69c597b72e
+#: e3347356687243f5b4368ff150f19105 f2e798be6fd84144aa8739bf62e6b87f
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: 68fe50b16ab34ea39a72114fc625edd2 of sds.advanced.bloom_filter.BloomFilter:12
+msgid "Size of the bit array (m). Larger values reduce false positive rate."
+msgstr "Taille du tableau de bits (m). Des valeurs plus grandes réduisent le taux de faux positifs."
+
+#: 3bcfc7cef2fe47cf843f1b888284f953 of sds.advanced.bloom_filter.BloomFilter:14
+msgid "Number of hash functions (k). Optimal value is ``(m/n) * ln(2)``."
+msgstr "Nombre de fonctions de hachage (k). La valeur optimale est ``(m/n) * ln(2)``."
+
+#: e9d42551a7fa410bad4ac8822176c01a of sds.advanced.bloom_filter.BloomFilter:19
+msgid "Size of the bit array in bits (read-only)."
+msgstr "Taille du tableau de bits en bits (lecture seule)."
+
+#: 4764dbe0372d44578c981949bdb58d51 69e827e039aa4428a9e1d6595af0b46b
+#: 7fce7a6457ac446bb2ec6d45373525d2 of sds.advanced.bloom_filter.BloomFilter
+msgid "type"
+msgstr "type"
+
+#: 0218da9561d54353b346957bafdb511b 71cb65e96f3c481d98b6e203d3f71482
+#: e293be3001284a3c9b0b42175348f18a of sds.advanced.bloom_filter.BloomFilter:21
+#: sds.advanced.bloom_filter.BloomFilter:27
+#: sds.advanced.bloom_filter.BloomFilter:33
+msgid "int"
+msgstr "int"
+
+#: 5aeeaa4496ed4157a98401e31c3bcf82 of sds.advanced.bloom_filter.BloomFilter:25
+msgid "Number of hash functions used (read-only)."
+msgstr "Nombre de fonctions de hachage utilisées (lecture seule)."
+
+#: 4bcfb3c0648147728b5fc7a3604e51a1 of sds.advanced.bloom_filter.BloomFilter:31
+msgid "Number of items added (read-only). Not deduplicated."
+msgstr "Nombre d'éléments ajoutés (lecture seule). Non dédupliqué."
+
+#: ../../source/api/advanced/bloom_filter.rst 06d823c27ee34ea0a70f4eaf39fb1edc
+#: 112bf29c9b11411c9236e53c5c84726c 3643c20148a6446f8cc7d9d86ef1ddd5
+#: 8213d16434ec464280fd3dd9bc12dad7 e6a36c43bb8c4950a71d64adcb2281f4
+#: ff790aea1af24325ba5c2dea3ab8d6c0
+msgid "Raises"
+msgstr "Lève"
+
+#: 1732277a10d04903aebb8f3d6426fcd0 of sds.advanced.bloom_filter.BloomFilter:35
+msgid "If ``size`` or ``num_hashes`` is not a positive integer."
+msgstr "Si ``size`` ou ``num_hashes`` n'est pas un entier strictement positif."
+
+#: 116a733b48f8442f9e17f6c242ced0aa 11816ac8674a49f697e7f39b6be70345
+#: 18be6b7bbb234fa5a1fee8325977f6a0 1b2fe435fd774b17879027fe8c641676
+#: 59e3ed6785164dafb7874d6e4c466418 67c513fbd8b54e1dbe1851cb39f38f11
+#: 7a66dad7a6a741c4ae9d7dbb3f200ff6 90d20b43db4343d6915ecd64e8a33027
+#: b379c6d89fd64fc9afc35eee1791c6a4 e3844ddb8c4c404e89e08d5769713133
+#: e6fe3c878c374461ac939818be5bb5d0 e7af2e548da445418e400fb846f838fa
+#: ea38b6bd48684943b9e98044d116356f efa5c134a897442a80599af381c435d4
+#: f35e4a328d8f4b68b5a588baabd84e38 of sds.advanced.bloom_filter.BloomFilter:37
+#: sds.advanced.bloom_filter.BloomFilter.__contains__:14
+#: sds.advanced.bloom_filter.BloomFilter.__init__:10
+#: sds.advanced.bloom_filter.BloomFilter.__len__:6
+#: sds.advanced.bloom_filter.BloomFilter.__repr__:6
+#: sds.advanced.bloom_filter.BloomFilter.__str__:6
+#: sds.advanced.bloom_filter.BloomFilter.add:9
+#: sds.advanced.bloom_filter.BloomFilter.count:6
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fill_ratio:10
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fp_rate:12
+#: sds.advanced.bloom_filter.BloomFilter.intersection:15
+#: sds.advanced.bloom_filter.BloomFilter.num_hashes:6
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:18
+#: sds.advanced.bloom_filter.BloomFilter.size:6
+#: sds.advanced.bloom_filter.BloomFilter.union:15
+msgid "Examples"
+msgstr "Exemples"
+
+#: 98c4e47dc48746978869ec3e5ebe71f7 of sds.advanced.bloom_filter.BloomFilter:39
+msgid "Create with explicit parameters:"
+msgstr "Création avec des paramètres explicites :"
+
+#: 58f80075ae7a4a49b4a7bbebc880276c of sds.advanced.bloom_filter.BloomFilter:48
+msgid "Create with optimal parameters for a target false positive rate:"
+msgstr "Création avec des paramètres optimaux pour un taux de faux positifs cible :"
+
+#: ../../source/api/advanced/bloom_filter.rst:23
+#: 18b8a98789f645f5b43a7b646e1b18c0 27575834d03d432e994c2bbe24001c6e
+#: 498e5e681b324634937a2c554b305112 58986d81ac0a49f6a34347033239c56d
+#: 5a08fbe206fd421e99cecd77b8cbff9c 68cb20725bcd4a79abcc469bd2af74c4
+#: 699ba4e8c1f14fc89963113403f3d754 a6aa4fa2d76544628f1104244aff77d6
+#: bcc6919e22bc4bb291c30aee9cea9ee6 ce83f7b0892a4ed9a2c9295e08924649
+#: d1a44b88ae67473f802ab75da3125e57 ee741a3eeda94063abd2e3c1d3e89702 of
+#: sds.advanced.bloom_filter.BloomFilter:57
+#: sds.advanced.bloom_filter.BloomFilter.__contains__:23
+#: sds.advanced.bloom_filter.BloomFilter.__init__:16
+#: sds.advanced.bloom_filter.BloomFilter.add:16
+#: sds.advanced.bloom_filter.BloomFilter.clear:5
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fill_ratio:19
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fp_rate:18
+#: sds.advanced.bloom_filter.BloomFilter.intersection:27
+#: sds.advanced.bloom_filter.BloomFilter.is_empty:6
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:26
+#: sds.advanced.bloom_filter.BloomFilter.union:27
+msgid "Notes"
+msgstr "Notes"
+
+#: ec5717b27c8d49f797a1e479e7eb05e0 of sds.advanced.bloom_filter.BloomFilter:59
+msgid "Elements must be serialisable to bytes (strings, numbers, bytes)."
+msgstr "Les éléments doivent être convertibles en chaîne (str, nombres, bytes)."
+
+#: 53dfc51d31644fe99ca3ba6b0872050e of sds.advanced.bloom_filter.BloomFilter:60
+msgid ""
+"Deletion is **not supported** — use a Counting Bloom Filter variant if "
+"removal is required."
+msgstr "La suppression **n'est pas prise en charge** — utiliser une variante Counting Bloom Filter si le retrait est nécessaire."
+
+#: be75c36f88b249d6b731a58523a8ae9f of sds.advanced.bloom_filter.BloomFilter:62
+msgid ""
+"Once the fill ratio approaches 1.0, the false positive rate rises "
+"sharply. Use :meth:`optimal_params` to size the filter correctly."
+msgstr "Lorsque le taux de remplissage approche 1.0, le taux de faux positifs augmente rapidement. Utiliser :meth:`optimal_params` pour dimensionner correctement le filtre."
+
+#: b99310f27e074221b71b32735ae58d94 of sds.advanced.bloom_filter.BloomFilter:67
+msgid ":obj:`AbstractProbabilisticSet`"
+msgstr ":obj:`AbstractProbabilisticSet`"
+
+#: 904d151f5244409aa5574c96401e5245 of sds.advanced.bloom_filter.BloomFilter:68
+msgid "Abstract interface for probabilistic sets."
+msgstr "Interface abstraite pour les ensembles probabilistes."
+
+#: 078b28a1957341e88de883e25a269e84 of sds.advanced.bloom_filter.BloomFilter:70
+msgid ":obj:`BloomFilter.optimal_params`"
+msgstr ":obj:`BloomFilter.optimal_params`"
+
+#: 6755b61d64964098a086444691cf378f of sds.advanced.bloom_filter.BloomFilter:71
+msgid "Calculate optimal size and hash count."
+msgstr "Calcule la taille et le nombre de fonctions de hachage optimaux."
+
+#: ../../source/api/advanced/bloom_filter.rst:16
+#: b6ca8b500c69450d8ae3736bb5ec6003
+msgid "Complexity Summary"
+msgstr "Résumé des complexités"
+
+#: ../../source/api/advanced/bloom_filter.rst:21
+#: a16bf06aef474ef0ab9d3e3a90c00924
+msgid "Operation"
+msgstr "Opération"
+
+#: ../../source/api/advanced/bloom_filter.rst:22
+#: 058dc688204740108928e320e5ecda2e
+msgid "Complexity"
+msgstr "Complexité"
+
+#: ../../source/api/advanced/bloom_filter.rst:24
+#: aafedd1b5f814b60bf1e422def9c9511
+msgid "``add(item)``"
+msgstr "``add(item)``"
+
+#: ../../source/api/advanced/bloom_filter.rst:25
+#: ../../source/api/advanced/bloom_filter.rst:28
+#: 85ce8af6494446e5b22df0de6f7f1a7d 897f174861e6414c9a7df8a32924d6ba
+msgid "O(k)"
+msgstr "O(k)"
+
+#: ../../source/api/advanced/bloom_filter.rst:26
+#: 09c07ee5588548f1aa4c959bec7a27ff
+msgid "k = number of hash functions"
+msgstr "k = nombre de fonctions de hachage"
+
+#: ../../source/api/advanced/bloom_filter.rst:27
+#: fb71b0e24da840c5b18c1db18ee7cb27
+msgid "``__contains__(item)``"
+msgstr "``__contains__(item)``"
+
+#: ../../source/api/advanced/bloom_filter.rst:29
+#: 77a6cfc145bf465d86ef3813ca0bbd5c
+msgid "No false negatives"
+msgstr "Aucun faux négatif"
+
+#: ../../source/api/advanced/bloom_filter.rst:30
+#: be8a297ec0b9407580ecea70018f6e73
+msgid "``estimated_fill_ratio()``"
+msgstr "``estimated_fill_ratio()``"
+
+#: ../../source/api/advanced/bloom_filter.rst:31
+#: ../../source/api/advanced/bloom_filter.rst:34
+#: ../../source/api/advanced/bloom_filter.rst:37
+#: ../../source/api/advanced/bloom_filter.rst:40
+#: ../../source/api/advanced/bloom_filter.rst:46
+#: 04553ac5f88b4557a862a9572ace8a66 263c5339c7484870aa0f1ab3c3c88905
+#: 29dde5b3c3e74e49a12b88335b0040ed 2e6130a95f21480d83bc2624b703c15b
+#: 71539467d73f48999d5b1ee8d408cf38
+msgid "O(m/8)"
+msgstr "O(m/8)"
+
+#: ../../source/api/advanced/bloom_filter.rst:32
+#: 1e0408b84e074d88ba6ae4f60c0195fe
+msgid "m = bit array size in bits"
+msgstr "m = taille du tableau de bits en bits"
+
+#: ../../source/api/advanced/bloom_filter.rst:33
+#: 4a06563e281042f5aa922135ed93b891
+msgid "``estimated_fp_rate()``"
+msgstr "``estimated_fp_rate()``"
+
+#: ../../source/api/advanced/bloom_filter.rst:35
+#: 868b4fbdb86142ec978b823ca7404fd9
+msgid "fill_ratio^k"
+msgstr "fill_ratio^k"
+
+#: ../../source/api/advanced/bloom_filter.rst:36
+#: 4ce14a15a8004d68835ea455996a5adc
+msgid "``union(other)``"
+msgstr "``union(other)``"
+
+#: ../../source/api/advanced/bloom_filter.rst:38
+#: c21a0250550b41b6a116b16d54f163e1
+msgid "Bitwise OR of arrays"
+msgstr "OU bit à bit des tableaux"
+
+#: ../../source/api/advanced/bloom_filter.rst:39
+#: fa2c2271146f4e16968e107ca60dcf7d
+msgid "``intersection(other)``"
+msgstr "``intersection(other)``"
+
+#: ../../source/api/advanced/bloom_filter.rst:41
+#: e43636eab28a428593376f6f15004e60
+msgid "Bitwise AND of arrays"
+msgstr "ET bit à bit des tableaux"
+
+#: ../../source/api/advanced/bloom_filter.rst:42
+#: 4aa2f7a8819040268ccd1daf297df418
+msgid "``optimal_params(n, fp_rate)``"
+msgstr "``optimal_params(n, fp_rate)``"
+
+#: ../../source/api/advanced/bloom_filter.rst:43
+#: fb79dd597e71480c9372bb98c5c57ed0
+msgid "O(1)"
+msgstr "O(1)"
+
+#: ../../source/api/advanced/bloom_filter.rst:44
+#: 9540f3c31f5242eeb069903619223046
+msgid "Static method"
+msgstr "Méthode statique"
+
+#: ../../source/api/advanced/bloom_filter.rst:45
+#: 9786de642363483e9540a66cedde4da7
+msgid "``clear()``"
+msgstr "``clear()``"
+
+#: ../../source/api/advanced/bloom_filter.rst:47
+#: 244b4bfdab12415eb4e1dc9a9455614a
+msgid "Resets bit array and count"
+msgstr "Réinitialise le tableau de bits et le compteur"
+
+#: ../../source/api/advanced/bloom_filter.rst:48
+#: d7d106d33c744461a4c58b75ac6a8ab2
+msgid "Space"
+msgstr "Espace"
+
+#: ../../source/api/advanced/bloom_filter.rst:49
+#: c8dde6bfeab045d386d5b6f099abfc91
+msgid "O(m)"
+msgstr "O(m)"
+
+#: ../../source/api/advanced/bloom_filter.rst:50
+#: 5173f734e6584a759fb81c197765454f
+msgid "m bits regardless of n"
+msgstr "m bits indépendamment de n"
+
+#: 7fa6aa045a7745bd912cac4e758936c5 of
+#: sds.advanced.bloom_filter.BloomFilter.__init__:1
+msgid "Initialise a Bloom filter with a given bit array size and hash count."
+msgstr "Initialise un filtre de Bloom avec une taille de tableau de bits et un nombre de fonctions de hachage donnés."
+
+#: 3734ccd11b9047748232f799a6b305f4 of
+#: sds.advanced.bloom_filter.BloomFilter.__init__:3
+msgid "Number of bits in the filter (m). Must be a positive integer."
+msgstr "Nombre de bits dans le filtre (m). Doit être un entier strictement positif."
+
+#: 716d2c7d58274c95963bd972068ca2e2 of
+#: sds.advanced.bloom_filter.BloomFilter.__init__:5
+msgid "Number of independent hash functions (k). Must be a positive integer."
+msgstr "Nombre de fonctions de hachage indépendantes (k). Doit être un entier strictement positif."
+
+#: 71bf03ee30a14b7e8b588a2873810d3a of
+#: sds.advanced.bloom_filter.BloomFilter.__init__:8
+msgid "If ``size`` or ``num_hashes`` is less than 1."
+msgstr "Si ``size`` ou ``num_hashes`` est inférieur à 1."
+
+#: 48aa9907200c4b54980e55f44ed36691 of
+#: sds.advanced.bloom_filter.BloomFilter.__init__:18
+msgid "Time complexity: O(m) for bit array initialisation."
+msgstr "Complexité temporelle : O(m) pour l'initialisation du tableau de bits."
+
+#: 0787038d3e794d4ca6c7ac2ad24d12e4 of
+#: sds.advanced.bloom_filter.BloomFilter.size:1
+msgid "Size of the bit array in bits."
+msgstr "Taille du tableau de bits en bits."
+
+#: ../../source/api/advanced/bloom_filter.rst 1391e7ebf38c4eb1bd9ee69858112707
+#: 2e3725ae5c0c47d092dc0257f1c287a4 3bfdad8cc2d542d9bed27ef149415388
+#: 56eda158f3d440ef80a34acbd9131dc0 6326663913784cc0996653deb1deeac2
+#: 659cb816891d4752a74bc54d770495da 77a175e184d04d5299835ef6f2d3e90a
+#: 7d940b477c19433ea0b652cdb10c4aef 855ed3bff8944152b97fc5efb56d12cc
+#: 97a314310ea04d3982bc93e5010da2cc ba6c3bbe7c344bc4810ddd63faa04a78
+#: ddb70d1fe0fe4465a8c54f4d6c1ef76d efd4c90ae6794181b7ea25753396cea6
+msgid "Returns"
+msgstr "Retourne"
+
+#: e26121b525834481b11be26fc6838240 of
+#: sds.advanced.bloom_filter.BloomFilter.size:3
+msgid "Number of bits (m)."
+msgstr "Nombre de bits (m)."
+
+#: ../../source/api/advanced/bloom_filter.rst 2f14d099e8f047b49cdf242bcd601b83
+#: 5bc2bbdf0acf464d80318664c7539252 5dabd5e486124ed390313d66a419deb2
+#: 62e0a3c18c234babbc84b11c5a2affd5 794943699f304111a96ce08e81f3886d
+#: a50134f9c98140b2aed8374fb3bfd255 ab903bdb197d467385c355a493d3e2ff
+#: baecf5a7acce4b9faf3cb500089d6322 c37f4737bf2f4f5a9b39e4a6ae61dbf6
+#: c4d01f883a9148fea09455c52ee31eb7 de6e6f12f5b74f6592f2ef4a4c11aef7
+#: e87930350a8a48e79e093d4417fa34a5 ed622057aefb48238b2c83a2036efbbb
+msgid "Return type"
+msgstr "Type de retour"
+
+#: 4e21fc99414648b8bf53f4a342c07c75 of
+#: sds.advanced.bloom_filter.BloomFilter.num_hashes:1
+msgid "Number of hash functions."
+msgstr "Nombre de fonctions de hachage."
+
+#: 6d3d7d620d0146f6bc37e5fab0ac3010 of
+#: sds.advanced.bloom_filter.BloomFilter.num_hashes:3
+msgid "Number of hash functions (k)."
+msgstr "Nombre de fonctions de hachage (k)."
+
+#: f5d28b847dfd44f9a3ebdbd799c5bf20 of
+#: sds.advanced.bloom_filter.BloomFilter.count:1
+msgid "Number of items added to the filter."
+msgstr "Nombre d'éléments ajoutés au filtre."
+
+#: 6dc3fdc638104b70a5c6b52075c92ddd of
+#: sds.advanced.bloom_filter.BloomFilter.count:3
+msgid "Total number of ``add()`` calls (not deduplicated)."
+msgstr "Nombre total d'appels à ``add()`` (non dédupliqué)."
+
+#: f3b84455b71545a18ca7e7e91f854641 of
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:1
+msgid "Calculate optimal bit array size and hash count for given constraints."
+msgstr "Calcule la taille optimale du tableau de bits et le nombre de fonctions de hachage pour des contraintes données."
+
+#: 10965f265bff4400a9676a696dde237f of
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:3
+msgid ""
+"Given the expected number of elements ``n`` and a target false positive "
+"rate ``fp_rate``, returns the minimal bit array size ``m`` and the "
+"optimal number of hash functions ``k``."
+msgstr "Étant donné le nombre attendu d'éléments ``n`` et un taux de faux positifs cible ``fp_rate``, retourne la taille minimale du tableau de bits ``m`` et le nombre optimal de fonctions de hachage ``k``."
+
+#: 622a470867af4f32bf84d2b78e67c360 of
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:7
+msgid "Expected number of elements to insert. Must be positive."
+msgstr "Nombre attendu d'éléments à insérer. Doit être positif."
+
+#: 834807d56b2b45b8a7652c8435870348 of
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:9
+msgid "Target false positive probability. Must be in (0.0, 1.0)."
+msgstr "Probabilité de faux positifs cible. Doit être dans (0.0, 1.0)."
+
+#: d47d1c47bd6041e08eb65551a25caa12 of
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:12
+msgid ""
+"A ``(size, num_hashes)`` pair where ``size`` is the bit array length and "
+"``num_hashes`` is the number of hash functions."
+msgstr "Un couple ``(size, num_hashes)`` où ``size`` est la longueur du tableau de bits et ``num_hashes`` est le nombre de fonctions de hachage."
+
+#: 5e54e8203e4e459783d8a7f5d5f983b3 of
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:16
+msgid "If ``n`` is not positive or ``fp_rate`` is not in (0, 1)."
+msgstr "Si ``n`` n'est pas positif ou si ``fp_rate`` n'est pas dans (0, 1)."
+
+#: bdba407965e04bd19aab040e56929b4b of
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:28
+msgid "Formulae used:"
+msgstr "Formules utilisées :"
+
+#: 36a70fcbb1dc4ee1aa50037081eb3138 of
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:30
+msgid ""
+"m = \\lceil -n \\cdot \\ln(p) / (\\ln 2)^2 \\rceil\n"
+"\n"
+"k = \\lfloor (m / n) \\cdot \\ln(2) \\rfloor"
+msgstr "m = \\lceil -n \\cdot \\ln(p) / (\\ln 2)^2 \\rceil\n\nk = \\lfloor (m / n) \\cdot \\ln(2) \\rfloor"
+
+#: c2657e1af7b3419fa3aa83197ca9dfd9 of
+#: sds.advanced.bloom_filter.BloomFilter.optimal_params:36
+msgid "where :math:`p` is ``fp_rate`` and :math:`m` is rounded up."
+msgstr "où :math:`p` désigne ``fp_rate`` et :math:`m` est arrondi vers le haut."
+
+#: b7688c0e69cf41f5b6310b52691e5dee of
+#: sds.advanced.bloom_filter.BloomFilter.add:1
+msgid "Add an item to the Bloom filter."
+msgstr "Ajoute un élément au filtre de Bloom."
+
+#: a7f861dcc80d482c92cd8ac121ee1ba8 of
+#: sds.advanced.bloom_filter.BloomFilter.add:3
+msgid ""
+"Sets the k bits corresponding to the item's hash positions. After calling"
+" ``add(item)``, ``item in self`` will always return True."
+msgstr "Positionne les k bits correspondant aux positions de hachage de l'élément. Après l'appel de ``add(item)``, ``item in self`` retourne toujours True."
+
+#: e9516609305a4ea0bf7eae3f4b745b54 of
+#: sds.advanced.bloom_filter.BloomFilter.add:6
+msgid "Item to add. Must be convertible to a string."
+msgstr "Élément à ajouter. Doit être convertible en chaîne."
+
+#: f836fa2a51ed4724ad8f2ebd713f807b of
+#: sds.advanced.bloom_filter.BloomFilter.add:18
+msgid "Time complexity: O(k) where k is ``num_hashes``."
+msgstr "Complexité temporelle : O(k) où k est ``num_hashes``."
+
+#: 10f591fbe2724795b48ccd01c1410b59 of
+#: sds.advanced.bloom_filter.BloomFilter.__contains__:1
+msgid "Test if an item might be in the set."
+msgstr "Teste si un élément est susceptible d'être dans l'ensemble."
+
+#: 7fa6c48448cc4b41a65a2611252978e5 of
+#: sds.advanced.bloom_filter.BloomFilter.__contains__:3
+msgid ""
+"Returns False if the item is **definitely** not in the set (no false "
+"negatives). Returns True if the item is **probably** in the set (false "
+"positives are possible)."
+msgstr "Retourne False si l'élément est **définitivement** absent de l'ensemble (aucun faux négatif). Retourne True si l'élément est **probablement** dans l'ensemble (les faux positifs sont possibles)."
+
+#: d019d36926b94e67a5509ded34457b80 of
+#: sds.advanced.bloom_filter.BloomFilter.__contains__:7
+msgid "Item to test. Must be convertible to a string."
+msgstr "Élément à tester. Doit être convertible en chaîne."
+
+#: 54d64cad145d4af0912bbaece509087f of
+#: sds.advanced.bloom_filter.BloomFilter.__contains__:10
+msgid ""
+"True if all k bit positions are set (probable member). False if any bit "
+"position is unset (definite non-member)."
+msgstr "True si toutes les k positions de bits sont à 1 (membre probable). False si au moins une position de bit est à 0 (non-membre certain)."
+
+#: 8ac5d433022e4a5bbd2d90c583920d22 of
+#: sds.advanced.bloom_filter.BloomFilter.__contains__:25
+msgid "Time complexity: O(k)."
+msgstr "Complexité temporelle : O(k)."
+
+#: 7366a2576a9e4eb1ad201f514e1e41dd of
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fill_ratio:1
+msgid "Return the proportion of bits set to 1 in the bit array."
+msgstr "Retourne la proportion de bits positionnés à 1 dans le tableau de bits."
+
+#: 48d9ee287dd6492a822d559ee9ed1978 of
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fill_ratio:3
+msgid ""
+"A fill ratio near 0.5 corresponds to the optimal false positive rate for "
+"a well-configured filter. As the ratio approaches 1.0, the false positive"
+" rate rises sharply."
+msgstr "Un taux de remplissage proche de 0.5 correspond au taux de faux positifs optimal pour un filtre bien configuré. Lorsque ce taux approche 1.0, le taux de faux positifs augmente rapidement."
+
+#: 3d615537faa8488abb4477d8c5748528 of
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fill_ratio:7
+msgid "Fraction of bits set (0.0 to 1.0)."
+msgstr "Fraction de bits positionnés à 1 (0.0 à 1.0)."
+
+#: bd94a32cf6cd49919089c110f131375b of
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fill_ratio:21
+msgid "Time complexity: O(m/8) — iterates over the byte array."
+msgstr "Complexité temporelle : O(m/8) — itère sur le tableau d'octets."
+
+#: 7e0bbd09632a41f79ccd204f5290f8fa of
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fp_rate:1
+msgid "Estimate the current false positive probability."
+msgstr "Estime la probabilité courante de faux positifs."
+
+#: b574f1c5ebf14a72a13f70464f6c0789 of
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fp_rate:3
+msgid "Uses the fill ratio to approximate the false positive rate:"
+msgstr "Utilise le taux de remplissage pour approximer le taux de faux positifs :"
+
+#: 2b2a385b6a7845a2b6e8b1d458f05f3c of
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fp_rate:5
+#, python-brace-format
+msgid "P(fp) \\approx \\text{fill\\_ratio}^k"
+msgstr "P(fp) \\approx \\text{fill\\_ratio}^k"
+
+#: 0295f8bce9a94a618d624624b6f1c0e7 of
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fp_rate:9
+msgid "Estimated false positive probability (0.0 to 1.0)."
+msgstr "Probabilité de faux positifs estimée (0.0 à 1.0)."
+
+#: ce2fab4183b84c0286cf6e124350f4f0 f07653b6d88f4e6488601ad70527c9ec of
+#: sds.advanced.bloom_filter.BloomFilter.estimated_fp_rate:20
+#: sds.advanced.bloom_filter.BloomFilter.union:29
+msgid "Time complexity: O(m/8)."
+msgstr "Complexité temporelle : O(m/8)."
+
+#: 507fe8bf9607471e86005a5746c85a84 of
+#: sds.advanced.bloom_filter.BloomFilter.union:1
+msgid "Return a new Bloom filter representing the union of two filters."
+msgstr "Retourne un nouveau filtre de Bloom représentant l'union de deux filtres."
+
+#: 337e27d334a240a4a1b77cd3fcaadba8 of
+#: sds.advanced.bloom_filter.BloomFilter.union:3
+msgid ""
+"The union filter will return True for any item that either source filter "
+"would return True for. Both filters must have identical ``size`` and "
+"``num_hashes``."
+msgstr "Le filtre union retournera True pour tout élément que l'un ou l'autre des filtres sources retournerait True. Les deux filtres doivent avoir des ``size`` et ``num_hashes`` identiques."
+
+#: 21f0cfc57d8247a4b826e523f039bbb8 928b33a43362465cb6d99febc15f5cbe of
+#: sds.advanced.bloom_filter.BloomFilter.intersection:7
+#: sds.advanced.bloom_filter.BloomFilter.union:7
+msgid "Another Bloom filter with the same ``size`` and ``num_hashes``."
+msgstr "Un autre filtre de Bloom avec les mêmes ``size`` et ``num_hashes``."
+
+#: 354a261993dc4aaa8d07606a94ee0871 of
+#: sds.advanced.bloom_filter.BloomFilter.union:10
+msgid "A new filter whose bit array is the bitwise OR of both arrays."
+msgstr "Un nouveau filtre dont le tableau de bits est le OU bit à bit des deux tableaux."
+
+#: d549a3010edc4bb38d248fe966c11cfc e8698ae8a5484cafad9948212b6cedf7 of
+#: sds.advanced.bloom_filter.BloomFilter.intersection:13
+#: sds.advanced.bloom_filter.BloomFilter.union:13
+msgid "If the two filters have different ``size`` or ``num_hashes``."
+msgstr "Si les deux filtres ont des ``size`` ou ``num_hashes`` différents."
+
+#: 574fe3f41df4496aa09af4b48fa881a7 of
+#: sds.advanced.bloom_filter.BloomFilter.intersection:1
+msgid "Return a new filter representing an approximate intersection."
+msgstr "Retourne un nouveau filtre représentant une intersection approximative."
+
+#: c311849293b848e0871afc4bbe9e2028 of
+#: sds.advanced.bloom_filter.BloomFilter.intersection:3
+msgid ""
+"The result is an *over-approximation*: it may include false positives for"
+" items in neither filter, because the bit arrays are ORed over time. Both"
+" filters must have identical ``size`` and ``num_hashes``."
+msgstr "Le résultat est une *sur-approximation* : il peut inclure des faux positifs pour des éléments absents des deux filtres, car les tableaux de bits s'accumulent au fil du temps. Les deux filtres doivent avoir des ``size`` et ``num_hashes`` identiques."
+
+#: 3ac75e36d4844adc8a2ca86decbff895 of
+#: sds.advanced.bloom_filter.BloomFilter.intersection:10
+msgid "A new filter whose bit array is the bitwise AND of both arrays."
+msgstr "Un nouveau filtre dont le tableau de bits est le ET bit à bit des deux tableaux."
+
+#: 96c04e1aae6e467d85dc40733db5fc7c of
+#: sds.advanced.bloom_filter.BloomFilter.intersection:29
+msgid ""
+"Time complexity: O(m/8). The intersection filter has a higher false "
+"positive rate than the individual filters. Use with caution."
+msgstr "Complexité temporelle : O(m/8). Le filtre intersection a un taux de faux positifs plus élevé que les filtres individuels. À utiliser avec précaution."
+
+#: e5415ae7ed7344d8a4d24f03baca4950 of
+#: sds.advanced.bloom_filter.BloomFilter.is_empty:1
+msgid "Return True if no items have been added."
+msgstr "Retourne True si aucun élément n'a été ajouté."
+
+#: 386ab883595b4c469b52793f69c89bcf of
+#: sds.advanced.bloom_filter.BloomFilter.is_empty:3
+msgid "True if count is 0."
+msgstr "True si le compteur est à 0."
+
+#: 323189c342a1469480c8b86f083c6078 of
+#: sds.advanced.bloom_filter.BloomFilter.is_empty:8
+msgid "Time complexity: O(1)."
+msgstr "Complexité temporelle : O(1)."
+
+#: 555e6a0ae2e5464eaec7e2120fa2d7b7 of
+#: sds.advanced.bloom_filter.BloomFilter.clear:1
+msgid "Reset the filter to its initial empty state."
+msgstr "Réinitialise le filtre à son état vide initial."
+
+#: 352fd3eb160548e480990a7b625e6523 of
+#: sds.advanced.bloom_filter.BloomFilter.clear:3
+msgid "Clears the bit array and resets the item count."
+msgstr "Efface le tableau de bits et remet le compteur à zéro."
+
+#: 491a80ba91394860a9c5dbeed84aa746 of
+#: sds.advanced.bloom_filter.BloomFilter.clear:7
+msgid "Time complexity: O(m/8) — resets the byte array."
+msgstr "Complexité temporelle : O(m/8) — réinitialise le tableau d'octets."
+
+#: 4686161fc4984bb18db8d8488e39a2f9 of
+#: sds.advanced.bloom_filter.BloomFilter.__iter__:1
+msgid "Not supported — Bloom filters do not store elements."
+msgstr "Non pris en charge — les filtres de Bloom ne stockent pas les éléments."
+
+#: 1e5b5d42b82944beb68eac8216312133 of
+#: sds.advanced.bloom_filter.BloomFilter.__iter__:3
+msgid "Always, because elements cannot be recovered from a Bloom filter."
+msgstr "Toujours, car les éléments ne peuvent pas être récupérés depuis un filtre de Bloom."
+
+#: 2c6f83a898044bb39052d94184ae09d6 of
+#: sds.advanced.bloom_filter.BloomFilter.__len__:1
+msgid "Return the number of items added."
+msgstr "Retourne le nombre d'éléments ajoutés."
+
+#: 8cc72c59876649a79e2698be70ea4c34 of
+#: sds.advanced.bloom_filter.BloomFilter.__len__:3
+msgid "Value of :attr:`count`."
+msgstr "Valeur de :attr:`count`."
+
+#: be7851269ddc4180ae1c13a1214c49c5 of
+#: sds.advanced.bloom_filter.BloomFilter.__repr__:1
+msgid "Return a detailed string representation."
+msgstr "Retourne une représentation textuelle détaillée."
+
+#: 94af2153c99942deb271e58d09af32e1 of
+#: sds.advanced.bloom_filter.BloomFilter.__repr__:3
+msgid "String of the form ``BloomFilter(size=m, num_hashes=k, count=n)``."
+msgstr "Chaîne de la forme ``BloomFilter(size=m, num_hashes=k, count=n)``."
+
+#: 897c01f248de40bc9b1a98e7b755d837 of
+#: sds.advanced.bloom_filter.BloomFilter.__str__:1
+msgid "Return a concise string representation."
+msgstr "Retourne une représentation textuelle concise."
+
+#: d3213347fabd46c69cfd50b7f9f8340b of
+#: sds.advanced.bloom_filter.BloomFilter.__str__:3
+msgid "Human-readable summary of the filter state."
+msgstr "Résumé lisible de l'état du filtre."
+

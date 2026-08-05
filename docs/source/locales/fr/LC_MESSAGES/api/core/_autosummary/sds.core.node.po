@@ -1,0 +1,346 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/core/_autosummary/sds.core.node.rst:2
+#: 3ee09d61e09c4500ae1bf798cce6832e
+msgid "sds.core.node"
+msgstr ""
+
+#: 23a3e77daf194709a4809ab9c0b0b6cf of sds.core.node:1
+msgid "Abstract base node class for all data structures."
+msgstr ""
+
+#: faf48a018dd34eddb567c287a13dfa77 of sds.core.node:3
+msgid ""
+"This module provides the foundational abstract Node class that serves as "
+"the base for all node types used throughout the sds library. All concrete"
+" node implementations (for lists, trees, graphs) inherit from this class."
+msgstr ""
+
+#: 66b958af5fd846689d3dab91e420b815 of sds.core.node:7
+msgid ""
+"The Node class uses a generic `_refs` list to store references to other "
+"nodes, allowing different node types to implement specific access "
+"patterns via properties."
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.node.rst:14
+#: 747d6b50475a437ab964ea360e8054e4 a3e49516d77047e582d05872583da202 of
+#: sds.core.node:12
+msgid "Classes"
+msgstr ""
+
+#: ddf87ef278414172a608c78a32670922 of sds.core.node:13
+msgid "Node"
+msgstr ""
+
+#: 809fad4b330b450297fdbff27fae79b1 9e489861600a4c0899830a78e1314bd6
+#: b27714807f244a1b92ad810865cd94a7 of sds.core.node:14 sds.core.node.Node:1
+#: sds.core.node.Node:1:<autosummary>:1
+msgid "Abstract base class for all node types."
+msgstr ""
+
+#: 008c70055be9459d91ad0e39c9ba8843 2688d3aa12b5466bb736632ec63f5aea
+#: bc872e837f9e4e03aadfa90cdd663994 f4977df9aa9545d8be8fa7a16004e7f3 of
+#: sds.core.node:16 sds.core.node.Node:40 sds.core.node.Node.data:6
+#: sds.core.node.Node.parent:6
+msgid "Examples"
+msgstr ""
+
+#: 7bea4746473a445199acdaba39d6ca7b of sds.core.node:18
+msgid "Node is abstract and cannot be instantiated directly:"
+msgstr ""
+
+#: ebaf3a873e46477aa66ca99c85507d88 of sds.core.node:26
+msgid "Use concrete implementations instead:"
+msgstr ""
+
+#: 183cc9c0f3404a91bc4a2ade4070b5e6 6563dedad3f4496baa5a5e42ffc2e0b7
+#: 77dc75f072764610b1a9b28e6a1eea82 8019210552e947d3ac90dcde7100d1e8
+#: 88ff2325a58c4ae0b206767e5d24adb1 ed8c610eee6347c182c1c59a9383f39c
+#: f85b9d53cbe2429b9b139f6346967a65 of sds.core.node:33 sds.core.node.Node:56
+#: sds.core.node.Node.__init__:6 sds.core.node.Node.__repr__:6
+#: sds.core.node.Node.__str__:6 sds.core.node.Node.data:16
+#: sds.core.node.Node.parent:15
+msgid "Notes"
+msgstr ""
+
+#: b36d620278a546509fb2fb25eb16437d of sds.core.node:35
+msgid ""
+"This is an abstract base class and must be subclassed with concrete "
+"implementations. All node types in the library inherit from this class to"
+" ensure a consistent interface."
+msgstr ""
+
+#: adf824696b674368a9c7210079312d2f of sds.core.node:41
+msgid ":obj:`sds.linear.node`"
+msgstr ""
+
+#: b1d6d61a560340f99f6c29b012cc7115 of sds.core.node:42
+msgid "Node implementations for linear structures."
+msgstr ""
+
+#: 2e58732dbd0544e7ac3debe108b2bd23 of sds.core.node:44
+msgid ":obj:`sds.trees.node`"
+msgstr ""
+
+#: 8652a7a153c04ce984ab36f79dcc38fa of sds.core.node:45
+msgid "Node implementations for tree structures."
+msgstr ""
+
+#: ad6c7aa0b73c4426853914773920ff53 of sds.core.node:47
+msgid ":obj:`sds.graphs.node`"
+msgstr ""
+
+#: 5576951926d84c9abceace95ba21a010 of sds.core.node:48
+msgid "Node implementations for graph structures."
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.node.rst:8
+#: 193f1d8a69f449529c4229b1827b35a7
+msgid "Functions"
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.node.rst:12:<autosummary>:1
+#: 37692dee75814114af92dc41b106f50f
+msgid ":py:obj:`abstractmethod <sds.core.node.abstractmethod>`\\ \\(funcobj\\)"
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.node.rst:12:<autosummary>:1
+#: a317c39f7fc8470681bec6c6c2e06780
+msgid "A decorator indicating abstract methods."
+msgstr ""
+
+#: c970b647c851404f991598c17ba679aa of sds.core.node.Node:1:<autosummary>:1
+msgid ":py:obj:`ABC <sds.core.node.ABC>`\\ \\(\\)"
+msgstr ""
+
+#: 4742b3c0b3e245c693f8ba58a6144d4f of sds.core.node.Node:1:<autosummary>:1
+msgid ""
+"Helper class that provides a standard way to create an ABC using "
+"inheritance."
+msgstr ""
+
+#: f193b624efdc4e7c8e4124b740ee3627 of sds.core.node.Node:1:<autosummary>:1
+msgid ":py:obj:`Node <sds.core.node.Node>`\\ \\(data\\)"
+msgstr ""
+
+#: 7344c8ed91f244b585b4d042789b8940 of sds.core.node.Node:3
+msgid ""
+"This class provides the foundational structure for all nodes in the sds "
+"library. It uses a generic `_refs` list to store references to other "
+"nodes, with concrete subclasses providing specific access patterns via "
+"properties."
+msgstr ""
+
+#: e44f5392901944508774d2acadf8ae37 of sds.core.node.Node:7
+msgid ""
+"All node types share three core attributes: - _data: The value stored in "
+"the node - _refs: List of references to other nodes - _parent: Optional "
+"reference to a parent node"
+msgstr ""
+
+#: e5ab8fdfbc3b42edb6452845bfe4d24f of sds.core.node.Node:12
+msgid ""
+"Concrete subclasses define how `_refs` is interpreted: - SimpleNode: "
+"_refs[0] = next - DoublyNode: _refs[0] = next, _refs[1] = prev - "
+"BinaryNode: _refs[0] = left, _refs[1] = right - TreeNode: _refs = "
+"children list - GraphNode: _refs unused (connections via Edge objects)"
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.node.rst
+#: 0eb438e9335a4ef6899f80ca9cb8983a b00a9cb2aa2f44a5857203f6bc8c688c
+msgid "Parameters"
+msgstr ""
+
+#: 7c342e48dc4f4f48a2224f4df8eef52d fb87e8a742c34d26ab65fb4fbbc16f13 of
+#: sds.core.node.Node:19 sds.core.node.Node.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: ca060afc927f4ae0ba9644d298770bcf of sds.core.node.Node:24
+msgid "The data stored in the node (read/write via property)."
+msgstr ""
+
+#: 722b233f8d064b62801102b1fc4bc431 a1164b2a1b4041af8ad41f73e1832839
+#: b5f2f278371843fea36e450dd398a5c2 of sds.core.node.Node
+msgid "type"
+msgstr ""
+
+#: 4241d613bc6a4551b0d46b321cb51e14 of sds.core.node.Node:26
+msgid "Any"
+msgstr ""
+
+#: 016304831c744b5eae9afc8cff87fd9d of sds.core.node.Node:30
+msgid "List of references to other nodes."
+msgstr ""
+
+#: 64d1147de1c24fa89cdb8bb11bc6109e of sds.core.node.Node:32
+msgid "List[Node]"
+msgstr ""
+
+#: 1556ac68ee3b486fa6cc72f86faa7978 of sds.core.node.Node:36
+msgid "Reference to the parent node (read/write via property)."
+msgstr ""
+
+#: 162d47bf1edb44df8edd5ace9a883176 of sds.core.node.Node:38
+msgid "Node or None"
+msgstr ""
+
+#: b4f101cd1c6c4a358717845fbc99976a of sds.core.node.Node:42
+msgid "Cannot instantiate Node directly (it's abstract):"
+msgstr ""
+
+#: e68ee62d03a24d27a4d91b248fd7e221 of sds.core.node.Node:49
+msgid "Use concrete implementations:"
+msgstr ""
+
+#: 1df61e6e592c409cbe02860884170872 of sds.core.node.Node:58
+msgid ""
+"This class uses __slots__ for memory efficiency. The `_refs` list "
+"provides a unified way to store node connections, with subclasses "
+"defining specific access patterns through properties."
+msgstr ""
+
+#: 0165d49829314037a52baf809a4b6597 of sds.core.node.Node:62
+msgid ""
+"Subclasses should: 1. Call super().__init__(data) in their __init__ 2. "
+"Define properties for accessing _refs elements 3. Optionally override "
+"setters to maintain parent-child consistency"
+msgstr ""
+
+#: 10a7c0c2c3fb450a831543fcce000839 of sds.core.node.Node:69
+msgid ":obj:`sds.linear.node.SimpleNode`"
+msgstr ""
+
+#: 7f0456ec85224d3084958a5db2a579db of sds.core.node.Node:70
+msgid "Node for singly linked lists."
+msgstr ""
+
+#: 8a1e2665976a412c8f2581c1c8a50f5e of sds.core.node.Node:72
+msgid ":obj:`sds.linear.node.DoublyNode`"
+msgstr ""
+
+#: f517f95fc4be4b7b8bca89437d559a9b of sds.core.node.Node:73
+msgid "Node for doubly linked lists."
+msgstr ""
+
+#: ef9814a602264dfc901bc96ddb54aeec of sds.core.node.Node:75
+msgid ":obj:`sds.trees.node.BinaryNode`"
+msgstr ""
+
+#: 90ac121c1de34bc592fe34143d7c54d0 of sds.core.node.Node:76
+msgid "Node for binary trees."
+msgstr ""
+
+#: cdbe1337d5534f0ab746e91761ee4282 of sds.core.node.Node:78
+msgid ":obj:`sds.trees.node.TreeNode`"
+msgstr ""
+
+#: 767dc644f6b54e6f897a9d5ba749068f of sds.core.node.Node:79
+msgid "Node for general trees."
+msgstr ""
+
+#: efc34de74bb44d50a130ec43962bb72a of sds.core.node.Node:81
+msgid ":obj:`sds.graphs.node.GraphNode`"
+msgstr ""
+
+#: e75a5c82bf694939abba9cf959373a34 of sds.core.node.Node:82
+msgid "Node for graphs."
+msgstr ""
+
+#: f6eb20244ec44446b62378a1defff7ea of sds.core.node.Node.__init__:1
+msgid "Initialize a new node with data."
+msgstr ""
+
+#: 09114ad81b4f47b4b109a4c1dcfe6e8d of sds.core.node.Node.__init__:8
+msgid ""
+"Subclasses should call super().__init__(data) and then initialize their "
+"_refs list according to their specific needs."
+msgstr ""
+
+#: 20d8c11a8eed4c28be8a686fed45ebf5 of sds.core.node.Node.data:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.node.rst
+#: 5f516249cd934903bfacc730444b868b 959b537217c94367a3885d9124b73479
+#: 9c5f275cee714450aa1a964589a0d454 ceb343cbf3f04fc0b314551096c10bf9
+msgid "Returns"
+msgstr ""
+
+#: 7f81de8e5fbe4ca7850b135fa5dbacba of sds.core.node.Node.data:3
+msgid "The data stored in the node."
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.node.rst
+#: 61de2a1346684c4d8f64082e1528d52d 905e2a38697345c6a545cce0c270a5d5
+#: aca2b05e150948cab455e5fa609dec3f cc2928386b744ce68429bfd4a722edd2
+msgid "Return type"
+msgstr ""
+
+#: de9b359dbddc45edb144ca74cac94898 of sds.core.node.Node.data:18
+msgid ""
+"This property is defined in the abstract base class and inherited by all "
+"concrete node types."
+msgstr ""
+
+#: 756e81bf1f044573afc77e725af43dfc of sds.core.node.Node.parent:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: 9ec58e68dc8247ada155f01db8318fec of sds.core.node.Node.parent:3
+msgid "The parent node, or None if this is a root node."
+msgstr ""
+
+#: e6a2c9bff87946ccad0d1e54bb395f27 of sds.core.node.Node.parent:17
+msgid ""
+"The parent reference is maintained automatically when using setters in "
+"concrete node classes (for trees and lists)."
+msgstr ""
+
+#: 7dc38a6a618542b3bca03b71caabb314 of sds.core.node.Node.__repr__:1
+msgid "Return a detailed string representation of the node."
+msgstr ""
+
+#: fa510abf3af4426a91dff25600ad74a0 of sds.core.node.Node.__repr__:3
+msgid "String representation of the node."
+msgstr ""
+
+#: deb01bd0ce864753899e9e25bf32f69c of sds.core.node.Node.__repr__:8
+msgid ""
+"Concrete subclasses must implement this method to provide appropriate "
+"string representation."
+msgstr ""
+
+#: 2f1ba9959ac549988785e57d78e95030 of sds.core.node.Node.__str__:1
+msgid "Return a simple string representation of the node's data."
+msgstr ""
+
+#: ec52fff623ff45c8a63e07a9e0bb4668 of sds.core.node.Node.__str__:3
+msgid "String representation of the data."
+msgstr ""
+
+#: 4647a65d876c40e7b9da9730431d28a6 of sds.core.node.Node.__str__:8
+msgid "Concrete subclasses must implement this method."
+msgstr ""
+

@@ -1,0 +1,437 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/core/exceptions.rst:5 bc92d0deda5d46aea3a02cf8b589b731
+msgid "Exceptions"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:9 83d08c3696394fbebe3c5c6426a53e94
+msgid "Custom exception classes for data structures."
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:12 d6561100f34a4cdcb1542fed7b659f93
+msgid "Module Contents"
+msgstr ""
+
+#: 06d34f59efca4a34b73c40e667f77d47 of sds.core.exceptions:1
+msgid "Custom exceptions for data structures."
+msgstr ""
+
+#: 87219fd669b24b40ab4cec1b7327a73e b35f10d77a004368a289f4046e5fb722 of
+#: sds.core.exceptions.DataStructureError:1
+msgid "Bases: :py:class:`Exception`"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:48 144623f21e67459bb001d7ab200fc8ec
+#: 3f325f007a9e4cde87249d752d46e237 93df5f00093947728335c879f9ab2d7b of
+#: sds.core.exceptions.DataStructureError:1
+msgid "Base exception for all data structure errors."
+msgstr ""
+
+#: 1dac5bacdbd44615a0298fc3cfa2e6cf 2f9689d8d03c4ceb849a5f32fd5b1d69
+#: 99ca4dd2d39f4eb2ac377cf530ce275a c040437af984439692c0ed23879b9347
+#: d868dc8e3d284bc787298c99ae9041e0 f9f1221d51d3469d87c2e26bd612fc62 of
+#: sds.core.exceptions.EmptyStructureError:1
+#: sds.core.exceptions.FullStructureError:1
+#: sds.core.exceptions.InvalidOperationError:1
+msgid "Bases: :py:class:`~sds.core.exceptions.DataStructureError`"
+msgstr ""
+
+#: 86a997fcc790425dbf260212e0426def 86f53c8d09bc4cb4923594465fcc9ea5 of
+#: sds.core.exceptions.EmptyStructureError:1
+msgid "Exception raised when attempting to access/remove from an empty structure."
+msgstr ""
+
+#: 094541f9769f49ff90f272ac6cb86584 f2bc0231d471415eb98eff0b5a8fa9af of
+#: sds.core.exceptions.FullStructureError:1
+msgid "Exception raised when attempting to add to a full structure."
+msgstr ""
+
+#: 6f97ebee28514d4691fd6bb5f5dc7f95 eb82e8b3c3c54da9b4de4d8ecda6fb10 of
+#: sds.core.exceptions.InvalidOperationError:1
+msgid "Exception raised when an invalid operation is attempted."
+msgstr ""
+
+#: 37e372b43f2f4ddd95109abacaaba3cc 6eb66b1c3e2f45bf83314afacd68df84 of
+#: sds.core.exceptions.IndexStructureError:1
+msgid ""
+"Bases: :py:class:`~sds.core.exceptions.DataStructureError`, "
+":py:class:`IndexError`"
+msgstr ""
+
+#: 8b1a280bfd1b45a297a21a8dc819a05b bde2f2846a984c13bdac83108d65c5b3 of
+#: sds.core.exceptions.IndexStructureError:1
+msgid "Exception raised when an invalid index is accessed."
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:20 1d577b2750a84b4c868ad2ec84203c19
+msgid "Exception Hierarchy"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:39 d6ff98b9af4d4e2aa7cbae8e7cd8ce7b
+msgid "Exception Classes"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:42 3e16d34a4dd74a00a3cfb3c391103e10
+msgid "DataStructureError"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:50 33ccb215ab0947b18888d47788a2cbc7
+msgid "**Usage:**"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:52 eb223e86f3974e479148bed411fa4cae
+msgid ""
+"This is the base class for all custom exceptions in SDS-Tools. You can "
+"catch this to handle any data structure error:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:68 68ba0f3f8b2e4d2db6425aebc41ee965
+msgid "EmptyStructureError"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:74 89f84dff48734ff299c3ce5bca7d7e60
+msgid "Raised when attempting to access or remove from an empty structure."
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:76
+#: ../../source/api/core/exceptions.rst:116
+#: ../../source/api/core/exceptions.rst:158
+#: ../../source/api/core/exceptions.rst:195 27b669df016f4949b5dd9b6a808a3332
+#: 7f299944496d473d9814eb6b3f2ceac2 ae121336d17440a0ab40b4f8a2f1ed20
+#: fb24a590f020470a8dcd3e0e536d6016
+msgid "**Common Scenarios:**"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:78 c0b678f3b076480ca923dd0ce0f97cb1
+msgid "Popping from an empty stack"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:79 9a4a38ae69e342b6974b5a2bf2cc1267
+msgid "Dequeuing from an empty queue"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:80 080242f12ad44aa1ad253cc2bc56715f
+msgid "Removing from an empty list"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:81 f2edee9a2c2f412fa5d711c00fcec97e
+msgid "Accessing elements when size is 0"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:83
+#: ../../source/api/core/exceptions.rst:122
+#: ../../source/api/core/exceptions.rst:165
+#: ../../source/api/core/exceptions.rst:201 13e74b38a6334e9a9e9b7e8105fbd159
+#: addfae73244945e78f148f1be1259482 cd23c4f65e4b4ed69d18e2c3f99cc68b
+#: ea84443d6b1849ec9dc1677c3bfecb10
+msgid "**Example:**"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:98
+#: ../../source/api/core/exceptions.rst:140
+#: ../../source/api/core/exceptions.rst:179
+#: ../../source/api/core/exceptions.rst:218 00376448c9984191bb3a79d0fa67aae1
+#: 6d0c6751d29d46279b6f0c6dc24a8378 a32d4a82854f41409117e7eb9a66aa1d
+#: babecfd4da10487e9fc046d5c7551d9f
+msgid "**Custom Message:**"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:108 9d5d4b8a20ae4e24b659910b4d0ef8d9
+msgid "FullStructureError"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:114 9e0ab5ad1217421ea95c208d941afefa
+msgid "Raised when attempting to add to a full structure."
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:118 4fbc804757cc4651a42543e1e2ca92e5
+msgid "Adding to a bounded queue at capacity"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:119 78a889588b3a4c69af5cad2d6d85ed0b
+msgid "Pushing to a fixed-size stack that's full"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:120 2d44fe99307549a994a8b391af587c50
+msgid "Inserting into a structure with maximum capacity"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:150 110bf1bd1502484d8c604853a20fba40
+msgid "InvalidOperationError"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:156 be669cdac2c94cc0b6b4b025e7772aa2
+msgid "Raised when an invalid operation is attempted."
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:160 7f5936caca7a4a00b845e11b97f0e8ef
+msgid "Removing a node that doesn't exist"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:161 a90b8ff1b40f4b63be8d2407e7ec1a29
+msgid "Invalid state transitions"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:162 08ec927594af47fbbbb46de30c1d8032
+msgid "Operations not supported by the structure"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:163 9ddbd7837eee4063bf67460e1d35ae10
+msgid "Violating structural invariants"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:187 267ef2af5cd443afb584219bb472b301
+msgid "IndexStructureError"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:193 3047fca733bc4be9bf81fd863c12e5fe
+msgid "Raised when an invalid index is accessed."
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:197 ead274d632f94a5690fca32f0c08e014
+msgid "Index out of bounds"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:198 89568988b19b4533b4a9694dcca12f41
+msgid "Negative index beyond size"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:199 23e7a6a811664c499197c3bc9efdabc0
+msgid "Invalid slice parameters"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:228 aab78ab6ce6d4279a9ff8f3bd5eaa5ec
+msgid "Usage Patterns"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:231 8eec6a3728d745ee9ba5ce8a46648069
+msgid "Basic Exception Handling"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:233 45510da93c764052b654b0b96307f8ee
+msgid "Catch specific exceptions:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:249 5b7196564dee4b17a005af984b407de7
+msgid "Multiple Exception Handling"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:251 7a8a2ee4f4e742d49d9abd1c1795fe47
+msgid "Handle different exceptions differently:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:271 25aac15896ee48479a2087e3a22c2384
+msgid "Catch All Data Structure Errors"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:273 00d8f95f4e49416ea3ce4a3de386b768
+msgid "Use the base exception to catch any error:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:289 2b8d3876f1734df3abf10660f7c3933d
+msgid "Re-raising with Context"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:291 b3fa1f6cd3164e028c034184932a0230
+msgid "Add context when re-raising:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:306 04060cb88a134a53a13c292c4c5831b3
+msgid "Custom Error Messages"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:308 a49ac66ac97e4e2393e9e1276a63545e
+msgid "All exceptions accept custom messages:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:321 6618dcd8a1e3449eb2773906a02fdee7
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:324 9c57cfae0cd041dab63fae7b400fbb56
+msgid "Be Specific"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:326 ef4e6fbda87949799885b80a1472a053
+msgid "Catch the most specific exception possible:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:343 539af9196eed47a1971ea321cd5e6de5
+msgid "Provide Context"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:345 37202852bd58423d920a4efc6c62b27d
+msgid "Include helpful information in error messages:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:355 051cd73308f140498ceee0c9de78c4f3
+msgid "Don't Catch Too Broadly"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:372 881e9c0f4bbc470ba16376edc507a613
+msgid "Document Exceptions"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:374 0b8fe2e5476547968c39ff993276eac9
+msgid "Always document which exceptions a function can raise:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:401 c8c46b32303a497aba292a15fe2de28e
+msgid "Error Recovery"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:403 bfc74327b6ed4ffc977985d0d31fde56
+msgid "Handle errors gracefully:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:421 db4ac6c631954f7bab16d13753262838
+msgid "Comparison with Built-in Exceptions"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:424 81c33df01e034c5384aeb58c0a19f03c
+msgid "Why Not Use Built-in Exceptions?"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:426 50baf10fa0d64d7d869f70f64173ccd6
+msgid "SDS-Tools uses custom exceptions for several reasons:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:428 71d50718b83e475fb0b92cb733da3a71
+msgid "**Specificity** - Clear indication of data structure errors"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:429 9bf4a8a1138d46bbb446e184ea7ed604
+msgid "**Consistency** - Uniform error handling across all structures"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:430 89dce29b585947dd93b93a4c6c67d25b
+msgid "**Categorization** - Easy to catch all data structure errors"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:431 bda29c1a9b814ef6a96d1680f23b419d
+msgid "**Custom Fields** - ``message`` attribute for detailed information"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:434 3d40a41b065c49c68e44429116e69095
+msgid "Mapping to Built-ins"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:436 c589cd1826fa44c58bfd090169f55006
+msgid "Exception Mapping"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:440 630217cba45d48d6a74cddd143a0b511
+msgid "SDS Exception"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:441 56891a0c90174e52aaa36e477f622373
+msgid "Similar Built-in"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:442 5740e260b71044a597187c78e1f92bdf
+msgid "Why Custom?"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:443 9c1f9e4acd454ea39de2a9d71c1bb3d7
+msgid "``EmptyStructureError``"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:444
+#: ../../source/api/core/exceptions.rst:453 2988947d35934591804af645e6f6b0f4
+#: a692049c0e1c458b8b7fe62c5add3a1c
+msgid "``IndexError``"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:445 12c46b42895148329e07acd1a01ce4e9
+msgid "More semantic"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:446 84983b633ee640a7a7699459a38ea6f5
+msgid "``FullStructureError``"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:447 3226dc25fe0a42f8add9ae459d83d098
+msgid "``OverflowError``"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:448 32946a3832f84e099f48039335b383bd
+msgid "More specific"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:449 667e0e96934e4d0d88ba091e6bcc6d1f
+msgid "``InvalidOperationError``"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:450 a2032e0b5af640d991b8b04c2cb79912
+msgid "``ValueError``"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:451 1be76deffba841988fd87e524457b7b2
+msgid "Clearer intent"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:452 40c225b5437d447cac7d6d0e7ffac789
+msgid "``IndexStructureError``"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:454 44ef31abdadf49319b68d84413ac5075
+msgid "Consistent naming"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:457 5322703bb112484283b0373f95be5df8
+msgid "Performance Considerations"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:459 5442c956827a4a98a5431a1e234244dc
+msgid "Exceptions are not free, but the overhead is minimal:"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:473 f3b63d2af91143aa925538d1f4b3d996
+msgid ""
+"For operations that rarely fail, exception handling is cleaner. For hot "
+"code paths with frequent checks, explicit validation is faster."
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:477 779f26a7fe5a43819e010c15f850e4d9
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:479 b43fb6fcd2c94a35a44c20f5ff7a70f0
+msgid ":doc:`interfaces` - Interfaces that raise these exceptions"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:480 551d295ba3994663870b2751e088617c
+msgid ":doc:`../linear/index` - Linear structures using these exceptions"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:481 37f55aecbe1d43e3ae217441379a6ad8
+msgid "Python's :py:exc:`Exception` - Built-in exception base class"
+msgstr ""
+
+#: ../../source/api/core/exceptions.rst:485 a194773140a54f7fbc938cc3d5e26bc2
+msgid ""
+"All exceptions in SDS-Tools inherit from ``DataStructureError``, which "
+"itself inherits from Python's built-in ``Exception``. This means you can "
+"catch them with standard Python exception handling."
+msgstr ""
+

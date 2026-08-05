@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:2
+#: dbfcd97af67e49d4a10667e66506d1a2
+msgid "sds.tree.node.TreeNode"
+msgstr ""
+
+#: c455e1f03b644e8dac91cd169cce1c54 of sds.tree.node.TreeNode:1
+msgid "A node for general trees."
+msgstr ""
+
+#: 5ec41ae4157e48a3a7883b292c47423e of sds.tree.node.TreeNode:3
+msgid ""
+"Each node contains data, a list of children nodes, and optionally a "
+"parent node. This is the basic building block for general trees, file "
+"systems, organizational hierarchies, and other tree structures with "
+"arbitrary branching."
+msgstr ""
+
+#: c2744d8548c44b17b897ded9a7c84d07 of sds.tree.node.TreeNode:8
+msgid "The _refs list directly stores the children list."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst
+#: 39e9c081b6ec42db89d3169bb4d3d1f0 5854be69120942a48c214b82b2538e42
+#: a4a553cecf2e41f9a2ed27bdf336d0ca d79ae0358bb84cb8aa6652c5805422d0
+#: e195596cf12c42b8a719e38d8326fa99
+msgid "Parameters"
+msgstr ""
+
+#: 0ee8665a2c554e88a3de8619a4b0bd57 43cd4d06a47540848f9345c41d9e4e3c
+#: d4cb599aea33413e8a6be7583a87ef7b of sds.tree.node.TreeNode:10
+#: sds.tree.node.TreeNode.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: 7edc93a923d74a6495ac237f59ad55b4 of sds.tree.node.TreeNode:12
+msgid "Reference to the parent node. Default is None."
+msgstr ""
+
+#: 350b46d500c044918a9b42bed236dcc1 of sds.tree.node.TreeNode:17
+msgid "The data stored in the node (inherited from Node)."
+msgstr ""
+
+#: 2d8f46756e834fff81b6fa852a915988 af60c5c358e84f3f9a38a19234bfcd7b
+#: c4879f1009be4a5faa289ff572719994 of sds.tree.node.TreeNode
+msgid "type"
+msgstr ""
+
+#: cb58772a2ab341b5a62a0c2ed51f7a2b of sds.tree.node.TreeNode:19
+msgid "Any"
+msgstr ""
+
+#: 303910916fd549d68a9be7b0b65895b7 of sds.tree.node.TreeNode:23
+msgid "List of child nodes (property accessing _refs directly)."
+msgstr ""
+
+#: e5f07b59b88742b3ac34b733258f235e of sds.tree.node.TreeNode:25
+msgid "List[TreeNode]"
+msgstr ""
+
+#: a286118522274177b0f97a887ad674c1 of sds.tree.node.TreeNode:29
+msgid "Reference to parent node (inherited from Node)."
+msgstr ""
+
+#: cd387e8471db4743bc4b3d3129762ab3 of sds.tree.node.TreeNode:31
+msgid "Node or None"
+msgstr ""
+
+#: 2fc96c36494b4f458ecb069aedfd8f04 5b995b2981f04ed89c3807c3032bd5f0
+#: aaeace1ab4e9442da903ff651a82609d b7e4d27335d048dcbbf3531273485fa2
+#: c497e209dbf549789a3a6ea64b22e6f4 e2275bb993314deab526ff394d023672
+#: efa8deebdbc4467d9e385e18e0471196 of sds.tree.node.TreeNode:33
+#: sds.tree.node.TreeNode.__repr__:6 sds.tree.node.TreeNode.__str__:6
+#: sds.tree.node.TreeNode.add_child:6 sds.tree.node.TreeNode.children:6
+#: sds.tree.node.TreeNode.is_leaf:6 sds.tree.node.TreeNode.remove_child:8
+msgid "Examples"
+msgstr ""
+
+#: ba12bec62e0043b6b260e5ad560e02ba of sds.tree.node.TreeNode:35
+msgid "Create a simple tree node:"
+msgstr ""
+
+#: 110d73d2011e4162a9447a6b140e4014 of sds.tree.node.TreeNode:45
+msgid "Build a tree structure:"
+msgstr ""
+
+#: 4209079b01cc42a28055b3e04822e741 of sds.tree.node.TreeNode:57
+msgid "Remove a child:"
+msgstr ""
+
+#: 6fc152df03014de3ad8337868cf11cd6 of sds.tree.node.TreeNode:65
+msgid "Check if node is a leaf:"
+msgstr ""
+
+#: 3aaba45e6ffa40a282668a14a5e0c12a 3bbf5479ed9540dd9a7d43e2373db157
+#: 613f4d82b78845638d2b4a63bf2807bb 99c967b02c1c49a1927113930e365da8
+#: dcbdbcc2498f4977a9122fc15b9f57bb of sds.tree.node.TreeNode:72
+#: sds.tree.node.TreeNode.add_child:16 sds.tree.node.TreeNode.children:15
+#: sds.tree.node.TreeNode.is_leaf:15 sds.tree.node.TreeNode.remove_child:19
+msgid "Notes"
+msgstr ""
+
+#: 45ace6ddab044be58ea66200d6857dd9 of sds.tree.node.TreeNode:74
+msgid ""
+"This class uses __slots__ for memory efficiency. The children list is "
+"managed internally (stored in _refs directly) and should only be modified"
+" through add_child() and remove_child() methods to maintain parent-child "
+"consistency."
+msgstr ""
+
+#: c484c620efbd41a59854f94c110ea7ef of sds.tree.node.TreeNode:81
+msgid ":obj:`BinaryNode`"
+msgstr ""
+
+#: 70135b9babc64e7a8313cbbb9f1bd2fa of sds.tree.node.TreeNode:82
+msgid "Node with exactly two children (left and right)."
+msgstr ""
+
+#: 2913dd245128486e87a10cd33c74e780 of sds.tree.node.TreeNode:84
+msgid ":obj:`BTreeNode`"
+msgstr ""
+
+#: e14332ed76dd4c51a4377e48cc9bf3fd of sds.tree.node.TreeNode:85
+msgid "Specialization for B-Trees with multiple keys."
+msgstr ""
+
+#: 42e4f7d1866a41c1863fe271b0573fda of sds.tree.node.TreeNode:87
+msgid ":obj:`sds.core.node.Node`"
+msgstr ""
+
+#: 52ff8cd6ed164be1ace4cee6020d80c5 of sds.tree.node.TreeNode:88
+msgid "Abstract base class."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:24:<autosummary>:1
+#: 34d18e33c2804c0e983249a8a0ccce9e 3ba9b6ac51ec469babbbeea7825e97da
+#: 529e34fc17c1434fa4a292b1e19989f1 of sds.tree.node.TreeNode.__init__:1
+msgid "Initialize a new tree node."
+msgstr ""
+
+#: 011f974c2a30417393ad37bc7b65b378 79d80a3670334bd1aa26e9a9a1d8a1e1 of
+#: sds.tree.node.TreeNode.__init__:5
+msgid "The parent node. Default is None."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:13
+#: f813ebe4d6e54fbbb204408720aae889
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:24:<autosummary>:1
+#: 6f1229254d6a4a92a8a711ba4fa9857e
+msgid ""
+":py:obj:`__init__ <sds.tree.node.TreeNode.__init__>`\\ \\(data\\[\\, "
+"parent\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:24:<autosummary>:1
+#: c48e1af89ebf4ac1bb16b310110da84b
+msgid ":py:obj:`add_child <sds.tree.node.TreeNode.add_child>`\\ \\(child\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:24:<autosummary>:1
+#: 4c803ede7c2644dabbed68d7b34cfcc8 a781ec7f44ab47539d37bcc388cf1a04 of
+#: sds.tree.node.TreeNode.add_child:1
+msgid "Add a child node to this node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:24:<autosummary>:1
+#: 3ba5d6d100784e4eabf0bef7213d72c7
+msgid ":py:obj:`is_leaf <sds.tree.node.TreeNode.is_leaf>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:24:<autosummary>:1
+#: 3dc657894d364476b28faeb45dbdb623 e614a21c34fb4c4a9c1771ed638c22d9 of
+#: sds.tree.node.TreeNode.is_leaf:1
+msgid "Check if this node is a leaf (has no children)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:24:<autosummary>:1
+#: 0289d788cb594f1cba1eb7d172eeda40
+msgid ":py:obj:`remove_child <sds.tree.node.TreeNode.remove_child>`\\ \\(child\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:24:<autosummary>:1
+#: 521b7870bd1b4e47977045ee2e1150f3 534a134113004d748144807d18dd1486 of
+#: sds.tree.node.TreeNode.remove_child:1
+msgid "Remove a child node from this node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst:26
+#: c4c97adbcad843dfab3c6faee286e192
+msgid "Attributes"
+msgstr ""
+
+#: 657c4779037646fdb5fcc19d399507f8 of
+#: sds.tree.node.TreeNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`children <sds.tree.node.TreeNode.children>`\\"
+msgstr ""
+
+#: 476243639dc44738b45869dcf3db52e9 bf099c3dd4374ccd88a155e42b374de3 of
+#: sds.tree.node.TreeNode.__init__:1:<autosummary>:1
+#: sds.tree.node.TreeNode.children:1
+msgid "Get the list of child nodes."
+msgstr ""
+
+#: e5fd035951bf46948458f73e2179dc45 of
+#: sds.tree.node.TreeNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.tree.node.TreeNode.data>`\\"
+msgstr ""
+
+#: 5e9507de251b4d66acbb620202509895 of
+#: sds.tree.node.TreeNode.__init__:1:<autosummary>:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: 91ed02fb14fb4ea4b00af5956acdfd64 of
+#: sds.tree.node.TreeNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`parent <sds.tree.node.TreeNode.parent>`\\"
+msgstr ""
+
+#: 75369f049f8d474d9feea34df56ed5b9 of
+#: sds.tree.node.TreeNode.__init__:1:<autosummary>:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst
+#: 1624f3ce4a3147c390828810e4f5bdad 52a6ee695446475db36d65c7ff14735f
+#: cd715996edc64f4e851e4ddbd386d27a ef26e2ad8ced4280ae728cf52b732fe2
+msgid "Returns"
+msgstr ""
+
+#: 221ef5e19b5944e98b2ff5c33278579d of sds.tree.node.TreeNode.children:3
+msgid "The list of child nodes. Returns empty list if no children."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst
+#: 54fb09464e934c23b57b1fa4f21f727c 613aabe82c1c44e3931add70021e03af
+#: 85cd7fa177b94493afc2789689e57660 e1d72d1221294467bd9ec9bb7c14d92e
+msgid "Return type"
+msgstr ""
+
+#: c7d7d27e006043f8887913b0093ae6ab of sds.tree.node.TreeNode.children:17
+msgid ""
+"This property returns the internal _refs list directly. Use add_child() "
+"and remove_child() methods to modify children to maintain consistency."
+msgstr ""
+
+#: 14ad874f5d1b4244bb73cc3afb6a6952 9c19e0602e0e463bb64e0cfe917fc801 of
+#: sds.tree.node.TreeNode.children:21 sds.tree.node.TreeNode.is_leaf:17
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 873ab98ce8bd4903991e495174f5c7cb of sds.tree.node.TreeNode.add_child:3
+msgid "The node to add as a child."
+msgstr ""
+
+#: a023f663782a4b6780d85beb64ef4a27 of sds.tree.node.TreeNode.add_child:18
+msgid ""
+"This method automatically updates the parent reference of the child to "
+"maintain bidirectional consistency. If the child is already in the "
+"children list, it is not added again."
+msgstr ""
+
+#: aba0805f0eb040378aba06f712ba1c87 of sds.tree.node.TreeNode.add_child:22
+msgid "Time complexity: O(n) for checking if child exists, O(1) for adding"
+msgstr ""
+
+#: 1e5df9a786914089adad3ddae1a4f17a of sds.tree.node.TreeNode.remove_child:3
+msgid "The node to remove from children."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TreeNode.rst
+#: 3a239ab63d04446397d08dd6f80dc6b1
+msgid "Raises"
+msgstr ""
+
+#: ac31be69018644f5921958fd12d933e3 of sds.tree.node.TreeNode.remove_child:6
+msgid "If the child is not in the children list."
+msgstr ""
+
+#: a15fb695f9b14dca844a01eeee9cb9b3 of sds.tree.node.TreeNode.remove_child:21
+msgid ""
+"This method automatically clears the parent reference of the removed "
+"child to maintain consistency."
+msgstr ""
+
+#: a54bced740b64b5faccf5519b4e0ba51 of sds.tree.node.TreeNode.remove_child:24
+msgid "Time complexity: O(n) for finding and removing"
+msgstr ""
+
+#: 1cb7f8811a004aaf9685bdd8cb6faec1 of sds.tree.node.TreeNode.is_leaf:3
+msgid "True if the node has no children, False otherwise."
+msgstr ""
+
+#: 6b6e87f738eb47dd863e7812c179cf99 of sds.tree.node.TreeNode.__repr__:1
+msgid "Return a detailed string representation of the node."
+msgstr ""
+
+#: a43ffc2c3f114c7ebf795d3e17654124 of sds.tree.node.TreeNode.__repr__:3
+msgid "String representation in the form \"TreeNode(data)\"."
+msgstr ""
+
+#: 28714a22ad1142748e6c20c78d8ad7ef of sds.tree.node.TreeNode.__str__:1
+msgid "Return a simple string representation of the node's data."
+msgstr ""
+
+#: 701aa917cc09409cac361d0132104f60 of sds.tree.node.TreeNode.__str__:3
+msgid "String representation of the data."
+msgstr ""
+

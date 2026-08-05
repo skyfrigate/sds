@@ -1,0 +1,1248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/tree_structures/general.rst:5
+#: 3753d94b114a41769fb7b7bfadf95a86
+msgid "General Tree Guide"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:10
+#: d6507ce942694b55a6ffecd69e9ba36b
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:12
+#: 2aa957dd12b248128f3fbfb7e23ed2c4
+msgid ""
+"A **general tree** (or n-ary tree) is a hierarchical data structure where"
+" each node can have an arbitrary number of children. Unlike binary trees "
+"that restrict each node to at most two children, general trees offer "
+"maximum flexibility for representing hierarchical relationships."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:39
+#: d8e02384d867448fb94153377505078e
+msgid ""
+"General trees are ideal for representing organizational charts, file "
+"systems, XML/HTML documents, and any data with variable branching."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:43
+#: 11a7c874a08845f28501f5fccc933064
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:46
+#: d0dfed1907c54486bda8d30d7a1646c2
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:48
+#: 8fe749aeb60f4b8c8f6c89cd8d3562b3
+msgid "A general tree :math:`T` is defined recursively as:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:50
+#: 1fc7febdc62f460ca0df8226b7a45962
+#, python-brace-format
+msgid "T = (r, \\{T_1, T_2, \\ldots, T_k\\})"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:54
+#: d7bf800679ed47479ecb970eb5c55f74
+msgid "where:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:55
+#: 48366ded44a64c7db40004df62a8ffa9
+msgid ":math:`r` is the **root** node"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:56
+#: e4c61500095b4abfa19dff74b4148295
+msgid ":math:`T_1, T_2, \\ldots, T_k` are **subtrees** (which are also trees)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:57
+#: 5f81a86db16c4d16a6fbc567674279a3
+msgid ":math:`k \\geq 0` is the **degree** of the root (number of children)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:59
+#: ebf8abb97bb640f58d3f424188834600
+msgid "Special cases:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:60
+#: 91bfc31591a94f1cb08f7a2e8eb55fea
+msgid "If :math:`k = 0`, the tree is a single node (leaf)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:61
+#: e5c81ef284354b969087613de30a03fc
+msgid "Empty tree: :math:`T = \\emptyset`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:64
+#: 4108e3904db2463685c69d9a8a284248
+msgid "Tree Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:67
+#: 8cf9bf65ab5740d4995a9d8715e046e5
+msgid "Nodes and Relationships"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:69
+#: c8f1277894954fc3a42a1fad0a95b8c1
+msgid "For a tree :math:`T` with node set :math:`N`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:71
+#: 61bf1ebce16e4336abdaa9330f0d76d6
+msgid "**Parent-Child Relationship:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:73
+#: 8502f99b6acf4cdf82873e34ac91af9d
+#, python-brace-format
+msgid "\\text{parent}: N \\setminus \\{root\\} \\rightarrow N"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:77
+#: bfa2cbcf1e0d47a8830d72911c870af4
+msgid "Every node except the root has exactly one parent."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:79
+#: b4cae95da6c84c59879282da0fd4dc8b
+msgid "**Children Relationship:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:81
+#: 86ddddfa179048919c95a4318019fc01
+#, python-brace-format
+msgid "\\text{children}: N \\rightarrow \\mathcal{P}(N)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:85
+#: d7679745cd9e4156bcdbd972d3fa6798
+#, python-brace-format
+msgid "where :math:`\\mathcal{P}(N)` is the power set of :math:`N`."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:87
+#: 7fb8fe6975e6446b96bd9af57c562d29
+msgid "**Degree of a Node:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:89
+#: efff1cb4713a44c29fccd9ddc92861ef
+#, python-brace-format
+msgid "degree(v) = |\\text{children}(v)|"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:93
+#: 1722986a52824ef49dd7d24eae077e45
+msgid "The degree of a node is the number of its children."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:95
+#: 7eff8ab2cf0d4c9abc33a4306a6a3649
+msgid "**Degree of a Tree:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:97
+#: 3e1019bc20104dd3abbe5bd06c972dcb
+#, python-brace-format
+msgid "degree(T) = \\max_{v \\in N} degree(v)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:102
+#: aa195741032a4287a98ada03d5fca83b
+msgid "Height and Depth"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:104
+#: a5d76f1bb23c4d798182e580cfdc1087
+msgid "**Depth of a node** :math:`v`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:106
+#: 2c313d7bbb8a41bba7b93b4acdda0c7d
+#, python-brace-format
+msgid ""
+"depth(v) = \\begin{cases}\n"
+"0 & \\text{if } v = root \\\\\n"
+"depth(\\text{parent}(v)) + 1 & \\text{otherwise}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:113
+#: bce92f017a3a4224a5318f91ad6eddfb
+msgid "**Height of a node** :math:`v`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:115
+#: 1a10a3786a96474dafc62715579764c6
+#, python-brace-format
+msgid ""
+"height(v) = \\begin{cases}\n"
+"0 & \\text{if } v \\text{ is a leaf} \\\\\n"
+"1 + \\max_{c \\in children(v)} height(c) & \\text{otherwise}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:122
+#: db255a53cffd4f738abb7f97601e895a
+msgid "**Height of the tree:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:124
+#: 1c5debac0d4c4ce1b734adbd0e3e680f
+msgid "height(T) = height(root)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:129
+#: 90d8ae36e00f4e42a957f44ad9aa7486
+msgid "Tree Size"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:131
+#: 841490b4e1004a21bebde789a86e5401
+msgid "**Number of nodes:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:133
+#: 73e9272c2eff413fab0fcb2687b6094c
+#, python-brace-format
+msgid "|T| = 1 + \\sum_{i=1}^{k} |T_i|"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:137
+#: 8b83efd06f1743c990361686c682e43d
+msgid "**Number of leaves:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:139
+#: d6383c0240c548ea9fc82774c2485cef
+#, python-brace-format
+msgid ""
+"leaves(T) = \\begin{cases}\n"
+"1 & \\text{if } degree(root) = 0 \\\\\n"
+"\\sum_{i=1}^{k} leaves(T_i) & \\text{otherwise}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:146
+#: 0f85d9f0ded945c797b6cee9f35ff58e
+msgid "**Number of internal nodes:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:148
+#: 657002e81e654f298e1a4fd71a1b6c20
+msgid "internal(T) = |T| - leaves(T)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:153
+#: eac738dc473d4568814e7b097498f938
+msgid "Tree Invariants"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:155
+#: 19a2bd33f3db4570afa2100e30959fbb
+msgid "A valid general tree satisfies:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:157
+#: e61b7be00c2f40838231aacbd72762ab
+msgid "**Single root**: Exactly one node has no parent"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:159
+#: 73bcc5d8cecf44c7819693dd5af46ed0
+#, python-brace-format
+msgid "|\\{v \\in N : \\text{parent}(v) \\text{ undefined}\\}| = 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:163
+#: 3cabb1e0ac444717bbb7a5df48e7eda6
+msgid "**Acyclic**: No cycles exist"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:165
+#: 2c1e1b1155e6410a85decde03bee72a0
+#, python-brace-format
+msgid ""
+"\\nexists \\text{ path } v_1 \\rightarrow v_2 \\rightarrow \\cdots "
+"\\rightarrow v_n \\rightarrow v_1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:169
+#: a77480c7a71449b9893bf40c06951eac
+msgid "**Connected**: Path exists between any two nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:171
+#: dc8734cd9d894584aa62433672867cb4
+#, python-brace-format
+msgid "\\forall u, v \\in N : \\exists \\text{ path from } u \\text{ to } v"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:175
+#: cbd98555a76f44c4b642aa5168ef900d
+msgid "**Unique parent**: Each non-root node has exactly one parent"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:177
+#: 812b5331a9bf49c1b0d975c37197a164
+#, python-brace-format
+msgid ""
+"\\forall v \\in N \\setminus \\{root\\} : |\\{u : v \\in children(u)\\}| "
+"= 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:182
+#: c33ca414897d4ca1927d3480cddf6174
+msgid "Algebraic Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:184
+#: 9041b9efb25344458194983013cc957c
+msgid "**Closure under subtrees:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:186
+#: 326f8ea93a594b26a26baeb2e8babaf1
+#, python-brace-format
+msgid "T \\text{ is a tree} \\implies \\forall i : T_i \\text{ is a tree}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:190
+#: f5216fbc7392477eb7ccdd759730528f
+msgid "**Node count relationship:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:192
+#: 0ac50c5cf0b744379ec5b017c63417f4
+#, python-brace-format
+msgid "|T| = 1 + \\sum_{v \\in children(root)} |subtree(v)|"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:196
+#: 01be7edcbcdd4ef69c2ea74ddff83b20
+msgid "**Height relationship:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:198
+#: 3033ee78b11543eebb00c3795aad1845
+#, python-brace-format
+msgid ""
+"height(T) = 1 + \\max(\\{height(T_i) : i = 1, \\ldots, k\\} \\cup "
+"\\{-1\\})"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:202
+#: 2cea1e7aeb5f47f3996df0b4bbf03ed2
+msgid "**Leaf count for complete k-ary tree:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:204
+#: 41c41b4240d842d98c6dcc787af31dd7
+msgid ""
+"For a complete tree where all internal nodes have exactly :math:`k` "
+"children:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:206
+#: bd18f6e26715447487129354dd5bb6c1
+#, python-brace-format
+msgid "leaves = \\frac{(k-1) \\cdot n + 1}{k}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:210
+#: c4a26b73247d4adb88efb9e5ca4f6cbf
+msgid "where :math:`n` is the total number of nodes."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:213
+#: 564656b705c74201adcbe85363f0a27f
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:216
+#: 561f9ddd6a8c4bffa9dafe17f918f0a3
+msgid "Abstract Data Type (ADT)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:246
+#: 94b336a94bc844ebb75da4dc34025862
+msgid "Implementation Strategies"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:249
+#: 4f75ca87b9114e1a8ca87793cfe58fec
+msgid "Child List Representation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:251
+#: 4bd051342fdd49eca1792d507b499fad
+msgid "Each node stores a list of references to its children:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:265
+#: ../../source/guide/tree_structures/general.rst:318
+#: 0f7e56de385a43958879352b836ab494 a26070a82ddd44418a9fff6dccde822c
+msgid "**Advantages:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:266
+#: 1d67011e1c764a08b78b3e66b9b6d9f2
+msgid "Simple and intuitive"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:267
+#: ed6d1e5011544e64b16687b1c0c5c9b0
+msgid "Easy to add/remove children"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:268
+#: f264e0f34e4c43bc87fcb49ad2114b70
+msgid "Direct access to all children"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:269
+#: cb58833c995f42b7bdaea1b315fa4588
+msgid "Flexible degree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:271
+#: ../../source/guide/tree_structures/general.rst:323
+#: 1f894628d9664430814d18f56f8436b8 9b336a28085a448d8a3f572fd38ad3a7
+msgid "**Disadvantages:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:272
+#: ed64598bead74381a198eac3c9028951
+msgid "Variable memory per node"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:273
+#: 3140913cef5f48a2917968130533f125
+msgid "Iteration over children is O(k)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:274
+#: ccca3e476fd74772890c4b6156b8b5ce
+msgid "Cache-unfriendly for many children"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:276
+#: 5b6c3bb8c458455d82e24cb4bd263aee
+msgid "**Pseudocode:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:297
+#: c6939cf3e2eb418fb99aaf9fc825b12b
+msgid "Left-Child Right-Sibling"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:299
+#: 4bb5b0400e0949429822eb31f3067482
+msgid "Binary representation of general trees:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:314
+#: 588d5e379de74a7eafb2432819d41d25
+msgid "**Transformation:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:315
+#: 2966b76c58e5433ab158f014b20e1e77
+msgid "Left pointer → first child"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:316
+#: a5ff94c1db3749a58df255416bd410eb
+msgid "Right pointer → next sibling"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:319
+#: c47d642c8bbb4819822b1c7295d584db
+msgid "Fixed space per node (like binary tree)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:320
+#: ef03f3f919bd4a3b8944dc1769c7982d
+msgid "Can use binary tree algorithms"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:321
+#: 1cb7220fc28f46618b6c3399aff5fed2
+msgid "Memory efficient"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:324
+#: 3e57e52f9e984c39a9f57b63c62e71cc
+msgid "Less intuitive"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:325
+#: 9f83ef94c5e042b8949e866bb7aa8aac
+msgid "Finding k-th child is O(k)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:326
+#: ed279ddb57564e799ed134cf180aeab8
+msgid "Parent traversal more complex"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:329
+#: 5c5afc6711964c7d98e259724f23f1b8
+msgid "Core Algorithms"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:332
+#: 038e781ea4ba4236ae4b55bbb7bac4cc
+msgid "Tree Traversal"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:334
+#: ea805ea97134443db0b3bc278845318a
+msgid "**Preorder Traversal** (Root → Children):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:347
+#: ../../source/guide/tree_structures/general.rst:362
+#: ../../source/guide/tree_structures/general.rst:382
+#: 1e61bbabbc1941cdb0f3aeb6f457facc 36dc2335b2074289a2a14a7e819ae8a1
+#: e63d007be84a46cd98958fc5cb8f9863
+msgid "**Time complexity**: :math:`O(n)`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:349
+#: 0d96635e3eb94c458d1b322af2417b11
+msgid "**Postorder Traversal** (Children → Root):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:364
+#: 4a2b8bd89c5746b8ac100d6e1e7e7606
+msgid "**Level-Order Traversal** (BFS):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:385
+#: f63016785909448e8abce6b79b40a989
+msgid "Height Calculation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:407
+#: 3af64f94a94a4e5188a7775b2227eff5
+msgid ""
+"**Time complexity**: :math:`O(n)` **Space complexity**: :math:`O(h)` for "
+"recursion stack"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:411
+#: ../../source/guide/tree_structures/general.rst:576
+#: 1968f90154b846b7bd93880abba8f051 31c7063388464c619e78efc03cb7736a
+msgid "Finding Nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:413
+#: 2a579466ef2642379d85800b9cd5627b
+msgid "**Depth-First Search:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:434
+#: 36f802374f834c528ac659accfebb9c2
+msgid "**Time complexity**: :math:`O(n)` **Space complexity**: :math:`O(h)`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:438
+#: 53fcdedb6cf2438c8e31c69eece502b7
+msgid "Node Removal"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:465
+#: f982b1e925b0430cbb25ab3234f27828
+msgid ""
+"**Time complexity**: :math:`O(n)` worst case **Space complexity**: "
+":math:`O(h)`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:469
+#: 3b560bb0b95448368958752f798db1cc
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:472
+#: dd456aaeb9e443729c8b04579e8952d7
+msgid "Time Complexity Summary"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:478
+#: 45410df1beca437ca418cb7e5903711a
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:479
+#: 1335cf8aa05241088cb88b5a4266ec2a
+msgid "Average"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:480
+#: 0c0920b406f34c1bba11994e696ea769
+msgid "Worst"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:481
+#: a4a517af4d7447b3902d2ee7fdabeafe
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:482
+#: c47d2bc8c5c142c18b674922b6fa762c
+msgid "**add_child(parent)**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:483
+#: ../../source/guide/tree_structures/general.rst:484
+#: ../../source/guide/tree_structures/general.rst:499
+#: ../../source/guide/tree_structures/general.rst:500
+#: ../../source/guide/tree_structures/general.rst:503
+#: ../../source/guide/tree_structures/general.rst:504
+#: 08c751863e9e473d87d0fcd21943258b 3311e963f1ef4407b97355c920e8d4c9
+#: 3ddd758326a04e99b1e019a141c5063f 5e2d53c9334540f3a83e4d8efab05a60
+#: 7cccff1681ff4c3580ce7f79297d8f89 a97ddcb535634711941f6fe255dcb6f3
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:485
+#: e0cd7f5d88ad4bf4940b44fea2612ba5
+msgid "Direct append"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:486
+#: 8a23cb593a7b47e8a18624ab4e0c50ee
+msgid "**remove_node()**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:487
+#: ../../source/guide/tree_structures/general.rst:488
+#: ../../source/guide/tree_structures/general.rst:491
+#: ../../source/guide/tree_structures/general.rst:492
+#: ../../source/guide/tree_structures/general.rst:495
+#: ../../source/guide/tree_structures/general.rst:496
+#: ../../source/guide/tree_structures/general.rst:507
+#: ../../source/guide/tree_structures/general.rst:508
+#: ../../source/guide/tree_structures/general.rst:511
+#: ../../source/guide/tree_structures/general.rst:512
+#: 0483e9e5fa1d4290985c384c1c71d1e9 0e9a1016414f4312941634a56a67b632
+#: 2c9593a7324d46749cb6628600006a2e 5f2b40f06c5249a58254853fa5f11f41
+#: 65103f9c7e994049a8727b4c253dfa69 6f98d112621543c98b79e733bc3b5607
+#: 7a5edc6363904292ae6835c33d98ab5b 8a8f88ca8b8b412a964ae24a33e57d41
+#: c7e5585751884b99ab28803aac76f68d e7af51d2a2c24af98a4c069c583ea8a8
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:489
+#: 9b329774a39a4357977ceefaa5b9aaa8
+msgid "Must find node"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:490
+#: a58f3c75a178444e8b27f2413ba23f40
+msgid "**find_node()**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:493
+#: 85f54a2436d0482390e03a2d38ee953d
+msgid "Linear search"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:494
+#: c1f8faa78ba54e7ea8efe35dc3d7bfba
+msgid "**height()**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:497
+#: ../../source/guide/tree_structures/general.rst:509
+#: 2324a27651b64ffd9a1c08e042e552fa 7fed9794e83c4c3bb250d732c3a506db
+msgid "Visit all nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:498
+#: 3d7695f3756a40e9ba4bc84f8fa9ec11
+msgid "**is_leaf()**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:501
+#: af23d38645b64f49b8572e55418ca283
+msgid "Check children list"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:502
+#: b916f7cf72ce4c1389416192c43f38b6
+msgid "**get_children()**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:505
+#: dc9e7a82e30145d19940c6a020fb2254
+msgid "Return list reference"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:506
+#: 6571ca1567e14263a830ca7bced46d62
+msgid "**preorder/postorder**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:510
+#: a63c90a1b478464ba43f9620e323c710
+msgid "**level_order**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:513
+#: 7de180e8d070490996444a0a8bc39641
+msgid "BFS traversal"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:516
+#: 97fa3eacf7ff4e4487fa054a3e52e9ce
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:518
+#: 20e02d1e44394f548c72d7b7c12834ad
+msgid "**Node storage**: :math:`O(n)` for n nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:519
+#: c9227603437f4f41820e7220b9072a42
+msgid "**Parent pointers**: :math:`O(n)`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:520
+#: c6346de969a24e1ba9d8e80b04ace518
+msgid "**Children lists**: :math:`O(n)` total across all nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:521
+#: bb06538bae0c41a9980dbe112f9ded95
+msgid ""
+"**Recursion stack**: :math:`O(h)` where h is height * Best case "
+"(balanced): :math:`O(\\log n)` * Worst case (linear): :math:`O(n)`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:526
+#: 1c2fb949f1574b9b8605d2ce1ba36bf3
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:529
+#: 078639293f7e4dd99b3592f96f57b88d
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:540
+#: 243076a683594c45980b3657168d1885
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:543
+#: 428005dbd9f047838b56604fece73df5
+msgid "Creating a Tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:558
+#: bd3dcc45456f47df95f21cadd43f37b3
+msgid "Adding Children"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:591
+#: 835db53e4f8a47679d2b6d77ca034847
+msgid "Working with Children"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:613
+#: 4822c705d5034cfabcc7fcf8d03a7782
+msgid "Traversals"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:633
+#: 35391b7357c24b039125a6261a186e68
+msgid "Removing Nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:648
+#: da491ab22f6e41feb7b05ac112051107
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:651
+#: 38077fa3006a4c9286982b6177d3a1e9
+msgid "Application 1: File System"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:653
+#: 833ff7d776d34eefbdb4339f030b8b0c
+msgid "Representing directory structure:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:759
+#: 3dfd073bd086479ca5b8d376ff0fde3d
+msgid "Application 2: Organization Chart"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:761
+#: ab49803ec38046afa076832577316471
+msgid "Managing company hierarchy:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:875
+#: b019ec0979eb44aea60381f874162df4
+msgid "Application 3: XML/HTML Parser"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:877
+#: 33638c190875428ea0157bf5ede37288
+msgid "Parsing hierarchical markup:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:998
+#: 11327fbff374468f86294fb8563ea54b
+msgid "Application 4: Game Tree (Decision Making)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1000
+#: eefbd8bef5144ba3bab40df7c24f1da0
+msgid "AI decision tree for games:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1112
+#: c4fb10d431e84c1e894831952e902788
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1115
+#: 280aa4fd06a74047b4ef68568576ca10
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1117
+#: b185164838434a52ab1d5d3be411f886
+msgid "✅ **Use appropriate traversal for the task**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1133
+#: cea1c5cc1e4c4359a5fd48b67fafc36b
+msgid "✅ **Check node existence before operations**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1143
+#: e897aa58aa654a86b03e4cbb8beda33f
+msgid "✅ **Use helper methods for common queries**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1159
+#: 52a0c6ae81f54e99a1d9f9c8cf7a013a
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1161
+#: 1cd86e6055b942b5a47ff8e6ed37ae5a
+msgid "❌ **Don't create circular references**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1170
+#: 41b719f2855b4f98a09c3a2b7cd0d902
+msgid "❌ **Don't modify tree during iteration**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1183
+#: a1704e0a47414a89a64f6701322cda3c
+msgid "❌ **Don't assume specific child order**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1195
+#: 3b288f8b637845b1a148bf97e39d1842
+msgid "Performance Tips"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1197
+#: a8ae600b5696477ea3427ab8c3590738
+msgid "**Cache frequently accessed nodes**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1205
+#: 4522033808a74117a0105c2a1b06ba35
+msgid "**Use BFS for shallow searches**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1214
+#: e38ea09307134f9e9c10f1f8aa6ada5b
+msgid "**Batch operations when possible**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1224
+#: e15f4929804a4315b3d5d133e660c1a7
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1226
+#: efa4bd1d7eb241819ed5c5560441c9fc
+msgid "**Forgetting to update size**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1228
+#: f216366297374f9c89bf404ca0f249a7
+msgid "The Tree class handles this automatically, but if implementing your own:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1239
+#: 5c1a1655e25e41c689aba349e5b269de
+msgid "**Deep recursion on large trees**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1259
+#: 07839be47b8d40aab159b7a06a7b6d1f
+msgid "**Memory leaks with large trees**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1272
+#: 0921dc0aad7a46be826a165e893d7249
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1274
+#: 02e5618b5ce14bebb9029a5da140c8a3
+msgid ":doc:`/api/tree/general` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1275
+#: 920b55645d4749558f729c6793fdfd4a
+msgid ":doc:`binary` - Binary tree structures"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1276
+#: 73a3c9bbdfaa4b13b6c1fd7532344929
+msgid ":doc:`../tree_structures/index` - Overview of all tree structures"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1279
+#: bb09f1eda1af41edb4b272d0663d9280
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1282
+#: 5110aa5ede584f95bd56d3ae13fbe986
+msgid "Academic and Educational Resources"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1284
+#: 332e14b9b700480889bb4bcdaad52921
+msgid ""
+"Wikipedia contributors. \"Tree (data structure)\". Wikipedia, The Free "
+"Encyclopedia. https://en.wikipedia.org/wiki/Tree_(data_structure)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1287
+#: 14c9e9fc53f34c46b5475d82b6c5ae18
+msgid ""
+"Comprehensive overview of tree terminology, properties, and types. "
+"Excellent starting point for understanding tree fundamentals and "
+"mathematical definitions."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1290
+#: ba8abbc5d91746b29895ed989e077e4b
+msgid ""
+"Wikipedia contributors. \"Tree (graph theory)\". Wikipedia, The Free "
+"Encyclopedia. https://en.wikipedia.org/wiki/Tree_(graph_theory)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1293
+#: a68f738a89564aa88fc64bc19baf1c16
+msgid ""
+"Mathematical treatment of trees from graph theory perspective, including "
+"proofs of properties and relationships between nodes, edges, and tree "
+"characteristics."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1296
+#: af785fbd6e97449890ec47d53ce9e272
+msgid ""
+"Shaffer, C. A., et al. \"OpenDSA Data Structures and Algorithms Modules "
+"Collection\". https://opendsa-"
+"server.cs.vt.edu/ODSA/Books/Everything/html/"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1299
+#: f5d0145f1d024f2aae20ad85a11c37e3
+msgid ""
+"Interactive, open-source textbook with visualizations and exercises. See "
+"chapters on:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1301
+#: be7d6dcc3efb439d80702baed62b1fc1
+msgid "\"General Trees\" for n-ary tree implementations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1302
+#: b53942236f4f4b00815a4b62e0544861
+msgid "\"Tree Traversals\" for preorder, postorder, and level-order algorithms"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1303
+#: 37dc4e246cb14c77ae2b54f78fd4feb8
+msgid "\"Space/Time Tradeoffs\" for complexity analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1305
+#: fdb72553546f4169abbdfd053be8bdce
+msgid ""
+"MIT OpenCourseWare. \"6.006 Introduction to Algorithms, Fall 2011\". "
+"https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1308
+#: eb7cf31b257244ab96323b3684da93d2
+msgid ""
+"Free course materials including lecture notes and problem sets. "
+"Particularly relevant:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1310
+#: ea2ccc3959944b2fa4703b584d9fa1c1
+msgid "Lecture 5: Binary Search Trees, BST Sort"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1311
+#: eda5f02469a443e8b51929a678695a84
+msgid "Lecture 6: AVL Trees, AVL Sort"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1312
+#: d0403dbdc0174d9db3f4173b261c8eff
+msgid "Recitation notes on tree algorithms"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1314
+#: 9f9802c8365f43c4ab79924dcbaabbaf
+msgid ""
+"Halim, S., Halim, F. \"VisuAlgo - Visualising Data Structures and "
+"Algorithms\". https://visualgo.net/en"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1317
+#: 08d5d084947c47e6acdb9cc6b3f31475
+msgid "Interactive visualizations for learning. Relevant modules:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1319
+#: 41f2b7c950614d23ae3cf97bc3b4f151
+msgid "Binary Search Tree: https://visualgo.net/en/bst"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1320
+#: 1206224f3faa484e995abc8d3dc497e4
+msgid "Heap: https://visualgo.net/en/heap"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1322
+#: 56065891b5c546a1befaef4249de69d9
+msgid "Includes step-by-step animations of insertions, deletions, and traversals."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1324
+#: 76837ef59df24df29596905266907951
+msgid ""
+"Galles, D. \"Data Structure Visualizations\". University of San "
+"Francisco. https://www.cs.usfca.edu/~galles/visualization/"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1327
+#: 0754f716a7e944e7bde351e7d2bb165b
+msgid "Excellent interactive visualizations for:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1329
+#: b2147a83d48b4746bf29b75e035903d9
+msgid "General Trees: https://www.cs.usfca.edu/~galles/visualization/Tree.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1330
+#: bad6775afb8a4e949f8220e031a737fb
+msgid "AVL Trees: https://www.cs.usfca.edu/~galles/visualization/AVLtree.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1331
+#: bb1d9b5b16534cf79bd2ba6b15f08aa2
+msgid ""
+"Red-Black Trees: "
+"https://www.cs.usfca.edu/~galles/visualization/RedBlack.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1333
+#: 977220586e9d475cace8a151bf937cb3
+msgid ""
+"Stanford CS Education Library. \"Binary Trees\". "
+"http://cslibrary.stanford.edu/110/BinaryTrees.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1336
+#: 3ae8ab9fb14845d09a2bb7764645756b
+msgid ""
+"Comprehensive tutorial on binary tree problems and solutions, with "
+"detailed code examples and complexity analysis."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1340
+#: df441a427af9418589f6ec6fde87af0c
+msgid "Classic Computer Science Literature"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1342
+#: 517705aa785940ae8f187838ed2c50e6
+msgid ""
+"While the following are not freely available online, they are cited as "
+"authoritative references:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1344
+#: 36a12f5ccbe24b4e841e88646fb4d25f
+msgid ""
+"Cormen, T. H., Leiserson, C. E., Rivest, R. L., Stein, C. \"Introduction "
+"to Algorithms\", 3rd Edition, 2009. MIT Press."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1347
+#: 6114721c89954bb8a483a14e8d2b18d3
+msgid ""
+"Chapter 10: Elementary Data Structures - covers tree fundamentals Chapter"
+" 12: Binary Search Trees - BST operations and analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1350
+#: ed3a3eb81e5e487aa71c9babbc768b69
+msgid "*Note: Some editions available through MIT OCW and university libraries*"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1352
+#: bec5c1a9dd084979a1c3f2dff3250152
+msgid ""
+"Knuth, D. E. \"The Art of Computer Programming, Volume 1: Fundamental "
+"Algorithms\", 3rd Edition, 1997. Addison-Wesley."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1355
+#: a0d7f809e353481dac5297282dac6479
+msgid "Section 2.3: Trees - mathematical treatment and classical algorithms"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1357
+#: 6b5f2304a76e46c7b92bd9973577f7c8
+msgid "Author's website: https://www-cs-faculty.stanford.edu/~knuth/taocp.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1359
+#: af00542b8cd146b59d7d1815a34accd7
+msgid ""
+"Aho, A. V., Hopcroft, J. E., Ullman, J. D. \"Data Structures and "
+"Algorithms\", 1983. Addison-Wesley."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1362
+#: 7e7fc3fa859245d7b8dd23a8125128ff
+msgid ""
+"Chapter 4: Trees - comprehensive coverage of tree structures and "
+"algorithms"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1364
+#: db32fb44b716424bbeba53cecc712445
+msgid ""
+"Tarjan, R. E. \"Data Structures and Network Algorithms\", 1983. Society "
+"for Industrial and Applied Mathematics."
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1367
+#: 13faf2d358554b8eafe8ed75fd2580c0
+msgid "Advanced treatment of tree data structures with amortized analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1370
+#: 6af013c2c2c84617ad83c58869dde7b8
+msgid "Online Courses and Tutorials"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1372
+#: 90e9bf4176d242febfbbb0e4bea96772
+msgid ""
+"Princeton University. \"Algorithms, Part I\" (Sedgewick & Wayne). "
+"https://www.coursera.org/learn/algorithms-part1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1375
+#: 2cc7375b1ea14962a50e0dabff0479e1
+msgid ""
+"Free course with accompanying website: https://algs4.cs.princeton.edu/ "
+"Week 4 covers elementary symbol tables and BSTs"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1378
+#: 94e785e42b904a6b98a4ba1e14010a26
+msgid ""
+"GeeksforGeeks. \"Tree Data Structure\". https://www.geeksforgeeks.org"
+"/tree-data-structure/"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1381
+#: 637cc81b3f174967ac6c2346583b7efe
+msgid "Practical tutorials with code examples in multiple languages. Includes:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1383
+#: 719de4469754434a81cceceab422d47b
+msgid "Tree traversals (all methods)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1384
+#: 4420cae9f2254226a12f3e59b529c02a
+msgid "Applications and problems"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1385
+#: 162775e79ede4955aed0c9c468155206
+msgid "Interview questions"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1387
+#: 5d4e478a40ed42caaf03510860e2cd1f
+msgid "Programiz. \"Tree Data Structure\". https://www.programiz.com/dsa/trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/general.rst:1390
+#: a9ba24e7e89b44de9d464a72471d565b
+msgid "Beginner-friendly tutorials with clear explanations and visualizations"
+msgstr ""
+

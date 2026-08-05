@@ -1,0 +1,403 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/advanced_structures/hash_table.rst:5
+#: 7c5164b863e74187a78d9848912837da
+msgid "Hash Tables — User Guide"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:9
+#: 365d6e71c0df481b9cd53a27ffa06ca2
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:12
+#: a8e72fcad30547cebe3f392bb02c05c7
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:14
+#: 0068dfd57ae94c5e90fff5e037de5389
+msgid ""
+"A **hash table** maps keys to values via a hash function. SDS-Tools "
+"provides two implementations with different collision-resolution "
+"strategies, both sharing the "
+":class:`~sds.advanced.interfaces.AbstractHashTable` interface."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:19
+#: e1ac6ecb9c0242d3929dd9a5522c4b29
+msgid "Mathematical Foundations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:22
+#: ea8a766e28fe46aea97dc00f3db19c0a
+msgid "Hash Function"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:24
+#: 27d87923ce63479ebaa8867058bc4ddf
+msgid ""
+"A hash function :math:`h : U \\to [0, m)` maps the universe of keys "
+":math:`U` to :math:`m` slots. Python's built-in ``hash()`` is used "
+"internally, composed with ``% m``."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:29
+#: 95eae13ca2e9439d9f6c64d41640d2a1
+msgid "Load Factor"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:31
+#: 6402ee29893d42dbb62a39367a132a6c
+#, python-brace-format
+msgid "\\alpha = \\frac{n}{m}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:35
+#: c9f2c0deb9c54953933c93f2170366f1
+msgid ""
+"where :math:`n` = stored entries, :math:`m` = capacity. Higher "
+":math:`\\alpha` increases the probability of collision."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:39
+#: 835d8e717dbf4b32b6a502363c11f293
+msgid "Strategy 1 — Separate Chaining"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:41
+#: 7a047d3a982640c8a4ba3883d779b55e
+msgid ""
+"Each slot holds a list of ``(key, value)`` pairs. Collisions are resolved"
+" by appending to the list."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:58
+#: ../../source/guide/advanced_structures/hash_table.rst:101
+#: 0a133a1a184148429492cce24aeed024 ecea7c29b91d4dc193dbc052d98ddc3b
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:59
+#: ../../source/guide/advanced_structures/hash_table.rst:102
+#: b8b6bc72c304445a8e5d8e6e61db4586 bc315918c7a2464d98d3ba34db3ef0b5
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:60
+#: ../../source/guide/advanced_structures/hash_table.rst:103
+#: 8de4d204fde4443296e9f4c1837bf431 b29a70ac579f43aca43c15827feb8321
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:61
+#: ../../source/guide/advanced_structures/hash_table.rst:104
+#: 6bfe51be09f24e2291c5e671a1bb1d1b 8d1fc3319f0a44cd83b2412c6b9786ac
+msgid "``put``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:62
+#: ../../source/guide/advanced_structures/hash_table.rst:65
+#: ../../source/guide/advanced_structures/hash_table.rst:68
+#: ../../source/guide/advanced_structures/hash_table.rst:105
+#: ../../source/guide/advanced_structures/hash_table.rst:108
+#: ../../source/guide/advanced_structures/hash_table.rst:111
+#: 1d97a6d5fd544a8893149879d7583b92 5f50e15d692d4f2ebc8573a97eed979d
+#: 6748b16bada84d6e9b61968e4697a22e 72e891f695304af28267680caa979c95
+#: ccc5e07843154a79ad6ab859616b801b d0724777930a4d02a8f50bb0d27de383
+msgid "O(1)\\*"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:63
+#: ../../source/guide/advanced_structures/hash_table.rst:106
+#: 058da1c02d204103a1b4c390dcf7b3ca 5882d5d999fa4288888eb756e5c6f752
+msgid "O(n) on resize"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:64
+#: ../../source/guide/advanced_structures/hash_table.rst:107
+#: 7098cb68658e49018674f3f07706622e e9eaffdecc724351a8d218e607d44e88
+msgid "``get``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:66
+#: 6121ecbb1b8f41bea4019ea10cce7275
+msgid "O(n) worst case (all in one slot)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:67
+#: ../../source/guide/advanced_structures/hash_table.rst:110
+#: 608f6155ba654d98b9413f492db3b7c1 b9c127f4564f4c47820ac9404504b201
+msgid "``delete``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:69
+#: 54ac721b7a4d4af680c20f06b505fc97
+msgid "Direct list removal"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:70
+#: ../../source/guide/advanced_structures/hash_table.rst:113
+#: 04103149a3cc4fc1b75fc9b1a3dc34b1 b3f6e1a059c5481299fc08a142616a43
+msgid "Load factor"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:71
+#: 09142924a2384a8187596b3b3390e153
+msgid "Any value > 0"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:72
+#: cb5eced487a1405ca807f43490189c71
+msgid "May exceed 1.0"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:74
+#: 7b8aba467bbe4e97b06cc9eecc017ce9
+msgid "\\* Average case with uniform distribution"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:77
+#: 29bb825dc034443c923862969809f567
+msgid "Strategy 2 — Open Addressing (Linear Probing)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:79
+#: e022f491abdb4027b26e072620821a6c
+msgid ""
+"All entries reside in the primary array. On collision, the algorithm "
+"probes successive slots ``(h + 1) % m``, ``(h + 2) % m``, etc. Deleted "
+"slots are marked with a **tombstone** (``_DELETED``) to preserve probing "
+"chains."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:109
+#: 0b410622f87b4d28965ea7da6cc40eb9
+msgid "Traverses tombstones"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:112
+#: b34643f65ede462592dc4bac1decdfee
+msgid "Leaves tombstone sentinel"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:114
+#: 5ffe9039e193474b85308564bcf49ad4
+msgid "Must be < 1.0"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:115
+#: f6cdf6cdf0244d62b42dfa6c12ce9228
+msgid "Default: 0.6"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:117
+#: 8f1dac2021a541c7ab39f053712478af
+msgid "\\* Average case; O(n) worst case with primary clustering"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:120
+#: c6cfae7452d64f72a4b1aab48e466305
+msgid "Automatic Resizing"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:122
+#: 7eba44840c7043cfbbf11073a99f8286
+msgid ""
+"Both classes double capacity and rehash all live entries when the load "
+"factor exceeds ``max_load_factor``. Rehashing also clears all tombstones "
+"(open addressing)."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:127
+#: 6b4b934252944dceb2c8eda303c00101
+msgid "SDS Implementation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:161
+#: 06946ebd37134caba8d99c9c6cc75e82
+msgid "Usage"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:164
+#: ../../source/guide/advanced_structures/hash_table.rst:219
+#: 5678e5e046724f229a64a27fef6df951 b739bb373d9a488ea762e4798cb7d585
+msgid "Chaining"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:197
+#: ../../source/guide/advanced_structures/hash_table.rst:220
+#: 0442344cc74e42788250a56fd9640a96 f5491f5af4f841ba9b9a38b247512480
+msgid "Open Addressing"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:212
+#: 6f09fad76a1742678e9c2a13c52df235
+msgid "Choosing a Strategy"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:218
+#: afa8c2b0f7934baa8901351d67a9e30e
+msgid "Criterion"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:221
+#: 1e46a36bc3eb4a20873eac8043eb02f7
+msgid "Load factor > 1"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:222
+#: d44aa12a9f7745b192875c677df875f3
+msgid "✅ Possible"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:223
+#: b980de390d914adea424200005683760
+msgid "❌ Forbidden"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:224
+#: 27b41920ee8b4240b737ee47eb2165fb
+msgid "Memory locality"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:225
+#: 46c0b8b750fd41dc8b8b4cf49549633d
+msgid "❌ (scattered lists)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:226
+#: e788ba737a8040c3b8bc5844357cd7c1
+msgid "✅ (compact array)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:227
+#: b18a4a4eecf840e3b45a428088bc7446
+msgid "Frequent deletions"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:228
+#: 63aec544296949ce858ed0d53fe9bba8
+msgid "✅ (direct removal)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:229
+#: b85008446bf54d02a9475a16e333fe84
+msgid "⚠️ (tombstones accumulate)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:230
+#: 035d04e3b83e430aa70aa2a47e2dbd64
+msgid "Unknown key distribution"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:231
+#: 6128f41219fa4283954913d82499d800
+msgid "✅ (chains absorb)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:232
+#: 96f4831d498c45aab7e1000e77101d7b
+msgid "⚠️ (clustering risk)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:235
+#: 9637e2b9e78f416495f32cb72858ba3e
+msgid "Real-World Use Cases"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:238
+#: 2273ab7372874c829b7e295e3aaf3ae0
+msgid "Word Frequency Counter"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:253
+#: 2290bc9ad6f74e57ad2be726b550d9fe
+msgid "Symbol Table (Compiler)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:265
+#: b1446a8558b24cc78904aad9f2068a67
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:267
+#: e804ce92b901413485228f97bfc3ed5e
+msgid ""
+"✅ Use ``HashTableChaining`` when load factor may exceed 1 or key "
+"distribution is unknown."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:270
+#: 9b233d17160742e28bcfda1ebdf4e9bb
+msgid ""
+"✅ Use ``HashTableOpenAddressing`` for better memory locality with well-"
+"distributed keys."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:273
+#: 7b7b5ce17c684c54b9ce6975a221b56e
+msgid ""
+"✅ Tune ``max_load_factor``: 0.5–0.7 for open addressing, 0.75–1.0 for "
+"chaining."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:276
+#: 4df031e577ad4c559f4561fcc9cd497b
+msgid "❌ Do not use unhashable keys (lists, dicts)."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:279
+#: f4c5c94a975d4c95ad43b746061267e2
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:281
+#: be03c948666d454891791c0823ded855
+msgid ""
+"Cormen, T. H., et al. (2009). *Introduction to Algorithms* (3rd ed.), "
+"Chapter 11. MIT Press."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:284
+#: 92b28acb455142669d291b93c431c2d9
+msgid ""
+"OpenDSA — Hashing. https://opendsa-"
+"server.cs.vt.edu/ODSA/Books/Everything/html/HashIntro.html"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:288
+#: dc771b0aa630421396119d2a74e6be41
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:290
+#: c2ce614713a9461db47652f783c7c4a2
+msgid ":ref:`api_advanced_hash_table` — API Reference"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/hash_table.rst:291
+#: 75fa8ab030a14533afcd2667195da885
+msgid ":ref:`guide_advanced_lru_cache` — LRU Cache built on a hash map"
+msgstr ""
+

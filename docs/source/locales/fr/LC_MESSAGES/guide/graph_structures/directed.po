@@ -1,0 +1,954 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/graph_structures/directed.rst:5
+#: 9c88820b3b2c4762bde087f07942f993
+msgid "Directed Graph Guide"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:10
+#: c705a72c024844f2817a4d9c95530fba
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:12
+#: 8478fb7c734a42bda17ab3fc3ace2515
+msgid ""
+"A **directed graph** (or digraph) is a graph where edges have a "
+"direction, flowing from a source vertex to a target vertex. Unlike "
+"undirected graphs where relationships are symmetric, directed graphs "
+"model asymmetric relationships such as web page links, task dependencies,"
+" and social media followers."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:40
+#: 2f64e577aeb24eec9a7beb1244e46e35
+msgid ""
+"Directed graphs are essential for modeling flows, dependencies, and "
+"hierarchies. Understanding directed graphs is crucial for tasks like "
+"scheduling, compilation, and analyzing causal relationships."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:45
+#: ed00c80cc32c45ef81b54df3ec0c28c1
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:48
+#: 74c9c83ae3f14b359577087f0b50f38f
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:51
+#: a8455e0753444b71a201ccf591e80751
+msgid "Directed Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:53
+#: b1cb05013ad246338692852eb0c31931
+msgid "A directed graph :math:`G` is defined as:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:55
+#: a0039fb326f14de7b68582a7e219f678
+msgid "G = (V, E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:59
+#: 7030c4df17ee413a9f9efeacd7638f29
+msgid "where:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:60
+#: 231ca740fb0941c6b53bafd472cd0dc3
+msgid ":math:`V` is the **set of vertices**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:61
+#: b3af85d34b2444869a6e46abeac7ae55
+msgid ":math:`E \\subseteq V \\times V` is the **set of directed edges**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:63
+#: ec363b15f93e4d21adecee13bfb78a00
+msgid "Each edge :math:`(u, v) \\in E` has:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:64
+#: 1a753ac78f2d4c3490e00ae9c8e52bdc
+msgid ":math:`u` as the **source** (tail)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:65
+#: 022f99ed74d74d4fb1d29efb486df1b5
+msgid ":math:`v` as the **target** (head)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:67
+#: 11ffee85f9a249a7aa81ec5a2fcd29e6
+msgid "**Important**: :math:`(u, v) \\neq (v, u)` - direction matters!"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:69
+#: 5465a1ab70be431b9afb8c15c734aad1
+#, python-brace-format
+msgid "**Example**: :math:`G = (\\{A, B, C\\}, \\{(A,B), (B,C), (A,C)\\})`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:72
+#: a36563c3bafa4cc0898c337449203f74
+msgid "Directed Edge Properties"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:74
+#: 49abff46748d46d9b11e6fcd1e63970c
+msgid "For an edge :math:`e = (u, v)`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:76
+#: a723abb28a51409d97d86fdd9831abd8
+#, python-brace-format
+msgid ""
+"\\begin{aligned}\n"
+"\\text{source}(e) &= u \\\\\n"
+"\\text{target}(e) &= v \\\\\n"
+"\\text{reverse}(e) &= (v, u)\n"
+"\\end{aligned}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:84
+#: 0a4b1b5478354f7c8615239288b1b07b
+msgid ""
+"An edge :math:`(u, v)` is an **outgoing edge** from :math:`u` and an "
+"**incoming edge** to :math:`v`."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:87
+#: b4d27fb5b54849788bdcc1437481f816
+msgid "Degree in Directed Graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:90
+#: a62638963b6e4cc1b9b95a455b7fb680
+msgid "In-Degree and Out-Degree"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:92
+#: 852d327a4a44422b92a5a8872b120f17
+msgid "**Out-degree** of vertex :math:`v`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:94
+#: d3119c6f7b06411a8c1555d23fb1b75e
+#, python-brace-format
+msgid "deg^{out}(v) = |\\{u \\in V : (v, u) \\in E\\}|"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:98
+#: eb3676df12f440e696f7c83bc9b79b9b
+msgid "Number of edges **leaving** :math:`v`."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:100
+#: eab36a0162ee45ad937353ba99095307
+msgid "**In-degree** of vertex :math:`v`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:102
+#: b3f3310531574852b2f773a421f6da50
+#, python-brace-format
+msgid "deg^{in}(v) = |\\{u \\in V : (u, v) \\in E\\}|"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:106
+#: fd1a1e08815a4033bb507ec06ca5f716
+msgid "Number of edges **entering** :math:`v`."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:108
+#: 09772bf32ddb4e3b8da141cdfbb10b46
+msgid "**Total degree**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:110
+#: 0c6b9b4c80c644dc9808643ebccd2552
+#, python-brace-format
+msgid "deg(v) = deg^{in}(v) + deg^{out}(v)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:115
+#: 1399b507bdba4db396c57badc82c409d
+msgid "Degree Sum Properties"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:117
+#: 6dba04312c1347b8826b332c807357c1
+msgid "**Out-degree sum**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:119
+#: c4462d67c0aa40d6ac788d12d367568a
+#, python-brace-format
+msgid "\\sum_{v \\in V} deg^{out}(v) = |E|"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:123
+#: 91771499610d49fe95ac49511d27bfc3
+msgid "**In-degree sum**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:125
+#: a769d2d9b4a14efb8802471f1079a4a3
+#, python-brace-format
+msgid "\\sum_{v \\in V} deg^{in}(v) = |E|"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:129
+#: 4c5066ffc75245eb8beab51c4432f4a7
+msgid "**Total degree sum**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:131
+#: a4caf0b87e1c4d97a9bba9adc840febc
+#, python-brace-format
+msgid "\\sum_{v \\in V} deg(v) = 2|E|"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:136
+#: c6d6c44443624b19a03bb8cbdd4e677f
+msgid "Paths in Directed Graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:139
+#: 9fb58a814f5f442997cf6c670acc620f
+msgid "Directed Path"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:141
+#: b3cb2360df7845168ce4ee1b6f4a68c1
+msgid "A **directed path** from :math:`u` to :math:`v` is a sequence:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:143
+#: 3d3adeab7cb540ae928cc29c36d1b64f
+#, python-brace-format
+msgid ""
+"P = (v_0, v_1, \\ldots, v_k) \\text{ where } (v_i, v_{i+1}) \\in E "
+"\\text{ for all } i"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:147
+#: f389d32d226f497ab9ed1b114eee9560
+msgid ":math:`v_0 = u` is the start, :math:`v_k = v` is the end."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:149
+#: d99ea89f125042b18efc461a67bdb860
+msgid "**Path length**: :math:`k` (number of edges)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:152
+#: ../../source/guide/graph_structures/directed.rst:449
+#: 334673655c0447f28bb48d9ca2dd692b 3f06cceacae3437dbf9896fef62f1151
+msgid "Reachability"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:154
+#: b1dba58062a147a69afb1a2ece3afaea
+msgid ""
+"Vertex :math:`v` is **reachable** from :math:`u` if there exists a "
+"directed path from :math:`u` to :math:`v`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:156
+#: cee9a26b5dd6414b83b55b0038400801
+#, python-brace-format
+msgid ""
+"v \\text{ reachable from } u \\iff \\exists \\text{ directed path } u "
+"\\rightsquigarrow v"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:161
+#: fe418da006924a389cdc395d8da57c3f
+msgid "Cycles in Directed Graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:164
+#: cb7fe83c344c41d99dc2bbd6d61f8f9e
+msgid "Directed Cycle"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:166
+#: 05984dfc23184fcfa7a9906f65e240fb
+msgid "A **directed cycle** is a path :math:`C = (v_0, v_1, \\ldots, v_k)` where:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:168
+#: c2b4ac885f4445da9503a9fab505f2c7
+#, python-brace-format
+msgid "v_0 = v_k \\text{ and } k \\geq 1"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:172
+#: 4a7d0b1302a641379af65c187382051a
+msgid "**Simple cycle**: All vertices except :math:`v_0 = v_k` are distinct."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:175
+#: 9ddda1e4c9d8455b9e96b2dc7e58330d
+msgid "Directed Acyclic Graph (DAG)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:177
+#: 1ae643aee3fc45018d8eadd88632ba2c
+msgid "A **DAG** is a directed graph with **no directed cycles**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:179
+#: 00cb753e9fd549c383c33509f5534622
+#, python-brace-format
+msgid "\\text{DAG} \\iff \\nexists \\text{ directed cycle in } G"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:183
+#: 64858249c00543a5b26f71d70977b190
+msgid "**Key property**: DAGs can be **topologically sorted**."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:186
+#: 32ece28de5b348e4bfdf3a6f116eccd8
+msgid "Topological Ordering"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:188
+#: cdb62060fce849a2b0d60e699b54a695
+msgid ""
+"A **topological ordering** of a DAG :math:`G = (V, E)` is a linear "
+"ordering of vertices:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:190
+#: 95cdd7c22f8e43b7bb1bab30a71c852f
+msgid "v_1, v_2, \\ldots, v_n"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:194
+#: 415feddc1c02417aa8eb8564bb115f03
+msgid "such that:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:196
+#: 315a81a81fa04f72a5d3ff36cb99d708
+msgid "(v_i, v_j) \\in E \\implies i < j"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:200
+#: 1716c0863c034e47b51960b68a30ccbe
+msgid "Every DAG has at least one topological ordering."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:203
+#: 4409850d7ddd4f6a95761504c46cff7f
+msgid "Connectivity in Directed Graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:206
+#: b8232b30db894c34ada2a0bdf6e80b33
+msgid "Strong Connectivity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:208
+#: 6484ecaef4564b6ca79f53491a034803
+msgid "Graph :math:`G` is **strongly connected** if:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:210
+#: 20ea12566431415c801c203d44c4d7d4
+#, python-brace-format
+msgid ""
+"\\forall u, v \\in V: u \\rightsquigarrow v \\text{ and } v "
+"\\rightsquigarrow u"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:214
+#: c7ce12cfeeb04ffb9d494dab18ca4f7d
+msgid "Every vertex can reach every other vertex via directed paths."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:217
+#: 6047b6c476744d60bcb84fbf2e0478e1
+msgid "Weak Connectivity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:219
+#: 86c41af9369d4120a8974cf09d451eb6
+msgid ""
+"Graph :math:`G` is **weakly connected** if the **underlying undirected "
+"graph** is connected."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:221
+#: fc00594f5e0340ce901fb761c35340f3
+#, python-brace-format
+msgid "Treat :math:`(u, v)` as :math:`\\{u, v\\}` and check connectivity."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:224
+#: fd96908d12c748ce8096f9d4a079cf30
+msgid "Strongly Connected Components"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:226
+#: c9db25058b294214b71fbd7da2ffc334
+msgid ""
+"A **strongly connected component (SCC)** is a maximal set of vertices "
+":math:`C \\subseteq V` where:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:228
+#: cb620d011c9b4e198f70272bf4cf62e3
+#, python-brace-format
+msgid ""
+"\\forall u, v \\in C: u \\rightsquigarrow v \\text{ and } v "
+"\\rightsquigarrow u"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:232
+#: fefeb4fe291b42c88d225bd169ab0e86
+msgid "**Component graph**: Graph of SCCs, always a DAG."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:235
+#: 7184d33e671c4fea9bbc61ad2a7a4843
+msgid "Graph Types and Properties"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:238
+#: 8a2b5dc9a6cf4ea78d3bb10bdd5c08b3
+msgid "Special Directed Graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:240
+#: 336ea9eb56c94c338ba7cc8c1dd159c6
+msgid "**Tournament**: Complete directed graph (every pair connected)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:242
+#: e7c55e38db354c36be9d3baf5a5c34e8
+#, python-brace-format
+msgid "\\forall u, v \\in V: (u,v) \\in E \\text{ or } (v,u) \\in E"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:246
+#: 2d984383a8d54306b3b657f5a220365b
+msgid ""
+"**Directed Tree**: Connected DAG with one root where every vertex (except"
+" root) has in-degree 1."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:248
+#: 423d05ffab69493c91e74b6d3c1b08c8
+msgid "**Functional Graph**: Every vertex has out-degree exactly 1."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:251
+#: 7959129fabe442dba54d3d1c38b4d324
+msgid "Graph Invariants"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:253
+#: d542882b45654f33b0c974b103561e3e
+msgid "**Edge count**: :math:`0 \\leq |E| \\leq |V|(|V|-1)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:255
+#: 7c2749c0875845d28ad8be2ab0a60f51
+#, python-brace-format
+msgid "**Degree balance**: :math:`\\sum deg^{in} = \\sum deg^{out} = |E|`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:257
+#: e4180e5bba644c5384c84c70f98e5493
+msgid "**DAG height**: Longest path in DAG is :math:`O(|V|)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:259
+#: 9ba24cbf2c3f4d0ca02e8e0c48f7cc65
+msgid ""
+"**Reachability transitivity**: If :math:`u \\rightsquigarrow v` and "
+":math:`v \\rightsquigarrow w`, then :math:`u \\rightsquigarrow w`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:262
+#: 93a46d9cf965429fa20c9bd12390a467
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:265
+#: 64a9b1d62e10411892bcf76783fc5c8f
+msgid "Abstract Data Type"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:298
+#: 25e71ef548084fac9d583498b853314c
+msgid "Core Algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:301
+#: 99713c682dae4941b8896722ca8a6acd
+msgid "Cycle Detection (DFS with Colors)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:303
+#: 7a42b00cb43644d9ac99a8d3fc52b369
+msgid ""
+"Detect cycles using three colors: - **White**: Unvisited - **Gray**: "
+"Visiting (in current path) - **Black**: Visited (complete)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:342
+#: d0ba2dbe203c48c8816ea6779ef94953
+msgid ""
+"**Time Complexity**: :math:`O(|V| + |E|)` **Space Complexity**: "
+":math:`O(|V|)` for color map"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:345
+#: e7f990d64aef4ca28b94533ac658d77b
+msgid ""
+"**Key Insight**: Gray vertex in recursion stack indicates back edge → "
+"cycle."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:348
+#: f0ff39399107448994219fce80d9d302
+msgid "Topological Sort (DFS)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:382
+#: ../../source/guide/graph_structures/directed.rst:410
+#: ../../source/guide/graph_structures/directed.rst:446
+#: ../../source/guide/graph_structures/directed.rst:477
+#: 01306e94f175438ca0ad5ef27ca7f02b 385097ae35ac4e01b2138ede691abb64
+#: aaeabf3925854c5e96c8e59581402a80 d7088fb89f25435788b9fc7e6eeacbc1
+msgid "**Time Complexity**: :math:`O(|V| + |E|)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:384
+#: 22feac1b3e00491daa550bd536ad2cd5
+msgid "**Alternative (Kahn's Algorithm)**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:413
+#: 9b86f83efcad45b784dc84fcea9de900
+msgid "Strongly Connected Components (Kosaraju)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:480
+#: 9258d12589f3455e9f59467118047286
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:483
+#: 099d34b1706e47e8a6067f9b4b9c11ae
+msgid "Time Complexity Summary"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:489
+#: d33d762da60a4795bfa1ab0734e9d827
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:490
+#: 145378a153794a889b8ea26dd9eff935
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:491
+#: 84506c6f23df4bbfad218ef25ed06e5b
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:492
+#: b08abebee7014d7d80b42b395ce25ca9
+msgid "**Add edge**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:493
+#: ../../source/guide/graph_structures/directed.rst:496
+#: ../../source/guide/graph_structures/directed.rst:499
+#: 6b6d6b14e28d463c9bad68d37f29e5d5 9b3e956a190147ee87181214b389a69d
+#: df746c83c2634adbb01644a4ccba398c
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:494
+#: 17730c6c8b224483aab7cc923a75a815
+msgid "Adjacency list update"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:495
+#: f2d8b706e99a48aeb8e0661f254e03f9
+msgid "**In-degree**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:497
+#: bc5233a67f3f4db590e60b3f58cf2f08
+msgid "Cached in in-adjacency"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:498
+#: 629a198a9b3544f9b2031e11d3d95857
+msgid "**Out-degree**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:500
+#: e2233adbddeb4d7cb5fdec1bb173ab4a
+msgid "Cached in out-adjacency"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:501
+#: 5cb5e3879c914a90873fbbaae75f1e0f
+msgid "**Predecessors**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:502
+#: 07a64c2bd5ec45cf9bf630b3be27c58c
+msgid "O(in-degree)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:503
+#: 2758c990f9cd43c5877d33dbc5c6ceae
+msgid "Iterate in-adjacency"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:504
+#: 07f9e1bb1f4c4126ab23c1d833319824
+msgid "**Successors**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:505
+#: 794dc1170a074d27bcf47d8785cd56c9
+msgid "O(out-degree)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:506
+#: ece6feb966a9498287d7d210b57f4916
+msgid "Iterate out-adjacency"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:507
+#: 15b98a20575a42728ada688c8fbedfcb
+msgid "**Is cyclic**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:508
+#: ../../source/guide/graph_structures/directed.rst:511
+#: ../../source/guide/graph_structures/directed.rst:514
+#: ../../source/guide/graph_structures/directed.rst:517
+#: 21c8127feffb4d3d8a4a1353641231d4 a8c4b21a7eec45f89885819ca0197d4c
+#: e362d4823f3840feac3be49e95115dae fb7b83dca59b4ee8a1310cce76ce2fd9
+msgid "O(V + E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:509
+#: 7162ca7d680341d2b95da35d1668e7a5
+msgid "DFS with colors"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:510
+#: 7973789dfa414c8896759ad6e50c3151
+msgid "**Topological sort**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:512
+#: d5ef671b909d48a489ff3b09c0fa9a64
+msgid "DFS or Kahn's"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:513
+#: 56d8bb5ca8ca4bc4907cf88aca2e8148
+msgid "**SCCs**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:515
+#: 634ec7eb811f4c3dbaa49c04fd070f2f
+msgid "Kosaraju or Tarjan"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:516
+#: 7ffd131d885b41658dd1331140ad574a
+msgid "**Reachability**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:518
+#: 20ca806c5f354f818868e3358b93ffa0
+msgid "BFS/DFS"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:521
+#: 77f686fc47ca495c8f14c1021323d920
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:523
+#: 6c90515b907649fb83b736027e284ae6
+msgid "**Adjacency lists**: :math:`O(|V| + |E|)` (in + out)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:524
+#: 3ac1da8fc9de4bc28d31c719d7a3f1a2
+msgid "**DFS recursion**: :math:`O(|V|)` stack depth"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:525
+#: ce1c904049f5479dab77edf8bf00f0ca
+msgid "**Transitive closure**: :math:`O(|V|^2)` for all-pairs reachability"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:528
+#: 8a7c2c9d772849a38ec8c40df9536b1f
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:531
+#: 9676d40c6e4549859896684eb215526f
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:542
+#: 4c49a1ce418c49abb7df9e172c9c3ac8
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:545
+#: cddd7c5b6b774712badeee551574b8c3
+msgid "Creating a Directed Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:558
+#: 620bdd33b10a490893ec47cda0eef0ea
+msgid "Adding Vertices and Edges"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:583
+#: 028aed9d6f584f4db6d28c300d67886f
+msgid "Querying Degrees"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:597
+#: 4bb6e423558b4790b0d4d6873daec4ce
+msgid "Predecessors and Successors"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:610
+#: 5a06fa734d3c44deaf16ee61ef823936
+msgid "Cycle Detection"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:622
+#: 43ac8a8c0a0f445f8b869e2c33ea8a1b
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:625
+#: 6366c5d5e91142e3b286721b8d393642
+msgid "Application 1: Task Scheduler (DAG)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:627
+#: e0fdffb84f624df0ac18d5c9b5c43a7d
+msgid "Complete task scheduling system:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:779
+#: 5d12c8077e4e43e7a8914ceb4a2c9733
+msgid "Application 2: Citation Network"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:781
+#: ab876293517344afb3b91235a669a53f
+msgid "Academic paper citations:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:894
+#: 42bcba5fdbcd4544997850c3feedf28d
+msgid "Application 3: Course Prerequisites"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:896
+#: 555f1bb32fb34714ad69e030b16f7c2b
+msgid "University course dependencies:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1032
+#: e18ce125f1de43ae9872731dd8d47caa
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1035
+#: f687eb3f7ed7412cae3ae56b19573587
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1037
+#: 62f392892bb6422eb86a80a244c66878
+msgid "✅ **Use for asymmetric relationships**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1046
+#: 27f0285342d54a9eb0ed46d01fc64048
+msgid "✅ **Validate DAGs before topological sort**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1054
+#: f8600d356be44e0cb173ba97b6e45845
+msgid "✅ **Use appropriate degree measure**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1065
+#: 7bcf2a1bc8614173874b0e15c1ac18b1
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1067
+#: 46f75342c5a8425d9c8248f3669a4186
+msgid "❌ **Don't confuse edge direction**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1077
+#: 087fb3fe46ac4097b9d86be7ccab9477
+msgid "❌ **Don't assume symmetry**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1087
+#: b6828aadb73d4e2dbf65cd1ab28b734a
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1089
+#: 80559193a7534babbb23b0754a4d9819
+msgid ":doc:`general` - Undirected graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1090
+#: 2787d88a89934562849a5cc9a78e3458
+msgid ":doc:`weighted` - Weighted directed graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1091
+#: 9c580c975eb34d17bd87b0af9f3953c5
+msgid ":doc:`/api/graph/directed` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1094
+#: 295a875ff085497fa7707a4dc532482c
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1096
+#: 5e1d49864f4b4cda9e357a7e6656bcba
+msgid ""
+"Bang-Jensen, J., Gutin, G. \"Digraphs: Theory, Algorithms and "
+"Applications\", Springer, 2008. "
+"https://link.springer.com/book/10.1007/978-1-84800-998-1"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1099
+#: e1d28c5e0a7d47ef8cf5faa38796e794
+msgid ""
+"Comprehensive treatment of directed graph theory. Many chapters available"
+" through academic access."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1101
+#: 71a949e359484ef3b1b2e0d6c7cb19d0
+msgid ""
+"Wikipedia contributors. \"Directed acyclic graph\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Directed_acyclic_graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1104
+#: 3ab88ad387ea40ad8ea2f70bd0f1e5b8
+msgid "Overview of DAGs and their applications."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1106
+#: 0202f62fefaa4c53962898e131c96cbf
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 22. https://mitpress.mit.edu/9780262046305/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1109
+#: 30566429fd8747acba27254efe500240
+msgid "Standard algorithms textbook covering graph algorithms."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1111
+#: f45a293c66894729b0f587b8ff9ecc96
+msgid ""
+"Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Section 4.2. "
+"https://algs4.cs.princeton.edu/42digraph/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1114
+#: 1f374ccd7c4147abaa92a50cf025c739
+msgid "Free online content on directed graphs and algorithms."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1116
+#: c163069d4e8b4891af67f1f4bfd656bc
+msgid ""
+"Wikipedia contributors. \"Topological sorting\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Topological_sorting"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1119
+#: 7ff3581b596c4c439014c44ffe9df8a3
+msgid "Detailed explanation of topological sorting algorithms."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1121
+#: c2b4df203d0d4920885322960ff33f10
+msgid ""
+"Wikipedia contributors. \"Strongly connected component\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Strongly_connected_component"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1124
+#: 93160f0936f64665ba167cd4e672786f
+msgid "Comprehensive overview of SCCs and algorithms."
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1126
+#: 30134a81fe664b4e9849bc941512ea57
+msgid ""
+"Erickson, J. \"Algorithms\". "
+"http://jeffe.cs.illinois.edu/teaching/algorithms/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/directed.rst:1129
+#: afd06027f85443f9a9556b78623105fb
+msgid "Free algorithms textbook with excellent graph coverage."
+msgstr ""
+

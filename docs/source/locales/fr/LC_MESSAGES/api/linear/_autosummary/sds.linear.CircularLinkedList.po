@@ -1,0 +1,662 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:2
+#: 28250ca8f8704cfc9581a7c52cdd7f54
+msgid "sds.linear.CircularLinkedList"
+msgstr ""
+
+#: fd408d9739ba4c0ea4aa5dc97fd0a41c of sds.linear.list.CircularLinkedList:1
+msgid "A circular singly linked list implementation."
+msgstr ""
+
+#: 5ba521a5f97e4366976aa97501d69210 of sds.linear.list.CircularLinkedList:3
+msgid ""
+"A circular linked list is a variation of a linked list where the last "
+"node points back to the first node, forming a circle. This implementation"
+" maintains a tail pointer for efficient operations at both ends."
+msgstr ""
+
+#: 948e666007894736acf86b9a3fc1b0cf of sds.linear.list.CircularLinkedList:9
+msgid "The last node in the list (read-only property). The head is tail.next."
+msgstr ""
+
+#: 0d8aa398d0f0490caf8d101b2afa3480 2245279b0dc64fb18a2b5e0127aca44f
+#: 3d002cebd1cf4c7687d8ebb3a2772de8 455f7967a85647ddaf1705f53feafb01
+#: 479a308f28504f57a92226af18165ba5 496bbfa6a5994746a15defb3eb7c6a1c
+#: 4ac988a49e234bed80f63e8f939cc616 7ee3fc2f28bb4775af30eb1926c4029c
+#: e1ec35b6016c450f8fb564fb5f675421 f85dbb27e16141c3ad0e87138af0e428 of
+#: sds.linear.list.CircularLinkedList
+msgid "type"
+msgstr ""
+
+#: 8cf39aefd4164f4a98dde085c56963a2 f9497b6ef1564c1c9cc8400ba66e6207 of
+#: sds.linear.list.CircularLinkedList:11 sds.linear.list.CircularLinkedList:17
+msgid "Node or None"
+msgstr ""
+
+#: 44abdb6cdedd4542a0bab3a9ec53c3b9 of sds.linear.list.CircularLinkedList:15
+msgid "The first node in the list (read-only property). Equivalent to tail.next."
+msgstr ""
+
+#: 9826f9c41c724264bf1eb8409ab43eca of sds.linear.list.CircularLinkedList:21
+msgid "The number of elements in the list (read-only property)."
+msgstr ""
+
+#: 7906c9cd598e42db9fe1da80bdf8f3cb of sds.linear.list.CircularLinkedList:23
+msgid "int"
+msgstr ""
+
+#: 0225531a9fd546c89889b54c74a6b6fc 0c850b42800c445293a8c1845141b97e
+#: 92caa6d559964205995b14ac31d15dba of sds.linear.list.CircularLinkedList:37
+#: sds.linear.list.CircularLinkedList:43 sds.linear.list.CircularLinkedList:67
+msgid "O(n)"
+msgstr ""
+
+#: 5ebd3652d75b49209bcdb05922990a61 95efd65f35c0447faa39c6af8ba55396
+#: a97cc644ebe840cda618c505825a7ddd bf955dab81cf4b6080bc4b8997640e1b of
+#: sds.linear.list.CircularLinkedList:49 sds.linear.list.CircularLinkedList:55
+#: sds.linear.list.CircularLinkedList:61 sds.linear.list.CircularLinkedList:73
+msgid "O(1)"
+msgstr ""
+
+#: 09e624bfe26a40468b1622c1a0c6b52c 1a9bd27a597b4439b012e282a74cddaa
+#: 291abb7297714b23b85c668e2834bec7 2e5699f3abd64b2790340e9de881d1d1
+#: 3022215980154dcc8c135847797e56db 303e5e76fbfe45f3bbdcc6c6130cd706
+#: 3ea42bdce5cf40589cd1ad94537964e9 40ddef481b4f4853902d54b09b7e4140
+#: 46a4f3bf908d4b989ea8a961f4fe6188 66cf9da0666d4b6697a0ecedee319b31
+#: 7aed8d721e064e27a37f1fbe3ca229e7 7e7622a7d0484000aac808aa4a612c08
+#: 85285e02242c45f4a2e1eebdc6186173 93d5ecdcf6f94463ac5334e53aec7a93
+#: a431d97f0ea848789595441fa5487b4e c5608b1ef4e2442987026a6feba3870b
+#: d043219401dc4e81ac2f1d1b1292893a d439e68915a147508c5e51a43dc518e8
+#: ee888fba04484a63bdce6e79ded582d8 f0512a2f255b4d08ad306c121f2864e9 of
+#: sds.linear.CircularLinkedList.head:6 sds.linear.CircularLinkedList.tail:6
+#: sds.linear.list.CircularLinkedList:75
+#: sds.linear.list.CircularLinkedList.__contains__:9
+#: sds.linear.list.CircularLinkedList.__getitem__:11
+#: sds.linear.list.CircularLinkedList.__iter__:5
+#: sds.linear.list.CircularLinkedList.__repr__:6
+#: sds.linear.list.CircularLinkedList.__setitem__:10
+#: sds.linear.list.CircularLinkedList.__str__:6
+#: sds.linear.list.CircularLinkedList.append:6
+#: sds.linear.list.CircularLinkedList.clear:3
+#: sds.linear.list.CircularLinkedList.find:9
+#: sds.linear.list.CircularLinkedList.insert_at:10
+#: sds.linear.list.CircularLinkedList.prepend:6
+#: sds.linear.list.CircularLinkedList.remove:12
+#: sds.linear.list.CircularLinkedList.remove_at:12
+#: sds.linear.list.CircularLinkedList.remove_first:8
+#: sds.linear.list.CircularLinkedList.remove_last:8
+#: sds.linear.list.CircularLinkedList.reverse:3
+#: sds.linear.list.CircularLinkedList.rotate:10
+msgid "Examples"
+msgstr ""
+
+#: 318d359a26484fd0969a0a6f3551593a of sds.linear.list.CircularLinkedList:77
+msgid "Create and populate a circular list:"
+msgstr ""
+
+#: 04634336e7d94219a91665b5a1b6eebb of sds.linear.list.CircularLinkedList:86
+msgid "The list is circular - tail points to head:"
+msgstr ""
+
+#: f36ac479ce574df29f1f84a2d3d3f65a of sds.linear.list.CircularLinkedList:91
+msgid "Rotate the list:"
+msgstr ""
+
+#: 02421050c75a4fb9ba1c81e4877cdf5f 079120cfd3e74bc282dca36d942dc242
+#: 0dde94a78071435c95e01aaf06687a32 28ea95a2bbd04d1aa0c9691040d89d1a
+#: 4b643a6583e245bbb6ee9370698a137a 4d17cb2f16fb41c693d3254703b800c6
+#: 555023baf2844e3782496eb632446f20 5990f1fae3ad46b89958a9b6d9f7c306
+#: 6cb77ba703634200ab6c5fa07e410a6b 9bcc1afa15fa48a49c28673e8f26a839
+#: a3838a24470f46c88de30d9c17127d23 daab199f6c294c34a20e38bc6a9349b3
+#: dc2cf635e39446f98c1f86f1a1e4a87d dca400f0f49940a2a18732294d87a135
+#: dfa4b16887614d58b2f42c6c7743995a f0476a50116b4b65bb438c4da5ce7b53
+#: f531131a386f4967b50454ef9437c815 fd4d4d1db0f14e92a15ae8181cb4ebe0 of
+#: sds.linear.CircularLinkedList.head:15 sds.linear.CircularLinkedList.tail:18
+#: sds.linear.list.CircularLinkedList:100
+#: sds.linear.list.CircularLinkedList.__contains__:19
+#: sds.linear.list.CircularLinkedList.__getitem__:22
+#: sds.linear.list.CircularLinkedList.__iter__:14
+#: sds.linear.list.CircularLinkedList.__setitem__:19
+#: sds.linear.list.CircularLinkedList.append:15
+#: sds.linear.list.CircularLinkedList.clear:12
+#: sds.linear.list.CircularLinkedList.find:20
+#: sds.linear.list.CircularLinkedList.insert_at:19
+#: sds.linear.list.CircularLinkedList.prepend:15
+#: sds.linear.list.CircularLinkedList.remove:23
+#: sds.linear.list.CircularLinkedList.remove_at:23
+#: sds.linear.list.CircularLinkedList.remove_first:18
+#: sds.linear.list.CircularLinkedList.remove_last:18
+#: sds.linear.list.CircularLinkedList.reverse:15
+#: sds.linear.list.CircularLinkedList.rotate:31
+msgid "Notes"
+msgstr ""
+
+#: 9b828d0307104197be5209fc2a78802d of sds.linear.list.CircularLinkedList:102
+msgid ""
+"The circular structure means the last node's next pointer is never None "
+"(except for an empty list). Iteration must explicitly stop after visiting"
+" all nodes to avoid infinite loops."
+msgstr ""
+
+#: 6948b7ae031d43b3a0caf77503d98cb4 of sds.linear.list.CircularLinkedList:108
+msgid ":obj:`LinkedList`"
+msgstr ""
+
+#: df9a0ae906324c17b51539a30038d691 of sds.linear.list.CircularLinkedList:109
+msgid "Singly linked list without circular connection."
+msgstr ""
+
+#: cf4661b8b12c43568580468e0cbbb1eb of sds.linear.list.CircularLinkedList:111
+msgid ":obj:`DoublyLinkedList`"
+msgstr ""
+
+#: 7cb157cbbed44680a9e058ef6a229a53 of sds.linear.list.CircularLinkedList:112
+msgid "Doubly linked list with bidirectional traversal."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 146305c57a7e46958c308d26eee23e35 2ec7ec0991d64896a4bc2f6f517d26a8
+#: c684ffa328474467871abe6e4c0f4daf of
+#: sds.linear.list.CircularLinkedList.__init__:1
+msgid "Initialize an empty circular linked list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:13
+#: eed27ccd7042413ca9b680d48ed043ae
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: c4de1c76ff9044cb95cb201266392afd
+msgid ":py:obj:`__init__ <sds.linear.CircularLinkedList.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 2c1063588e244e7e91854112f9e2a1a4
+msgid ":py:obj:`add <sds.linear.CircularLinkedList.add>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 50b99e7c13434772ae9f286a329685a8
+msgid "Add an item to the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: d3bde3875faa4edea13e6180c91e2ee8
+msgid ":py:obj:`append <sds.linear.CircularLinkedList.append>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 20c853b8a56e49b1ab3e6adba121b1ab 261c349e09b94564bf20b8ae4a809152 of
+#: sds.linear.list.CircularLinkedList.append:1
+msgid "Add an item to the end of the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 4de6da449b4b482182389cf7cf749d50
+msgid ":py:obj:`clear <sds.linear.CircularLinkedList.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 2070f2487530458fbe40b480e0a75fa1 942701fbdc3e4d49b11006398bfc1e4a of
+#: sds.linear.list.CircularLinkedList.clear:1
+msgid "Remove all elements from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 9965cb2ce2894bb68936839326d73da1
+msgid ":py:obj:`find <sds.linear.CircularLinkedList.find>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 0dd7ffea913f4ebfa8e173a97871622d 66cd1f7b94c44514ad5b87f2a962b924 of
+#: sds.linear.list.CircularLinkedList.find:1
+msgid "Find the index of the first occurrence of an item."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: d9087451ebd544799eb329daf1234b12
+msgid ""
+":py:obj:`insert_at <sds.linear.CircularLinkedList.insert_at>`\\ "
+"\\(index\\, item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 5e84aaef260d44059cf1a6f7942b0dfe f1a2c5218be04cc8bb8f05871f7c76b7 of
+#: sds.linear.list.CircularLinkedList.insert_at:1
+msgid "Insert an item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: ef4be3e6f2614d31bfeed2bcea23da19
+msgid ":py:obj:`is_empty <sds.linear.CircularLinkedList.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: aaef770ccbdf469bb246530a69cf4645
+msgid "Return True if the list is empty."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: ca7129c3e30a4b41bb33b8838405f277
+msgid ":py:obj:`prepend <sds.linear.CircularLinkedList.prepend>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 86c2dfd3ad954a93b3ad2b53009efc8b 97de251393fd426488bcf71c0e75629a of
+#: sds.linear.list.CircularLinkedList.prepend:1
+msgid "Add an item to the beginning of the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: d916db49923f4ddab34de34a1fb5da63
+msgid ":py:obj:`remove <sds.linear.CircularLinkedList.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: aeacd83d88e44c8881304861061988b8 c317d8368dae436da2d9965e9d3463bd of
+#: sds.linear.list.CircularLinkedList.remove:1
+msgid "Remove the first occurrence of an item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: ff4d48ea5ec94e3b94141010231c88fd
+msgid ""
+":py:obj:`remove_at <sds.linear.CircularLinkedList.remove_at>`\\ "
+"\\(index\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 0fe08a265fbf43e88b1c5897f33b4ad5 19165a7bfe3e4d34b161a909fb0c776b of
+#: sds.linear.list.CircularLinkedList.remove_at:1
+msgid "Remove and return the item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 5601b44403f84d42bd356108f2105295
+msgid ""
+":py:obj:`remove_first <sds.linear.CircularLinkedList.remove_first>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 5e966c37ef1846c88dd8537502971cd8 87c50e1fa4e64667bb2d4471dddbdd3b of
+#: sds.linear.list.CircularLinkedList.remove_first:1
+msgid "Remove and return the first item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: c7e2324719cf449d8c4f16f8de1bc2c4
+msgid ":py:obj:`remove_last <sds.linear.CircularLinkedList.remove_last>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 3a7eb6dabc6a42498b4a9634dadc5285 aad0125534a54e77ab9332cce1c22198 of
+#: sds.linear.list.CircularLinkedList.remove_last:1
+msgid "Remove and return the last item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 8e183a395f2b428893e039f4d36b6527
+msgid ":py:obj:`reverse <sds.linear.CircularLinkedList.reverse>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 7872ad92020f42eb8416681028f55b9e aa9298e94692480e9c61443bf7ba044a of
+#: sds.linear.list.CircularLinkedList.reverse:1
+msgid "Reverse the list in place."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: ca4f1e5a379f42a9b89e5b13a5f4e80d
+msgid ""
+":py:obj:`rotate <sds.linear.CircularLinkedList.rotate>`\\ "
+"\\(\\[steps\\]\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:34:<autosummary>:1
+#: 37fa24b4e36d48bda46c26151834ff59 8c847cec230443d7a7f93a518be3a3d7 of
+#: sds.linear.list.CircularLinkedList.rotate:1
+msgid "Rotate the list by moving the tail forward by steps positions."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst:36
+#: 3c7406b33c87415497adac1f38960f15
+msgid "Attributes"
+msgstr ""
+
+#: be79efe53bdb453fb9c821cfd3ed4315 of
+#: sds.linear.list.CircularLinkedList.__init__:1:<autosummary>:1
+msgid ":py:obj:`head <sds.linear.CircularLinkedList.head>`\\"
+msgstr ""
+
+#: 649ead519ed34311997a60cafa437982 7438a378402d4857a2af2df9d743091d of
+#: sds.linear.CircularLinkedList.head:1
+#: sds.linear.list.CircularLinkedList.__init__:1:<autosummary>:1
+msgid "Get the first node in the list."
+msgstr ""
+
+#: 78637ddbdd9c42e2bda4e796366678f8 of
+#: sds.linear.list.CircularLinkedList.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.linear.CircularLinkedList.size>`\\"
+msgstr ""
+
+#: 6e004e6e1cbb4c9196776894dcef86ed of
+#: sds.linear.list.CircularLinkedList.__init__:1:<autosummary>:1
+msgid "Get the number of elements in the list."
+msgstr ""
+
+#: e84513d3122f4b1796c356f893a019aa of
+#: sds.linear.list.CircularLinkedList.__init__:1:<autosummary>:1
+msgid ":py:obj:`tail <sds.linear.CircularLinkedList.tail>`\\"
+msgstr ""
+
+#: 33638b86797241c08256eb6604e9627c a09deb13f2a04096a537f3165d98bc95 of
+#: sds.linear.CircularLinkedList.tail:1
+#: sds.linear.list.CircularLinkedList.__init__:1:<autosummary>:1
+msgid "Get the last node in the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst
+#: 00f9cebf516443e9ba1850f7c4362ac9 06a04472a67b4fa5b47d611b920cb810
+#: 19d55f511ccc4623a03dc8179444b869 48914245726f4a8589a888ad6e7f9629
+#: 4c0330b0abea428eb909bab7e5c18b5f 532ed4fa56e647599d336f87a70677d8
+#: 8c00194157414fb49702693a4faf8a7b 96fd1d3fa3734eab8a0b86d66a18baed
+#: 9e633dff5cfe43c788b220496e82213d af88d9a903284f9285738c0739c39cd2
+#: d58bba99a6404afd9d83f70329bdee5f
+msgid "Returns"
+msgstr ""
+
+#: cec47870e0054abe82b90bfcbf2f062b of sds.linear.CircularLinkedList.tail:3
+msgid "The last node, or None if the list is empty."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst
+#: 0d0989b1037c49809e622fcc1980aed6 12e30be5926c4e608b10058833360713
+#: 1cf6506187e7473da23c18d1094e7d53 25da47996eb94f4098486de729317061
+#: 6b2d41101e2e4b27a30d516ccaf95412 8ad2d21f21d54ffc8422df5ddb122725
+#: 92baea5293964ea19c81a7468e5aba31 a9e687aadf2d4a6a895e23b89e25f3bc
+#: b3fcfdcabc7d430cac3fdc5c72b0f1ee c6020191269c45f19c5aeaba8802bae0
+#: c905ebc5dfe44b39a269bddee538e699
+msgid "Return type"
+msgstr ""
+
+#: 7560ebd3578d42ef8bdc8b1658ed0db0 of sds.linear.CircularLinkedList.tail:20
+msgid ""
+"The head can be accessed as tail.next when the list is not empty. This "
+"property is read-only."
+msgstr ""
+
+#: 03df6d6ec6904355ab5b2fee0a2f740b of sds.linear.CircularLinkedList.head:3
+msgid "The first node (tail.next), or None if the list is empty."
+msgstr ""
+
+#: 07d72de8f47f448a8f61ca0dbe9b79e2 of sds.linear.CircularLinkedList.head:17
+msgid ""
+"The head is always tail.next in a circular list. This property is read-"
+"only."
+msgstr ""
+
+#: 37f2e3c922274b56b73637619b2823f7 5d4b1a0d59a4404ea40f52f9b613ac64
+#: 68b0dcda16c44d3ba5bde92c8f175024 cf1cff7f8e1c4bb79c2c6565de66f452 of
+#: sds.linear.list.CircularLinkedList.append:17
+#: sds.linear.list.CircularLinkedList.clear:14
+#: sds.linear.list.CircularLinkedList.prepend:17
+#: sds.linear.list.CircularLinkedList.remove_first:20
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 7ca3bcb509d345de8013a69ba25bc27d of
+#: sds.linear.list.CircularLinkedList.__iter__:1
+msgid "Iterate over the elements in the list."
+msgstr ""
+
+#: 7085f76b2bb14c85941e9f17aad529ed of
+#: sds.linear.list.CircularLinkedList.__iter__
+msgid "Yields"
+msgstr ""
+
+#: 80ad53f4f9a94b12ba2c4e221fb19c3f of
+#: sds.linear.list.CircularLinkedList.__iter__:3
+msgid ""
+"*Any* -- Elements from the list in order, iterating exactly once through "
+"the circle."
+msgstr ""
+
+#: 3a362b75ed514bdcbe5ead1c5e2f9564 of
+#: sds.linear.list.CircularLinkedList.__iter__:16
+msgid ""
+"Time complexity: O(n) for complete iteration The iteration explicitly "
+"stops after visiting all nodes to prevent infinite loops."
+msgstr ""
+
+#: 5b52af8099c64d6bb92e92eb45f04229 of
+#: sds.linear.list.CircularLinkedList.__contains__:1
+msgid "Return True if item is in the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst
+#: 128c2193c55c4c9cbe3cee1182927940 19bb664e078c41719ad6d07d92982830
+#: 20e267896b124cfd907e9f7bdb6dde10 2ae3dec319f54593976b348d402c55f8
+#: 2d103bcacc41445e8cc02f9cfd792469 3d1330bea6244bffbbfdc86c15c57a76
+#: 76b8539b5ee0411ea4bdb678dec4d697 7ab28d87508347b4be93f479b063c14e
+#: 96b9c93ac1784d488d07f0657fe9544c d4e7c6913d46448fb63383efae7b20df
+msgid "Parameters"
+msgstr ""
+
+#: 4480866b504a493bb5489631f99a04d4 of
+#: sds.linear.list.CircularLinkedList.__contains__:3
+msgid "The item to search for."
+msgstr ""
+
+#: 4bdfa6ab543640cfba555c3fbb911d73 of
+#: sds.linear.list.CircularLinkedList.__contains__:6
+msgid "True if the item is found, False otherwise."
+msgstr ""
+
+#: 1fbf3a3aebd54c1a828aeb8f85e3f48b 5d103d4aa42f4f9587ece708ae75f40c
+#: 5f0e7f80c69743f6a2b9d131a0d2ce35 6ab589bdd8954d5283a85496bc87ab1b
+#: c7cec4a3865944b194a0ac83695c7f73 cb965e0e17f7486cbbdd8e6b1cc89e1e
+#: cf469ac938064906a4e9cbcee75cc8bb of
+#: sds.linear.list.CircularLinkedList.__contains__:21
+#: sds.linear.list.CircularLinkedList.__getitem__:24
+#: sds.linear.list.CircularLinkedList.__setitem__:21
+#: sds.linear.list.CircularLinkedList.find:22
+#: sds.linear.list.CircularLinkedList.insert_at:21
+#: sds.linear.list.CircularLinkedList.remove:25
+#: sds.linear.list.CircularLinkedList.remove_at:25
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 5348ff7acb164bb6ba7a63614b13d1be of
+#: sds.linear.list.CircularLinkedList.__repr__:1
+msgid "Return a detailed string representation of the list."
+msgstr ""
+
+#: 4064daf761f34294b434dca75419a529 of
+#: sds.linear.list.CircularLinkedList.__repr__:3
+msgid "String in the form \"CircularLinkedList([item1, item2, ...])\"."
+msgstr ""
+
+#: fe114e0ddfe24fdeb28257e07b8be5dd of
+#: sds.linear.list.CircularLinkedList.__str__:1
+msgid "Return a simple string representation of the list."
+msgstr ""
+
+#: 6bdfa73021c54ed69d7c8dc43a0f7f64 of
+#: sds.linear.list.CircularLinkedList.__str__:3
+msgid "String showing the circular structure."
+msgstr ""
+
+#: 8210cf4890814affb98a0a7b8a318a48 of
+#: sds.linear.list.CircularLinkedList.__getitem__:1
+msgid "Get the item at the specified index."
+msgstr ""
+
+#: 6e75d2da25e349cb933098bd4f0fee1d d8cd4781b4eb4bbe91994743c9f2f664 of
+#: sds.linear.list.CircularLinkedList.__getitem__:3
+#: sds.linear.list.CircularLinkedList.__setitem__:3
+msgid "The index (supports negative indexing)."
+msgstr ""
+
+#: 3407dd299c86438e8578fc93eff30e3d of
+#: sds.linear.list.CircularLinkedList.__getitem__:6
+msgid "The item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.CircularLinkedList.rst
+#: 1868b81dcb094f0e80c2aaf04d25a3da 31e210d675d545889fb45c999d071cd5
+#: 42a205319bde47c3ace0a093d4476c52 46e7ec904c4b45a69c4e82485c7a7c01
+#: 754c9f65103b4c1098bfaa4bf5bb3969 79fb59285ecc46e79f64a907d52ae44e
+#: b0ff0377e1c045848355f0f127ca8cf9
+msgid "Raises"
+msgstr ""
+
+#: 192321c0c6df4a6e9cff0650523549be 3fd8598975114f0bbddd2c68e2bade03
+#: c90044960ffe49bfa00458c740b7a183 fde2e8a8f2264c089081d1aaef7aaf92 of
+#: sds.linear.list.CircularLinkedList.__getitem__:9
+#: sds.linear.list.CircularLinkedList.__setitem__:8
+#: sds.linear.list.CircularLinkedList.insert_at:8
+#: sds.linear.list.CircularLinkedList.remove_at:10
+msgid "If the index is out of range."
+msgstr ""
+
+#: 93718e1becfd4130beb9ca7eaf2a5262 of
+#: sds.linear.list.CircularLinkedList.__setitem__:1
+msgid "Set the item at the specified index."
+msgstr ""
+
+#: dea8b248a02a4a40a91c4186809ff220 of
+#: sds.linear.list.CircularLinkedList.__setitem__:5
+msgid "The new value."
+msgstr ""
+
+#: 54009ee0cb6044c48fddb132ed12a33c 958d731c4df54fb28208c017450f0ce6 of
+#: sds.linear.list.CircularLinkedList.append:3
+#: sds.linear.list.CircularLinkedList.prepend:3
+msgid "The item to add."
+msgstr ""
+
+#: 2c92141551274171bf1d8988f992c4ff of
+#: sds.linear.list.CircularLinkedList.insert_at:3
+msgid "The index where to insert (0 <= index <= size)."
+msgstr ""
+
+#: f3d3514df1d44e43a1c6d107eb64d5ce of
+#: sds.linear.list.CircularLinkedList.insert_at:5
+msgid "The item to insert."
+msgstr ""
+
+#: c08f17e9ec8c4e0bb73a000e92c308aa c2ca5d1df5f941a58289bf504e0de840
+#: cb63c024f4fc493091ce5a86422698f5 f05e55bbdbf346cca810b26c142da3f4 of
+#: sds.linear.list.CircularLinkedList.remove:6
+#: sds.linear.list.CircularLinkedList.remove_at:6
+#: sds.linear.list.CircularLinkedList.remove_first:3
+#: sds.linear.list.CircularLinkedList.remove_last:3
+msgid "The removed item."
+msgstr ""
+
+#: 0d30517cda604df383e8968a4f134bf6 0f09f38c811d4cb1989b1cc9b238aa25
+#: 11036369f7eb425887f33eacf6248070 c5c37e18082e4440886590230cf5bc87 of
+#: sds.linear.list.CircularLinkedList.remove:9
+#: sds.linear.list.CircularLinkedList.remove_at:9
+#: sds.linear.list.CircularLinkedList.remove_first:6
+#: sds.linear.list.CircularLinkedList.remove_last:6
+msgid "If the list is empty."
+msgstr ""
+
+#: a0a1d97a088c4f1180c7e0a7e9238525 of
+#: sds.linear.list.CircularLinkedList.remove_last:20
+msgid "Time complexity: O(n) Must traverse to find the second-to-last node."
+msgstr ""
+
+#: f5d4906c5f7e4884a6a7935614136dc0 of
+#: sds.linear.list.CircularLinkedList.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: 084dac4888534ca9b34b04fadc4a64c4 of
+#: sds.linear.list.CircularLinkedList.remove:10
+msgid "If the item is not found."
+msgstr ""
+
+#: 2d8671fbe7bf460ba0dcc273f8962541 of
+#: sds.linear.list.CircularLinkedList.remove_at:3
+msgid "The index of the item to remove."
+msgstr ""
+
+#: b5651f0307724d6aa70418cba048c449 of
+#: sds.linear.list.CircularLinkedList.find:3
+msgid "The item to find."
+msgstr ""
+
+#: cfe65d03cbf04cf19cf9df7d17c8a9f0 of
+#: sds.linear.list.CircularLinkedList.find:6
+msgid "The index of the item, or -1 if not found."
+msgstr ""
+
+#: bb841b2671174e328cea1732cde7896a of
+#: sds.linear.list.CircularLinkedList.reverse:17
+msgid ""
+"Time complexity: O(n) Space complexity: O(1) The circular structure is "
+"maintained after reversal."
+msgstr ""
+
+#: 51b5cafd791848f6808f965f9ce31b48 of
+#: sds.linear.list.CircularLinkedList.rotate:3
+msgid ""
+"Positive steps rotate forward (tail moves right), negative steps rotate "
+"backward (tail moves left)."
+msgstr ""
+
+#: 17a2a74e40e64f6aae1834f301729fd9 of
+#: sds.linear.list.CircularLinkedList.rotate:6
+msgid ""
+"Number of positions to rotate. Default is 1. Positive for forward, "
+"negative for backward."
+msgstr ""
+
+#: 7737af2dfbbe4210a6ae775d1b0d0ae5 of
+#: sds.linear.list.CircularLinkedList.rotate:19
+msgid "Rotate forward:"
+msgstr ""
+
+#: 19e5fdcbe15141e289f321699ef532e1 of
+#: sds.linear.list.CircularLinkedList.rotate:25
+msgid "Rotate backward:"
+msgstr ""
+
+#: 73c052b0801346178af044471efbeab0 of
+#: sds.linear.list.CircularLinkedList.rotate:33
+#, python-format
+msgid ""
+"Time complexity: O(steps % size) This operation is very efficient for "
+"circular lists as it only requires moving the tail pointer."
+msgstr ""
+
+#: 354ed275cc49447d8247f5b0442e555d of
+#: sds.linear.list.CircularLinkedList.rotate:37
+msgid "Rotating by size (or multiples of size) returns to the same state."
+msgstr ""
+

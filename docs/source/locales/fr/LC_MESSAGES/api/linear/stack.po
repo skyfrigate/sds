@@ -1,0 +1,1022 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/stack.rst:5 ../../source/api/linear/stack.rst:54
+#: 76aeb3c3719048e7a53ed361b6a45992 e5f31d66b6bf4292a1487a2d65d11676
+msgid "Stack"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:10 7e28c6389a6c4c40b1cd9b26176bee77
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:12 db69bced1911499fad2f4cd6fe956f3c
+msgid ""
+"This module provides a Stack implementation using a linked list "
+"internally. A stack follows the Last In First Out (LIFO) principle: the "
+"last element added is the first one to be removed."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:42 99df80f9566c405e8ed391b673e202c2
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:49:<autosummary>:1
+#: 49547d932df34e7d83e43d9e69a22dd8
+msgid ":py:obj:`Stack <sds.linear.stack.Stack>`"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:49:<autosummary>:1
+#: e6ff888fbb1443d58a1e33aa5a315e3d e74d96b41d1e46a29ae451fbcee7803c of
+#: sds.linear.stack.Stack:1
+msgid "A Stack (LIFO - Last In First Out) implementation."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:51 265e3d2fcf804df9a9885dbdf6972337
+msgid "Detailed Documentation"
+msgstr ""
+
+#: 0c6da70395b340c3ad6d7732695ead9e of sds.linear.stack.Stack:1
+msgid "Bases: :py:class:`~sds.core.interfaces.LinearCollection`"
+msgstr ""
+
+#: 472fe83a480d4348b178dddeb699adc2 of sds.linear.stack.Stack:3
+msgid ""
+"A stack is a linear data structure that follows the LIFO principle: the "
+"last element added is the first one to be removed."
+msgstr ""
+
+#: da5a1daabe4543f9aa0082068b942938 of sds.linear.stack.Stack:6
+msgid ""
+"This implementation uses a LinkedList internally for efficient O(1) "
+"operations."
+msgstr ""
+
+#: 8ed33953496f4726a6fbcbf6ef97be38 of sds.linear.stack.Stack:10
+msgid "The number of elements in the stack (read-only property)."
+msgstr ""
+
+#: 0d56ca9bb9f44d9b9377d9381a4128db 619a4c80d6a6400e988fac96fa918337
+#: 679a29e848be44c0b00a71c957f7f798 6a64a83e9c7e4fdfbc2c9e6c65085016
+#: f683ebbc12734f0082f79b977aea80c4 of sds.linear.stack.Stack
+msgid "type"
+msgstr ""
+
+#: b79c1553c28b4c1a960e9d1112c9eb03 of sds.linear.stack.Stack:12
+msgid "int"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:469 ../../source/api/linear/stack.rst:472
+#: ../../source/api/linear/stack.rst:475 ../../source/api/linear/stack.rst:478
+#: ../../source/api/linear/stack.rst:481 ../../source/api/linear/stack.rst:484
+#: ../../source/api/linear/stack.rst:514 ../../source/api/linear/stack.rst:517
+#: ../../source/api/linear/stack.rst:518 ../../source/api/linear/stack.rst:520
+#: ../../source/api/linear/stack.rst:521 053400f5addc42ee8296a34e57bb18b0
+#: 335e36f39b3f4824bec626cafc632d6d 3b9636045f2846fda4d35732756264df
+#: 4a5a20ceb937473cb53595f0e17cc5c4 597bc570bd734f1ea833069fea15c147
+#: 9d11fff70b514e58baab8eeec7c7a13d b4cc6ad498e9424cb7e2f1bf75ddda23
+#: b9eb8f656e26431c8a76c72ec0244b64 cb62a5ea931f41ecaa2085e9fd6227b6
+#: cbeacefe2d1a40cc8a8d23c99d4d01a1 d7a97f9959a1435eaf6049b766ce7dd2
+#: f17f749afad445fab774d9e64d0459f6 f6a0e541a98a41c79b091c478200511c
+#: f9f722b4edab4ab8b1a343226a5c8287 of sds.linear.stack.Stack:26
+#: sds.linear.stack.Stack:32 sds.linear.stack.Stack:38
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:487 ../../source/api/linear/stack.rst:490
+#: 0e22b9f8577b4b0ead15b7f9430792cb 2814b19275774f9fb782f9734e10f9c1
+#: db81f4c414584db18429f2f4c55fde61 of sds.linear.stack.Stack:44
+msgid "O(n)"
+msgstr ""
+
+#: 09b1d08f54f24cc3818ec1caaa5a06eb 112df4d360a44b1eb48b9892180049aa
+#: 2277b066549d4aaaba8ac3c27bb23f7f 2ed49c4df4c247deaca4158cff452ce7
+#: 4518aa93959c4d8babb7a98ebc745d59 4e6a7e178ead4d8ea421a1381cab21cb
+#: 54cb9e85083e4750abc22a9e42e5d18d 570e98607ef641d59716437cc965fcd1
+#: 5809808ae422427ab3137bdff9f9ad61 5cfe024d02ee4bf3b145ebb895e211f0
+#: 5f28a6f7add84de289d3db60953a9337 76c65153bc2f4f4bb4231c924f9b033a
+#: 9075406634dc45e39c0b864c950dd758 ae7b8b36c834434f953fd599b5e1c854
+#: b180702378c9407cab32cd1efd217f11 cd8793c77a0b4115a20c688b443087c0
+#: ce88dd64529d460ab3e9422c5d1db6c1 d85b9b5bb83443828dca14d79f1ed8c4
+#: deeddf8f9dfb4508aa41664708bb6778 dfa4cbf6838647d9897931440044dd59
+#: e3c9edcc264942ed8976ec4140586a9f e5c5ddc363e24a1f88e2dcb871844775
+#: e8e150a2474641ca858d3cf0f51252d4 e8ede6410ada46f6ac11cb82e7650aef
+#: f4d974ec23004061bde41ef342b67867 f66021161ccc401f886ec0ca47307528
+#: f7c88cb0893a41689288990f2ebeebee of sds.linear.stack.Stack:46
+#: sds.linear.stack.Stack.__contains__:9 sds.linear.stack.Stack.__iter__:5
+#: sds.linear.stack.Stack.__len__:6 sds.linear.stack.Stack.__repr__:6
+#: sds.linear.stack.Stack.__str__:6 sds.linear.stack.Stack.add:9
+#: sds.linear.stack.Stack.clear:3 sds.linear.stack.Stack.is_empty:6
+#: sds.linear.stack.Stack.peek:8 sds.linear.stack.Stack.pop:8
+#: sds.linear.stack.Stack.push:6 sds.linear.stack.Stack.remove:15
+#: sds.linear.stack.Stack.size:6
+msgid "Examples"
+msgstr ""
+
+#: e04e28849b324affb44143149db262a2 of sds.linear.stack.Stack:48
+msgid "Create and use a stack:"
+msgstr ""
+
+#: f86bb521ff324cedadc5d29e87555a69 of sds.linear.stack.Stack:57
+msgid "Pop elements (LIFO order):"
+msgstr ""
+
+#: c6ae4b9e5571441e859736d6f19711df of sds.linear.stack.Stack:66
+msgid "Check if empty:"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:467 04dc3be1afc64a598af8686d0fa027c3
+#: 11c6ef2b4d684af0b5146a0b907d62ea 229c330e97404834b6e4374db0897777
+#: 256b38cbfcda46cca73051c6bd46b56d 36495afc32dd46a685a7e50beb947a7b
+#: 3f042322489b45d6b39635a35de99587 489ad996fa5c49c886be70fb151bdfe3
+#: 5233aca206b84b428e5b6896a7d5fb61 67a7f251f8f94277bbf5b46fbe2c1165
+#: 70b4c55d09fc46ccad075e03e36750dd 74403838599945cd9afa5b2e34a08313
+#: 8201ebbb2d2543f68fea3f1e9eb5abbd 9177414a16084cd4bfa73102f01c2493
+#: 977d42a506a5480699eed7b0848fa17b a2824a567b8047d0b2d14a2b74554991
+#: a50099473d4f492dafa8c0de82797e63 a9d5d6aff18942ae987aa4f14d78fc15
+#: d5f471b167264622bd433b372dd7a892 e5a0469e613d4314b95d78bb7bf996cc
+#: eae428df539144d59ecadff4b3a4c4c3 eb964aeb763a47da9205ffe24dda932c
+#: f11d061402bf48ad945a06d1e1df655a f92c95f0ad7f40408d629aaa1b51b641
+#: fa3f07d935574b86b815f348fa448bd1 of sds.linear.stack.Stack:74
+#: sds.linear.stack.Stack.__contains__:19 sds.linear.stack.Stack.__iter__:14
+#: sds.linear.stack.Stack.__len__:15 sds.linear.stack.Stack.add:17
+#: sds.linear.stack.Stack.clear:14 sds.linear.stack.Stack.is_empty:15
+#: sds.linear.stack.Stack.peek:18 sds.linear.stack.Stack.pop:22
+#: sds.linear.stack.Stack.push:14 sds.linear.stack.Stack.remove:26
+#: sds.linear.stack.Stack.size:15
+msgid "Notes"
+msgstr ""
+
+#: 0f6efd1119a14625adad25013e02d28e of sds.linear.stack.Stack:76
+msgid ""
+"All operations at the top of the stack are O(1). The stack cannot be "
+"accessed by index as this would violate the LIFO principle."
+msgstr ""
+
+#: 03a8eff17c3a408d8750210525af911e of sds.linear.stack.Stack:81
+msgid ":obj:`Queue`"
+msgstr ""
+
+#: ba3cba141f774174b93a677b3e5732e4 of sds.linear.stack.Stack:82
+msgid "FIFO data structure."
+msgstr ""
+
+#: 9315a93612a74c89b0cc24bbefc8256a of sds.linear.stack.Stack:84
+msgid ":obj:`Deque`"
+msgstr ""
+
+#: 70d46534b39f4d7ea56f76ecf7d22878 of sds.linear.stack.Stack:85
+msgid "Double-ended queue allowing operations at both ends."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:63 1f80043325414caf9f86c931b1ff5b93
+msgid "Constructor"
+msgstr ""
+
+#: 6844a0b832024b43bcebe9e56c1c9e8f ef172f2e299c4ffbbf23c7080c7d9809 of
+#: sds.linear.stack.Stack.__init__:1
+msgid "Initialize an empty stack."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:67 9d782b6d960345959b15336be8fc1a9f
+msgid "Properties"
+msgstr ""
+
+#: 5e8978bffe894e16ae2c83773efe056e 6d0a97f80d3d42d081348c7fee47e67e of
+#: sds.linear.stack.Stack.size:1
+msgid "Get the number of elements in the stack."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst 1eb7a3dfd4f4429d95d47e8bc7cd46b5
+#: 200b3e6cf89e40a29c29eb37d2d312e4 227f776c1c3047b8bc2ab69c6a2d78b4
+#: 41a04ade42c643c2a9ddc18bedfbee03 5063b54b41d24c46bb61d2daf2b6dbe4
+#: 52b148ddeafe47a087863fc39920373a 5f9ee0149b4b45a991fd7c4c30a75e0c
+#: 6372e530318948a58081bde9af2341fe 63d8e1681b6248bdbd2f2703196bfda3
+#: 7d9988fcf4ac49f1abc3d35ada09c8b5 802028e34d8341ebbaa0dbc25e79877d
+#: 811d9886d3584136b99e2de50d2bb649 b73482c3d671490a82a7799f55121625
+#: e28a012a8b3149689c4b6345bdbe27f7 e75f499e4d8a4d3280d022b9dc5a7900
+#: f120ad86cd044c86aeee9397e26abef1 faa646123620457fbc1a930172d4031e
+#: fd7f4dcbc7f34c3f8dc3ba5016ba8131
+msgid "Returns"
+msgstr ""
+
+#: 50b44ef029824c578288ce71edf33001 a4e4a50eca264bee9dd488991cfeb5d7 of
+#: sds.linear.stack.Stack.size:3
+msgid "The number of elements currently in the stack."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst 2b14b57c78174480b59f05750d737e94
+#: 31b3d5b05c254b948ea033bdb8e412e7 31d520afcc5e494482b8ed2cc421bcdc
+#: 3baf0a285b66446da15fa99976787477 3c6583a0f58c4e86901dc0f82837d807
+#: 3e0ad72fb95f41c49b72478b73d22996 4119d9c2ce424d7ea7bb2919a29fe70d
+#: 47b2d64049354e0ca26c707788bc8f07 5b4365242b244b299e50cf0a43a6717d
+#: 5e67701714d84a80a7cf3febcc908d43 65e20dd8c4734bdd8a95a9e600330c8e
+#: 8fa80f3c2f49446ab4d39ec18efad44c a0cd5d5fb3204488874f9ede6c8ceb33
+#: a4a3824cc9f6425da35ec0450f52c7f0 afab9306f3324ec7931e7c2d8efa203c
+#: c072a2d977e9470d9c208dde2061683d c14fe51b4c4b4b4d8a940678d92776c0
+#: c36cea3c1e2e452fa0e2a2e47606c478
+msgid "Return type"
+msgstr ""
+
+#: 88bf9812fca44f76a107b3eb1757cb98 d55112e2d9fc45e5bfefc68079ad27f3 of
+#: sds.linear.stack.Stack.size:17
+msgid "This property provides O(1) access to the stack size."
+msgstr ""
+
+#: 5a2b194a25134fafba55e6a5acdee5eb 6c551a2750344818b538bc3e8b0931fa of
+#: sds.linear.stack.Stack.size:21
+msgid ":obj:`__len__`"
+msgstr ""
+
+#: 83d0739e234640809269421c2414b399 e796442f97834dd58b77d6b9c95c5e27 of
+#: sds.linear.stack.Stack.size:22
+msgid "Returns the same value, allowing use of len(stack)."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:71 96e190cc7fda4357b6154279ea01af44
+msgid "Core Operations"
+msgstr ""
+
+#: 08f48c89c8c2463cb80826db17123a89 0e9d2440181542db8977020e3e77f2e3 of
+#: sds.linear.stack.Stack.push:1
+msgid "Push an item onto the top of the stack."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst 206e6ea1c0414aebb188317470ea0877
+#: 22f9ee2f5fad4c0da4661a0085181fac 6150b45ad0794dd1ac56d99b4a290cb2
+#: 66a23f2a21e5453b9d7e7f803992fd2a 801473552ace498384d6be0e5e4f3a9f
+#: ab53fc49137a4ec98ffac4fe5942662c b5b3bdeb61904545b91c17995f96d384
+#: bb955f92b4154ea5881e031860f7171c
+msgid "Parameters"
+msgstr ""
+
+#: 822cb2c7619f4206b91db23e119b0193 8f625f9849324738a703d780877674b7 of
+#: sds.linear.stack.Stack.push:3
+msgid "The item to push onto the stack."
+msgstr ""
+
+#: 096effeed998426a974fffb886955180 0d837045c5d44b63b2a27b46de910fd6
+#: 173f99ba191d4333b27c8134a9ba0049 2e31781e1af24e409f736e8e5923cd69
+#: 56b09286d4ea4231aae8f284ed43f4af 69015e798a804966a30300ac468a9d07
+#: d0cfc5bfd79a45779b4bfb14e6ab9e31 dbd32ad5e95c42a3a839c4ca3442c813
+#: e66514ef3916410f899ac612bd08e837 e7e790bee2a942e89ece81903694f9f5
+#: f331c33cb5a94f2396971a7b8f3ad7cb fc9c4177fc3a4297a46150b2f990b676 of
+#: sds.linear.stack.Stack.__len__:17 sds.linear.stack.Stack.add:19
+#: sds.linear.stack.Stack.clear:16 sds.linear.stack.Stack.is_empty:17
+#: sds.linear.stack.Stack.pop:24 sds.linear.stack.Stack.push:16
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 0a9d2a6ebda54f299fd8a2375178ed37 16d3981ad74d46f3884d3d56d2712af3
+#: 2b62bf0d5bdd4279b831db0c547c5e27 b18bf73f68764769bfad47667ef7c330
+#: be9419ad1f584eeaaa539244b6e7c0c0 c556405f7deb4647b3767ed90b3101fe of
+#: sds.linear.stack.Stack.peek:25 sds.linear.stack.Stack.push:20
+#: sds.linear.stack.Stack.remove:34
+msgid ":obj:`pop`"
+msgstr ""
+
+#: 050030dfc9664f66867f5c0a508eaf71 b847f90ae10d467386caa40a7797b771
+#: c40cbc61c1354614a23c4a2f44ff2938 ce435409a431416aba622d3863b60129 of
+#: sds.linear.stack.Stack.peek:26 sds.linear.stack.Stack.push:21
+msgid "Remove and return the top item."
+msgstr ""
+
+#: 438c2c3ca51c492ab29731cf129db40d 5da4518a8d004b6eb84803ae022adad4
+#: 6348564c41a4487abcb6d08a37d38979 e05dc798bb61433588ecf69a6fd900a6 of
+#: sds.linear.stack.Stack.pop:31 sds.linear.stack.Stack.push:23
+msgid ":obj:`peek`"
+msgstr ""
+
+#: 1383d64f5f5046f7a3d5a526b39413e2 1bc28b2085df4a958f1577be5e410575
+#: ad74a603420c4f378ae0155af02c3ff6 e36f8949220645b685eb104ceee83eff of
+#: sds.linear.stack.Stack.pop:32 sds.linear.stack.Stack.push:24
+msgid "View the top item without removing it."
+msgstr ""
+
+#: 463032b48b9149ecb4790801473bfc25 f74bd0e139c94241af9d5d5ff2299abe of
+#: sds.linear.stack.Stack.pop:1
+msgid "Remove and return the top item from the stack."
+msgstr ""
+
+#: 817e8527aa054102b343d4e3638af6d6 877e344bb3c241708add2227af33ac1b
+#: a64d7c0005f1496d87852f1e0a08813e c2fcc6c6335647fc9e04eefe108ee057 of
+#: sds.linear.stack.Stack.peek:3 sds.linear.stack.Stack.pop:3
+msgid "The item at the top of the stack."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst 1c70467f874a48b693abacb4ea01e7b9
+#: 4980e397ff7b4fd2a4b4cdad4da7d1f6 8754fb147db9413da8af7a4804ad839b
+#: 99e6b81abb114b668d60f6813266493e b80834864d614d1db02c8e35a9d3081e
+#: ec00b967dc3c42c2a36e52abaf50dd9a
+msgid "Raises"
+msgstr ""
+
+#: 0ba323ea31d94b1ea802b7bf77e1c165 7dadbbb138da4ace8ae334c7ced0a569
+#: a822bbd4960e42a3b14a61879a982782 b407793b931545e2aa945dfd8d030be5
+#: b713d60f07db4de5906c0b5da7986f3b db365ade28194acaa7fe77adf124a7e2 of
+#: sds.linear.stack.Stack.peek:6 sds.linear.stack.Stack.pop:6
+#: sds.linear.stack.Stack.remove:12
+msgid "If the stack is empty."
+msgstr ""
+
+#: 0ab36b4468c048f9a4166f823642fac1 524806c2219c47629cd502fd164cd885
+#: c46c062f41cf41cfbfe088776aee3854 d591bfd0b3104b0f8c40a95cea5515f8 of
+#: sds.linear.stack.Stack.add:23 sds.linear.stack.Stack.pop:28
+msgid ":obj:`push`"
+msgstr ""
+
+#: 3b4ddcc908ed4c7993104b2c00058feb 702393222b9a4d4ea0e662894eba9ea3 of
+#: sds.linear.stack.Stack.pop:29
+msgid "Add an item to the top of the stack."
+msgstr ""
+
+#: 33411bfcd8ca4a8c9120b2c45fa931e5 9ba118be0b7942c6b2d8ae8cbc55d778 of
+#: sds.linear.stack.Stack.peek:1
+msgid "Return the top item without removing it."
+msgstr ""
+
+#: 2a85210e8bf34bfa98e04da0efc6e24b 8606c62a8f6644bcb85a5ff02b6600c9 of
+#: sds.linear.stack.Stack.peek:20
+msgid "Time complexity: O(1) The stack is not modified by this operation."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:77 a706ad3913c04e24ae46d33055cf9507
+msgid "Utility Methods"
+msgstr ""
+
+#: 115e338c32024f46be09815d700f13c5 827b2f630ef049f1b992c029221ecd5c of
+#: sds.linear.stack.Stack.is_empty:1
+msgid "Return True if the stack is empty."
+msgstr ""
+
+#: 0fd25b3b657e47658ac553074a959d19 6b3485d8e8074176af018776ca52394b of
+#: sds.linear.stack.Stack.is_empty:3
+msgid "True if the stack contains no elements, False otherwise."
+msgstr ""
+
+#: ddab21dd049a42bfb9c8477ac6355228 ddaeda969f9c44569841e72104fa39de of
+#: sds.linear.stack.Stack.clear:1
+msgid "Remove all elements from the stack."
+msgstr ""
+
+#: 03d1dba6eb19466891144319d850cece 796ca54ba13847888c5873b52a24505b of
+#: sds.linear.stack.Stack.add:1
+msgid "Add an item to the stack (pushes by default)."
+msgstr ""
+
+#: 27f5bf9fd45e45a685c24406b386a19e 528cda7d66ad4ee88d4f648e86640827 of
+#: sds.linear.stack.Stack.add:3
+msgid ""
+"This method is provided to satisfy the LinearCollection interface. It is "
+"equivalent to push()."
+msgstr ""
+
+#: b00d890a79624ff7a4eb81033ba16ecf b1ceacaac70640c8a6418cf970f6c8b3 of
+#: sds.linear.stack.Stack.add:6
+msgid "The item to add."
+msgstr ""
+
+#: e6690ec93ae140d4ad66079d056662d4 fc6896ae384b4a7fa4419693363a9711 of
+#: sds.linear.stack.Stack.add:24
+msgid "Preferred method for adding to a stack."
+msgstr ""
+
+#: 5660e860c69e4e3a99b1369a76a84a41 fd70d67fad3d42f1b7ff4abff333d1cf of
+#: sds.linear.stack.Stack.remove:1
+msgid "Remove an item from the stack."
+msgstr ""
+
+#: 96ee19459e89412a938ecbd1b54516db a68ff243136a45bd96b086285a872dbe of
+#: sds.linear.stack.Stack.remove:3
+msgid ""
+"Note: This violates the LIFO principle and should be used sparingly. It "
+"searches through the stack and removes the first occurrence."
+msgstr ""
+
+#: 0321240665514f10a5b44ceb5c019bf6 ae0e2e0ab32740ea9f92a89d879763cb of
+#: sds.linear.stack.Stack.remove:6
+msgid "The item to remove."
+msgstr ""
+
+#: 2fa19501015346899b857da44ab152b0 b8e7b38a34ab4a8293397125a4165df9 of
+#: sds.linear.stack.Stack.remove:9
+msgid "The removed item."
+msgstr ""
+
+#: 3c14ab9ec0f94ce8a9e62756dd3df32c c2e0856f777a48988f99815a43810ff0 of
+#: sds.linear.stack.Stack.remove:13
+msgid "If the item is not found."
+msgstr ""
+
+#: 6ff64028245844c0a0f257870fa0f6f5 8616c830fb2d464bbf2810afcaa52e3b of
+#: sds.linear.stack.Stack.remove:28
+msgid ""
+"Time complexity: O(n) This operation violates the LIFO principle and "
+"should be avoided in typical stack usage."
+msgstr ""
+
+#: 2fed0a20b2df4f64b5cac160e7f5f55d dd5719bcb93743798b8070a4197abef4 of
+#: sds.linear.stack.Stack.remove:35
+msgid "Remove the top item (proper LIFO operation)."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:84 aa5ad52491f842529f59e1f55784384a
+msgid "Special Methods"
+msgstr ""
+
+#: 08676b7dda5442088198d42efa226ec2 c417fd8161304c86b0d6409b522415dc of
+#: sds.linear.stack.Stack.__len__:1
+msgid "Return the number of elements in the stack."
+msgstr ""
+
+#: 471d9504f8764321973b320366c201c8 fcffc220a347440cb876ee4211481730 of
+#: sds.linear.stack.Stack.__len__:3
+msgid "The number of elements in the stack."
+msgstr ""
+
+#: 2c6ddecc086f40adac457ed0324790e3 3f311a48b2354c6ab0d3ab953986a0b7 of
+#: sds.linear.stack.Stack.__iter__:1
+msgid "Iterate over elements from top to bottom."
+msgstr ""
+
+#: 4d73aa6bd97e45cb820e974ecb1b5904 cd76e61f7d374738a129ab45e828f814 of
+#: sds.linear.stack.Stack.__iter__
+msgid "Yields"
+msgstr ""
+
+#: 84ae19b854a24d598fc82dbb799ce087 99d969120b9b4bc5b2dc1b4f89e5a3a7 of
+#: sds.linear.stack.Stack.__iter__:3
+msgid "*Any* -- Elements from the stack in LIFO order (top to bottom)."
+msgstr ""
+
+#: 7b1ad7a00aa9415981a7e773271802bc b03cd7a09c354b9884ef743c857003fd of
+#: sds.linear.stack.Stack.__iter__:16
+msgid ""
+"Time complexity: O(n) for complete iteration Iteration does not remove "
+"elements from the stack."
+msgstr ""
+
+#: 6b9015dc157245f1be583d4a74f9d318 9d5fafb0a6144e039a31d71d952b787a of
+#: sds.linear.stack.Stack.__contains__:1
+msgid "Return True if item is in the stack."
+msgstr ""
+
+#: 7923394f852d41b6bb26d37a58962fb3 938504f7628144dc929a52ce5ac9f459 of
+#: sds.linear.stack.Stack.__contains__:3
+msgid "The item to search for."
+msgstr ""
+
+#: 5238c0a809f94ae09eee3f1adca20f2b 5c3f689a27f94d31aab651276a43b3a3 of
+#: sds.linear.stack.Stack.__contains__:6
+msgid "True if the item is found, False otherwise."
+msgstr ""
+
+#: 754875a2f0764206bffdbefa8015069c afdd36d0b31f4965958a928ef9dea376 of
+#: sds.linear.stack.Stack.__contains__:21
+msgid "Time complexity: O(n) This performs a linear search through the stack."
+msgstr ""
+
+#: e26d4aa00454429b8456b6360bbdb4b1 e8ea6535301641d18107eb3c9848a3d8 of
+#: sds.linear.stack.Stack.__repr__:1
+msgid "Return a detailed string representation of the stack."
+msgstr ""
+
+#: 6a55538103454bf4911c59b2334b750d 99a3b7fa92a6443cb489c66be8651bb9 of
+#: sds.linear.stack.Stack.__repr__:3
+msgid "String in the form \"Stack([top, ..., bottom])\"."
+msgstr ""
+
+#: d694ad0513114096aafe3039f8ca8ebd ecf66817e1864279ae33affa6fb8fccf of
+#: sds.linear.stack.Stack.__str__:1
+msgid "Return a simple string representation of the stack."
+msgstr ""
+
+#: 103ee36d4cce428597404e2b8777a05c 32e3bdcc55e848a3acd31df8ee1978f5 of
+#: sds.linear.stack.Stack.__str__:3
+msgid "String showing the stack structure from top to bottom."
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:92 9e5239d936d043b1820905d655df827c
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:95 f271b0e0cf8e4fdaba2fb25055db1a53
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:98 0d0cfafae01d47b5aae9f37fabd300b2
+msgid "Creating and Using Stack"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:118 2c8fd76603584836a9b9a1123f7e1ca9
+msgid "Push and Pop"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:138 2dab9c6e7c6e4fac881dd964706dd136
+msgid "Peek Operation"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:156 78048395ca364308a96dd7de56d6a3e4
+msgid "Iteration"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:174 e2657b605030467186ce1cfa1ff5a3ba
+msgid "Contains Check"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:188 886ecc96f2a64bb29821bd1c90492cd9
+msgid "String Representation"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:208 039c59e1fdab415391e41876fb6aecf7
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:211 2ff1ce85d29043c7944f35e29fc8754d
+msgid "Example 1: Expression Evaluation"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:213 409a7273c70d49788f7a92b526e7305f
+msgid "Evaluating postfix expressions:"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:252 d9847cbc401b4dbfb30cff303e17f5c8
+msgid "Example 2: Bracket Matching"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:254 e0cfbc354152490cad061176e8ca6ae5
+msgid "Validating balanced brackets:"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:287 05c2f352dedd4346b668a9690ab529ff
+msgid "Example 3: Undo Functionality"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:289 700f318bc14e4679bdce1d04c9be49a7
+msgid "Implementing undo/redo:"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:345 1f8c5bc1794b483a853bc5dc09de16ef
+msgid "Example 4: Function Call Stack"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:347 30a7dfa18e9e4c0388b1f7f4176237d6
+msgid "Simulating function call stack:"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:411 59f12be8e6c7473991b86a766e963f50
+msgid "Example 5: Depth-First Search"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:413 59c73eedfdf34858a749923a2788a839
+msgid "DFS traversal using stack:"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:456 a51e9c80cbab46b5ae952497d1c5e304
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:459 67ffbbfde63a41e3ba5c35e18a680cc1
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:465 6728acdbaacd4237a19ef989f6230482
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:466 9e700f568bdb4eeb838e39aa5ec29667
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:468 d9e7ff74decc49538fe9ffac0f4be4d0
+msgid "``push(item)``"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:470 8c3b4ac585814f1aa27123246a5a2a0e
+msgid "Prepend to internal list"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:471 77e277e419a54013b6841569b5f556dc
+msgid "``pop()``"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:473 f4e401c3e4f247e2984719773f04fde4
+msgid "Remove from front"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:474 7f2b9716387b40009287d6428c4cf4c9
+msgid "``peek()``"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:476 4d53243972e841f9b3753edf077f199d
+msgid "Access first element"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:477 cc952811a6464931a6be4ee0f139e74b
+msgid "``is_empty()``"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:479 6def6e644fc249fc8a9e0ae0735473b5
+msgid "Check size"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:480 d320789102864292b251460d570a4c2f
+msgid "``clear()``"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:482 289c2f4fa283434983100c88da0567bf
+msgid "Reset internal list"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:483 9627447459c7460e98ef8a26555e5301
+msgid "``__len__()``"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:485 b5afd24f918c4870a57701d2fb46a8d8
+msgid "Cached size"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:486 ef2f34123f5c48619f21f2b0b63efea7
+msgid "``__contains__(item)``"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:488 010d8564153e43f8b43b2bbfdbdcdc6b
+msgid "Linear search"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:489 2b2ebe4141c04a5580e67d37c10aec41
+msgid "``__iter__()``"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:491 04ba89665b654db695c4785e57600126
+msgid "Traverse all elements"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:494 86fa51d69bd04f3f8f2cbad4c3b0e2e2
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:496 c159fffe9e30492793111c027b400436
+msgid "**Storage**: O(n) for n elements"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:497 8505e6464b3947bea6e00d805aad11f0
+msgid "**Per element overhead**: ~16 bytes (SimpleNode)"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:498 57e9d11d84a1467cae2da8d2d2bb2870
+msgid "**Stack object**: O(1) additional space"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:501 741131c9831547719b504955df367512
+msgid "Comparison with Alternatives"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:504 e0159b6f94fc421ba728bf951dc3192c
+msgid "Stack vs List"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:510 23cc457de19c4b46a5b745c7e431ddad
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:511 3605f3b30d1046369fd2868cffae8252
+msgid "Stack (LinkedList)"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:512 6e819984984b4ab08ce3a151f90d7359
+msgid "Python list"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:513 e1119eddff894cc19e1ecfd9fe8946e0
+msgid "**Push**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:515 53821fef1de04c9aabfb2fb7a05e88a6
+msgid "O(1) amortized"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:516 5e75b9642716452a95490b43852c4039
+msgid "**Pop**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:519 921658b014d5438090c943592ac493ca
+msgid "**Peek**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:522 ae40410dca0440a982cf60ee33a39d01
+msgid "**Memory**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:523 c1fde30816de46a3ae6f18f8bfb56aa3
+msgid "More per element"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:524 160e06f708d247248421031020c89c59
+msgid "More contiguous"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:525 f6f20f5ae5c146e9b9f114984f0128d9
+msgid "**Cache**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:526 692c8fe92f7547d7851d4cf47ee18e84
+msgid "Poor locality"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:527 756cceeadc3e4549b5ca7d5be758e2b0
+msgid "Good locality"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:528 17b075a71c06405e803a38b2bca05040
+msgid "**Semantics**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:529 c4b68ac03bb9471dbd2102afc363e6e4
+msgid "LIFO only"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:530 c8b75919dbbe47b3a0a55e8a2e95df5b
+msgid "Full list access"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:533 09b572721ffd4e96bbb9dcb5ccca07ac
+msgid "When to Use Stack"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:535 f692c1ffbc9c40dc80976fe422335fbb
+msgid "**Use Stack when:**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:536 58a678f5971d425586b9e6bafd7da295
+msgid "Only LIFO operations needed"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:537 bf5d48ef542d44d091535a4036430005
+msgid "Semantic clarity important"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:538 69e4e9e8c8584bd88777fe0340b243fd
+msgid "Implementing recursion iteratively"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:539 02c6b4bd06894e1ba743639a5d758ee6
+msgid "Backtracking algorithms"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:540 0cb35dccfd3d44f1a068b519502069f2
+msgid "Expression evaluation"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:542 1c0e7634ef4a4fec8b147d6ba1628894
+msgid "**Use Python list when:**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:543 1490aa0d6480416eb2be97533dc2c4f3
+msgid "Need random access"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:544 1e7751e05e6c451baace4f04df81bd68
+msgid "Memory efficiency critical"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:545 c9179ec4e7054542b8c6eaa8a1f50124
+msgid "Performance critical (cache locality)"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:546 05adb0a643294d4389f3851318a51b3c
+msgid "Mix of operations needed"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:549 e525e67f887f42378cb50240ef07d77f
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:552 e730d444706742cbac07d6ddf1987463
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:554 952fb0fa729845f09fda4ae23f077a62
+msgid "✅ **Use for LIFO semantics**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:568 a5bf47d2f2114462a7878cfdb881f9c2
+msgid "✅ **Check before pop/peek**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:579 5117efb4f9664f67846d0e105b57a768
+msgid "✅ **Use for recursion elimination**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:590 c119ba68ce294c83a5bb6ea50420a6e3
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:592 2c57513e9f454fb4b82325aea998d8a9
+msgid "❌ **Don't use for FIFO operations**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:599 d985448c076e4caa8d3bda6c33ddefda
+msgid "❌ **Don't access middle elements**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:606 8080608c278f41c88b11c2c82052879a
+msgid "❌ **Don't iterate if you just need to empty**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:618 7f9d9d1bc9514ece903c3459780e4919
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:620 9fc505265faa465abe1c39e90597cc44
+msgid "**Using wrong data structure**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:627 c528a57a115947a590b3a7739bd75533
+msgid "**Not handling empty stack**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:635 a97b0db5ddf34c6f84a0982261dff60c
+msgid "**Confusing with Queue**"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:643 1a0e20ce880848a3a451c5de11c589b4
+msgid "Design Patterns"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:646 788fcb2dfa474923948d33e688f5b5f3
+msgid "Command Pattern"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:671 8686be2323a7402a9ed45f5f73acefd8
+msgid "Memento Pattern"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:694 897b621e26ce44a4a1354a69cb0df732
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:696 eac02ec24704460aaa2aa78e622c364c
+msgid ":doc:`queue` - FIFO queue structures"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:697 6079585f67f14fc782b73cff075af000
+msgid ":doc:`list` - Linked list implementations"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:698 23546a3a2bba437ab27737d4cf8fdf80
+msgid ":doc:`../../guide/linear_structures/stack` - Stack theory and guide"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:701 c70c8358a66e48a1beac3f61e7984ec2
+msgid "References"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:703 0b9f0506b6c44755a9463e1aa673401e
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 10"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:704 222f3aeb4164422b85d3e557f2615f7a
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 1\", Section 2.2"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:705 e1bb8be31f0c4828907916752f50f269
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Section 1.3"
+msgstr ""
+
+#: ../../source/api/linear/stack.rst:706 3f86126e18454279896c1958001aca3b
+msgid ""
+"Aho, A. V., et al. \"Compilers: Principles, Techniques, and Tools\", "
+"Chapter 3"
+msgstr ""
+
+#~ msgid "Stack (LIFO)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Stack class implements a Last-"
+#~ "In-First-Out (LIFO) data structure "
+#~ "where elements are added and removed "
+#~ "from the same end (the \"top\"). "
+#~ "This is one of the most "
+#~ "fundamental data structures in computer "
+#~ "science."
+#~ msgstr ""
+
+#~ msgid "Stack Class"
+#~ msgstr ""
+
+#~ msgid "Membership Testing"
+#~ msgstr ""
+
+#~ msgid "Example 1: Balanced Parentheses Checker"
+#~ msgstr ""
+
+#~ msgid "Example 2: Reverse a String"
+#~ msgstr ""
+
+#~ msgid "Example 3: Postfix Expression Evaluator"
+#~ msgstr ""
+
+#~ msgid "Example 4: Undo Functionality"
+#~ msgstr ""
+
+#~ msgid "Constant time"
+#~ msgstr ""
+
+#~ msgid "``__contains__``"
+#~ msgstr ""
+
+#~ msgid "Linear search required"
+#~ msgstr ""
+
+#~ msgid "``__iter__``"
+#~ msgstr ""
+
+#~ msgid "Full iteration"
+#~ msgstr ""
+
+#~ msgid "Resets internal list"
+#~ msgstr ""
+
+#~ msgid "**Space**: O(n) where n is the number of elements in the stack"
+#~ msgstr ""
+
+#~ msgid "Implementation Details"
+#~ msgstr ""
+
+#~ msgid "Internal Structure"
+#~ msgstr ""
+
+#~ msgid "The Stack uses a :class:`~sds.linear.list.LinkedList` internally:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This design choice ensures O(1) "
+#~ "performance for push and pop operations"
+#~ " by always operating at the head "
+#~ "of the linked list."
+#~ msgstr ""
+
+#~ msgid "Memory Layout"
+#~ msgstr ""
+
+#~ msgid "✅ **Always check before popping**"
+#~ msgstr ""
+
+#~ msgid "✅ **Use peek for inspection**"
+#~ msgstr ""
+
+#~ msgid "✅ **Handle exceptions properly**"
+#~ msgstr ""
+
+#~ msgid "❌ **Don't violate LIFO principle**"
+#~ msgstr ""
+
+#~ msgid "❌ **Don't iterate destructively unnecessarily**"
+#~ msgstr ""
+
+#~ msgid "**Forgetting to check for empty stack**"
+#~ msgstr ""
+
+#~ msgid "**Confusing iteration order**"
+#~ msgstr ""
+
+#~ msgid "**Stack overflow with deep recursion**"
+#~ msgstr ""
+
+#~ msgid ":doc:`queue` - FIFO alternative to LIFO"
+#~ msgstr ""
+
+#~ msgid ":doc:`list` - Underlying implementation"
+#~ msgstr ""
+
+#~ msgid ":doc:`../../guide/linear_structures/stack` - User guide with theory"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Knuth, D. E. \"The Art of Computer"
+#~ " Programming, Volume 1\", Section 2.2.1"
+#~ msgstr ""
+

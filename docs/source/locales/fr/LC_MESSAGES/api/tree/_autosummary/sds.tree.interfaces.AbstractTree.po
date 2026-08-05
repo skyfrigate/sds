@@ -1,0 +1,412 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:2
+#: d27b36690ed946c289409a6bbbec1d5a
+msgid "sds.tree.interfaces.AbstractTree"
+msgstr ""
+
+#: b1d1b430d8ed42f28043b5f9cc5de2c3 of sds.tree.interfaces.AbstractTree:1
+msgid "Abstract base class for all tree structures."
+msgstr ""
+
+#: d7bb1634d0aa47b89509e1db2c7ba1fe of sds.tree.interfaces.AbstractTree:3
+msgid ""
+"Defines the common interface that all tree types must implement. This "
+"includes operations for tree manipulation, traversal, and queries."
+msgstr ""
+
+#: a472efd3ef2c411bab2d57310b304972 of sds.tree.interfaces.AbstractTree:6
+msgid ""
+"All concrete tree implementations should inherit from this class or one "
+"of its subclasses."
+msgstr ""
+
+#: 3d887bb888b8411fa0cd18bc1f13218d of sds.tree.interfaces.AbstractTree:11
+msgid "The number of nodes in the tree (read-only property)."
+msgstr ""
+
+#: c5a0b5cd8aff487eb28c43c62cbe8ce2 of sds.tree.interfaces.AbstractTree
+msgid "type"
+msgstr ""
+
+#: 8757b324907b4b5fbc355755d0f0faa1 of sds.tree.interfaces.AbstractTree:13
+msgid "int"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: 1b17b0facca34114b70e2bdc52867eb6 4f900ae3f72e4dd6bbf75f09b6e36991
+#: d066e9e169fb40828097f16a99146672 of sds.tree.interfaces.AbstractTree:17
+#: sds.tree.interfaces.AbstractTree.height:1
+msgid "Return the height of the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: 320d32ca2b95436ca125c933aa1efd41 7fe8d1d92deb42ee8344146ff3a0127b
+#: c0f964c4dc244cb3b0a2f843141f5ef1 ecaf86a72ded41499cb40d7bf1b57537 of
+#: sds.tree.interfaces.AbstractTree:21
+#: sds.tree.interfaces.AbstractTree.insert:1
+#: sds.tree.interfaces.AbstractTree.remove:27
+msgid "Insert an item into the tree."
+msgstr ""
+
+#: 04206a6c3e3546a9bb9e56479b85156a 4cb0b434311d46b4b6e54b0904e7d769 of
+#: sds.tree.interfaces.AbstractTree:25
+#: sds.tree.interfaces.AbstractTree.insert:27
+msgid "Remove an item from the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: 0e8be1762d424b1389221fd384af48f9 3cb5984b526f42c8b080dff1daccda5a
+#: 81f49d6ebfbf4f0f8e2d2169a0550fab of sds.tree.interfaces.AbstractTree:29
+#: sds.tree.interfaces.AbstractTree.search:1
+msgid "Search for an item in the tree."
+msgstr ""
+
+#: e0c5c0d3e51942b78db297d89cf51d05 of sds.tree.interfaces.AbstractTree:33
+msgid "Remove all nodes from the tree."
+msgstr ""
+
+#: 03d28a802a354ce3ae6694db2fb58631 3bf80596c382448bba7e49dc59c6aa29
+#: 40502d039863444cb731c5ec76f890fe 488962636a4744e4bd2e0642633e9e14
+#: 4cffd586313742ea8c19f627d52c8195 9644ff6e09bc440ca5733b36eca48bfd
+#: 9c97e6a819bc462a831ce7e46187ff1f b83c37b3e0da4f8091c5dd9b97fb8342 of
+#: sds.tree.interfaces.AbstractTree:36
+#: sds.tree.interfaces.AbstractTree.__len__:6
+#: sds.tree.interfaces.AbstractTree.height:9
+#: sds.tree.interfaces.AbstractTree.insert:9
+#: sds.tree.interfaces.AbstractTree.is_empty:6
+#: sds.tree.interfaces.AbstractTree.remove:12
+#: sds.tree.interfaces.AbstractTree.search:9
+#: sds.tree.interfaces.AbstractTree.size:6
+msgid "Examples"
+msgstr ""
+
+#: 0c67cc25e0b245f198f0b1fbac3e8ddc of sds.tree.interfaces.AbstractTree:38
+msgid "Any concrete tree can be used polymorphically:"
+msgstr ""
+
+#: 521199b62fcf4f6b89d0fa74084aef00 5c42806bfa5b47328b39ffe97720c56d
+#: 6206ac3f5b744beda96d5d6179b5df15 bc24e8fb1055486ba1e557b7ad3c04c1
+#: c282218d0eb040d1836b820c8de781bd c5c2acd3caa24caa9cb95e95ef17f9eb
+#: c79f89fa30634f72be99a3872ff7293a f9372fbc671e414eb6238347eb6b2dd9 of
+#: sds.tree.interfaces.AbstractTree:44
+#: sds.tree.interfaces.AbstractTree.__len__:15
+#: sds.tree.interfaces.AbstractTree.height:22
+#: sds.tree.interfaces.AbstractTree.insert:17
+#: sds.tree.interfaces.AbstractTree.is_empty:15
+#: sds.tree.interfaces.AbstractTree.remove:20
+#: sds.tree.interfaces.AbstractTree.search:18
+#: sds.tree.interfaces.AbstractTree.size:15
+msgid "Notes"
+msgstr ""
+
+#: 087c58703e084f6cb6f806823720e379 of sds.tree.interfaces.AbstractTree:46
+msgid ""
+"This class is abstract and cannot be instantiated directly. Concrete "
+"subclasses must implement all abstract methods."
+msgstr ""
+
+#: 509da061c8f24877af46752ba335ce0b of sds.tree.interfaces.AbstractTree:51
+msgid ":obj:`AbstractBinaryTree`"
+msgstr ""
+
+#: ce60ac3caa54416bb2873c1134f39ac6 of sds.tree.interfaces.AbstractTree:52
+msgid "Interface for binary trees."
+msgstr ""
+
+#: abc15a87f19d47349c0eb1ac31d26316 of sds.tree.interfaces.AbstractTree:54
+msgid ":obj:`Collection`"
+msgstr ""
+
+#: 560be019942541df84cca4e6584cfa6e of sds.tree.interfaces.AbstractTree:55
+msgid "Base interface for all collections."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: cf00be36560749cbba75191677a55b35 ed1a33390ceb404582e6ac19a9db1053
+#: f596068929de471c9fd2b54de671007e of
+#: sds.tree.interfaces.AbstractTree.__init__:1
+msgid "Initialize the abstract tree."
+msgstr ""
+
+#: b99fb7e4cbc54803958ea66f40bcc5d9 c731b978fafc49a8820977c465336bfe of
+#: sds.tree.interfaces.AbstractTree.__init__:3
+msgid ""
+"Subclasses should call this via super().__init__() and then initialize "
+"their own internal attributes."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:13
+#: 604566e5063c46b78e062fbb07f525f7
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: 741b4c76297042b2bfb2fc3fad5078a3
+msgid ":py:obj:`__init__ <sds.tree.interfaces.AbstractTree.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: 8f14de1ca95d40a5bb22d847e2179af4
+msgid ":py:obj:`clear <sds.tree.interfaces.AbstractTree.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: 94f13910d104462db37c2386f8cac4b1
+msgid "Remove all elements from the collection."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: db9ad01461de4bae815440c09e8f1c59
+msgid ":py:obj:`height <sds.tree.interfaces.AbstractTree.height>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: 80615953806745b093744440cc76d826
+msgid ":py:obj:`insert <sds.tree.interfaces.AbstractTree.insert>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: faf2403e8853491aac238bce4825df81
+msgid ":py:obj:`is_empty <sds.tree.interfaces.AbstractTree.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: c765c48a984446789066f5c0df63497e ee752fc5dfac4684a9e9345e45cfa2b2 of
+#: sds.tree.interfaces.AbstractTree.is_empty:1
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: 53e9d6f08a0348d3954635962d976068
+msgid ":py:obj:`remove <sds.tree.interfaces.AbstractTree.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: 52c54cdaa39a4c7c91849335d32391e3 eb6b1598b2794ea5b3a52d80e470d978 of
+#: sds.tree.interfaces.AbstractTree.remove:1
+msgid "Remove and return an item from the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:27:<autosummary>:1
+#: 3bc42566f14d43f0b672cbdf19bff922
+msgid ":py:obj:`search <sds.tree.interfaces.AbstractTree.search>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst:29
+#: 41ff86e81aa54b08aee69dc071ab5997
+msgid "Attributes"
+msgstr ""
+
+#: e2e434573d7b478dbd50c11492b2297f of
+#: sds.tree.interfaces.AbstractTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.interfaces.AbstractTree.size>`\\"
+msgstr ""
+
+#: 375e89579c4e40de9e91f3e7bb735e58 84492bdda0d146139cd09ec9932dc03d of
+#: sds.tree.interfaces.AbstractTree.__init__:1:<autosummary>:1
+#: sds.tree.interfaces.AbstractTree.size:1
+msgid "Get the number of nodes in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst
+#: 6cd91cf8130c4ffa869e0cc7248bffeb 782e0d19dcbd49509b6d252f4cfecef9
+#: 79f42ddbfa5a4a7c972104f3ac401539 8406556af1c9460297d4060c6c316fe1
+#: 8bb81c1c8b8e43e9a796e7f9ff199c2f d234cfee43e54fa28d18c4c2aa8d6e12
+msgid "Returns"
+msgstr ""
+
+#: 18fb1b6954c84f18a581eb1c4d663304 of sds.tree.interfaces.AbstractTree.size:3
+msgid "The number of nodes currently in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst
+#: 3077d40d52d84b57b43009dafee5232b 879b3acb659946908852ad98e2cedc77
+#: cbac2e3979ae4c76bd9e672477dc660d cea8d81135b84ce9b42326c51a7e6c89
+#: e2d92ac4d6864ba5af5be7c3aa105bfd f922b801cae34626a399226115874351
+msgid "Return type"
+msgstr ""
+
+#: 0ff7f09b0daa4a24884a48bae49528c7 3e2904abce4042029841dbc8e88421ca
+#: 6cec2c9e50b24800bb35d14d74f900c8 of
+#: sds.tree.interfaces.AbstractTree.__len__:17
+#: sds.tree.interfaces.AbstractTree.is_empty:17
+#: sds.tree.interfaces.AbstractTree.size:17
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: fe2d350d116c4bd38210051a49561571 of sds.tree.interfaces.AbstractTree.size:21
+msgid ":obj:`__len__`"
+msgstr ""
+
+#: 83813e1eb7ac47539c13374b235f4687 of sds.tree.interfaces.AbstractTree.size:22
+msgid "Returns the same value."
+msgstr ""
+
+#: 72959fb37e0943b8a9ad463bb15110ed of
+#: sds.tree.interfaces.AbstractTree.height:3
+msgid ""
+"The height is the length of the longest path from root to a leaf. An "
+"empty tree has height -1, a tree with only root has height 0."
+msgstr ""
+
+#: 69ad108986a64881a365d0358671192e of
+#: sds.tree.interfaces.AbstractTree.height:6
+msgid "The height of the tree, or -1 if empty."
+msgstr ""
+
+#: 900e0a2eccd04901981891153858b36b of
+#: sds.tree.interfaces.AbstractTree.height:24
+msgid ""
+"Time complexity typically O(n) for unbalanced trees, O(log n) for "
+"balanced trees if height is cached."
+msgstr ""
+
+#: 16e38f12170246dfbbb32bfc649766c4 of
+#: sds.tree.interfaces.AbstractTree.height:29
+msgid ":obj:`size`"
+msgstr ""
+
+#: 8ad6ff1a04434fdd90ea774c712641b3 of
+#: sds.tree.interfaces.AbstractTree.height:30
+msgid "Get the number of nodes."
+msgstr ""
+
+#: af11e5ad4e484e18aa9a9aa483ed6ac2 of
+#: sds.tree.interfaces.AbstractTree.insert:3
+msgid ""
+"The specific behavior depends on the concrete tree implementation. For "
+"example, BST maintains order, while simple binary tree may not."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst
+#: 123376438a3b476586c3066fd938835a 28131afd500040afb4a4a34dec7b8042
+#: 59289453e3514e649cb5497b09d91667
+msgid "Parameters"
+msgstr ""
+
+#: b462b1c75b1b4b98b32047a52154e796 of
+#: sds.tree.interfaces.AbstractTree.insert:6
+msgid "The item to insert."
+msgstr ""
+
+#: 3d555141df5d429ba8af15863a0a2f81 of
+#: sds.tree.interfaces.AbstractTree.insert:19
+msgid ""
+"Time complexity varies by implementation: - Simple binary tree: O(1) to "
+"O(n) - BST: O(log n) average, O(n) worst - Balanced trees: O(log n) "
+"guaranteed"
+msgstr ""
+
+#: 13b1b3c897ec48469968bfb5388f4dbf of
+#: sds.tree.interfaces.AbstractTree.insert:26
+msgid ":obj:`remove`"
+msgstr ""
+
+#: 0b2e7ad6867e424fbc461fff4b3c1de0 of
+#: sds.tree.interfaces.AbstractTree.insert:29
+msgid ":obj:`search`"
+msgstr ""
+
+#: c47aef90546f4a83915ee23512a3e96f of
+#: sds.tree.interfaces.AbstractTree.insert:30
+msgid "Search for an item."
+msgstr ""
+
+#: 7d183a9a7f1e4c94854f4efd5f6f35bb of
+#: sds.tree.interfaces.AbstractTree.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: 096e6e87aeef43f1bfc29a92fe2a21d1 of
+#: sds.tree.interfaces.AbstractTree.remove:6
+msgid "The removed item."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractTree.rst
+#: 981f2f614a6d49aa9f66dcad2b9a081b
+msgid "Raises"
+msgstr ""
+
+#: 99b8a431ae2543959cb7bbd8649071af of
+#: sds.tree.interfaces.AbstractTree.remove:9
+msgid "If the tree is empty."
+msgstr ""
+
+#: b4bece0a1e4e4b8ead6ce88a11ec5ed8 of
+#: sds.tree.interfaces.AbstractTree.remove:10
+msgid "If the item is not found."
+msgstr ""
+
+#: 881a0331fd0a4d698102bf8ab0c4801e of
+#: sds.tree.interfaces.AbstractTree.remove:22
+msgid "Time complexity varies by implementation."
+msgstr ""
+
+#: b49e409bc5e94cd7b275d383ff2fc8f0 of
+#: sds.tree.interfaces.AbstractTree.remove:26
+msgid ":obj:`insert`"
+msgstr ""
+
+#: 8e3cfc46b3ce4ee18f6fcd7ad16f5aa9 of
+#: sds.tree.interfaces.AbstractTree.search:3
+msgid "The item to search for."
+msgstr ""
+
+#: 1db4f3e7770747698c4e1d4b1962f591 of
+#: sds.tree.interfaces.AbstractTree.search:6
+msgid "True if the item is found, False otherwise."
+msgstr ""
+
+#: 4d5bbc6c57874dcba6418dbbe377c0f9 of
+#: sds.tree.interfaces.AbstractTree.search:20
+msgid ""
+"Time complexity varies by implementation: - Simple binary tree: O(n) - "
+"BST: O(log n) average, O(n) worst - Balanced trees: O(log n) guaranteed"
+msgstr ""
+
+#: 1e3132153ff1454aa3f146cfcd19e7eb of
+#: sds.tree.interfaces.AbstractTree.search:27
+msgid ":obj:`__contains__`"
+msgstr ""
+
+#: 62a0aa9e386b43faa4b613faed19d5d9 of
+#: sds.tree.interfaces.AbstractTree.search:28
+msgid "Alternative way to check membership."
+msgstr ""
+
+#: 5cf145c6a1604905919a91c253a3d38d of
+#: sds.tree.interfaces.AbstractTree.__len__:1
+msgid "Return the number of nodes in the tree."
+msgstr ""
+
+#: a1ce0340f26449b886b31c04a3629e0b of
+#: sds.tree.interfaces.AbstractTree.__len__:3
+msgid "The number of nodes."
+msgstr ""
+
+#: 2fe3c7a9ae44443db02368b39a60658b of
+#: sds.tree.interfaces.AbstractTree.is_empty:3
+msgid "True if the tree contains no nodes, False otherwise."
+msgstr ""
+

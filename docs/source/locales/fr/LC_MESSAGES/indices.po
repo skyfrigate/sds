@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/indices.rst:3 5dacc8c18d3f4596a692b70ff2c8ab9c
+msgid "Indices and tables"
+msgstr ""
+
+#: ../../source/indices.rst:6 73da9fba9d0341a0bd063a5e720a3867
+msgid "General index"
+msgstr ""
+
+#: ../../source/indices.rst:8 96cad3ca6bc948b687c1f70ce5c51483
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../source/indices.rst:11 182bac2ff8184f6c9f684568974af77e
+msgid "Module index"
+msgstr ""
+
+#: ../../source/indices.rst:13 30f50772e7f241f19e96639402856598
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../source/indices.rst:16 4decddaa5600494f91517fec73445842
+msgid "Search in documentation"
+msgstr ""
+
+#: ../../source/indices.rst:18 dcafdc3aa3f640ee9a080136bd67e4f3
+msgid ":ref:`search`"
+msgstr ""
+

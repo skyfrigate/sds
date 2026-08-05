@@ -1,0 +1,477 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/advanced/lru_cache.rst:5 80ae75eb25e54e7dbd34d55517b1f4ad
+msgid "LRU Cache"
+msgstr ""
+
+#: 8eaeeba13dbc4506a493efef22183a3e of sds.advanced.lru_cache.LRUCache:1
+msgid "Bases: :py:class:`~sds.advanced.interfaces.AbstractLRUCache`"
+msgstr ""
+
+#: c13ab1764d47430ebd07eea6d33b3266 of sds.advanced.lru_cache.LRUCache:1
+msgid "Least Recently Used cache with O(1) get and put."
+msgstr ""
+
+#: 5b523b0c764f4575bd2b87266d880923 of sds.advanced.lru_cache.LRUCache:3
+msgid ""
+"The cache holds at most *capacity* key-value pairs. When full, the entry "
+"that has not been accessed (via ``get`` or ``put``) for the longest time "
+"is evicted on the next ``put``."
+msgstr ""
+
+#: 732e7c8cd52442e192558b2c9d7a61a5 of sds.advanced.lru_cache.LRUCache:7
+msgid ""
+"Internally, a doubly-linked list maintains access order (most recent at "
+"the tail, least recent at the head) while a dict maps keys to list nodes "
+"for O(1) random access."
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst 3a94d0052fc341a988754568a617e457
+#: 58f8400e45a64e55944fa68ca7ea9eb1 65ef21c5f25848c59d8efcfdb924a1d9
+#: b57fdb9c405b472d8b791add5749ca58 bff04a57d3a04e3389f2277a77316e56
+#: d6aca3967c3a4bc29f23c8c097b6d0ee ee6cc90bdeb346e3aea25008acd750d5
+msgid "Parameters"
+msgstr ""
+
+#: 19ef533ee62c422c9e3022bc274e46e0 5e6e3fc274a34f048bc6581e1aaaba96 of
+#: sds.advanced.lru_cache.LRUCache:11
+#: sds.advanced.lru_cache.LRUCache.__init__:3
+msgid "Maximum number of entries. Must be ≥ 1."
+msgstr ""
+
+#: 7d68bd81f7074f2c8492303beee81773 of sds.advanced.lru_cache.LRUCache:16
+msgid "Maximum number of entries (read-only)."
+msgstr ""
+
+#: 19ee1a92c4e440d5a584ee4de20c0dd7 f8de91a42c6d4c0b8b55a2252578a3d4 of
+#: sds.advanced.lru_cache.LRUCache
+msgid "type"
+msgstr ""
+
+#: 575c3ca497af470d8b2aa59407011c02 dd8a721a6226453399d7c8dfa83ca4fc of
+#: sds.advanced.lru_cache.LRUCache:18 sds.advanced.lru_cache.LRUCache:24
+msgid "int"
+msgstr ""
+
+#: bb6e09a92c75499bacd0c4f00b5d5bb1 of sds.advanced.lru_cache.LRUCache:22
+msgid "Total number of entries evicted since creation (read-only)."
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst 9dc8639ca3d24ea38bdc0db42cf157f4
+#: a607e61a5ec84c4195c8793d6eb42d82
+msgid "Raises"
+msgstr ""
+
+#: 0d5b9e432b4c4f4597906f68cddc9a42 879f7294533b4cbf96545bca4fe382c5 of
+#: sds.advanced.lru_cache.LRUCache:26
+#: sds.advanced.lru_cache.LRUCache.__init__:6
+msgid "If ``capacity < 1``."
+msgstr ""
+
+#: 0db35abbe015404da360dcad5977383a 171be13b2e364cb09cbad9b8f3f5d268
+#: 237447fb2f034181987c377ef5c08301 29eabb898b754db0aa540d6ef2dcb21e
+#: 2e7c0a19860c4a2e93044d183775fdcd 31ab2f449ef5454fa4c78891b157a0cc
+#: 4559a811a5c641e9855581030108bcf8 50f5366edc9542a6bfc197f4bfdff22d
+#: 5bb39223b9dc4ebab3554db294d4876f 93b310aee8f44490adde5436afb4e9a9
+#: 949d86769d92459799e156e9cf57e3c5 ca7b6bf922c446f6ba54fc4a780dcff3
+#: d19e9261d45846608ce97fddb6612734 f322054f57914c749a8cfdd6b8bfbf9a of
+#: sds.advanced.lru_cache.LRUCache:28
+#: sds.advanced.lru_cache.LRUCache.__contains__:11
+#: sds.advanced.lru_cache.LRUCache.__init__:8
+#: sds.advanced.lru_cache.LRUCache.__len__:6
+#: sds.advanced.lru_cache.LRUCache.__repr__:6
+#: sds.advanced.lru_cache.LRUCache.__str__:6
+#: sds.advanced.lru_cache.LRUCache.clear:5
+#: sds.advanced.lru_cache.LRUCache.delete:9
+#: sds.advanced.lru_cache.LRUCache.evictions_count:6
+#: sds.advanced.lru_cache.LRUCache.get:9
+#: sds.advanced.lru_cache.LRUCache.items:5
+#: sds.advanced.lru_cache.LRUCache.keys:6
+#: sds.advanced.lru_cache.LRUCache.peek:12
+#: sds.advanced.lru_cache.LRUCache.put:12
+msgid "Examples"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:23 1d0f5ad7f836490a9e41183adba80e63
+#: 4b7a8437b89a424384da6ee5b3ca8c47 5236be3f14dd4740971ea17c10f0a14b
+#: 56fb62a1ba384325ab89210d18354101 5c102adbd42f44aba587f4ae345f9a08
+#: 65649197a57b4f7bafc277a6c0a468c6 7372cc7bcba2496a8232a444ea08532e
+#: 9084899ce7c84a8aa034ab0af55f2997 936ba0d28e2249ffb967623d5c0e027e
+#: 9a7a702037c6479fbe773a6d08b4ea96 c00b0f6ca0d64da4acd17c4b847f3fbf
+#: c9dc24d2f2e14ae38a6b7ce807abd1b5 cbf1aa3f57e347f38247f73e01bc0aa1
+#: fe475a60c1684c819c800410a7d5e9cc of sds.advanced.lru_cache.LRUCache:41
+#: sds.advanced.lru_cache.LRUCache.__contains__:20
+#: sds.advanced.lru_cache.LRUCache.__init__:14
+#: sds.advanced.lru_cache.LRUCache.__iter__:5
+#: sds.advanced.lru_cache.LRUCache.__len__:14
+#: sds.advanced.lru_cache.LRUCache.clear:13
+#: sds.advanced.lru_cache.LRUCache.delete:18
+#: sds.advanced.lru_cache.LRUCache.get:18
+#: sds.advanced.lru_cache.LRUCache.is_empty:6
+#: sds.advanced.lru_cache.LRUCache.items:13
+#: sds.advanced.lru_cache.LRUCache.keys:17
+#: sds.advanced.lru_cache.LRUCache.peek:20
+#: sds.advanced.lru_cache.LRUCache.put:22
+msgid "Notes"
+msgstr ""
+
+#: dc84c470f6ef44b9a39f3aa22a9fd78a of sds.advanced.lru_cache.LRUCache:43
+msgid ""
+"``__contains__`` does **not** update recency; only ``get`` and ``put`` "
+"move an entry to the most-recently-used position."
+msgstr ""
+
+#: ceec82fe856447b8a94b5b0932d080cf of sds.advanced.lru_cache.LRUCache:45
+msgid "Keys must be hashable. Values may be any Python object, including None."
+msgstr ""
+
+#: 6b1794625ec64d5b8bf8eff3fe452f57 of sds.advanced.lru_cache.LRUCache:46
+msgid "Updating an existing key via ``put`` refreshes its recency position."
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:16 cc6492e9f05a4d7ca34c1ec51c0d8d83
+msgid "Complexity Summary"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:21 e3f6d2a25ad548128920bef23b6b63f4
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:22 7e3e26dcc87a40578ee454f75f2acdf8
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:24 ab439d72881548ff8990a765ac23a059
+msgid "``get(key)``"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:25
+#: ../../source/api/advanced/lru_cache.rst:28
+#: ../../source/api/advanced/lru_cache.rst:31
+#: ../../source/api/advanced/lru_cache.rst:34
+#: ../../source/api/advanced/lru_cache.rst:37 2a47bc9add1b4b10b1792591837492f6
+#: 33b907d04268474fad9e6d25f12fc897 64d447ac49444549be36df44a49d57b4
+#: c82c2c4884e54bf48adef8409feaf2e9 dad8cd8bff074a779f075f1fa1acb917
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:26 26407b66359546969e8de025e1f24609
+msgid "Promotes to MRU"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:27 530eabb6af8943aeb06454b3e7e2f76c
+msgid "``put(key, value)``"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:29 d985b3c924194c1e9b20670c44c49cd2
+msgid "Evicts LRU if full"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:30 c85e4b973a93413ea57487e16762c984
+msgid "``peek(key)``"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:32
+#: ../../source/api/advanced/lru_cache.rst:38 47a8367a9c064c5799e52f510db700b5
+#: 9f1257b293614fc3a50d22bd7481ab1f
+msgid "No recency update"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:33 3f97fb5898364149b4be494e66ba8ca4
+msgid "``delete(key)``"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:35 3d4f638465be42a3a0fb3a0215bf101e
+msgid "Does not count as eviction"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:36 2635b87cbb074c16abd7321e40ced3ef
+msgid "``__contains__``"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:39 984c2f9ce0b544359eda9665e8ddd370
+msgid "``keys()``"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:40
+#: ../../source/api/advanced/lru_cache.rst:43
+#: ../../source/api/advanced/lru_cache.rst:46 28a13f02f72f44bf9a3b42d7ca4cacbd
+#: 63357cf21ba849b182b60d8c4bb19829 ae47b4ea6e8c4f1fb692aceb107bda8d
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:41
+#: ../../source/api/advanced/lru_cache.rst:44 8d6776caf6544353be00ca141f49487e
+#: b5ff8d96540146f989eba832cae5febc
+msgid "LRU → MRU order"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:42 d97440cc55be4deea5833ec94c0c0fd1
+msgid "``items()``"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:45 8bb51901d9824547a702e13be329eae8
+msgid "``clear()``"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:47 ddeda9c64e90464c97a7ccad32d4371e
+msgid "Does not increment evictions"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:48 c5bb2e392e4149b5817daca8e1a1954b
+msgid "Space"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:49 241eb9cb3356491f81ff2b378232a827
+msgid "O(capacity)"
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst:50 3f914974f9ec43a5b26e866339d42d7f
+msgid "Bounded by capacity"
+msgstr ""
+
+#: 22b2866b3e0c47caa0ea10d63fe53809 of
+#: sds.advanced.lru_cache.LRUCache.__init__:1
+msgid "Initialise an empty LRU cache."
+msgstr ""
+
+#: 14f56add989a4c58b0c021c19d598a40 1f37ca1315ae4adf965fd7dd06e80afa
+#: 292a0de88b33416a9c32290693d4d436 29c60595ae6c4d6ab894fe2da2390e50
+#: 62d914519d3549f687479bd2b1dcdbd2 7c165d08ca354aef96730b817e33c68f
+#: c274aec991a64d00a6bdd4ae5a528833 d19bbe7e0ccd47dab6ec1bc17cfd164d of
+#: sds.advanced.lru_cache.LRUCache.__contains__:22
+#: sds.advanced.lru_cache.LRUCache.__init__:16
+#: sds.advanced.lru_cache.LRUCache.__len__:16
+#: sds.advanced.lru_cache.LRUCache.delete:20
+#: sds.advanced.lru_cache.LRUCache.get:20
+#: sds.advanced.lru_cache.LRUCache.is_empty:8
+#: sds.advanced.lru_cache.LRUCache.peek:22
+#: sds.advanced.lru_cache.LRUCache.put:24
+msgid "Time complexity: O(1)."
+msgstr ""
+
+#: a8b7aea258a44448a1e909677142d77b of
+#: sds.advanced.lru_cache.LRUCache.capacity:1
+msgid "Maximum number of entries."
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst 1806c4c352e34e6fad72d4774444cb87
+#: 60885b649e7246879f34dfae828a6f0a 6dd1250fe9bb402aa336650b5e7a792c
+#: 77cd756783db4f068afd68343c290cc8 8c1231f48bc949d2b96b8c9a2c249ea8
+#: 9176f8a1167046078e45d1c6089bde1f 982f83ad77e14e4e9fd12c534e5a9652
+#: a242b38e7b9f4c48b46b8d282cff6f16 a85226d80a15444f9ac10837ec70eee1
+#: b595b252492047989dab7cec5665e70c fd6197bd3c54489aba8893e38334f886
+msgid "Returns"
+msgstr ""
+
+#: 3a1364d5bc0741db821a0b3fde1426bb of
+#: sds.advanced.lru_cache.LRUCache.capacity:3
+msgid "Value passed at construction."
+msgstr ""
+
+#: ../../source/api/advanced/lru_cache.rst 18e4260a2cae40878bc34c1a9c7c8241
+#: 2799bab3ad6a4aa0b749c5104ee8a21b 2cb6a60d62be49edb0b3ced4590c8319
+#: 6018277f5fac4f8e92f838d117b184e1 9008dda5d405467a888e228921f60bc7
+#: c24e80ac794e4acf9c23212e37ffce15 c837c4e784d4481dbd71e541ad3c04db
+#: eb193a50b8be4f969488c668cdd4ad4e ed86e66bad724f2f8d5fe7daa1c600f8
+#: f3af8ce650ef417e934fef321b1f9bb4 fd754397fc8b4da1ab6434431ad4f221
+msgid "Return type"
+msgstr ""
+
+#: cd3fd34f538745aba77532ab0276bdeb of
+#: sds.advanced.lru_cache.LRUCache.evictions_count:1
+msgid "Total number of evictions performed since creation."
+msgstr ""
+
+#: 4763441970de4ca5bc1f5c711b39ce6a of
+#: sds.advanced.lru_cache.LRUCache.evictions_count:3
+msgid "Monotonically increasing counter."
+msgstr ""
+
+#: d4164acf205844a9a7a4ff0e851ba961 of
+#: sds.advanced.lru_cache.LRUCache.is_empty:1
+msgid "Return True if the cache contains no entries."
+msgstr ""
+
+#: b44e14166f2a415a9e5653d0d6275990 of
+#: sds.advanced.lru_cache.LRUCache.is_empty:3
+msgid "True if len(self) == 0."
+msgstr ""
+
+#: 40f8ee3f908747f5821807936aa3114e of
+#: sds.advanced.lru_cache.LRUCache.__iter__:1
+msgid "Iterate over keys from least recently used to most recently used."
+msgstr ""
+
+#: 6cff0a016f5a4ebab3ca808cd7e1282f e594ddac5b7e4e5da9a52d94984d7ce5 of
+#: sds.advanced.lru_cache.LRUCache.__iter__
+#: sds.advanced.lru_cache.LRUCache.items
+msgid "Yields"
+msgstr ""
+
+#: 00a3588fe2514dd3a80ecab643eae601 of
+#: sds.advanced.lru_cache.LRUCache.__iter__:3
+msgid "*Any* -- Keys in LRU → MRU order."
+msgstr ""
+
+#: 8388ccccefbf41d9adefc9a96d01167f ab6e6ba0f6054f55b4f10f6809cd21b3
+#: b22a7511b6f9490bbbf847b28d3dfe2f f7efae58a7394a4e811eefcb8b2b822c of
+#: sds.advanced.lru_cache.LRUCache.__iter__:7
+#: sds.advanced.lru_cache.LRUCache.clear:15
+#: sds.advanced.lru_cache.LRUCache.items:15
+#: sds.advanced.lru_cache.LRUCache.keys:19
+msgid "Time complexity: O(n)."
+msgstr ""
+
+#: 424bc470ac2e4115a0d27a5a922b0aea of sds.advanced.lru_cache.LRUCache.get:1
+msgid "Return the value for *key* and mark it as most recently used."
+msgstr ""
+
+#: 024dc1e006d14b6ba54fd4d4f3cf8e3a f7ad83fb32a14e0c80bbb0a59ec7ca53 of
+#: sds.advanced.lru_cache.LRUCache.get:3 sds.advanced.lru_cache.LRUCache.peek:6
+msgid "Key to look up."
+msgstr ""
+
+#: dd0e32484220430eb74598790ab210a7 of sds.advanced.lru_cache.LRUCache.get:6
+msgid "The stored value, or None if *key* is not in the cache."
+msgstr ""
+
+#: 3dd7507db65c4120b11582bee4357362 of sds.advanced.lru_cache.LRUCache.put:1
+msgid "Insert or update a key-value pair."
+msgstr ""
+
+#: 6ded4271435940b3b193341c7ad3d7c3 of sds.advanced.lru_cache.LRUCache.put:3
+msgid ""
+"If *key* already exists its value is updated and it is moved to the most-"
+"recently-used position. If the cache is at capacity, the least recently "
+"used entry is evicted before the new entry is inserted."
+msgstr ""
+
+#: ff9a862112604024a8b6a4063089158b of sds.advanced.lru_cache.LRUCache.put:7
+msgid "Hashable key."
+msgstr ""
+
+#: da85958b3bd547c89b411b834a0a8566 of sds.advanced.lru_cache.LRUCache.put:9
+msgid "Value to store."
+msgstr ""
+
+#: e54f34b13d7f4c8791ad4b9c267cf410 of
+#: sds.advanced.lru_cache.LRUCache.__contains__:1
+msgid "Test whether *key* is currently in the cache."
+msgstr ""
+
+#: 1c0cc566d7534e23bb459d3a3a48dae6 of
+#: sds.advanced.lru_cache.LRUCache.__contains__:3
+msgid "Does **not** update the recency order."
+msgstr ""
+
+#: 64c20119232c42f0bb01c08c56eef060 of
+#: sds.advanced.lru_cache.LRUCache.__contains__:5
+msgid "Key to test."
+msgstr ""
+
+#: dcd6063c450242e7abdf2ea0ab3fa753 of
+#: sds.advanced.lru_cache.LRUCache.__contains__:8
+msgid "True if the key is present."
+msgstr ""
+
+#: 91049b155f3143ae88be70a2205227e3 of
+#: sds.advanced.lru_cache.LRUCache.__len__:1
+msgid "Return the number of entries currently stored."
+msgstr ""
+
+#: 4788b07a5af34975b4ddbfdac725fa7f of
+#: sds.advanced.lru_cache.LRUCache.__len__:3
+msgid "Number of live entries (≤ capacity)."
+msgstr ""
+
+#: c1a0b2674900490b805ee3a103d817c2 of sds.advanced.lru_cache.LRUCache.peek:1
+msgid "Return the value for *key* without updating recency."
+msgstr ""
+
+#: b02d7e2a61ff48c2851c4951b07cd5db of sds.advanced.lru_cache.LRUCache.peek:3
+msgid ""
+"Unlike ``get``, this method does not move the entry to the most-recently-"
+"used position."
+msgstr ""
+
+#: 5aa59bf6d4e841f594cd610cd010d0dd of sds.advanced.lru_cache.LRUCache.peek:9
+msgid "Stored value, or None if absent."
+msgstr ""
+
+#: 9c819869d0b541d285d7b2abd170e747 of sds.advanced.lru_cache.LRUCache.keys:1
+msgid "Return all keys from least recently used to most recently used."
+msgstr ""
+
+#: 5fb76ec8cf7a4dfda047e8ca6f9338b4 of sds.advanced.lru_cache.LRUCache.keys:3
+msgid "Keys ordered LRU → MRU."
+msgstr ""
+
+#: 60bcef703ac04ac9a6b183a80d94cc29 of sds.advanced.lru_cache.LRUCache.items:1
+msgid "Iterate over ``(key, value)`` pairs from LRU to MRU."
+msgstr ""
+
+#: d1810231c9eb49198f10e506152ba429 of sds.advanced.lru_cache.LRUCache.items:3
+msgid "*tuple[Any, Any]* -- ``(key, value)`` in LRU → MRU order."
+msgstr ""
+
+#: 720e7ea14d714986a77f89384cf25d1d of sds.advanced.lru_cache.LRUCache.delete:1
+msgid "Remove the entry with the given key."
+msgstr ""
+
+#: da81312a8bf9423dbbb54b63401f7b1b of sds.advanced.lru_cache.LRUCache.delete:3
+msgid "Key to remove."
+msgstr ""
+
+#: 7efcd1b2b1454fc0b6341007beca5d33 of sds.advanced.lru_cache.LRUCache.delete:6
+msgid "True if the key was found and removed, False otherwise."
+msgstr ""
+
+#: 985235e60bf44f21b446924c7412d12e of sds.advanced.lru_cache.LRUCache.clear:1
+msgid "Remove all entries from the cache."
+msgstr ""
+
+#: 779e79c24ef24cb3b4ad8d5d519bec15 of sds.advanced.lru_cache.LRUCache.clear:3
+msgid "The ``evictions_count`` is **not** incremented for cleared entries."
+msgstr ""
+
+#: 8a38fef5f7a5477f8b032ea4cca14bf8 of
+#: sds.advanced.lru_cache.LRUCache.__repr__:1
+msgid "Return a detailed string representation."
+msgstr ""
+
+#: b1943a6c508f4c52a9ad6cd7bf4e42f1 of
+#: sds.advanced.lru_cache.LRUCache.__repr__:3
+msgid "``LRUCache(capacity=n, size=m, evictions=k)``."
+msgstr ""
+
+#: 963700e11f8447ddbaa211d0714fa566 of
+#: sds.advanced.lru_cache.LRUCache.__str__:1
+msgid "Return a concise string representation."
+msgstr ""
+
+#: 2f3190df4aa4428c9fefaa2f97b2775e of
+#: sds.advanced.lru_cache.LRUCache.__str__:3
+msgid "Human-readable summary."
+msgstr ""
+

@@ -1,0 +1,359 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:5
+#: 81b28e0659104524802aa71d27196aeb
+msgid "Count-Min Sketch — User Guide"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:9
+#: 3bd7c48ce9b141a68145496f6e95bb2e
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:12
+#: 9576a6b98bca43a2a645ef251af31b1a
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:14
+#: 9f607f474ac74615afe47b2532b2de20
+msgid ""
+"A **Count-Min Sketch** (CMS) estimates the frequency of elements in a "
+"data stream using a compact :math:`d \\times w` counter matrix. Like the "
+"Bloom Filter, it may **overestimate** but never underestimates a true "
+"frequency."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:19
+#: 0e3002cdd5a34224938a0159526efd65
+msgid "Mathematical Foundations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:22
+#: 5741630858fe43a6b25032e9134a159d
+msgid "Counter Matrix"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:24
+#: 51d99059972c42dda58e1fb48da21333
+msgid ""
+"A CMS is a matrix :math:`C[d][w]` of non-negative integer counters, "
+"initialised to 0, with :math:`d` hash functions :math:`h_1, \\ldots, h_d "
+": U \\to [0, w)`."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:28
+#: 4e4f0312148547a5b52b1626778cc9f2
+msgid "**Add** element :math:`x`:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:30
+#: e4e99f93759b480d840f37481a789099
+#, python-brace-format
+msgid "\\forall i \\in [1, d] : C[i][h_i(x)] \\mathrel{+}= 1"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:34
+#: b86644a3892b48b19c94b1d603c5d7bf
+msgid "**Estimate** frequency of :math:`x`:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:36
+#: 9b1e0526f88f48f88b1ea8c0322d517d
+#, python-brace-format
+msgid "\\hat{f}(x) = \\min_{i=1}^{d} C[i][h_i(x)]"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:41
+#: 6202f46f66524c808291c25e6784194b
+msgid "Probabilistic Guarantee"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:43
+#: dfba627d5afe4221910f024b074b129f
+msgid ""
+"Let :math:`N` be the total number of elements added. With probability "
+":math:`\\geq 1 - \\delta`:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:46
+#: 48470c65a9f640c6b2ef8b4998829683
+#, python-brace-format
+msgid "f(x) \\leq \\hat{f}(x) \\leq f(x) + \\varepsilon \\cdot N"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:50
+#: bf999290f7ad4fd8af471253b49ff9a0
+msgid "Optimal dimensions:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:52
+#: 78b5bb7334274773942e5254cdea62e7
+#, python-brace-format
+msgid ""
+"w = \\left\\lceil \\frac{e}{\\varepsilon} \\right\\rceil\n"
+"\\qquad\n"
+"d = \\left\\lceil \\ln\\frac{1}{\\delta} \\right\\rceil"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:58
+#: 2395ed36c8cb4e3a9dbbdf76e0db6ea2
+#, python-brace-format
+msgid "**No false negatives**: :math:`\\hat{f}(x) \\geq f(x)` always holds."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:61
+#: f47d1c17e3314166ad5dd21bb1c6c33e
+msgid "Double Hashing"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:63
+#: 7c2b8d813d77401299ed22840703b41d
+msgid ""
+"As with the Bloom Filter, the CMS uses double hashing to avoid computing "
+":math:`d` fully independent hash functions:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:66
+#: 8992429eaff14ec6bb7d92874b80b43a
+msgid "h_i(x) = (h_1(x) + i \\cdot h_2(x)) \\bmod w"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:71
+#: 1ce33101a59543a7822bbd09dc2814da
+msgid "Comparison with Bloom Filter"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:77
+#: 4d0c4f266c814bb8b27d81ec4b6ede11
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:78
+#: 6b0a968d6cd847f6bb7281b58f324279
+msgid "Bloom Filter"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:79
+#: b31a4ecccd2340f898de14f7ea8c64d2
+msgid "Count-Min Sketch"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:80
+#: 52853135b886494189c70858a93aef26
+msgid "Stored information"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:81
+#: f8088213cc034bbdbae01bf113da7a86
+msgid "Membership (0/1)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:82
+#: d7c6f1d37c744be195f49b4f6dc023d6
+msgid "Frequency (counter)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:83
+#: fdc791a7cf3a430f8f5547234dce2938
+msgid "False negatives"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:84
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:85
+#: 09d7ccdc223540b895844c7ca1bf2135 69f4323758e2483aada0b4dca828c14f
+msgid "❌ Impossible"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:86
+#: 4fdef829dad4488f9243fdb6de7e006c
+msgid "False positives"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:87
+#: 09fc0d874d9a46b99d3c6646ab978301
+msgid "✅ Possible"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:88
+#: cbe8c0fd95b241e091be8f4f2592227a
+msgid "✅ Overestimation possible"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:89
+#: 6320e1777bdd45a4a7b09b610e35dcdc
+msgid "Space"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:90
+#: 56ec67a0e453460d9b9705fb17ddfb25
+msgid "O(m) bits"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:91
+#: 0133899923c045a88f2d06a22897f3e7
+msgid "O(d × w) integers"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:92
+#: 488a8420a0ed44a2a9c9646823e93e02
+msgid "Merge"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:93
+#: d46ed2352de04e468b151603be9548d8
+msgid "``union()``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:94
+#: 336c3c5ec42044c5a6c757ca7cb3c787
+msgid "``merge()``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:97
+#: c047de5934164f52b0db5e2e5eca4204
+msgid "Usage"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:100
+#: ae1c26fe25a040fabdb8e10c6edb42f2
+msgid "Construction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:102
+#: 2615d707ebc54a3481f5cc4990e8a0b0
+msgid "Using error parameters (recommended):"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:112
+#: a4027a28dcb44d7c85ae548db56b670e
+msgid "Using explicit dimensions:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:119
+#: 262d82b77e364b07ae205a95d1054b47
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:145
+#: 503fd39778d14f498da926d385aca53d
+msgid "Merging Sketches"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:161
+#: 63ce87eb5b1c494e81bf58d8cf02f999
+msgid "Real-World Use Cases"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:164
+#: 6602f2aa633d4ad18ede38e21f083b06
+msgid "Word Frequency (NLP)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:181
+#: 66b4c439afe141dda2b4fde5cc88352e
+msgid "Heavy Hitter Detection (Network)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:197
+#: 2af53af2a72744dda013ea8a97a093f8
+msgid "Distributed Aggregation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:215
+#: a4dabf108ad24519a025392417e2990d
+msgid "Real-Time Metrics"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:232
+#: b9631b9f6eb34c2b9861a5ba32ae198f
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:234
+#: ab026b531aaa4fac9f2f8bea1ba6a86f
+msgid ""
+"✅ Use ``epsilon`` and ``delta`` to size the sketch — the formulas provide"
+" theoretical guarantees."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:237
+#: 883a010f46f04adcb0c7d584d05eebbc
+msgid "✅ Use ``len(cms)`` (total added) to interpret relative frequencies."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:239
+#: af9097f7fbbd40a086c0881b7f59e2bf
+msgid "✅ For distributed merging, all sketches must have identical dimensions."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:241
+#: d03509fc657d48409d7d70d2e04fbff2
+msgid ""
+"❌ Do not call ``list(cms)`` — raises ``TypeError``. Individual items "
+"cannot be recovered from the counter matrix."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:244
+#: 5c00790fb3c74e22b354e84a89439a31
+msgid ""
+"❌ Do not assume ``frequency(x) == 0`` means certain absence — it only "
+"means no hash collision occurred across all rows for *x*."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:248
+#: 60e806829a4249e68dca5b2b71586f88
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:250
+#: 3adebaa606444c17a0bc77d666170144
+msgid ""
+"Cormode, G., & Muthukrishnan, S. (2005). \"An improved data stream "
+"summary: The count-min sketch and its applications\". *Journal of "
+"Algorithms*, 55(1), 58-75. DOI: `10.1016/j.jalgor.2003.12.001 "
+"<https://doi.org/10.1016/j.jalgor.2003.12.001>`_"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:255
+#: 19fd9e737c304325b7b5263b282c2f97
+msgid ""
+"Cormode, G. (2009). \"Count-Min Sketch\". *Encyclopedia of Database "
+"Systems*. https://dimacs.rutgers.edu/~graham/pubs/papers/cmencyc.pdf"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:259
+#: cc2adc36b6a44d629fa4a4ae94421a13
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:261
+#: 0fcc99baad2040799f1520bcf1030052
+msgid ":ref:`api_advanced_count_min_sketch` — API Reference"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/count_min_sketch.rst:262
+#: 649eee2fc9414ddfaabfbdc9433a6753
+msgid ":ref:`guide_advanced_bloom_filter` — Probabilistic membership testing"
+msgstr ""
+

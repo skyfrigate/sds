@@ -1,0 +1,778 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/node.rst:5 2dd30532b33b4209939ff4964fcfa5e0
+msgid "Graph Node Class"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:10 6b3dc2a1000c4b22b31c9834ef5a07d2
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:12 15e33eb074e5491ebf0104b50f288c65
+msgid ""
+"This module provides the node implementation for graph data structures. "
+"GraphNode is a lightweight container optimized for graph operations, "
+"where connections between nodes are managed externally through Edge "
+"objects rather than stored within the node itself."
+msgstr ""
+
+#: ../../source/api/graph/node.rst:38 4ff99d6808a74854a384231640c90549
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:45:<autosummary>:1
+#: 62663ac783a94f969c3a94a7b950b557
+msgid ":py:obj:`GraphNode <sds.graph.node.GraphNode>`"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:45:<autosummary>:1
+#: 01de79920c2c4ce7a3ad566f23872abf e7dd7ceeec36498ca26768de1e0a0627 of
+#: sds.graph.node.GraphNode:1
+msgid "A node for graph data structures."
+msgstr ""
+
+#: ../../source/api/graph/node.rst:47 6d4072c675674849a25810c614dd377d
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:50 ../../source/api/graph/node.rst:243
+#: 15d100a1821c4ebbb1a62280403e92b3 ed69197cacf042eeb1d178fe6a336ce0
+msgid "GraphNode"
+msgstr ""
+
+#: a16abb8d12af4270957a660fe1916678 of sds.graph.node.GraphNode:1
+msgid "Bases: :py:class:`~sds.core.node.Node`"
+msgstr ""
+
+#: 71aa6450463d4d578e0dc4204150574c of sds.graph.node.GraphNode:3
+msgid ""
+"Graph nodes are simple containers for data with a unique identifier. "
+"Unlike tree or list nodes, they do not maintain references to other nodes"
+" internally. Instead, connections between nodes are managed by Edge "
+"objects and the Graph class."
+msgstr ""
+
+#: 8709ef1d2887418caf449f1bc5301af3 of sds.graph.node.GraphNode:8
+msgid "The _refs list inherited from Node is not used by GraphNode."
+msgstr ""
+
+#: ../../source/api/graph/node.rst 7f2aef99e82846988dae91f87438dfbf
+#: a291412839ec4f53ba3a2596e6b8282e d34e48d520464d1da96cadfeaa641cf7
+#: e9a7f9f158c94521bd5d4653c2d6955f eef8bc3f0fe849cd8d7ad640dde7a90c
+msgid "Parameters"
+msgstr ""
+
+#: c2f1d7bcf5114f81913532b4eb05a1fc d08265f6d5ee42b0815c1b07ee6a00e4
+#: f63b63566df246aabd79902ca51880b2 of sds.graph.node.GraphNode:10
+#: sds.graph.node.GraphNode.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: a8384a634bde4f769ea924fb225a91e2 of sds.graph.node.GraphNode:12
+msgid ""
+"Unique identifier for the node. If None, a UUID is generated "
+"automatically. Default is None."
+msgstr ""
+
+#: 69440cf7b4384a9497df396d61df9af8 of sds.graph.node.GraphNode:18
+msgid "The data stored in the node (inherited from Node)."
+msgstr ""
+
+#: 8d3f78917f814c6083a960a711605d12 9a60a3937f164514821141f30ef113b4
+#: aba3ae93addf4b7ea3d3d2066cd9e049 of sds.graph.node.GraphNode
+msgid "type"
+msgstr ""
+
+#: 955394b7461a49f1bc7490dc1399abbb of sds.graph.node.GraphNode:20
+msgid "Any"
+msgstr ""
+
+#: 5cf04826cced496695f4a265b3600330 of sds.graph.node.GraphNode:24
+msgid "Unique identifier for the node (read-only property)."
+msgstr ""
+
+#: 3f72b9d8f37c4c9cba47ad6ed61b455b of sds.graph.node.GraphNode:26
+msgid "str"
+msgstr ""
+
+#: 24e163b8f9e5414cb3ad26bdf49cab40 of sds.graph.node.GraphNode:30
+msgid "Inherited from Node but typically not used in graphs."
+msgstr ""
+
+#: 759360ef11dd4b89846f37b99d8e681a of sds.graph.node.GraphNode:32
+msgid "Node or None"
+msgstr ""
+
+#: 2184756464424886bb4925fbd66f508b 2d7cdd9aa9d04332acd553a64777b832
+#: 50b47c9916d844b184de5076056a80fb 71068e818196430ebdfeb7fca95c3eae
+#: 920e8afaf3cb41fe9ee3ff2861829c10 ac40e6a782504122b204fb9326cddc3e
+#: c8f94234f4cb4c6b86629ce458b9a97b ce35b20e3851465ca4437f1f69aa43bf
+#: d7c28343a8534a1aa6eaf8c10c0b7866 dbc957a1ba92418eac1920515ff51bde
+#: e57546bf0af840cab613e9df3bb4b9c2 eab81ba13bf943789967a9eafd407af5
+#: f94b179eabd14669adbcb3466a41962a of sds.graph.node.GraphNode:34
+#: sds.graph.node.GraphNode.__eq__:11 sds.graph.node.GraphNode.__hash__:6
+#: sds.graph.node.GraphNode.__init__:9 sds.graph.node.GraphNode.__repr__:6
+#: sds.graph.node.GraphNode.__str__:6 sds.graph.node.GraphNode.id:6
+msgid "Examples"
+msgstr ""
+
+#: feef246a74064ae68a2465ffd1e8f87d of sds.graph.node.GraphNode:36
+msgid "Create nodes with automatic IDs:"
+msgstr ""
+
+#: d7a66e26d5ad4207aecb55ebe4a65de6 of sds.graph.node.GraphNode:45
+msgid "Create nodes with explicit IDs:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:156 88aa65f1e889473c8ce20aaadfee6cbf
+#: 8c32e0760cbe4085948eb63a4a4ef99e of sds.graph.node.GraphNode:54
+msgid "Nodes can store any type of data:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:580 01a9601329124e67b79a6e6d246630b9
+#: 01ad56dbc36745be98228ec7d6cb6317 217bce8836ec4a29a5fb97d6471619e2
+#: 35bb0c7f43024fdcaecef88edef40e0d 7914f3fa7f024e9492e4bd13fbeb4352
+#: ab14bd6bdd3c495aa26f74f75c0e0443 bbae317c285642958a1fd97605c4f1d9
+#: cd53bd8a46ed44f49110f1f07236f40c of sds.graph.node.GraphNode:60
+#: sds.graph.node.GraphNode.__eq__:21 sds.graph.node.GraphNode.__hash__:13
+#: sds.graph.node.GraphNode.id:12
+msgid "Notes"
+msgstr ""
+
+#: 709aef253e5648f2acf00301e1c8aea3 of sds.graph.node.GraphNode:62
+msgid ""
+"This class uses __slots__ for memory efficiency. The _refs list is "
+"inherited but remains empty - graph structure is managed externally "
+"through Edge objects."
+msgstr ""
+
+#: 2d49756cfbad4e4cb4de5c64dd73449f of sds.graph.node.GraphNode:66
+msgid ""
+"GraphNode does not maintain connections to other nodes directly. Use the "
+"Graph class and Edge objects to define and manage graph structure."
+msgstr ""
+
+#: bae869c31961466284435b8c68fad684 of sds.graph.node.GraphNode:71
+msgid ":obj:`sds.core.node.Node`"
+msgstr ""
+
+#: 240442b5bf0c4248a8b456584d1e07f8 of sds.graph.node.GraphNode:72
+msgid "Abstract base class."
+msgstr ""
+
+#: 2a4db784691b4924a0bdb90c3f0c0081 of sds.graph.node.GraphNode:74
+msgid ":obj:`sds.graphs.edge.Edge`"
+msgstr ""
+
+#: fe0c01ade671444a8b8090c2cab540a9 of sds.graph.node.GraphNode:75
+msgid "Edge class for graph connections."
+msgstr ""
+
+#: ../../source/api/graph/node.rst:59 b3c9228830c444b09ffbf2ceb3bf00fc
+msgid "Constructor"
+msgstr ""
+
+#: 7eb103a7e99142a0866e425fbf73220d d0ef3ce8d688463989f802e80a9a447d of
+#: sds.graph.node.GraphNode.__init__:1
+msgid "Initialize a new graph node."
+msgstr ""
+
+#: 592d781ceffd40b587375af728aa80a2 9326bc6b87104afc903cd2495760de22 of
+#: sds.graph.node.GraphNode.__init__:5
+msgid ""
+"Unique identifier for the node. If None, a UUID is generated. Default is "
+"None."
+msgstr ""
+
+#: 13cb363770c8495eae714ecd8d39e328 f6fb6cc09dd2407cb55258d000dfac0a of
+#: sds.graph.node.GraphNode.__init__:11
+msgid "Create node with automatic ID:"
+msgstr ""
+
+#: 964afcc2bd22455cb6da8938149b8eb9 d4f52af4c2794ee19f067aaf302259e8 of
+#: sds.graph.node.GraphNode.__init__:17
+msgid "Create node with custom ID:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:63 32cfbd5a68b2438ca263b82c76bc90b8
+msgid "Properties"
+msgstr ""
+
+#: 7be9c8e4d0794891bd69ece334915591 89a5bc3cd0ed4c028c670da5a704b4c4 of
+#: sds.graph.node.GraphNode.id:1
+msgid "Get the unique identifier of the node."
+msgstr ""
+
+#: ../../source/api/graph/node.rst 1669225f030b40558ade8b56a35772d5
+#: 3908f03c06584eddafa38d1ceb852a02 5e11d03cd2744a329fe680d4a7a01860
+#: 66ee8df24a5345929e390b9df7e83771 6bbfa2e55861455086412a570cd70990
+#: 74e27f4caa4c41d4a590bd5ffb28477d 7790ce38bd144659896f271a3f304340
+#: 7b846ba46eb1413babccfb1aa40714d9 bde25597b10e448b91b2231dcd8c76db
+#: efd1c81140ac4de8ae47fed35eccfdb8
+msgid "Returns"
+msgstr ""
+
+#: 8ccb34659b3f4975915e8841a035b221 c6d4748109ac4c5bb437795a2eca392d of
+#: sds.graph.node.GraphNode.id:3
+msgid "The unique identifier for this node."
+msgstr ""
+
+#: ../../source/api/graph/node.rst 0c23d68c0dca417fb98869c1acc79d9d
+#: 286ca4f0456a45cdbdbd8c1e20f07bf6 62eeee5012514f298c0c017b9b6eef53
+#: 6713d94d50b94dc0982ab26180da7824 7a5caf3aff61470e8fe8eecdb671624d
+#: 7cbf1f3dc224483e9842092127793d67 810421c19a284b648664246751330371
+#: cd1805d86b73401194d0109816624d02 d02787acd099442e9435fe5b9f5cc65f
+#: d92aaf9a0bb6456eb1b4d51e4df40658
+msgid "Return type"
+msgstr ""
+
+#: 6ce88d6c9e8a47a7a76cfbcf6265d9b1 bdf3a733607b41b7a4df729de5b64b2f of
+#: sds.graph.node.GraphNode.id:14
+msgid ""
+"This property is read-only. The ID is set at initialization and cannot be"
+" changed afterward."
+msgstr ""
+
+#: ../../source/api/graph/node.rst:67 e62120b2584c47a08818e2fb877b9af1
+msgid "Special Methods"
+msgstr ""
+
+#: 54b0231dabe3475183cd98abaef66d31 8eb609df1bba42d8aea572e2f757e00a of
+#: sds.graph.node.GraphNode.__eq__:1
+msgid "Check equality based on node ID."
+msgstr ""
+
+#: a2b59f3926a5404b9affc194e59c34a4 d483fbfb134d4770aa468c39bcc227a8 of
+#: sds.graph.node.GraphNode.__eq__:3
+msgid "Two GraphNodes are considered equal if they have the same ID."
+msgstr ""
+
+#: abae02ffcba14a8aba3d4c41071a33f2 e2eab41bbc624b249d82dec0c9277885 of
+#: sds.graph.node.GraphNode.__eq__:5
+msgid "The object to compare with."
+msgstr ""
+
+#: 4c8733ae2e894ec39d1422aa631e0d35 9822ad1ef4174683b1ebdc4288255660 of
+#: sds.graph.node.GraphNode.__eq__:8
+msgid "True if other is a GraphNode with the same ID, False otherwise."
+msgstr ""
+
+#: 89ede8dd2b8d4332a02a912b25f0759d a3144fe4f74d49dfaa7ea6c32090e6f5 of
+#: sds.graph.node.GraphNode.__eq__:23
+msgid ""
+"Equality is based solely on the node ID, not the data. This allows nodes "
+"to be used in sets and as dictionary keys."
+msgstr ""
+
+#: 967e57f5a776423891a8b2a3b8e3071a f8f29a918cba41598e5d8dfb75961790 of
+#: sds.graph.node.GraphNode.__hash__:1
+msgid "Return hash based on node ID."
+msgstr ""
+
+#: 7c3e9e4a6d514b0c997ea9515dc92e71 fbd66cb2d96343619fef796b5acc9758 of
+#: sds.graph.node.GraphNode.__hash__:3
+msgid "Hash value of the node ID."
+msgstr ""
+
+#: 12e6256c345d425ebdccd5c8838bce76 f0bb2f9c33234f388054061852515780 of
+#: sds.graph.node.GraphNode.__hash__:15
+msgid ""
+"This allows GraphNodes to be used in sets and as dictionary keys. Hash is"
+" based on the ID, so nodes with the same ID have the same hash."
+msgstr ""
+
+#: 5b72b045091b4d939f7bcaa2c4a519ac 8f2479681b234b3fa1c6771035712367 of
+#: sds.graph.node.GraphNode.__repr__:1
+msgid "Return a detailed string representation of the node."
+msgstr ""
+
+#: 5fa956d85f854f5db95f47156aeecf68 dc3aeb806d5b4776b3203abdb08c2bab of
+#: sds.graph.node.GraphNode.__repr__:3
+msgid "String representation in the form \"GraphNode(id=..., data=...)\"."
+msgstr ""
+
+#: 9d2f614a55e74e3191e2f167d55212d1 f2b74abc869f4201b21c6c0d8340938e of
+#: sds.graph.node.GraphNode.__str__:1
+msgid "Return a simple string representation of the node."
+msgstr ""
+
+#: 8d466c29d0cd434bbce0a74178a43b3c f3228f41dd5b4fb4995d65441ff895e4 of
+#: sds.graph.node.GraphNode.__str__:3
+msgid "String showing ID and data."
+msgstr ""
+
+#: ../../source/api/graph/node.rst:74 9941c2408559443eaf67d48cb38f4002
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:77 23fca9863b7942f1b6fd8d7bd4ff6398
+msgid "Basic Node Creation"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:79 710fc2db877745dcbc28db9c593a2131
+msgid "Creating nodes with automatic and explicit IDs:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:100 39d0c030d9464b8ea06f88692ecfd917
+msgid "Node Equality and Hashing"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:102 ae87deedc7b94c91932c67e3834169e4
+msgid "Nodes are equal if they have the same ID:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:126 b89c4946b59b4648b4cd248d4fec3482
+msgid "Using Nodes in Collections"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:128 af7d8aff12a84147b2e2ecf56a2f8222
+msgid "GraphNodes can be stored in sets and used as dictionary keys:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:154 5975b1ab7aec4a788deaf3214be0e01c
+msgid "Storing Rich Data"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:180 67d9630002d6427c8ae74ee521aae65a
+msgid "Node Identity vs Equality"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:182 20ca1daba7924f089cc7ae0a8e3dccf4
+msgid "Understanding node comparison:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:211 b9924b4434d847cb9ddb72cf4415e1fb
+msgid "Memory Layout"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:214 9b3efe70b8db454ea78d12b64adf98f5
+msgid "Node Structure"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:229 82a42310b690486aa9ec1d3ffc44fca5
+msgid "**Memory characteristics:**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:230 e2364ea1c1aa4b1ea76c6c22ed012441
+msgid "Fixed overhead per node: ~64 bytes (Python object + 2 attributes)"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:231 a101f7af7a484021bcd1df77b2b9a34b
+msgid "ID string: ~50-80 bytes (UUID) or custom length"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:232 ee73849c43014fd995053fb580838be2
+msgid "Data: depends on stored object"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:233 6a31fc33d6cb42a9a79a5d33514b10e3
+msgid "No edge storage: connections managed externally"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:236 37f2b49e342e4d62ad33d5f484a2af98
+msgid "Comparison with Other Node Types"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:242 832a68fe13624407acfcc0a3167f98ed
+msgid "Feature"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:244 fcc0c020a7974134877f218454a6cb66
+msgid "BinaryNode"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:245 8d48b89571b34884985f84f8f3130439
+msgid "TreeNode"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:246 719a4e813e8a43b48e6aefcd74e79d6b
+msgid "**Children storage**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:247 df316efc254e4b118f5a6b2929ff57b0
+msgid "None (external)"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:248 87097e1c208145c2ad23577cec9fa40d
+msgid "2 pointers"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:249 1803a1be36634e788e0a9de16130fbc8
+msgid "List of pointers"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:250 f9bdba8f7e5644c29e2276075c54cc7d
+msgid "**Identity**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:251 e64a43f44d2e46e38b6b8ff55f0f001d
+msgid "UUID or custom ID"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:252 ../../source/api/graph/node.rst:253
+#: b8de8ac6f0974e1bb80ae82096edd16f c72ecc0d26694c4c9441bae0435a2d2b
+msgid "Object identity"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:254 44bbe4ee26a84c1ba8a1c724ced4c6c1
+msgid "**Hashable**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:255 c1f3a3e1355b48b5bd9376451af17144
+msgid "Yes (by ID)"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:256 ../../source/api/graph/node.rst:257
+#: 2a121c8ef61b4d3eb1613253ab2b6ae5 ea121bf5f0964769950e0e9ff2d5c6e2
+msgid "No"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:258 dfb8eda2b5714781962a0a0dd99627f7
+msgid "**Connections**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:259 28367fa1fc404db2aa29e7f7775c889f
+msgid "Via Edge objects"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:260 ../../source/api/graph/node.rst:261
+#: 012b2fee00b246f7bba665a7078640a0 4272f2c472e846a6980e807630ba8b75
+msgid "Direct pointers"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:262 3c1622eaeb72467ba6ff84ec1ffd34e5
+msgid "**Use in sets**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:263 15e7e56bd98c4828961d798a08e0a051
+msgid "✓ Yes"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:264 ../../source/api/graph/node.rst:265
+#: bf167ecdae9149b48624c8d479091f0f cb4abe7092eb42809b272da14c9dbed9
+msgid "✗ No"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:268 43ee5adf099c42cabfac6574a32ca0d3
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:271 934dea8faf4248398990a9961fb612fb
+msgid "Example 1: Social Network Users"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:273 adcd519742fb4b71934a514c428151ce
+msgid "Representing users in a social network:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:307 2fec2b7991464777a1cd7b2dc6b4fa90
+msgid "Example 2: City Network"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:309 76f4bf6e56814e05a71d7b3c75482be1
+msgid "Representing cities in a transportation network:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:347 84a76a6e490b49f5b10cf7c02a198070
+msgid "Example 3: Task Dependencies"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:349 052d2ccafe884783988e9b2676a59d99
+msgid "Representing tasks with dependencies:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:396 f87f1e43ac4742f28764396cd0a59d53
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:399 5401f3c6e45a44c786c8df1f965904d6
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:401 3b34309517044946bd3885043ec3253a
+msgid "✅ **Use meaningful IDs for named entities**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:412 c56c0027ec294a5aa448a8c73bf612d4
+msgid "✅ **Store rich data in nodes**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:433 48404947492f455dbe7d1b870a666896
+msgid "✅ **Leverage hashing for efficient lookups**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:449 72c8b8f6e9ec4f8f8042d72321f4de40
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:451 d018c4b62753471aa3a346486a56e498
+msgid "✗ **Don't manually modify _id**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:461 fb3a5ee999e64f309d5945e20a5048eb
+msgid "✗ **Don't use _refs for connections**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:472 6bc919cfc636466bbce4f36cfa2ab652
+msgid "✗ **Don't rely on data for equality**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:484 5257cb6a617a4946a11860603c2f6c1f
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:486 079e21d745d04132a6965c4cee796b75
+msgid "**Confusing identity with equality**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:500 c76409749eef4bfca75bb7f8ce25bc65
+msgid "**Creating duplicate nodes with same ID**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:514 aa63977b598e43aeaa29a218264be2f0
+msgid "**Forgetting nodes are hashable**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:529 634df4bce76a48d583693d1d262ecb00
+msgid "Design Rationale"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:532 ea7704d2b02f4ebba22e7c1a1c5a8485
+msgid "Why External Connections?"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:534 106572d4180a4119a5fb724a68c773ff
+msgid "GraphNode deliberately does not store connections internally:"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:536 c5dfd212150e400cb703f4bfe5c33b38
+msgid "**Advantages:**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:538 66cd70533e694650b92c4da2880c3379
+msgid ""
+"**Flexibility**: Supports multiple graph representations (adjacency list,"
+" matrix, edge list)"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:539 a8868192345d43f1b849f1cc9af015df
+msgid ""
+"**Memory efficiency**: Nodes can be shared across graphs without "
+"duplication"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:540 04dd8debbc164e82980a66b895862ae2
+msgid "**Separation of concerns**: Node data separate from graph structure"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:541 4b343b9189cf4b258fc9ef69f350b829
+msgid "**Multi-graph support**: Same nodes can exist in different graphs"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:543 7566c16d044b46428fc40daf870656aa
+msgid "**Trade-offs:**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:545 0df5c6c7c3f14cd0be44c40f328db51d
+msgid "Requires separate Edge objects"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:546 47514e99eba8484daa92fe2adc872466
+msgid "Can't navigate from node to neighbors without graph context"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:547 8211d66e843d4ac2a289aacb0b669907
+msgid "Slightly more complex API (but more flexible)"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:569 4258439012014e28a94ca3b413eba432
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:572 ab449a2b852243a780fe3745f432b1ce
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:578 7baa909e609d4bafbe3ec62915131e43
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:579 ce99260161f94044b27f95b5fc30e573
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:581 6e64097424f148acb2c9930421691cf8
+msgid "Create node"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:582 ../../source/api/graph/node.rst:585
+#: ../../source/api/graph/node.rst:588 ../../source/api/graph/node.rst:591
+#: ../../source/api/graph/node.rst:594 ../../source/api/graph/node.rst:597
+#: 35a096b7ae2741e28fd39bcc0148c5e5 6f7d41eefd52447c96df2fe1f3479ae1
+#: 81c5c41eee2b48c8bc57d136e6b36de4 adf760ad6ac44cad8c7482a05dceab0d
+#: b9eac9c83df74d3688f3979638b91325 f87f54c4813748ef942299d3079636ad
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:583 55061d37be1943fda01bb3bb6790a0de
+msgid "UUID generation or copy ID"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:584 7afbaaa56a9e4c3c96ee7c460d260caa
+msgid "Access data"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:586 3b1ce797f2da45c1a4e03d15e32a165a
+msgid "Direct attribute access"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:587 1c284a1578294389937177ab5cb139cb
+msgid "Compare equality"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:589 2d3c568d05f04e95a11808c0dade8cf4
+msgid "ID comparison"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:590 7544c2a0f73142908259c0edb1f04c40
+msgid "Hash node"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:592 56b8a5d0b95e49a4a7968b86af0f10f4
+msgid "Hash of ID string"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:593 0a59a1160efa48e393bcfd704424011a
+msgid "Use in set/dict"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:595 d5b4ec95883c4bb19bea404b5d7f26f8
+msgid "Average case"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:596 00616d8f8687413eadd11acfa735e733
+msgid "String representation"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:598 6331d39b8e6f4867b2e362cc67869e79
+msgid "Simple formatting"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:601 b6d0e051edda44bfa02b1de372aeeec7
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:607 8792b7c3ce434cea8a0be1cf4fb2c88b
+msgid "Component"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:608 4ab159b3ecbb42caa6d8489b304efd1c
+msgid "Space"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:609 ef57ea0812044d76aca8f298ab0295a6
+msgid "Base object"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:610 4c12c0dd7d6b422b83c84491f50b65b8
+msgid "~64 bytes (Python overhead)"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:611 83b33896a423499cbab14940506983b2
+msgid "ID string (UUID)"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:612 26e633e9e237435f9be2827ae0118c45
+msgid "~50-80 bytes"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:613 e16e1401d3874f3e8ea2de2a6249ed27
+msgid "ID string (custom)"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:614 fcd00a1129464dacad7b067cdd3141ff
+msgid "Length-dependent"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:615 4c0d3d8ec7504bbaa1ef2d8416525902
+msgid "Data reference"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:616 75bf77103ed0471a96640db417d33376
+msgid "8 bytes (pointer)"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:617 a76e00971a6842a6b2be2f492e9521c8
+msgid "Actual data"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:618 0333270c8e4c4f5abf87b88649de143f
+msgid "Depends on data type"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:619 c509285349d04fdb9ae841b9e8087a98
+msgid "**Total (typical)**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:620 fea8d88aeccf4d11b2bf43c466fef761
+msgid "**~120-150 bytes + data**"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:623 268ff34c28b34def8eb0b0aaf4d61807
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:625 4706fe3edbde46458a65d790fc191644
+msgid ":doc:`edge` - Edge classes for connecting nodes"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:626 3759e71eb8994674a8f1b9eea0024c40
+msgid ":doc:`graph` - Graph implementations using nodes"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:627 7a5bf6509d93467a88cf0c23c0edb378
+msgid ":doc:`interfaces` - Abstract graph interfaces"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:628 3c7aa9558a584accaebaecc03002e557
+msgid ":doc:`../../guide/graph_structures/index` - Graph structures guide"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:631 d1fd3b94818641c68c9df5cbdce71074
+msgid "References"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:633 bc9447146ff4442db8e3117290985ff1
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 22"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:634 a51bf1f337fa4c7a9e46a5c17e8a8e43
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Chapter 4.1"
+msgstr ""
+
+#: ../../source/api/graph/node.rst:635 33ffa68976444581b5c356f34eff5c94
+msgid "West, D. B. \"Introduction to Graph Theory\", 2nd Edition, Chapter 1"
+msgstr ""
+

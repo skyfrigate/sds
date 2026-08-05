@@ -1,0 +1,1203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/tree_structures/binary.rst:5
+#: 6a25605037494af88fe2c5612d096f37
+msgid "Binary Trees Guide"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:10
+#: e50728bc605e477592edffab1071363c
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:12
+#: fe0c163eda174bdaacaf1b0437dbcf7b
+msgid ""
+"A **binary tree** is a hierarchical data structure where each node has at"
+" most two children, referred to as the **left child** and **right "
+"child**. A **binary search tree (BST)** is a special type of binary tree "
+"that maintains an ordering property: for each node, all values in the "
+"left subtree are less than the node's value, and all values in the right "
+"subtree are greater."
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:42
+#: 0aa547b43c224f7d8235c299148c9c0a
+msgid ""
+"Binary trees are fundamental structures used in compilers, expression "
+"evaluation, and many search algorithms. BSTs enable efficient searching, "
+"insertion, and deletion when properly balanced."
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:47
+#: b9fa01f7139042859af9cd4d10923704
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:50
+#: fbcdedda0af244198221fde5fea719a6
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:53
+#: ../../source/guide/tree_structures/binary.rst:1366
+#: 7be4b08c0d4c481d9b84f93aa3fd7807 bf516ede7e374e579397fb1ca2bc73ce
+msgid "Binary Tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:55
+#: 37bdcd1a33b24b3e9657eb87269220fe
+msgid "A binary tree :math:`T` is defined recursively as either:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:57
+#: f1aaf779331147639c8e8fce989b6ca9
+msgid "Empty: :math:`T = \\emptyset`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:58
+#: 148fde65550d4400be1ecb3a3fdf6fd2
+msgid "A node with two subtrees:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:60
+#: 8beb0482a8f445f984b476c503594b0d
+msgid "T = (root, T_L, T_R)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:64
+#: c00fb20919884c6d84fd855a921af7e5
+msgid "where:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:65
+#: e4ba5d7fe0d44dacb9734d5d3b8849c3
+msgid ":math:`root` is the root node containing data"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:66
+#: 3e344eb2b80d450ba007dd4b301c9228
+msgid ":math:`T_L` is the left subtree (also a binary tree)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:67
+#: 02636e0d96084d499255ac24187d5211
+msgid ":math:`T_R` is the right subtree (also a binary tree)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:70
+#: ../../source/guide/tree_structures/binary.rst:1367
+#: 2793ddf821ef4252afa3762f3ba4a9cb e443018b4d644606be9d4fcaa76e44db
+msgid "Binary Search Tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:72
+#: 28000c03c5a14628beffe8ec8f7b1710
+msgid "A BST is a binary tree that satisfies the **BST property**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:74
+#: 049ee69cfad748cdbe1dcec51dafb8c7
+#, python-brace-format
+msgid ""
+"\\forall node \\in T: \\begin{cases}\n"
+"\\forall x \\in T_L: x.data < node.data \\\\\n"
+"\\forall y \\in T_R: y.data > node.data \\\\\n"
+"T_L \\text{ and } T_R \\text{ are BSTs}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:82
+#: b4dda6cac35e43eb952e4f4ce4ec65d9
+msgid "This property must hold recursively for all nodes in the tree."
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:85
+#: 157a65b8941646ac9a76cb363ed4bd99
+msgid "Tree Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:88
+#: 97442c8f4c8a4d01ac33b306d3ab74b0
+msgid "Height and Depth"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:90
+#: 46f0e9a255de48e9b589915492dfb171
+msgid "**Height of a node** :math:`h(v)`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:92
+#: c3b115469de242dd8e1b73ea5c7e66c6
+#, python-brace-format
+msgid ""
+"h(v) = \\begin{cases}\n"
+"0 & \\text{if } v \\text{ is a leaf} \\\\\n"
+"1 + \\max(h(v.left), h(v.right)) & \\text{otherwise}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:99
+#: 06e3aadd11214bba888dc65e052090c5
+msgid "**Height of the tree**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:101
+#: c9712bdfbedb472685aee89c9bd6a4b0
+msgid "height(T) = h(root)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:105
+#: 0153bf40355540018f4b5c05d0ebb786
+msgid "**Depth of a node** :math:`d(v)`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:107
+#: a9fda558d9824741980dd53f566e353f
+#, python-brace-format
+msgid ""
+"d(v) = \\begin{cases}\n"
+"0 & \\text{if } v = root \\\\\n"
+"1 + d(parent(v)) & \\text{otherwise}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:115
+#: 1ce46d31efe14f96824038f95eea4bb8
+msgid "Size and Balance"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:117
+#: 9addfca767494b72b58c21dfc3476017
+msgid "**Number of nodes**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:119
+#: 679c70cdd3e14470800218e279076e27
+#, python-brace-format
+msgid ""
+"|T| = \\begin{cases}\n"
+"0 & \\text{if } T = \\emptyset \\\\\n"
+"1 + |T_L| + |T_R| & \\text{otherwise}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:126
+#: 12a2e39d5acf4183af0fe30d16989bfb
+msgid "**Balance factor** (for node :math:`v`):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:128
+#: 0c8794461b194769a502d78baf89f084
+msgid "BF(v) = height(v.left) - height(v.right)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:132
+#: f4c13a5f72e24de1982e25959403b2d4
+msgid "A tree is **balanced** if :math:`|BF(v)| \\leq 1` for all nodes :math:`v`."
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:135
+#: 2c17f5f1d7b84b34873a71bc53eb2b48
+msgid "Height Bounds"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:137
+#: 4d82dd7f851b4f5cbfe3e52ccf25fdf4
+msgid "For a binary tree with :math:`n` nodes:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:139
+#: 8476f19b97554b97b84c7d8823c310e9
+msgid "**Minimum height** (perfect tree):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:141
+#: 170e8d98d6d64140aff8240adf49299f
+#, python-brace-format
+msgid "h_{min} = \\lfloor \\log_2 n \\rfloor"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:145
+#: ef6ece05f8e140298e166f66cc659080
+msgid "**Maximum height** (degenerate tree):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:147
+#: 9d9e4371da3440f6831212ca5754d1c7
+#, python-brace-format
+msgid "h_{max} = n - 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:151
+#: 6d4f14896b444311b6932b542e2bfd27
+msgid "**Average height** (random insertion):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:153
+#: 870ae971300c4065b627f5e4f7240045
+#, python-brace-format
+msgid "h_{avg} \\approx 1.386 \\log_2 n \\approx 1.386 \\ln n"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:158
+#: 89ae7289c3cb4b7f9ca792f8dd2cfd70
+msgid "Node Count Bounds"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:160
+#: e3bc7e3a9e1843b3b9b6bf6724bf38ff
+msgid "For a binary tree of height :math:`h`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:162
+#: 82dd73b37bd74a9e9fe253f2f923b964
+msgid "**Minimum nodes**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:164
+#: 698323cbe9f444f5b1260f75a0d11dfc
+#, python-brace-format
+msgid "n_{min} = h + 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:168
+#: 934e48323800481685dfc8da898a791d
+msgid "**Maximum nodes** (perfect tree):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:170
+#: a0aaa79eca2e46888ba1768c9c1b4421
+#, python-brace-format
+msgid "n_{max} = 2^{h+1} - 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:174
+#: 2ee74f8fb56c4430bc8c5dd2802d0167
+msgid "**Number of leaves**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:176
+#: b3215f8a5e16407e92a3a2890f0d189b
+#, python-brace-format
+msgid "leaves = \\lceil \\frac{n + 1}{2} \\rceil"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:181
+#: d8fd01a6585c458dbc144fd1a8d5bacf
+msgid "Tree Invariants"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:184
+#: cf8fc370bd9d4670ab64956cfee89f1b
+msgid "Binary Tree Invariants"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:186
+#: 1792e55795a8428fb886ed260fe3a23e
+msgid "**Binary constraint**: Each node has at most 2 children"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:188
+#: 1d79a7c4a9bc48ab8ba0d843789e931a
+#, python-brace-format
+msgid "\\forall v \\in T: |\\{v.left, v.right\\}| \\leq 2"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:192
+#: 50b1e187c0f94032ad459405bdce4e26
+msgid "**Acyclic**: No cycles exist"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:194
+#: cede60b64cf242b8aab462cd43206b49
+#, python-brace-format
+msgid ""
+"\\nexists \\text{ path } v_1 \\rightarrow v_2 \\rightarrow \\cdots "
+"\\rightarrow v_n \\rightarrow v_1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:198
+#: 13a48607f470400c95350409f81780fa
+msgid "**Single parent**: Each non-root node has exactly one parent"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:200
+#: 5c0c86a687cd463d8801d141ec1bffbc
+#, python-brace-format
+msgid "\\forall v \\neq root: \\exists! p : v \\in \\{p.left, p.right\\}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:205
+#: 502f355106a54fa5a141600e1b6a087d
+msgid "BST Invariants"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:207
+#: 82b0f11c48844a29a6b9e018c25bff2b
+msgid "In addition to binary tree invariants:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:209
+#: 55b97122c81e47e1b7993a8b20ea26be
+msgid "**Ordering property**: Left < Parent < Right"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:211
+#: ba89ee3d07b94aeb88552ec2abdbaeb2
+msgid ""
+"\\forall v: (v.left \\implies v.left.data < v.data) \\land (v.right "
+"\\implies v.right.data > v.data)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:215
+#: f4c6bdb21de64e278425c32697d77ff6
+msgid "**Recursive property**: Subtrees are BSTs"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:217
+#: 2ec08c6cab8d4cefa8066bde6a2c83f5
+#, python-brace-format
+msgid "isBST(T) \\iff isBST(T_L) \\land isBST(T_R) \\land \\text{ordering holds}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:222
+#: 891538ae554446db98edc28f8d8f0d50
+msgid "Algebraic Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:224
+#: 231b864733d846bab7ee2d2af299296f
+msgid "**Inorder traversal of BST yields sorted sequence**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:226
+#: d219d42ed36247c6b8745527b57c4e90
+#, python-brace-format
+msgid "inorder(BST) = \\text{sorted}(\\{v.data : v \\in BST\\})"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:230
+#: ebdfe72020b24f79a711312d0bcc4ae2
+msgid "**Height after :math:`n` random insertions**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:232
+#: 3af76e2c173045ef987de239ab9c25e0
+msgid "E[h] = O(\\log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:236
+#: 9532233fbee248aaa6ee787e344f4522
+msgid "**Search time in BST**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:238
+#: 4c037df11bc14c649b98c7f262ad7595
+#, python-brace-format
+msgid ""
+"T(n) = \\begin{cases}\n"
+"O(\\log n) & \\text{if balanced} \\\\\n"
+"O(n) & \\text{if degenerate}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:245
+#: e992f3bb4fd247c7872230965b64ce0f
+msgid "**Number of different BSTs with :math:`n` nodes** (Catalan number):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:247
+#: 3420f75bbbb84274a873d7b30d250b0a
+msgid "C_n = \\frac{1}{n+1}\\binom{2n}{n} = \\frac{(2n)!}{(n+1)!n!}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:252
+#: 8eaaf7d6c2964a789544d3c2be1abb57
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:255
+#: c2e5e14ad6ca478c95156d1290489f7a
+msgid "Abstract Data Type (ADT)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:289
+#: 5440513da97a450fa0b43e502a44e973
+msgid "Implementation Strategies"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:292
+#: d6a366ed09d64139bb46058027955f20
+msgid "Node Representation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:294
+#: f90cc30b08154942bf2ab159168e44f5
+msgid "Each node stores:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:312
+#: 9cd0d6269201475fb72eb5edd1d38001
+msgid "**Memory layout**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:323
+#: ffdcc69b3cee45fb8c8994a2e57d3456
+msgid "Core Algorithms"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:326
+#: ddbb7595b63b4653b062420cb00fa747
+msgid "Search Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:328
+#: b39b690f016842d39fc0a0b2fec8d3e7
+msgid "**Recursive search**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:348
+#: 9ae1d411571449ba9681a80e8a404b00
+msgid "**Time complexity**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:349
+#: d6c7f745588240a6b48bbb8c045d6324
+msgid "Best: :math:`O(1)` (root)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:350
+#: 55e58455e832497dae461e7404249578
+msgid "Average: :math:`O(\\log n)` (balanced)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:351
+#: 27846513fec740cf896698afd8860021
+msgid "Worst: :math:`O(n)` (degenerate)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:353
+#: 51c0baec94ba4e4ea803aa9595441671
+msgid "**Space complexity**: :math:`O(h)` for recursion stack"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:356
+#: 8af3998ae5a3465ca64c38f3fbb63c76
+msgid "Insertion Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:358
+#: c845dcb036e048f69800999009a48e93
+msgid "**Recursive insertion**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:378
+#: ed0077d098b0401382e91a04de67f99b
+msgid "**Iterative insertion**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:412
+#: 859c66a798fb4f85922a009c7bba7286
+msgid "**Time complexity**: Same as search"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:415
+#: c9e26c66fdf84a64a51638c22ddd15dd
+msgid "Deletion Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:417
+#: 4eb5e51e0fe6499db5a161f5f8866bc6
+msgid "**Three cases**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:419
+#: badfb89779d74ce88432da4e44523a97
+msgid "**Node has no children** (leaf): Simply remove"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:420
+#: 3cdaa76917aa43b6be77369e7af062c8
+msgid "**Node has one child**: Replace with child"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:421
+#: d81bc7fccb9f4ba49099aea17a606bc7
+msgid "**Node has two children**: Replace with inorder successor"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:460
+#: a54d8f5ca62a43a787f26513b900b61e
+msgid "**Time complexity**: :math:`O(h)` where :math:`h` is height"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:463
+#: ../../source/guide/tree_structures/binary.rst:790
+#: 5d9fe1d52b2246388692ffc62b1bb568 67f7cb59e82f441ea39f4a03bb4d2c91
+msgid "Min/Max Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:495
+#: 6b2fed1a084b468bb743788d51ab6e56
+msgid "**Time complexity**: :math:`O(h)`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:498
+#: 5658ac61a9ab4e7ab107127bbf46eef0
+msgid "Tree Traversal Algorithms"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:500
+#: 84062253c8004e5586b92366a5014a80
+msgid "**Inorder (Left-Root-Right)**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:516
+#: b5da0c88f6994d86b681661620913614
+msgid "For BST, inorder traversal yields values in sorted order."
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:518
+#: e907dd08d9804e75bcd01128fe620c62
+msgid "**Preorder (Root-Left-Right)**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:534
+#: 04ed37d307694c59bb09dca878960536
+msgid "Useful for creating a copy of the tree."
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:536
+#: dadab15ad10c48f0bc1053c4e9af68bf
+msgid "**Postorder (Left-Right-Root)**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:552
+#: e241b96d258a416baf682e32226ecb81
+msgid "Useful for deleting the tree (children before parent)."
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:554
+#: 8edf7fc7b13d4c1daedadef31e480a77
+msgid "**Level-order (BFS)**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:582
+#: f3c8cf96a98e4fc5983f0c906d152ba0
+msgid "**Time complexity**: All traversals are :math:`O(n)`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:585
+#: 26cee6fda6ab479a91e0fd78379ab6d9
+msgid "Height Calculation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:602
+#: 282055e00e4b4b238d38fef0d3369d50
+msgid ""
+"**Time complexity**: :math:`O(n)` **Space complexity**: :math:`O(h)` for "
+"recursion"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:606
+#: 2fb3fc2ed1a74aa3886b68f92ff69973
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:609
+#: 73d7429a8ba84216afa79f53be72a56e
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:615
+#: 599139a739a1416da565caa8a7a0909b
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:616
+#: dcdd9ff84a6b4239b45cbadead4999f2
+msgid "Best Case"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:617
+#: e0c7b5deed3c43748426c9a8af84babf
+msgid "Average Case"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:618
+#: 5f323e2eea674c838bdf29616eda0449
+msgid "Worst Case"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:619
+#: c1a74b20310f4cc4b6a8ff297be3fc69
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:620
+#: ../../source/guide/tree_structures/binary.rst:1371
+#: 050baceaac904825b2da5b81073a7875 ffa758fc180740f18b9e2e971301a060
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:621
+#: ../../source/guide/tree_structures/binary.rst:626
+#: ../../source/guide/tree_structures/binary.rst:631
+#: ../../source/guide/tree_structures/binary.rst:636
+#: ../../source/guide/tree_structures/binary.rst:641
+#: 40f4898d6f534b35b2be04cdce7d1076 5d7adc6c5c8b46e6b54628321526b22d
+#: 6aff77b244924f4b97409d7646a99fcd 8d0af1edc426472cbb11ac8a919d88d9
+#: 9343d97465624fb4947fa2ddfc831c89
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:622
+#: ../../source/guide/tree_structures/binary.rst:627
+#: ../../source/guide/tree_structures/binary.rst:632
+#: ../../source/guide/tree_structures/binary.rst:637
+#: ../../source/guide/tree_structures/binary.rst:642
+#: 172c544ce83e4f45b0094fd19a4d360b 4b1c6de26b244b479aaed613207aed5a
+#: 4c9a727dd000448bb12a7877fdbd251f 8e69c91e6fd24ed2bed3c8e6a26c4546
+#: ea46cb2737594227bc910c965b14e946
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:623
+#: ../../source/guide/tree_structures/binary.rst:628
+#: ../../source/guide/tree_structures/binary.rst:633
+#: ../../source/guide/tree_structures/binary.rst:638
+#: ../../source/guide/tree_structures/binary.rst:643
+#: ../../source/guide/tree_structures/binary.rst:646
+#: ../../source/guide/tree_structures/binary.rst:647
+#: ../../source/guide/tree_structures/binary.rst:648
+#: ../../source/guide/tree_structures/binary.rst:651
+#: ../../source/guide/tree_structures/binary.rst:652
+#: ../../source/guide/tree_structures/binary.rst:653
+#: ../../source/guide/tree_structures/binary.rst:656
+#: ../../source/guide/tree_structures/binary.rst:657
+#: ../../source/guide/tree_structures/binary.rst:658
+#: ../../source/guide/tree_structures/binary.rst:661
+#: ../../source/guide/tree_structures/binary.rst:662
+#: ../../source/guide/tree_structures/binary.rst:663
+#: ../../source/guide/tree_structures/binary.rst:666
+#: ../../source/guide/tree_structures/binary.rst:667
+#: ../../source/guide/tree_structures/binary.rst:668
+#: 01161966b2234944966ec2ec5ddba1d3 0203ac187fbb47fa89f2af93fdea53cb
+#: 154da05299d549cfa49e8bc7869f540d 1fc015c7ec884e81821d78d4abdd57b6
+#: 2a6e0c80590b401a83205233d93c0c02 37de0deeaca04e48942de13b17f32965
+#: 55ce679b714e4d9fa1f7206bc318b321 65bf39addad94db7836783d34b447cca
+#: 75fb661d6cea4e7e938cfd31167e06f7 8eb916927b4546dcab0d56459e079f55
+#: 92d8bb08b31e42098e41d3a0d93dcf98 a2bee7403c7044c79f3046cb1bf4a33f
+#: ae4813b3843c40ecb20c27373ebcd00f b2bb40cf8ef64f7cbec494a3f0c7b794
+#: c0faba4ed25c40c391ce8555b5dba37d c4d8f88c2f384b769214ea7d800a02f1
+#: d965c3bca89942d3949662f0f1fcc2a3 f35ec83a4028459094cec0dfd97c7566
+#: f981974faf624db9b81a7af516a2884c fce349864e7e4fa689b3b5d09032e309
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:624
+#: ../../source/guide/tree_structures/binary.rst:629
+#: ../../source/guide/tree_structures/binary.rst:634
+#: ../../source/guide/tree_structures/binary.rst:639
+#: ../../source/guide/tree_structures/binary.rst:644
+#: 2b17862f75364232a353a7b3b73dc181 56f40df5e6fd42a4b9e942ab98372756
+#: 95cb60456c574225aa2d419124ce3525 b34e2cb54f40401d995b1f0803472f40
+#: e5b3bbf2ca5749449e16bd035b419f50
+msgid "\\*"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:625
+#: ../../source/guide/tree_structures/binary.rst:1374
+#: 08efb0787d3e44d28cde81fe0d1cf37d 7a1215b4921042f69eb5cab5b6eb2fc5
+msgid "**Insert**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:630
+#: 98e00e7f21124e7f96ef04cbb3e33924
+msgid "**Delete**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:635
+#: d81a2e3b83784f37be3adda683922101
+msgid "**Find Min**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:640
+#: 9e88dbbdd3b8419eb16a93b30d4b0151
+msgid "**Find Max**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:645
+#: ../../source/guide/tree_structures/binary.rst:1377
+#: a9f6f71852ba4712b08ae6a933b6b01b bbfd347f532f4140bdbcc7190bde5867
+msgid "**Inorder**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:650
+#: d742a287f5994b61a8c2ce8009af1754
+msgid "**Preorder**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:655
+#: 6cfb0b70ed9e4a8199aa96bf0c8c2304
+msgid "**Postorder**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:660
+#: 86251d23f06842398a14495d40d8e0ca
+msgid "**Level-order**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:665
+#: 174bbb53cabd457ab01198a80b73d998
+msgid "**Height**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:671
+#: c2cdc9d4deb34123aa8640bca38c7fc2
+msgid "\\* Depends on tree balance"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:673
+#: c8b7b5148eb946d9838f50afbc8b593a
+msgid ""
+"**Key insight**: BST operations are :math:`O(h)` where :math:`h` is "
+"height. For balanced tree: :math:`h = O(\\log n)`, for degenerate: "
+":math:`h = O(n)`."
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:677
+#: 98c0d6bd3d254d82b169abfc9f8e9480
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:679
+#: 9681a7eaa8f141ddbbd66a345350b588
+msgid "**Tree storage**: :math:`O(n)` for :math:`n` nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:680
+#: 4feeade38dd846bdb2fb285f5ef2361b
+msgid ""
+"**Recursion stack**: :math:`O(h)` for recursive operations * Balanced: "
+":math:`O(\\log n)` * Degenerate: :math:`O(n)`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:685
+#: 3757c608588c4863826c5653a56b56f2
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:688
+#: 13623e8b0aee49b39ca2f52c6eebea01
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:699
+#: e4bacda65353402a8a2460665acc6472
+msgid "Binary Tree Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:702
+#: 3ee6d955e1774fb79ff5e463a74425a0
+msgid "Creating and Populating"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:722
+#: f0e073375bfa45e682be24f4ec8ba7e0
+msgid "Searching"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:735
+#: cec0c619c0c241a59915d55ff7045176
+msgid "Traversals"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:756
+#: 67d133ea39a64ea7a59806cc04df1162
+msgid "Binary Search Tree Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:759
+#: f7ec59f340f844468c3c8af1db535179
+msgid "Creating and Building BST"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:778
+#: 1d7bd611ccd44b0295d2692f8aa051b4
+msgid "Efficient Searching"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:801
+#: 88da6becdebc4c6db9dce7c9816d5f2b
+msgid "Deletion"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:821
+#: 0b30e8521383472b9bb422f8c0af9ce0
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:824
+#: 78c654828c3c4241ba2c5b4d58cc4ef6
+msgid "Application 1: Expression Tree Evaluator"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:826
+#: b324a8a6d3204702baa124b36c4c0b52
+msgid "Parsing and evaluating mathematical expressions:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:928
+#: 0fd5c1bafebd4c99a160880434474569
+msgid "Application 2: Autocomplete with BST"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:930
+#: 7e0825cff7e344e2bd603d41ac1f2d43
+msgid "Simple autocomplete system using BST:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:998
+#: 510c65deae394609ab839a229b2eccf5
+msgid "Application 3: Range Query System"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1000
+#: 61b55aa85be44acfb35773913a6fff11
+msgid "Finding elements within a range using BST:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1067
+#: 0aaec3acb60447e99e88e0b1477a7fc2
+msgid "Application 4: Binary Decision Tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1069
+#: c5e95eee65d3439f8d44ec7401e3cbc2
+msgid "Simple decision tree for classification:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1148
+#: b3816164bbce47ffbaac32bab5aba3bb
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1151
+#: ddb6e6cf64944015bb26ef4d2a209622
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1153
+#: 97d61de7e2cd400284801d1bd2059a82
+msgid "✅ **Use BST for ordered data**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1165
+#: 763aafcb335349c985c6c0a13b214e57
+msgid "✅ **Check for empty before operations**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1173
+#: 325966a526af4f649d4b1b862fad535a
+msgid "✅ **Shuffle data before insertion for better balance**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1187
+#: 7b483c960c9f42bdb21d77aaa3b920d7
+msgid "✅ **Use appropriate traversal for the task**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1207
+#: 159882ddf89642e49b60c911f7379f3b
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1209
+#: ec6b03000d8c42808ada8bfa762b0caf
+msgid "❌ **Don't insert sorted data into unbalanced BST**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1226
+#: 4fb8596a4e55446c84b386a2be0dd635
+msgid "❌ **Don't assume BST is balanced**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1239
+#: b89c3d2fd411414d921aa13dc393e408
+msgid "❌ **Don't modify tree during traversal**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1255
+#: 9aca21c9d53b476a8037a30c077853f9
+msgid "Performance Tips"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1257
+#: 4046425976a847c495986face5c5c64e
+msgid "**Balance matters**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1272
+#: 49692819ee4c49cebc3f06a85080f049
+msgid "**Batch operations**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1287
+#: 5dad2212efa1465db6913a33a8d761a8
+msgid "**Iterative vs Recursive**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1304
+#: a7e7b9ee81874465afb2d68971aec436
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1306
+#: 52b023903b4240bbbb1c0d6f0ddb469c
+msgid "**Forgetting BST property during manual construction**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1321
+#: 8df8cfee1aac44bfac605db0ff4f351d
+msgid "**Not handling edge cases**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1335
+#: 69ee98c54e8548c481ecaede7c6b0a54
+msgid "**Memory leaks with large trees**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1345
+#: ed24ee53f7844a18872a8878954c55b9
+msgid "**Stack overflow with deep trees**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1359
+#: 12f5df5ccf2445d5a872ab13c381767c
+msgid "Comparison: Binary Tree vs BST"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1365
+#: 9f7b210861a94cafb54850a7339f3a82
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1368
+#: 03fb34b8dd0e4853a8683c88c3dbbbdb
+msgid "**Structure**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1369
+#: 2184afcb05c24f26b5345859af4df70f
+msgid "Any arrangement"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1370
+#: 50e0669145f24a9195004d05821807cd
+msgid "Left < Parent < Right"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1372
+#: 5af47b0ccb4746afa2bff7adf352bdec
+msgid "O(n) - must check all"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1373
+#: 5f95af4e52964bc4b59b53e50d7011d1
+msgid "O(log n) avg - use ordering"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1375
+#: cf966ee01af94a90a8f5f1cd65fb378b
+msgid "O(n) - find position"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1376
+#: d2f53a15235343c38e6e3effcf82a32c
+msgid "O(log n) avg - follow path"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1378
+#: f5d28df5f96e43b1865dce990625d73b
+msgid "Random order"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1379
+#: 524a7ffbd87a442a9fad43a4d0435d61
+msgid "Sorted order"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1380
+#: 1f2f64e2a4e54ef9b92995a16d2582f9
+msgid "**Use Case**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1381
+#: e34fbe9d0d6d4879b5a6bf2e3212e91f
+msgid "Expression trees, heaps"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1382
+#: 30bc4a89c8ea4ad1b6aae2ed96f48c8c
+msgid "Searching, dictionaries"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1383
+#: 4827ad230ffb4fca8353e98d9437371c
+msgid "**Balance**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1384
+#: 0f5082643593443f996d426ed9054a82
+msgid "Not required"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1385
+#: e6872d1d8a8045e98fad078830a36559
+msgid "Critical for performance"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1388
+#: efd5c7c0251a4489b63eb1ba4c2400e5
+msgid "When to Use Each"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1390
+#: b47e7230eb034bf094d52cdb8233b992
+msgid "**Use Binary Tree when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1391
+#: c5545350f0b84ab199fcafdab2c5d97b
+msgid "Representing hierarchical data without ordering"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1392
+#: e3debbed796349d0bb4c815894f2a221
+msgid "Building expression trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1393
+#: 455e8608cf6b494ba43b5b8983ad23d4
+msgid "Structure matters more than search speed"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1395
+#: d0e5aa4a56f342599e3bee8f3222428f
+msgid "**Use BST when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1396
+#: c32f65966d574120b719b25c4135cad2
+msgid "Need fast search, insert, delete"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1397
+#: 7be0ffe5163240ad8c8ff27b0cec0266
+msgid "Want sorted iteration"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1398
+#: e10ba85b8d924ddbaa56e740cab1fb30
+msgid "Implementing dictionaries or sets"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1399
+#: 0ee490200d624b36895c7a9bf616b55c
+msgid "Range queries are needed"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1401
+#: 3f98c708ed8f405b998a862cc7e59ab2
+msgid "**Use Balanced Tree (AVL/Red-Black) when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1402
+#: c43ac8416f504f4c816035d08631b274
+msgid "BST performance is critical"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1403
+#: bcb7d68d8ac8469995853974f37d37a6
+msgid "Can't control insertion order"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1404
+#: e944caba9595456c99fa07818143edf3
+msgid "Need guaranteed O(log n) operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1407
+#: 6b3d25276cb34736801b0679c7ee67d3
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1409
+#: 60bb56116d1b47fc8427702bbbd0fc17
+msgid ":doc:`/api/tree/binary` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1410
+#: 0b1fdf9ca8864bf8bde3c61db8549a7a
+msgid ":doc:`avl` - Always-balanced trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1411
+#: 6bb75496700045f985114295a88371e7
+msgid ":doc:`red_black` - Balanced with less rotation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1412
+#: 998d9f75d3954d46951ae3efe46eca76
+msgid ":doc:`general` - Trees with more than 2 children"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1415
+#: df597e05d95a4262a909b1dd4a8e5ec8
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1417
+#: 54b601ab467b491fad80d0276411c342
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 12"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1418
+#: 38d87244553a4739b154d80dbc5e440e
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 1\", Section 2.3"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1419
+#: f8a55662faa540df834ea60e36aaf34b
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Section 3.2"
+msgstr ""
+
+#: ../../source/guide/tree_structures/binary.rst:1420
+#: 5bda77c0b94c42ad9ac5948bb727a9d2
+msgid "Weiss, M. A. \"Data Structures and Algorithm Analysis in C++\", Chapter 4"
+msgstr ""
+

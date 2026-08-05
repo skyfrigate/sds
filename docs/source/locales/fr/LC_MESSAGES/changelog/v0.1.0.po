@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/changelog/v0.1.0.rst:3 48d5ff8aae96431cbd7d3d0f310c6d0d
+msgid "Version 0.1.0 (2024-12)"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:5 5e80a8cd44b2481aac18e8d060e2d9df
+msgid "*Release Date: December 2024*"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:7 660258ae0d854a5da61ee0e6171eff9c
+msgid "This is the initial public release of SDS-Tools."
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:10 c1d247401c604cad96a52ccb404c80db
+msgid "Overview"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:12 b401d0a8a5594494b0470b2bdb9d44bd
+msgid ""
+"First stable release providing core linear and tree data structures with "
+"comprehensive documentation and test coverage."
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:16 d5e393e4414647508eb0d1608b24302c
+msgid "Added"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:19 a95d8d0bca3d48edadde1b001b614039
+msgid "Core Module"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:21 3582fa0e0cb04c0fbdbce5a80287ae08
+msgid "Base ``Node`` abstraction class"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:22 c3ebe5d9eff54a0faa3a9b80fd8d56dd
+msgid "``Collection`` and ``LinearCollection`` interfaces"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:23 9585366e168e4e8c94c72377b2fb242f
+msgid "Core exception hierarchy (``EmptyStructureError``, etc.)"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:26 3c17d5b0a0a840ebbb3cd48ecf95610c
+msgid "Linear Structures"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:28 6443c9b5a39045a28198192c3ed08972
+msgid "**Stack** - LIFO data structure"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:30 e3801abf50d3420d8b21c03610b1607b
+msgid "Array-based implementation"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:31 846e6485d8384caab232505f8e55f9aa
+msgid "O(1) push/pop operations"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:32 beddaf49b00742d6ae2d4e7218b070c1
+msgid "Dynamic resizing"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:34 4415c97113f74967be97f39df6747be0
+msgid "**Queue** - FIFO data structure"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:36 305a3ff58d464745ac15a09e6a08eefa
+msgid "Circular array implementation"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:37 84354f8381ed490eb04addb92e009bd0
+msgid "O(1) enqueue/dequeue operations"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:39 7d919812faf6417aa15ba10fbcbd4546
+msgid "**Deque** - Double-ended queue"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:41 7b3f155e69b647d787b33fb4af9b806f
+msgid "Operations at both ends in O(1)"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:43 7c2efee88c554166b915f2fb608942e3
+msgid "**Linked Lists**"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:45 b342b2a74fd64fa3b5a7ac88511d9543
+msgid "Singly linked list"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:46 5e7b3fa9b6b843a3b8528a236c01862a
+msgid "Doubly linked list"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:47 53a01cc1902a4cc99e543c9739d40008
+msgid "Circular linked list variants"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:50 866f346c7360412b87870f8a522dcdee
+msgid "Tree Structures"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:52 1328a7b43e904cf5a1cf057362ccc609
+msgid "**Binary Tree** - Basic binary tree implementation"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:53 21b02365f7ed4551967cc72354e1f7ef
+msgid "**Binary Search Tree** - Ordered binary tree"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:54 e5615788288440bd94e301a51d78e33a
+msgid "**AVL Tree** - Self-balancing BST"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:57 fa15451554914839bc9016f346f10350
+msgid "Documentation"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:59 202be93776cf44189ee2a16a06b3cca8
+msgid "Complete API reference with NumPy-style docstrings"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:60 64bd158a37ca4a6aae85fe9a6f6c7c6b
+msgid "User guides with theoretical foundations"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:61 cd096228cfd34ef99b66ad328b995bc5
+msgid "Algorithm complexity analysis"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:62 2f1de428d1eb48b3ba94353efa1c159c
+msgid "Practical usage examples"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:63 26b32a423a8e4302a47a6b5c006a460e
+msgid "Mermaid diagrams for visualization"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:66 1f6dbe83c5e647338446be9d5d4bbdd4
+msgid "Testing"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:68 3d773bd025f94fbe8273a29dbfd0395d
+msgid "90%+ code coverage"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:69 4d74295cb6584646b4e9a99a0eafc568
+msgid "Unit tests for all data structures"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:70 f325a37b9ed44760aa7f557fe1515a02
+msgid "Performance benchmarks"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:71 c3efe525d70e4d4ea881faf8cafd190a
+msgid "Edge case testing"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:74 c8a663b86fd943bd82fe6f40d2a62936
+msgid "Changed"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:76 ../../source/changelog/v0.1.0.rst:81
+#: ../../source/changelog/v0.1.0.rst:86 ../../source/changelog/v0.1.0.rst:91
+#: ../../source/changelog/v0.1.0.rst:96 0662e74d2a8b4bf480086d5f38b5354f
+#: 101f216e89eb441ab910c8a3a8b1c132 27bb0eb0d0e54c768af5e1f3b76dd4d8
+#: 6a87fa7a6ed74b41b6b499633e94d46b b3ea6a1fd4414cdcae6b9426bcfe6e9f
+msgid "N/A (initial release)"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:79 38adde48185243d2819ef9c8904d8063
+msgid "Deprecated"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:84 d1f6954532e0457caecbfad3be4b4512
+msgid "Removed"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:89 9ca0af11b7104e978713546c17a416b7
+msgid "Fixed"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:94 f4d09176c1624d8db56411d31e8f1be3
+msgid "Security"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:99 d0accd1213984b5a9d04c8f3e21411ad
+msgid "Known Issues"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:101 e2084cde544147018abe399c32713073
+msgid "None at this time"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:104 3f432d9b4f174cb79a7a64457e06aff3
+msgid "Contributors"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:106 efa1fa33954a44e79be60c9a880c3e2e
+msgid "skyfrigate"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:107 a35d4f4627234d28aa7fa52adb64849b
+msgid "biface"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:110 962702cf5cfb40949463f5ffc26531fe
+msgid "Acknowledgments"
+msgstr ""
+
+#: ../../source/changelog/v0.1.0.rst:112 768365dca4c14911980bbf3476a06f2b
+msgid "Special thanks to the Python community for inspiration and feedback."
+msgstr ""
+

@@ -1,0 +1,576 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:2
+#: 521d4e8541594b54bc150cd801b48208
+msgid "sds.tree.BTreeNode"
+msgstr ""
+
+#: a97cc432fa934fb69f31237b5f44b208 of sds.tree.node.BTreeNode:1
+msgid "Node for B-Tree structures."
+msgstr ""
+
+#: ed220ef8c767427490e86f320a665c00 of sds.tree.node.BTreeNode:3
+msgid ""
+"A B-Tree node contains multiple keys and children. For a node with k "
+"keys, there are k+1 children. Keys and children maintain the B-Tree "
+"ordering:"
+msgstr ""
+
+#: 024ee931c2384c479d492945f1218629 of sds.tree.node.BTreeNode:6
+msgid "child[0] < key[0] < child[1] < key[1] < ... < key[k-1] < child[k]"
+msgstr ""
+
+#: d2c0da3a0cf245389e9632a07059652a of sds.tree.node.BTreeNode:8
+msgid ""
+"In a B-Tree of minimum degree t: - Every node (except root) has at least "
+"t-1 keys - Every node has at most 2t-1 keys - A node with k keys has k+1 "
+"children (if not a leaf) - All leaves are at the same depth"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst
+#: 03917de0d98e43aeb54e58b545f461eb 05536fe4d9bc40fc9c2db5031700d225
+#: 115d23539d704251b73cf5e96bcd8f5b 215ac265727a4c04bdd1fa8dec5119a9
+#: 5ee4177eed1f41998de1229b26dca61f 7bfcca16ef92477eabd354420037252b
+#: a15be66780084bd286e0b87e76bf09cb acfab7e8e1ed4567b28edf541642bcdc
+msgid "Parameters"
+msgstr ""
+
+#: 76e2f21fa904400692a14ab42c42dd77 of sds.tree.node.BTreeNode:14
+msgid ""
+"Minimum degree (minimum number of keys is t-1, maximum is 2t-1). Must be "
+">= 2."
+msgstr ""
+
+#: d565471bf19f4dcea99b1bc4b2015c12 of sds.tree.node.BTreeNode:17
+msgid "Whether this node is a leaf. Default is True."
+msgstr ""
+
+#: 347e35f0a1f244a89e850d9070c9e1dd of sds.tree.node.BTreeNode:22
+msgid "Sorted list of keys stored in this node (property)."
+msgstr ""
+
+#: 205c4426cd234d308f09d564c49780d1 2bd859e55a934fd7a596d28b1469ade8
+#: 3196c66ea12c44cf93987f28b319a9c3 c37ae0df4117458f8dff5ecda115eb1c
+#: d9f64ad596a349eface39bf13068b5a4 of sds.tree.node.BTreeNode
+msgid "type"
+msgstr ""
+
+#: 32b216aeeabf4d3aa897150dc3f7a582 of sds.tree.node.BTreeNode:24
+msgid "List[Any]"
+msgstr ""
+
+#: 0ef8f89623bf49a59201c67b970e1ca6 of sds.tree.node.BTreeNode:28
+msgid "List of child node references (property accessing _refs)."
+msgstr ""
+
+#: 18033e043ce048b6a01b784ba5bab04a of sds.tree.node.BTreeNode:30
+msgid "List[BTreeNode]"
+msgstr ""
+
+#: 7385a30a0a2a4478b1b3ac0d4812c42e of sds.tree.node.BTreeNode:34
+msgid "True if this is a leaf node (has no children)."
+msgstr ""
+
+#: 60874aff27b34333b11c625d3aa0c274 of sds.tree.node.BTreeNode:36
+msgid "bool"
+msgstr ""
+
+#: d913334b25a1462fafb2f76585a83652 of sds.tree.node.BTreeNode:40
+msgid "Minimum degree of the B-Tree."
+msgstr ""
+
+#: ce47378718fc420aac9c6126678d7428 of sds.tree.node.BTreeNode:42
+msgid "int"
+msgstr ""
+
+#: f1a6c82bacf4467e836da95ae331a59c of sds.tree.node.BTreeNode:46
+msgid "Reference to parent node (inherited from Node)."
+msgstr ""
+
+#: f74ec1219e6444e697aca352d9fd3870 of sds.tree.node.BTreeNode:48
+msgid "BTreeNode or None"
+msgstr ""
+
+#: 260f704f6b92489ba562c642d111ab89 3cbda08bce474b26a71dc7e3c791cae6
+#: 617968cec0cf42b09eade14c428f7ed1 6b20784a444b4850851c5ec6330b1cf3
+#: 87bddb31114a4d15b4230ebdf868000d 91567ff3e664445e97f3b851b2440d8e
+#: b5e43649902e41f2abc52af01211b880 b75addf2a1bb4b4abe6dbafb09de75f5
+#: c5517b7a5b9645468c28e2897c3780b0 ccd62f7b5cdb49439eebb7a3c192d782
+#: db34ab21e18d4ac88c66463a0b1cd7c4 e39e32669acf4bc4bd64e95a0f20211d
+#: ef35e7245d8848ae9b60f6c764a7e2f7 fca6f3625b014eea8a173225763337ca of
+#: sds.tree.BTreeNode.children:7 sds.tree.BTreeNode.keys:6
+#: sds.tree.node.BTreeNode:50 sds.tree.node.BTreeNode.__init__:11
+#: sds.tree.node.BTreeNode.__repr__:7 sds.tree.node.BTreeNode.__str__:6
+#: sds.tree.node.BTreeNode.add_child:8
+#: sds.tree.node.BTreeNode.find_key_index:13
+#: sds.tree.node.BTreeNode.insert_key:8 sds.tree.node.BTreeNode.is_full:6
+#: sds.tree.node.BTreeNode.is_minimal:6 sds.tree.node.BTreeNode.remove_child:11
+#: sds.tree.node.BTreeNode.remove_key:11
+msgid "Examples"
+msgstr ""
+
+#: 0dbcf3815909462ba418dc3b9225776d of sds.tree.node.BTreeNode:52
+msgid "Create a leaf node:"
+msgstr ""
+
+#: f1d9dc4c6b0d465381a66dff00683d69 of sds.tree.node.BTreeNode:65
+msgid "Create an internal node with children:"
+msgstr ""
+
+#: 82b2024dda504d929df824e4ae1c3f80 of sds.tree.node.BTreeNode:80
+msgid "Check node state:"
+msgstr ""
+
+#: 11d000b13c7447f290f751bfca4ac1a3 of sds.tree.node.BTreeNode:91
+msgid "Find key position:"
+msgstr ""
+
+#: 1779955a2594440095829e23982c0bc9 1dc696e0d5764740a319c1868be9b167
+#: 5736ad18f9134c66950e1ccf746c20c3 665105ccc71a4375be4bd57e27722255
+#: 8bfc8dd0ceef478da74f9fb90f098a67 a9d32d171454457cb1c1e6f0b8dae111
+#: af0fca10a88546f288e5b20c4f63b2d9 cb386b7d5ae245609d6701877fab5c4a
+#: dd000262750e45be85354d95bf781938 fe505c1eeec342ec8744a584fb11f8c2 of
+#: sds.tree.BTreeNode.children:16 sds.tree.BTreeNode.keys:15
+#: sds.tree.node.BTreeNode:102 sds.tree.node.BTreeNode.add_child:32
+#: sds.tree.node.BTreeNode.find_key_index:34
+#: sds.tree.node.BTreeNode.insert_key:17 sds.tree.node.BTreeNode.is_full:21
+#: sds.tree.node.BTreeNode.is_minimal:21
+#: sds.tree.node.BTreeNode.remove_child:26
+#: sds.tree.node.BTreeNode.remove_key:21
+msgid "Notes"
+msgstr ""
+
+#: 02217c47333b4c2e95e5909d2ae37af7 of sds.tree.node.BTreeNode:104
+msgid ""
+"This class uses __slots__ for memory efficiency. The _refs list "
+"(inherited from Node) stores the children."
+msgstr ""
+
+#: 8bb81c30cf6a404481c96300ad5e3af5 of sds.tree.node.BTreeNode:107
+msgid ""
+"B-Tree nodes maintain the invariant that keys are always sorted. Methods "
+"like insert_key should maintain this invariant, but the class itself "
+"doesn't enforce it automatically."
+msgstr ""
+
+#: 0de9f6a40f9f4eb783ad9e0016d6b845 of sds.tree.node.BTreeNode:111
+msgid ""
+"The minimum degree t must be at least 2. This ensures: - Each internal "
+"node has at least 2 children - Each node (except root) has at least 1 key"
+msgstr ""
+
+#: aaf4fdcf534145949c8e7ce0496c49a3 of sds.tree.node.BTreeNode:117
+msgid ":obj:`Node`"
+msgstr ""
+
+#: c1c15a19ec6446a2abf5cc708e85bfcd of sds.tree.node.BTreeNode:118
+msgid "Abstract base class."
+msgstr ""
+
+#: 4a89c0d9373c4275952e966ec692ba37 of sds.tree.node.BTreeNode:120
+msgid ":obj:`TreeNode`"
+msgstr ""
+
+#: afecd20ae47a48f7a797f78d25b270ed of sds.tree.node.BTreeNode:121
+msgid "Node for general trees with list-based children."
+msgstr ""
+
+#: ae8b0e53a13d4a2fae33b0abc30b3bcb of sds.tree.node.BTreeNode:123
+msgid ":obj:`BinaryNode`"
+msgstr ""
+
+#: 7e656c1fc0fd44aa9f3baa74835880bc of sds.tree.node.BTreeNode:124
+msgid "Node for binary trees."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 8cae2a5d24ef45eb8f9a96d905e98e67 e1472b00c48d41ee83080cf4d8d52df8
+#: e19e1ae38484476392e9511ee955f738 of sds.tree.node.BTreeNode.__init__:1
+msgid "Initialize a B-Tree node."
+msgstr ""
+
+#: 0023c7d153a14159942188fd09093ea9 8830537aa0744ad59f6b5a8d6711064d of
+#: sds.tree.node.BTreeNode.__init__:3
+msgid "Minimum degree (defines min/max keys: t-1 to 2t-1). Must be >= 2."
+msgstr ""
+
+#: 4b09237c405b44348796006d6d7ba99e 936de8f6d9b247538dc3f1f555a72d9e of
+#: sds.tree.node.BTreeNode.__init__:6
+msgid "Whether this is a leaf node. Default is True."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst
+#: 1c224a6001e34ce3b7552468cfd9c1da 2e499091b70746bc8051676ddf2589a3
+#: c50bd0aefffc417fa0e0d13527a5e316 e9bda22700204e73a756e0d5e162f7e0
+msgid "Raises"
+msgstr ""
+
+#: 0680cae29d2842399bc177a146af0e6d dac8b4cbe7364262a213064d29a72f23 of
+#: sds.tree.node.BTreeNode.__init__:9
+msgid "If t < 2."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:13
+#: ab7573fb9f184a2bb3e3948eec03dd7e
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 40b07494da0e45d498a45bbf73f42bf1
+msgid ""
+":py:obj:`__init__ <sds.tree.BTreeNode.__init__>`\\ \\(t\\[\\, "
+"is\\_leaf\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 973f224475dd4504a80974811b374c70
+msgid ""
+":py:obj:`add_child <sds.tree.BTreeNode.add_child>`\\ \\(child\\[\\, "
+"index\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 9fd95253cba341eaa41d3001e0de2d15 fa12292476d0427e858012bd72648418 of
+#: sds.tree.node.BTreeNode.add_child:1
+msgid "Add a child node at the specified index."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 7578d31e93374d79afff29ca85a1587c
+msgid ":py:obj:`find_key_index <sds.tree.BTreeNode.find_key_index>`\\ \\(key\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 7bb6e73793bd4fbab522b9370c6a2e4b c81c377e69be4d6d82530a52d1904aa5 of
+#: sds.tree.node.BTreeNode.find_key_index:1
+msgid "Find the index where key should be (or is located)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 765830a6270d43339595cd28eb465e99
+msgid ""
+":py:obj:`insert_key <sds.tree.BTreeNode.insert_key>`\\ \\(key\\[\\, "
+"index\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 02dd5717214c4071bf9102b235486ba2 91317a701d564c82897063cfa8c54a2c of
+#: sds.tree.node.BTreeNode.insert_key:1
+msgid "Insert a key at the specified index."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: be469c99e4614d539aab45959666fe19
+msgid ":py:obj:`is_full <sds.tree.BTreeNode.is_full>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 0d36fada58a246cbb39a8269ed4c838b 0ea0951f407340a4a3175addac62cd1b of
+#: sds.tree.node.BTreeNode.is_full:1
+msgid "Check if node has maximum number of keys."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 33cde6a786054c3ca9051a5424764c69
+msgid ":py:obj:`is_minimal <sds.tree.BTreeNode.is_minimal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 0ad09e7c80b74b8d872769f9a4130257 bb3fd496714c4768aa37ba52181ac74b of
+#: sds.tree.node.BTreeNode.is_minimal:1
+msgid "Check if node has minimum number of keys."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 8d704cf9d58f40f494cc1c917dc95ed9
+msgid ":py:obj:`remove_child <sds.tree.BTreeNode.remove_child>`\\ \\(index\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 90e0c7eb385d41d49c2c84938f2c4267 aec8956166104eb0ba9bdffbafd036d4 of
+#: sds.tree.node.BTreeNode.remove_child:1
+msgid "Remove and return child at the specified index."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 0273f12375434c54a44c0ca1a48e40cf
+msgid ":py:obj:`remove_key <sds.tree.BTreeNode.remove_key>`\\ \\(index\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:28:<autosummary>:1
+#: 429100873af54335aaf55aaa19dd6b80 b893e5a3919f41778be12325695924aa of
+#: sds.tree.node.BTreeNode.remove_key:1
+msgid "Remove and return key at the specified index."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst:30
+#: c58de65d92c146f8b6798ebc034c4a00
+msgid "Attributes"
+msgstr ""
+
+#: 635a57fa0d74413f87c9921705e1d679 of
+#: sds.tree.node.BTreeNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`is_leaf <sds.tree.BTreeNode.is_leaf>`\\"
+msgstr ""
+
+#: 60bae519dee64f1391941c594d595880 of
+#: sds.tree.node.BTreeNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`t <sds.tree.BTreeNode.t>`\\"
+msgstr ""
+
+#: 362aba7d3b424fb0bee0693ddcfab54a of
+#: sds.tree.node.BTreeNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`children <sds.tree.BTreeNode.children>`\\"
+msgstr ""
+
+#: 8c9ed5ad30984a98ac05e773e8123ee5 a2826d3dc980411db9c8ace10d1f2578 of
+#: sds.tree.BTreeNode.children:1
+#: sds.tree.node.BTreeNode.__init__:1:<autosummary>:1
+msgid "Get the list of child nodes."
+msgstr ""
+
+#: 7ae7bc53ce2741ebbc06dbecc7cae3fe of
+#: sds.tree.node.BTreeNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.tree.BTreeNode.data>`\\"
+msgstr ""
+
+#: 4140c400d0e54375b88324b8e53b3cf6 of
+#: sds.tree.node.BTreeNode.__init__:1:<autosummary>:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: 3bc2cf4f676545ad8fd6387c61232a5a of
+#: sds.tree.node.BTreeNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`keys <sds.tree.BTreeNode.keys>`\\"
+msgstr ""
+
+#: 384aa706f4604324a939586eef5533e2 e3ca8e6a284440799e70b5badd31de0a of
+#: sds.tree.BTreeNode.keys:1 sds.tree.node.BTreeNode.__init__:1:<autosummary>:1
+msgid "Get the list of keys in this node."
+msgstr ""
+
+#: c4c1f0f6b9394c2c996441efa1258c67 of
+#: sds.tree.node.BTreeNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`parent <sds.tree.BTreeNode.parent>`\\"
+msgstr ""
+
+#: d60957cf20d4455db29811a7201a013a of
+#: sds.tree.node.BTreeNode.__init__:1:<autosummary>:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst
+#: 201ce4d5137e47cbb82c63ef262dbb2c 207ced8f82114796a39b4b6e0125a679
+#: 350341a07878437cab033b870ca24bde 89c6cc662ea14a5b9a0342681e14be37
+#: 9d874c371d1c4eebaeb4383e79872d00 d3c4c8f223e74930876da2a8170d2fdb
+#: eaf1b8758e504d9cb3c1f823b9b11804 ebd98284d1924fdda919d6ea9fa1221f
+#: fee0c8f8380a4f0487814a6eeee8fd7d
+msgid "Returns"
+msgstr ""
+
+#: e0d7d122b34a454ab4cfa24dd035ff89 of sds.tree.BTreeNode.keys:3
+msgid "Sorted list of keys."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BTreeNode.rst
+#: 13906710a6ac41fca876368b1d4585d7 174521c1e85147f3a76d5a77b56d1be2
+#: 389504f45966436595f2f198bddaa222 42774fbb08744f64978a3f9981d86e47
+#: ab7fffaad8024b92ace56e9cf2719537 dbedf14b861e4d10a11df440cd487c40
+#: ea0d090300f940218cd8d92fabe544c6 eb9024d217224936b38ac5caaf065694
+#: f73edddcf05f43d0b590c3951dc04502
+msgid "Return type"
+msgstr ""
+
+#: 4dbe7cf30a7e42c4b533f98e184ef768 of sds.tree.BTreeNode.keys:17
+msgid ""
+"This property returns a direct reference to the internal keys list. "
+"Modifications affect the node. For safe access, consider copying: "
+"`keys_copy = list(node.keys)`"
+msgstr ""
+
+#: 14f549d1e2fb4aea89e8c5978b049a86 c9f20d9567cc4c1b99bc3b9401a419b3 of
+#: sds.tree.BTreeNode.children:21 sds.tree.BTreeNode.keys:21
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: f648c9e8faf64b5fbd70fae74d4e12c5 of sds.tree.BTreeNode.children:3
+msgid "List of children. For k keys, should have k+1 children (if not a leaf)."
+msgstr ""
+
+#: 01d9c29fb8b94bb295bf4a7115bae340 of sds.tree.BTreeNode.children:18
+msgid ""
+"This property returns the internal _refs list directly. For leaf nodes, "
+"this list should always be empty."
+msgstr ""
+
+#: 171620554cd74b129d14ea3c4d59ed83 of sds.tree.node.BTreeNode.add_child:3
+msgid "Child node to add."
+msgstr ""
+
+#: 40bbd45ba3e6436bb313f6117975a2a7 of sds.tree.node.BTreeNode.add_child:5
+msgid "Position to insert child. If None, appends to end."
+msgstr ""
+
+#: 818b45381a5c4443a5ae3efd3e32e25c of sds.tree.node.BTreeNode.add_child:20
+msgid "Insert at specific position:"
+msgstr ""
+
+#: 254d239c20e7463aae52051bc0bed4bf of sds.tree.node.BTreeNode.add_child:34
+msgid ""
+"This method automatically updates the parent reference of the child. Time"
+" complexity: O(1) for append, O(n) for insert at index."
+msgstr ""
+
+#: d5b585b43437439f815ff313b6d04826 of sds.tree.node.BTreeNode.remove_child:3
+msgid "Index of child to remove."
+msgstr ""
+
+#: f0563ff8860949d5a89203323a1d5d70 of sds.tree.node.BTreeNode.remove_child:6
+msgid "The removed child node."
+msgstr ""
+
+#: 35594a964c4846ceb34af6cd227b1de7 ca882065bf9448d48106dcddef7068d3 of
+#: sds.tree.node.BTreeNode.remove_child:9 sds.tree.node.BTreeNode.remove_key:9
+msgid "If index is out of range."
+msgstr ""
+
+#: e61b4820b2574fd1ad36311b8797930f of sds.tree.node.BTreeNode.remove_child:28
+msgid ""
+"This method automatically clears the parent reference of the removed "
+"child. Time complexity: O(n) where n is the number of children."
+msgstr ""
+
+#: 0b31950ebd7149ee9844fa85eda79a16 of sds.tree.node.BTreeNode.is_full:3
+msgid "True if node has 2t-1 keys (maximum capacity)."
+msgstr ""
+
+#: ec7413d35119473cb43ce812484da992 of sds.tree.node.BTreeNode.is_full:23
+msgid ""
+"A full node must be split before inserting more keys. Time complexity: "
+"O(1)"
+msgstr ""
+
+#: 51e441679ea1461cbb59820a95d9d2ec of sds.tree.node.BTreeNode.is_minimal:3
+msgid "True if node has exactly t-1 keys (minimum for non-root)."
+msgstr ""
+
+#: 638d1d3cde8b45f3abd29306fb020f6b of sds.tree.node.BTreeNode.is_minimal:23
+msgid ""
+"Nodes with fewer than t-1 keys violate B-Tree properties (except for the "
+"root, which can have as few as 1 key). Time complexity: O(1)"
+msgstr ""
+
+#: 5ac867b2680a4e14aa9ea753ddfe5d78 of sds.tree.node.BTreeNode.insert_key:3
+msgid "Key to insert."
+msgstr ""
+
+#: 30bf54ee6361403d8700c054d17641ff of sds.tree.node.BTreeNode.insert_key:5
+msgid "Position to insert. If None, appends to end."
+msgstr ""
+
+#: e0830c8b358e49758ff053f152c7ffc2 of sds.tree.node.BTreeNode.insert_key:19
+msgid ""
+"This method does NOT maintain sorted order automatically. The caller "
+"(typically the B-Tree implementation) is responsible for determining the "
+"correct insertion index."
+msgstr ""
+
+#: 85961783814b4320b31252588113acb1 of sds.tree.node.BTreeNode.insert_key:23
+msgid ""
+"Time complexity: O(1) for append, O(k) for insert where k is the number "
+"of keys."
+msgstr ""
+
+#: 667bf73954914810bc0c716e1f77621c of sds.tree.node.BTreeNode.remove_key:3
+msgid "Index of key to remove."
+msgstr ""
+
+#: ae5ba5702972465293ffa99f03fd97c7 of sds.tree.node.BTreeNode.remove_key:6
+msgid "The removed key."
+msgstr ""
+
+#: df3d1b32ce6f49fba51012707f2bf801 of sds.tree.node.BTreeNode.remove_key:23
+msgid "Time complexity: O(k) where k is the number of keys."
+msgstr ""
+
+#: 152f7d1b39d54304a71feeeacd253d9f of sds.tree.node.BTreeNode.find_key_index:3
+msgid ""
+"This performs a linear search to find the first index i where key <= "
+"keys[i], or returns len(keys) if key is larger than all keys."
+msgstr ""
+
+#: 70ee4ddbee904f74b379221b291e6bcd of sds.tree.node.BTreeNode.find_key_index:6
+msgid "Key to find. Must be comparable with existing keys."
+msgstr ""
+
+#: 92d95f6e91874c839331fc251a347459 of sds.tree.node.BTreeNode.find_key_index:9
+msgid ""
+"Index i where keys[i-1] < key <= keys[i], or len(keys) if key is greater "
+"than all keys."
+msgstr ""
+
+#: a283b4d3cd8741c4a3a37c6d7b37f9fa of
+#: sds.tree.node.BTreeNode.find_key_index:28
+msgid "Empty node:"
+msgstr ""
+
+#: 64c721c8ced04176a981cc444d5aaef4 of
+#: sds.tree.node.BTreeNode.find_key_index:36
+msgid ""
+"This method uses linear search which is O(k) where k is the number of "
+"keys. For large nodes, binary search could be used instead, but since k "
+"<= 2t-1 and t is typically small (often < 100), the performance "
+"difference is negligible."
+msgstr ""
+
+#: f1affd96d588455c847e4545dd8638c6 of
+#: sds.tree.node.BTreeNode.find_key_index:41
+msgid ""
+"The returned index can be used to: - Determine which child to follow in "
+"search (if not leaf) - Determine where to insert a new key - Check if the"
+" key exists (keys[i] == key if i < len(keys))"
+msgstr ""
+
+#: cdc97d2821cf423388b432a10f0c035f of
+#: sds.tree.node.BTreeNode.find_key_index:46
+msgid "Time complexity: O(k) where k is the number of keys in the node."
+msgstr ""
+
+#: 8154ae04ee224531b0f3092e933ee82b of sds.tree.node.BTreeNode.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 9528e6634274427196a281c11c648fe9 of sds.tree.node.BTreeNode.__repr__:3
+msgid ""
+"String showing node state including t, keys, leaf status, and number of "
+"children."
+msgstr ""
+
+#: 4c72ab55df9340788ad66ad197f21616 of sds.tree.node.BTreeNode.__str__:1
+msgid "Return simple string representation showing keys."
+msgstr ""
+
+#: 9b383f449872422c93d0da128aad015a of sds.tree.node.BTreeNode.__str__:3
+msgid "String showing just the keys."
+msgstr ""
+

@@ -1,0 +1,1055 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/graph_structures/adjacency.rst:5
+#: e6a4745647994153be98f3e1dc1da3c5
+msgid "Adjacency Representations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:10
+#: 223aac716cfb4e218c99bf57603d92fc
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:12
+#: b30b7320f9cc46c1b256d6c81cd7a633
+msgid ""
+"**Adjacency representations** are fundamental ways to store graph data in"
+" memory. The two main approaches—**adjacency lists** and **adjacency "
+"matrices**—offer different trade-offs between space efficiency and "
+"operation speed. Understanding when to use each representation is crucial"
+" for building efficient graph algorithms."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:38
+#: 36be1dc5c1084ccf911042126a13cf05
+msgid ""
+"Adjacency lists are optimal for **sparse graphs** (few edges), while "
+"adjacency matrices excel with **dense graphs** (many edges). Most real-"
+"world graphs are sparse, making lists the default choice."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:43
+#: f3459618a47744edafc0f32ece76152c
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:46
+#: 87113bc9173f48389f747e6c2865c360
+msgid "Formal Definitions"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:49
+#: 96f621950e5a43099c2c18d01dfb9e2a
+msgid "Graph Representation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:51
+#: 9b068e85101c400a863351a21e05ef33
+msgid "A graph :math:`G = (V, E)` consists of:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:53
+#: 51992c3a954540488266b2a59bf670f6
+#, python-brace-format
+msgid ""
+"**Vertex set** :math:`V`: set of nodes :math:`\\{v_1, v_2, \\ldots, "
+"v_n\\}`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:54
+#: 213fb3ac0eb94e048955adae1a2bfd74
+#, python-brace-format
+msgid ""
+"**Edge set** :math:`E`: set of edges :math:`\\{e_1, e_2, \\ldots, e_m\\}`"
+" where each :math:`e_i = (v_j, v_k)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:56
+#: ee0a940eb0cd454980da6afeb682813c
+msgid "For an **undirected graph**: :math:`(u, v) \\in E \\iff (v, u) \\in E`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:58
+#: e65e13cd8a5243baad6478c9f54e5fe8
+msgid ""
+"For a **directed graph**: :math:`(u, v) \\in E \\not\\Rightarrow (v, u) "
+"\\in E`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:61
+#: 179477d654d14d0bb56d1933373d6be7
+msgid "Adjacency List Representation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:63
+#: cafab7af8f9f4a59bb31b626105a03c0
+msgid "An **adjacency list** is a collection of lists, one per vertex:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:65
+#: e01c1b54fbd94836b31d97510037189d
+#, python-brace-format
+msgid "Adj[v] = \\{u \\in V : (v, u) \\in E\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:69
+#: b1a8a20033b14bb5b52e3f0612b7f65f
+msgid ""
+"For each vertex :math:`v`, :math:`Adj[v]` contains all vertices adjacent "
+"to :math:`v`."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:71
+#: e141ef5fe7a74d5883af99f8363a5027
+#, python-brace-format
+msgid "**Example**: Graph with edges :math:`\\{(A, B), (A, C), (B, C), (B, D)\\}`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:73
+#: 218d1bd88b4048ea9883864c4805adc6
+#, python-brace-format
+msgid ""
+"\\begin{aligned}\n"
+"Adj[A] &= \\{B, C\\} \\\\\n"
+"Adj[B] &= \\{A, C, D\\} \\\\\n"
+"Adj[C] &= \\{A, B\\} \\\\\n"
+"Adj[D] &= \\{B\\}\n"
+"\\end{aligned}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:83
+#: fb85592a61f04b2ca80633734b855f67
+msgid "Adjacency Matrix Representation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:85
+#: 3c7a3c9326f54ccdb96aaf3c4f37e850
+msgid ""
+"An **adjacency matrix** is an :math:`n \\times n` boolean matrix "
+":math:`M`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:87
+#: b25e37f083614443970ad35da86c044a
+#, python-brace-format
+msgid ""
+"M[i][j] = \\begin{cases}\n"
+"1 & \\text{if } (v_i, v_j) \\in E \\\\\n"
+"0 & \\text{otherwise}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:94
+#: 01b2552ac5ca40d989ed6d2dd4dcff97
+msgid ""
+"For **undirected graphs**: :math:`M` is symmetric (:math:`M[i][j] = "
+"M[j][i]`)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:96
+#: c8728d30a9654f2d9a873fea6ec1ed1e
+msgid "For **directed graphs**: :math:`M` may not be symmetric"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:98
+#: 7b8242ddf7364426975da632ae0528e6
+msgid ""
+"For **weighted graphs**: :math:`M[i][j]` stores the edge weight instead "
+"of 1"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:100
+#: 4e16088bd9414a50999e5b877dbc17e5
+msgid ""
+"**Example**: Same graph as above with nodes indexed :math:`A=0, B=1, C=2,"
+" D=3`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:102
+#: 7f22e0c79e9a44b8949bcf14d525fc2e
+#, python-brace-format
+msgid ""
+"M = \\begin{bmatrix}\n"
+"0 & 1 & 1 & 0 \\\\\n"
+"1 & 0 & 1 & 1 \\\\\n"
+"1 & 1 & 0 & 0 \\\\\n"
+"0 & 1 & 0 & 0\n"
+"\\end{bmatrix}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:112
+#: 44aeda6c8f4240b6a62d6ecaf11238a7
+msgid "Space Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:114
+#: 8571bd82e5304dae9a77f3fc05209f3f
+msgid "**Adjacency List**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:116
+#: 6e5db271f0934e4dbace83f24c256dd1
+#, python-brace-format
+msgid "\\text{Space} = \\Theta(V + E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:120
+#: 0b0e6ac6bb794c75835cc4f33b3661cc
+msgid "Store :math:`V` vertices"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:121
+#: 3a904d7845f5422eb852a85ebf35d1e9
+msgid "Store :math:`2E` total adjacencies (for undirected graphs)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:123
+#: 7a8338212c75469588141a9d1b141624
+msgid "**Adjacency Matrix**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:125
+#: 3520e838a0d542ad834a440ae676152d
+#, python-brace-format
+msgid "\\text{Space} = \\Theta(V^2)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:129
+#: a4b9e709b081487688a865097b03e4ba
+msgid "Always :math:`V \\times V` matrix, regardless of :math:`E`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:131
+#: d4cf606091d147c8ba1ebafdd66692ca
+msgid "**Comparison**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:133
+#: 1bc406f360ad454a9a8f0810ac852772
+msgid "For sparse graphs where :math:`E \\ll V^2`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:135
+#: f245ce50f5a0483a8243eaedf90fc5ab
+msgid ""
+"\\frac{\\text{Space}_{\\text{list}}}{\\text{Space}_{\\text{matrix}}} = "
+"\\frac{V + E}{V^2} \\approx \\frac{E}{V^2} \\ll 1"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:139
+#: 21c1d3b36f04423db84465aaac0fa2f7
+msgid "For dense graphs where :math:`E \\approx V^2`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:141
+#: 36a0491d17464aefa4f0015b5bd5b67c
+msgid ""
+"\\frac{\\text{Space}_{\\text{list}}}{\\text{Space}_{\\text{matrix}}} = "
+"\\frac{V + V^2}{V^2} \\approx 1"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:146
+#: 95c29c645a7a48d5836c2e4e59049b35
+msgid "Graph Density"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:148
+#: 0a0508e67f204a4995d6d3e0706f34c9
+msgid "**Density** of a graph:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:150
+#: 5a6e1d12ee8244f186fb92078e72fe05
+#, python-brace-format
+msgid "\\delta = \\frac{|E|}{|V|(|V|-1)/2} \\quad \\text{(undirected)}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:154
+#: 7e296e04c7bf416ba1d50f573f5934ad
+#, python-brace-format
+msgid "\\delta = \\frac{|E|}{|V|(|V|-1)} \\quad \\text{(directed)}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:158
+#: 0d7f08b38607416e92df45e3db203b1a
+msgid "**Sparse**: :math:`\\delta \\ll 1` (few edges)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:159
+#: d535d97062f3436d850a60477aeaff7a
+msgid "**Dense**: :math:`\\delta \\approx 1` (many edges)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:161
+#: c651edc4a9a94d4d87076ea7326d6982
+msgid "**Rule of thumb**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:163
+#: 167cdec322844bf8a083f6e0bb7f18cd
+msgid "Use **adjacency list** if :math:`E < V^2 / 2`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:164
+#: be9532d89a2d459492827a9444227072
+msgid "Use **adjacency matrix** if :math:`E \\geq V^2 / 2`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:167
+#: 809e80af1d3b41a0b2f5037ee231b2e5
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:170
+#: a0fc49272e92413f899736aafe784686
+msgid "Adjacency List Operations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:173
+#: ../../source/guide/graph_structures/adjacency.rst:242
+#: b2465f6904474f69b3803a582f7a60cc c220b557788d442c815598df56b958ea
+msgid "Core Operations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:175
+#: ../../source/guide/graph_structures/adjacency.rst:244
+#: 65b3c8efd9af4742b29d78875ab26259 682395f2fda64404b79b3ef5307eca92
+msgid "**Add Vertex**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:186
+#: ../../source/guide/graph_structures/adjacency.rst:261
+#: ../../source/guide/graph_structures/adjacency.rst:277
+#: 3828db6aa29a4c0395f53338b34a45e8 65e2591b1d17465fbe495d23b90976f7
+#: bdf5c0dba0b04434a1c8266c0a29c89e
+msgid "**Time**: :math:`O(1)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:188
+#: ../../source/guide/graph_structures/adjacency.rst:263
+#: 5be081c53d7144f8aa091b543d8c7fc0 cd69491b49c246b1baedbcc1a801e4d4
+msgid "**Add Edge**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:200
+#: c6455202b91845ddbe3c0e276a8c56e5
+msgid "**Time**: :math:`O(1)` amortized (set/list insertion)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:202
+#: ../../source/guide/graph_structures/adjacency.rst:279
+#: 0610957af1a140108e523242f6a597b8 bcb4d3ebac60433d88f895d2ab9c1dc9
+msgid "**Check Edge**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:212
+#: cbb302c31b834c368d74d2003deec0f4
+msgid "**Time**: :math:`O(1)` with hash set, :math:`O(\\deg(u))` with list"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:214
+#: ../../source/guide/graph_structures/adjacency.rst:293
+#: 33da2105047a4d00adcdb237aa0e7587 79858e98f4a941cbbc80ae0dd57ff36d
+msgid "**Get Neighbors**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:224
+#: 12bcf3b6651f4b4185726d9e97f76018
+msgid "**Time**: :math:`O(1)` to access, :math:`O(\\deg(v))` to iterate"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:226
+#: ../../source/guide/graph_structures/adjacency.rst:312
+#: aaf12cfb2280405886f09fddc60f5dae c49b06ea084a4286b8d34df4c53e7431
+msgid "**Degree**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:236
+#: 5b6034a4af5d4258bddfb6327ced331e
+msgid "**Time**: :math:`O(1)` with size tracking"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:239
+#: e2a9eaf904e841b8b52d30379d5a5ae5
+msgid "Adjacency Matrix Operations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:291
+#: fb612a429d3048079e3dc54506a664df
+msgid "**Time**: :math:`O(1)` - **guaranteed**!"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:310
+#: 2a360caca5f548f1aee9284c3dc420a0
+msgid "**Time**: :math:`O(V)` - must scan entire row"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:329
+#: 1df8317dd16a418cada24bf2aceb659d
+msgid "**Time**: :math:`O(V)` - or :math:`O(1)` if cached"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:332
+#: b2f742927fcc45c8bf99f0a65bc1c0c3
+msgid "Complexity Comparison"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:334
+#: 1bb7669fbb5447d3ab2d72f096fa9feb
+msgid "Operation Complexity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:338
+#: 4913a219d1a14862a4faca770c0f6b73
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:339
+#: daeadc8681bf4aa29b0eb733e24f1141
+msgid "Adj. List"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:340
+#: e62deffc9c494fafb317dc65819066a5
+msgid "Adj. Matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:341
+#: dbac5e11ba6246d89886c63f3735ba9f
+msgid "Winner"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:342
+#: 3dc5ad80fcea4998b9f11a7199762338
+msgid "**Space**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:343
+#: ../../source/guide/graph_structures/adjacency.rst:371
+#: ../../source/guide/graph_structures/adjacency.rst:391
+#: ../../source/guide/graph_structures/adjacency.rst:395
+#: 2d1d31a730f6467a8e4aaf308e93253a 598840696df94b188daf31bd99525990
+#: 8ae5b8e8e5244f3db19c946918d9f502 f46c0314faa543948e2c7a7ddfab92ed
+msgid ":math:`O(V + E)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:344
+#: ../../source/guide/graph_structures/adjacency.rst:372
+#: ../../source/guide/graph_structures/adjacency.rst:392
+#: ../../source/guide/graph_structures/adjacency.rst:396
+#: ../../source/guide/graph_structures/adjacency.rst:400
+#: ../../source/guide/graph_structures/adjacency.rst:404
+#: 0a82da11828a4f7289e908f687dd59b5 101f5913045144e9bed3211efb02b74a
+#: 20a2a59589aa49a38256af97e56bdb27 9c56bfc6f6554f94855fe27cd0c096cf
+#: f54ba5029af148539d6d26ba8f7f8257 fbb432f7ded64be9853517599923bb63
+msgid ":math:`O(V^2)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:345
+#: ../../source/guide/graph_structures/adjacency.rst:401
+#: ../../source/guide/graph_structures/adjacency.rst:405
+#: 280fc9d54b9241d6a4c61e8724a5a282 b70107d88e4d421b9b3a6b16856c2c85
+#: bfa53ea8f2cf4787934533826143ae94
+msgid "List (sparse)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:346
+#: 51915429f220437ba71a13f74a078a72
+msgid "**Add vertex**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:347
+#: ../../source/guide/graph_structures/adjacency.rst:348
+#: ../../source/guide/graph_structures/adjacency.rst:351
+#: ../../source/guide/graph_structures/adjacency.rst:352
+#: ../../source/guide/graph_structures/adjacency.rst:356
+#: ../../source/guide/graph_structures/adjacency.rst:360
+#: 5d9e599c56574c3ca44e80fd639256c6 8292cb65b61b411f80cdd742fea5eaec
+#: 8a53adf2b6a743a99e7dc910aa5161f7 a24b719f85684bc49da960cf39aa69c8
+#: c22af0b0909049959342e74a0e96461a e1bdaca27ddd471a9cc7ba394fd8de25
+msgid ":math:`O(1)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:349
+#: ../../source/guide/graph_structures/adjacency.rst:353
+#: 7855151966914b33a304f8e16f260a81 87884380144d433cbead37c250ddcc52
+msgid "Tie"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:350
+#: 25b83b44c89e4a75ac9ab2f7b4351d78
+msgid "**Add edge**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:354
+#: b8825c2d0d9b4110978f9d0a80cf7258
+msgid "**Remove edge**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:355
+#: ../../source/guide/graph_structures/adjacency.rst:363
+#: 2999881e466f414a8f035e57b81af2ab 58c40f828a094af9a4219013251849d3
+msgid ":math:`O(\\deg)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:357
+#: 038ca43c45fa41488f468e3e1de4445a
+msgid "Matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:358
+#: fba40dcd3c524a768b33573f18a8c04a
+msgid "**Has edge?**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:359
+#: ../../source/guide/graph_structures/adjacency.rst:367
+#: 982164bb627f4879a8512f8909e8a4fa e6b5f513724b4235a72d4d362a031042
+msgid ":math:`O(1)*`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:361
+#: b9dbdea14ccc45848085da2ac08bfc36
+msgid "Matrix (guaranteed)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:362
+#: 07c8a10545c147bca5aeb3e49dc203fc
+msgid "**Get neighbors**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:364
+#: ../../source/guide/graph_structures/adjacency.rst:368
+#: 355fc5008f8647de8513a0f49f524e64 dd61a2df10094ea0abcb0ebe47be4f59
+msgid ":math:`O(V)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:365
+#: ../../source/guide/graph_structures/adjacency.rst:369
+#: ../../source/guide/graph_structures/adjacency.rst:373
+#: ../../source/guide/graph_structures/adjacency.rst:393
+#: ../../source/guide/graph_structures/adjacency.rst:397
+#: 172b63cab6bc41df97abdda73ea1c363 262c1390357549aa971d1047b8e29e42
+#: 2e935a0bb6ce493ca6b96e176d93530a 56d27277ad064f74bad7d1dabde764cb
+#: 95568e99a56e483ba9f6690c4acc656d
+msgid "List"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:366
+#: de160c0f1c1b42aaa9095d93b539c71b
+msgid "**Degree**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:370
+#: 2433e9437b184c29a7d040c247e90bef
+msgid "**Iterate edges**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:375
+#: 3af6745e6f864e0fa6aed27371200840
+msgid "\\* Amortized with hash set and degree tracking"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:378
+#: 9c82a25a5bd44a4588237011dfc62972
+msgid "Graph Algorithms Performance"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:380
+#: 67b5a60d527644c8b2c6c8613d530f59
+msgid "Different graph algorithms favor different representations:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:382
+#: efe26ded7bcb410c83fb4e088a2a27be
+msgid "Algorithm Complexity by Representation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:386
+#: 7460576f2e024f989e3777cf71914f8e
+msgid "Algorithm"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:387
+#: cfc77241ade74c8d8d6cfe0dcb984559
+msgid "With List"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:388
+#: a561977d20ba43a4bf5abceafdfbed5c
+msgid "With Matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:389
+#: cce5c4756ed142e182f653e960a7e6ef
+msgid "Better Choice"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:390
+#: e1c58fd3c9d440979a35fbbb2311c92e
+msgid "**BFS**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:394
+#: 56d7062f1b754426a6f951158655e912
+msgid "**DFS**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:398
+#: 2e1211ae7be34d19b6337e9ea30183b0
+msgid "**Dijkstra**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:399
+#: ../../source/guide/graph_structures/adjacency.rst:403
+#: 4c1ddf6452a64fc3848cdb758b20db72 8009e28e295e4a27a3885c23dfbbeabc
+msgid ":math:`O(E \\log V)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:402
+#: a1ddec07b8ec49ee9f7d35403f41421d
+msgid "**Prim's MST**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:406
+#: c9e30d55bc3d4d968fc3d8a63ba949f3
+msgid "**Floyd-Warshall**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:407
+#: ../../source/guide/graph_structures/adjacency.rst:408
+#: ../../source/guide/graph_structures/adjacency.rst:412
+#: 22cfc4b82bee4847afc69266d99df81e 85482aa439fd405c982d53c83017b879
+#: daac34d8542b4c9b91d23cd200eddda8
+msgid ":math:`O(V^3)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:409
+#: 7d74192dfa9d471c9038ce59a202bd8c
+msgid "Matrix (simpler)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:410
+#: 4c8be414313042649c5b0759794ce852
+msgid "**Transitive closure**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:411
+#: 4ad8b6dc391347589470aac319775ea4
+msgid ":math:`O(V \\cdot E)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:413
+#: 918d20dd7484478bbbb67097cc873fcf
+msgid "Matrix (dense)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:416
+#: dda3bd9483904e59b15544461a6faec5
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:419
+#: 0a7f6bac9e814c01ac6363d978ba0dd8
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:431
+#: 1452d178bfce42f6adb0dec4d359a0ff
+msgid "Adjacency List Usage"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:434
+#: ../../source/guide/graph_structures/adjacency.rst:506
+#: 92035a225dc5486f8618fc9d823b5c3b c7ea94e5a78549fe9813e6f75e6d7b37
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:461
+#: 1fdd53a4a7fa4ebe9d31c86424c06fd6
+msgid "Access Adjacency Lists"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:481
+#: 19bb42d3564547aea9bb791a60fcab22
+msgid "Multigraph Example"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:503
+#: df0b17fc66cc40d4bd4dd4c4f3413cd6
+msgid "Adjacency Matrix Usage"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:529
+#: 95cacc3158f146be8cfd7677254ffa66
+msgid "Access Matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:550
+#: 2aea122daf454322bdafb96a86ea0269
+msgid "Complete Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:573
+#: bd0ca7f095114cbc9d9dfa4e421224da
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:576
+#: 332b37a3985a45f7beed7aded65d2e8f
+msgid "Application 1: Social Network (Sparse)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:578
+#: 14f27edc99aa48e995e7cd13a7a3e63c
+msgid "Using adjacency lists for sparse social graphs:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:676
+#: 5514f23040b44af09b35ca612b272132
+msgid "Application 2: City Distance Map (Dense)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:678
+#: 84c6a576ce7a48bcb535945de096a091
+msgid "Using adjacency matrix for small, dense graphs:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:797
+#: 8524f9e233d94e959e5635e068b94bf3
+msgid "Application 3: Network Topology (Mixed)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:799
+#: 328fecb6fe7947d69cac10055aff623f
+msgid "Analyzing network connectivity:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:916
+#: d876a547a1594dc0909dd0677b6c4f78
+msgid "Choosing the Right Representation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:919
+#: 66059a4d19be4c0fade0f232512c07ed
+msgid "Decision Framework"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:921
+#: 985d2c069f5d41bea3b32c2c9a4d8498
+msgid "Use the following decision tree:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:944
+#: 2971333a33ed418096c4a439df9b879b
+msgid "Practical Guidelines"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:946
+#: 9362a4f40e7640a89078b0ecfba8cae5
+msgid "**Use Adjacency List when:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:948
+#: 43308936dc1e4ba8addcff0539750b52
+msgid "**Sparse graphs** (social networks, web graphs, road networks)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:958
+#: d0f2637e66224398bf952786dd6bbd23
+msgid "**Unknown final size**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:966
+#: 0f181a42e76748b9ad4170033ff98272
+msgid "**Frequent neighbor iteration**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:974
+#: 8e37979593ca4706bc93bae83b89065d
+msgid "**Use Adjacency Matrix when:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:976
+#: 0c2b1bb8a5bd46c6af7d8a65e7aed544
+msgid "**Dense graphs** (complete graphs, cliques)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:984
+#: 5b2fc32434ba48d9b5d82fc6b90db2d5
+msgid "**Small, fixed-size graphs**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:991
+#: e05e4e2bc7034a4582293e278e9866ac
+msgid "**Need O(1) edge lookup**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:999
+#: 7bc38a46208f49838932386b00d0f991
+msgid "**Matrix-based algorithms**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1008
+#: ca9db024fa3048c3921c1b503682b02f
+msgid "Performance Comparison"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1011
+#: 52cfa66c13b449a0a65594ea672771bf
+msgid "Benchmark Results"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1013
+#: c06728e25b42408da4e76aa3d600b8b3
+msgid "**Sparse Graph** (V=10,000, E=50,000):"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1025
+#: d78db91806f34634a38e1ec32e5c9c1a
+msgid "**Winner for sparse**: Adjacency List"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1027
+#: 5834f12269c74bf38edecc8797a96767
+msgid "**Dense Graph** (V=1,000, E=450,000):"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1039
+#: 830d7b677c30445583d5dd762b8740f9
+msgid "**Winner for dense**: Adjacency Matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1042
+#: 3c0dd7085ba64988940fcc1f1052c51d
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1045
+#: 46614edc819f4326b0597deac2f565ea
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1047
+#: 4548d7965ff74dbb87abe4b41d455d66
+msgid "✅ **Analyze graph density first**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1059
+#: ed9859d02f534a54b9019bb8f84f0c45
+msgid "✅ **Use list for most real-world graphs**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1067
+#: 4f4013e4e87e4c578c83562dbb629293
+msgid "✅ **Use matrix for small, complete graphs**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1075
+#: 4acc6a06340240e0a03cb70a63a4bbaf
+msgid "✅ **Consider operation frequency**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1083
+#: ba56eb1cf02b42bfbeb8eb63c0b084b4
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1085
+#: 6e91a4b37c4c45aeb96c03705adfb37a
+msgid "❌ **Don't use matrix for large sparse graphs**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1093
+#: f9a260285e774fda8dc924b29e4c9f1d
+msgid "❌ **Don't use list if you need guaranteed O(1) edge lookup**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1105
+#: 588689ebe99044c486533715c9534a9f
+msgid "❌ **Don't forget matrix capacity**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1117
+#: 4e982cd1a19946cb949bb941a7925664
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1120
+#: 8df5d8916d1644409e4da73a10be5248
+msgid "Pattern 1: Sparse Graph with Fast Lookups"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1122
+#: 41f447c9afd34f35a9041dc19275f2c9
+msgid "Use list with hash set for neighbors:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1135
+#: 25b22b584d7441e9ba741e164f849bac
+msgid "Pattern 2: Converting Representations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1168
+#: 5ed73fedf7b84c80906ebbeae09a933c
+msgid "Pattern 3: Hybrid Approach"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1198
+#: abfdfa2ec80a42678d532c1f736638b7
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1200
+#: 2fb901971a4f4d6baef76d11cda23531
+msgid ":doc:`/api/graph/adjacency` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1201
+#: f6d4445f5a184469837e5ed185f62410
+msgid ":doc:`general` - General graph concepts"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1202
+#: aaa2e079345e43cd9d0f6266ca88868b
+msgid ":doc:`directed` - Directed graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1203
+#: 770414c5037c450eba60f24e5a3e4f71
+msgid ":doc:`weighted` - Weighted graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1206
+#: 554317e7a28f47aea3dc50cb6018df06
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1208
+#: 1222de21e8de40369f6ce18685b48654
+msgid ""
+"Wikipedia contributors. \"Adjacency list\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Adjacency_list"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1211
+#: 3b5b96f3010a4a1080e0de1d18b31cf2
+msgid "Overview of adjacency representations."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1213
+#: 3ed004d3119b4c79af25552340370e36
+msgid ""
+"Wikipedia contributors. \"Adjacency matrix\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Adjacency_matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1216
+#: c67eb3abcf864beb8a2b5def115ee792
+msgid "Mathematical properties of adjacency matrices."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1218
+#: 5ab1f2a1bf5445ca90f37101b99a1602
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 22.1"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1220
+#: 3508862227644419867ce96b12e9afbf
+msgid "Comprehensive analysis of graph representations."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1222
+#: 4fe91a097a0548bb8964637298555ae5
+msgid ""
+"OpenDSA Project. \"Graph Representations\". https://opendsa-"
+"server.cs.vt.edu/ODSA/Books/Everything/html/GraphRep.html"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1225
+#: 2d7612245862488e9444513d963373bf
+msgid "Interactive tutorial on graph representations with visualizations."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1227
+#: e07ed466d2584dc4a5d2746f03eb5684
+msgid ""
+"Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Chapter 4.1 "
+"https://algs4.cs.princeton.edu/41graph/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1230
+#: 6d22f5ac9ce446938719c238c61925de
+msgid "Princeton course materials on graph representations (free access)."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1232
+#: 1fd6d3827721413f9b954a8f59f2862c
+msgid ""
+"Goodrich, M. T., Tamassia, R., Goldwasser, M. H. \"Data Structures and "
+"Algorithms in Python\", Chapter 14.2"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1235
+#: 66b1521dca034e678dd6473a5d2bea91
+msgid "Python-specific implementation guidance."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1237
+#: ca4b121abdc746c4b2e89f3600b2066a
+msgid ""
+"GeeksforGeeks. \"Graph and its representations\". "
+"https://www.geeksforgeeks.org/graph-and-its-representations/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1240
+#: a4e125abfba149719306376592162e6a
+msgid "Practical tutorial with code examples."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1242
+#: 0dfca350795448c0b050d65c182ada96
+msgid ""
+"Diestel, R. \"Graph Theory\", 5th Edition, 2017. Springer. Free PDF: http"
+"://diestel-graph-theory.com/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1245
+#: 126cc0548f864445b4495b10e4d16890
+msgid "Advanced mathematical treatment (graduate level, open access)."
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1247
+#: 2449d8e03e4949b7b6d8431a19468b13
+msgid ""
+"NetworkX Documentation. \"Graph Data Structures\". "
+"https://networkx.org/documentation/stable/reference/classes/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/adjacency.rst:1250
+#: c66ecd14a95c45d5b1378719ef846169
+msgid "Production library implementation reference."
+msgstr ""
+

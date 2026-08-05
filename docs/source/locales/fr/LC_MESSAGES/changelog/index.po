@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/changelog/index.rst:3 3593c19750124e5b93faf6a5d75a7fc9
+msgid "Changelog"
+msgstr ""
+
+#: ../../source/changelog/index.rst:5 252fe534eb074c2fbb5e48bf8281aa54
+msgid "All notable changes to the SDS-Tools project will be documented here."
+msgstr ""
+
+#: ../../source/changelog/index.rst:7 e6b2ea08dd6445edad5b214d8bd6e7ec
+msgid ""
+"The format is based on `Keep a Changelog "
+"<https://keepachangelog.com/en/1.0.0/>`_, and this project adheres to "
+"`Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_."
+msgstr ""
+
+#: ../../source/changelog/index.rst:11 51893b39b3054c3a8906963f9c94f59f
+msgid "Version History"
+msgstr ""
+
+#: ../../source/changelog/index.rst:19 ad5769d722424e1a9c78d9943b5cff54
+msgid "Current Version"
+msgstr ""
+
+#: ../../source/changelog/index.rst:21 979610653a454b32875808dcc49a349f
+msgid "See :doc:`v0.1.0` for the current release notes."
+msgstr ""
+
+#: ../../source/changelog/index.rst:24 e4f744c015b54f738a93974705cf2a42
+msgid "Deprecation Policy"
+msgstr ""
+
+#: ../../source/changelog/index.rst:26 45a0895fa2dd48978bc92a7579af96f0
+msgid "Features marked as deprecated will:"
+msgstr ""
+
+#: ../../source/changelog/index.rst:28 c7826956d6c1433d95f9138dc35c996b
+msgid "Be clearly marked in documentation"
+msgstr ""
+
+#: ../../source/changelog/index.rst:29 a222f838a9b14c78b6435b17fa151560
+msgid "Emit deprecation warnings when used"
+msgstr ""
+
+#: ../../source/changelog/index.rst:30 157584dd8630466397bb49c89680c2d6
+msgid "Remain functional for at least 2 minor versions"
+msgstr ""
+
+#: ../../source/changelog/index.rst:31 885eda481447455081eaaa0d00e7c103
+msgid "Be removed in the next major version"
+msgstr ""
+
+#: ../../source/changelog/index.rst:34 82032962b55d4b31a2065697dc83ca87
+msgid "Upgrade Guide"
+msgstr ""
+
+#: ../../source/changelog/index.rst:36 2b96ea89779e4570a63acf578ddf9c00
+msgid "When upgrading between versions, check the following:"
+msgstr ""
+
+#: ../../source/changelog/index.rst:39 c7973ce00e2744419024b7de04dc4cf3
+msgid "From 0.0.x to 0.1.0"
+msgstr ""
+
+#: ../../source/changelog/index.rst:41 06624c557fcd4271a2faf9f93eaf3242
+msgid "No breaking changes"
+msgstr ""
+
+#: ../../source/changelog/index.rst:42 c4761e66d72d4414a4d6e17546e18a4b
+msgid "New features added"
+msgstr ""
+
+#: ../../source/changelog/index.rst:43 50c1d532b1c3417984ab1aeb3a16397c
+msgid "Performance improvements"
+msgstr ""
+
+#~ msgid "See :doc:`deprecated` for a list of deprecated features."
+#~ msgstr ""
+

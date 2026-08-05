@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/contributing.rst:3 8de73f83b2bc415993604ed7be84b333
+msgid "Contributing"
+msgstr ""
+
+#: ../../source/contributing.rst:5 87134719fde8459381b479f7f1bd2383
+msgid "Thank you for your interest in contributing to SDS-Tools!"
+msgstr ""
+
+#: ../../source/contributing.rst:8 61c7287cc4bc45f89ce153db421afc9e
+msgid "How to Contribute"
+msgstr ""
+
+#: ../../source/contributing.rst:11 932909d742fa49108559fa21722e79fb
+msgid "Reporting Bugs"
+msgstr ""
+
+#: ../../source/contributing.rst:13 4749173825064ffe9b10f6d94844ac81
+msgid "Check if the bug has already been reported in the issue tracker"
+msgstr ""
+
+#: ../../source/contributing.rst:14 978ff828270e46a6b58df21388b32740
+msgid "Include Python version, OS, and SDS-Tools version"
+msgstr ""
+
+#: ../../source/contributing.rst:15 aa30a76112de49d4a7ee0dfc4131daf7
+msgid "Provide a minimal reproducible example"
+msgstr ""
+
+#: ../../source/contributing.rst:16 3527e99676c14263af0c16a02d5b5da7
+msgid "Describe expected vs actual behavior"
+msgstr ""
+
+#: ../../source/contributing.rst:19 6159149729e048cf89d55fa7edfc719d
+msgid "Suggesting Enhancements"
+msgstr ""
+
+#: ../../source/contributing.rst:21 8e3abda5a3b74d0c8fe9a84750ff64c8
+msgid "Check if the feature has already been suggested"
+msgstr ""
+
+#: ../../source/contributing.rst:22 060c2aa89e614b96b2aeabf137fc5ea5
+msgid "Explain the use case and benefits"
+msgstr ""
+
+#: ../../source/contributing.rst:23 a5b03b34442f4accb03b1bfe830e4c30
+msgid "Provide examples of how it would be used"
+msgstr ""
+
+#: ../../source/contributing.rst:26 2ed482b6dfa6451596966239a34b9084
+msgid "Code Contributions"
+msgstr ""
+
+#: ../../source/contributing.rst:28 c1a9c1f522f945c9ad2522e63769a803
+msgid "Fork the repository"
+msgstr ""
+
+#: ../../source/contributing.rst:29 a60448effc6a4b04acea6d722064b241
+msgid "Create a feature branch"
+msgstr ""
+
+#: ../../source/contributing.rst:30 65eceda150db4188b59ad1969c06aedc
+msgid "Write tests for new functionality"
+msgstr ""
+
+#: ../../source/contributing.rst:31 cd10eb4b96064579ad648d887931b5fb
+msgid "Ensure all tests pass"
+msgstr ""
+
+#: ../../source/contributing.rst:32 147dc192d7d94cb49ad2281d7469d3be
+msgid "Update documentation"
+msgstr ""
+
+#: ../../source/contributing.rst:33 3b9bd14f11474c3fa636d973f5208311
+msgid "Submit a pull request"
+msgstr ""
+
+#: ../../source/contributing.rst:36 524d240134ca483b851a48d3545d15da
+msgid "Development Setup"
+msgstr ""
+
+#: ../../source/contributing.rst:58 f7f95069aed74477811aa6ca10d6eb7f
+msgid "Code Style"
+msgstr ""
+
+#: ../../source/contributing.rst:60 1a3ed16f39ee474786c5c7ef1a0b43df
+msgid "Follow PEP 8"
+msgstr ""
+
+#: ../../source/contributing.rst:61 26cf67052f7f4f258b6fe7de9cb12565
+msgid "Use Black for formatting"
+msgstr ""
+
+#: ../../source/contributing.rst:62 93536a116ac1464085269cce953b9de9
+msgid "Use type hints"
+msgstr ""
+
+#: ../../source/contributing.rst:63 851898a2595a4431b5c1a9c85ff00687
+msgid "Write NumPy-style docstrings"
+msgstr ""
+
+#: ../../source/contributing.rst:64 233cf8e24572467d88b1429adef54aba
+msgid "Maximum line length: 100 characters"
+msgstr ""
+
+#: ../../source/contributing.rst:67 a36c14cc30334a23b11ba5dda0e0554f
+msgid "Testing Requirements"
+msgstr ""
+
+#: ../../source/contributing.rst:69 5a3b4828f77049d984308977a3ec9610
+msgid "Write tests for all new functionality"
+msgstr ""
+
+#: ../../source/contributing.rst:70 cd9113be824d42918cf5f8fc4d9b77dd
+#, python-format
+msgid "Maintain >90% code coverage"
+msgstr ""
+
+#: ../../source/contributing.rst:71 78f8d9c6cabe4765b796ebdf17017189
+msgid "Include edge cases and error conditions"
+msgstr ""
+
+#: ../../source/contributing.rst:72 b3fa01f3205c41e493263a0a4e9fadc3
+msgid "Use descriptive test names"
+msgstr ""
+
+#: ../../source/contributing.rst:75 e07cc82f2cba496b80fb093242c154df
+msgid "Documentation Requirements"
+msgstr ""
+
+#: ../../source/contributing.rst:77 02411fc49c6847ef95799c24ef0440ed
+msgid "Update API documentation"
+msgstr ""
+
+#: ../../source/contributing.rst:78 9b8a0649925f4d6f8e023bc98e85ac1b
+msgid "Add usage examples"
+msgstr ""
+
+#: ../../source/contributing.rst:79 942200fb7a8d42bd84e0eacc779ca093
+msgid "Update user guide if adding new structures"
+msgstr ""
+
+#: ../../source/contributing.rst:80 0c11adf863174945bd557d96c25c98b9
+msgid "Include complexity analysis"
+msgstr ""
+
+#: ../../source/contributing.rst:83 30b2467d6a0d48af83208e0a04910c16
+msgid "Review Process"
+msgstr ""
+
+#: ../../source/contributing.rst:85 918ba095a06c4e61a722fd2ae6579479
+msgid "All contributions will be reviewed for:"
+msgstr ""
+
+#: ../../source/contributing.rst:87 b52720fd05114d6f82366209976d27f2
+msgid "Code quality and style"
+msgstr ""
+
+#: ../../source/contributing.rst:88 6ac9e771ae444fa7949b4cd0df38958e
+msgid "Test coverage"
+msgstr ""
+
+#: ../../source/contributing.rst:89 91dd2345bcc0423695e9b8b493b54f3b
+msgid "Documentation completeness"
+msgstr ""
+
+#: ../../source/contributing.rst:90 ca8889745cae42e9aca8401338efe1df
+msgid "Performance implications"
+msgstr ""
+
+#: ../../source/contributing.rst:91 6702dea735114268ba4307c8ee188fe1
+msgid "API consistency"
+msgstr ""
+
+#: ../../source/contributing.rst:94 2df3ab700ec34a03b6d4dbca288cb146
+msgid "License"
+msgstr ""
+
+#: ../../source/contributing.rst:96 dc755b8d3f854fdf9251daf3f82bd260
+msgid ""
+"By contributing, you agree that your contributions will be licensed under"
+" the same license as the project."
+msgstr ""
+

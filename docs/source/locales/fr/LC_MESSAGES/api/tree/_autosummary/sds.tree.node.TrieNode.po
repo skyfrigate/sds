@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TrieNode.rst:2
+#: 3f501bd4d5ae4c819a2534720ec6a9d1
+msgid "sds.tree.node.TrieNode"
+msgstr ""
+
+#: 8f5734331b5c410c8bd3d68b368ac276 of sds.tree.node.TrieNode:1
+msgid "Node for Trie (prefix tree) structure."
+msgstr ""
+
+#: 2d1daefc1b3a4e7a8a692319bfde6a5e of sds.tree.node.TrieNode:3
+msgid ""
+"A Trie node maps characters to child nodes and tracks whether it marks "
+"the end of a valid word. Each node can have multiple children, indexed by"
+" character."
+msgstr ""
+
+#: 82d61bba227a47be8bf570da0fd41d3b of sds.tree.node.TrieNode:7
+msgid ""
+"The children are stored in a dictionary mapping characters to TrieNode "
+"objects, allowing O(1) access to any child by character."
+msgstr ""
+
+#: bd732049a77e49db836b3334122e4817 of sds.tree.node.TrieNode:10
+msgid ""
+"This is fundamentally different from TreeNode's list-based children, so "
+"TrieNode inherits directly from Node rather than from TreeNode."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TrieNode.rst
+#: 8c7d49683da14329b08dcfda4f316556
+msgid "Parameters"
+msgstr ""
+
+#: 7f3aa476c3364ee1880f58a1ba79f3bd of sds.tree.node.TrieNode:17
+msgid "Dictionary mapping characters to child nodes (accessed via property)."
+msgstr ""
+
+#: 952eb090d74f46279f48d5f0d7cf6906 c1c2c6a6593e46e3a0157fefed4fa0fb of
+#: sds.tree.node.TrieNode
+msgid "type"
+msgstr ""
+
+#: ea0db06ec0554215943ebeddc15e7824 of sds.tree.node.TrieNode:19
+msgid "Dict[str, TrieNode]"
+msgstr ""
+
+#: 0ab73f9a829040fd8a313c76a97ccd3d of sds.tree.node.TrieNode:23
+msgid "True if this node marks the end of a valid word."
+msgstr ""
+
+#: 290699299d5940e4a1abc738373b10ea of sds.tree.node.TrieNode:25
+msgid "bool"
+msgstr ""
+
+#: 201eae9ada7c43fe9ac80cf73d007045 35cb0fcf22354144918b1b95ff1edb46
+#: 88382ecdad204b18812e166ead71736d c7cf3841613c49ec9d562468b48bce83 of
+#: sds.tree.node.TrieNode:27 sds.tree.node.TrieNode.__repr__:6
+#: sds.tree.node.TrieNode.__str__:6 sds.tree.node.TrieNode.children:6
+msgid "Examples"
+msgstr ""
+
+#: 52593126401d432a96e54c6b2564f22e 77c178f068254d40a0946be5b59e87b9 of
+#: sds.tree.node.TrieNode:41 sds.tree.node.TrieNode.children:15
+msgid "Notes"
+msgstr ""
+
+#: 572cdc81ee524006bca40962f77d98d9 of sds.tree.node.TrieNode:43
+msgid ""
+"This class uses __slots__ for memory efficiency. Unlike other Node types,"
+" Trie nodes use a dictionary for children rather than a list, as they "
+"need character-based indexing."
+msgstr ""
+
+#: ecf96c9ab5fc4d02a17668837b86e7da of sds.tree.node.TrieNode:47
+msgid "The inherited _refs list is not used in TrieNode."
+msgstr ""
+
+#: a6ab8ae6c4114d1ab1e8ad14f75cc748 of sds.tree.node.TrieNode:51
+msgid ":obj:`Trie`"
+msgstr ""
+
+#: 16b5bc48b9bc4ff684bbf067fed43b32 of sds.tree.node.TrieNode:52
+msgid "Trie implementation using this node type."
+msgstr ""
+
+#: 6c21725411fc44b9b2a0ba917bb17dc4 of sds.tree.node.TrieNode:54
+msgid ":obj:`Node`"
+msgstr ""
+
+#: 6525a6c36d7640b1b97cf50784adf4bf of sds.tree.node.TrieNode:55
+msgid "Abstract base class."
+msgstr ""
+
+#: 17eca9cb76b041a7b3297b7310a79b63 of sds.tree.node.TrieNode:57
+msgid ":obj:`TreeNode`"
+msgstr ""
+
+#: a47ec320bf0d4932b83f2c679e8a722e of sds.tree.node.TrieNode:58
+msgid "List-based children for general trees."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TrieNode.rst:21:<autosummary>:1
+#: 5a1a31ac0bf842a891c7c98ff63cf78e 5ea942b3fa5b4a63a4947b192b4b401f
+#: df5256b8e40645999147c62e1747ffcf of sds.tree.node.TrieNode.__init__:1
+msgid "Initialize a Trie node."
+msgstr ""
+
+#: b79ecc9d5033478ea6bb1a7b1cb74d5c cdb641f20f9a444f90f10af5098485a1 of
+#: sds.tree.node.TrieNode.__init__:3
+msgid "Creates an empty node with no children and not marking end of word."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TrieNode.rst:13
+#: 920bb3f01d8940318d796a7447630a8f
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TrieNode.rst:21:<autosummary>:1
+#: 06844dd770424ebd99418cf29b1115f0
+msgid ":py:obj:`__init__ <sds.tree.node.TrieNode.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TrieNode.rst:23
+#: 160417b37d4a41e4989339284c5eed29
+msgid "Attributes"
+msgstr ""
+
+#: fa4c1cabd2b741719b9d7fd7fb9b9134 of
+#: sds.tree.node.TrieNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`is_end_of_word <sds.tree.node.TrieNode.is_end_of_word>`\\"
+msgstr ""
+
+#: 852689b44b774c49809f5bf49a3a5f47 of
+#: sds.tree.node.TrieNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`children <sds.tree.node.TrieNode.children>`\\"
+msgstr ""
+
+#: ca9e34d9e97a4282a66bc1f379bc20a8 d97a419486284a689595cd102336746e of
+#: sds.tree.node.TrieNode.__init__:1:<autosummary>:1
+#: sds.tree.node.TrieNode.children:1
+msgid "Get the dictionary of child nodes."
+msgstr ""
+
+#: 5480e75d804841198422fa63d01663a5 of
+#: sds.tree.node.TrieNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.tree.node.TrieNode.data>`\\"
+msgstr ""
+
+#: 79e9f8f9be234692bcac1fec5375791c of
+#: sds.tree.node.TrieNode.__init__:1:<autosummary>:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: 728417405e1b455088cd18a61cc8dbaf of
+#: sds.tree.node.TrieNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`parent <sds.tree.node.TrieNode.parent>`\\"
+msgstr ""
+
+#: da736a4706524ac28368dc6351ad20b5 of
+#: sds.tree.node.TrieNode.__init__:1:<autosummary>:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TrieNode.rst
+#: 77bc24892e2c4c8cbc7d3f21e76636e9 9d08fa4becaf444d8e49b2050ba7a1d1
+#: dbed6ef0eaaf47faa227f0aa0270c5e3
+msgid "Returns"
+msgstr ""
+
+#: b5d8e6340b25473e8de72c8ca25e9c74 of sds.tree.node.TrieNode.children:3
+msgid "Dictionary mapping characters to child nodes."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.TrieNode.rst
+#: 6b3ceb9ab50048e297823503c163e10c da26ca8aadf24ae38b71465f249525f8
+#: facd35f5dbf944ec849d66ec8b5fdd23
+msgid "Return type"
+msgstr ""
+
+#: 25edcc91ae16428fbbf95c8e8b865b0e of sds.tree.node.TrieNode.children:17
+msgid ""
+"This property provides direct access to the children dictionary. "
+"Modifications to the returned dictionary affect the node."
+msgstr ""
+
+#: c09200a121ec4ad7965b045f9f17dca8 of sds.tree.node.TrieNode.children:20
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: bb4c1dbdfba94813b79fc2f07f732a31 of sds.tree.node.TrieNode.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 6926bbe6ecd9476693694a440d331b92 of sds.tree.node.TrieNode.__repr__:3
+msgid "String representation showing children count and end status."
+msgstr ""
+
+#: f60aede7264540509621169eb657620a of sds.tree.node.TrieNode.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+
+#: c2f78a872d0b438c8dc721dde0532034 of sds.tree.node.TrieNode.__str__:3
+msgid "String showing number of children."
+msgstr ""
+

@@ -1,0 +1,676 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/tree_structures/heap.rst:5
+#: c08c26a2c1df4f919c6c73050f42ae12
+msgid "Heap Guide"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:10
+#: a5f9ad155de04dd0b935874a41413ef8
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:12
+#: f694592072fb409d8e363eada517fe73
+msgid ""
+"A **Heap** is a specialized tree-based data structure that satisfies the "
+"**heap property**: in a max-heap, parent nodes are always greater than or"
+" equal to their children; in a min-heap, parent nodes are always less "
+"than or equal to their children. Heaps are the foundation of efficient "
+"priority queues and the heap sort algorithm."
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:44
+#: 9942c22d276e4c30adf0374c1d8d2c3d
+msgid ""
+"Heaps are typically implemented using arrays for memory efficiency and "
+"cache locality. Despite being trees conceptually, their array "
+"representation provides O(1) parent/child navigation without storing "
+"explicit pointers."
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:49
+#: e39c965bc60242cdb56e4f737977dd84
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:52
+#: 0aa5015d3b8a46b38f2a20c99f1de7ad
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:55
+#: 8cb34a2a44254f50a6cd4ed8ed321779
+msgid "Heap Property"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:57
+#: 71db2e8e3dca40a691cf42da4e633485
+msgid "**Min-Heap Property**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:59
+#: 9a5ba9d2c6a44e1fb6aa78062345bcd7
+msgid "\\forall node \\in H: node.value \\leq children(node).value"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:63
+#: 7d9a647fb32c4ddb8b1f59b9d126b369
+msgid "**Max-Heap Property**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:65
+#: 5a74cbb6e62e4ad6bd961a04e1c91dd3
+msgid "\\forall node \\in H: node.value \\geq children(node).value"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:70
+#: 6c3501f64f9148dcaa2ed1e134c1baf3
+msgid "Complete Binary Tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:72
+#: cf423887361f4b44b44e1d8b65ff7bd6
+msgid ""
+"A heap is a **complete binary tree**: all levels are fully filled except "
+"possibly the last, which is filled from left to right."
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:74
+#: 397a753458e3440fb1e6e5c958786230
+#, python-brace-format
+msgid "\\text{height}(H) = \\lfloor \\log_2 n \\rfloor"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:78
+#: f508a5f0403149ef8a11b374cf4370d6
+msgid "where :math:`n` is the number of elements."
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:81
+#: 2db7d626eb9241b68ea92c264b782875
+msgid "Array Representation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:83
+#: a71f7d19593c4ff998b1632946d0e758
+msgid "For a node at index :math:`i` (0-indexed):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:85
+#: 2d82327385854fc2bc447db2a21e7389
+#, python-brace-format
+msgid ""
+"\\begin{aligned}\n"
+"parent(i) &= \\lfloor (i-1)/2 \\rfloor \\\\\n"
+"left\\_child(i) &= 2i + 1 \\\\\n"
+"right\\_child(i) &= 2i + 2\n"
+"\\end{aligned}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:93
+#: 9a1a5e6ba052474da00b43152a7ad2fd
+msgid "**Example**: Array [1, 3, 2, 7, 8, 5, 4] represents:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:107
+#: 1caa9bc9f0154fbb98c91952fc9244b1
+msgid "Tree Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:110
+#: 441c0e75f167467982fc2f392a98f3f0
+msgid "Height and Size"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:112
+#: fd97cf315e1e4e8b9df81410f39e8a25
+msgid "For a complete binary tree with :math:`n` nodes:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:114
+#: 5120015ebed54908966c3ea0bf4baa43
+msgid "**Height**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:116
+#: 60c826a791d5402ba80d6b0165777318
+msgid "h = \\lfloor \\log_2 n \\rfloor = O(\\log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:120
+#: b2b9682624f042cd99ad5a15422b1744
+msgid "**Minimum nodes for height** :math:`h`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:122
+#: a64fd81cbc014d3fb70be83647e80af6
+#, python-brace-format
+msgid "n_{min} = 2^h"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:126
+#: fa3c1c03b9c1499595684616bbc35bff
+msgid "**Maximum nodes for height** :math:`h`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:128
+#: 80e8a4efb68a4a03b0ea4e8dbd02cf83
+#, python-brace-format
+msgid "n_{max} = 2^{h+1} - 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:133
+#: 9d3325c67d7c4504bf91458c0ffc6d6d
+msgid "Level Distribution"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:135
+#: 49dfe3d38e8e444ba4740e9a4e6a11bc
+msgid "For :math:`n` nodes:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:137
+#: 4d0ba8af6a4c489d91d128bb656f0b43
+#, python-brace-format
+msgid ""
+"\\begin{aligned}\n"
+"\\text{Level 0 (root)} &: 1 \\text{ node} \\\\\n"
+"\\text{Level 1} &: 2 \\text{ nodes} \\\\\n"
+"\\text{Level 2} &: 4 \\text{ nodes} \\\\\n"
+"\\vdots \\\\\n"
+"\\text{Level } h &: \\text{up to } 2^h \\text{ nodes}\n"
+"\\end{aligned}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:147
+#: fc581a2439214d65b5d687b8b09d4af1
+msgid "**Leaves**: Approximately :math:`n/2` nodes are leaves."
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:150
+#: f76f57aad9824f7e85061dec7390142a
+msgid "Heap Invariants"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:152
+#: 5917cad19c994f0ebf630df775330189
+msgid "**Shape property**: Complete binary tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:154
+#: 75d1e82adad24d93961ab9b14ec12226
+msgid "**Heap property**: Parent ≤ children (min) or parent ≥ children (max)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:156
+#: 94e33d79211f423e9b6600c138b43b18
+msgid "**Root property**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:158
+#: 5d5bbe8da0b5456b9a07869e8198bf9c
+#, python-brace-format
+msgid ""
+"\\begin{aligned}\n"
+"\\text{Min-heap: } root &= \\min(H) \\\\\n"
+"\\text{Max-heap: } root &= \\max(H)\n"
+"\\end{aligned}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:166
+#: b17c76381b5941c983f9d46c61431b1f
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:169
+#: e5ebaa047a1c4563b6cf60942052fbc6
+msgid "Abstract Data Type"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:194
+#: 1df56c14a773451ea168aa1818672846
+msgid "Sift Up Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:196
+#: 82b883c7231a49afa131c67d0fe11007
+msgid "Used after insertion at the end:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:216
+#: 878adbcc29c14b83a9e8fef46ede6947
+msgid "**Time complexity**: O(log n) - height of tree **Space complexity**: O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:219
+#: f4463354b1f842ccb99b717a6667fc85
+msgid "**Visualization**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:233
+#: 41b24507454e453ca41ff4c3c1f520ed
+msgid "Sift Down Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:235
+#: 1750b959c60e4c2894a1a64f605f5b1a
+msgid "Used after removing the root:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:266
+#: 2391901ba1474634970d7de132c935b5
+msgid "**Time complexity**: O(log n) **Space complexity**: O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:270
+#: 54d8737a6e1d4a6887fbb17bd08cad7b
+msgid "Insert Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:285
+#: ../../source/guide/tree_structures/heap.rst:315
+#: 9722f6d3b831457fbf7376c9bf576009 f41d12fe6c434110b71525bdece7ba83
+msgid "**Time complexity**: O(log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:288
+#: 4d4a77f6cfe94ce0b69a97f39532d55c
+msgid "Extract Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:318
+#: dba0f3d27cc645dea78934ac2b601bf4
+msgid "Heapify Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:320
+#: a8d54b41cc034948a1412e229f7f68f9
+msgid "Build a heap from an unordered array:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:335
+#: cd2b41d4edc841b2a560711f5a2a5ddf
+msgid "**Time complexity**: O(n) - **not** O(n log n)!"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:337
+#: c44d5f1003c44de8b534b860bcc07a1c
+msgid ""
+"**Proof**: Most nodes are near bottom and need few sifts: - n/2 leaves: 0"
+" operations - n/4 nodes at height 1: 1 operation each - n/8 nodes at "
+"height 2: 2 operations each - ... - Total: n(1/4 + 2/8 + 3/16 + ...) = "
+"O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:345
+#: 0f3939dfb13e4179a51f9b4f6c6773ce
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:348
+#: b127a9fb1b4b441689f2a79851cf63a0
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:354
+#: 1f3c719fbc524b6c94b3e33d6caf2ca0
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:355
+#: 0f6c10900b1042e39969482ce8f32450
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:356
+#: 808aa3bbf591457485a63227eb4adfc7
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:357
+#: c4d9c4e9beb6403e8a332ff14694f59a
+msgid "**Insert**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:358
+#: ../../source/guide/tree_structures/heap.rst:361
+#: ../../source/guide/tree_structures/heap.rst:370
+#: ../../source/guide/tree_structures/heap.rst:373
+#: 3ec4adadac2e4415a271799e880249d9 6de9f0b0b5e4452988138eb538ccc3af
+#: 834b5961ed9343a89af5f1368b7d6fc5 ef417d0f4f4f45568e82f0495b00d4a9
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:359
+#: 884c73addd374e24a7c04043bf1634b6
+msgid "Sift up from bottom"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:360
+#: ff60e3d9c30b4b45a2f390f1478eaf2d
+msgid "**Extract Min/Max**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:362
+#: 5dffa0ace41b49998f6e8bf81bdb6b79
+msgid "Sift down from top"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:363
+#: 83784d178bfb4920a70756b079312d93
+msgid "**Peek Min/Max**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:364
+#: b4c74d6a0440419db62e622b88d4d91c
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:365
+#: 36c467ce7faa46fbab20fadfe3fce388
+msgid "Just read root"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:366
+#: cabe0a7848c44c8d98dd985c1476768c
+msgid "**Heapify (build)**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:367
+#: ../../source/guide/tree_structures/heap.rst:376
+#: 2890cd3a531240b0aa08ecdfff4332ad fc6e19a8fb8a4ed1a69df1984495dcb9
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:368
+#: f79812c08cc74c84be0a48b18ce575bb
+msgid "Bottom-up construction"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:369
+#: 4586741161c94d0d961c94c070079e10
+msgid "**Delete arbitrary**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:371
+#: a19ef5458b7d434fb0a4c56e56c12046
+msgid "Find + extract"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:372
+#: 95bb000e57414484a420b941b5620d2e
+msgid "**Increase/Decrease key**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:374
+#: d43dd3b60fde4ac5bec7a3ce8729066d
+msgid "Sift up or down"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:375
+#: 36069ed5d04946439743fec58e3a7901
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:377
+#: 04f909fa1eea48c5924dd3d472365c40
+msgid "No ordering within levels"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:380
+#: db38287668db4a15b80b73d88ee5e722
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:382
+#: d9de246086934734be3b9a3280822081
+msgid "**Heap storage**: O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:383
+#: 8f43197fdc33466583cda20b81458659
+msgid "**No pointers needed**: Array-based, just store values"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:384
+#: 36fe2a4619b040d98fb1ff9f93e39176
+msgid "**Auxiliary space**: O(1) for all operations (iterative)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:387
+#: be8647449f694e83afdeba0465f52e04
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:390
+#: d4cca803fb00437694211f5c41fa7856
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:401
+#: feed4008c3094d4cab315088fc10304c
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:404
+#: 224d63b012bd484c8c3912010da94597
+msgid "Min-Heap"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:428
+#: e06ddba0679e40879e1f1023b319fb1c
+msgid "Max-Heap"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:450
+#: 214dec12ed9241859ae421db39a92df9
+msgid "Build from Array"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:469
+#: d2569d1801fc49b190ed27faa0b880d9
+msgid "Priority Queue"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:495
+#: a3af6f53d0d14328b740143916f51fd1
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:498
+#: 1ce52bc30ed64df98556be2ee998d865
+msgid "Application 1: Task Scheduler"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:500
+#: 340d4e5ec5e1470789f877aaf76a0fa6
+msgid "Real-time task scheduling with priorities:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:580
+#: 3b0691043bc64c3f92f80a365c4733c6
+msgid "Application 2: Dijkstra's Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:582
+#: ee39746502a746a9b87ecf726f2c05a9
+msgid "Shortest path using min-heap:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:650
+#: 94cd8131eceb4730ba18523b01c1c557
+msgid "Application 3: Event-Driven Simulation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:652
+#: bc5f50ec81bf4db486c17697b57bccee
+msgid "Discrete event simulation:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:723
+#: c42bda5fe2f34fb094045c51435a85ea
+msgid "Application 4: Median Maintenance"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:725
+#: ee3ad27cb733405a9738cd8596444096
+msgid "Track running median using two heaps:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:782
+#: b550641025644d49b232534bd36286c0
+msgid "Heap Sort Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:806
+#: f0a0310ea1ea4e5b8e286d44dff4210e
+msgid ""
+"**Time complexity**: O(n log n) **Space complexity**: O(n) **Not in-"
+"place**: Requires additional array"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:811
+#: d53f86264db54220a2206f142311b524
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:814
+#: b1960ffa8f9e47c891eac5569728011e
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:816
+#: 396d142268a54325a4f6a30e871de615
+msgid "✅ **Use heaps for priority management**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:826
+#: 54d3e5d68fe94cc6a71c001ea7613927
+msgid "✅ **Build heap from array when possible**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:833
+#: 5b55e43e0e1c44ab8221a7b19c5bb441
+msgid "✅ **Use for streaming algorithms**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:849
+#: 7bbc9ff0bbab4eeeb1c3c3c5e58496fb
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:851
+#: 88b4cf7234324ba2b5f0325f7de48e77
+msgid "❌ **Don't use for general searches**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:858
+#: ac68a07590894d4c841900f8e551c7af
+msgid "❌ **Don't expect sorting within heap**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:865
+#: 45b0b09da62c43b2af3829784d169ef3
+msgid "❌ **Don't use for range queries**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:873
+#: b2af44d28df743f299d1bf119c66d3a4
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:875
+#: 4dbc39e3885b4781984a21a1bad9d4bd
+msgid ":doc:`/api/tree/heap` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:876
+#: cba94bd96cc04b06b4bbdc8527f2a5b7
+msgid ":doc:`binary` - Binary tree fundamentals"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:877
+#: fa843e21c06649d5a0366d7440604298
+msgid ":doc:`segment_tree` - Range queries"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:880
+#: ac97da883a5748df95b7505f3f66e6eb
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:882
+#: ca3ad7c599ae45ba9deaee95dd1cae22
+msgid ""
+"Wikipedia contributors. \"Heap (data structure)\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Heap_(data_structure)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:885
+#: 915f74c618bf45c59ed3977150018f93
+msgid "Comprehensive overview of heap variants and applications."
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:887
+#: bfbe3709717c465d9fe1062c042dce53
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 6"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:889
+#: e5d555e02f9746649696958baf1fbe0f
+msgid "Detailed heap analysis and heapsort algorithm."
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:891
+#: cbaac76d34454bb8ae808e72dde9ff0a
+msgid "Halim, S. \"Heap Visualization\". VisuAlgo. https://visualgo.net/en/heap"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:894
+#: 58db997293314ff9903f237bd95f3def
+msgid "Interactive heap visualization tool."
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:896
+#: 01cb283f7be3475882e536f2866a756d
+msgid "Williams, J. W. J. \"Algorithm 232: Heapsort\", 1964"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:898
+#: 781c6a6a93144dd98a3a2291b2179eaf
+msgid "Original heapsort paper."
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:900
+#: 97216b6442f44b7eb2c4a8daab63283c
+msgid "Floyd, R. W. \"Algorithm 245: Treesort 3\", 1964"
+msgstr ""
+
+#: ../../source/guide/tree_structures/heap.rst:902
+#: a7ac2c8e380341a1be00e0c3bd2da7c6
+msgid "Bottom-up heap construction in O(n)."
+msgstr ""
+

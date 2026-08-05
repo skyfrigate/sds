@@ -1,0 +1,350 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:2
+#: bb3e18344f1e4db8a08bf38d71a46801
+msgid "sds.linear.queue.Deque"
+msgstr ""
+
+#: 9f0f6f59938a46bda96f61281f640f33 of sds.linear.queue.Deque:1
+msgid "A Deque (Double-ended queue) implementation."
+msgstr ""
+
+#: 594f2f2113a048689fbc26622cba3e1a of sds.linear.queue.Deque:3
+msgid "A deque allows insertion and deletion at both ends efficiently."
+msgstr ""
+
+#: e7d8592515254d6ca5b84544cef0b581 of sds.linear.queue.Deque:5
+msgid ""
+"This implementation uses a DoublyLinkedList internally for O(1) "
+"operations at both ends."
+msgstr ""
+
+#: 3b8d1fac4e0d46fd81f2e03f090dbce5 of sds.linear.queue.Deque:10
+msgid "The number of elements in the deque (read-only property)."
+msgstr ""
+
+#: 35662d665de04e69871afa0681098215 44969a49b4e542bcaa3630482f0c712c
+#: bcca4032fb53407ea107319c0a56091c eda19bf9b1ce4e889210f2ff0ce3a7d0
+#: ef90c37c9bd74839ae9b013493067444 of sds.linear.queue.Deque
+msgid "type"
+msgstr ""
+
+#: d12f69dfa71b49a29a8f02b9e0deecd2 of sds.linear.queue.Deque:12
+msgid "int"
+msgstr ""
+
+#: 64c91e3de7194ea38c9f602a2bfed51f bb6466aa57bb4da1bc48e10bcc5fef3e
+#: c26ccb7600334fc18493bc2678864d47 of sds.linear.queue.Deque:26
+#: sds.linear.queue.Deque:32 sds.linear.queue.Deque:38
+msgid "O(1)"
+msgstr ""
+
+#: bd8c46ab27a64ac4a5791f8d76837c6e of sds.linear.queue.Deque:44
+msgid "O(n)"
+msgstr ""
+
+#: e9d698a2facf4289a76faf0293847f40 of sds.linear.queue.Deque:46
+msgid "Examples"
+msgstr ""
+
+#: c238a4a81a5342759faac6db372eec45 of sds.linear.queue.Deque:57
+msgid ":obj:`Queue`"
+msgstr ""
+
+#: 29845a4607f94105a5718e2fd49e048b of sds.linear.queue.Deque:58
+msgid "FIFO queue with operations at one end."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 792ac83b456f42499f1fc507de4bb174 9cac3db46fc54653963967db87f05b19
+#: e80b215a69f34cf1accf989af392d62a of sds.linear.queue.Deque.__init__:1
+msgid "Initialize an empty deque."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:13
+#: 6c81bd1df13741e1858c9e3f7ac9a897
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 9ca6a3216a14403da7fc24289205658a
+msgid ":py:obj:`__init__ <sds.linear.queue.Deque.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 99bbb108c3344714873564e37b8f25cf
+msgid ":py:obj:`add <sds.linear.queue.Deque.add>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: e2c5c834ab9e4bf8b7856d8ddb7b60de e5ae40817cd6408a833fb2cccb0a34db of
+#: sds.linear.queue.Deque.add:1
+msgid "Add an item to the deque (adds to rear by default)."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 3032e35f636c4518bd62cb8322f1e853
+msgid ":py:obj:`add_front <sds.linear.queue.Deque.add_front>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 96195b8293ec4893b122ab778cd4a55d 9ab99b8c22e9472db93310db3e5ed49b of
+#: sds.linear.queue.Deque.add_front:1
+msgid "Add an item to the front of the deque."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 8e0077bb03bc48cd836395994508011c
+msgid ":py:obj:`add_rear <sds.linear.queue.Deque.add_rear>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 5602b01037a243ae8907b94ff602bcd2 6579f2760fae4f5b8fde9e5cafc066b5 of
+#: sds.linear.queue.Deque.add_rear:1
+msgid "Add an item to the rear of the deque."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: a017d724b3bd4dc29619a596ca482f7b
+msgid ":py:obj:`append <sds.linear.queue.Deque.append>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: b0dce987c6dd4491ac06b93c664ca54c be27c7a20df1475892a7e894c5f76c5b of
+#: sds.linear.queue.Deque.append:1
+msgid "Alias for add_rear."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: ba96c339b6574fcf805b7f59aa60c337
+msgid ":py:obj:`appendleft <sds.linear.queue.Deque.appendleft>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 0342df970789426980cf562f4fa5b41a 0a3bbfe3048f4252890e0ba3f8a623d3 of
+#: sds.linear.queue.Deque.appendleft:1
+msgid "Alias for add_front."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 93430be647354aa09dd9f71a1ecd3e25
+msgid ":py:obj:`clear <sds.linear.queue.Deque.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 5d7fa437396c4eb08e048a8c77d7f141 e00dfe5ed8574763ac5711771925647b of
+#: sds.linear.queue.Deque.clear:1
+msgid "Remove all elements from the deque."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 4cd190c69df04ca0a9eba2f113d349b0
+msgid ":py:obj:`is_empty <sds.linear.queue.Deque.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 851ba86821bd4030899d73057cc9244d e7148e988de14aceb4c5d978e0b3bd33 of
+#: sds.linear.queue.Deque.is_empty:1
+msgid "Return True if the deque is empty."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 49def52f5aef49eaa5f4370aca28825f
+msgid ":py:obj:`peek_front <sds.linear.queue.Deque.peek_front>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 80d17f3a24b644d7948d3c1e84a6e85d 995db110fc4e4a5fb96a0c089f690e2a of
+#: sds.linear.queue.Deque.peek_front:1
+msgid "Return the front item without removing it."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 4946fa685f2d4c7d91fe44f443218435
+msgid ":py:obj:`peek_rear <sds.linear.queue.Deque.peek_rear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 40b4696c8fe745fcb29bfc5c13058b3a f434f10e9ecc45feaf91e29a608783ec of
+#: sds.linear.queue.Deque.peek_rear:1
+msgid "Return the rear item without removing it."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: e5060ce5bce143249cf18e7460dc648b
+msgid ":py:obj:`pop <sds.linear.queue.Deque.pop>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 5669f194bef1414cb36675b9a0eb2189 79952ce0afa74fc8a4cad12d0e0e67c5 of
+#: sds.linear.queue.Deque.pop:1
+msgid "Alias for remove_rear."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 5c063c06436249b988102d5b6f732da6
+msgid ":py:obj:`popleft <sds.linear.queue.Deque.popleft>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: fc42444bcc864484ba30fa8d688d793d fff777b74b2c4a188d7de267840e2709 of
+#: sds.linear.queue.Deque.popleft:1
+msgid "Alias for remove_front."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: ff8629eb4c12406893bfb83d6257c332
+msgid ":py:obj:`remove <sds.linear.queue.Deque.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 736932c75b2445989381f3ff3b5b4f89 b1909888e557443096cb32aa6282be10 of
+#: sds.linear.queue.Deque.remove:1
+msgid "Remove the first occurrence of an item."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 27da0a229a654589afa95035d59580e3
+msgid ":py:obj:`remove_front <sds.linear.queue.Deque.remove_front>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 98182f2ad5904d49a29bc3ae92a25678 e5df7411089d4f8e913e4d36a6575d4d of
+#: sds.linear.queue.Deque.remove_front:1
+msgid "Remove and return the front item."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: 4b0b41a6303d46f89c2de2aa72882d8c
+msgid ":py:obj:`remove_rear <sds.linear.queue.Deque.remove_rear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:35:<autosummary>:1
+#: d239ab2d093c4a47b6c56ff1693d1180 ea71b60b69054176bdd9aa8d5129cd1f of
+#: sds.linear.queue.Deque.remove_rear:1
+msgid "Remove and return the rear item."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst:37
+#: 1cc83bd1cac3412db642f0e41efa40cf
+msgid "Attributes"
+msgstr ""
+
+#: 625bed8850f044c6ad6c2825a4b2d107 of
+#: sds.linear.queue.Deque.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.linear.queue.Deque.size>`\\"
+msgstr ""
+
+#: 1b83b98ca4ee4f3e929590ad421fd228 771557d4e5ef4c1f91e54f0c15cf8ef3 of
+#: sds.linear.queue.Deque.__init__:1:<autosummary>:1
+#: sds.linear.queue.Deque.size:1
+msgid "Get the number of elements in the deque."
+msgstr ""
+
+#: c8e91a4759d0452ab2f415ad02f50d2e of sds.linear.queue.Deque.__len__:1
+msgid "Return the number of elements in the deque."
+msgstr ""
+
+#: ce39bc023a3f4fffa668bd777c0ebea3 of sds.linear.queue.Deque.__iter__:1
+msgid "Iterate over elements from front to rear."
+msgstr ""
+
+#: a9322e8a7bc740f194ff3cc4dc48ddb6 of sds.linear.queue.Deque.__reversed__:1
+msgid "Iterate over elements from rear to front."
+msgstr ""
+
+#: e21788ba7c904e1dabf02b28d9a60835 of sds.linear.queue.Deque.__contains__:1
+msgid "Return True if item is in the deque."
+msgstr ""
+
+#: d70ad671a45a41b5a4e7e7b5bc192528 of sds.linear.queue.Deque.__repr__:1
+msgid "Return a detailed string representation."
+msgstr ""
+
+#: 2d663a63add542bd9b41eb21eba5fe13 of sds.linear.queue.Deque.__str__:1
+msgid "Return a simple string representation."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst
+#: 0db6b6528ba14f45a3655b521ae650a9 782e9e94a5dc4e9086595fb92632952b
+msgid "Parameters"
+msgstr ""
+
+#: 0e190f0da34042438b4d1942d2e3d6ab 57012cba7a1f4b69822811ac7e57010c of
+#: sds.linear.queue.Deque.add_front:3 sds.linear.queue.Deque.add_rear:3
+msgid "The item to add."
+msgstr ""
+
+#: 31845ab907a848258c7eb0c2a34fb995 7bec81c82afc4c2f989adc5f75b41e83
+#: 9ff31b025d734afa91591a7ad8140131 d5984b13f7444da7ac9a9bf7ddd91db5
+#: e88660df6e7c44d0b39f56e94457b2cb fdc5a8817f334344b47ccb97190dd014 of
+#: sds.linear.queue.Deque.add_front:6 sds.linear.queue.Deque.add_rear:6
+#: sds.linear.queue.Deque.peek_front:8 sds.linear.queue.Deque.peek_rear:8
+#: sds.linear.queue.Deque.remove_front:8 sds.linear.queue.Deque.remove_rear:8
+msgid "Notes"
+msgstr ""
+
+#: 0b7d60324a534f098b41aa62aca31364 309c00f0449b4e419d926d39ae6f88b1
+#: 3540ef1361494bdfa78c56268d43390c ae769b789df74411bceb757a5002f4b6
+#: b2467ae7a1cd469cbc75836b8558153d ba02a91800e74eb2a3794c23bbf287e8 of
+#: sds.linear.queue.Deque.add_front:8 sds.linear.queue.Deque.add_rear:8
+#: sds.linear.queue.Deque.peek_front:10 sds.linear.queue.Deque.peek_rear:10
+#: sds.linear.queue.Deque.remove_front:10 sds.linear.queue.Deque.remove_rear:10
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst
+#: 66e84d2edff64b01bdc82a0a8e858e96 94ef7ddcb35c4c698aea4c0bece42bca
+#: aa6e613cb4d7400880664612c206c1da de00c1cb50044f6cbaa6b1f2d0bba2bc
+msgid "Returns"
+msgstr ""
+
+#: 20b5a6e92ad44b4aae9adfa515ea18e0 9e3d2749483749d79fcb18d9fa77d845 of
+#: sds.linear.queue.Deque.peek_front:3 sds.linear.queue.Deque.remove_front:3
+msgid "The item at the front."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst
+#: 43efc0b6c3aa4ae2bc7f951c5de470e0 4ee9eb155ff74de8b3a0cd9b7e4a19a6
+#: 6024ab4834324ed8a544a7146e8fd9bc 9723e80ad9f04d5c806317cd93ed67c3
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Deque.rst
+#: 384735f2aba441ac95a22307259a1af1 537f4c152d2b4bc18d4a6366616d6c53
+#: bb729eaa95d74784a5109bea6e09add6 d48b93b991824591a8e2bc77d3ad5009
+msgid "Raises"
+msgstr ""
+
+#: 9caa08d1d1614a749ce07440c5e1b636 b62266094277492da75cb94f88b1905a
+#: df66c8b72a2c4ba4a06db54e57afe6f3 e34bc494d7c748f48bedc17eabbdb04f of
+#: sds.linear.queue.Deque.peek_front:6 sds.linear.queue.Deque.peek_rear:6
+#: sds.linear.queue.Deque.remove_front:6 sds.linear.queue.Deque.remove_rear:6
+msgid "If the deque is empty."
+msgstr ""
+
+#: 03aaab08eb9a496fa69842beb6c06346 81afdfcb876e4d3cb239df891a63467c of
+#: sds.linear.queue.Deque.peek_rear:3 sds.linear.queue.Deque.remove_rear:3
+msgid "The item at the rear."
+msgstr ""
+

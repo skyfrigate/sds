@@ -1,0 +1,354 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:2
+#: 87317a9dcf7f4ef5b9110f5e34b7be65
+msgid "sds.tree.interfaces.AbstractSegmentTree"
+msgstr ""
+
+#: 029e59adb41a45ab9093f73c7ebae9d3 of
+#: sds.tree.interfaces.AbstractSegmentTree:1
+msgid "Abstract base class for segment tree structures."
+msgstr ""
+
+#: 7e8aba830c97433ab6feee50f1014030 of
+#: sds.tree.interfaces.AbstractSegmentTree:3
+msgid ""
+"Segment trees are data structures for efficient range queries on arrays. "
+"This abstract class defines the interface that all segment tree "
+"implementations must provide."
+msgstr ""
+
+#: 1e42d6fe5692438aa6ee6a1c9e76bb21 of
+#: sds.tree.interfaces.AbstractSegmentTree:7
+msgid ""
+"A segment tree supports: - Range queries (sum, min, max, etc.) in O(log "
+"n) - Point updates in O(log n) - Array-like access to underlying data"
+msgstr ""
+
+#: 29ac31b890254aabbb02fc1a31b25929 of
+#: sds.tree.interfaces.AbstractSegmentTree:14
+msgid "The size of the underlying array (read-only property)."
+msgstr ""
+
+#: 7cf83f7b684946619889c441e095af19 of sds.tree.interfaces.AbstractSegmentTree
+msgid "type"
+msgstr ""
+
+#: 6b996fdde326469bbe3c092c4a01cfb9 of
+#: sds.tree.interfaces.AbstractSegmentTree:16
+msgid "int"
+msgstr ""
+
+#: 8b6d9d8652224be6ac78a4601e3d1608 of
+#: sds.tree.interfaces.AbstractSegmentTree:20
+msgid "Query the result for a range."
+msgstr ""
+
+#: b980bb0b2fc2491cbd887af2aff89dfd of
+#: sds.tree.interfaces.AbstractSegmentTree:24
+msgid "Update a single element."
+msgstr ""
+
+#: 4527120b106f4efebc06a64b0435b9f8 of
+#: sds.tree.interfaces.AbstractSegmentTree:28
+msgid "Get value at index."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: d7a57f83b174478fb8bd1c9b48464c98 de0c0b338fab463fa6f44b9dff7ea5a5
+#: e1846d3434894b21b320bb590a28a50c of
+#: sds.tree.interfaces.AbstractSegmentTree:32
+#: sds.tree.interfaces.AbstractSegmentTree.to_array:1
+msgid "Get the current array representation."
+msgstr ""
+
+#: 0d24c6c31af14b15982ab0e84032d38a of
+#: sds.tree.interfaces.AbstractSegmentTree:35
+msgid "Examples"
+msgstr ""
+
+#: b0dc43c068e14683963ebeba9d4f797c of
+#: sds.tree.interfaces.AbstractSegmentTree:37
+msgid "Concrete implementations must provide all abstract methods:"
+msgstr ""
+
+#: 2634cca266e94f07a477751fd768f656 35baeec0c1624195a4f15b454cc16110
+#: 7b48d95ae1b4449db24163d28ba02d96 9e9c3ea5fd2d4455951f9b3a268c5c50
+#: bd628d05dc734a09a926e4d683256003 of
+#: sds.tree.interfaces.AbstractSegmentTree:47
+#: sds.tree.interfaces.AbstractSegmentTree.get:11
+#: sds.tree.interfaces.AbstractSegmentTree.query:13
+#: sds.tree.interfaces.AbstractSegmentTree.to_array:6
+#: sds.tree.interfaces.AbstractSegmentTree.update:10
+msgid "Notes"
+msgstr ""
+
+#: 1b3c7014552348f795e868a65ae12ba6 of
+#: sds.tree.interfaces.AbstractSegmentTree:49
+msgid ""
+"All segment tree implementations should maintain: - O(log n) query time -"
+" O(log n) update time - O(n) space complexity"
+msgstr ""
+
+#: 332c762adf3944fc943435a586d5738c of
+#: sds.tree.interfaces.AbstractSegmentTree:56
+msgid ":obj:`SegmentTree`"
+msgstr ""
+
+#: 8ba93745919448d2af5aeb72975c7a32 of
+#: sds.tree.interfaces.AbstractSegmentTree:57
+msgid "Concrete segment tree implementation."
+msgstr ""
+
+#: d6ab32c93c1b4708ab7af261b1a45d35 of
+#: sds.tree.interfaces.AbstractSegmentTree:59
+msgid ":obj:`Collection`"
+msgstr ""
+
+#: 18993414cbcf4f1a934947a1f1601e6f of
+#: sds.tree.interfaces.AbstractSegmentTree:60
+msgid "Base interface for all collections."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: 2f118e6947b646d091e734a4f130caca 5d7a6bce8fc443968ea847412a832230
+#: bde6779cf82644e2b17ccdec8c2c7b23 of
+#: sds.tree.interfaces.AbstractSegmentTree.__init__:1
+msgid "Initialize abstract segment tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:13
+#: e9aec85adc2940e7bfae31eac6a48509
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: d3a2dedf4abf466097e9340352953275
+msgid ""
+":py:obj:`__init__ <sds.tree.interfaces.AbstractSegmentTree.__init__>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: be1ca53e16ea45c3b8179b6b95d3e5ab
+msgid ":py:obj:`clear <sds.tree.interfaces.AbstractSegmentTree.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: f7dd210de16e48f19b1f38d87e1cd79e
+msgid "Remove all elements from the collection."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: ab99961644424608bfe9c77288bc7161
+msgid ":py:obj:`get <sds.tree.interfaces.AbstractSegmentTree.get>`\\ \\(index\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: 0a0074bd7bbf48f99ae25dcfb4d251f5 e1d6bcad4dc249e097ad7a21ea7dd919 of
+#: sds.tree.interfaces.AbstractSegmentTree.get:1
+msgid "Get the value at a specific index."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: d733a1c5750f49ceab9e339ce65dba37
+msgid ""
+":py:obj:`is_empty <sds.tree.interfaces.AbstractSegmentTree.is_empty>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: 05ab09ec252445a0bfe9e5637ccca3a4
+msgid "Return True if the collection is empty, False otherwise."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: 2a54e7cae26e4bdf9d5ae488ceb56d96
+msgid ""
+":py:obj:`query <sds.tree.interfaces.AbstractSegmentTree.query>`\\ "
+"\\(left\\, right\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: af9bb83920514fad8c133364758c2ac4 db10034f9b084b19a99b9083c11fa4ee of
+#: sds.tree.interfaces.AbstractSegmentTree.query:1
+msgid "Query the result for a range [left, right]."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: a1e634f926db407287220c143e720502
+msgid ""
+":py:obj:`to_array <sds.tree.interfaces.AbstractSegmentTree.to_array>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: b3c2c3d40a7a43e28823dbe237b7f064
+msgid ""
+":py:obj:`update <sds.tree.interfaces.AbstractSegmentTree.update>`\\ "
+"\\(index\\, value\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:27:<autosummary>:1
+#: 2dcd942ef7094f90944fb3a7851e67fc c2e48206ffab47ed86f521331e0e526c of
+#: sds.tree.interfaces.AbstractSegmentTree.update:1
+msgid "Update a single element in the array."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst:29
+#: 26a7cb9721644e159667cfcb46c95198
+msgid "Attributes"
+msgstr ""
+
+#: b6583e063ae04902b6d0384d750b6513 of
+#: sds.tree.interfaces.AbstractSegmentTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.interfaces.AbstractSegmentTree.size>`\\"
+msgstr ""
+
+#: 702f15e2843b4026a7d00c1cd8b8855d 7ec985ce436e4964af7b8879f3243fe4 of
+#: sds.tree.interfaces.AbstractSegmentTree.__init__:1:<autosummary>:1
+#: sds.tree.interfaces.AbstractSegmentTree.size:1
+msgid "Get the size of the underlying array."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst
+#: 0f7d07a9e7a949bf9f84565543552768 359ff8a7523c464b836b1c40727b7a10
+#: 68e8399be8e94cb396d7cc398101df75 8798cec462514b968c4e86927f2d41cc
+#: faf8b1747cbc43899a570ec3a1a8b1df
+msgid "Returns"
+msgstr ""
+
+#: b3a70a2af45449d48e0f3cde9eb1e0e3 of
+#: sds.tree.interfaces.AbstractSegmentTree.size:3
+msgid "Size of the array."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst
+#: 0c4ffacbfda249389b6ff9be603f4a96 11a7e37e15d04c4fb08051dbf2a062e2
+#: 2eb3932f9f474f3d96302fe4e5a0a52e 7f067d3aaecb40f7a6c9cd4e09bc48f6
+#: 86970a329b784c94a8c770d76f8ca9df
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst
+#: 1ad5ce3d92bf40b288ef6ac483ef40b6 1badc5f68b9642f290ca3b0eb915c258
+#: 6eed1415e72e493895ddb618bf528159 a0488a53deff46548a06aec52cdc8766
+#: d7830a54eb50478ba3f86433cf6722f8
+msgid "Parameters"
+msgstr ""
+
+#: 32f146d3b13a4edfab3d6755ce198014 of
+#: sds.tree.interfaces.AbstractSegmentTree.query:3
+msgid "Start index of the range (inclusive)."
+msgstr ""
+
+#: 16c767b3b87d429487848d978cdc5685 of
+#: sds.tree.interfaces.AbstractSegmentTree.query:5
+msgid "End index of the range (inclusive)."
+msgstr ""
+
+#: 390ac279d73642a4b723742c9ba29fb2 of
+#: sds.tree.interfaces.AbstractSegmentTree.query:8
+msgid "Result of the operation on the range."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractSegmentTree.rst
+#: dc34d36b2c664874a61fbce79823d4cd fb094d9c6856439b8bba4b92853f0ee6
+#: fb8c0a6cab7f455bae53a069ce445c0d
+msgid "Raises"
+msgstr ""
+
+#: fc15ccecff25438f9c5c5eaeb03d1031 of
+#: sds.tree.interfaces.AbstractSegmentTree.query:11
+msgid "If range is invalid."
+msgstr ""
+
+#: 1b97e1d3102443caaf7efa12e29396cd 59a3484a03dc411fbc78d9e89b11ca3c of
+#: sds.tree.interfaces.AbstractSegmentTree.query:15
+#: sds.tree.interfaces.AbstractSegmentTree.update:12
+msgid "Time complexity: O(log n)"
+msgstr ""
+
+#: 50900db20bb547b59499b6ca83ebbd6a of
+#: sds.tree.interfaces.AbstractSegmentTree.update:3
+msgid "Index of the element to update."
+msgstr ""
+
+#: 923a3f780ad14aed807237d526863497 e069842ffeae4fc8b86e405b5ee05d5a of
+#: sds.tree.interfaces.AbstractSegmentTree.__setitem__:5
+#: sds.tree.interfaces.AbstractSegmentTree.update:5
+msgid "New value."
+msgstr ""
+
+#: 35e74a16ca994ccbb1c115c0d7b9f0c6 68cfddd31ef04f34948d0e356e4f174f of
+#: sds.tree.interfaces.AbstractSegmentTree.get:9
+#: sds.tree.interfaces.AbstractSegmentTree.update:8
+msgid "If index is out of bounds."
+msgstr ""
+
+#: 7b206ac8ad1f4c818f4264cf7204b783 of
+#: sds.tree.interfaces.AbstractSegmentTree.get:3
+msgid "Index to query."
+msgstr ""
+
+#: 2c11730015cf4c488fdbd454ed31c069 53a76a4861504f31a48d48423874c6db of
+#: sds.tree.interfaces.AbstractSegmentTree.__getitem__:6
+#: sds.tree.interfaces.AbstractSegmentTree.get:6
+msgid "Value at the index."
+msgstr ""
+
+#: f1509242c31b416e876583b777e9f2af of
+#: sds.tree.interfaces.AbstractSegmentTree.get:13
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 631c22e6f5c8485bb0092b2f23a90d7b of
+#: sds.tree.interfaces.AbstractSegmentTree.to_array:3
+msgid "Copy of the underlying array."
+msgstr ""
+
+#: 141f85e54bee407aa9e4ef054ceb0b3e of
+#: sds.tree.interfaces.AbstractSegmentTree.to_array:8
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 482953c2269a4b4e940fd7a58d65e847 of
+#: sds.tree.interfaces.AbstractSegmentTree.__getitem__:1
+msgid "Get value at index using array notation."
+msgstr ""
+
+#: b691efd65afc4285919669aeef446834 of
+#: sds.tree.interfaces.AbstractSegmentTree.__getitem__:3
+msgid "Index to access."
+msgstr ""
+
+#: dd077cb4da7e4fa68a722782b4977eca of
+#: sds.tree.interfaces.AbstractSegmentTree.__setitem__:1
+msgid "Update value at index using array notation."
+msgstr ""
+
+#: 233a5603850f4149bf8d4797234c6fc5 of
+#: sds.tree.interfaces.AbstractSegmentTree.__setitem__:3
+msgid "Index to update."
+msgstr ""
+

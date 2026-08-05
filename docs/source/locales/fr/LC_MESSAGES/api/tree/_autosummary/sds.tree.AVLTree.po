@@ -1,0 +1,354 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:2
+#: 88d75837d40c44dd9e96e4a2f3b5eac7
+msgid "sds.tree.AVLTree"
+msgstr ""
+
+#: 71865a54620c46e59b85c7274d82555d of sds.tree.balanced.AVLTree:1
+msgid "AVL Tree - Self-balancing binary search tree."
+msgstr ""
+
+#: dfaa832e4c284be483143b3342f702b9 of sds.tree.balanced.AVLTree:3
+msgid ""
+"An AVL tree is a BST where the heights of the two child subtrees of any "
+"node differ by at most one. If at any time they differ by more than one, "
+"rebalancing is done through rotations to restore this property."
+msgstr ""
+
+#: a13e97a0df10427485fdb749202937e9 of sds.tree.balanced.AVLTree:8
+msgid ""
+"Balance factor = height(left subtree) - height(right subtree) Valid "
+"balance factors: -1, 0, 1"
+msgstr ""
+
+#: 5093dab9247b4744904ed18b8a8e1d4c of sds.tree.balanced.AVLTree:13
+msgid "The root node of the tree (read-only property)."
+msgstr ""
+
+#: 19d475aa3f244e3a9effa4eac03a138e c9f9bd73987f469a8f4dc6a7661e733f of
+#: sds.tree.balanced.AVLTree
+msgid "type"
+msgstr ""
+
+#: 1176a99216af4120ac1ab86730e81669 of sds.tree.balanced.AVLTree:15
+msgid "sds.tree.AVLNode or None"
+msgstr ""
+
+#: 60d10267f7c8410788f1af976218e3cc of sds.tree.balanced.AVLTree:19
+msgid "The number of nodes in the tree (read-only property)."
+msgstr ""
+
+#: 2b88032935b5441c886dba897fb7d80a of sds.tree.balanced.AVLTree:21
+msgid "int"
+msgstr ""
+
+#: 6b7775791ee54f0f8b939d0d0b0ed03a 94e3f951f80545fda51b15c638970bd2
+#: bedb082dbad246b8b749eaa67c163243 e1efc8c24228486a88b14d60e6a46d87
+#: f5cc10624f264219a883aaa0bba69492 of sds.tree.balanced.AVLTree:23
+#: sds.tree.balanced.AVLTree.height:6 sds.tree.balanced.AVLTree.insert:6
+#: sds.tree.balanced.AVLTree.remove:12 sds.tree.balanced.AVLTree.search:9
+msgid "Examples"
+msgstr ""
+
+#: a871516cb3bb46508374199e3a7dc6d4 of sds.tree.balanced.AVLTree:25
+msgid "Create and populate an AVL tree:"
+msgstr ""
+
+#: 3d80d0a48ea74b0eb8b4867e0ed980f5 of sds.tree.balanced.AVLTree:35
+msgid "Tree remains balanced after insertions:"
+msgstr ""
+
+#: 0930adccb0c8447d94f06783563356bc 278fa54315dc42c9a1866cfc88cf7d4e
+#: 52cdaaf1862a492e998c1733b80bdf9b 8434e315102c47a79b8d15ea166d7b37
+#: 8ccd94c6f0d1478bb95dd87d8cc80576 of sds.tree.balanced.AVLTree:43
+#: sds.tree.balanced.AVLTree.height:15 sds.tree.balanced.AVLTree.insert:15
+#: sds.tree.balanced.AVLTree.remove:20 sds.tree.balanced.AVLTree.search:16
+msgid "Notes"
+msgstr ""
+
+#: 1d075e1f8fa048f1b3a00ece148e92ca of sds.tree.balanced.AVLTree:45
+msgid ""
+"Time Complexity (guaranteed): - Insert: O(log n) - Search: O(log n) - "
+"Remove: O(log n) - All operations: O(log n) worst case"
+msgstr ""
+
+#: c701d26fde7249a089a5bbcd30aea5ca of sds.tree.balanced.AVLTree:51
+msgid ""
+"AVL trees are more rigidly balanced than Red-Black trees, leading to "
+"faster lookups but slightly slower insertions/deletions."
+msgstr ""
+
+#: b815795db4eb4090b4ed51c15b6bd53a of sds.tree.balanced.AVLTree:56
+msgid ":obj:`BinarySearchTree`"
+msgstr ""
+
+#: 40071de47aec48c3b1e2d59971543b6b of sds.tree.balanced.AVLTree:57
+msgid "Unbalanced BST."
+msgstr ""
+
+#: 1e5857720ba844058e27e7fbc2d32b61 of sds.tree.balanced.AVLTree:59
+msgid ":obj:`RedBlackTree`"
+msgstr ""
+
+#: c9f8045dead340dfbf11edf151e52594 of sds.tree.balanced.AVLTree:60
+msgid "Alternative self-balancing tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 5cea3e9e7096499ca3c93e547b1f4a2c 7159e5b124444572a0ba04719ad2126c
+#: cabed657e4804f388612b280554a989b of sds.tree.balanced.AVLTree.__init__:1
+msgid "Initialize an empty AVL tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:13
+#: b2763d7baae44d918f9f37c7f6b3cdcd
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 22e1ee036bef4db79e7fec0ffa6a644b
+msgid ":py:obj:`__init__ <sds.tree.AVLTree.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: d7599ddc00164acb9c9a4ea486962c5d
+msgid ":py:obj:`clear <sds.tree.AVLTree.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 76f1e4a533aa41b1a079bd5f1299590c ba3a735abd664bef9a85d8116eaf5e87 of
+#: sds.tree.balanced.AVLTree.clear:1
+msgid "Remove all nodes from the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 4dafaf4511ac48bcbd198f57750671b1
+msgid ":py:obj:`height <sds.tree.AVLTree.height>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: ac4a7306c4514c0295ae8ae5ec1654b6 b3278a8b856346228cabf91ad858d5d6 of
+#: sds.tree.balanced.AVLTree.height:1
+msgid "Return the height of the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: bfc92377205b49a2b0485a0fa29241f8
+msgid ":py:obj:`inorder_traversal <sds.tree.AVLTree.inorder_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: aa78fcdde9d54417945f1dd19cadb340 ffd463c3af214077ab037ddde6bee2eb of
+#: sds.tree.balanced.AVLTree.inorder_traversal:1
+msgid "Return inorder traversal iterator."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 172320cc4ee74fcfac385133f6b70543
+msgid ":py:obj:`insert <sds.tree.AVLTree.insert>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 09e3ccc62c714295ace4f6276eddbf9c 566e36ec05254a1b92e907ebc0b81b76 of
+#: sds.tree.balanced.AVLTree.insert:1
+msgid "Insert an item into the AVL tree with automatic balancing."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 2bcd98c689174f3a85b1c3163595330e
+msgid ":py:obj:`is_empty <sds.tree.AVLTree.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: e4e8ce4f2f4f4f5c9f682793b02a1dfc
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 7a1fe711170b4f94bc3e907a8e2752eb
+msgid ""
+":py:obj:`level_order_traversal "
+"<sds.tree.AVLTree.level_order_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 77c386a0164f425988065087060001fe 7be585f0b1004c24aad4e80579f9c5dd of
+#: sds.tree.balanced.AVLTree.level_order_traversal:1
+msgid "Return level-order traversal iterator."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: c380665941b04a1da133771ff77b22ea
+msgid ""
+":py:obj:`postorder_traversal <sds.tree.AVLTree.postorder_traversal>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 0eb9b491b3a341f98b38a1d9224440d7 8ea9e6984b65455f98fc2f72d1b35029 of
+#: sds.tree.balanced.AVLTree.postorder_traversal:1
+msgid "Return postorder traversal iterator."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: f552959b719e44d0ae58374ad7314df5
+msgid ""
+":py:obj:`preorder_traversal <sds.tree.AVLTree.preorder_traversal>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 56bdb0e8ba28468595d5efe6ae45397d 6ef4908950694007ba4fb4163aa6ebd9 of
+#: sds.tree.balanced.AVLTree.preorder_traversal:1
+msgid "Return preorder traversal iterator."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: c5fea05db6434c6e9cd918c6cdc5a071
+msgid ":py:obj:`remove <sds.tree.AVLTree.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 94fe14acc3594e6988c6381333e8ad11 9c8f005954554c94a7bc8a08787e7aec of
+#: sds.tree.balanced.AVLTree.remove:1
+msgid "Remove an item from the AVL tree with automatic balancing."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 6b6dc7e0ab054e50bde5c668e843b25d
+msgid ":py:obj:`search <sds.tree.AVLTree.search>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:31:<autosummary>:1
+#: 930b0368cb074709a157a6989bd9a8b5 9f45609ac36144b9bcd55f6c9a397cc1 of
+#: sds.tree.balanced.AVLTree.search:1
+msgid "Search for an item in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst:33
+#: 6016f737bece435988dca6d3df42e3f1
+msgid "Attributes"
+msgstr ""
+
+#: afaa93c1374c46f0a49a6b6a613562ed of
+#: sds.tree.balanced.AVLTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`root <sds.tree.AVLTree.root>`\\"
+msgstr ""
+
+#: aabded3b8fb14d15aefde486432219b0 of
+#: sds.tree.balanced.AVLTree.__init__:1:<autosummary>:1
+msgid "Get the root node of the tree."
+msgstr ""
+
+#: 1291f2cfff614db09c3b2bf754b53c20 of
+#: sds.tree.balanced.AVLTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.AVLTree.size>`\\"
+msgstr ""
+
+#: 26a6517915fc49779652668841b52f95 of
+#: sds.tree.balanced.AVLTree.__init__:1:<autosummary>:1
+msgid "Get the number of nodes in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst
+#: a930d92621c343af9a90b369d38cd5c6 b77c42d82cd247d18491c4f2d8fd08ab
+#: dd4dfd7b62334615ad93ba23e1871999
+msgid "Returns"
+msgstr ""
+
+#: de666d82bb8a43948deab1010baedca2 of sds.tree.balanced.AVLTree.height:3
+msgid "The height of the tree, or -1 if empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst
+#: 2fdda22e4ddb4354af1815276bda3c68 70a7daecf2ea46659ed66e457291f1e0
+#: 83388a2d171b47d984a12a15a6dbb9c1
+msgid "Return type"
+msgstr ""
+
+#: 0b1d624e09cf4e6aaac85fdd01facb18 of sds.tree.balanced.AVLTree.height:17
+msgid "Time complexity: O(1) - height is stored in root node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst
+#: 00b5888126c2495a9b989c5454117113 7ec7138cd79c422ab33b002a4f62a423
+#: ed6c513b9a95400698792843da0b23d3
+msgid "Parameters"
+msgstr ""
+
+#: d3c423109ef34b0c8f9c6a846d1843aa of sds.tree.balanced.AVLTree.insert:3
+msgid "The item to insert. Must be comparable."
+msgstr ""
+
+#: 4eb9308e57e048ea984f38e951664f11 7de931e337cb410e9fe5cc2f620185f3
+#: c3de97410f76446ea25f54b287ff0570 of sds.tree.balanced.AVLTree.insert:17
+#: sds.tree.balanced.AVLTree.remove:22 sds.tree.balanced.AVLTree.search:18
+msgid "Time complexity: O(log n) guaranteed."
+msgstr ""
+
+#: d8e598c93ca242408f7c64380f81d0e0 of sds.tree.balanced.AVLTree.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: 185dfbdd780a486a82bd59a4df07eb80 of sds.tree.balanced.AVLTree.remove:6
+msgid "The removed item."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLTree.rst
+#: 3eb7f9bdc0ff4fa2b4fd69dc0f54a7dc
+msgid "Raises"
+msgstr ""
+
+#: dca62a3163d940a2ad90ef94786ac8f4 of sds.tree.balanced.AVLTree.remove:9
+msgid "If the tree is empty."
+msgstr ""
+
+#: a4b9a9959e91440986b40974242efaed of sds.tree.balanced.AVLTree.remove:10
+msgid "If the item is not found."
+msgstr ""
+
+#: 63c96d2a0e95496bba860cd692bd881e of sds.tree.balanced.AVLTree.search:3
+msgid "The item to search for."
+msgstr ""
+
+#: 2b5f436da5c347188f4972792a085917 of sds.tree.balanced.AVLTree.search:6
+msgid "True if found, False otherwise."
+msgstr ""
+
+#: a6f9d3b356d94f3f9d40ca78617a9cce of sds.tree.balanced.AVLTree.__iter__:1
+msgid "Iterate over tree elements (inorder)."
+msgstr ""
+
+#: 711fcb58cc9d4a558297210b013447f1 of sds.tree.balanced.AVLTree.__contains__:1
+msgid "Check if item is in the tree."
+msgstr ""
+
+#: 9a6916d4f5c845528f86e57f63cc5683 of sds.tree.balanced.AVLTree.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: 75c5557ae3df45b49f30604fdf7a5a74 of sds.tree.balanced.AVLTree.__str__:1
+msgid "Return string showing inorder traversal."
+msgstr ""
+

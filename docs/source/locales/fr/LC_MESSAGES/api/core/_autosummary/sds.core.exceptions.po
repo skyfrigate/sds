@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/core/_autosummary/sds.core.exceptions.rst:2
+#: 4fa003178a4d4c41af274511a5449fa1
+msgid "sds.core.exceptions"
+msgstr ""
+
+#: 147ad85b22dd4dfdb08da5e39ece53c4 of sds.core.exceptions:1
+msgid "Custom exceptions for data structures."
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.exceptions.rst:8
+#: 0c72d44131314b5286d9d5fcf24116c2
+msgid "Exceptions"
+msgstr ""
+
+#: 3ce97a76dee54a0cb972043b2ac89764 of
+#: sds.core.exceptions.DataStructureError:1:<autosummary>:1
+msgid ":py:obj:`DataStructureError <sds.core.exceptions.DataStructureError>`\\"
+msgstr ""
+
+#: 49ca618c30b94d28868c9eeff3743911 efbec8c0fb6744188e68532e702ee020 of
+#: sds.core.exceptions.DataStructureError:1
+#: sds.core.exceptions.DataStructureError:1:<autosummary>:1
+msgid "Base exception for all data structure errors."
+msgstr ""
+
+#: ebfdd97154734bd9a0d50dc5999b25b3 of
+#: sds.core.exceptions.DataStructureError:1:<autosummary>:1
+msgid ""
+":py:obj:`EmptyStructureError <sds.core.exceptions.EmptyStructureError>`\\"
+" \\(\\[message\\]\\)"
+msgstr ""
+
+#: e2ddfabdd6054ecfb6b799171fb79ab8 ec39953e4cca479384224f81a74237c8 of
+#: sds.core.exceptions.DataStructureError:1:<autosummary>:1
+#: sds.core.exceptions.EmptyStructureError:1
+msgid "Exception raised when attempting to access/remove from an empty structure."
+msgstr ""
+
+#: ba844b79e92e4033b527382a1c049da8 of
+#: sds.core.exceptions.DataStructureError:1:<autosummary>:1
+msgid ""
+":py:obj:`FullStructureError <sds.core.exceptions.FullStructureError>`\\ "
+"\\(\\[message\\]\\)"
+msgstr ""
+
+#: 279b6fccd8344d61b395517971ac3fa4 4668abf3630e4363bbaf6a7d99e0da39 of
+#: sds.core.exceptions.DataStructureError:1:<autosummary>:1
+#: sds.core.exceptions.FullStructureError:1
+msgid "Exception raised when attempting to add to a full structure."
+msgstr ""
+
+#: 633c86a01eb0451683d0ec3c963824b9 of
+#: sds.core.exceptions.DataStructureError:1:<autosummary>:1
+msgid ""
+":py:obj:`IndexStructureError <sds.core.exceptions.IndexStructureError>`\\"
+" \\(\\[message\\]\\)"
+msgstr ""
+
+#: 64779145628545caab7eb685a293112b 6605ec74a11d445397b3709d79312ddb of
+#: sds.core.exceptions.DataStructureError:1:<autosummary>:1
+#: sds.core.exceptions.IndexStructureError:1
+msgid "Exception raised when an invalid index is accessed."
+msgstr ""
+
+#: b2226dc9b80946f8920ec643b038c17b of
+#: sds.core.exceptions.DataStructureError:1:<autosummary>:1
+msgid ""
+":py:obj:`InvalidOperationError "
+"<sds.core.exceptions.InvalidOperationError>`\\ \\(\\[message\\]\\)"
+msgstr ""
+
+#: f56f7c80d32746df8a353af042088c27 f87fbb35b52d439197565e2121064a24 of
+#: sds.core.exceptions.DataStructureError:1:<autosummary>:1
+#: sds.core.exceptions.InvalidOperationError:1
+msgid "Exception raised when an invalid operation is attempted."
+msgstr ""
+

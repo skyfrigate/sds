@@ -1,0 +1,460 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractGraph.rst:2
+#: eed328edfb9148b1bf3ecf15d2048d47
+msgid "sds.graph.interfaces.AbstractGraph"
+msgstr ""
+
+#: cd9ce1464c4c4887bcbf01fe7d3fa2c8 of sds.graph.interfaces.AbstractGraph:1
+msgid "Abstract base class for all graph implementations."
+msgstr ""
+
+#: f2f815747f764bdb892be6ba1e8dc227 of sds.graph.interfaces.AbstractGraph:3
+msgid ""
+"This class defines the core interface that all graph types must "
+"implement. It extends Collection to provide common operations like size, "
+"emptiness, and iteration."
+msgstr ""
+
+#: f8414105c27548399e42f4979bd1d507 of sds.graph.interfaces.AbstractGraph:7
+msgid ""
+"A graph consists of nodes (vertices) connected by edges. This abstract "
+"class defines operations for managing both nodes and edges."
+msgstr ""
+
+#: 30e573866920488895953febf149facc of sds.graph.interfaces.AbstractGraph:10
+msgid "Notes"
+msgstr ""
+
+#: cde3004fe89045e783615147f01ad5eb of sds.graph.interfaces.AbstractGraph:12
+msgid ""
+"Concrete implementations must provide: - Node management (add_node, "
+"remove_node, has_node) - Edge management (add_edge, remove_edge, "
+"has_edge) - Neighbor queries (neighbors, degree) - Traversal support "
+"(nodes, edges) - Graph properties (is_connected, etc.)"
+msgstr ""
+
+#: 458201e4bdeb44ceab3a5094b83fcca9 of sds.graph.interfaces.AbstractGraph:21
+msgid ":obj:`AbstractDirectedGraph`"
+msgstr ""
+
+#: eee4551c881648398ecd62e8a21931a9 of sds.graph.interfaces.AbstractGraph:22
+msgid "Interface for directed graphs."
+msgstr ""
+
+#: bdb02937d6dd466383bf5d45ad7123a0 of sds.graph.interfaces.AbstractGraph:24
+msgid ":obj:`AbstractUndirectedGraph`"
+msgstr ""
+
+#: 7ac3145332d045d78b74bbde61d823cb of sds.graph.interfaces.AbstractGraph:25
+msgid "Interface for undirected graphs."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractGraph.rst:13
+#: 1af9b84a57df45de8db48e0315a26658
+msgid "Methods"
+msgstr ""
+
+#: d74f9d931bda41f6a949291b3c05e6d9 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ":py:obj:`__init__ <sds.graph.interfaces.AbstractGraph.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: a130eeb105a24448ae8fc64256c00ccd of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`add_edge <sds.graph.interfaces.AbstractGraph.add_edge>`\\ "
+"\\(edge\\)"
+msgstr ""
+
+#: 365cce4077eb4e3793e7ce936cf42199 abc2e89ae0a04c139a806d8e08cb29c4 of
+#: sds.graph.interfaces.AbstractGraph.add_edge:1
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid "Add an edge to the graph."
+msgstr ""
+
+#: aafdb1e936ec4dbeb34167dd8c448318 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`add_node <sds.graph.interfaces.AbstractGraph.add_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: 66dd6efb67254e26ab7aa4ee499538e6 d100d9e8b01e47f2b5b99dd3e45fef47 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: 3faaf43dbc774910916aff96e0389ef1 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ":py:obj:`clear <sds.graph.interfaces.AbstractGraph.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ed2f19e9cddf41e8b6bceab69297610d of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid "Remove all elements from the collection."
+msgstr ""
+
+#: b4fbaf8f767c4adfa788d41d91f08824 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ":py:obj:`degree <sds.graph.interfaces.AbstractGraph.degree>`\\ \\(node\\)"
+msgstr ""
+
+#: 0110fef7e02b460e85ae96e57f757cb8 e04ed4946858472fac6ffc691acca33e of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.degree:1
+msgid "Get the degree of a node."
+msgstr ""
+
+#: db5e656846c140f683094fcc52587e23 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`edge_count <sds.graph.interfaces.AbstractGraph.edge_count>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: e1e3d4454c6f424a8ce733fccbcbb8fd e7a571cef1e44cccb3083351452dc973 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.edge_count:1
+msgid "Get the number of edges in the graph."
+msgstr ""
+
+#: b813924565224fbcb92489a38d91cff9 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ":py:obj:`edges <sds.graph.interfaces.AbstractGraph.edges>`\\ \\(\\)"
+msgstr ""
+
+#: 4f708b7668794197880354b913f446ab e6de829ec7684f5d96a711e4a4487a4c of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.edges:1
+msgid "Get all edges in the graph."
+msgstr ""
+
+#: 984afd3e74d140f7b8c895abcc0c2d9e of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`get_edge <sds.graph.interfaces.AbstractGraph.get_edge>`\\ "
+"\\(node1\\, node2\\)"
+msgstr ""
+
+#: 5e1b4d8d868a4515bb40703855809c55 d89f86944cf3408aaecaa669e0a2b33b of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.get_edge:1
+msgid "Get the edge between two nodes."
+msgstr ""
+
+#: 2cdf3493147447d7b9ac02d0cd682a0e of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`get_node_by_id "
+"<sds.graph.interfaces.AbstractGraph.get_node_by_id>`\\ \\(node\\_id\\)"
+msgstr ""
+
+#: 66bdc5e274ba47b4bc08dec7608e9fde 792900b40ebf4d6abdcbbc4b3806f742 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.get_node_by_id:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: 3f58e045a2194875bceeb36ae88125df of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`has_edge <sds.graph.interfaces.AbstractGraph.has_edge>`\\ "
+"\\(node1\\, node2\\)"
+msgstr ""
+
+#: 3f62f001ba254044b80e8fa1dce17b96 a20e01565d3f4558b34713471f9a9b00 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.has_edge:1
+msgid "Check if an edge exists between two nodes."
+msgstr ""
+
+#: 245e2ba8d49148d985814c59d4731f09 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`has_node <sds.graph.interfaces.AbstractGraph.has_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: 07d3e1d3364744ca9c52e198d47ae283 e98785262fa24824853f12bc6750cad7 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.has_node:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: e2282c53c83c4324b63153a30c6f1436 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`is_connected "
+"<sds.graph.interfaces.AbstractGraph.is_connected>`\\ \\(\\)"
+msgstr ""
+
+#: 11b2e2c5187940a1a6432cd845eb08e1 355be9ad656d428da3a681b5d880f3d3 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.is_connected:1
+msgid "Check if the graph is connected."
+msgstr ""
+
+#: dec7ee592b0a44379146e32ad5016564 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ":py:obj:`is_empty <sds.graph.interfaces.AbstractGraph.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: 7719edf564b2414f84fda2929b1e97d9 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid "Return True if the collection is empty, False otherwise."
+msgstr ""
+
+#: f1616bc031b74a00b56e937ee14b9244 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`neighbors <sds.graph.interfaces.AbstractGraph.neighbors>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: 2f75f32233194d918ebca40878e549c3 46a3db64087149ad9e8856ef4a7f65a4 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.neighbors:1
+msgid "Get all neighbors of a node."
+msgstr ""
+
+#: db1721963b6b4535965077a095771c80 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`node_count <sds.graph.interfaces.AbstractGraph.node_count>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: 044f368d887e46f584bbd55e15645e28 5e5343842ae444669b53214e1d709aa1 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.node_count:1
+msgid "Get the number of nodes in the graph."
+msgstr ""
+
+#: 191cd3cd38674e00950b0c7324198f1d of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ":py:obj:`nodes <sds.graph.interfaces.AbstractGraph.nodes>`\\ \\(\\)"
+msgstr ""
+
+#: d7aaf707bae64707969a4dee656a460c ee85408bb008410ab83312db21d31d2d of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.nodes:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: 51e841a158b64f82944dcaaeced51f60 of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`remove_edge <sds.graph.interfaces.AbstractGraph.remove_edge>`\\ "
+"\\(edge\\)"
+msgstr ""
+
+#: 4f30eb2157334bf2acef917d8a2c37b2 536fb2fad33d4e9a92da2fb559d9439b of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.remove_edge:1
+msgid "Remove an edge from the graph."
+msgstr ""
+
+#: 8bb234a69dc84d739df955426e67964d of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+msgid ""
+":py:obj:`remove_node <sds.graph.interfaces.AbstractGraph.remove_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: 7b894fd322f447108b74d5be3c3d20c0 873510c5716b49249a983aa2299fb4df of
+#: sds.graph.interfaces.AbstractGraph.add_node:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractGraph.remove_node:1
+msgid "Remove a node and all its incident edges from the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractGraph.rst
+#: 036a9cbc496840d2bc93b8bcafbdde04 270412ea96c04af9b2dbb9f25d2e80ab
+#: 698ebe4d38a545158ae40112ec9dede3 98a50be685ad43958f6e9adcb5ef3af7
+#: 9e99e88b7557467c81c43d31196c5437 a2543754c51541fea308b7fe0829fc4d
+#: a3d7f82819c843c0a6f541d8808e0a93 be5e2a482d4046109e76c2c4a3f1da5a
+#: c16cfd79dff940a18c62893c6677dce2 fb9bfe54efa244399e7a3b64287dca32
+msgid "Parameters"
+msgstr ""
+
+#: 4d1fa98b8c7242708cc7ecfc0f48dd8f of
+#: sds.graph.interfaces.AbstractGraph.add_node:3
+msgid "Node to add."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractGraph.rst
+#: 21bb1f7d2fb94c6b860d7b0a805148b7 323e774d63a845f0929b1f088d9f018c
+#: 5e1fdb8db5eb462ba6465a819b636eec 773c2ea370504799abb6c72aa7835a7b
+#: 77b51629b66a4b2eba03047c5c4abd31 dbe0e4121a214e7eb8af0970ba563a8a
+msgid "Raises"
+msgstr ""
+
+#: 420539129fdf48fe870c3d749d9fd422 of
+#: sds.graph.interfaces.AbstractGraph.add_node:6
+msgid "If node already exists in the graph."
+msgstr ""
+
+#: f79a0502876b4b83890971f2c9b59975 of
+#: sds.graph.interfaces.AbstractGraph.remove_node:3
+msgid "Node to remove."
+msgstr ""
+
+#: 122915efb23f4debbf2cb5e91c483e7c 7d4ce723db514213baa05877adc4458b
+#: 8a63aebdb65a442383733d934480cc64 of
+#: sds.graph.interfaces.AbstractGraph.degree:9
+#: sds.graph.interfaces.AbstractGraph.neighbors:8
+#: sds.graph.interfaces.AbstractGraph.remove_node:6
+msgid "If node is not in the graph."
+msgstr ""
+
+#: 20058127d37544d09d7b41ea094df3e1 of
+#: sds.graph.interfaces.AbstractGraph.has_node:3
+msgid "Node to check."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractGraph.rst
+#: 024c6686c7174b9cb1a8fcf76b7c649f 0b9eb4830c134f148becac789a2356cf
+#: 0ddf28ef0e854f9a8a5f008a148de448 249d23fc3d6f466d9a4a21d02e59612d
+#: 2ee65d9142494ac292afe283413ded4a 53b238c818224a3f95ad8c0b5f00b1b2
+#: 937d8c1999b941509d8a2d5a72f72be7 9659e4e407634f35be6d7b8f8449729b
+msgid "Returns"
+msgstr ""
+
+#: ff89d98909eb41558ddbb97a3ea00202 of
+#: sds.graph.interfaces.AbstractGraph.has_node:6
+msgid "True if node is in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractGraph.rst
+#: 1816ecc4e3274571901adea8f1f5f40a 39653a9c5be146f1af1c4d19b6a7e31b
+#: 7431d1c882e04f9eb29b38b0ae8e2f95 810ff499490243bcb8e2f3791fd5735b
+#: b3b1efa9add24079a59425a6541e24fa b3e9c903109d4934a638720c9cc6b09c
+#: bafe5a4b4baa4732b99928d08fd22349 d398316f84184a52b8bee70e912a61e3
+msgid "Return type"
+msgstr ""
+
+#: 1d3b39b2d0034f1bb5ed0dccec4afbae of
+#: sds.graph.interfaces.AbstractGraph.add_edge:3
+msgid "Edge to add."
+msgstr ""
+
+#: 5c52905a408e408397a83afd7dcaef7a of
+#: sds.graph.interfaces.AbstractGraph.add_edge:6
+msgid "If edge already exists or if nodes are not in the graph."
+msgstr ""
+
+#: 0a97200e0d2a41d0baa19958ce6db98f of
+#: sds.graph.interfaces.AbstractGraph.remove_edge:3
+msgid "Edge to remove."
+msgstr ""
+
+#: 5fbc16a7408844268142151a97ef22c4 of
+#: sds.graph.interfaces.AbstractGraph.remove_edge:6
+msgid "If edge is not in the graph."
+msgstr ""
+
+#: 0380e80884c24091b80f94b2785bf4a8 32d093a212764976a00957f9ce96875a of
+#: sds.graph.interfaces.AbstractGraph.get_edge:3
+#: sds.graph.interfaces.AbstractGraph.has_edge:3
+msgid "First node."
+msgstr ""
+
+#: 68bf0aa8268248bf8128d43cb9b6f6a7 fc7239ca0f1d4d5abe68e64612d3b688 of
+#: sds.graph.interfaces.AbstractGraph.get_edge:5
+#: sds.graph.interfaces.AbstractGraph.has_edge:5
+msgid "Second node."
+msgstr ""
+
+#: 77dcd8c9e4bc4e17be025f7da92d011b of
+#: sds.graph.interfaces.AbstractGraph.has_edge:8
+msgid "True if edge exists."
+msgstr ""
+
+#: 97b218f352d543b2af24c76f76008a16 of
+#: sds.graph.interfaces.AbstractGraph.get_edge:8
+msgid "The edge if it exists, None otherwise."
+msgstr ""
+
+#: e0d36c38224247478c1b6912285a13b1 of
+#: sds.graph.interfaces.AbstractGraph.neighbors:3
+msgid "Node to get neighbors for."
+msgstr ""
+
+#: 59c15e07809e4d96b17f588ba479b69d e7014176d8ef47cd8790014355548fb0
+#: ff3cc70dacd54fd0b428c35ca8228bcb of sds.graph.interfaces.AbstractGraph.edges
+#: sds.graph.interfaces.AbstractGraph.neighbors
+#: sds.graph.interfaces.AbstractGraph.nodes
+msgid "Yields"
+msgstr ""
+
+#: 0ee48b04d5b945659c0b4a3e03f4f102 of
+#: sds.graph.interfaces.AbstractGraph.neighbors:6
+msgid "*GraphNode* -- Neighbor nodes."
+msgstr ""
+
+#: b6ebda548cb549eca4dd90b18d15430d of
+#: sds.graph.interfaces.AbstractGraph.degree:3
+msgid "Node to get degree for."
+msgstr ""
+
+#: 008197e7baa549a0b62af4f4035bec7b of
+#: sds.graph.interfaces.AbstractGraph.degree:6
+msgid "Number of edges incident to the node."
+msgstr ""
+
+#: e26bccf58be6409b8de28a9ef2301ff1 of
+#: sds.graph.interfaces.AbstractGraph.nodes:3
+msgid "*GraphNode* -- All nodes in the graph."
+msgstr ""
+
+#: 06af00cb3652440d883a4a4d37f79224 of
+#: sds.graph.interfaces.AbstractGraph.edges:3
+msgid "*Edge* -- All edges in the graph."
+msgstr ""
+
+#: 8287ef79a1aa4e639d427b712b5a1e12 of
+#: sds.graph.interfaces.AbstractGraph.node_count:3
+msgid "Number of nodes."
+msgstr ""
+
+#: 96984447f8534e2f997e02d6c99c90f1 of
+#: sds.graph.interfaces.AbstractGraph.edge_count:3
+msgid "Number of edges."
+msgstr ""
+
+#: 21be65607685420794e74eb981e35cb4 of
+#: sds.graph.interfaces.AbstractGraph.is_connected:3
+msgid "True if there is a path between any two nodes."
+msgstr ""
+
+#: 743fed5296524e51a51268b08a1b0566 of
+#: sds.graph.interfaces.AbstractGraph.get_node_by_id:3
+msgid "ID of the node to retrieve."
+msgstr ""
+
+#: 0b95bf975cc845bf94b048119707eaa0 of
+#: sds.graph.interfaces.AbstractGraph.get_node_by_id:6
+msgid "The node if found, None otherwise."
+msgstr ""
+

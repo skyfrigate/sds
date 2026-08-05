@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:2
+#: 487d3bc0eb874de3a8e0c0edb955d6e5
+msgid "sds.graph.WeightedDirectedEdge"
+msgstr ""
+
+#: 3023946264804b4ebfba6bcb2b09352e of sds.graph.edge.WeightedDirectedEdge:1
+msgid "Edge that is both weighted and directed."
+msgstr ""
+
+#: 06959563fa1442c4b3e83d97bfeca7bc of sds.graph.edge.WeightedDirectedEdge:3
+msgid "Combines the properties of DirectedEdge and WeightedEdge."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst
+#: 82f1d0c0e45c4202b4488fb6f78131b2 896b4638303342b7842782b12181b9db
+#: c656bf515df548128df3a8d08b06d221
+msgid "Parameters"
+msgstr ""
+
+#: c0aaa771dfef4fc4b410589ce41d01b7 d316f0f31e144152a44ba7682ee51ce9
+#: ffa0978be816411fbb07e0f6a3a9b77e of sds.graph.edge.WeightedDirectedEdge:5
+#: sds.graph.edge.WeightedDirectedEdge.__init__:3
+msgid "Source node."
+msgstr ""
+
+#: 0cd1cf1e65024831803610411a700de4 30dc33a9ddaf4eb9a60190fc3fc944fc
+#: e4ad8b5126f64d3f831507f78acec4ff of sds.graph.edge.WeightedDirectedEdge:7
+#: sds.graph.edge.WeightedDirectedEdge.__init__:5
+msgid "Target node."
+msgstr ""
+
+#: 6f9fe04179ad45c29688706d767c712f 734a1b72a4ad4e0089e782d715af9513
+#: c784c73661ad4a27810bfec5ee243360 of sds.graph.edge.WeightedDirectedEdge:9
+#: sds.graph.edge.WeightedDirectedEdge.__init__:7
+msgid "Edge weight. Default is 1.0."
+msgstr ""
+
+#: 5052b34d44c241b1907b2a7c0b6d69e7 9bec5579a7424f9fbe45054e52645e7f
+#: bbfecdbf40e043cc9433f50dc56c1b9b of sds.graph.edge.WeightedDirectedEdge:11
+#: sds.graph.edge.WeightedDirectedEdge.__init__:9
+msgid "Additional data. Default is None."
+msgstr ""
+
+#: 40b501ebc8e44123b2ac521a1812ec25 of sds.graph.edge.WeightedDirectedEdge:16
+msgid "Edge weight (read-only property)."
+msgstr ""
+
+#: 0363849365754831b76b50b165c62c9f 1b8c370ea2194e0eaddc6356c70cc23b
+#: 37524025f8274795b5218df266021c37 of sds.graph.edge.WeightedDirectedEdge
+msgid "type"
+msgstr ""
+
+#: 6438847d209344ff864d48499fd1b739 of sds.graph.edge.WeightedDirectedEdge:18
+msgid "float"
+msgstr ""
+
+#: f6877b457a4c42ccb9552d10c14b0620 of sds.graph.edge.WeightedDirectedEdge:22
+msgid "Source node (read-only property)."
+msgstr ""
+
+#: 2fcd78fc53684f70b67630d4e3592a9e 723cc1d8b20f4b61844dfbc21c476209 of
+#: sds.graph.edge.WeightedDirectedEdge:24
+#: sds.graph.edge.WeightedDirectedEdge:30
+msgid "GraphNode"
+msgstr ""
+
+#: ee65a867fcc0420bbe95a1d1b67ec2a7 of sds.graph.edge.WeightedDirectedEdge:28
+msgid "Target node (read-only property)."
+msgstr ""
+
+#: 575f0af7c018443fa31fb5b3a65d275d of sds.graph.edge.WeightedDirectedEdge:32
+msgid "Examples"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:25:<autosummary>:1
+#: abc906350136449c831a6c8003c12c26 c8f4a65af61c483b9053aba24baa4feb
+#: eaa04c86aa0845db8c8613269baa447f of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1
+msgid "Initialize a weighted directed edge."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:13
+#: 9a7243c144474e4d8e2ac0d5f4aa2943
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:25:<autosummary>:1
+#: 7b284e9f22084a26bb30e10a91acce48
+msgid ""
+":py:obj:`__init__ <sds.graph.WeightedDirectedEdge.__init__>`\\ "
+"\\(source\\, target\\[\\, weight\\, data\\]\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:25:<autosummary>:1
+#: adbd9b88bc624156b8897e9b14c440b2
+msgid ""
+":py:obj:`connects <sds.graph.WeightedDirectedEdge.connects>`\\ "
+"\\(node\\_a\\, node\\_b\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:25:<autosummary>:1
+#: a3f3a16a31f6498eac54331367a0bd04
+msgid "Check if edge goes from node_a to node_b."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:25:<autosummary>:1
+#: ec8de3b430b04b1f8f31e29039853fe0
+msgid ""
+":py:obj:`incident_to <sds.graph.WeightedDirectedEdge.incident_to>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:25:<autosummary>:1
+#: 1c36a820749b4972ba9c6dbfdacf3855
+msgid "Check if edge is incident to a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:25:<autosummary>:1
+#: 9bec6883a87d43e49a0674f71f8fb93c
+msgid ""
+":py:obj:`is_self_loop <sds.graph.WeightedDirectedEdge.is_self_loop>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:25:<autosummary>:1
+#: 5318496f515f4f3db7e42727c29f9302
+msgid "Check if this edge is a self-loop."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:25:<autosummary>:1
+#: dc09a407e39845e6ade099c777d1b218
+msgid ""
+":py:obj:`other_node <sds.graph.WeightedDirectedEdge.other_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:25:<autosummary>:1
+#: 86334d1874cb40a2b273f55e032ecc90
+msgid "Get the other node connected by this edge."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst:27
+#: f397cfa7ad134e7badfee833117f1ba2
+msgid "Attributes"
+msgstr ""
+
+#: fe87dfe3349b4e80888b4d826fdffc68 of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.graph.WeightedDirectedEdge.data>`\\"
+msgstr ""
+
+#: 45900edd6d414f289ad735ade9f815a6 of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the edge data."
+msgstr ""
+
+#: 2c080b6dae7f4706971d212ff0f269e6 of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`node1 <sds.graph.WeightedDirectedEdge.node1>`\\"
+msgstr ""
+
+#: 8e1edbb011204c038d5f6e56c486d217 of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the first node."
+msgstr ""
+
+#: fe59855204d84c17b64118bf29fbb5cb of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`node2 <sds.graph.WeightedDirectedEdge.node2>`\\"
+msgstr ""
+
+#: 2457a18cc4e0443e8f54d6ff25c2e5fb of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the second node."
+msgstr ""
+
+#: b892fb276f194e7fa4846448dfcdfee7 of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`source <sds.graph.WeightedDirectedEdge.source>`\\"
+msgstr ""
+
+#: 965129b3cbce4d919683e24d7a9127ca of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the source node."
+msgstr ""
+
+#: 72c69253cd544a6aa034bf7522b57648 of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`target <sds.graph.WeightedDirectedEdge.target>`\\"
+msgstr ""
+
+#: 67ac8c1b596f4527b423a7807a05f8bb of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the target node."
+msgstr ""
+
+#: bc951d7ae3d34389a959a98ea674b2cc of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`weight <sds.graph.WeightedDirectedEdge.weight>`\\"
+msgstr ""
+
+#: c95e824b428948e28799774cf6526fc5 d56e460a4af5452e95e085580cf32a21 of
+#: sds.graph.WeightedDirectedEdge.weight:1
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the edge weight."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst
+#: 2e1e37e03f194632a22a33996b458d58 88bced2ac1924cd2bd80f8756c8e9254
+#: ef16323d88cd4822b840dbec3161d654
+msgid "Returns"
+msgstr ""
+
+#: 9b70e6040f9b494bb25cb43d145c7859 of sds.graph.WeightedDirectedEdge.weight:3
+msgid "The edge weight."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.WeightedDirectedEdge.rst
+#: 393fcbb53acd4dbdb91e84045dc8d9bc 48adb2bd5d99402fb5807bf229faf009
+#: a9653e2c642c43a1a975c12ff57cb257
+msgid "Return type"
+msgstr ""
+
+#: 540ee3c3f98d4a099b9d5ace812b6d61 of
+#: sds.graph.edge.WeightedDirectedEdge.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 46d3da2b0a2742a5a761addc0f591c87 db68eb80f7924834ba55742e6229625e of
+#: sds.graph.edge.WeightedDirectedEdge.__repr__:3
+#: sds.graph.edge.WeightedDirectedEdge.__str__:3
+msgid "String showing direction and weight."
+msgstr ""
+
+#: 4e3ec47fdfa64545ba51255abb2f5c24 of
+#: sds.graph.edge.WeightedDirectedEdge.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+

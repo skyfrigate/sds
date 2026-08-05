@@ -1,0 +1,611 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:2
+#: 0fb4ab008d694a628c9d94193cbb4d4f
+msgid "sds.linear.DoublyLinkedList"
+msgstr ""
+
+#: 8c23a277516a4daebf8e30d50b81f67c of sds.linear.list.DoublyLinkedList:1
+msgid "A doubly linked list implementation."
+msgstr ""
+
+#: d402fba8e18146b483e0237db2582e6f of sds.linear.list.DoublyLinkedList:3
+msgid ""
+"A doubly linked list is a linear collection where each element (node) "
+"contains data and references to both the next and previous nodes in the "
+"sequence. This implementation maintains both head and tail pointers for "
+"efficient operations at both ends."
+msgstr ""
+
+#: bd6b54829a124c218bfd2f385f13241f of sds.linear.list.DoublyLinkedList:10
+msgid "The first node in the list (read-only property)."
+msgstr ""
+
+#: 29fc76e012d3473894acce69218e35c3 5983ed66bf70495a952098904b1080cc
+#: 885df1822a7545139ff11a5077110688 9766848adbca4437b9619597dc97b296
+#: acebd678027e4524b4e6fea56d811bd3 ce995182e8e84c83a3cfbc0ed8eb86aa
+#: d93d7712797944b6a53617c61a2f28bc f26a3af2df1e4e99a4c1171a33c08403
+#: f7dd195a5ec440f2aeb4e276cc3f7099 of sds.linear.list.DoublyLinkedList
+msgid "type"
+msgstr ""
+
+#: 17479183f4ce42aa8a94c87308f2798e b290f597ab404baeba7faa7847af33f6 of
+#: sds.linear.list.DoublyLinkedList:12 sds.linear.list.DoublyLinkedList:18
+msgid "DoublyNode or None"
+msgstr ""
+
+#: 2e1a1e8cf3ca4c888d01593692c96bd5 of sds.linear.list.DoublyLinkedList:16
+msgid "The last node in the list (read-only property)."
+msgstr ""
+
+#: e3d44669b5c64c7d86772eed78294249 of sds.linear.list.DoublyLinkedList:22
+msgid "The number of elements in the list (read-only property)."
+msgstr ""
+
+#: fd16b03547e34c0ea2be42731359e59b of sds.linear.list.DoublyLinkedList:24
+msgid "int"
+msgstr ""
+
+#: b1e9ba406de34dbb9333ebd4047bad10 of sds.linear.list.DoublyLinkedList:38
+msgid "O(n), optimized to O(n/2) by starting from nearest end"
+msgstr ""
+
+#: eafac3bf9a5e416b8b4bd33e66c8d074 of sds.linear.list.DoublyLinkedList:44
+msgid "O(n)"
+msgstr ""
+
+#: 35b97fa3c0c9433eaf36135696469d44 47709605f91f4559a0d19b0fc0a468ac
+#: 9ce25314cfa441b885eb192a745f0d45 e0429165413746fda0d5c29204fc4555 of
+#: sds.linear.list.DoublyLinkedList:50 sds.linear.list.DoublyLinkedList:56
+#: sds.linear.list.DoublyLinkedList:62 sds.linear.list.DoublyLinkedList:68
+msgid "O(1)"
+msgstr ""
+
+#: 1dcc4e8605a94444af97a50eaf0502dc 2564ef6d611541fbb0d46d8f78f4c01f
+#: 259837970c2f4537bbaf17ac3a57ce2a 2d1d22736ec5456ab4f6a549d1def279
+#: 33a1657f9ebe417389a50b63a08f6809 58fb1d1a1bbd4028a6dc39e82b24af68
+#: 5972626f7a3b4e0aa555a7b563545ecc 6bd985a84a4245cea180fd7cf99d7917
+#: 6c2d4e4775be4860930d2e06f5c47a13 7370c7bec16f4510ab1c583562b603dd
+#: 7fda0bcedf3e45fd99e42c875cdfc215 826ba9cd06ac4022bc3a19e96705e7a2
+#: 9a905ff077034ae0ae88d2f7288e88cd afc07a338f09473781730d9be02e5bdb
+#: b2f05e82d5b345c785be9d07d75be68b c7622f75824543898746e649ff3dd911
+#: ccf589cb06924ceabd1b5d84f88d6c31 ce3d9cde682e4571b6f407fbea617311
+#: d99f6eef068e4e2b84a2a359c46b610a ed8f995e88e4484a99fc2225cc6dc28a of
+#: sds.linear.DoublyLinkedList.head:6 sds.linear.DoublyLinkedList.tail:6
+#: sds.linear.list.DoublyLinkedList:70
+#: sds.linear.list.DoublyLinkedList.__contains__:9
+#: sds.linear.list.DoublyLinkedList.__getitem__:11
+#: sds.linear.list.DoublyLinkedList.__iter__:5
+#: sds.linear.list.DoublyLinkedList.__repr__:6
+#: sds.linear.list.DoublyLinkedList.__reversed__:5
+#: sds.linear.list.DoublyLinkedList.__setitem__:10
+#: sds.linear.list.DoublyLinkedList.__str__:6
+#: sds.linear.list.DoublyLinkedList.append:6
+#: sds.linear.list.DoublyLinkedList.clear:3
+#: sds.linear.list.DoublyLinkedList.find:9
+#: sds.linear.list.DoublyLinkedList.insert_at:10
+#: sds.linear.list.DoublyLinkedList.prepend:6
+#: sds.linear.list.DoublyLinkedList.remove:12
+#: sds.linear.list.DoublyLinkedList.remove_at:12
+#: sds.linear.list.DoublyLinkedList.remove_first:8
+#: sds.linear.list.DoublyLinkedList.remove_last:8
+#: sds.linear.list.DoublyLinkedList.reverse:3
+msgid "Examples"
+msgstr ""
+
+#: e3eefc520ab7442e9b96f498bfad0f8e of sds.linear.list.DoublyLinkedList:72
+msgid "Create and populate a list:"
+msgstr ""
+
+#: 4444af540e0f4387b70904d33c22a64b of sds.linear.list.DoublyLinkedList:81
+msgid "Bidirectional traversal:"
+msgstr ""
+
+#: c648496888104eb98da7c7ddb6f268e9 of sds.linear.list.DoublyLinkedList:88
+msgid "Efficient operations at both ends:"
+msgstr ""
+
+#: 0f470f4c5a134ed6bca8538383ecd051 0f7cf9f0b4d64da5800d9559674e94ec
+#: 1bd5822103fd4202988fe2902a68f1bf 21ee52234bfa4004acba8bf26b9f2ca0
+#: 2276d9e59d9f4f8d92cd1583e6028b1b 248ab65a8cd14017a9ba60a92cfba1c7
+#: 27d5bd64d4464b4eae32f09339031a97 2efbe9b7ca6f4a50a1d422701bc8b0d0
+#: 42f70da3e3994ae89e8fbe82eee15eba 715f45ce15c741828a7688631eadc87c
+#: 8ef1b01367dc4288aa9c1710dd91d76f b75547dae8c44fcd9ade3f9ba81b98db
+#: b8586b6d748d4fb498a1136762dc0822 d91163176f8c4243942bfca4cbb8c64b
+#: e14dea74a9674782880ac70118b049a8 efefe3a8d1eb47e596e8d7c4e0380040
+#: f21bb991de3f4eda82af2f0c3b78ca58 fbb6d81faf354b38b535e217f0cb7bda of
+#: sds.linear.DoublyLinkedList.head:15 sds.linear.DoublyLinkedList.tail:16
+#: sds.linear.list.DoublyLinkedList:99
+#: sds.linear.list.DoublyLinkedList.__contains__:18
+#: sds.linear.list.DoublyLinkedList.__getitem__:21
+#: sds.linear.list.DoublyLinkedList.__iter__:14
+#: sds.linear.list.DoublyLinkedList.__reversed__:14
+#: sds.linear.list.DoublyLinkedList.__setitem__:18
+#: sds.linear.list.DoublyLinkedList.append:15
+#: sds.linear.list.DoublyLinkedList.clear:12
+#: sds.linear.list.DoublyLinkedList.find:20
+#: sds.linear.list.DoublyLinkedList.insert_at:19
+#: sds.linear.list.DoublyLinkedList.prepend:15
+#: sds.linear.list.DoublyLinkedList.remove:23
+#: sds.linear.list.DoublyLinkedList.remove_at:23
+#: sds.linear.list.DoublyLinkedList.remove_first:18
+#: sds.linear.list.DoublyLinkedList.remove_last:18
+#: sds.linear.list.DoublyLinkedList.reverse:15
+msgid "Notes"
+msgstr ""
+
+#: a529be8c3993438fa3dac264dfa7c249 of sds.linear.list.DoublyLinkedList:101
+msgid ""
+"The doubly linked structure allows for O(1) operations at both ends and "
+"enables backward traversal. This comes at the cost of additional memory "
+"per node (for the prev pointer) and more complex link management."
+msgstr ""
+
+#: ee7b3be9d0c84a1b8727bfdbb86892f2 of sds.linear.list.DoublyLinkedList:107
+msgid ":obj:`LinkedList`"
+msgstr ""
+
+#: 4ac0858c96f348faa0af4e1a16693209 of sds.linear.list.DoublyLinkedList:108
+msgid "Singly linked list with simpler structure."
+msgstr ""
+
+#: 7c854fb413dc49d8a5bad2d6e36ccfb4 of sds.linear.list.DoublyLinkedList:110
+msgid ":obj:`Deque`"
+msgstr ""
+
+#: 0816c8327b4d4d8ea9d61d21f3154c41 of sds.linear.list.DoublyLinkedList:111
+msgid "Uses doubly linked list for double-ended queue operations."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 7a17096316dc4c24bd0f739b56c69557 858cdbfa33f44c2d8539377abc89e0d7
+#: e59483a142d34d4495e0eada7b73bb5f of
+#: sds.linear.list.DoublyLinkedList.__init__:1
+msgid "Initialize an empty doubly linked list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:13
+#: f4069f3f16e24b07b1d1807f3a3d5a1c
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: f0c76c19df06423c9d87ecc53a1127ab
+msgid ":py:obj:`__init__ <sds.linear.DoublyLinkedList.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 8fe0ba5bf11c42fcb1387066af33243d
+msgid ":py:obj:`add <sds.linear.DoublyLinkedList.add>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: f2519a8d86a44d48a83d1e52a53952e9
+msgid "Add an item to the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 6f762ccf3cc146fc8691f43d219dd066
+msgid ":py:obj:`append <sds.linear.DoublyLinkedList.append>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 0d0d7ce401744824b51e697fcb9201d0 9dd540ffbb884a99b795cd0ac181c08e of
+#: sds.linear.list.DoublyLinkedList.append:1
+msgid "Add an item to the end of the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 6e8193e5d85c4d3abae10f2423689414
+msgid ":py:obj:`clear <sds.linear.DoublyLinkedList.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 0bfba06673d2471fae485a07dde54f4a e8d70b76e0c14f4ebc777c61e61fc4c9 of
+#: sds.linear.list.DoublyLinkedList.clear:1
+msgid "Remove all elements from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 4947c9e2421e4ac7b25afe7709b17538
+msgid ":py:obj:`find <sds.linear.DoublyLinkedList.find>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 9d7837abfef646498492e92eb3d311cf d709fccafa534921942340e17e521de6 of
+#: sds.linear.list.DoublyLinkedList.find:1
+msgid "Find the index of the first occurrence of an item."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 776a3966d82a439f82e1eaddb922715c
+msgid ""
+":py:obj:`insert_at <sds.linear.DoublyLinkedList.insert_at>`\\ \\(index\\,"
+" item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 22b375f7024146fd9b143a74e149b5f5 918c7d49ae3c4257b1a097531ce9637b of
+#: sds.linear.list.DoublyLinkedList.insert_at:1
+msgid "Insert an item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: aa76c5c2abb84365b4a39c2b99679e9d
+msgid ":py:obj:`is_empty <sds.linear.DoublyLinkedList.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 5acfbb61cff848d5847824f6e7d80865
+msgid "Return True if the list is empty."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 11e721141b184afb8caec46c93214bf0
+msgid ":py:obj:`prepend <sds.linear.DoublyLinkedList.prepend>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 852e6746186f41f0a041f6e51241773f e35a8e7d4c184b7783716f3a0fc688fa of
+#: sds.linear.list.DoublyLinkedList.prepend:1
+msgid "Add an item to the beginning of the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 7d56c9c90b824cfcb4e503ad47d90d7b
+msgid ":py:obj:`remove <sds.linear.DoublyLinkedList.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: d36ae8b3a426461f8fe3cc84b73a0891 f4993a56e7c14bb58399bd2500f50f42 of
+#: sds.linear.list.DoublyLinkedList.remove:1
+msgid "Remove the first occurrence of an item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: c69c92e96ec34a9e8327aa116b0b7eee
+msgid ":py:obj:`remove_at <sds.linear.DoublyLinkedList.remove_at>`\\ \\(index\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 7e23f47e9b4f40a585a06cbb9b8eef76 8d446997ae444dba9552a99a82ce6976 of
+#: sds.linear.list.DoublyLinkedList.remove_at:1
+msgid "Remove and return the item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 903d64ccbd1141fab4be174af9e22a9d
+msgid ":py:obj:`remove_first <sds.linear.DoublyLinkedList.remove_first>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 95d050ee6452460ba8586b9398f794c9 d0fdbc21fd264275afbab43200e3fa29 of
+#: sds.linear.list.DoublyLinkedList.remove_first:1
+msgid "Remove and return the first item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: a5e6560a095a432495a78ef4b14ab4b4
+msgid ":py:obj:`remove_last <sds.linear.DoublyLinkedList.remove_last>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 1ccedbad46d543c4a7d2b2f3562a1e1b bc6fc482df7c4732ab69a3688496811d of
+#: sds.linear.list.DoublyLinkedList.remove_last:1
+msgid "Remove and return the last item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 671910adb7384ef6b47e5bf22d2d2545
+msgid ":py:obj:`reverse <sds.linear.DoublyLinkedList.reverse>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:33:<autosummary>:1
+#: 877f9313f6164a218198fb7d3c15d97b a427243ee8884f7893e6ac59ba2161fb of
+#: sds.linear.list.DoublyLinkedList.reverse:1
+msgid "Reverse the list in place."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst:35
+#: a2a9e4dd1d61426b9b29c9fc81f00adb
+msgid "Attributes"
+msgstr ""
+
+#: 2e84f59b1cf44964be78c19aa9a03b09 of
+#: sds.linear.list.DoublyLinkedList.__init__:1:<autosummary>:1
+msgid ":py:obj:`head <sds.linear.DoublyLinkedList.head>`\\"
+msgstr ""
+
+#: 129f4d92b85241349ae6aab656de1847 da78d80b22104589a7c19b1af287166f of
+#: sds.linear.DoublyLinkedList.head:1
+#: sds.linear.list.DoublyLinkedList.__init__:1:<autosummary>:1
+msgid "Get the first node in the list."
+msgstr ""
+
+#: 5daab2ecc87042b1800b603b1a4eccf9 of
+#: sds.linear.list.DoublyLinkedList.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.linear.DoublyLinkedList.size>`\\"
+msgstr ""
+
+#: 773d0aa1e64b42b18e6a0be49fa3ebbe of
+#: sds.linear.list.DoublyLinkedList.__init__:1:<autosummary>:1
+msgid "Get the number of elements in the list."
+msgstr ""
+
+#: 6548547c8175431aba3298dae692fa68 of
+#: sds.linear.list.DoublyLinkedList.__init__:1:<autosummary>:1
+msgid ":py:obj:`tail <sds.linear.DoublyLinkedList.tail>`\\"
+msgstr ""
+
+#: 42a58debc62148bb976327d12af5deb7 85765ac6aa64418e8845fa893f559da8 of
+#: sds.linear.DoublyLinkedList.tail:1
+#: sds.linear.list.DoublyLinkedList.__init__:1:<autosummary>:1
+msgid "Get the last node in the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst
+#: 105e22ad4336424291dba6abd4715d2f 3f7add86a34c432eb3dece76c444b1f4
+#: 79fbc670fe9547cca9a9ef26219e02bf 853d964167c047bcb7e8a3aa99847ea6
+#: 918326f8bc2c472a933e8d0b9de08f39 a45320b9507247e9bcd52d19578e04fe
+#: a64b3929a76347b28d87b8a01d5d1b68 c85b8439824d45d18ad46f6e5b57d705
+#: ce3d9e0d5c934ae7b207d4050b43fddd cfb720dcd68d46ebad2f756f8734e19b
+#: f3dc26965f2640b8bd34ee9f8f1a576a
+msgid "Returns"
+msgstr ""
+
+#: af86d5ab4ff941afa50232b98b91d123 of sds.linear.DoublyLinkedList.head:3
+msgid "The first node, or None if the list is empty."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst
+#: 16bfc46e48244c9b94875a473f052c00 17a2f572069643b9abb149d8a62f183c
+#: 1eb787d2bd654c53b8e1fb3cd5bc996e 4249b1ed20404865ae6ec6df775fff76
+#: 5a98d99f3ec1443eb51a47f43e1827e5 683e76338d12402e9fe1f9e8858e2964
+#: 6eeff5883bb64f22b57048eab7d8d884 83e4705055504d9f8ab097ed4b446e92
+#: 8d93428a6acc4487b2ea70541dde8e51 8dcce0db3d4e45f4b5d03b382cefc6ec
+#: 8df1dae676a444c789a91da1e7a8e32b
+msgid "Return type"
+msgstr ""
+
+#: 06e99d103d9542fd8e85508eb71908b7 dedd679994ea410880eaef0aaf985085 of
+#: sds.linear.DoublyLinkedList.head:17 sds.linear.DoublyLinkedList.tail:18
+msgid "This property is read-only."
+msgstr ""
+
+#: f4f1458a325a4615af97f34656736c26 of sds.linear.DoublyLinkedList.tail:3
+msgid "The last node, or None if the list is empty."
+msgstr ""
+
+#: 202d673aea264175a269a437324b1af4 4596a158cbd34d9c86567bf023f7fa68
+#: 6b4eb7952d2a45e5862237407f6b1160 778b0c4b9b7649e79b3cbdb3fbc889c7
+#: a0afadccaa6842b2a63956d0e5c33564 of
+#: sds.linear.list.DoublyLinkedList.append:17
+#: sds.linear.list.DoublyLinkedList.clear:14
+#: sds.linear.list.DoublyLinkedList.prepend:17
+#: sds.linear.list.DoublyLinkedList.remove_first:20
+#: sds.linear.list.DoublyLinkedList.remove_last:20
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 3d21de1b890a4788aa6c062233ede0d6 of
+#: sds.linear.list.DoublyLinkedList.__iter__:1
+msgid "Iterate over the elements in forward direction."
+msgstr ""
+
+#: 136c8ef0404d4801ac0404a8cfe501ee 7b7fae0cacec4163875326ab9584f1c6 of
+#: sds.linear.list.DoublyLinkedList.__iter__
+#: sds.linear.list.DoublyLinkedList.__reversed__
+msgid "Yields"
+msgstr ""
+
+#: 6583bc89f7654466bd94e8cd07de06a2 of
+#: sds.linear.list.DoublyLinkedList.__iter__:3
+msgid "*Any* -- Elements from head to tail."
+msgstr ""
+
+#: 8315460f3d4c4dd194d1f17732301e2b f1cc1e3de514447ebc022a5e8bff88b0 of
+#: sds.linear.list.DoublyLinkedList.__iter__:16
+#: sds.linear.list.DoublyLinkedList.__reversed__:16
+msgid "Time complexity: O(n) for complete iteration"
+msgstr ""
+
+#: 877f0a6d1a824ec7be9d7b51d154d0fa of
+#: sds.linear.list.DoublyLinkedList.__reversed__:1
+msgid "Iterate over the elements in backward direction."
+msgstr ""
+
+#: 8e7209b1e0c547258fb55653622a3cdc of
+#: sds.linear.list.DoublyLinkedList.__reversed__:3
+msgid "*Any* -- Elements from tail to head."
+msgstr ""
+
+#: 0af4e828c60e4c97827fcd2d5edbd741 of
+#: sds.linear.list.DoublyLinkedList.__contains__:1
+msgid "Return True if item is in the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst
+#: 24925f51d89a436092acc125afb108dc 4b4264c1b8674fb49296039b204f961e
+#: 632e192fa6f2469090e64febfedb4eb4 7ea487ee2db44127b24ebe955cbbf625
+#: 80380b6d21fb4c8496e4115c79fc2a44 8c93e99dc6a7488e89abf30ab2539a04
+#: 9408e87f78094bffb38028aa4153960c d07ac510365f4a9db795585a9caae973
+#: df1a518fa24d4f5baf704da58bc9c27d
+msgid "Parameters"
+msgstr ""
+
+#: 8ddc601824564d53a63fb84fad3392d7 of
+#: sds.linear.list.DoublyLinkedList.__contains__:3
+msgid "The item to search for."
+msgstr ""
+
+#: 121215bfded14d8489addd31772a0b9c of
+#: sds.linear.list.DoublyLinkedList.__contains__:6
+msgid "True if found, False otherwise."
+msgstr ""
+
+#: 68c0f401da55450aa54ad6eb0aeba1f4 693864ccfc1f4405ae159c02078aa232
+#: 97ad4d0c5fb9461aab745b4ec6ad419a bae6964b7f7545f5b17c38cfc33b3616
+#: f929989927fa434a8e0187a1b036cdb1 of
+#: sds.linear.list.DoublyLinkedList.__contains__:20
+#: sds.linear.list.DoublyLinkedList.find:22
+#: sds.linear.list.DoublyLinkedList.insert_at:21
+#: sds.linear.list.DoublyLinkedList.remove:25
+#: sds.linear.list.DoublyLinkedList.remove_at:25
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 5a2000c320044545a11b487cba6f2a6e of
+#: sds.linear.list.DoublyLinkedList.__repr__:1
+msgid "Return a detailed string representation."
+msgstr ""
+
+#: 9aad9f300e384cfc8a12f0d09165ed51 of
+#: sds.linear.list.DoublyLinkedList.__repr__:3
+msgid "String in the form \"DoublyLinkedList([item1, item2, ...])\"."
+msgstr ""
+
+#: 41a186ac8d80416187e5b39714598361 of
+#: sds.linear.list.DoublyLinkedList.__str__:1
+msgid "Return a simple string representation."
+msgstr ""
+
+#: a4e84f4c6b09445c8724df5986a1c1e7 of
+#: sds.linear.list.DoublyLinkedList.__str__:3
+msgid "String showing bidirectional structure."
+msgstr ""
+
+#: dd12f33ccc70400081db9c6fb19a7d3e of
+#: sds.linear.list.DoublyLinkedList.__getitem__:1
+msgid "Get the item at the specified index."
+msgstr ""
+
+#: 8c703f94e4d34f148805d0c5448cbe17 b6b256f7cfc04a54ab8c58d4532ad893 of
+#: sds.linear.list.DoublyLinkedList.__getitem__:3
+#: sds.linear.list.DoublyLinkedList.__setitem__:3
+msgid "The index (supports negative indexing)."
+msgstr ""
+
+#: 840f4b5fc4e546eb93a56198e47b77b8 of
+#: sds.linear.list.DoublyLinkedList.__getitem__:6
+msgid "The item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.DoublyLinkedList.rst
+#: 1a08476be274461fa621322d4d38df8d 64c80405a7f14cf2b3b38b56be41adf1
+#: 8ff025099e054cc3a481a780e85581b6 9077cda5e51743f4989f389c669bb693
+#: a2cb02d928dd4bd0a8f9416aab00fab9 b3ac3f0eb82c422d9a1f68bf2c452583
+#: c20c033c48314d7ca407600551904cc4
+msgid "Raises"
+msgstr ""
+
+#: 9c19c3e828f8418f98eeff61f3fd8c36 bd35630b49e84b3681c76a319e7ecd26
+#: e20b409282ae46d49a0a2761b0a65283 e365aa8879ce41b78d155c43b1b923cc of
+#: sds.linear.list.DoublyLinkedList.__getitem__:9
+#: sds.linear.list.DoublyLinkedList.__setitem__:8
+#: sds.linear.list.DoublyLinkedList.insert_at:8
+#: sds.linear.list.DoublyLinkedList.remove_at:10
+msgid "If the index is out of range."
+msgstr ""
+
+#: 276f341fe3fa443c89ea91aeddaba952 of
+#: sds.linear.list.DoublyLinkedList.__getitem__:23
+msgid "Time complexity: O(n), optimized to O(n/2) by starting from nearest end"
+msgstr ""
+
+#: 58485c56a3ec4121b0fe811774f3969e of
+#: sds.linear.list.DoublyLinkedList.__setitem__:1
+msgid "Set the item at the specified index."
+msgstr ""
+
+#: f66b72cbbfdf4a74b7611989a56842c2 of
+#: sds.linear.list.DoublyLinkedList.__setitem__:5
+msgid "The new value."
+msgstr ""
+
+#: 0a28eab3d24b4a028fc81a4fa7816d29 of
+#: sds.linear.list.DoublyLinkedList.__setitem__:20
+msgid "Time complexity: O(n), optimized to O(n/2)"
+msgstr ""
+
+#: 5edacc9751564be5b515dcbfddc08808 a56bcf4f32ff4962afddb0228cc87bba of
+#: sds.linear.list.DoublyLinkedList.append:3
+#: sds.linear.list.DoublyLinkedList.prepend:3
+msgid "The item to add."
+msgstr ""
+
+#: b76a3ee4de7e4df8aa04d1c77d6e5663 of
+#: sds.linear.list.DoublyLinkedList.insert_at:3
+msgid "The index where to insert."
+msgstr ""
+
+#: 069d90edb7ab4bb1b9de1d07f5079415 of
+#: sds.linear.list.DoublyLinkedList.insert_at:5
+msgid "The item to insert."
+msgstr ""
+
+#: 78fb5738df37412087a94c618f144bd9 b2b4a3785c554841b9a654a521db47f5
+#: b6ea549079a04b3fad9b59555a1789f4 daba97f1ad894715aeda20f3cbcfb3f7 of
+#: sds.linear.list.DoublyLinkedList.remove:6
+#: sds.linear.list.DoublyLinkedList.remove_at:6
+#: sds.linear.list.DoublyLinkedList.remove_first:3
+#: sds.linear.list.DoublyLinkedList.remove_last:3
+msgid "The removed item."
+msgstr ""
+
+#: 01ee38561a3f4976a37ab07ce21ccb7e 33e25135b1844f63a8abf447a887716c
+#: 52a53bc79492405c9fc0cf840cf6a9c3 9a4a7ac85eb747fd98fbe678459a160f of
+#: sds.linear.list.DoublyLinkedList.remove:9
+#: sds.linear.list.DoublyLinkedList.remove_at:9
+#: sds.linear.list.DoublyLinkedList.remove_first:6
+#: sds.linear.list.DoublyLinkedList.remove_last:6
+msgid "If the list is empty."
+msgstr ""
+
+#: 15b8a3752cf34f5aabff30e4e2b1728c of
+#: sds.linear.list.DoublyLinkedList.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: 49034d1ab7a44c56a47bac10330845f8 of
+#: sds.linear.list.DoublyLinkedList.remove:10
+msgid "If the item is not found."
+msgstr ""
+
+#: 9e78dab3840c49d785a9e165b0fd4647 of
+#: sds.linear.list.DoublyLinkedList.remove_at:3
+msgid "The index of the item to remove."
+msgstr ""
+
+#: 359621ed9f594bfab1e1719965e2db1c of sds.linear.list.DoublyLinkedList.find:3
+msgid "The item to find."
+msgstr ""
+
+#: 7f24eeb5caa0406897d1f52a2f29b7c0 of sds.linear.list.DoublyLinkedList.find:6
+msgid "The index of the item, or -1 if not found."
+msgstr ""
+
+#: 74039b28dcda4335b2740579d1ee93a1 of
+#: sds.linear.list.DoublyLinkedList.reverse:17
+msgid "Time complexity: O(n) Space complexity: O(1)"
+msgstr ""
+

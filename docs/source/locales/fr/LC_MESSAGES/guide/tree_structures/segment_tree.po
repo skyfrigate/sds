@@ -1,0 +1,763 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/tree_structures/segment_tree.rst:5
+#: 3f0d886162144a398ec2a4625eb60db0
+msgid "Segment Tree Guide"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:10
+#: 9077e2f0cf714c9e906b68280f005af1
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:12
+#: a1aa85cf21ca4e139d678d9adf4c4eda
+msgid ""
+"A **Segment Tree** is a binary tree data structure that allows efficient "
+"range queries and updates on an array. Each node represents a segment "
+"(range) of the array, with leaves representing individual elements and "
+"internal nodes representing merged results. Segment trees are essential "
+"for competitive programming and applications requiring frequent range "
+"operations."
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:46
+#: b24f8e43a1924b9fafae275ad84fcd55
+msgid ""
+"Segment trees excel when you need both queries and updates on ranges. If "
+"only queries are needed, consider prefix sums. If only updates matter, "
+"consider other structures. Segment trees are the sweet spot for both."
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:51
+#: eec20cc1d6cb489cae05fd926e654793
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:54
+#: abd046be50b44209a7211b8f004c7386
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:57
+#: d0d9f6c8978e4308812a3e997d344985
+msgid "Segment Tree Structure"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:59
+#: 6a0e1b124a184e21acb7ded421ed4fc9
+msgid "A Segment Tree :math:`T` for an array :math:`A[0..n-1]` is defined as:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:61
+#: 3fd0ca454d724bc7836e73325766c4d0
+msgid "**Leaves represent array elements**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:63
+#: 56cb3f8b08c94aa887ca5863cf5d4daf
+msgid "\\forall i \\in [0, n-1]: leaf_i = A[i]"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:67
+#: ade34691c99048b390bd1320e4e73e9d
+msgid "**Internal nodes represent segment results**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:69
+#: cfa07d71db9a4b56a909efcf2050e5a6
+#, python-brace-format
+msgid "node_{[l,r]} = merge(node_{[l,m]}, node_{[m+1,r]})"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:73
+#: 474982dfb3ac4762b8a6b37e1166581c
+msgid ""
+"where :math:`m = \\lfloor(l+r)/2\\rfloor` and :math:`merge` is an "
+"associative operation (sum, min, max, gcd, etc.)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:75
+#: 03bfd850ad574e92a2101068aa84a23c
+msgid "**Root represents entire array**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:77
+#: 0a8c6a6aad554e7d9e4ec74115e6777f
+#, python-brace-format
+msgid "root = node_{[0,n-1]}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:82
+#: 2ed406a81edb435a99be357acca40d16
+msgid "Array Representation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:84
+#: f218f12404cc4c01a09e289100976405
+msgid "Using 0-indexed array with size :math:`4n`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:86
+#: b1c1a205b1da4cfe825e4429c3a38bf7
+#, python-brace-format
+msgid ""
+"\\begin{aligned}\n"
+"\\text{Node at index } i &: segment_{[l,r]} \\\\\n"
+"\\text{Left child} &: 2i + 1 \\\\\n"
+"\\text{Right child} &: 2i + 2 \\\\\n"
+"\\text{Parent} &: \\lfloor(i-1)/2\\rfloor\n"
+"\\end{aligned}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:96
+#: 7639343d1e51472c96088f416b37d97d
+msgid "Tree Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:99
+#: 46fb2b40f9cf4edf83c3c14032794fcc
+msgid "Height and Size"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:101
+#: b0e6f9190bf04e129f21c42ce85caaa5
+msgid "For an array of size :math:`n`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:103
+#: ed0f7714172840fc82d1b9a87decc598
+msgid "**Height**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:105
+#: 2425673db0964cfc84e53cece0b70e75
+msgid "h = \\lceil \\log_2 n \\rceil"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:109
+#: 02d59be71c7744dba9216b2f6a8e6918
+msgid "**Number of nodes**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:111
+#: eb660828d990426bbbdcb2f1661d576b
+msgid "nodes \\leq 4n"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:115
+#: 841fba334f9c4933a774c5999baca63c
+msgid ""
+"**Proof sketch**: Complete binary tree with :math:`n` leaves has at most "
+":math:`2n-1` nodes. We allocate :math:`4n` for simplicity and to handle "
+"non-power-of-2 sizes."
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:117
+#: 8db6ce91be804b398dfe5750fa5cac4c
+msgid "**Leaves**: Exactly :math:`n` leaf nodes (one per array element)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:120
+#: 3ab52e57083f40c5b9934c3f457f6864
+msgid "Range Coverage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:122
+#: 562f81eae59340c2b6399ad86af7ae31
+msgid "For a node representing segment :math:`[l, r]`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:124
+#: bc371cd2bcc84e9aab3638a98140d74e
+#, python-brace-format
+msgid ""
+"\\begin{aligned}\n"
+"\\text{Segment length} &= r - l + 1 \\\\\n"
+"\\text{Middle point} &= \\lfloor(l + r)/2\\rfloor \\\\\n"
+"\\text{Left child} &: [l, mid] \\\\\n"
+"\\text{Right child} &: [mid+1, r]\n"
+"\\end{aligned}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:134
+#: c8b1f90b03544f24b9f841576caebac9
+msgid "Query Decomposition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:136
+#: f815650baf3b4eb48e61916789774473
+msgid ""
+"Any range :math:`[L, R]` can be decomposed into at most :math:`O(\\log "
+"n)` disjoint segments:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:138
+#: a4abee74c781497c8344f158143329c8
+#, python-brace-format
+msgid "[L, R] = \\bigcup_{i=1}^{k} segment_i, \\quad k = O(\\log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:142
+#: 09ebb6625abb4067a561bedad9d8b374
+msgid "This is the key to efficient range queries!"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:145
+#: 9c9b175e8973433d9ae9403f4dcef11a
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:148
+#: 943d289195274922b63c1329445f9c33
+msgid "Abstract Data Type"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:173
+#: 27b88274a2ef473d88ecd2863645a0c1
+msgid "Build Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:175
+#: 6585862c793d40fa94704a7541f12843
+msgid "Bottom-up construction:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:216
+#: 17bdf5755def4f6bab0cde8390af8e29
+msgid ""
+"**Time complexity**: O(n) - each element processed once **Space "
+"complexity**: O(4n) = O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:220
+#: 3b38e3fd3ab145fcba08394899ae623c
+msgid "Query Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:248
+#: 9100b56a6e9d4807aaed418523021174
+msgid "**Time complexity**: O(log n) - at most 2 nodes per level visited"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:250
+#: 87009485328b4f59943d7bfe33af01a3
+msgid "**Visualization**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:263
+#: 21c6eda0175141bab828168ca70d34c6
+msgid "Update Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:265
+#: 1dcdcd9a284b44e18c388748f66a01e7
+msgid "Point update (single element):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:295
+#: d71bc1970efe475c8d53ef3ac827a883
+msgid "**Time complexity**: O(log n) - one path from root to leaf"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:298
+#: 46ac39e37a1545d48783040bb1a8ff30
+msgid "Lazy Propagation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:300
+#: 0244ebe7818b449fade38c211f9eb3c8
+msgid "For range updates, use lazy propagation:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:345
+#: b81f3c951f3048f6b6b04f64b216171d
+msgid "**Time complexity**: O(log n) per range update"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:348
+#: 2cba858c2fa643fc979506fb3d6ed243
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:351
+#: 1051f685f2184636ae9f9223f012df44
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:357
+#: e2e0b897ed3d45f799d776ade144359c
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:358
+#: ecf507c795ba479da114e0050ed2ea26
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:359
+#: a33a0ad5720743e79a837a6804be702f
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:360
+#: ec9787a8da4e4ad386aeec27a215d05b
+msgid "**Build**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:361
+#: ../../source/guide/tree_structures/segment_tree.rst:376
+#: ../../source/guide/tree_structures/segment_tree.rst:826
+#: ../../source/guide/tree_structures/segment_tree.rst:829
+#: ../../source/guide/tree_structures/segment_tree.rst:830
+#: ../../source/guide/tree_structures/segment_tree.rst:831
+#: ../../source/guide/tree_structures/segment_tree.rst:836
+#: ../../source/guide/tree_structures/segment_tree.rst:841
+#: 455415aed8a447aab4eadc9c79367417 58f89206d69342debb6143244be75cd8
+#: 6b43c15834294b999dbecea2fe1ab8fe 88e764d31f3549ee9e380b0615acaf4f
+#: 89441cbadbad46108a886a5733969340 90715390af1d48dc95c1fefeb20d2f3f
+#: d4b9cda00e7e411494ea005fea24fd54 fcf637499a6944629206ccbd4635360b
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:362
+#: 1c6240e8e1c74207ae6b53d6fe4ddc9d
+msgid "Bottom-up construction"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:363
+#: 368576efe48142d4885db67821dee23a
+msgid "**Query range**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:364
+#: ../../source/guide/tree_structures/segment_tree.rst:367
+#: ../../source/guide/tree_structures/segment_tree.rst:370
+#: ../../source/guide/tree_structures/segment_tree.rst:823
+#: ../../source/guide/tree_structures/segment_tree.rst:824
+#: ../../source/guide/tree_structures/segment_tree.rst:833
+#: ../../source/guide/tree_structures/segment_tree.rst:834
+#: ../../source/guide/tree_structures/segment_tree.rst:835
+#: 2b487aa4ea1b46c79d70339d400db223 3937493b6e7e47f2aa8fd116767a9656
+#: 3fc5e0b18bf345f9bd8250e3834b1fb7 46daca1f468841b7b3307a08fa2b2a5b
+#: 946fc914b6394edd87e8cce3f1bdc2bb d27a32614b8b4f519b6bc122a68b5235
+#: e7ddab7fec8a4535864aa22a3e9526e2 f46f9c8e26924d40a3ef168773795691
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:365
+#: b84cc3fae79641cd8deb179e3b9422d0
+msgid "O(log n) segments"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:366
+#: f89035177a884b0699c2df4d5e4efbbc
+msgid "**Update point**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:368
+#: 7f941a6094224073a300cf78dddf28b4
+msgid "Path to leaf"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:369
+#: 60b98201e0814fbda1df2e0ce9547612
+msgid "**Update range (lazy)**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:371
+#: 6461f97ea67f4e4ea8a077653fcee797
+msgid "Amortized"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:372
+#: 2c28350be7144f0b9e3231a5b350b3bc
+msgid "**Get element**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:373
+#: ../../source/guide/tree_structures/segment_tree.rst:828
+#: ../../source/guide/tree_structures/segment_tree.rst:839
+#: 7f300a4501fc44b1977f1fb79eb526af 928f0acdfea940e1ac67d3e3c83c6450
+#: f42ffc00b8704e3398990c9abe4bbd25
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:374
+#: 5bf993606a5d46a2a4d087e6f298f907
+msgid "Direct array access"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:375
+#: 9277459360d1468db017ad21f6e65a86
+msgid "**Space**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:377
+#: 3da1f55920ed426299d500ad9d4ef07d
+msgid "4n array storage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:380
+#: 854caf0b10f7413c9585e9baf9a0690b
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:382
+#: a5f07e4158ec4860b7e092d4c67ee71f
+msgid "**Tree array**: 4n elements"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:383
+#: cb31752b10ef49e79b585fc8257e1348
+msgid "**Lazy array** (if needed): 4n elements"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:384
+#: 24f35f8d31d448c998d52a49057e514a
+msgid "**Total**: O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:387
+#: 2593a86fc6d4446c91bb4736cb17698e
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:390
+#: c008bbaac2974915872451683b502cda
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:401
+#: 5b59a2ace9b148d2965a9dc4699139cf
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:404
+#: c4fd5de1e5bb4c4abd6ece1dd8309ef6
+msgid "Range Sum Queries"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:426
+#: b79df9ca8b134014b10cca6d6a4d107c
+msgid "Range Minimum/Maximum"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:444
+#: 032f4b4c6718400aae1efef436f6d0e2
+msgid "Custom Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:462
+#: 9e27645fb4914d05811bc75912ff2bda
+msgid "Array-like Access"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:478
+#: be4e2e27c5c64ab8b8000809c5d35f52
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:481
+#: 721c67e0809d41219f134860a6b50abf
+msgid "Application 1: Range Statistics"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:483
+#: 59662a50c8534a3896009b2f3a67012d
+msgid "Statistical queries on data streams:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:537
+#: ff83efc788e64e90b6cf666d4ac744a0
+msgid "Application 2: Hotel Booking System"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:539
+#: de13dd1fdf494f9b9d1947a634942b17
+msgid "Track room availability:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:612
+#: 8832d18ec24d44aba9f9fd0c38367833
+msgid "Application 3: Stock Price Analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:614
+#: 962d547aa82d4a3988e4ab2c0ee59e40
+msgid "Technical analysis on stock prices:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:695
+#: 4160b5c0b075490c885670736ee41a61
+msgid "Application 4: Leaderboard System"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:697
+#: ad291f298697444fb45d3166abdd3d20
+msgid "Gaming leaderboard with range queries:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:758
+#: c145b20f0c9648488abf6e76bb949843
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:761
+#: 27c6a1a0d9054f8795f2a8b0f277d080
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:763
+#: d831e2f583944d62a0cafaf8e92f2c17
+msgid "✅ **Use for frequent range queries with updates**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:772
+#: df831b08b9d44651a00c9fda1fc0c10a
+msgid "✅ **Choose appropriate operation**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:779
+#: bfed8318e6b74ba197b0a9c641999668
+msgid "✅ **Consider lazy propagation for range updates**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:787
+#: 09a8c623e5ba4c32a7a34daa4e07ef87
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:789
+#: fb4d7102702c4bb984bfb20400868f48
+msgid "❌ **Don't use for static data with no updates**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:796
+#: bbd99300cef3498f957b145b831cecbb
+msgid "❌ **Don't use for non-associative operations**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:803
+#: aa130733bc984cdd964fd88605b6b805
+msgid "❌ **Don't forget 0-indexing**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:811
+#: 1311ac680e084e0a8c9b112a4379d52f
+msgid "Comparison with Alternatives"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:817
+#: 60adf8ae2f2b4e8eaae9051f525cb1db
+msgid "Structure"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:818
+#: 0d3ebed7e8994542b3f6abe6ebf52fb8
+msgid "Range Query"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:819
+#: c71c6f2c70364b3b9b54cfae5896da45
+msgid "Point Update"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:820
+#: a4496460d8c64261a366086dbc70cf9f
+msgid "Range Update"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:821
+#: 4e5fe84e1cec40088520fb4a63771622
+msgid "Space"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:822
+#: e6ff5a6e8730488dbc3fc7ee714be99a
+msgid "**Segment Tree**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:825
+#: 64368068d02147b2bd72e8b25ef27292
+msgid "O(log n)*"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:827
+#: 8da136b9fa004cf2a45cb7574312df66
+msgid "**Prefix Sum**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:832
+#: 2b9c0e749c1a4f6fa00a005b19f8b2a1
+msgid "**Fenwick Tree**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:837
+#: 78a714d2674c47769f768939f9a5f9a2
+msgid "**Sqrt Decomp**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:838
+#: ../../source/guide/tree_structures/segment_tree.rst:840
+#: 300499ea3cb84dffae9c0724f3bbc830 417fc43777dd42dda035cd1b650bfb4f
+msgid "O(√n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:843
+#: 2480ce4fa48847f78669e7c116f97d49
+msgid "\\* With lazy propagation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:846
+#: 3a3f4f11a1a749579622de451af62352
+msgid "When to Use Segment Trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:848
+#: 5b06906aef3f45299fa82ddab87f7247
+msgid "**Use Segment Tree when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:849
+#: 7a45b6a3352b41a3b561f49cb38204df
+msgid "Need both queries and updates"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:850
+#: b1328169c4ae416b971c736776548cdf
+msgid "Operations are associative"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:851
+#: 185d45dbe9574e9a9f7daf0893d545a1
+msgid "O(log n) per operation acceptable"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:852
+#: 91f63217e2124ce3b0c48cf9723c0639
+msgid "Various types of queries needed"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:854
+#: 9c2f123c127145b480ca5818732cfba9
+msgid "**Use alternatives when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:855
+#: c44a5f19cff94a91b3b5d89b8c8ddd6e
+msgid "Prefix sums: Static data, only range sums"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:856
+#: 0a570e4723494008ba0227d9a378fc88
+msgid "Fenwick tree: Only sum operations, less space"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:857
+#: 950276f03c8042e1ad9af7489c5b458c
+msgid "Sqrt decomposition: Simpler implementation needs"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:860
+#: db1a145ae26649ada51503e29c5c3127
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:862
+#: 20860472b16c45b892cf09a5e2934174
+msgid ":doc:`/api/tree/segment_tree` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:863
+#: 7052677827a8427e9b866a901978d246
+msgid ":doc:`binary` - Binary tree basics"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:864
+#: c255851b2ea84db09726f4ccd5294bbc
+msgid ":doc:`heap` - Priority queue structures"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:867
+#: 71463c73015d4a77a39b44008d325bc6
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:869
+#: c78bcbb2ee7d494d82ca010404eaeb7b
+msgid ""
+"Wikipedia contributors. \"Segment tree\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Segment_tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:872
+#: d3cda2322de84022a16465b93db96d57
+msgid "Overview of segment tree variants and applications."
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:874
+#: da9b4683dc3f48e1938a7bef0e1fc4a1
+msgid "Halim, S., Halim, F. \"Competitive Programming 3\""
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:876
+#: feca4c2f40ce4bb7ab3719ca95a08dc3
+msgid "Comprehensive treatment of segment trees for competitive programming."
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:878
+#: 407bdc1a429d4225824c2bd76508d5a7
+msgid "Cormen, T. H., et al. \"Introduction to Algorithms\""
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:880
+#: c71a7292990449c7b77c764bfc4883d7
+msgid "Related interval tree structures."
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:882
+#: 0f62de585c56436cb05a5fc873c1ab79
+msgid ""
+"TopCoder. \"Range Minimum Query and Lowest Common Ancestor\" "
+"https://www.topcoder.com/community/competitive-programming/tutorials"
+"/range-minimum-query-and-lowest-common-ancestor/"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:885
+#: d2ec2fe30b664f469db0c005db72bb89
+msgid "Tutorial on RMQ problems and segment trees."
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:887
+#: 6983c4c0c08d48ff8ac547ab466bba70
+msgid ""
+"CP-Algorithms. \"Segment Tree\" https://cp-"
+"algorithms.com/data_structures/segment_tree.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/segment_tree.rst:890
+#: 3de7ca0c06254bd2b5b7ff459b664533
+msgid "Detailed segment tree tutorial with code examples."
+msgstr ""
+

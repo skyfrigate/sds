@@ -1,0 +1,1216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/interfaces.rst:5 c3c6f093d6934aa5b57683533ec82b0d
+msgid "Tree Interfaces"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:10 e1d7bc272218429f9b4a21d6a210da50
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:12 5eab6279899048609250bccafd323360
+msgid ""
+"This module defines the abstract base classes (interfaces) for all tree "
+"data structures in the SDS library. These interfaces ensure a consistent "
+"API across different tree implementations and provide a foundation for "
+"polymorphic tree operations."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:55 e3f83ddd6d3a44fe9a86185a6768bc5f
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:64:<autosummary>:1
+#: b35b7cb325be4b6da61d4fe271fa424a
+msgid ":py:obj:`AbstractTree <sds.tree.interfaces.AbstractTree>`"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:64:<autosummary>:1
+#: 1e763f5b5fc142629d8fb44501c4d0ec 67f416e7e5874902af3dd178b7684770 of
+#: sds.tree.interfaces.AbstractTree:1
+msgid "Abstract base class for all tree structures."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:64:<autosummary>:1
+#: a31d384abab4486a9384190cc445ba46
+msgid ":py:obj:`AbstractBinaryTree <sds.tree.interfaces.AbstractBinaryTree>`"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:64:<autosummary>:1
+#: 607de6022cf54f5dac1c6f201981bb92 92c50e3aeca643e78d66fb23ec4f6aa2 of
+#: sds.tree.interfaces.AbstractBinaryTree:1
+msgid "Abstract base class for binary tree structures."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:64:<autosummary>:1
+#: 3350b1fb6b41469589854d446f6c4f47
+msgid ":py:obj:`AbstractSegmentTree <sds.tree.interfaces.AbstractSegmentTree>`"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:64:<autosummary>:1
+#: 7efa727781904062bda46cc31d231fbe ce12454be12f4915aa0dd8a0929281c5 of
+#: sds.tree.interfaces.AbstractSegmentTree:1
+msgid "Abstract base class for segment tree structures."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:66 c3f2f9e4d72a4fd88fd4adaced1c07eb
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:69 07a0e972cb964634b69533f8fe08d2b2
+msgid "AbstractTree"
+msgstr ""
+
+#: 1dc5d9b0877b42f18202038634caf19b bba72985136f44fc8dfe959e488ab8b2 of
+#: sds.tree.interfaces.AbstractSegmentTree:1 sds.tree.interfaces.AbstractTree:1
+msgid "Bases: :py:class:`~sds.core.interfaces.Collection`"
+msgstr ""
+
+#: f0960163e8bb44448d2fe053b0ff8ad4 of sds.tree.interfaces.AbstractTree:3
+msgid ""
+"Defines the common interface that all tree types must implement. This "
+"includes operations for tree manipulation, traversal, and queries."
+msgstr ""
+
+#: e4dcbe2244f0457aa190cddc7833e6f3 of sds.tree.interfaces.AbstractTree:6
+msgid ""
+"All concrete tree implementations should inherit from this class or one "
+"of its subclasses."
+msgstr ""
+
+#: 18797e4ab1044b28949ea2d2447eed49 of sds.tree.interfaces.AbstractTree:11
+msgid "The number of nodes in the tree (read-only property)."
+msgstr ""
+
+#: 5f30a6e9ab0b49bab20741b906a8bca7 905ac19ef45b4af5b5106ea17b90c75b
+#: c56855331fd24b119ff93bb28f1302d3 of sds.tree.interfaces.AbstractBinaryTree
+#: sds.tree.interfaces.AbstractSegmentTree sds.tree.interfaces.AbstractTree
+msgid "type"
+msgstr ""
+
+#: 37c3c939fc464734bba8bcd58e9d8bbf d7f1104b6fc5427c8580925762010bd5 of
+#: sds.tree.interfaces.AbstractSegmentTree:16
+#: sds.tree.interfaces.AbstractTree:13
+msgid "int"
+msgstr ""
+
+#: 099d4f19ca3849868919ef166d3b0606 53fe48c8483148139c05673003cfb780
+#: ef07a8a9a41146f191aa9062bf464254 of sds.tree.interfaces.AbstractTree:17
+#: sds.tree.interfaces.AbstractTree.height:1
+msgid "Return the height of the tree."
+msgstr ""
+
+#: 18f8330d0c884d0e880a0c58ea41fbf5 9118666cc51645af90629cf28c5fa862
+#: 912a25ed98be4b048f124331518414fc d9d84cf94b2f483c8304908d24b77932
+#: ddb3ef890dd14859bfdb7865a68ec83b of sds.tree.interfaces.AbstractTree:21
+#: sds.tree.interfaces.AbstractTree.insert:1
+#: sds.tree.interfaces.AbstractTree.remove:27
+msgid "Insert an item into the tree."
+msgstr ""
+
+#: 0ca12967114d46f69538136065680ad2 596729c913cc45b0a6612571cb79570e
+#: 8994e099771846bf9b2f59c1757415a4 of sds.tree.interfaces.AbstractTree:25
+#: sds.tree.interfaces.AbstractTree.insert:27
+msgid "Remove an item from the tree."
+msgstr ""
+
+#: 46d4497fe7cf4bc8bbc58084a7e4dc6f eb24caefc887480698b4a93e9b89c6be
+#: fbda8163852341c294b71233d075f9fa of sds.tree.interfaces.AbstractTree:29
+#: sds.tree.interfaces.AbstractTree.search:1
+msgid "Search for an item in the tree."
+msgstr ""
+
+#: c1e8301486ed46aab0f4db38c54d8889 of sds.tree.interfaces.AbstractTree:33
+msgid "Remove all nodes from the tree."
+msgstr ""
+
+#: 2eb719d5dffd4479bd34ae6ddbe9bbd9 2ee035b8a46949c2a58ce4113ac797a3
+#: 3a52b9c3ca284cf98d5e931ff0afb631 3e6e7d2be1c74b54882995cfe88346f3
+#: 3fc01a5a9cb4454eb3a9af9b7297afc2 459db8ccef0f4419ba8635eb05b247d1
+#: 5275976af02e452b8ab3718bc35ea12f 57615842ec7449828139fff0afddeeee
+#: 576e617f57994c0a8cca8a3b0d568964 5c74437c73254b1e99067e327f06b42e
+#: 701e85c94b5f4cce99be3606642d0305 71f95e535dc6483fb6d3ae76d2fcb424
+#: 729e486606624b63b20b124604491461 730d3346d4a44d798a67d604ea43e967
+#: 7eb82251d0e1435d908e2487c7dc8e2f a15328b3dedb457b8c2c18ed5c2b456d
+#: a17c13df2411418bbef682b426781e61 a40de990b8a34caabf4daa789ba56115
+#: a8114a0d5186495ebca1d6e38dc747bf adc572ef1fa54b86ba8a608e3e647e81
+#: c94a7d7f5efc4f9f99838c17292f784b e50e0927c2d841999eb94c2443a783bb
+#: eb111fe6b9914d81b9ca155e5df27ded ecc88ccbd20c414c96735d4b8184dc16
+#: efec5fe260584056894c14fa997ba3e7 f63964aaaac24b1da6f109e844f5b462
+#: fb45eb53b1ff49b6828df9a050da0dac of
+#: sds.tree.interfaces.AbstractBinaryTree:29
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:12
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:8
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:12
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:12
+#: sds.tree.interfaces.AbstractBinaryTree.root:6
+#: sds.tree.interfaces.AbstractSegmentTree:35
+#: sds.tree.interfaces.AbstractTree:36
+#: sds.tree.interfaces.AbstractTree.__len__:6
+#: sds.tree.interfaces.AbstractTree.height:9
+#: sds.tree.interfaces.AbstractTree.insert:9
+#: sds.tree.interfaces.AbstractTree.is_empty:6
+#: sds.tree.interfaces.AbstractTree.remove:12
+#: sds.tree.interfaces.AbstractTree.search:9
+#: sds.tree.interfaces.AbstractTree.size:6
+msgid "Examples"
+msgstr ""
+
+#: be484e9f93704a55893bd37ad60adac7 of sds.tree.interfaces.AbstractTree:38
+msgid "Any concrete tree can be used polymorphically:"
+msgstr ""
+
+#: 006c0d25435c49b5a3405f9edf1b12f8 02e108d76f83423db4d62691c95042ae
+#: 11af7a4e40104c1eb83529f5296d24d7 1edc43e649d24267a803fc65d4007299
+#: 2302ae1f72c5411b9b4d55a076dfcf1b 2461910e07d74c66a5cd497f859972cf
+#: 2937f37ccfca4de691ed359a3b5b9838 2f814099611f4c10ada21502051196d7
+#: 3788a8478da2480cb25a919c3f4d218b 3973b5ea4feb48c7a7f07494fec9fbc1
+#: 56b2086a269848abbc7c023e435a70a0 59e3ed29c7a64237a122fe159d5abe3f
+#: 5edb07461519469e8f29b956dab04ffc 651d38cc048b49e7a491105503958f96
+#: 660773545afc4a7cb7392d4ece95599c 7790c49cf90b4cdda9747e73a0454563
+#: 77bae20d506e4eddb5b27de9bbb61fce 8642bf8eb7f0422d850db6d29cc90285
+#: 8e2687d1275945ddb9e36b94ceee3537 948b04166c35479aba383d1ad039f98d
+#: 981c636f462148238d6ede48ce3890cb 9e3365ce9ac446ebbf70b8d616849406
+#: a209cb30849a47fa834e9e844e157e56 b330be9728ee4b068d018a0e26674aa4
+#: bad3b63e7d4e4bf1af70c11631a064d5 bff419263cc34b40b6275dbd7ab41d1e
+#: c7b93cc61f3f415cb41ecc5ed83c371d d15be3d8b2c7491d95679826fa41bee6
+#: d672f1e80647404186f635bbddd9eb57 eac29bb3e8c446ffae53bb7c926c3e09
+#: ec82a66f30964ed9aa8965d71e31fb34 ed2c849253b04041a109a3031e6248d9
+#: f4c074a36e1c4786a7eec7a8293ca4ae fd3a81408efe4c1ea29464d978b3a24c
+#: fff310dbe6734c4b9a8fc432ff390f79 of
+#: sds.tree.interfaces.AbstractBinaryTree:38
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:21
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:17
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:21
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:21
+#: sds.tree.interfaces.AbstractBinaryTree.root:15
+#: sds.tree.interfaces.AbstractSegmentTree:47
+#: sds.tree.interfaces.AbstractSegmentTree.get:11
+#: sds.tree.interfaces.AbstractSegmentTree.query:13
+#: sds.tree.interfaces.AbstractSegmentTree.to_array:6
+#: sds.tree.interfaces.AbstractSegmentTree.update:10
+#: sds.tree.interfaces.AbstractTree:44
+#: sds.tree.interfaces.AbstractTree.__len__:15
+#: sds.tree.interfaces.AbstractTree.height:22
+#: sds.tree.interfaces.AbstractTree.insert:17
+#: sds.tree.interfaces.AbstractTree.is_empty:15
+#: sds.tree.interfaces.AbstractTree.remove:20
+#: sds.tree.interfaces.AbstractTree.search:18
+#: sds.tree.interfaces.AbstractTree.size:15
+msgid "Notes"
+msgstr ""
+
+#: d4cc40caf51647b6adf3913bfcf5ea32 of sds.tree.interfaces.AbstractTree:46
+msgid ""
+"This class is abstract and cannot be instantiated directly. Concrete "
+"subclasses must implement all abstract methods."
+msgstr ""
+
+#: 838a1ca46dbe43cd8d216be600afd909 of sds.tree.interfaces.AbstractTree:51
+msgid ":obj:`AbstractBinaryTree`"
+msgstr ""
+
+#: 0db9a8fafefc40f58da53a1ded9cf06b of sds.tree.interfaces.AbstractTree:52
+msgid "Interface for binary trees."
+msgstr ""
+
+#: a38424bbe92941e597ec5a081d4ad438 d077bb097e714318a974be83d5ad22ea of
+#: sds.tree.interfaces.AbstractSegmentTree:59
+#: sds.tree.interfaces.AbstractTree:54
+msgid ":obj:`Collection`"
+msgstr ""
+
+#: 9547e2ff3d574fbbb28baa3e1a89a648 adc8549744fa449f9cc5bef3595d5ae8 of
+#: sds.tree.interfaces.AbstractSegmentTree:60
+#: sds.tree.interfaces.AbstractTree:55
+msgid "Base interface for all collections."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:78
+#: ../../source/api/tree/interfaces.rst:107
+#: ../../source/api/tree/interfaces.rst:131 78c55141efad4dd292e8b40fc4af7194
+#: 89bf6b37aeea4d77beb7bc708c68d25d e53b71632ce04509ab5176fc52166b0f
+msgid "Constructor"
+msgstr ""
+
+#: 36d54a08ed034b928d689b0ad65c26ab 49babf8aacec4f4f894584d2221db9a7 of
+#: sds.tree.interfaces.AbstractTree.__init__:1
+msgid "Initialize the abstract tree."
+msgstr ""
+
+#: 63721bb4a86541fbabf42f22af6c3991 dfab27751733498d9680a886f08680f7 of
+#: sds.tree.interfaces.AbstractTree.__init__:3
+msgid ""
+"Subclasses should call this via super().__init__() and then initialize "
+"their own internal attributes."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:82
+#: ../../source/api/tree/interfaces.rst:111
+#: ../../source/api/tree/interfaces.rst:135 5478f9e43c8a4ce888253b76c95b8fc3
+#: 8531a716eb7c4563a3e5069233d61400 a1814729e6204fe9921a27b1e263cc69
+msgid "Properties"
+msgstr ""
+
+#: 1b3e0025e5f64c1cab0405a69511f799 d254d9f6e03d4529bc4f9457ee031c28 of
+#: sds.tree.interfaces.AbstractTree.size:1
+msgid "Get the number of nodes in the tree."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst 09f538ef0bc44e8cb20703e4e460f827
+#: 19c827602fa04a85accbd68c854dfaed 232994b279c148c0ada7093b5bfe2ad6
+#: 291289a66f0a43dcbab2f5fa4e376c99 2de6e89f465043d18b08066e99860ea3
+#: 3d5c2e036332489e863816f6a49059f2 54fe5c45121f4df7a6d6ce9c20ba9dfe
+#: 5cc228c62ec34f26b9ea679dd642ab61 6817632adff4471ba121f936df1b364e
+#: 78250244baf542d69e6dcae19b512ea4 800d94f6369f4d4ab5853871cc1bc444
+#: 86445a3a793949b49e587f5a30d463d9 93fa0640ed794bb6ad86a5e3036736c7
+#: 98a6e4b2ef7b41529a783c34d3ddb5e5 9e93862aa2024d199bb9a225d1fe4308
+#: 9ea62d4600244a17a91fea99d8592a5c a11788f57e8941a3a93347f0a3d8d4c6
+#: ad806de5869543c688f15c7fa63691f3 b28abacaacfd499ca18f5bef36af2ea4
+#: b5f9b60ca893445183e67df321534f61 b89f55ff040f4db8a1678a7123afe17a
+#: b923d950106d4a78be429b4cff2bff62 e29d6fba91154a0ba3d522f3200152c2
+#: fdf1682d92d44de39d58a5adcf6dadfa
+msgid "Returns"
+msgstr ""
+
+#: 5bf06a800d254d978b9bc52e1636f0b7 fe1499de3a954b449be24c84d8b020d0 of
+#: sds.tree.interfaces.AbstractTree.size:3
+msgid "The number of nodes currently in the tree."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst 10c6cceaa8d442a5a4153f6f92fb97ce
+#: 252979521a344adaae321d62b798bb26 3ab962bf7ad24420a10c4bb40a178175
+#: 49e8af8efd8943f6be1218ef2006491e 4ca81aab153a44fcaad6a4623177a5a9
+#: 4f7ab1fd29a64c2da2085dd572325f25 506369f9039248b28653eca823de2406
+#: 50edf475bd134ce59b35b4620db12f6e 529a7110e9194314a9277ae2cbc0d521
+#: 566a503234314246ab08dabff3315baa 57bc38f9269b4521a863d28c7d810db5
+#: 60e09a9bc34c4360a3df9ecef5c2556f 686983d2155c4253a6e90f58231ef193
+#: 75368ae4b36544bc8bb4c25154167206 79fbbe0b842a44a1b1a50b87cf3b89b9
+#: 7d276d112a97400e8529cda82e6a0d3e 9c1af5bf63b440169eb4e332765b40c8
+#: a4e647c5b4794eb0970be712d616d13e abd0c79b9f8b4ed8aeefa8f0b33d4e6a
+#: c824d663f4754630926e10f79df3fa65 c9cc459de78041c794a491fd8c24c461
+#: d138b80715f74f379776538f8abd888b d67f7c2b1763418289ab861049a84b09
+#: def10c1762ab408d8ffa2092301b5fc5
+msgid "Return type"
+msgstr ""
+
+#: 142b581a42fa44a5b51f21ebff04cc95 1750a93c530e4b02b56dc21f99213db7
+#: 25dcbdcf311447b1ab5a86073a4e623a 4a9324e0d2954ba296a6dbe84d13a4ea
+#: 4b1d9cb22adf4641b85db8f2828c05be 58aa3aef2e7346e0943b9f43610718f1
+#: 9441920143f1481580185d6dd294b799 cf6b4ad73e4a4f78b0c50ab3477a2d9e of
+#: sds.tree.interfaces.AbstractSegmentTree.get:13
+#: sds.tree.interfaces.AbstractTree.__len__:17
+#: sds.tree.interfaces.AbstractTree.is_empty:17
+#: sds.tree.interfaces.AbstractTree.size:17
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 04dd842042e743608957a11ae9761308 377286a33d924de6ae703d266f3bca70 of
+#: sds.tree.interfaces.AbstractTree.size:21
+msgid ":obj:`__len__`"
+msgstr ""
+
+#: 184c75f78588408c9c161980b8f1a05f 27fac9ea177d4b7db4449f687ff160f5 of
+#: sds.tree.interfaces.AbstractTree.size:22
+msgid "Returns the same value."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:86
+#: ../../source/api/tree/interfaces.rst:115
+#: ../../source/api/tree/interfaces.rst:139 05cc6b2e65684206a1a8ac6213cf0bae
+#: 0d13224b8af245d2ad30ce2e6b6149a5 54fe750541ab4a4e802ba53b25b15b2d
+msgid "Abstract Methods"
+msgstr ""
+
+#: 6ffe7ff9f4254cdb86c082ff1cac6fa0 9c09804e90514fad9218d7aba46504e1 of
+#: sds.tree.interfaces.AbstractTree.height:3
+msgid ""
+"The height is the length of the longest path from root to a leaf. An "
+"empty tree has height -1, a tree with only root has height 0."
+msgstr ""
+
+#: 2d26a2e384a04607b4ce0b96a3cc5e80 87b3d3ea9a814bf894c3cd7ee91ace19 of
+#: sds.tree.interfaces.AbstractTree.height:6
+msgid "The height of the tree, or -1 if empty."
+msgstr ""
+
+#: 7f82749b843546ebbf8a63e68be04038 c2a7021d016c4264bea35b40b9be30a2 of
+#: sds.tree.interfaces.AbstractTree.height:24
+msgid ""
+"Time complexity typically O(n) for unbalanced trees, O(log n) for "
+"balanced trees if height is cached."
+msgstr ""
+
+#: 0f6707d2b620470696e659bcf959c426 c6aa557ecf234e37bb331543f5da56e0 of
+#: sds.tree.interfaces.AbstractTree.height:29
+msgid ":obj:`size`"
+msgstr ""
+
+#: 32b499c3194f424a9f91bc2f9cd098a8 6dc04163cc1e41e882b2cf5c8551d00b of
+#: sds.tree.interfaces.AbstractTree.height:30
+msgid "Get the number of nodes."
+msgstr ""
+
+#: 423b0ad4fbff449597219c30fdac1f99 8251be9726d74dc0898ef39626947c5d of
+#: sds.tree.interfaces.AbstractTree.insert:3
+msgid ""
+"The specific behavior depends on the concrete tree implementation. For "
+"example, BST maintains order, while simple binary tree may not."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst 0e576c9be01046a2866d146678ccdbd2
+#: 505a4c350bba4d91abe981486fa9c3ce 63a9b3a3406f4a5fa37b5f92d4761214
+#: a148d5257afd45f8949e430c6f697883 a3aa7b988d8d4a158fa0a14211e3debe
+#: ab6febc9431a423c871f9a89f44c27ed c15d487b75b64d6abf3c469cd135e580
+#: c169055a566d4e2e9c72c4db9e398042 c23d94cdb2f247edbb2c1d4a4860d04c
+#: d3f7efe6f2264fe08e15a4b707058252 d9d5e74510b441a5b75a3c35b624e9b7
+#: e81dec4b28884322835f2f0e6bd43c80 e97d26209bf446c0a4bb26c2f318b710
+#: f14b45009e3944739cd547cce3fda6d2 f672537a31044a11b7a26f929196acc0
+#: f72eb953860a40c6b869e5658b0319f3
+msgid "Parameters"
+msgstr ""
+
+#: 8e795cded23a4a1cb7cd401680344063 eb38229f6be64a24a023e22f4748490b of
+#: sds.tree.interfaces.AbstractTree.insert:6
+msgid "The item to insert."
+msgstr ""
+
+#: 878af34d9ebb4f23872c40ec34387981 9ef5b1b476624f00b4dc75dc0294b305 of
+#: sds.tree.interfaces.AbstractTree.insert:19
+msgid ""
+"Time complexity varies by implementation: - Simple binary tree: O(1) to "
+"O(n) - BST: O(log n) average, O(n) worst - Balanced trees: O(log n) "
+"guaranteed"
+msgstr ""
+
+#: 248763ba202d4bd1ab5edf26f52b695a 78e6b78783ab4bb9929ac8ab0e79125f of
+#: sds.tree.interfaces.AbstractTree.insert:26
+msgid ":obj:`remove`"
+msgstr ""
+
+#: 6745d46421614608ac7aab0d36c7c858 cb9ecc38853f4423907166cbeda3d90d of
+#: sds.tree.interfaces.AbstractTree.insert:29
+msgid ":obj:`search`"
+msgstr ""
+
+#: 0ab507a94beb4127ba6343769f86fa24 e18b8f48cf5d4ee6943cf30b53495111 of
+#: sds.tree.interfaces.AbstractTree.insert:30
+msgid "Search for an item."
+msgstr ""
+
+#: 3279dc1cac4f472382dd288282f6b946 756be08d97ad4d17aafbb26d6ed656aa of
+#: sds.tree.interfaces.AbstractTree.remove:1
+msgid "Remove and return an item from the tree."
+msgstr ""
+
+#: 203e557e480d4efd8ca374145e40c68f 8b15bbb02fc6433e95e5350bbb54c7bd of
+#: sds.tree.interfaces.AbstractTree.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: 5291150fe82b434a9a1a61e209750a35 64225d4d51974340ab16a400884e72eb of
+#: sds.tree.interfaces.AbstractTree.remove:6
+msgid "The removed item."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst 1359b0708165440d8eae5dcb49e45c17
+#: 2500338118d444198e424cc34bdf82ef 2772cff53c164c00ad5dfaf967f25129
+#: 495d5daaef8c4ad0a0433617925fd725 5a76ba6aa30246268ad36e719e8e1172
+#: 943e116e8b3c45398cb42f76ec3fbce8 d7f3676174814f9786db09ced5b3d572
+#: ff115c6c03b84f30ab492b386ed2c601
+msgid "Raises"
+msgstr ""
+
+#: 64036f51bf3f4ddaa6fac86623435450 d7b7090053284349b888956fa63f9f40 of
+#: sds.tree.interfaces.AbstractTree.remove:9
+msgid "If the tree is empty."
+msgstr ""
+
+#: 2ff4e46066cd41df96c29572da860fc6 4aea99ce7e054be6bf4698208ddbe517 of
+#: sds.tree.interfaces.AbstractTree.remove:10
+msgid "If the item is not found."
+msgstr ""
+
+#: 02d4d637b91f4c21a8f1fc3a5b011824 1971417d133848418f9dea7037d9e17e of
+#: sds.tree.interfaces.AbstractTree.remove:22
+msgid "Time complexity varies by implementation."
+msgstr ""
+
+#: 13650c26bf2e44329bd58d2f664e51f5 aff65361b8c346acb5055c2d80dd392b of
+#: sds.tree.interfaces.AbstractTree.remove:26
+msgid ":obj:`insert`"
+msgstr ""
+
+#: 20bbf058d6f74efe8217cf2f973a0f50 254670c4288d41379047990a15431163 of
+#: sds.tree.interfaces.AbstractTree.search:3
+msgid "The item to search for."
+msgstr ""
+
+#: 007b83cf55d747bc9c8bd36b09bb40cc e4e76b70683945989b69bb65d74f5bc0 of
+#: sds.tree.interfaces.AbstractTree.search:6
+msgid "True if the item is found, False otherwise."
+msgstr ""
+
+#: 85919aa88e6d44b4b531247a70fd9ee5 d87f9c3039c2471f8e9088bbdc7619ee of
+#: sds.tree.interfaces.AbstractTree.search:20
+msgid ""
+"Time complexity varies by implementation: - Simple binary tree: O(n) - "
+"BST: O(log n) average, O(n) worst - Balanced trees: O(log n) guaranteed"
+msgstr ""
+
+#: 03736b2784cc4e508f6937504e558cb9 dafcb44174ac44fb83b50d647f7b55bd of
+#: sds.tree.interfaces.AbstractTree.search:27
+msgid ":obj:`__contains__`"
+msgstr ""
+
+#: 711424caa93147d2a095c48d2800aaae aa9a504d6c9d482dbbdfa96147b1a3fa of
+#: sds.tree.interfaces.AbstractTree.search:28
+msgid "Alternative way to check membership."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:93 cef5277fa4cf49ca8fcfa5a8df77ef5a
+msgid "Concrete Methods"
+msgstr ""
+
+#: 32e01a09335542879738d41df63059d0 3de84ac6a94241ffbc29aa73760a1505 of
+#: sds.tree.interfaces.AbstractTree.__len__:1
+msgid "Return the number of nodes in the tree."
+msgstr ""
+
+#: f05358ad34b844a3bc140626a61de91f fa82ce454dd74b38bafac801775b7460 of
+#: sds.tree.interfaces.AbstractTree.__len__:3
+msgid "The number of nodes."
+msgstr ""
+
+#: 03f6bb947711431da1589e5961617d18 4d724480a3ef41b698077d52f6be1889 of
+#: sds.tree.interfaces.AbstractTree.is_empty:1
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: b5c037e47fc44e39b3ee67d1711ae3b5 dae77265810144d0b8647fe5bac5f987 of
+#: sds.tree.interfaces.AbstractTree.is_empty:3
+msgid "True if the tree contains no nodes, False otherwise."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:98 6fed390d3e0749118ebc2202e014a368
+msgid "AbstractBinaryTree"
+msgstr ""
+
+#: c6820f4b25094920bcd24b1d7e90bb91 of sds.tree.interfaces.AbstractBinaryTree:1
+msgid "Bases: :py:class:`~sds.tree.interfaces.AbstractTree`"
+msgstr ""
+
+#: 3cc5b3169da1450e968c27d7fc63c5e3 of sds.tree.interfaces.AbstractBinaryTree:3
+msgid ""
+"Extends AbstractTree with operations specific to binary trees, where each"
+" node has at most two children (left and right)."
+msgstr ""
+
+#: b224a8534ff840619f70e0b2e6ed18d3 of sds.tree.interfaces.AbstractBinaryTree:8
+msgid "The root node of the tree (read-only property)."
+msgstr ""
+
+#: 3696b729e84d45b3bd2b63479c9a066b of
+#: sds.tree.interfaces.AbstractBinaryTree:10
+msgid "BinaryNode or None"
+msgstr ""
+
+#: 1f6e3d271cf5449f989b0f3b30e290c7 74534dabc8074e90aa31a77715fe0edd
+#: e7e742ba30bf450f87c1695f37cd0395 of
+#: sds.tree.interfaces.AbstractBinaryTree:14
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:1
+msgid "Return an iterator for inorder traversal (left-root-right)."
+msgstr ""
+
+#: 79bc11a512d74bc6a62b2b9342e6d44c 97aab54a80e44a73959cec8edcf68214
+#: ae9cb6f4a1924979a640a92630a4e99f of
+#: sds.tree.interfaces.AbstractBinaryTree:18
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:1
+msgid "Return an iterator for preorder traversal (root-left-right)."
+msgstr ""
+
+#: 264e8e5789734f278cb0ab1a16dbf8a0 2f57f6d91d7a43688828aa11a2b8665e
+#: 67795fda73764994b642a6b3af2039fa of
+#: sds.tree.interfaces.AbstractBinaryTree:22
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:1
+msgid "Return an iterator for postorder traversal (left-right-root)."
+msgstr ""
+
+#: 07a10ea2f8f34a5da9402bc681a09441 21a71a4c87a745e987881b436b959414
+#: 2326458975e4421c9a6deff18fe766b8 of
+#: sds.tree.interfaces.AbstractBinaryTree:26
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:1
+msgid "Return an iterator for level-order traversal (BFS)."
+msgstr ""
+
+#: fd68c195e1ea411a9ef33ab39d44edf4 of
+#: sds.tree.interfaces.AbstractBinaryTree:40
+msgid ""
+"Binary trees have specific traversal methods that are not applicable to "
+"general trees."
+msgstr ""
+
+#: 5b5b25fae54445caa42d188f8100de82 of
+#: sds.tree.interfaces.AbstractBinaryTree:45
+msgid ":obj:`AbstractTree`"
+msgstr ""
+
+#: 5ae6655311e44deda3a1e88b0e866159 of
+#: sds.tree.interfaces.AbstractBinaryTree:46
+msgid "Base interface for all trees."
+msgstr ""
+
+#: df1cc1b04a3b47c7a320da88a2442b2d of
+#: sds.tree.interfaces.AbstractBinaryTree:48
+msgid ":obj:`BinaryTree`"
+msgstr ""
+
+#: d09077ae71dc4c6b9501e63e9813420c of
+#: sds.tree.interfaces.AbstractBinaryTree:49
+msgid "Simple binary tree implementation."
+msgstr ""
+
+#: 0150bc582f8948ea9985b05fa124d1ca 609aeb95c3e44ab3a3b085b61f1c8848 of
+#: sds.tree.interfaces.AbstractBinaryTree.__init__:1
+msgid "Initialize the abstract binary tree."
+msgstr ""
+
+#: 0b673730972f4721a3bac9f77a06fc33 9bcef04826cf430bb0f7c7285291610b of
+#: sds.tree.interfaces.AbstractBinaryTree.root:1
+msgid "Get the root node of the tree."
+msgstr ""
+
+#: ada41c2fb0674708b66591604d78305b edd4269daba34d26bae849d566ef2c16 of
+#: sds.tree.interfaces.AbstractBinaryTree.root:3
+msgid "The root node, or None if the tree is empty."
+msgstr ""
+
+#: 2f7fd002545147e6bcf208a4e3f0003d 98daac35f0474ecebbc2f5b966c0ed24 of
+#: sds.tree.interfaces.AbstractBinaryTree.root:17
+msgid ""
+"This property is read-only. To modify the tree, use insert() and remove()"
+" methods."
+msgstr ""
+
+#: 478470efe82140c7b4f83ad39056a950 67edb7c8fda7489aab7e76284d2e0c20 of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:3
+msgid "In inorder traversal, we visit: 1. Left subtree 2. Root 3. Right subtree"
+msgstr ""
+
+#: 21db0c43d33545f6b76ca5fdd481651d 3daea0188d9a4180aa4237e7cf56c412 of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:8
+msgid "For BST, this yields elements in sorted order."
+msgstr ""
+
+#: 1a24e43e84374b4d86972733f610262f 3b9d97a3d16545c486ac01acf33093ac
+#: 4019696a0c074990aa6fcbd9f0ffa82d 44f0b734a3b2417b9aa89bcb68d7a553
+#: 692a961102a94704a1a94f55032722bc 9d0565f87ed842fc8c0154b710daf953
+#: e2d1b4990e104964884d585f7ac5eeac e4537ef9be924d25847958638835e5d0 of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal
+msgid "Yields"
+msgstr ""
+
+#: 3c72a2d8c24b41419cf92f6cadfc9c4b 408ad22b37ed4e1e8276e24b5e3f8e47 of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:10
+msgid "*Any* -- Items from the tree in inorder."
+msgstr ""
+
+#: 10ce6552b7b44098b810d0b0ad187216 e2ad734bc35f4b30b365e943ec304b7a of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:23
+msgid ""
+"Time complexity: O(n) Space complexity: O(h) where h is height (recursion"
+" stack)"
+msgstr ""
+
+#: 154d9f5837e14c00a26fe2293a167bcc df0027816c88447cb63c5e6d1050151f of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:28
+msgid ":obj:`preorder_traversal`"
+msgstr ""
+
+#: 4303384ee4f04be2a7fff7b077889c93 bdd6480d8f7c465c8a0d4a4e5704b48b of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:29
+msgid "Root-left-right traversal."
+msgstr ""
+
+#: f7fbf038ab3049d480545a5714d0512a fd8344cefefd405ba340899a3af9555f of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:31
+msgid ":obj:`postorder_traversal`"
+msgstr ""
+
+#: a32bf3064ba74d4987652fdb88804d62 b956dd3ec5d94423ac408ff1499f0e79 of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:32
+msgid "Left-right-root traversal."
+msgstr ""
+
+#: 33806206115e4ad180bafbd15c696cbb 75e3b95fd4f54f4084b9796220743b73 of
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:3
+msgid "In preorder traversal, we visit: 1. Root 2. Left subtree 3. Right subtree"
+msgstr ""
+
+#: f7a0ec03a7494b47821a330bca4fe0e5 ff74c6864a48437d8c2c06342ca90881 of
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:8
+msgid "Useful for creating a copy of the tree."
+msgstr ""
+
+#: 28e35a9d65cb4f04bbdaa976dcb306e1 6375516a11a642b281656e2fd5cdfe4b of
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:10
+msgid "*Any* -- Items from the tree in preorder."
+msgstr ""
+
+#: 099f9cb9b1644990a4d96ed6cf67caa9 3706c5de5bc143cdbc53f26c62cfa20c
+#: 3fe0482c030d40ac856b15ac44c559cd 41d5f8ac218b4d65a399fefed0cc2585 of
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:23
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:23
+msgid "Time complexity: O(n) Space complexity: O(h) where h is height"
+msgstr ""
+
+#: 0fc2535af59e4c5bad07c5a678c45b1a 2b3084130a93421e959761bc5069d8be
+#: 8de3c3ff6a694a0fbb9ecf6a674ba95c c40a1dc3627d4342afacc0cf58a050bc
+#: dfede2d40f6a4b0a981019880c407f03 e3515cce198c40488a099e8da840bce9 of
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:24
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:28
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:28
+msgid ":obj:`inorder_traversal`"
+msgstr ""
+
+#: 29c6e1e394a54b58a37ea707a24df765 86944660b2234c60a0be9169605fe1b7
+#: 8ce8d5fd3b8c4037ba9ec02b9f198032 e4d266889e65429d8ac0f1e2e1657f27 of
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:29
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:29
+msgid "Left-root-right traversal."
+msgstr ""
+
+#: a7188f8f7e554c6b80040a19f97eb75b dcc3c1e1a5af480890fdbb7cbd6e0cec of
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:3
+msgid "In postorder traversal, we visit: 1. Left subtree 2. Right subtree 3. Root"
+msgstr ""
+
+#: 059a7de4098744f7b7a9328ea0b57ec9 a0576777f0604a72bf4fc47fbd551987 of
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:8
+msgid "Useful for deleting the tree (delete children before parent)."
+msgstr ""
+
+#: 83b77a6dd71c4f11a5db14533c8273c5 a20ad197247846598d84fa8932a325ea of
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:10
+msgid "*Any* -- Items from the tree in postorder."
+msgstr ""
+
+#: 422022b340564b67bbf180ad29f90fee abdefa8bd71a4159999e23e9349a5a3f of
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:3
+msgid ""
+"Level-order traversal visits nodes level by level, from left to right at "
+"each level. Also known as breadth-first search."
+msgstr ""
+
+#: b9b8436e76ef4a0a834fce96b0e7be5c e906d2ee371648ca997587fbe6c10e03 of
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:6
+msgid "*Any* -- Items from the tree level by level."
+msgstr ""
+
+#: 783d71c4cf8b4b29ad4148ba5acbd668 f6577f8904e04ea386a82a739ee385fd of
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:19
+msgid ""
+"Time complexity: O(n) Space complexity: O(w) where w is maximum width of "
+"tree"
+msgstr ""
+
+#: 6cd1cb8cda4443458a6b34af756fa51f b9bf1af2ce8c4be1b50eda6dcf4be0e8 of
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:25
+msgid "Depth-first inorder traversal."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:122 ae7b58a151484f47a7fa254213c52eb0
+msgid "AbstractSegmentTree"
+msgstr ""
+
+#: 8e2a0817bc5246bdb0f1b823fe9d2f93 of
+#: sds.tree.interfaces.AbstractSegmentTree:3
+msgid ""
+"Segment trees are data structures for efficient range queries on arrays. "
+"This abstract class defines the interface that all segment tree "
+"implementations must provide."
+msgstr ""
+
+#: 07952f0dfc744e118c686514b718da7e of
+#: sds.tree.interfaces.AbstractSegmentTree:7
+msgid ""
+"A segment tree supports: - Range queries (sum, min, max, etc.) in O(log "
+"n) - Point updates in O(log n) - Array-like access to underlying data"
+msgstr ""
+
+#: 990db2e33f764f31ac248438bf47cbf8 of
+#: sds.tree.interfaces.AbstractSegmentTree:14
+msgid "The size of the underlying array (read-only property)."
+msgstr ""
+
+#: f0b5f02513e14e8cb91217a07e8f3be9 of
+#: sds.tree.interfaces.AbstractSegmentTree:20
+msgid "Query the result for a range."
+msgstr ""
+
+#: f38cd38e1945483390cabf3dd97bda66 of
+#: sds.tree.interfaces.AbstractSegmentTree:24
+msgid "Update a single element."
+msgstr ""
+
+#: bfd8cf0e572b4bc0a23923e3f04e3e65 of
+#: sds.tree.interfaces.AbstractSegmentTree:28
+msgid "Get value at index."
+msgstr ""
+
+#: 11af69e2c9764781ade098debfe68c1d a33ab8518a954cd4bad2c69dcdb6c319
+#: a4a4f21cbc1942678ad4dad45ea91437 of
+#: sds.tree.interfaces.AbstractSegmentTree:32
+#: sds.tree.interfaces.AbstractSegmentTree.to_array:1
+msgid "Get the current array representation."
+msgstr ""
+
+#: 3bca6abe8f6c4f9091a6f3c903f6d036 of
+#: sds.tree.interfaces.AbstractSegmentTree:37
+msgid "Concrete implementations must provide all abstract methods:"
+msgstr ""
+
+#: 11f9f1666c37497595643bf289fa6965 of
+#: sds.tree.interfaces.AbstractSegmentTree:49
+msgid ""
+"All segment tree implementations should maintain: - O(log n) query time -"
+" O(log n) update time - O(n) space complexity"
+msgstr ""
+
+#: 6f084a39991d44378957e5f311869a64 of
+#: sds.tree.interfaces.AbstractSegmentTree:56
+msgid ":obj:`SegmentTree`"
+msgstr ""
+
+#: d23ebce370cd4c0f8c71dfee3676bd13 of
+#: sds.tree.interfaces.AbstractSegmentTree:57
+msgid "Concrete segment tree implementation."
+msgstr ""
+
+#: 5d900ec74e8c41a186ce0fdd3a6e12b1 a92ec0ae3f934f808fda1cb76c97a889 of
+#: sds.tree.interfaces.AbstractSegmentTree.__init__:1
+msgid "Initialize abstract segment tree."
+msgstr ""
+
+#: af58028453a74a9788433d2ce9a84cee d024c7bde9914ccc87d591a31ded0dd9 of
+#: sds.tree.interfaces.AbstractSegmentTree.size:1
+msgid "Get the size of the underlying array."
+msgstr ""
+
+#: 4a3cbe5761ab4666beec6b5648f9e6b4 c70ef56b188f4f49b8b5755f109dadce of
+#: sds.tree.interfaces.AbstractSegmentTree.size:3
+msgid "Size of the array."
+msgstr ""
+
+#: c0a6e6e4e264455ba1d8fdeda3189816 eb9c12fe09944c73894b74b3dba02076 of
+#: sds.tree.interfaces.AbstractSegmentTree.query:1
+msgid "Query the result for a range [left, right]."
+msgstr ""
+
+#: 624b544d363f42119b6f716947c3137f fc7eafb2133b4407b1374fe49f0ce8e6 of
+#: sds.tree.interfaces.AbstractSegmentTree.query:3
+msgid "Start index of the range (inclusive)."
+msgstr ""
+
+#: 84036e85886b48549e8cabc4112ebf4d f32b1e4fcd9f4fae9a88f3a21cda6dec of
+#: sds.tree.interfaces.AbstractSegmentTree.query:5
+msgid "End index of the range (inclusive)."
+msgstr ""
+
+#: 1e91f41e95ef4b60a7ca3a4e5de2fc2a dcd2da7c73cf4a3a823ae86bfc6f8c02 of
+#: sds.tree.interfaces.AbstractSegmentTree.query:8
+msgid "Result of the operation on the range."
+msgstr ""
+
+#: 22caa1dd9cac4d5484e8236dd79ce8b5 3ba034a90ab641ffb81a41445908f994 of
+#: sds.tree.interfaces.AbstractSegmentTree.query:11
+msgid "If range is invalid."
+msgstr ""
+
+#: 577694dc39204f22a8ad417f17b654b2 64e35ef61ce84fa89905882ebbba9a55
+#: 9f4579ef6237444b92637ea556de6379 e2403c64a320483b91227bd92f67041a of
+#: sds.tree.interfaces.AbstractSegmentTree.query:15
+#: sds.tree.interfaces.AbstractSegmentTree.update:12
+msgid "Time complexity: O(log n)"
+msgstr ""
+
+#: 04fabf58c4f94cf89e726c2c802ddda9 cb34c7f983124438a47bc16516688ead of
+#: sds.tree.interfaces.AbstractSegmentTree.update:1
+msgid "Update a single element in the array."
+msgstr ""
+
+#: 1267ad0257ed45ad8ffd787aed4c17c6 d057bb01f61646bc90dfebae2942862b of
+#: sds.tree.interfaces.AbstractSegmentTree.update:3
+msgid "Index of the element to update."
+msgstr ""
+
+#: 4295c368cd384c3fbb93c8fd3039406a 5ea548b7ca5f44c782c2e73f7c4473e5
+#: acc488f75ba947018a71a0197c1dfce9 e304e1cc5e6f40b8b711cb27740fa058 of
+#: sds.tree.interfaces.AbstractSegmentTree.__setitem__:5
+#: sds.tree.interfaces.AbstractSegmentTree.update:5
+msgid "New value."
+msgstr ""
+
+#: 216da1c983ed4a9ba423c4f73574717a 2dd12f2b3cbd4ce98ce7ae91b2bf6efb
+#: 967e49e511364374b8f4a819170e2299 b42b2a46cf894460a9d7474e2da70b83 of
+#: sds.tree.interfaces.AbstractSegmentTree.get:9
+#: sds.tree.interfaces.AbstractSegmentTree.update:8
+msgid "If index is out of bounds."
+msgstr ""
+
+#: 750c9a41c6264efcb63af5a569eb8047 8c5686e3318c4e699031acf9ed161680 of
+#: sds.tree.interfaces.AbstractSegmentTree.get:1
+msgid "Get the value at a specific index."
+msgstr ""
+
+#: 62179ff1b68545fc9d58b95d8b5675c4 d6e2d7fa06354ccd947625e492a1b1fb of
+#: sds.tree.interfaces.AbstractSegmentTree.get:3
+msgid "Index to query."
+msgstr ""
+
+#: 32b385862fe44913945f26adf524f1ea 3ee4d5b71b4d405d836783846ada3f77
+#: 537a1231915d4922bbb04b220dd34639 ea14ccc6ffc446f680e0e2594e87dea1 of
+#: sds.tree.interfaces.AbstractSegmentTree.__getitem__:6
+#: sds.tree.interfaces.AbstractSegmentTree.get:6
+msgid "Value at the index."
+msgstr ""
+
+#: 6d712d014fed46449fdbee14b926636e 900a522d5c474adabd5ff4091a7dd3dc of
+#: sds.tree.interfaces.AbstractSegmentTree.to_array:3
+msgid "Copy of the underlying array."
+msgstr ""
+
+#: 85c3d12c32694ca48fdf680764d85421 c3edeeb697fc42dc8fcd594d172926af of
+#: sds.tree.interfaces.AbstractSegmentTree.to_array:8
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:146 8b95be31f0eb4a8bad0a9350fd267fa9
+msgid "Special Methods"
+msgstr ""
+
+#: 5dfdc2a9ca6a477484bbd0f8bece8e8f b860d57e56944ca48780a5803e5ea90f of
+#: sds.tree.interfaces.AbstractSegmentTree.__getitem__:1
+msgid "Get value at index using array notation."
+msgstr ""
+
+#: 62d618022e7142b3b2052aa8729e1654 ec8e4cb0fd6440bdb2537657c1508c50 of
+#: sds.tree.interfaces.AbstractSegmentTree.__getitem__:3
+msgid "Index to access."
+msgstr ""
+
+#: c11161796db54f45adad986f76a93ea5 c1a539218f2646099fb9036af6ce9717 of
+#: sds.tree.interfaces.AbstractSegmentTree.__setitem__:1
+msgid "Update value at index using array notation."
+msgstr ""
+
+#: 4e5b9bd614b34e4fbbf6d8b216ce395b ebf8208ffe18481ea8f9640866dfc682 of
+#: sds.tree.interfaces.AbstractSegmentTree.__setitem__:3
+msgid "Index to update."
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:151 cd51571812854bcdaaf4a19f8afff917
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:154 55003bbc73f244c6a755cc50e393433a
+msgid "Implementing Custom Trees"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:156 21c7e7f38e02486b80a0d4e4baaf79b9
+msgid "Using AbstractBinaryTree:"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:210 620a305f2c3e48bfb6853edc4e569d2f
+msgid "Polymorphic Tree Operations"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:212 9d01c74d8465471e9850ed007dc536b4
+msgid "Working with any tree type:"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:236 8d2a0c28e47040b4ad1161a7207f3b7f
+msgid "Type-Safe Tree Processing"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:238 ab34b3ebb15a4ab0b007d66ec5ea4da5
+msgid "Using type hints with interfaces:"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:284 bb39b505e67c44d5a0e33b27a703ff54
+msgid "Interface Hierarchy"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:286 c6b123e95e08416394387b5054e7ee1f
+msgid "The tree interface hierarchy follows this structure:"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:307 d67624ad839f485cb415444510df28bd
+msgid "Method Requirements"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:310 5f1cfbc8969b43d9a18841a7d3695d98
+msgid "AbstractTree Methods"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:312 5964046db9b0469eb46a525b95a6ed6c
+msgid "All concrete tree classes must implement:"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:318
+#: ../../source/api/tree/interfaces.rst:352 026dba1a62db40e8909c5db8e67e507f
+#: eba47e1798e743caa98a16f1b463f2d7
+msgid "Method"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:319 cdad4f3fac5c40a8b20af6304e177e08
+msgid "Required"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:320
+#: ../../source/api/tree/interfaces.rst:353 0b3fadbf4db4465e9ad7cf1ae57f92c7
+#: 2b94b47731284c6081eb3f07d396c9e5
+msgid "Purpose"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:321 8657773230c142c6915e9340a91eeb31
+msgid "``height()``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:322
+#: ../../source/api/tree/interfaces.rst:325
+#: ../../source/api/tree/interfaces.rst:328
+#: ../../source/api/tree/interfaces.rst:331
+#: ../../source/api/tree/interfaces.rst:334 03e9a690f0004a2ead978c1a8c63d004
+#: 72e55b1f0565431f950f0d2b084cc838 9c121048e0304674b8416d51e57ef244
+#: d2cd3fa88488401ab129cfc8e434f2b8 dcb0e812155043acb5ae73a82fb63b7d
+msgid "Yes"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:323 a60b79ad1fd44f40ae94546619ce48c1
+msgid "Return tree height"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:324 a5c28fd8bcf444659c7be6232e973fac
+msgid "``insert(item)``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:326 444fe49a6867403fb8559e716ac668f9
+msgid "Add item to tree"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:327 ac53cf4c1da64e488868e5cd68e7e6a3
+msgid "``remove(item)``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:329 0a1802e611ef49db881f2de8fca8478b
+msgid "Remove item from tree"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:330 b26ce9d3df534e36a03d1608db83b7a4
+msgid "``search(item)``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:332 2ea37397a8624d9b8d8832af084427de
+msgid "Check if item exists"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:333 fd05eb1390694b588577977a9254f80f
+msgid "``clear()``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:335 802c7967e6444dc6a66b2ddc989b3d58
+msgid "Remove all items"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:336 34f84435f3c44e1f9b35353f8ab5aba5
+msgid "``size``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:337
+#: ../../source/api/tree/interfaces.rst:340 ae20ba6b675c4300b40c05a347599596
+#: be0b25855fbb4c3a83d9a9bf95fefbb1
+msgid "No"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:338 43e74b4641fb43a9b8c9763b5f89af40
+msgid "Inherited property"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:339 afdf3932f44948cc9f8261809d66b7ab
+msgid "``is_empty()``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:341 978d3d4f71d64d72b3adb7c208a903b0
+msgid "Inherited method"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:344 346c00c7c05548abbd6670c2413c5b02
+msgid "AbstractBinaryTree Methods"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:346 f3f7760fdf8a4ae885900a6285cf13c2
+msgid "Binary tree classes must additionally implement:"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:354 c6046ebc6dcd42f69a8e4bce59f7d085
+msgid "``inorder_traversal()``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:355 ebe3789cfee34959ba7250adfd5d0b7e
+msgid "Visit left-root-right"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:356 bb05c9785f3b475c8c099ee2ae8852e0
+msgid "``preorder_traversal()``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:357 0a7254a4b5084a05897108c850a6dca3
+msgid "Visit root-left-right"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:358 f5af13d69fa94cd293c781dd12345b7f
+msgid "``postorder_traversal()``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:359 79115e8776cd49c9b832f4838058bfbe
+msgid "Visit left-right-root"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:360 e13e3e2c27bd4342b286e7a2fcc5faa4
+msgid "``level_order_traversal()``"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:361 790a7f8398eb46fc992646073f75d6b5
+msgid "Visit level by level (BFS)"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:364 e10ee9e84c604c8a959cfc38a0d1ab8c
+msgid "Design Patterns"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:367 43a050697e6c46b280ac9fa08e5ff76e
+msgid "Template Method Pattern"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:369 8437b08096d8469bbb50b7b5964b8ab4
+msgid ""
+"The abstract classes define the template, concrete classes fill in the "
+"details:"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:389 928d9fde6c8f4df4999d76b17c19b011
+msgid "Strategy Pattern"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:391 0defae4b42f747688579683ebb2c92da
+msgid "Different traversal strategies for binary trees:"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:415 b2d6d851d85d4428a4ff121af9f3e5a3
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:418 f282f068b99b466289e700af703020cd
+msgid "Interface Implementation"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:420 c158582bb3584cf099ae00e6be4d76b9
+msgid "✅ **Always call super().__init__()**"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:429 d6d25e690dad42c99afce449b52b9667
+msgid "✅ **Update size consistently**"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:441 f21886edbfb140e3b75057933fea53a8
+msgid "✅ **Implement all abstract methods**"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:451 e0c29f3e5d12429f88d192afc16e5cd2
+msgid "Using Interfaces"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:453 82287620b26a439eab96b2f8de4f66d7
+msgid "✅ **Program to interfaces, not implementations**"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:466 e8c0ab15bd2f4f45911b163534ee4e78
+msgid "✅ **Use type hints for clarity**"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:478 519bde330355453cbc8c42d8066b1cb6
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:481 1ed9efde91fd46ea83c3c0357810addd
+msgid "Visitor Pattern for Trees"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:516 eaca28c628714d51ac45a285acc29712
+msgid "Iterator Pattern"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:541 de2e0c8734f644eeb53f76d6486ef27d
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:543 3d4c6937000e49cb9c8dcc70db566426
+msgid ":doc:`node` - Node implementations"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:544 80da86ac4e3942db8b18a2c5a7ca8e3a
+msgid ":doc:`binary` - Binary tree implementations"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:545 f68cd3ca2f5b40e2878b3b7208a462c3
+msgid ":doc:`general` - General tree implementation"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:546 3be4e25cfb5e4ca89d8d41b3b08743be
+msgid ":doc:`../../guide/tree_structures/index` - Tree structures guide"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:549 0206a82ca5a248f39c33d213e6acacc6
+msgid "References"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:551 b1a42aea00b94cbfbb4c467515a264fe
+msgid ""
+"Gamma, E., et al. \"Design Patterns: Elements of Reusable Object-Oriented"
+" Software\", 1994"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:552 257116bb4878495f9d60909ddcb8bd4c
+msgid ""
+"Martin, R. C. \"Clean Architecture\", Chapter 11: DIP (Dependency "
+"Inversion Principle)"
+msgstr ""
+
+#: ../../source/api/tree/interfaces.rst:553 f9273936fc8c4afca7b1ba159a03a076
+msgid "Liskov, B. \"Data Abstraction and Hierarchy\", OOPSLA '87"
+msgstr ""
+

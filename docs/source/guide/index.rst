@@ -75,6 +75,16 @@ Specialized structures for specific use cases.
 
    advanced_structures/index
 
+Probabilistic Structures
+-------------------------
+
+Graphical models representing probability distributions over variables.
+
+.. toctree::
+   :maxdepth: 2
+
+   probabilistic_structures/index
+
 Additional Resources
 ====================
 

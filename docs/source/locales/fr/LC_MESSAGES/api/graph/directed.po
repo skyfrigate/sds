@@ -1,0 +1,1379 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/directed.rst:5 f8fd15e2823f4f0fab9ced392343ee21
+msgid "Directed Graphs"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:10 4fe779a1d78b46a2bb04452cf11f1cdf
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:12 e0bc017349c14e2788ce99b759d85f3d
+msgid ""
+"This module provides directed and undirected graph implementations with "
+"explicit focus on edge directionality. DirectedGraph maintains separate "
+"in/out adjacency lists for efficient degree queries, while "
+"UndirectedGraph validates that only undirected edges are used."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:37 5812aa03be2542f2a78b9b525de4ed40
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:45:<autosummary>:1
+#: 036081166fbe4fa695029c84efc73960
+msgid ":py:obj:`DirectedGraph <sds.graph.directed.DirectedGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:45:<autosummary>:1
+#: 36b8f2eee995463cad9ec49acc851791 fcba9684cd0447f09d54076371713161 of
+#: sds.graph.directed.DirectedGraph:1
+msgid "Directed graph using adjacency list representation."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:45:<autosummary>:1
+#: 3d5bc6ab3ff24dc3a55a14b55b76865a
+msgid ":py:obj:`UndirectedGraph <sds.graph.directed.UndirectedGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:45:<autosummary>:1
+#: 7b551643ef7d45bcad825d9fdf0e1999 8497e999cfe24d32ad4d8815c34e729d of
+#: sds.graph.directed.UndirectedGraph:1
+msgid "Undirected graph with explicit edge type validation."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:47 10a155d8bc864ef4b98cb77fe04082af
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:50
+#: ../../source/api/graph/directed.rst:635
+#: ../../source/api/graph/directed.rst:662 27467c4bfbe54b198dfbcd22fda31dcf
+#: aeee01bb818a43c69cd6e4af4c83248a d4353d5dfd134616ae3291ccf3576f1f
+msgid "DirectedGraph"
+msgstr ""
+
+#: 6a87a35e819349baa53a14a3ac268225 of sds.graph.directed.DirectedGraph:1
+msgid "Bases: :py:class:`~sds.graph.interfaces.AbstractDirectedGraph`"
+msgstr ""
+
+#: cf8cd6899d7a44b1abba281906ad8c6b of sds.graph.directed.DirectedGraph:3
+msgid ""
+"A directed graph has edges with explicit direction from source to target."
+" This implementation maintains separate adjacency lists for incoming and "
+"outgoing edges for efficient degree queries."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst 0116eebcb4f147b3bdf575d7af9db345
+#: 01d3409ef35c4888a9232ba3073dab99 048c9725dd8644298684c0eb74998a95
+#: 06248f1e5666418c8d9bf4ecbf0d4ce9 09130f6a244a4058a8b6e9b19e96a4f2
+#: 099c8fe4d54048e0a4dabf6654f785ed 0a1e862db5a44bd8bb846a68602c4a60
+#: 0ff1fb3e84474627a8c026044ba50b90 138a7ff4a4fe4568b9fa0c2c3b576576
+#: 1597282088b6414ba5d28099d87137f7 179b14582382497890657c45698c4e8e
+#: 1badbb6edc5645adb9f0d63868f49b43 2042b875226f4bc49e3b822ea221f0b5
+#: 2348bd14206a46e08236a63922f52d2d 2c9154f2a5054aa5aa6deb6c40957dac
+#: 34994a0396f14772b97d3923d1ffa39a 6f7af01781a1474e9a7cf58719bb1546
+#: 7ade95ba4e9244cca9301821d45581e7 8739b7ee458a40e49b3e9d8c21ff850d
+#: 87b984e776664b799c7d4de83935ab66 920f2dcab4614d2e8b2ba820ede7882f
+#: 9a00b5e68a704d5f955e658f19bc08c4 a84a6f359717488a9c3e9f95f2dc81ce
+#: ac0c9a24bbc14a1c80f2519dfd0fe499 b2a61fd3974f4d079a078016216291fd
+#: b5c78f91a15b4658ace91d19f97b5a9f b5f7489e2f5242f7a4dd91b6a2a59c79
+#: be2959b4e21c4213b510a927082e82c5 d4e67c534278466c8a3912d794a72028
+#: d6c65f6180444208808d160564c5d464 d9108c398a2c4c468687945d480a24e8
+#: db944a86d481489b9365f8934aa980cc ea9751d6992042c39c27a833db9f04f9
+#: eaca19c5d7464563b4fe012c4b7681d1 eb7fe3d0dd934c258950d41f7ffa4b42
+#: edf021889ab8469c85892f773ea2e135 f1ef809de48d4e7fb21c80b6540bd3ea
+msgid "Parameters"
+msgstr ""
+
+#: 91371802333348d898fdce6b72712445 of sds.graph.directed.DirectedGraph:7
+msgid ""
+"If True, allows multiple edges from same source to same target. Default "
+"is False (simple directed graph)."
+msgstr ""
+
+#: 0b318d3cd94b426ea060c6f0eae2c14c 392d3a9b215b485b8c049d38ab94e4ec of
+#: sds.graph.directed.DirectedGraph:13 sds.graph.directed.UndirectedGraph:14
+msgid "Whether multiple edges are allowed (read-only property)."
+msgstr ""
+
+#: 4c37d06e36564a3894e621402d31aff6 b90c0105fbbc4a5a9e749dffcfba216b of
+#: sds.graph.directed.DirectedGraph sds.graph.directed.UndirectedGraph
+msgid "type"
+msgstr ""
+
+#: 6e8f1d05499b4cd6b9f8f4fb8ad35588 cb2e6a142b0e4142b47bf8b3043d917d of
+#: sds.graph.directed.DirectedGraph:15 sds.graph.directed.UndirectedGraph:16
+msgid "bool"
+msgstr ""
+
+#: 01107959828c4750ba879c2adef69f4d 05d2d98c52dc4a13a9b2b0be0da3079f
+#: 07bed25f9a8c43eabf458229bc763e4f 08e9d971a06d4f00bbabe994468c9045
+#: 09399a9952d7421db9e71f663e3dfba8 0d425b94accc438fb028749df7d8b657
+#: 0d7bd1074bce482f9085f9d0b5824e7d 0e98c9503d9147c7866ad14315bcc34e
+#: 0e9d0fa3bcc84e80a27b14280498853c 19e05328a2de4af9a81b948a790a9f1e
+#: 1faaf76262e94a15b6f422f760d8ea67 20b13f3ac58f4c1e800537b13b453004
+#: 21d9f36974284be79e741d1cfc65ad8c 222fe2e7aae143fe8d01c8b3c4744904
+#: 2312826caaaf4ab0aab3491dbbed3959 2326a3d5d76546618fde532b99585877
+#: 3b00eb7512b8471f8de0554222ccfb4e 3b31c1eb9f324594b83185e3bb95bcd3
+#: 3d5c51ac29284dbc9085789d7d8fc01c 43c02c6feef94e9285df3ae16ec42d12
+#: 452166afbbd84d8a8359739498234da4 5ad2c957fc6e4276a5d88c400fdd3e2c
+#: 604d8081dbf94a8f8d3e92c5b17e6f5b 769b4cb1c7d84fbca42f2f166da8bccf
+#: 790fcd7290914b49b3b4415907f75ff4 7af745e86e9046538994a0fc1eaca40a
+#: 7b845ae8ee7a461c93699b34b6134fe3 8cd56ca1e1ac4880bab8208c7dada8af
+#: 8d76f6051b0c4d2a8c3186bd1f5c312c 8dd433284aa749b09bbe9f3f1e82fe6b
+#: 93c2e214cdc74217ada7804e0e224ad0 94a75400d42247ec8bac83151b4bfc29
+#: 94eb701167d7423891371ca5fd31b2e7 a134e5759acc45e0a26fa28bd0d1362e
+#: ac159577036e405bbfb8fc94c3d8b697 b091b9f0103f421195102148a50f190e
+#: b2e699b926be4128a5826dc44db9f6ef b79eacb7e8a0436db2a500cff9de22cb
+#: b7ce12180c024ecfb8abf25f04c193f3 cd27961411a24a58994100dfd3d507d0
+#: cf891a4190384114b30dbb707348f51a e109ac91ead548be9b67a0854683b70c
+#: e2b20fcd72ee48218e9ce729d1f5c67d e2b7984469814c32b4922cb2e0289584 of
+#: sds.graph.directed.DirectedGraph:17
+#: sds.graph.directed.DirectedGraph.__init__:6
+#: sds.graph.directed.DirectedGraph.__repr__:6
+#: sds.graph.directed.DirectedGraph.__str__:6
+#: sds.graph.directed.DirectedGraph.add_edge:9
+#: sds.graph.directed.DirectedGraph.add_node:9
+#: sds.graph.directed.DirectedGraph.allow_multi_edges:6
+#: sds.graph.directed.DirectedGraph.degree:11
+#: sds.graph.directed.DirectedGraph.get_edge:12
+#: sds.graph.directed.DirectedGraph.has_edge:11
+#: sds.graph.directed.DirectedGraph.has_node:9
+#: sds.graph.directed.DirectedGraph.in_degree:11
+#: sds.graph.directed.DirectedGraph.is_acyclic:6
+#: sds.graph.directed.DirectedGraph.is_connected:9
+#: sds.graph.directed.DirectedGraph.neighbors:12
+#: sds.graph.directed.DirectedGraph.out_degree:11
+#: sds.graph.directed.DirectedGraph.predecessors:10
+#: sds.graph.directed.DirectedGraph.remove_edge:8
+#: sds.graph.directed.DirectedGraph.remove_node:8
+#: sds.graph.directed.DirectedGraph.successors:10
+#: sds.graph.directed.UndirectedGraph:18
+#: sds.graph.directed.UndirectedGraph.__init__:6
+#: sds.graph.directed.UndirectedGraph.__repr__:6
+#: sds.graph.directed.UndirectedGraph.__str__:6
+#: sds.graph.directed.UndirectedGraph.add_edge:9
+msgid "Examples"
+msgstr ""
+
+#: 20f6763d67354ffd9b51be3fe261c485 of sds.graph.directed.DirectedGraph:19
+msgid "Create a simple directed graph:"
+msgstr ""
+
+#: b452f248f2d747bbbcd4490ac9aa1358 of sds.graph.directed.DirectedGraph:32
+msgid "Create a multi-digraph:"
+msgstr ""
+
+#: 337380fe5cf34a76a5cc5ce3c0fc903d of sds.graph.directed.DirectedGraph:42
+msgid "Check for cycles:"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:578 0ba3f644171543e2b687238e550f7666
+#: 114f813db65d41b991d4bd16af83051f 20bcd485698d4ae58921495022efe1be
+#: 333f40954673437d934cdaea1451e011 33c2b66ec82446b4937a03cdcd8e046a
+#: 33fac05fb72640a0b3ebbc86f8a19790 34d207e6133942bf979944f86e439d67
+#: 357f8716a17f41459f58c65933d5d3d5 38f81d5d945d465fb173f01cbc53a32c
+#: 3ccf10fa8f09464695b737d2f9c904b8 3ff0bd48e8a6408997c711d58ed873f7
+#: 4507164b5f3742488888edfad524ddeb 496d81ee6ef34919983ac59e8d4bf920
+#: 4c13cce04ecf49a19463b3778b86a5fa 523aa10c0a2a46a29a6e7339d2e3b3b3
+#: 624621a169a24ef2873e41154c34c680 688627283a914f31ae6a45607b958cac
+#: 6b1faad381aa413092f13a1492eb2929 6e164f1ee2534f20bea9ef6adaa34ee7
+#: 6e4c89705a5a40a1acdb44219ff8cff2 75f790dafbd843efb74fa69eaffd256f
+#: 7cfda75519cd4077be3282c245abd290 80631cc3c581452da25bd3b1d8910029
+#: 88b361d1f8a74a06a9b1cd1bd7cc84fe 8b05ec0d20a145feb89e8346bc1edc96
+#: 8b5d28aff0344f4ba4a3402a85126d1e 8bd73a13d4044be5bae15cec0499c1e5
+#: 90b73b120daf4bc78fb509964274c52d 93b814f058ad415ab8e481336c765990
+#: 98ad704ddec04013822d49ef49dad15a a002c4ee9be340bca81ab4b7788f0a58
+#: acc841ea4de649a597f35c7c86299c86 b1db880c30bf461dbe7f898f9eb6d15c
+#: b285e863fc824c1d8074c1bef1b3f895 b2e9e3b1b51143a9b3d54b60d1a0f45e
+#: bb63bb29bbb5445e8e6e09c97c998b80 bddbffffca084d2dbd982a9a91229800
+#: beac724b3fb44801bc747fed2d6b7adf bf191b321d204d8e9a7fa648455b2ed6
+#: c34e238f97684222b36a0f72e5ec87e8 ca3e531b0abd4d7b8a81bd4d1f4b709a
+#: d2afbd56ba7d4f5aabd01b4b44a99699 d38e204bde0a4a4fb20de19183c60bf9
+#: db392a22763948dab6e29cc75dedb534 dbdd175b56564f7a936d4d3c9861ed18
+#: e6b118bf2a8847dc9a62dc8c30f8ab1d f5ec290f7a8440c38fc78c13ff466050
+#: f8a6e9562c224976ac43e96c6f69223c f9363adbda924fce9f8a5070d6a838a3 of
+#: sds.graph.directed.DirectedGraph:49
+#: sds.graph.directed.DirectedGraph.add_edge:22
+#: sds.graph.directed.DirectedGraph.add_node:17
+#: sds.graph.directed.DirectedGraph.clear:3
+#: sds.graph.directed.DirectedGraph.degree:24
+#: sds.graph.directed.DirectedGraph.edge_count:6
+#: sds.graph.directed.DirectedGraph.edges:5
+#: sds.graph.directed.DirectedGraph.get_edge:25
+#: sds.graph.directed.DirectedGraph.get_node_by_id:9
+#: sds.graph.directed.DirectedGraph.has_edge:24
+#: sds.graph.directed.DirectedGraph.has_node:19
+#: sds.graph.directed.DirectedGraph.in_degree:24
+#: sds.graph.directed.DirectedGraph.is_acyclic:23
+#: sds.graph.directed.DirectedGraph.is_connected:20
+#: sds.graph.directed.DirectedGraph.is_empty:6
+#: sds.graph.directed.DirectedGraph.neighbors:26
+#: sds.graph.directed.DirectedGraph.node_count:6
+#: sds.graph.directed.DirectedGraph.nodes:5
+#: sds.graph.directed.DirectedGraph.out_degree:24
+#: sds.graph.directed.DirectedGraph.predecessors:24
+#: sds.graph.directed.DirectedGraph.remove_edge:21
+#: sds.graph.directed.DirectedGraph.remove_node:20
+#: sds.graph.directed.DirectedGraph.successors:24
+#: sds.graph.directed.UndirectedGraph:50
+#: sds.graph.directed.UndirectedGraph.add_edge:27
+msgid "Notes"
+msgstr ""
+
+#: eb27f6cbe18e459f8336817212b9a38d of sds.graph.directed.DirectedGraph:51
+msgid ""
+"Time Complexity: - add_node: O(1) - remove_node: O(in_degree + out_degree"
+" + E) - add_edge: O(1) or O(out_degree) if checking duplicates - "
+"in_degree/out_degree: O(1) amortized - predecessors/successors: O(degree)"
+" - is_acyclic: O(V + E) with caching"
+msgstr ""
+
+#: cbb50e1b4e524952b25a62d0388c3183 of sds.graph.directed.DirectedGraph:59
+msgid "Space Complexity: O(V + E)"
+msgstr ""
+
+#: 0c57f1648e894561a788ed2e7406c6ba 90e257710ff9406a84c4bbe5ca34feb5 of
+#: sds.graph.directed.DirectedGraph:63 sds.graph.directed.UndirectedGraph:65
+msgid ":obj:`Graph`"
+msgstr ""
+
+#: 63cde25786724331981441802cb80f2a of sds.graph.directed.DirectedGraph:64
+msgid "For undirected graphs."
+msgstr ""
+
+#: 20a02f7572ba4c7cbc0835f57594738a of sds.graph.directed.DirectedGraph:66
+msgid ":obj:`AbstractDirectedGraph`"
+msgstr ""
+
+#: 37a691fc2f5547b3ae4e36722c2f487e of sds.graph.directed.DirectedGraph:67
+msgid "Interface definition."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:59
+#: ../../source/api/graph/directed.rst:113 8bd38f252c4f45608717dacb3510594c
+#: b249fdee27c74938aa3e9bf3719552e2
+msgid "Constructor"
+msgstr ""
+
+#: 407e4afe32094cd5bc7eb3a588552430 d25907fe29934210aefcdb811c677c5e of
+#: sds.graph.directed.DirectedGraph.__init__:1
+msgid "Initialize an empty directed graph."
+msgstr ""
+
+#: 27131368bdfb43508ffcf5662bc9db04 b44e6baafc224ac6a8e781511bf43df2 of
+#: sds.graph.directed.DirectedGraph.__init__:3
+msgid "Allow multiple edges between same source/target. Default is False."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:63 446fec58defd43bca4c0b5089ead206d
+msgid "Properties"
+msgstr ""
+
+#: 0a9cb96c08724d76afac6bcd929c8d1d 573480f424e04931909866025633e566 of
+#: sds.graph.directed.DirectedGraph.allow_multi_edges:1
+msgid "Check if multi-digraph mode is enabled."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst 021621e8625e4e4e98c5201d26f2d214
+#: 0239fc08f2c34181ba8e9cd24e81aa66 04f372f1b9bd4831aed5e6522b660bb2
+#: 19ce37f1e1ff4936856df144224e9171 1a1bf524e22149b487f59b00938533f8
+#: 1c6f384c6d944f1f88561120d2526441 1d0fdc445d544583be417beed9460ebe
+#: 202ccc0e194d4a348ace139d8cd234be 338f9e7a013b4de5a483b28cb815a901
+#: 41307abd442b4275bc61fa0364337fad 4b6706656a7841f3b6e4a42e4b6fb868
+#: 539ce6cf89c04c4b85c3193e0a45a011 5611404553dd4bba9f6a649f759367ea
+#: 6a06df2af74747ecb47fa424a6d652f3 723b4d16216749e2934d8df97652c11f
+#: 72ce45aaae934f0999591e53fca29f1c 762450c85b094028bd4175dacefd8238
+#: 76d30bdce8d94650aae5442d1f1159a2 7b590a5826924c259321153d5f78b004
+#: 875879c5d3744a8dbb1ecea7ea609aea 8ea6ef571485444ba99bb2d5d9114b69
+#: 9a7ed084de554712a01b2962a0686521 9b9f3c4b55b1425ab778c176fcbdd7df
+#: 9e638288c3344902b21020b73a3ebe59 c530c81a8c1c4fc5949e3301b0dba739
+#: cc8190feee0942dfbbc9065d7cba02bc e45781e1dbc743c19cce31695dd7eb1d
+#: ea52610ec2334475ab3b781efcdeef51 ed74fded2dfd4c718b8f199ae8715e02
+#: ed9e2bb5141346dc8071f4a1f0942e5a f0d918a1212f4302b3ce53cf2077c702
+#: fc507e4d2a2747a795bc01bec6054742
+msgid "Returns"
+msgstr ""
+
+#: e6aca0d2690a4e79ab37ef5b854c375e eb5e9ad07e1a4b349de6b6d7e622ff4b of
+#: sds.graph.directed.DirectedGraph.allow_multi_edges:3
+msgid "True if multiple edges are allowed."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst 03e664a832524275ada6444c9aec241f
+#: 08afe211425e411abb8235814d9bb7fb 0a333d6c18a94b79bf63ba325c9bca80
+#: 0a9f0792d47c40beb23df538f329af9e 34eca337cecc4434bba97a3bf1914242
+#: 3f9489158017411eb8029dd0014016f4 4030fb054b214d9e94a46a9da0b2c1b3
+#: 41f41e7ebb08454ab8289fc2994c9f31 4289cc4143e441eb9e11a6606d75c6c3
+#: 5a82903cceac4b03a7f88dc203fbdaac 5bf88490526e4cf8ac7b04653afc28fd
+#: 6f4999781617441b87e3554c30652134 785d634d2f3840668beb25645a72a2df
+#: 80a9b4eccffe40cbb13770b28ce6d1fc 80fda7dd312745aebb224ed72383dc8e
+#: 82f8f0386c814851918f30557284c8d3 8e2f62a8d1e241d990baf4df47dfe078
+#: 94a842ea1f0e421e8a6816b83fbbbbbe 94d98ecf19894897ac6834625d9da97e
+#: 94f0c36c4af44109a8425ee49876fa15 9b03a36ec9674868a03e75bb19d5fc8b
+#: ae648720e97949c08d2d060750dfe870 bba8f1697db04bbfa22992fd2de53cd6
+#: c1a689f717f3486d89ad1f0ecfa3fcfc c62611d999bf4036876f3f726448d647
+#: cfd9305b0837415892b4eef839f3a845 db6b3ce3c2b74842ac629888e32ec89d
+#: e231e35764bc415095c918f2e3390e77 ea7855d71f6440c1a08f153a0c2f4663
+#: ef18336b64f54e92ae3d7e65f36bc036 f7892eb22e1c4d04b8f698d3a3561e58
+#: fa2492fd83954ad28584226612b59688
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:67 5d98c92264fa44bd95d21f9d0177e3c8
+msgid "Node Operations"
+msgstr ""
+
+#: 0bc36bb078ba403bb4399edb95af67cc 4dcbaf60c4b945099de0c82875efec67 of
+#: sds.graph.directed.DirectedGraph.add_node:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: 70557d8d23fd430189f524548ab41d3c 89b9a638f9aa49ea8602277f6b0a27ce of
+#: sds.graph.directed.DirectedGraph.add_node:3
+msgid "Node to add."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst 0ae4053eabdf445399cef27e3f640e38
+#: 0c0460aa675c4fa0a6f1aa1c2a0e1b90 1024db6b8cf8437fb78c61f7e32368a1
+#: 2c5a8c98edb144d8a93de19f8fdf6724 3bdfe3ea11d94b55998cc2932dbe2d22
+#: 4cacff481e71421caec8306331d9ddc9 5ad0ce1608a9457ebf8d165441256958
+#: 6587b8993a764cfaa555f960ca659877 6589e2221c5a4ce9a8d1c69c9b1de8a1
+#: 6602150df15540b6a4b4d9ed68b601b7 73f24e53b6464155be30ccd639f299fd
+#: 7581b75e3c884efcb2a414b7300aa370 783c3e6bbfb24142aa104c6fc9c74399
+#: 850a5b91e5504c488e68f3e517f064d7 96920314bb064044a7f920ba6a50e793
+#: 98e64e613894470bb538b709881f274e 9d8a80e0ec19436eb45caf6bca565d2a
+#: b61ad19db50e4b7785e0767077d4998f d168a00d08bd44f48df4a2bdce47b7d3
+#: d37825a84d2546d0b5bb1de63f2f1f5d de10c9102cd646dba4664f770ab4bd71
+#: f6fc31835c224eea8e40180eef994195
+msgid "Raises"
+msgstr ""
+
+#: 22f69fdeda234820a62235e0a6176a5f e23043440c714018983abab3c1afec77 of
+#: sds.graph.directed.DirectedGraph.add_node:6
+msgid "If node is not a GraphNode."
+msgstr ""
+
+#: 9d454137b8a94edebab7a7177dafec7c cf92f90f7d9e46278f2ccb697c271b62 of
+#: sds.graph.directed.DirectedGraph.add_node:7
+msgid "If node already exists in the graph."
+msgstr ""
+
+#: 32e81539bfec48ef91b4c5d0e6a6a178 4fa31612abc8443ea04be6967e8423ad
+#: 66385b3f80dc425c8a036ac61aec6c49 6d96993744ff4ea99fd225f8e4675aac
+#: 8498e596441c4a8b970b6e33b33c359c 96559f41413c472083a9136602e4644c
+#: 9acb33cd6b634955be84a9c40579bb63 a2174b64862a4482a54589331b14e189
+#: e2121860fb8f4e31b6c1a4e85dd55db4 e518e578e59a478bb920995569906f0b
+#: e93c6c5c9b1f49d6ad685329c5f4d1f7 e9c06f8d64f945d48918a9d082a576d4
+#: eadd9297176c4dcf8a251b9830cda5ae f7152fa31b9443429971615e5d4453d8 of
+#: sds.graph.directed.DirectedGraph.add_node:19
+#: sds.graph.directed.DirectedGraph.clear:5
+#: sds.graph.directed.DirectedGraph.edge_count:8
+#: sds.graph.directed.DirectedGraph.get_node_by_id:11
+#: sds.graph.directed.DirectedGraph.has_node:21
+#: sds.graph.directed.DirectedGraph.is_empty:8
+#: sds.graph.directed.DirectedGraph.node_count:8
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: c767dca242b3437b8e5e72f3f0d60208 f38554b4417a4f4e901728006466826f of
+#: sds.graph.directed.DirectedGraph.remove_node:1
+msgid "Remove a node and all its incident edges."
+msgstr ""
+
+#: 098a8be5f67542e790ccec9980a06c40 fed06a4657594631bd7b129930759871 of
+#: sds.graph.directed.DirectedGraph.remove_node:3
+msgid "Node to remove."
+msgstr ""
+
+#: 0288ab40d9c54582b6a5cfa01e48b8a5 046afb6f0f6144b7b2927301ff70c897
+#: 13ab07e29dbe489c97d2eadcc48171d1 56d6c15d900843e1b4adf48c83d4cfec
+#: 63717febfbb44af39e940def1750c634 7966fb474f80462fb03e2307187cfe36
+#: 7eb5887134884e358286254cfccbebd9 9eeabbe8f09c47b2828a90c2b136e9e6
+#: a093a80d3aa5408891543415279bc3d1 c1967edfa60f47529a49d22fa0841e9b
+#: cd0bd4d17ce242ce8eda3d782c7fc5b5 cd77daf9c1a44c9cb153be634d55b6f8
+#: e51c5d7abc544392bea095ac0f9566c6 f99a9a7aa1de4a8990d94c04be5fed42 of
+#: sds.graph.directed.DirectedGraph.degree:9
+#: sds.graph.directed.DirectedGraph.in_degree:9
+#: sds.graph.directed.DirectedGraph.neighbors:10
+#: sds.graph.directed.DirectedGraph.out_degree:9
+#: sds.graph.directed.DirectedGraph.predecessors:8
+#: sds.graph.directed.DirectedGraph.remove_node:6
+#: sds.graph.directed.DirectedGraph.successors:8
+msgid "If node is not in the graph."
+msgstr ""
+
+#: b2edd7686a4a4a2b9762bae6646f6d54 feae632b715a431fa7ad97a0e8b83a3d of
+#: sds.graph.directed.DirectedGraph.remove_node:22
+msgid "Time complexity: O(in_degree + out_degree + E)"
+msgstr ""
+
+#: 8937fcc0aba64c85ad3d782b5c6dcc4c eed79a766497409096e8a70ebcb88fea of
+#: sds.graph.directed.DirectedGraph.has_node:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: 1be585392969414295857db6c7c0936f 2a01cf7f9b5f45e682d98c2e4baa7ef0
+#: 2b2c9153644f416d81a5ae18d3ba1639 of
+#: sds.graph.directed.DirectedGraph.__contains__:3
+#: sds.graph.directed.DirectedGraph.has_node:3
+msgid "Node to check."
+msgstr ""
+
+#: 2de71e494c3242c1a0b2cc3f715b8231 b5ce8de34ff8493882aa9cfe53578a77
+#: cc58d523fef9435a9fbeea26d644c84a of
+#: sds.graph.directed.DirectedGraph.__contains__:6
+#: sds.graph.directed.DirectedGraph.has_node:6
+msgid "True if node is in the graph."
+msgstr ""
+
+#: 3314606ab26a4af9917fecd6b79e64f1 fcdb0500aef7449c99fb892aee009a0f of
+#: sds.graph.directed.DirectedGraph.get_node_by_id:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: 46657f7a51f0400c9669809ac4715054 e9b6a5c9cecc42d48ae2949ca7413fe8 of
+#: sds.graph.directed.DirectedGraph.get_node_by_id:3
+msgid "ID of the node to retrieve."
+msgstr ""
+
+#: 19a553546e5a494ca182f87d49c32786 89145adefa80420fa93811bb7f9ddc96 of
+#: sds.graph.directed.DirectedGraph.get_node_by_id:6
+msgid "The node if found, None otherwise."
+msgstr ""
+
+#: 2b22df09126d440a96fc65f63b57e717 9dbe353e6d564cab82c761ab92778048 of
+#: sds.graph.directed.DirectedGraph.nodes:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: 29450d49713d4aa5a4b108a40be35237 6bdb650f081f48e6b8250dda5689bc24
+#: 6fed42ae3fa34e7fb9bcea85e1fe9be8 84d5533ea3144758ad957f8d49436d5e
+#: 86d5cb22cecb41d6b296ad3c491c6f9b 885ffebc96c14456b5eaba2652e727ed
+#: b1b01c58e49f49fd82901b247f613f85 bfc2254457184bdeb1b8979e21343354
+#: db983e17d3ac4d2db13ce8b679cd4bc4 e8431817dce14191b2833294660784bb
+#: f68e978a12244e02b3c6980a547a6dee of
+#: sds.graph.directed.DirectedGraph.__iter__
+#: sds.graph.directed.DirectedGraph.edges
+#: sds.graph.directed.DirectedGraph.neighbors
+#: sds.graph.directed.DirectedGraph.nodes
+#: sds.graph.directed.DirectedGraph.predecessors
+#: sds.graph.directed.DirectedGraph.successors
+msgid "Yields"
+msgstr ""
+
+#: 9299debc5e594c85b533f52d86798285 caba304a49b741f492ac2b005ef9835e
+#: d160a3321d2946daba152bd704b9938a of
+#: sds.graph.directed.DirectedGraph.__iter__:3
+#: sds.graph.directed.DirectedGraph.nodes:3
+msgid "*GraphNode* -- All nodes in the graph."
+msgstr ""
+
+#: 986f8954e6104712a5c7fc358ca49531 c422b544cfda486da00dcef0485e4431 of
+#: sds.graph.directed.DirectedGraph.nodes:7
+msgid "Time complexity: O(V)"
+msgstr ""
+
+#: 95f51be2d68744b3a4aa3d3fac4ff099 e8d85686562b4bef84e3218f6b182197 of
+#: sds.graph.directed.DirectedGraph.node_count:1
+msgid "Get the number of nodes."
+msgstr ""
+
+#: 20dfc4450cb140ae88786893bbd431ee 2d0d162c00f34470a201e388fb6a28df
+#: 3c92f7c969c84bb3a3fda3362ca38b06 of
+#: sds.graph.directed.DirectedGraph.__len__:3
+#: sds.graph.directed.DirectedGraph.node_count:3
+msgid "Number of nodes."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:76 8a651d23a82143a9aaf0751662601aee
+msgid "Edge Operations"
+msgstr ""
+
+#: 3184ca7d01cd4313bc1971ebcce901bb 9fbe73d4e2f749a5b9eea20efde00944 of
+#: sds.graph.directed.DirectedGraph.add_edge:1
+msgid "Add a directed edge to the graph."
+msgstr ""
+
+#: 3a2be3e9518848789c7d607077ef9dd9 cf20c7a86d744553b0969996e9acae22 of
+#: sds.graph.directed.DirectedGraph.add_edge:3
+msgid "Directed edge to add."
+msgstr ""
+
+#: 3ffe813bfef04120a93da755539542d6 7df1b87367684ee0a59caebfebe4c9a2 of
+#: sds.graph.directed.DirectedGraph.add_edge:6
+msgid "If edge is not a DirectedEdge."
+msgstr ""
+
+#: 969262c43ab7442f962f58f3bf290c84 98024400ded74a4ba33e92678880b33c of
+#: sds.graph.directed.DirectedGraph.add_edge:7
+msgid ""
+"If source or target node is not in graph, or if edge already     exists "
+"in simple directed graph."
+msgstr ""
+
+#: 224d2d64f6ec4fd09ddcff2aadb96f71 d68d7a4aa0fd4bc99590aee128fe81da of
+#: sds.graph.directed.DirectedGraph.add_edge:24
+msgid "Time complexity: O(1) for multi-digraph, O(out_degree) for simple."
+msgstr ""
+
+#: 205a56e660f34adc9863e59cddf3afbb 64109b8c9a2f4f34b687328bb2b26cfa of
+#: sds.graph.directed.DirectedGraph.remove_edge:1
+msgid "Remove a directed edge from the graph."
+msgstr ""
+
+#: 13c8687840b749e0976e968307f4a74a f3960f882e5d4000b80c354715ca7f42 of
+#: sds.graph.directed.DirectedGraph.remove_edge:3
+msgid "Edge to remove (must be DirectedEdge for proper direction)."
+msgstr ""
+
+#: 494cd97389cf4c0c97b1cf0d9d9f925a a019764fda61422eac62e2ef62cbe0a2 of
+#: sds.graph.directed.DirectedGraph.remove_edge:6
+msgid "If edge is not in the graph."
+msgstr ""
+
+#: b4b680a4ac514081a44a197216c5fc8f ef99cb734fed45cd83d4eb85d7af0946 of
+#: sds.graph.directed.DirectedGraph.remove_edge:23
+msgid "Time complexity: O(E) to find edge, O(1) to update adjacency."
+msgstr ""
+
+#: 4f488c468f8746fda27e3cc6f46630c2 6129deb0816b498290cb305798ac11e7 of
+#: sds.graph.directed.DirectedGraph.has_edge:1
+msgid "Check if a directed edge exists from node1 to node2."
+msgstr ""
+
+#: 0fa7c5dd5fb3452ab3a748b95f57d45c 1ae5823427a448d6bd4c8130c3a80627
+#: 94af06ee34df44809f37ad4d69c2af72 edd9f219d88d4ea4bb6f4178b51ca69c of
+#: sds.graph.directed.DirectedGraph.get_edge:3
+#: sds.graph.directed.DirectedGraph.has_edge:3
+msgid "Source node."
+msgstr ""
+
+#: 08b6633db3af4df392d131d4559ceaf0 a6e68d05f7dc479884fc37a218ac3abd
+#: c3ac3f83c1354c3cb7a291e218e76d60 f5a4ecef4e0340c3ab1c2779014065bf of
+#: sds.graph.directed.DirectedGraph.get_edge:5
+#: sds.graph.directed.DirectedGraph.has_edge:5
+msgid "Target node."
+msgstr ""
+
+#: d2878169d5474ab1a54cd00d60650c8a dd33cb2d7cdf498ea07fa12bd824fa98 of
+#: sds.graph.directed.DirectedGraph.has_edge:8
+msgid "True if edge from node1 to node2 exists."
+msgstr ""
+
+#: 01ce4515f44f42b184c3a4deb13ca227 b21e34b7879e46aaad292e6793adfe17 of
+#: sds.graph.directed.DirectedGraph.has_edge:26
+msgid "Time complexity: O(1) amortized using adjacency set."
+msgstr ""
+
+#: 7fe72743f31c48499f606afaf8889edf d4d2db5460174578b4c8b4ad1508aee1 of
+#: sds.graph.directed.DirectedGraph.get_edge:1
+msgid "Get the directed edge from node1 to node2."
+msgstr ""
+
+#: 0ccfdcd0398a4bbfad47cea79e48c6c2 b5a69b8483ab4bb38c877828abaa3f09 of
+#: sds.graph.directed.DirectedGraph.get_edge:8
+msgid ""
+"The directed edge if it exists, None otherwise. For multi-digraphs, "
+"returns first edge found."
+msgstr ""
+
+#: dd9afe75506b4593b5425b60847a3645 f8622fbb2f514d969208c0773c2f59bb of
+#: sds.graph.directed.DirectedGraph.get_edge:27
+msgid "Time complexity: O(E) in worst case."
+msgstr ""
+
+#: 3806a00875be4174bbeb9b0f48f0b691 51a6a27bf9464fd4b9a6656bb48244ac of
+#: sds.graph.directed.DirectedGraph.edges:1
+msgid "Get all edges in the graph."
+msgstr ""
+
+#: 3bba3aeea291455cbba68551b217b316 99eacf0cebce44eda280ecdab2015991 of
+#: sds.graph.directed.DirectedGraph.edges:3
+msgid "*Edge* -- All directed edges in the graph."
+msgstr ""
+
+#: bb6d850c144c495eb95c0f14a6010fa1 f3cb62c2c4ea4365bbdd5c5c6c6b9813 of
+#: sds.graph.directed.DirectedGraph.edges:7
+msgid "Time complexity: O(E)"
+msgstr ""
+
+#: 27e34b94d10943e2b9ff4fda20b9cb2b a2948debc49444d3b2b31c395982081a of
+#: sds.graph.directed.DirectedGraph.edge_count:1
+msgid "Get the number of edges."
+msgstr ""
+
+#: 221af3756b9248178df9fad2984553f9 7a0935c5faf24686abda6849b755618f of
+#: sds.graph.directed.DirectedGraph.edge_count:3
+msgid "Number of directed edges."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:85 a32bab777e2b477e80916f8b11e57f0c
+msgid "Directed Graph Queries"
+msgstr ""
+
+#: 2f1152bed82f476389f6d7ea0a4cac63 66730dbdf9864d7aa4b09403aa2b92c6 of
+#: sds.graph.directed.DirectedGraph.in_degree:1
+msgid "Get in-degree of a node (number of incoming edges)."
+msgstr ""
+
+#: b29a9b5868d64ffd8ffdd93150d8208c c30a12f6d445465a941190e219a24d0f of
+#: sds.graph.directed.DirectedGraph.in_degree:3
+msgid "Node to get in-degree for."
+msgstr ""
+
+#: 35b343a9f4d549cdaa25eb3a38fdd3ed 7ff6b57dd391473586bff83a6154b74a of
+#: sds.graph.directed.DirectedGraph.in_degree:6
+msgid "Number of edges pointing to this node."
+msgstr ""
+
+#: 3391ce84c1f64d1597678f9a4d7775a7 76bf6a51a4e446f287ebc35bd96715fb
+#: ab74cd2af1874da5b2d703a2a042ee79 d49d93ca8c7d47a1a70dd711fe4aa794 of
+#: sds.graph.directed.DirectedGraph.in_degree:26
+#: sds.graph.directed.DirectedGraph.out_degree:26
+msgid "Time complexity: O(1) amortized."
+msgstr ""
+
+#: 114e3b9668064cd7b1b34595161acfe6 4fcaacf94f274d719dc1e9cf80cf1ed2 of
+#: sds.graph.directed.DirectedGraph.out_degree:1
+msgid "Get out-degree of a node (number of outgoing edges)."
+msgstr ""
+
+#: 57ba8400dbb942fbb7922295414f87b8 eea8ed41546b4914bc2cd55111d67605 of
+#: sds.graph.directed.DirectedGraph.out_degree:3
+msgid "Node to get out-degree for."
+msgstr ""
+
+#: 8ee05a6db85e48cd812a196c7e42d35d d9a1ad3c0a224309b1853b9dbc810fa7 of
+#: sds.graph.directed.DirectedGraph.out_degree:6
+msgid "Number of edges from this node."
+msgstr ""
+
+#: b467eaac948c4ad0a29f44020e97d714 db7893eee949417ebce169ff766765b5 of
+#: sds.graph.directed.DirectedGraph.predecessors:1
+msgid "Get all predecessors (nodes with edges to this node)."
+msgstr ""
+
+#: 3202d200d9d243f489852649811684af 69e61a712b0c4105a746b7400e488389 of
+#: sds.graph.directed.DirectedGraph.predecessors:3
+msgid "Node to get predecessors for."
+msgstr ""
+
+#: 2358a22478084e44b0dad9d04bdafbde c61b928f38f846c080b7d42fca4141b1 of
+#: sds.graph.directed.DirectedGraph.predecessors:6
+msgid "*GraphNode* -- Predecessor nodes."
+msgstr ""
+
+#: 4cae04a8c1a949299f6a50b0a036b575 6d2311ab0b334dc7ab27866d997fe707 of
+#: sds.graph.directed.DirectedGraph.predecessors:26
+msgid "Time complexity: O(in_degree(node))"
+msgstr ""
+
+#: b66efbf96c424805a7b5511677b3ace8 fa6403dd957e4385963dc440545497bc of
+#: sds.graph.directed.DirectedGraph.successors:1
+msgid "Get all successors (nodes with edges from this node)."
+msgstr ""
+
+#: 97ddc4753e7248de8716fde9e7a52c20 ee70bfff394742d7a90a53fa8bc0b43a of
+#: sds.graph.directed.DirectedGraph.successors:3
+msgid "Node to get successors for."
+msgstr ""
+
+#: 4c570cc08ba24e3fb1335477118aa669 665d945dce9b4b58be15c0274bcc2923
+#: 6fe95cc8efd74391bcc3b00babd506c2 714a619ca89f4d8daf4cd87118c150a4 of
+#: sds.graph.directed.DirectedGraph.neighbors:8
+#: sds.graph.directed.DirectedGraph.successors:6
+msgid "*GraphNode* -- Successor nodes."
+msgstr ""
+
+#: 457d15a37e62449e979ac77d4475f085 d87b78a39ee341b0b46a4b36178312f3 of
+#: sds.graph.directed.DirectedGraph.successors:26
+msgid "Time complexity: O(out_degree(node))"
+msgstr ""
+
+#: 2e504362a1674af59d7d934f9a5e0994 e1c34990481244eb8c65a488295ad382 of
+#: sds.graph.directed.DirectedGraph.is_acyclic:1
+msgid "Check if the graph is acyclic (DAG)."
+msgstr ""
+
+#: 099ff6777d4b4c40aec85421e8bde632 8f9541e85e564661983cb601c82ecfcb of
+#: sds.graph.directed.DirectedGraph.is_acyclic:3
+msgid "True if graph has no cycles (is a DAG)."
+msgstr ""
+
+#: 83e80afa29eb4023bc93c9c9c1d103f8 a646f51a77c740248b690941d8e6d8ee of
+#: sds.graph.directed.DirectedGraph.is_acyclic:17
+msgid "Add cycle:"
+msgstr ""
+
+#: 567f978922524e8985b71345c16c7d8d c3e967db51d94f0a9d4d4897c8a67d81 of
+#: sds.graph.directed.DirectedGraph.is_acyclic:25
+msgid ""
+"Time complexity: O(V + E) with caching. Uses DFS with coloring to detect "
+"back edges."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:93 14230ee56f5943698936a1a94ab12eb4
+msgid "General Graph Queries"
+msgstr ""
+
+#: 18656d573acf4a17b740d3632d752d43 5a7efea1b8e449bcb40d11b1f9136c51 of
+#: sds.graph.directed.DirectedGraph.neighbors:1
+msgid "Get all successors (outgoing neighbors) of a node."
+msgstr ""
+
+#: 00e1353127744d408b6be7603d61101a 0a7cef90887b45a2808e3a1da38216f2 of
+#: sds.graph.directed.DirectedGraph.neighbors:3
+msgid "For directed graphs, neighbors() returns successors by convention."
+msgstr ""
+
+#: 4894ddff38d844378bd4302b2ba9cc30 fda4769015bb45bf99fa3e3f475a27f3 of
+#: sds.graph.directed.DirectedGraph.neighbors:5
+msgid "Node to get neighbors for."
+msgstr ""
+
+#: 8582d55c1ca94e5db836868ae06dbf1d a86cf5824cb148af84213a96b716785d of
+#: sds.graph.directed.DirectedGraph.neighbors:28
+msgid ""
+"Time complexity: O(out_degree(node)) neighbors() is equivalent to "
+"successors() for directed graphs."
+msgstr ""
+
+#: 43ceadca7abd4e6da0c640d387116fd9 b0b7b561b93e4b1aa8492fa3288acc59 of
+#: sds.graph.directed.DirectedGraph.degree:1
+msgid "Get total degree of a node (in-degree + out-degree)."
+msgstr ""
+
+#: 79b7b213fb2942399ce5e983de0aac41 98dff8a7110248f799ebf3d4c2466736 of
+#: sds.graph.directed.DirectedGraph.degree:3
+msgid "Node to get degree for."
+msgstr ""
+
+#: 96de8407dad14aacb7e4689826a48371 d79ecbe0aef74aefa90121a8b36844c2 of
+#: sds.graph.directed.DirectedGraph.degree:6
+msgid "Total degree (number of incoming + outgoing edges)."
+msgstr ""
+
+#: 54f2c5eccb1e437fb4a4b0be878ce647 8e1a3881c98f4b14ba0374aec432d757 of
+#: sds.graph.directed.DirectedGraph.degree:26
+msgid ""
+"Time complexity: O(1) amortized. For multi-digraphs, counts each edge "
+"separately."
+msgstr ""
+
+#: 046a5973e2f34e4fb4405b1b9d452d5e e05057ab4a3146c48781a29c7b11ce70 of
+#: sds.graph.directed.DirectedGraph.is_connected:1
+msgid "Check if the graph is weakly connected."
+msgstr ""
+
+#: 0c4e9aaa25c144fe95a4ff8dc704c01d 60b2366e12b6448c9fec7f3cd334655a of
+#: sds.graph.directed.DirectedGraph.is_connected:3
+msgid ""
+"A directed graph is weakly connected if replacing all directed edges with"
+" undirected edges results in a connected graph."
+msgstr ""
+
+#: 66908b1df9064dc3a6d75519a13354fc 6b8c8b8e3a474b1f8295910b1d59afcc of
+#: sds.graph.directed.DirectedGraph.is_connected:6
+msgid "True if weakly connected."
+msgstr ""
+
+#: 0192d37dd1dd40bf9baaaa1dfbcbc3ec d10e883f6df54d0184f02119beb59034 of
+#: sds.graph.directed.DirectedGraph.is_connected:22
+msgid ""
+"Time complexity: O(V + E) with caching. Uses BFS treating edges as "
+"undirected."
+msgstr ""
+
+#: 959d0e52a22c4fed865320773ca81c4a c84db8d815a24371b6415b049d02ffc1 of
+#: sds.graph.directed.DirectedGraph.is_empty:1
+msgid "Check if the graph is empty."
+msgstr ""
+
+#: 1a138cd30f4842e38fec0aeaf321f0ad f1a5e63775724c0ba058460eb785ddb0 of
+#: sds.graph.directed.DirectedGraph.is_empty:3
+msgid "True if graph has no nodes."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:100 bf53131d4b654d03b2de42bc86106c15
+msgid "Utility Methods"
+msgstr ""
+
+#: 470b65b2c35845e2982d2e2c3bfa85e2 69434e9608b3437db64fe26e06fca693 of
+#: sds.graph.directed.DirectedGraph.clear:1
+msgid "Remove all nodes and edges."
+msgstr ""
+
+#: f17a243591bb4789b685f3b6a61e08e1 of
+#: sds.graph.directed.DirectedGraph.__len__:1
+msgid "Return the number of nodes."
+msgstr ""
+
+#: bcf497cfd2d9452da7633c46503e74a1 of
+#: sds.graph.directed.DirectedGraph.__contains__:1
+msgid "Check if node is in the graph."
+msgstr ""
+
+#: b9485c7a9f4d42d59f2295c197b84871 of
+#: sds.graph.directed.DirectedGraph.__iter__:1
+msgid "Iterate over nodes in the graph."
+msgstr ""
+
+#: 0599d77ddfc241deb4482a5588fcac21 5c2b0ac3b384454fbe5086e8fcf16256 of
+#: sds.graph.directed.DirectedGraph.__repr__:1
+#: sds.graph.directed.UndirectedGraph.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 4d00021e95ca4d9c92ecf78d39342990 a229448a62734d489ebe55811942dead
+#: d44c29a2c49b45038dc66f8ef2b11b5a ee9bf3f338494cdebc365bdee925d026 of
+#: sds.graph.directed.DirectedGraph.__repr__:3
+#: sds.graph.directed.DirectedGraph.__str__:3
+#: sds.graph.directed.UndirectedGraph.__repr__:3
+#: sds.graph.directed.UndirectedGraph.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 8792621d01ed42a582a472b9bac6bcb2 a099300fee5c4021a94628192459dd95 of
+#: sds.graph.directed.DirectedGraph.__str__:1
+#: sds.graph.directed.UndirectedGraph.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:104
+#: ../../source/api/graph/directed.rst:636
+#: ../../source/api/graph/directed.rst:691 07f29f31e97940619a77ed8bdb0b4c15
+#: c33fd94ddb9c46b1bff0fce23451905f ee645128fccc4811b3b4e18ae5cddd37
+msgid "UndirectedGraph"
+msgstr ""
+
+#: df2c0c94546048c7a358d1ddd469245d of sds.graph.directed.UndirectedGraph:1
+msgid "Bases: :py:class:`~sds.graph.graph.Graph`"
+msgstr ""
+
+#: 148b2a03ba9d4b239e7e5e7d28673085 of sds.graph.directed.UndirectedGraph:3
+msgid ""
+"This class extends Graph to explicitly validate that only undirected "
+"edges (Edge instances, not DirectedEdge) are added. While Graph also "
+"works with undirected edges, UndirectedGraph makes this requirement "
+"explicit and enforces it through type checking."
+msgstr ""
+
+#: 7a87c6abad7d479faa0a6c4e1e04f8de of sds.graph.directed.UndirectedGraph:8
+msgid ""
+"If True, allows multiple edges between the same pair of nodes. Default is"
+" False."
+msgstr ""
+
+#: 70ad5b0ecb7648c79959ee955febcb29 of sds.graph.directed.UndirectedGraph:20
+msgid "Create and use an undirected graph:"
+msgstr ""
+
+#: 98753875aea14c26b3f85b8ad81422b1 b2d2c417212a4f6e91287a52a3340d87
+#: c52552eb45694c0a9e051d74ce0f39a4 of sds.graph.directed.UndirectedGraph:33
+#: sds.graph.directed.UndirectedGraph.add_edge:20
+msgid "Directed edges are rejected:"
+msgstr ""
+
+#: 6456ebb7368048d6b63733f00db60d85 of sds.graph.directed.UndirectedGraph:40
+msgid "Multi-edges supported:"
+msgstr ""
+
+#: 137019a8ff464ebd93f5e030803543cd of sds.graph.directed.UndirectedGraph:52
+msgid ""
+"UndirectedGraph inherits all functionality from Graph and adds only edge "
+"type validation. All operations (add_node, remove_node, neighbors, "
+"degree, is_connected, etc.) work identically to Graph."
+msgstr ""
+
+#: d33829284bc94c34981b8923e4dc5741 of sds.graph.directed.UndirectedGraph:56
+msgid ""
+"Time and space complexity are identical to Graph: - add_edge: O(1) for "
+"multigraph, O(degree) for simple graph - All other operations: same as "
+"Graph"
+msgstr ""
+
+#: a10052320eb045588b65f6a5f59ab350 of sds.graph.directed.UndirectedGraph:60
+msgid ""
+"The main benefit is semantic clarity and type safety: using "
+"UndirectedGraph makes it explicit that the graph must be undirected."
+msgstr ""
+
+#: 3400994d68bd44e1a45f021e29619ab3 of sds.graph.directed.UndirectedGraph:66
+msgid "Base implementation without explicit edge type checking."
+msgstr ""
+
+#: 866fc6fe29c4474b80047b93c63552ce of sds.graph.directed.UndirectedGraph:68
+msgid ":obj:`DirectedGraph`"
+msgstr ""
+
+#: e8915601dcf24c82ae71d461a2429bb4 of sds.graph.directed.UndirectedGraph:69
+msgid "For graphs with directed edges."
+msgstr ""
+
+#: cfdd6a79eca145308c6e8a84f5aceb63 of sds.graph.directed.UndirectedGraph:71
+msgid ":obj:`WeightedGraph`"
+msgstr ""
+
+#: a704f22fede84b3c9da19620eace485e of sds.graph.directed.UndirectedGraph:72
+msgid "For weighted undirected graphs."
+msgstr ""
+
+#: 8b8d77058bb7413fbc3f3dcd2dbeaf28 e25c18a6477945be8a04b5daee374934 of
+#: sds.graph.directed.UndirectedGraph.__init__:1
+msgid "Initialize an empty undirected graph."
+msgstr ""
+
+#: 0db82d8ebc7640e294c9fb91bc3fbd6b d6f16f14fbea45aaa8fef8c19edb2dd2 of
+#: sds.graph.directed.UndirectedGraph.__init__:3
+msgid "Allow multiple edges between same nodes. Default is False."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:117 b0bacb985cd84afda099fa5476592fc0
+msgid "Edge Validation"
+msgstr ""
+
+#: 4f87d88728ba43fc8275b942eb8133ba d29aa151a4dc4618b26c022e80bb9945 of
+#: sds.graph.directed.UndirectedGraph.add_edge:1
+msgid "Add an undirected edge to the graph."
+msgstr ""
+
+#: 775290f2f8724aff908f354325c8802b df921586fe8c40439781b19c90b9936a of
+#: sds.graph.directed.UndirectedGraph.add_edge:3
+msgid "Undirected edge to add. Must be Edge, not DirectedEdge."
+msgstr ""
+
+#: 394f65fe4f754ecbad671eea60c65840 5d8829ac89f24819beaf14f346785adb of
+#: sds.graph.directed.UndirectedGraph.add_edge:6
+msgid "If edge is a DirectedEdge or not an Edge instance."
+msgstr ""
+
+#: 02d0c29e238e4aff8c8e86c4bdb5e4aa db3971d2d2894ade88ddfd7580e50ec8 of
+#: sds.graph.directed.UndirectedGraph.add_edge:7
+msgid ""
+"If either node is not in the graph, or if edge already exists     and "
+"multigraph mode is disabled."
+msgstr ""
+
+#: b7f3a5b1c2f246d69c616fd2ac417ed4 facec65047be404f921791239313806c of
+#: sds.graph.directed.UndirectedGraph.add_edge:29
+msgid "Time complexity: O(1) for multigraph, O(degree(node)) for simple graph."
+msgstr ""
+
+#: 13b0b4a2d4bb442096f65bc1a837de98 da6fbae798794961abf7cecf12b50a90 of
+#: sds.graph.directed.UndirectedGraph.add_edge:31
+msgid ""
+"This method overrides Graph.add_edge() to add explicit type checking that"
+" rejects DirectedEdge instances."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:120 b080483cb3ee41c2a4c567c548ad8427
+msgid "Note: Inherits all other methods from :class:`~sds.graphs.graph.Graph`."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:123 35bc760ccd00425fa4083b59ec45da48
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:126 c1b503c5cb1b45888b19671ce4e51e9f
+msgid "DirectedGraph Examples"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:129 6d33621c8ac84abca4ba93a117505fcc
+msgid "Creating a Directed Graph"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:144 23dcc55e5d3e47e481b541dc9890f879
+msgid "Adding Nodes and Edges"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:166 8513a7077b4641e6b3e9fde816d1635b
+msgid "Direction Matters"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:175 a75792b4d65c454c94e615d9674ff429
+msgid "In/Out Degree"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:193 d582cffe8d32480e970bf163522f3b6b
+msgid "Predecessors and Successors"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:213 8646fb97ff1041fb836860780e02dd95
+msgid "Cycle Detection"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:225 e11938e09caf4a91b0dea4799aed5a18
+msgid "Weak Connectivity"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:246 b3cd75e6a9854bfd82970ec40cfca222
+msgid "UndirectedGraph Examples"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:249 8a9d228a8b7d42899f3ff12c2c154917
+msgid "Type-Safe Undirected Graph"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:271 1d107a0f9dfc4d8886c9c70fb006d2f6
+msgid "Rejecting Directed Edges"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:283 eb1a9c7c2122481c9e3bb0d5514add01
+msgid "When to Use UndirectedGraph"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:305 5bc91f7960c94c969f556b85fda8f1fa
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:308 11e2aedee3494768aa37add3c08bec4e
+msgid "Example 1: Task Dependencies (DAG)"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:310 970b50e1f46b49d4a931daec1e78af29
+msgid "Project task scheduling:"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:405 66781ccb14f34d5eaf48cf13077baa9f
+msgid "Example 2: Web Page Links"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:407 b9f0b8bde97a472cab105775f04be08f
+msgid "Modeling hyperlinks:"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:474 c146de3743bc4d56bb2758064b593ff0
+msgid "Example 3: Social Network (Followers)"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:476 36c99fa95c624512bf01bc7bc379bccb
+msgid "Asymmetric relationships:"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:567 6c61db9b015548c4aef0ca255cabedce
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:570 31e44ebfc6584e72b3592b91efa6f16d
+msgid "DirectedGraph Time Complexity"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:576 04b186d73f964fa790703cf2efd21d8e
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:577 0b2485f0f6114a428c65b519f476a373
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:579 f579807d03a24dabaeed1a3d3b86a833
+msgid "``add_node(node)``"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:580
+#: ../../source/api/graph/directed.rst:586
+#: ../../source/api/graph/directed.rst:589 86db040c67364386ad15fb383d2340fb
+#: 95127a29ac0641d9a5c4e90078b69b6f fc112c49313a4aa3ba5d888bdcb9aadf
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:581 c8336e89574a44a090649ee9fa883626
+msgid "Hash table insertion"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:582 ab175bae4b7743af95f4ff04a291567e
+msgid "``add_edge(edge)``"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:583 a6889d82697148c284795dd84c1cfc38
+msgid "O(1) or O(out_degree)"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:584 88ac6b948dfb45e4ac00f3440959c34d
+msgid "Check duplicates in simple graph"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:585 fe010444475a4fae81cb16ef1e623e1d
+msgid "``in_degree(node)``"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:587
+#: ../../source/api/graph/directed.rst:590 79ff05849c2143f59287cf2bfca338a3
+#: a9165dd0140a4d6b96f4f477e8fc2d60
+msgid "Cached in adjacency list"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:588 b60a0e02a86f48c49303e5c6747ba65a
+msgid "``out_degree(node)``"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:591 1980597dd665478b9f05426d2a089ece
+msgid "``predecessors(node)``"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:592 029b113584004e1083872ab264679b1d
+msgid "O(in_degree)"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:593 26c8a46f4cba401296887f8d6bd1b1fb
+msgid "Iterate in-adjacency"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:594 659496e7f67b4961b8ea212c8d118f96
+msgid "``successors(node)``"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:595 50349966d5304bee9aafe20cc06303d3
+msgid "O(out_degree)"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:596 3eac44ef8e344e7c87a05d3441ba2d9d
+msgid "Iterate out-adjacency"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:597 bb39b85520c14c8db9a09fed33f9836a
+msgid "``is_acyclic()``"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:598
+#: ../../source/api/graph/directed.rst:601
+#: ../../source/api/graph/directed.rst:616
+#: ../../source/api/graph/directed.rst:618
+#: ../../source/api/graph/directed.rst:622
+#: ../../source/api/graph/directed.rst:654
+#: ../../source/api/graph/directed.rst:655
+#: ../../source/api/graph/directed.rst:656 11c672a114514d7da568551704ccbb0c
+#: 2bae969f5bf045dd80fe20d015b111c7 3f0327815416461e89bf1bbb5133f7fd
+#: 5889215afecf4bc4ab9a815253a5ffe2 5e5419951258421a9a7ee6655e50de49
+#: 664d77ebd36a4e53a9a515ad17259bd5 7617f869348a4b7692b42bfbaff0290a
+#: d63d1ec91f0a4b959d23d443a58f3ba6
+msgid "O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:599 66b072ea3d2d4ca7a2822872d51114c2
+msgid "DFS with coloring, cached"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:600 8a948c8add8d4324a7f3cb0a1244ffdd
+msgid "``is_connected()``"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:602 4c4af0030fad46b4936c679b273ca804
+msgid "Weak connectivity BFS"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:605 4029ed9494b9424c8fe03f6648ef076e
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:611 65521ec523c84a74b3d109fbc015e159
+msgid "Component"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:612 b90414ce8ab14a1195e6e2a5eb4f4b08
+msgid "Space"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:613 f7eec3451ea14881a800f8662e1a98a1
+msgid "**Nodes**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:614 b423825aafef4b64b7cd1e779140609a
+msgid "O(V)"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:615 2cdf493d989b4098945fdc16a7ab8e09
+msgid "**Out-adjacency**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:617 e54984bfeaa0425ab23736368bd16c1d
+msgid "**In-adjacency**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:619 d50883a45c274b9980fe56316c01b84d
+msgid "**Edge list**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:620 825af6dfc0454bd0a640d7ae28487392
+msgid "O(E)"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:621 c36a461a99644d47ba356b1b3af44def
+msgid "**Total**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:624 c1ebcbafa0474faa8ed0e48f74e17d55
+msgid ""
+"Note: DirectedGraph uses slightly more memory than Graph due to separate "
+"in/out lists."
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:627 285ef92e582845dd997a2d4c44ed2ea3
+msgid "Comparison: Graph Types"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:633 6c93e3f78faf4e89b10d2bbe0d302586
+msgid "Feature"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:634 b313c70497a144689071b0de81318719
+msgid "Graph"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:637 b5ee347a64e544c9b95f83ac247c3f56
+msgid "**Edge Type**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:638 0b9ca825b88f4faa953cfb06f8eac144
+msgid "Undirected"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:639 cc32ca32a6094c19a9f7c2ba079b8a54
+msgid "Directed"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:640 c26ab48418154ba6b302ccc042b00fdc
+msgid "Undirected (validated)"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:641 08f37d23285048098663a4739ed17fe2
+msgid "**In/Out Degree**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:642
+#: ../../source/api/graph/directed.rst:644
+#: ../../source/api/graph/directed.rst:646
+#: ../../source/api/graph/directed.rst:648 0c5a1da95baa46cf9c968604aed78ef0
+#: 2c74419135044e188eabb1a4c312e678 47ef6369d6c247e7a6e3371a7307ca27
+#: af8e228abc5947a993d6180476bc736a
+msgid "No"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:643
+#: ../../source/api/graph/directed.rst:647 0b9ec168857d4d3699ffff46c3a98cf6
+#: 42caeb31d646434db5a3a7e69e0d566c
+msgid "Yes"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:645 07cc6608037b4ef4bae234d97d8447bf
+msgid "**Cycle Detection**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:649 c799ae0a81bd476695035f35dc2fcba2
+msgid "**Type Checking**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:650 8c91443699f948eabcc5141137fcea4d
+msgid "Minimal"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:651 25abccbd596f4682828563dee243bef2
+msgid "Edge type"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:652 53b8bc3a56b3403b9d805047d6edf248
+msgid "Strict Edge type"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:653 63448b6cabdf4164a82ec0af342f8587
+msgid "**Memory**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:659 76f43483a197491fa495292e89c65329
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:664 9d2ad36dac48472395a9be16d834775e
+msgid "✅ **Use for asymmetric relationships**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:673 f9dfd4314e974624a0856aad18c0a4b7
+msgid "✅ **Check cycles for DAGs**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:680 425850ad5e494ce1abcbaf149f5f71c8
+msgid "✅ **Use predecessors/successors appropriately**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:693 38850be1584347bc9e1736effbbf9291
+msgid "✅ **Use for type safety**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:704 d0fef7682079413796dccdbedf137964
+msgid "✅ **Use for semantic clarity**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:713 495c28b0c8ec42abb17084b6e4819f9d
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:715 498c6e2cfee9483fb60d9a24e037d1cc
+msgid "**Confusing edge direction**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:727 be436477b9bb477683bb900f721ed0a4
+msgid "**Not checking for cycles in DAGs**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:737 218d89c0080946feb190ab5b94e3fe23
+msgid "**Mixing Graph and DirectedGraph**"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:747 0e4134bfee094e5dbf40ed4cab5aef70
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:749 249cf7c6888b44699f4423483206ed98
+msgid ":doc:`graph` - Base undirected graph"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:750 b922fde7c94640db9b92fc394bdca622
+msgid ":doc:`weighted` - Weighted graphs"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:751 3e9d3ee958094cffa70da27f1f0960c3
+msgid ":doc:`../../guide/graph_structures/directed` - User guide"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:754 29dd94795626467995c88af16cb37554
+msgid "References"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:756 094c5df2ce1148b4a8c9e35b2fa014d5
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 22"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:757 3f1548bebf8d4aedab09d5efc8aa2602
+msgid ""
+"Bang-Jensen, J., Gutin, G. \"Digraphs: Theory, Algorithms and "
+"Applications\", Springer, 2008"
+msgstr ""
+
+#: ../../source/api/graph/directed.rst:758 b310197a85a34351a8abaea5eeab8548
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Chapter 4.2"
+msgstr ""
+

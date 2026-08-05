@@ -1,0 +1,720 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/advanced/disjoint.rst:5 b5d4e1efe75b4edd8aa5c289c1a57124
+msgid "Disjoint Set"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:9 fbd5c38dad864540a9dcdd131054e719
+msgid ""
+"The Disjoint Set (also known as Union-Find) is a data structure that "
+"efficiently tracks partitions of elements into disjoint sets, supporting "
+"fast union and connectivity queries."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:15 43888a05d76643c297a9f263c3156a42
+msgid "Contents"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:18 0d0b3af0190446458dc556d562148027
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:20 ab05e6bdad54488c8c55cf084d75fcfc
+msgid ""
+"The Disjoint Set maintains a forest of trees where each tree represents a"
+" distinct set. With path compression and union by rank optimizations, "
+"operations achieve nearly constant amortized time complexity."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:25 44216a18f5d64bd192793df3a9b66002
+msgid "Key Features"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:27 bff57ec816714c11a91b33321ccd5c90
+msgid "**Path Compression**: Flattens tree structure during queries"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:28 060ce0490eca467592b25887ca11071b
+msgid "**Union by Rank**: Keeps trees balanced during merges"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:29 2867f859ec754513adb3b3fce3450107
+msgid "**Nearly O(1) Operations**: α(n) amortized complexity"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:30 412a7d49cff04ea3b97d171d4841ef90
+msgid "**Space Efficient**: O(n) space for n elements"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:33 bad7c0b958cf48f5b68cfb2d77c7221e
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:39 d093d54e868b48d2b711e79926dda271
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:40 5f9ae26549994864990fb4af5fffd58d
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:41 44f27d75ef4748729caf2d2939b04d2a
+#: 50a05f0e07ba46848180f832a869764e 55604fb3623f4f2cb53132283d4e907e
+#: 5b7b1b2a17e348918a3d36a34dffa2d6 68f92619bd7641ee8a9d08865543f091
+#: a8daaaaa6e7e4618983628f2d82fa5a9 c25f61d8685d42dfa1f754b544e7efb1
+#: ed17da9514f142828deeeaa36124f67d of
+#: sds.advanced.disjoint_set.DisjointSet.connected:28
+#: sds.advanced.disjoint_set.DisjointSet.count_sets:20
+#: sds.advanced.disjoint_set.DisjointSet.find:24
+#: sds.advanced.disjoint_set.DisjointSet.get_sets:23
+#: sds.advanced.disjoint_set.DisjointSet.make_set:24
+#: sds.advanced.disjoint_set.DisjointSet.size:27
+#: sds.advanced.disjoint_set.DisjointSet.union:29
+msgid "Notes"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:42 2f127a19006047c99f8d34d16c7f6cd2
+msgid "make_set(x)"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:43
+#: ../../source/api/advanced/disjoint.rst:58 eb02aafaeba447ca879dccf965465217
+#: ef5af65572c54bb9a0c2f952c9e514ae
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:44 dbb7e04d961041b1b1028a102bc0984b
+msgid "Creates singleton set"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:45 5790d24cf1524c828a3345ed132a0817
+msgid "find(x)"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:46
+#: ../../source/api/advanced/disjoint.rst:49
+#: ../../source/api/advanced/disjoint.rst:52
+#: ../../source/api/advanced/disjoint.rst:55 19482b24375145e9bba206e7782a1f06
+#: 84015eedccaa419490344ec4ed9bd949 90efdb33eef04e92904519b8cb322c47
+#: bab027a547dd49e88baaf2a64ffdc911
+msgid "O(α(n))"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:47 6cc488aeab0e4cc5a0d8f443fccccd36
+msgid "With path compression"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:48 ec4b19e7bbbd424aa02e5ed7474d3d50
+msgid "union(x, y)"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:50 2cbc49aad31047a1bfa771fd60c17bac
+msgid "With union by rank"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:51 23ca6c5e2f754051aa4d983a223f8c17
+msgid "connected(x, y)"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:53 dcb5092afed8453eaf108012198f2ab7
+msgid "Equivalent to find"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:54 0373de11f3af4befba9a74d4a0a6a979
+msgid "size(x)"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:56 0a21f8f4ca2841dd9f87806eee8ae2ee
+msgid "Cached for roots"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:57 f6c88f0c761546659fc14a926082338e
+msgid "count_sets()"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:59 330bc9db19bf4d60a02d5e4a3b0d127a
+msgid "Maintained counter"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:60 5ad28ad816ad41d088b8c4a741bdfe0c
+msgid "get_sets()"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:61 1e65b8cbd8da4f9f8c0847b2c43508f8
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:62 5b2b75da37a44b099d0b82eb2cf3b97e
+msgid "Full traversal needed"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:65 245e7aa884b24d30825eafa443dc7cca
+msgid ""
+"α(n) is the inverse Ackermann function, which grows so slowly that α(n) ≤"
+" 4 for all practical values of n (n < 10^80). Thus, operations are "
+"effectively constant time."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:70 11a2c106c8e64f8cbe138678e327a71b
+msgid "Visual Representation"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:72 d6fc1e13c880422c9d01cd0e6f17608f
+msgid "**Initial State (Singleton Sets)**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:103 e9cde09ec4d2458a82152954d8f6a975
+msgid "**After union(0,1), union(2,3)**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:130 029ace1db1ea446ca9853d52776c8fa8
+msgid "**After union(1,2) - Union by Rank**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:156 230b751a30dc4a0392c3decb1cebf3ed
+msgid "**Path Compression Effect**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:187 82b6e4c445e54ea39188c3cfdc9839ea
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:195:<autosummary>:1
+#: 1d810c8a07a24c538112ea75b763d7dc
+msgid ":py:obj:`DisjointSet <sds.advanced.disjoint_set.DisjointSet>`"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:195:<autosummary>:1
+#: 87df0c3864684440af6b1a72c069d337
+msgid "Disjoint Set (Union-Find) with path compression and union by rank."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:197 4c75820838da429c9199ae1e6f58f5ea
+msgid "Detailed API"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:200 f09e5283956549bfb70371065e9cf202
+msgid "Constructor"
+msgstr ""
+
+#: 5dff7cba677d472d8a2a673b519be7b2 of
+#: sds.advanced.disjoint_set.DisjointSet.__init__:1
+msgid "Initialize an empty disjoint set structure."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:467 24301216002244e29e80e0267709dfcd
+#: 29fad4caf4414a53984987edf5bbf0dc 2ec2e4752a3c43e7b952c3e71e63a726
+#: 2fd325ee7de241c1a87b1499c7d1ace9 3a44a7747e9f4434ad7592cea0629ffa
+#: 3d30fe0b606a460ca44fde8dd9f76e7c 44bc0359ea794bc98bc7f6b8e4e188bb
+#: 45be4f377c304926b04e8e392f908224 755cb4c247f0431ca794788f98e63d89
+#: 7cefe3fb8ea64c21856f6d86baac404a 82636df0b4894b329617a0f9aca7e580
+#: a074736206b146ddb9e26272fcdaba7a cdeaaeee83314073af6b72debe8fe378
+#: e179ca9c79dc480696beec90b0781b8e of
+#: sds.advanced.disjoint_set.DisjointSet.__contains__:9
+#: sds.advanced.disjoint_set.DisjointSet.__init__:3
+#: sds.advanced.disjoint_set.DisjointSet.__len__:6
+#: sds.advanced.disjoint_set.DisjointSet.__repr__:6
+#: sds.advanced.disjoint_set.DisjointSet.__str__:6
+#: sds.advanced.disjoint_set.DisjointSet.connected:13
+#: sds.advanced.disjoint_set.DisjointSet.count_sets:6
+#: sds.advanced.disjoint_set.DisjointSet.find:13
+#: sds.advanced.disjoint_set.DisjointSet.get_sets:6
+#: sds.advanced.disjoint_set.DisjointSet.make_set:9
+#: sds.advanced.disjoint_set.DisjointSet.num_sets:6
+#: sds.advanced.disjoint_set.DisjointSet.size:11
+#: sds.advanced.disjoint_set.DisjointSet.union:15
+msgid "Examples"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:204 d5335c09fe2b42e5b84c6ae3c4d02faa
+msgid "Creates an empty disjoint set structure."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:206
+#: ../../source/api/advanced/disjoint.rst:222 5ddc246fc44049d3a80c7f42b119b052
+#: 8e92b752f4454440973c804aa3f719f7
+msgid "**Example:**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:216 aa471efc5cc64fca88300a35d7b978ad
+msgid "Properties"
+msgstr ""
+
+#: 159dc46895c643cab9e94c109cd9baa9 31e46f9a8ee94819be11f68b97b5218c of
+#: sds.advanced.disjoint_set.DisjointSet.count_sets:1
+#: sds.advanced.disjoint_set.DisjointSet.num_sets:1
+msgid "Get the number of disjoint sets."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst 06da1cfb35c048ae9459a9a1c1feb116
+#: 0d2d52ecf68a4f188bc07adba6d4117e 2c83a5a6180f4916829cc03b3d186aee
+#: 58e0ac1bfea5423cacd3e9bce549279f 5bbd8ba924404aa78ee06ccf887538ca
+#: 682170030897407e9bb2068dec8a575b 6d1c329006ea4a3394bce99588df2531
+#: 986e4d1e7eae4660846b69443d09f385 c03a77e6cffc4a098e9819286497a6d2
+#: db8a2e94c71d40909856112fa22f3979 f7bed280b19a4f7abf7295f3ab1693df
+msgid "Returns"
+msgstr ""
+
+#: dd5a67c3f17848088813b55fb39365af of
+#: sds.advanced.disjoint_set.DisjointSet.num_sets:3
+msgid "Current number of disjoint sets."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst 1a518b32b5c74736a2a1ff531a7f39ae
+#: 2aa92550a3da4a86b342a51b1f2b280c 33a2b70de94343dcb82267c1bf0199f1
+#: 3a96002c78fb4ccfb67e0e2218e76c1e 485223d105cb4c4a9f67162645c81fb5
+#: 5d06cfa094ee46c1928a3bc33d7cff84 625f729cb6074763a8fdf9fea0a39666
+#: a3d1c70166b4447ab814586efd25de6d b3d32832cec24eb5bcc95b7c096fbb87
+#: b94dda3dccf14f6c8c145c203f8bb182 f87775f57cf8466696455e6bed005182
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:220 b52871cbc6674ef289c5217a8469d8d4
+msgid "Returns the current number of disjoint sets."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:235 0332a3817d1e4954a1d7d920df944e20
+msgid "Set Creation"
+msgstr ""
+
+#: 9a5c6810919e48369362e4242cf94096 of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:1
+msgid "Create a new set containing only the given element."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst 2d090985a4ac4eb3ac81aa6848b4b9b5
+#: 2fa11e8b6b724587a07d6e5d197a67ba 3ea188c0d9804a8eacf639087fb57833
+#: beb72971461c4447bf173c4e73012d4c c29d3a15d0974870892c8d0decf806c5
+#: db2e58586ea1401182fd9446aab4fbe7
+msgid "Parameters"
+msgstr ""
+
+#: 69e7cea516464518905e58d6e092a278 of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:3
+msgid "Element to create a set for (must be hashable)."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst 0825f68deb684a36ba76437ad89e92e5
+#: 136d438fc0f34ea0be56c93d8a6ee5fa 292a14a549d145b282ad055ef42bdf1b
+#: b8bbac87b9d5465b97634e648800ce44 e7080ab36d1846819eed36c3fd79b878
+msgid "Raises"
+msgstr ""
+
+#: 326329657d144009a1a14f703e31706c of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:6
+msgid "If element is not hashable."
+msgstr ""
+
+#: bd01b425d9a241409b14c194f6eb4fbc of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:7
+msgid "If element already exists in a set."
+msgstr ""
+
+#: 99146019fc1d43ebbe3dd693e48790df of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:17
+msgid "Duplicate elements raise error:"
+msgstr ""
+
+#: 4a7bbcea8946488692fc4eb5fb62dfa0 of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:26
+msgid "Time complexity: O(1) Space complexity: O(1)"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:239 c68ce923cc75489aa08024f3d6ee51ae
+msgid "**Error Handling:**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:259 fac064a985724fa496019c45a89e4b04
+msgid "Find Operations"
+msgstr ""
+
+#: 2eb77c0c50974c45b09fcec82db2e3a3 of
+#: sds.advanced.disjoint_set.DisjointSet.find:1
+msgid "Find the representative of the set containing element."
+msgstr ""
+
+#: b2fd60074cd441eeaca302959c3d9274 of
+#: sds.advanced.disjoint_set.DisjointSet.find:3
+msgid "Uses path compression: makes all nodes on path point directly to root."
+msgstr ""
+
+#: 9578cb27c7a8459492e9233d6393f2fb of
+#: sds.advanced.disjoint_set.DisjointSet.find:5
+msgid "Element to find the representative for."
+msgstr ""
+
+#: 7b3d27ac380448b78f983e7067a17b01 of
+#: sds.advanced.disjoint_set.DisjointSet.find:8
+msgid "Representative (root) of the set containing element."
+msgstr ""
+
+#: 33cb17a02d454af2ab2fa4967e40ab3d e2ffd8180c8a44d2b93e9a4ce0f3714a of
+#: sds.advanced.disjoint_set.DisjointSet.find:11
+#: sds.advanced.disjoint_set.DisjointSet.size:9
+msgid "If element is not in any set."
+msgstr ""
+
+#: 7abb77581d944fe3ba0224fcc60b9708 of
+#: sds.advanced.disjoint_set.DisjointSet.find:26
+msgid ""
+"Time complexity: O(α(n)) amortized with path compression. Path "
+"compression flattens the tree structure on each find operation."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:263 036b1e6a0fcb4376a4eaeb04236169e6
+msgid "**Path Compression Visualization:**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:283 f1ee9231704e4abf9346a6adcb09e8f5
+msgid "Union Operations"
+msgstr ""
+
+#: b2729585c146498ebbc68dde95ab3aa6 of
+#: sds.advanced.disjoint_set.DisjointSet.union:1
+msgid "Unite the sets containing x and y."
+msgstr ""
+
+#: 533ce991a8e74257ab4cd222b2bc29a7 of
+#: sds.advanced.disjoint_set.DisjointSet.union:3
+msgid "Uses union by rank: attach smaller rank tree under root of higher rank."
+msgstr ""
+
+#: 84b24fb459704b99b2c8ee2ca5d76704 of
+#: sds.advanced.disjoint_set.DisjointSet.union:5
+msgid "Element in first set."
+msgstr ""
+
+#: bd4db70339ff457f9a13bf4a3e0a7444 of
+#: sds.advanced.disjoint_set.DisjointSet.union:7
+msgid "Element in second set."
+msgstr ""
+
+#: aa5f9ed21593448ab74aee73327fe87f of
+#: sds.advanced.disjoint_set.DisjointSet.union:10
+msgid "True if sets were merged (were different), False if already same set."
+msgstr ""
+
+#: 1141ae2b498f4872b10c3f7da1a77d38 71afd4caf10048b1856974f0922a6802 of
+#: sds.advanced.disjoint_set.DisjointSet.connected:11
+#: sds.advanced.disjoint_set.DisjointSet.union:13
+msgid "If x or y is not in any set."
+msgstr ""
+
+#: a4fe72583f4a4d50bc1e16f228db248f of
+#: sds.advanced.disjoint_set.DisjointSet.union:31
+msgid ""
+"Time complexity: O(α(n)) amortized. Union by rank keeps trees balanced "
+"for optimal performance."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:287 af3dda109e154f8d9bbc843ea4767ede
+msgid "**Union by Rank Strategy:**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:309 63bd83c50b39487eafdda50fe8835f5c
+msgid "Query Operations"
+msgstr ""
+
+#: dc1e617b2bce421abb8584c6fe2530e9 of
+#: sds.advanced.disjoint_set.DisjointSet.connected:1
+msgid "Check if x and y are in the same set."
+msgstr ""
+
+#: d9405f11dbd94be1857e91b365d816d1 of
+#: sds.advanced.disjoint_set.DisjointSet.connected:3
+msgid "First element."
+msgstr ""
+
+#: bd944808360540d393daebf22d44e67f of
+#: sds.advanced.disjoint_set.DisjointSet.connected:5
+msgid "Second element."
+msgstr ""
+
+#: 6a38f47cdb004e6ca35881f20294b93a of
+#: sds.advanced.disjoint_set.DisjointSet.connected:8
+msgid "True if x and y are in the same set."
+msgstr ""
+
+#: 14ee9ed327454e07a075dc2398201fc5 c2f0da0ebd644cf7805586fb55a72dcc of
+#: sds.advanced.disjoint_set.DisjointSet.connected:30
+#: sds.advanced.disjoint_set.DisjointSet.size:29
+msgid "Time complexity: O(α(n)) amortized."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:313 31e14dde450a461e9e21835c491c0c63
+msgid "**Practical Usage:**"
+msgstr ""
+
+#: 4b5307effe344c94bb12b0ff5a3d2e01 of
+#: sds.advanced.disjoint_set.DisjointSet.size:1
+msgid "Get the size of the set containing element."
+msgstr ""
+
+#: 7b324934dc3b435d8bbb8498a78009a2 of
+#: sds.advanced.disjoint_set.DisjointSet.size:3
+msgid "Element in the set."
+msgstr ""
+
+#: f218e2d53ea2482c8da3c5f3ace4b894 of
+#: sds.advanced.disjoint_set.DisjointSet.size:6
+msgid "Number of elements in the set."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:335 fe98c838a10b442496e17dbe142d4f29
+msgid "**Tracking Component Sizes:**"
+msgstr ""
+
+#: c2a6365501744b4aab575f3e1db259e0 of
+#: sds.advanced.disjoint_set.DisjointSet.count_sets:3
+msgid "Number of disjoint sets."
+msgstr ""
+
+#: f1ec85acfe904fab94f3f93c64f3ca40 of
+#: sds.advanced.disjoint_set.DisjointSet.count_sets:22
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:358 08d848451bbc4f718922ac5efa7442a3
+msgid "**Monitoring Connectivity:**"
+msgstr ""
+
+#: 3499e003821b4459934113c2d2dc668e of
+#: sds.advanced.disjoint_set.DisjointSet.get_sets:1
+msgid "Get all disjoint sets."
+msgstr ""
+
+#: 1c4b950f182e4704b79db403ebbba693 of
+#: sds.advanced.disjoint_set.DisjointSet.get_sets:3
+msgid "List of all disjoint sets."
+msgstr ""
+
+#: bb4c97b53fb54684980a46636b46c155 of
+#: sds.advanced.disjoint_set.DisjointSet.get_sets:25
+msgid ""
+"Time complexity: O(n) where n is number of elements. Creates new set "
+"objects, so modifications don't affect structure."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:379 821cf205eefc444fac1eb41e5066131e
+msgid "**Analyzing Partitions:**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:405 ad36aea8c42e4231bc40461fbccde559
+msgid "Special Methods"
+msgstr ""
+
+#: b7e21876538b4f45b5d1483ca24ee3f7 of
+#: sds.advanced.disjoint_set.DisjointSet.__len__:1
+msgid "Return the total number of elements across all sets."
+msgstr ""
+
+#: 846f58f708a84a07b565be5984527259 of
+#: sds.advanced.disjoint_set.DisjointSet.__len__:3
+msgid "Total number of elements."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:409 1e3f8f6913e64b7fb3e67b4477ff556b
+msgid "**Element Count:**"
+msgstr ""
+
+#: 26ec72fd4ba54185a6e1e531f831e438 of
+#: sds.advanced.disjoint_set.DisjointSet.__contains__:1
+msgid "Check if element exists in any set."
+msgstr ""
+
+#: 5d907ad6c7354087978a04fd85008332 of
+#: sds.advanced.disjoint_set.DisjointSet.__contains__:3
+msgid "Element to check."
+msgstr ""
+
+#: b60c7dceb4e54dd9b1c6e66650d9fafa of
+#: sds.advanced.disjoint_set.DisjointSet.__contains__:6
+msgid "True if element is in any set."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:427 845003e47b7a452ab27cea074f81ed71
+msgid "**Membership Testing:**"
+msgstr ""
+
+#: d3ae2b28028c4bd59f9aa23ec9dfe306 of
+#: sds.advanced.disjoint_set.DisjointSet.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 5e680143119c4e86b6fdf302ac8f2442 8903a8d7a9e843179261fdcced3c82b8 of
+#: sds.advanced.disjoint_set.DisjointSet.__repr__:3
+#: sds.advanced.disjoint_set.DisjointSet.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:440 5f8e82b4b9b14b4e8e870386ce9e55bb
+msgid "**Debugging Information:**"
+msgstr ""
+
+#: a66a13efc9e549aaa71601148c0f063e of
+#: sds.advanced.disjoint_set.DisjointSet.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:455 7cb7063079144a5ca7dccee1b6fa6689
+msgid "**Human-Readable Output:**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:470 815bc8df8d7b4224a8f85b34600ff866
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:472 12dcab10594848bd85d6feec71b6168f
+msgid "**Connected Components**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:506 eb39d7aba5634970bfd82da30ccb09d8
+msgid "Graph Algorithms"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:508 39b097ab25f449888a831a8b373ba460
+msgid "**Cycle Detection**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:552 25dea56553a847d08615f97431eaae6a
+msgid "**Kruskal's Minimum Spanning Tree**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:606 77a21921308d4e40b7c04ccff6ee3af1
+msgid "**Network Connectivity**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:664 c4cbd9c251cd4d44900536756c0be6b7
+msgid "Advanced Applications"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:666 27f16570f4804fff9959f8302d229878
+msgid "**Image Segmentation**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:725 b49428fb65744044bde4a4df8bf3d444
+msgid "**Social Network Analysis**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:801 e5f5a847486a451da967d31341e7f30e
+msgid "Performance Considerations"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:804 5e05b79c66674c159feafdbbbff2be74
+msgid "Optimization Techniques"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:806 bce8e68513c04b8797382ce0b72afe01
+msgid "**1. Path Compression Variants**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:831 c8e0f64ab71e4601bcc5f0691f5f818c
+msgid "**2. Union Strategies**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:842 85ebcc43b7434ee1877c0da4fce0bf3f
+msgid "**3. Batch Operations**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:853 ceada44b84134a189b5aee36941750b9
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:855 d4a31a79caa54112bfda0d168cb4b462
+msgid "**1. Forgetting to Initialize Elements**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:869 dac630d5bf464b00b7084b01fd8f090d
+msgid "**2. Assuming Size is O(1)**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:879 4af62a73269b4a93b1951643d84cbd20
+msgid "**3. Modifying Returned Sets**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:888 5538b094da814ecaa361487428622ae5
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:890 02cd3494fd76430f8f8006be8df7cc1b
+msgid "**1. Pre-allocate Elements**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:899 8f64741bc87c41a8b1256ba10cc1f768
+msgid "**2. Use Meaningful Element Types**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:912 686cfdc09ae7404ea24006e1cdd3770b
+msgid "**3. Monitor Component Count**"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:923 152b5bdc454e4bbd8814bbd7b57e49c8
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:925 6a20bd56ef2d4d518fd15ebe68f1b4fe
+msgid ":ref:`guide_advanced_disjoint_set` - Comprehensive usage guide"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:926 67b210bb68524acc942e53aaa7b4ea5a
+msgid ":ref:`api_advanced_interfaces` - Abstract base class"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:927 79914be9c9a54a818d4fea8f534f63a0
+msgid ":ref:`guide_algorithms_graph` - Graph algorithms using DisjointSet"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:928 c1605d3442f24490be4e876862fd7683
+msgid ":ref:`guide_algorithms_mst` - Kruskal's algorithm"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:931 2c36b63405014487ba1f74635747e02d
+msgid "References"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:933 e3faaf0ebcbe4e3aa18711c77a83b0da
+msgid ""
+"Tarjan, R. E., & van Leeuwen, J. (1984). \"Worst-case Analysis of Set "
+"Union Algorithms\". *Journal of the ACM*, 31(2), 245-281. DOI: "
+"10.1145/62.2160"
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:937 4938b4a6c44f413183ad2b56cd0f99e7
+msgid ""
+"Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). "
+"\"Introduction to Algorithms\" (3rd ed.). MIT Press. Chapter 21: Data "
+"Structures for Disjoint Sets."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:941 6806ddb8d829441496e98e61e520cf51
+msgid ""
+"Galil, Z., & Italiano, G. F. (1991). \"Data structures and algorithms for"
+" disjoint set union problems\". *ACM Computing Surveys*, 23(3), 319-344."
+msgstr ""
+
+#: ../../source/api/advanced/disjoint.rst:944 f20ba60ed07e40ab915d7ebfe8a193f3
+msgid ""
+"Tarjan, R. E. (1975). \"Efficiency of a Good But Not Linear Set Union "
+"Algorithm\". *Journal of the ACM*, 22(2), 215-225."
+msgstr ""
+

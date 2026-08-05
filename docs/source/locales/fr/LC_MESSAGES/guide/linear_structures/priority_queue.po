@@ -1,0 +1,723 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/linear_structures/priority_queue.rst:5
+#: 8284d40aa4e4449c88df329c6e8d0d1a
+msgid "Priority Queue Guide"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:10
+#: 113f8f5ffcd44e62b2498decbbeddfb8
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:12
+#: 8a6af220bb6540348e7c8498e7363947
+msgid ""
+"A **priority queue** is an abstract data structure where each element has"
+" an associated **priority**. Elements are dequeued in priority order "
+"rather than insertion order. Think of it like an emergency room: patients"
+" are treated by urgency, not by arrival time."
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:39
+#: 64fcc455f3a94101a8eabb9cc275aedb
+msgid ""
+"By convention, **lower numeric values indicate higher priority** "
+"(priority 1 > priority 5), similar to ranking systems. This can be "
+"customized based on your needs."
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:44
+#: 54c00d9aab8c4fada0352754dd8cda26
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:47
+#: 41734ebe8d4445138167c7b01f6475ad
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:49
+#: d1f1c3c778f94929b8b17cee37064593
+msgid "A priority queue :math:`PQ` is a collection of elements:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:51
+#: 92555be77c584f8a8c4d293d026640d3
+#, python-brace-format
+msgid "PQ = \\{(e_1, p_1), (e_2, p_2), \\ldots, (e_n, p_n)\\}"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:55
+#: 1a7026c6a72141caa11167c69bed8eef
+#, python-brace-format
+msgid ""
+"where each element :math:`e_i` has an associated priority :math:`p_i \\in"
+" \\mathbb{R}`."
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:58
+#: 5480b9e385084fff8b1ecb6739ae39ac
+msgid "Priority Ordering"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:60
+#: 7cbc52e001f64259b453d90d20c7caca
+msgid "Elements are ordered by priority, not insertion order:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:62
+#: 23fb1e0e422f406fa727670a2cd3e9c2
+#, python-brace-format
+msgid "dequeue(PQ) = (e_i, PQ \\setminus \\{(e_i, p_i)\\})"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:66
+#: 0702f2c61d4d4eddb3eae41caf780d2f
+#, python-brace-format
+msgid ""
+"where :math:`p_i = \\min_{(e, p) \\in PQ} p` (assuming lower = higher "
+"priority)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:69
+#: 9638ff9b35fc4e9c851146aaaac22e91
+msgid "Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:72
+#: 6461704a2ccf41cbbaba350f249011bf
+msgid "Enqueue Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:74
+#: 1b023f3fa8db466d9e175e065a81b9d7
+msgid "Adds element with priority:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:76
+#: 5030c62c18a24b9c85bc4aeae0c967fb
+#, python-brace-format
+msgid "enqueue(PQ, e, p) = PQ \\cup \\{(e, p)\\}"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:80
+#: ../../source/guide/linear_structures/priority_queue.rst:96
+#: 91792dff0fe84e838112957291202823 b0fb655aa8f945e78d0e8ad5340464a1
+msgid "**Properties:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:81
+#: 7dbf19f3b93b468d9a9785b080795c4b
+msgid ":math:`|PQ'| = |PQ| + 1`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:82
+#: 513b2654ba6d4995b38fc4f98f5fdbdb
+msgid "Position determined by priority, not insertion order"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:83
+#: 9a701eda93e847569e659d77731b04a9
+msgid "Time complexity depends on implementation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:86
+#: 446b268898544b5baf6210469a024ea7
+msgid "Dequeue Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:88
+#: a9bd4abdedf64bbf9b3c70160a1f5157
+msgid "Removes and returns highest priority element:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:90
+#: 4a93d42bbad7434f947ad4d418bc4a50
+msgid "dequeue(PQ) = (e_{min}, PQ \\setminus \\{(e_{min}, p_{min})\\})"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:94
+#: b9264428b827492aa3cfb2b8cd01ce20
+#, python-brace-format
+msgid "where :math:`p_{min} = \\min\\{p_1, p_2, \\ldots, p_n\\}`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:97
+#: ae6c8b346cba4c70af5da27f5d970185
+msgid "Returns element with highest priority"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:98
+#: 8f68e781e5b4449e8d51a7f227f5436b
+msgid ":math:`|PQ'| = |PQ| - 1`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:99
+#: ed8c75bf140442c49940ae1f0797f526
+msgid "Undefined for empty queue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:102
+#: 1d996668d1a0499c9ad08c69cbe6b975
+msgid "Peek Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:104
+#: 5d69157e250d4766b1240f6635c4e22e
+msgid "Views highest priority element without removing:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:106
+#: eb5838f098094a9389ba46d4e8a9d24c
+#, python-brace-format
+msgid "peek(PQ) = e_{min} \\text{ where } p_{min} = \\min\\{p_1, \\ldots, p_n\\}"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:111
+#: d8eeeb24e58c4d3d8d1d39cdf4658dc1
+msgid "Priority Queue Invariants"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:113
+#: a7808036094649c2b8a6fe68c922a9be
+msgid ""
+"**Priority ordering**: :math:`\\forall (e_i, p_i) \\in PQ : dequeue()` "
+"returns element with minimum :math:`p`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:114
+#: f3abf14754774dc28ebb1bd488b0ca45
+msgid "**Size**: :math:`|PQ| \\geq 0`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:115
+#: 7ca7137809914f7fa064299058137af7
+msgid "**Uniqueness not required**: Multiple elements can have same priority"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:116
+#: 44b3dd521ab843d59a789b41844dcbd8
+msgid ""
+"**FIFO within priority**: Elements with equal priority follow FIFO "
+"(optional)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:119
+#: 702ae2c203704b40bd6b796314636d6a
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:122
+#: 662426b87e87408fbea17435931d264d
+msgid "Priority Queue ADT"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:141
+#: e126958f735440e6887d77a1ce71acf8
+msgid "Implementation Strategies"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:144
+#: 6137e6793322497cacb13a750d682a3e
+msgid "1. Unsorted List/Linked List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:146
+#: 88e134fed3e74569b81af12fdf51ea8e
+msgid "Store elements in insertion order."
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:148
+#: ../../source/guide/linear_structures/priority_queue.rst:161
+#: ../../source/guide/linear_structures/priority_queue.rst:196
+#: 04a727bf5eb74bbc8363ee5594bf4c06 9a034a8aee4e4686a40ee261803f4544
+#: a3f0962ba0e5415882d593c1eae1c7b2
+msgid "**Advantages:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:149
+#: 15051c1567cb47dbad1818ed4054a7f8
+msgid "Simple implementation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:150
+#: 0831a16a13ec4d6c92d2de052e8d6285
+msgid ":math:`O(1)` enqueue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:152
+#: ../../source/guide/linear_structures/priority_queue.rst:165
+#: ../../source/guide/linear_structures/priority_queue.rst:202
+#: 0bdc07f4ac9a40869a49bb588230e2d7 5793127ae0104db4adb14a7b064e38d5
+#: fb61aff1545f46d3b8318dc82931ce9c
+msgid "**Disadvantages:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:153
+#: c2c903dff212455092a59dae6760b77e
+msgid ":math:`O(n)` dequeue (must scan for min)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:154
+#: 0ca51c0994e640989fd9ead84cb4b111
+msgid ":math:`O(n)` peek"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:157
+#: 362865762d2b409d93ea351f3dca5498
+msgid "2. Sorted List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:159
+#: 2c9b12da91bc4bdd8313c30a27757932
+msgid "Maintain elements sorted by priority."
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:162
+#: 5c41daa1c63046568b2071a7f4e173ec
+msgid ":math:`O(1)` dequeue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:163
+#: ../../source/guide/linear_structures/priority_queue.rst:199
+#: 28ab65d07a594f63bde58ff6f18b8ac1 46acb6f451af455daa4f7e696b22f1ed
+msgid ":math:`O(1)` peek"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:166
+#: 3a000dde1ed747b1ad996690a3c02cba
+msgid ":math:`O(n)` enqueue (must find position)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:167
+#: 4e7419cebe1a4b0ab86d6c46cfc6b76c
+msgid "Complex insertion logic"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:170
+#: 7e4e92068a4b478c8cf7458797973ad6
+msgid "3. Binary Heap (Recommended)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:172
+#: 77a9db66fb0b491abbc36e4fd7317be7
+msgid "Use min-heap or max-heap structure."
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:197
+#: 86a752add5ba482990e9de963774bb60
+msgid ":math:`O(\\log n)` enqueue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:198
+#: 8ae5a37ba7a54ede97a880f034ecc268
+msgid ":math:`O(\\log n)` dequeue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:200
+#: 48cf8f8c46e045cab6222fe5b00860ff
+msgid "Best balance for most use cases"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:203
+#: 7c0f2b07a55b4cd1a4269b3378638829
+msgid "More complex implementation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:204
+#: d9aec6e77a0e4737aa0e4739e2513af4
+msgid "No efficient search for arbitrary element"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:207
+#: 0001a12465254e1cb8467d396e266b27
+msgid "Algorithm Pseudocode"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:210
+#: a51606a822744b91b43b697451c72961
+msgid "Min-Heap Based Implementation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:212
+#: fa22e971c1cb47559275f39b40e16736
+msgid "**Enqueue (Insert):**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:225
+#: fd5cb4f64bd647f5b2b4e8884e534dd6
+msgid "**Heapify Up:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:242
+#: 5dd0713e1ea44a10a81295dad29870df
+msgid "**Dequeue (Extract Min):**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:260
+#: 27b4bf7b1e2a4e5b91839966befd3511
+msgid "**Heapify Down:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:287
+#: 5723c567b95c4dfe9b9827a68f4ac665
+msgid "**Peek:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:302
+#: 9dba47c0ad9c44d097d06438984067cf
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:308
+#: 01d23cff44584532b3753f4210fb836c
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:309
+#: fc5fc5e2e0d34a3d9c831a9182abf779
+msgid "Unsorted List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:310
+#: 427dfc9922c64074afab7fc7a523d1bc
+msgid "Sorted List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:311
+#: ec32d85d7abd43b59c2b7eb799523d51
+msgid "Binary Heap"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:312
+#: 555fed567aa24f8f9b030c2e7b323c89
+msgid "Best Choice"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:313
+#: 8904672679a74d758e788a52e8eed35e
+msgid "**Enqueue**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:314
+#: ../../source/guide/linear_structures/priority_queue.rst:320
+#: ../../source/guide/linear_structures/priority_queue.rst:325
+#: ../../source/guide/linear_structures/priority_queue.rst:326
+#: 0288b50f2b9541809183a4e2111d1d53 52e730e4409343da87711f992b571e69
+#: 8b13443d58d443e5b9e82e83673dabb2 f185fe74543843da82e7395e05eac222
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:315
+#: ../../source/guide/linear_structures/priority_queue.rst:319
+#: ../../source/guide/linear_structures/priority_queue.rst:324
+#: ../../source/guide/linear_structures/priority_queue.rst:329
+#: ../../source/guide/linear_structures/priority_queue.rst:330
+#: ../../source/guide/linear_structures/priority_queue.rst:334
+#: ../../source/guide/linear_structures/priority_queue.rst:335
+#: ../../source/guide/linear_structures/priority_queue.rst:336
+#: 05570fa204924c6cb6a5348053613c90 0ad8b65b51b74dcb9a0ea99902f98c43
+#: 22163b4bcb2a4d71a6a927e0b8ecc49f 39157bdfaa5a43b4810b9dc5ce0980f4
+#: 46c8522a9714445e9e05084ce3089ae4 ac23a28cba01435f8a20e704a66467fc
+#: b1985d761a6f457ca5d5b127ff20c426 c8d9ace6fbbd498ca957dc438a516a7a
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:316
+#: ../../source/guide/linear_structures/priority_queue.rst:321
+#: fae0c861f3ea4588b2d143b9943ad742 fb904ca9897342dd836a2657faed72a6
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:317
+#: ../../source/guide/linear_structures/priority_queue.rst:332
+#: 4707cb798bf244729a091120e887c1b8 49efbc6d35ab4addbaed2c75d216ad62
+msgid "Heap"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:318
+#: 1c51cdcdaf324a589b2957c1f3bdb9e5
+msgid "**Dequeue**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:322
+#: b8affe6d410e49bdbe330759f4114163
+msgid "Heap*"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:323
+#: 3b15a45edf5243599d8f49e27191716e
+msgid "**Peek**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:327
+#: f54441aa7f0a471384411974e8c6c24a
+msgid "Sorted/Heap"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:328
+#: adb441c26203418396bfe608703a0ac1
+msgid "**Update Priority**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:331
+#: f094cfa398e04bf9b43e9713c5424f19
+msgid "O(log n)**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:333
+#: 6bc19add36464feaaef19ff3ad13cb65
+msgid "**Space**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:337
+#: 8f88dd46ad174b8fbb5458ee742d571b
+msgid "Tie"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:339
+#: 404b9f6470b84e70a0e4ca96410e9f0a
+msgid "\\* Heap provides best **amortized** performance for mixed operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:341
+#: f15213850f874d7baa0d9d36081564b4
+msgid "\\** With additional index tracking"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:344
+#: 7b7f801459fe451f8c244c6364788dff
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:347
+#: f880e853fda54085b80364d3df606386
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:368
+#: 19a84ef5231d41b29fd3791790de4d21
+msgid "Using Custom Priority Function"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:386
+#: c382d446230e458cb1408c9816b7b580
+msgid "Priority Items"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:404
+#: a00571357ab448d8859eccf8ad7293de
+msgid "Checking State"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:417
+#: c0c85d8a158449adbbf35e4ff966aee9
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:420
+#: 5a5de740b8b546c7bd39b7f6ee5b3ebc
+msgid "Application 1: Task Scheduler with Priorities"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:477
+#: 66118801bff54ef5a634d3a42ee66fed
+msgid "Application 2: Dijkstra's Shortest Path"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:543
+#: 91ad9a94d29d4eb39b71534dac5272b6
+msgid "Application 3: Event-Driven Simulation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:613
+#: 582474948b1343358fd813e7502e2009
+msgid "Application 4: Merge K Sorted Lists"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:661
+#: 50ee15694e06491d852af9f831b294af
+msgid "Application 5: Huffman Coding"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:739
+#: be33fd2cd3d84a2abbb5f835f3d6ac85
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:742
+#: 3bc4abeabd834982b9265aa9310b7b8c
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:744
+#: d5022940ca6c450789b04bc4fd85b131
+msgid "✅ **Use for priority-based processing**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:754
+#: cea356155b5e45638af66d295070bea3
+msgid "✅ **Choose appropriate priority scale**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:766
+#: 8a7f93015dac4fa6bf3438be40631ef6
+msgid "✅ **Check empty before dequeue**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:775
+#: ae19443973a04df68677e3762e10bdb7
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:777
+#: aecaae78af894f2c82935fe466cc75de
+msgid "❌ **Don't use for FIFO order**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:789
+#: 82724ae87b4b4a16b4079eb91830bc2f
+msgid "❌ **Don't confuse priority direction**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:800
+#: 0c40a7d6caca4263b1eb8cfbade42571
+msgid "❌ **Don't forget about equal priorities**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:810
+#: b2aad86cfa4c4f3fa3e3edbcf843a807
+msgid "When to Use Priority Queue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:812
+#: c472ad23ca2d41ffa57459240b846cbd
+msgid "**Use priority queue when:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:813
+#: b77f8743abf04750a98a561a245ecb91
+msgid "Processing by importance, not arrival order"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:814
+#: d9b75363d29f4f6eb8363ba5097c39cd
+msgid "Implementing graph algorithms (Dijkstra, Prim, A*)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:815
+#: 8112d8fee8054875a8776812bc373af5
+msgid "Event-driven simulations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:816
+#: ca5cb03ddda74c8299416f3723708301
+msgid "Scheduling with priorities"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:817
+#: 16d0f92209584445a399139142819e35
+msgid "Finding k-smallest/largest elements"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:818
+#: 3fbdcfbe2b684512b8c79fa67aac7039
+msgid "Huffman coding"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:820
+#: 76323b25a89b4e519f4ed7c22c0833ff
+msgid "**Don't use priority queue when:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:821
+#: 3062e27732114b20b67afefe3a439cfb
+msgid "Need strict FIFO order (use Queue)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:822
+#: 5ea12510e4584e6fa8bb087f8bb013e0
+msgid "Need strict LIFO order (use Stack)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:823
+#: 07ce359696cf4cff8f3863a79a041396
+msgid "All items have equal priority"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:824
+#: 570e0b7f60a24620a239877317d2aabd
+msgid "Frequent arbitrary access needed"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:827
+#: 19b04e284a8d4b7c8a7da0e316251d25
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:829
+#: f7fed6a2d37d4a83a4ca1260943a700c
+msgid "**Priority confusion**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:836
+#: 7ad6dbd9a2354e1897ddd5ee066de4c6
+msgid "**Not handling ties**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:843
+#: 22ba3400443349478d32d080ce3aea07
+msgid "**Wrong use case**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:849
+#: 65e830f34e5748fdbffd4c9e5c732730
+msgid "**Performance misconceptions**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:857
+#: 40e332ead58543499b054c98622afe23
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:859
+#: 6b485f65015f46e789489b5064c66cca
+msgid ":doc:`/api/linear/queue` - API reference"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:860
+#: 5cc722b2b09249bdb5f768e7ec0364ac
+msgid ":doc:`queue` - FIFO structure"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:861
+#: 5d629c6893fc4dfc9a3b445dbc0c5f8e
+msgid ":doc:`dequeue` - Double-ended queue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/priority_queue.rst:862
+#: 83309825124a47708ac6c4a687f82f28
+msgid ":doc:`/guide/tree_structures/heap` - Heap implementation details"
+msgstr ""
+

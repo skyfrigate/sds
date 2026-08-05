@@ -1,0 +1,983 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/weighted.rst:5 a0dcdf967cb84a9c884c424b3c076c20
+msgid "Weighted Graphs"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:10 edb8420fc37d489e9ec24817d876e92a
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:12 28c810f3e00e4bc1b9bc6efdf0fb1faa
+msgid ""
+"This module provides weighted graph implementations where edges have "
+"associated numeric weights representing costs, distances, capacities, or "
+"other metrics. WeightedGraph handles undirected weighted edges, while "
+"WeightedDirectedGraph combines direction with weights."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:36 3346aa47fbe84d66ab01936f79539608
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:44:<autosummary>:1
+#: fa3ce119650f469b9a0bc313459b8d3b
+msgid ":py:obj:`WeightedGraph <sds.graph.weighted.WeightedGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:44:<autosummary>:1
+#: f49894cf283d4c7e85b1f97fa8cdb170 fd84a7bece2f47db8fbfde69455f3f4d of
+#: sds.graph.weighted.WeightedGraph:1
+msgid "Weighted undirected graph implementation."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:44:<autosummary>:1
+#: 0a2e17a719404761a1a93a750ac1b7af
+msgid ":py:obj:`WeightedDirectedGraph <sds.graph.weighted.WeightedDirectedGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:44:<autosummary>:1
+#: 0678be15374f4fa9be0cf3f91425bc92 3e89f5281ae3480b940472daf5f31f80 of
+#: sds.graph.weighted.WeightedDirectedGraph:1
+msgid "Directed graph with weighted edges."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:46 7f9681340bfb4ffeb05e3d251a1d701b
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:49
+#: ../../source/api/graph/weighted.rst:843 2b157ad29fd941a5b8331a162c31ba89
+#: f5130bf6f8794319a12cdd3a43ddbc7b
+msgid "WeightedGraph"
+msgstr ""
+
+#: 4f59a1727875492599c1137ca0a0de4f of sds.graph.weighted.WeightedGraph:1
+msgid "Bases: :py:class:`~sds.graph.interfaces.AbstractWeightedGraph`"
+msgstr ""
+
+#: 58329942cd60479cb4330c3aab50ab6c of sds.graph.weighted.WeightedGraph:3
+msgid ""
+"A weighted graph where each edge has a numeric weight. The graph "
+"maintains both the graph structure and edge weights efficiently."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst cb2089ec12f143ddb2fd96bce7e5296d
+#: cf3a326ee37a40308aba4d7d025b976d
+msgid "Parameters"
+msgstr ""
+
+#: 6f6f052705014628aecd7071fc453e77 of sds.graph.weighted.WeightedGraph:6
+msgid ""
+"If True, allows multiple weighted edges between same nodes. Default is "
+"False."
+msgstr ""
+
+#: 31b6658889304c8ea5d0811c72b7077b 751194147ba645cdbd89edef0a319663 of
+#: sds.graph.weighted.WeightedDirectedGraph:13
+#: sds.graph.weighted.WeightedGraph:12
+msgid "Whether multiple edges are allowed (read-only property)."
+msgstr ""
+
+#: be5b4061d8db4464bbd11e588b78bb80 db6b4a62954c40edb7be395a4309a5e9 of
+#: sds.graph.weighted.WeightedDirectedGraph sds.graph.weighted.WeightedGraph
+msgid "type"
+msgstr ""
+
+#: 44b123664c934fefb7fa6ee471032a55 d0a3d2bda5fa4d5f9f8bddf2ecabae0d of
+#: sds.graph.weighted.WeightedDirectedGraph:15
+#: sds.graph.weighted.WeightedGraph:14
+msgid "bool"
+msgstr ""
+
+#: f073b19bc8504bb695328c8f6440aefa of sds.graph.weighted.WeightedGraph:18
+msgid ":obj:`WeightedDirectedGraph`"
+msgstr ""
+
+#: 65abb95222f941d782dcedb460f5cd6c of sds.graph.weighted.WeightedGraph:19
+msgid "For directed weighted graphs."
+msgstr ""
+
+#: fdbe4b3e262e46758f9ba1bbaff93a7c of sds.graph.weighted.WeightedGraph:21
+msgid ":obj:`Graph`"
+msgstr ""
+
+#: 16394da1ee3d4380a57ffc4398fbd418 of sds.graph.weighted.WeightedGraph:22
+msgid "For unweighted graphs."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:58
+#: ../../source/api/graph/weighted.rst:118 7e3e611646ce4f1b8b32ca90e22dedf3
+#: bf89abf09480456294729e0539604732
+msgid "Constructor"
+msgstr ""
+
+#: 2af7d3236c6c47b38bfb460cd0054c51 8ceb3920e59b4bb886f3f8221230fe50 of
+#: sds.graph.weighted.WeightedGraph.__init__:1
+msgid "Initialize an empty weighted graph."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:62
+#: ../../source/api/graph/weighted.rst:122 82e8739dfe8945c68d697830fd5daf4f
+#: cb48cd8ad97b409bb5145bc2c790b2f1
+msgid "Properties"
+msgstr ""
+
+#: 9f1e0ca8d1584e6ba9272024a0a8abd4 fe8610d093c44f669266e1b398bd4a0c of
+#: sds.graph.weighted.WeightedGraph.allow_multi_edges:1
+msgid "Check if multi-graph mode is enabled."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:66
+#: ../../source/api/graph/weighted.rst:126 5eeba4de3dc747c592b5f8921b38460d
+#: d668c6c3d7d2434db83869243a690d07
+msgid "Node Operations"
+msgstr ""
+
+#: 014ca3eab191410293f2de1c49622259 5903c6c55c0d4a239183f4b1862dd4bc
+#: a49217ff7a4e427ca675798b214a4e36 e227ac8e850a4cd29ecd25fd4daefc4a of
+#: sds.graph.weighted.WeightedDirectedGraph.add_node:1
+#: sds.graph.weighted.WeightedGraph.add_node:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: 66f079b46c6e430a877a07a5f1e22048 78ae8729852d4d968fa0724c91fe180d
+#: 8c2f11585b3f41e6b2536ef30fc8787c 9ebdac99dd7b4f12bed6d24df3630767 of
+#: sds.graph.weighted.WeightedDirectedGraph.remove_node:1
+#: sds.graph.weighted.WeightedGraph.remove_node:1
+msgid "Remove a node and all its incident edges."
+msgstr ""
+
+#: 0c5cfa53867f406aa0d1b120d1e3f6e0 0e514c2f2213404390e726e6340233e9
+#: 5fd0a1a7081644c4bf51f55de402b6f2 781bf9899101415a82e5dea43c088243 of
+#: sds.graph.weighted.WeightedDirectedGraph.has_node:1
+#: sds.graph.weighted.WeightedGraph.has_node:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: 0875fb6c682142f982d68498ff8f8095 3eb5430af1db48808459581b0ece8c86
+#: a97d36badd6f42a7be32a6dd65389063 f6df952946bd45f38582e788139d4549 of
+#: sds.graph.weighted.WeightedDirectedGraph.get_node_by_id:1
+#: sds.graph.weighted.WeightedGraph.get_node_by_id:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: 5860832484074a1abe3ce8b336a38a50 93253af7130c48eb995df48cb83b07cd
+#: c989b2023b43426aaa9930a76476955d dd99a7db5bd743e3b4bca8af7feeee2f of
+#: sds.graph.weighted.WeightedDirectedGraph.nodes:1
+#: sds.graph.weighted.WeightedGraph.nodes:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: 41d106447caf4ff58f4f4499f684e24b 7b1e46d3e1e84faf965c52698703f392
+#: 85cbb6564b1040de97d7fd50601453b7 8c69eead628f43028755fbfe4f803cf2 of
+#: sds.graph.weighted.WeightedDirectedGraph.node_count:1
+#: sds.graph.weighted.WeightedGraph.node_count:1
+msgid "Get the number of nodes."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:75
+#: ../../source/api/graph/weighted.rst:135 547c32ffa6054f1197bc94a5b2364bc0
+#: 6c5c301fec3e4da2bba2cf0cb13aacf3
+msgid "Edge Operations"
+msgstr ""
+
+#: 81ea65a26c134e8596749bc3c8242de5 c27bb88c5e684e189764c5eb13fc9794 of
+#: sds.graph.weighted.WeightedGraph.add_edge:1
+msgid "Add a weighted edge to the graph."
+msgstr ""
+
+#: c6e923bf44b443c8bcce31e8bf2fce7f eb16b9a5da6042479a3089beb7803102 of
+#: sds.graph.weighted.WeightedGraph.remove_edge:1
+msgid "Remove a weighted edge from the graph."
+msgstr ""
+
+#: b11c9e578f3e491a8f966ccfef8888a6 f50d04d6f36a49769fae6d4ce2e9d3d2 of
+#: sds.graph.weighted.WeightedGraph.has_edge:1
+msgid "Check if an edge exists between two nodes."
+msgstr ""
+
+#: 0dd2ee8131ef48d39584f77d448d3918 18896bb34ada4ca499aab808ef1b57e9 of
+#: sds.graph.weighted.WeightedGraph.get_edge:1
+msgid "Get the weighted edge between two nodes."
+msgstr ""
+
+#: 2204fd9d41cc44cd9a6e5b2df8f94400 7c85610cab164ab9bad47a7f361ceac4 of
+#: sds.graph.weighted.WeightedGraph.edges:1
+msgid "Get all weighted edges in the graph."
+msgstr ""
+
+#: 06706717cbb84fcb9140f122f599fe44 0ac1a2bd67334adc84777c0162742827
+#: 23c86f2bd6664d7da0f5de33c84f9791 7ddb4e1b1ab64569be578b2115943a43 of
+#: sds.graph.weighted.WeightedDirectedGraph.edge_count:1
+#: sds.graph.weighted.WeightedGraph.edge_count:1
+msgid "Get the number of edges."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:84
+#: ../../source/api/graph/weighted.rst:144 696cfc248c29454d9a8aeb3da77c2d5b
+#: 8a68dc5fdcc844d4aa85992c45b8f15b
+msgid "Weight Operations"
+msgstr ""
+
+#: c2b0c7ea48dc463f9c6b7d4d00b8f095 e810cd45dda24faa97a51116faa300ee of
+#: sds.graph.weighted.WeightedGraph.get_edge_weight:1
+msgid "Get the weight of the edge between two nodes."
+msgstr ""
+
+#: 522499d18a1e4c4092771165b0793319 bdc25c29b24e40be9641b8aa39dfa3d5
+#: ca13c62b3ffa401a92ffbee3a5a7b8ca fa44ce9f865f421798c743b4430bbb1c of
+#: sds.graph.weighted.WeightedDirectedGraph.total_weight:1
+#: sds.graph.weighted.WeightedGraph.total_weight:1
+msgid "Calculate the total weight of all edges."
+msgstr ""
+
+#: 202af24f924f4e3dba1d887b7cad5834 36fe2361c3e3404f89b05712810c11c7
+#: 50183863ad624df096724dd8aa1ef3d3 cc48b82fda1d4f38bdcbe4400dde23ef of
+#: sds.graph.weighted.WeightedDirectedGraph.incident_edges:1
+#: sds.graph.weighted.WeightedGraph.incident_edges:1
+msgid "Get all weighted edges incident to a node."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:90 75d8f1d7d4174e30b19b15284489fad5
+msgid "Graph Queries"
+msgstr ""
+
+#: 308fd4852aa8466185038fbfd4f72414 95ed049cee3f499588e82d4e07c810c7 of
+#: sds.graph.weighted.WeightedGraph.neighbors:1
+msgid "Get all neighbors of a node."
+msgstr ""
+
+#: 29a69d1fc7534deaaf470a7e1f16dbaa 2b42993f04c04cd8adde29d777fb586a of
+#: sds.graph.weighted.WeightedGraph.degree:1
+msgid "Get the degree of a node."
+msgstr ""
+
+#: 63a75d7640044f548ec5ff2e09ea93bc e0f64925ea8049ef8a3f1f7c10066fd6 of
+#: sds.graph.weighted.WeightedGraph.is_connected:1
+msgid "Check if the graph is connected."
+msgstr ""
+
+#: 8cb038d3222c4a07b57528ececbed8b6 9c17fe3d3ff642cba92cf2206876261d
+#: c8097d0537b24d9a9a95f6de71dcb453 d76b85e363ea4a68b2f6c2d044702e92 of
+#: sds.graph.weighted.WeightedDirectedGraph.is_empty:1
+#: sds.graph.weighted.WeightedGraph.is_empty:1
+msgid "Check if the graph is empty."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:97
+#: ../../source/api/graph/weighted.rst:165 adbe9d065859444c88fdd455b22a3e6c
+#: dabe3b51300e4dc3b8a4fc6758015e3e
+msgid "Utility Methods"
+msgstr ""
+
+#: 1167011fb5d5476cbe9b6062f5224eaa 3ab324b63f1f40cf825c93808aafc3ff
+#: 65329433b83844b2b276ff9efecebc4e b5a261ed9b7642f19ff648e317089971 of
+#: sds.graph.weighted.WeightedDirectedGraph.clear:1
+#: sds.graph.weighted.WeightedGraph.clear:1
+msgid "Remove all nodes and edges."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:101
+#: ../../source/api/graph/weighted.rst:169 176c83b7010340b693132c4ebdda07c5
+#: 59af36acdcfe413098c3e909cb78f626
+msgid "Special Methods"
+msgstr ""
+
+#: 162aa592a3994cb2afbfbfcdbc5fe16a 2eed25b0057f4c16862ab3919eb90380
+#: a8c25772a81848cba95269fe5bc5844d f9cea13a01ab40758eb01f81b139fa30 of
+#: sds.graph.weighted.WeightedDirectedGraph.__len__:1
+#: sds.graph.weighted.WeightedGraph.__len__:1
+msgid "Return the number of nodes."
+msgstr ""
+
+#: 3ac9372149974335976b0ac1989398fb 7d57f9399470470582a552c447311c62
+#: 8b8f7067d2514454839770cfdac33d74 9598472098264fc79b02fb08486b62b3 of
+#: sds.graph.weighted.WeightedDirectedGraph.__contains__:1
+#: sds.graph.weighted.WeightedGraph.__contains__:1
+msgid "Check if node is in the graph."
+msgstr ""
+
+#: 226b3df0ee3944279525f5a9d372061c 4acb91724dde447bb6f0a617b37f8e6d
+#: b95adaec7aaa4702a6e4bf3a4a6647e1 df31ff45961948778f54575fe4c5e5f3 of
+#: sds.graph.weighted.WeightedDirectedGraph.__iter__:1
+#: sds.graph.weighted.WeightedGraph.__iter__:1
+msgid "Iterate over nodes."
+msgstr ""
+
+#: 19edc50f130448b3b3517354538760cf 24052c48a1ee4b4eaf11dbba520bed03
+#: 5f5abc1963d1474797284994d0941f0d e81b882f99b04c36a112b8cacb6b819b of
+#: sds.graph.weighted.WeightedDirectedGraph.__repr__:1
+#: sds.graph.weighted.WeightedGraph.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 45e50792289648e4aef333c0b5908d8d 8df8104c33c84ecf833017061536d8b5
+#: 998f67909ad24d95b89f49e78f29fc7f c2f3b12344d542369e3250c5f3a09439 of
+#: sds.graph.weighted.WeightedDirectedGraph.__str__:1
+#: sds.graph.weighted.WeightedGraph.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:109 15cc93db9c314b08b44590e7fad5d9a5
+msgid "WeightedDirectedGraph"
+msgstr ""
+
+#: 00f0f73ffea246ccba842de56c9511da of
+#: sds.graph.weighted.WeightedDirectedGraph:1
+msgid ""
+"Bases: :py:class:`~sds.graph.interfaces.AbstractDirectedGraph`, "
+":py:class:`~sds.graph.interfaces.AbstractWeightedGraph`"
+msgstr ""
+
+#: 429741cc515048e19a4de7675b7129c7 of
+#: sds.graph.weighted.WeightedDirectedGraph:3
+msgid ""
+"Combines direction tracking (from DirectedGraph) with edge weights (from "
+"WeightedGraph). Uses two adjacency lists for efficient in/out degree "
+"queries and stores edge weights."
+msgstr ""
+
+#: dabc92e1ca4d4d2c89994f4ccbc9ed29 of
+#: sds.graph.weighted.WeightedDirectedGraph:7
+msgid ""
+"If True, allows multiple weighted edges from same source to target. "
+"Default is False."
+msgstr ""
+
+#: dd0261fdb8ad4734a9727fa557ebc5c3 of
+#: sds.graph.weighted.WeightedDirectedGraph:19
+msgid ":obj:`WeightedGraph`"
+msgstr ""
+
+#: e12f8b4e21254434947ac807a1d5e4eb of
+#: sds.graph.weighted.WeightedDirectedGraph:20
+msgid "For undirected weighted graphs."
+msgstr ""
+
+#: 9665003019514a27a1ca3c14c9ed46ca of
+#: sds.graph.weighted.WeightedDirectedGraph:22
+msgid ":obj:`DirectedGraph`"
+msgstr ""
+
+#: 4d187c821b23402dabd7fbd5613601d3 of
+#: sds.graph.weighted.WeightedDirectedGraph:23
+msgid "For unweighted directed graphs."
+msgstr ""
+
+#: 8a44577303ac41d18b7b6631c95e81a3 c186e71ef58a4843ab2a751d517123dd of
+#: sds.graph.weighted.WeightedDirectedGraph.__init__:1
+msgid "Initialize an empty weighted directed graph."
+msgstr ""
+
+#: 9477fe06702d49d4ae5bd125f39f2cab e8ba6ba37bc04cc3bd5e7b1da72f3e15 of
+#: sds.graph.weighted.WeightedDirectedGraph.allow_multi_edges:1
+msgid "Check if multi-digraph mode is enabled."
+msgstr ""
+
+#: 58fc08fb160d4bcab6bf9d0aecead4f2 a27c0b87a1d64a8eb028beea2d256757 of
+#: sds.graph.weighted.WeightedDirectedGraph.add_edge:1
+msgid "Add a weighted directed edge to the graph."
+msgstr ""
+
+#: 1c0c79717fa64fb3a79948afb1c254c3 abd4a75ced9d4037a363010f344ca7f5 of
+#: sds.graph.weighted.WeightedDirectedGraph.remove_edge:1
+msgid "Remove a weighted directed edge from the graph."
+msgstr ""
+
+#: 469df18a163c448eaecc53c88eeadcfe fb307d0205444e03bec8c3431325c9b6 of
+#: sds.graph.weighted.WeightedDirectedGraph.has_edge:1
+msgid "Check if a directed edge exists from node1 to node2."
+msgstr ""
+
+#: 7149e82e0d5e4958b8db77b39b1962fa a094551fe3a24b1492e750135ace7c7c of
+#: sds.graph.weighted.WeightedDirectedGraph.get_edge:1
+msgid "Get the weighted directed edge from node1 to node2."
+msgstr ""
+
+#: 7affbfd261c34ad5a67dec8fdeab371b dbd7e731a9eb4201a7c3e369c4c968a5 of
+#: sds.graph.weighted.WeightedDirectedGraph.edges:1
+msgid "Get all weighted directed edges in the graph."
+msgstr ""
+
+#: 12569747b2dd49f59601a9acff077479 57793f2a4c8649c5b6f3522c496cd39e of
+#: sds.graph.weighted.WeightedDirectedGraph.get_edge_weight:1
+msgid "Get the weight of the edge from node1 to node2."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:150 2239dc51d012495fa9c16893119995e3
+msgid "Directed Graph Queries"
+msgstr ""
+
+#: 45c5f68378fd4ffc93dcb06f749f3266 6f9839948ef7485bbfc8caf1238d392e of
+#: sds.graph.weighted.WeightedDirectedGraph.in_degree:1
+msgid "Get in-degree of a node (number of incoming edges)."
+msgstr ""
+
+#: cfe50537cbe64ebaaef52399c0eec5c9 db8fb6e063504b1f8da8cd0fcb13e23f of
+#: sds.graph.weighted.WeightedDirectedGraph.out_degree:1
+msgid "Get out-degree of a node (number of outgoing edges)."
+msgstr ""
+
+#: 23d80c66382e44d6a59560898390de7c f6dc19af07484f64b90303b25e126386 of
+#: sds.graph.weighted.WeightedDirectedGraph.predecessors:1
+msgid "Get all predecessors (nodes with edges to this node)."
+msgstr ""
+
+#: 2e8320f637884b5aaf978ed5956c2917 a36e07c88a384c52ad9cac316c623c64 of
+#: sds.graph.weighted.WeightedDirectedGraph.successors:1
+msgid "Get all successors (nodes with edges from this node)."
+msgstr ""
+
+#: 11f4613b323d42208a2736a13dc7ac40 6954cc2277fb41ea917b20c0507d6961 of
+#: sds.graph.weighted.WeightedDirectedGraph.is_acyclic:1
+msgid "Check if the graph is acyclic (DAG)."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:158 3d3d62f4adec40fdb9313d78c203145b
+msgid "General Graph Queries"
+msgstr ""
+
+#: 8e1d21e16a544af190f27efb5583999b cb753052d0954aa79c40786fb15d2b3f of
+#: sds.graph.weighted.WeightedDirectedGraph.neighbors:1
+msgid "Get all successors (outgoing neighbors) of a node."
+msgstr ""
+
+#: 094ad1a6df3d41a0856d7e208978a99c 8049cc6fa0f741cd9ed96422b2c50d38 of
+#: sds.graph.weighted.WeightedDirectedGraph.degree:1
+msgid "Get total degree of a node (in-degree + out-degree)."
+msgstr ""
+
+#: 0add956808094d1f80ecbe3545900835 2587fbb12311444ca807adcead9948fa of
+#: sds.graph.weighted.WeightedDirectedGraph.is_connected:1
+msgid "Check if the graph is weakly connected."
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:177 febbe39a55524e818360bcd1ea7fe360
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:180 8b056d287f2641a2b664a709e15562ea
+msgid "WeightedGraph Examples"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:183 e869267d2e014984a19021c48c11fc59
+msgid "Creating a Weighted Graph"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:198 f51c5d3d30034e4dadf62f6388e0addf
+msgid "Adding Weighted Edges"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:220 afd6069b768c43968e54b2f1e01a6384
+msgid "Getting Edge Weights"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:233 01fe72404e0c4fd7a139af0e576acccf
+msgid "Working with Weighted Edges"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:248 c757f17acb2d4fc78439dc94fecb16d2
+msgid "Finding Shortest/Longest Paths"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:277 443579c0c75f4315bbb05a084fb27c5b
+msgid "Multi-Weighted Edges"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:300 3b811963f6354f99b38e4fdb9cfa90df
+msgid "WeightedDirectedGraph Examples"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:303 94be01be3fcb427eae46dba02773c812
+msgid "Creating Weighted Directed Graph"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:322 9bd3ddfa12e44207864db128266a76e5
+msgid "Directed Weighted Edges"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:337 d1b277aeb44e4b1ead0d80dac87bf03d
+msgid "In/Out Degree with Weights"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:353 e12b694d53ea4b4daf28c664373d1524
+msgid "Weighted Paths"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:372 61e6e28140254674ac896c5aedee47f8
+msgid "Weighted DAG Operations"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:402 b2b7182028894232b5a4993ab723f850
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:405 40b1d531c6a0458d8d2d8e5dc23a277a
+msgid "Example 1: City Distance Map"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:407 4f07c49948ae406a87e3b406a0b72bbc
+msgid "Weighted graph for city distances:"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:489 88ce7bfc0c784fd790aa6f643fc2ce9c
+msgid "Example 2: Flight Network"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:491 e5b8ccd39ce64a878d25f4b40d5832b0
+msgid "Weighted directed graph for flight routes:"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:594 a0606e87b1bd4f71b37e257d885d8566
+msgid "Example 3: Network Bandwidth"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:596 e8462a0cf2d141e586414de079bfb813
+msgid "Network links with bandwidth capacities:"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:680 adb3761fe5e0455486e7135823823085
+msgid "Example 4: Weighted Task Graph"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:682 7c68c62247b244bab09f15a3d5c6d502
+msgid "Project tasks with durations:"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:757 2401c08733264734b0b7b3c89776a36d
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:760 8c3c29b2ea4f4afaa3f74182ae64529e
+msgid "WeightedGraph Time Complexity"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:766
+#: ../../source/api/graph/weighted.rst:795 04016d99a9184a57b0935b68ceef954a
+#: 4ceb798006464bc3bd1bcc54eaa908a5
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:767
+#: ../../source/api/graph/weighted.rst:796 24c2e7ae031045fd869d346ce7d27903
+#: 3804dca1d53f47d68cbed3964a6983cf
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:768
+#: ../../source/api/graph/weighted.rst:797 61fd40209ed44c7ab5988c5be9ee7ee1
+#: 98a8455faea24249a7e4d4fbbbc3c339
+msgid "Notes"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:769 70e7cf0abbdd41eb94d39c6e5f34dafe
+msgid "``add_node(node)``"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:770
+#: ../../source/api/graph/weighted.rst:805
+#: ../../source/api/graph/weighted.rst:808 68ed33f6d893476ea54804331baf4005
+#: eb4999b11cb34e6baa4d7ee7d2d0e46f f8703cb50f38482f8dd7b679dd109f69
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:771 d8bf1c12903e46a789f2445871e86597
+msgid "Hash table insertion"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:772
+#: ../../source/api/graph/weighted.rst:798 9a3980ad7611456b962170d52cc6e765
+#: a7bc1bfa7daf4e9e934c6391833ab952
+msgid "``add_edge(edge)``"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:773 efd82fb0e6a3401dae4bd074e78e8c3c
+msgid "O(1) or O(degree)"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:774 c19c00409be840faa5f2b2b1346df143
+msgid "Check duplicates in simple graph"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:775
+#: ../../source/api/graph/weighted.rst:801 65d057ce63a54a728696b828e86ae218
+#: bbada6e36b1049f38b4e44fd11aa7eec
+msgid "``get_edge_weight(n1, n2)``"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:776
+#: ../../source/api/graph/weighted.rst:782
+#: ../../source/api/graph/weighted.rst:802
+#: ../../source/api/graph/weighted.rst:828
+#: ../../source/api/graph/weighted.rst:851
+#: ../../source/api/graph/weighted.rst:855 0e1a776fd1bd4daca1d0ba6ded8a78f6
+#: 55e3427e5e5e477994da36b60761f30c affb6f2371764f878eede61931765774
+#: ba3ab466a1ce4fe9bc56a7c8e3c51d0d d9c249185a114d71ad6e09363c53e5d5
+#: fa9981e1c20c48f5b0ba93c9cec7547e
+msgid "O(E)"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:777 69bf247b5dac49f59960e26a36818406
+msgid "Must find edge"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:778 f530473010de41e986e3827f2813c0c8
+msgid "``total_weight()``"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:779 23b82ee2ebd241b59c98f360e9b4af43
+msgid "O(E) or O(1)"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:780 8d2194d9cfbf4068b5baffc922da175c
+msgid "O(1) if cached"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:781 b9d010e47cea4f5ba7c55685bcc19823
+msgid "``incident_edges(node)``"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:783 cda525ef0e9741ae8a4400e1be340a57
+msgid "Filter edge list"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:784 a3862e11cfd24bb9b7f88b99eed5dcef
+msgid "``neighbors(node)``"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:785 f3cb4d37f8714d309c8d79d454c316bf
+msgid "O(degree)"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:786 1c50007e423c464eaa5169cc89debc3d
+msgid "Iterate adjacency"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:789 8b66f544e647492e92b266c6ddfe2ba7
+msgid "WeightedDirectedGraph Time Complexity"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:799 6efb3fa4729d40da910aafc334c18a93
+msgid "O(1) or O(out_degree)"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:800 c946a8bba9fc4bd0b2d396f2f381f71e
+msgid "Check duplicates"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:803 54c46ffd1acf427980784f4f44cfc298
+msgid "Must find directed edge"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:804 d4a7f057a48d452ebc9437066d5acc35
+msgid "``in_degree(node)``"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:806
+#: ../../source/api/graph/weighted.rst:809 6337bcf1ce8a4127a45360de19f84499
+#: dcfa63cb72864ec09171d1710382a025
+msgid "Cached in adjacency"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:807 5e0326a81d724d7cb16de0071a50dcaf
+msgid "``out_degree(node)``"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:810 7973981f23124be180bba5eafbd82154
+msgid "``is_acyclic()``"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:811
+#: ../../source/api/graph/weighted.rst:826
+#: ../../source/api/graph/weighted.rst:832 0443f2dd4ebd4e1fadd802662a2ca774
+#: 82c6352f9bc14431842320897e16d644 ecdc5f43151a4123a00ef87742222d77
+msgid "O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:812 6a039577a89c47bab56f32aaed22779b
+msgid "DFS with caching"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:815 911c9138a164478ea2118a30eae8d34d
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:821 9310733093a14d80a4d956395a5937af
+msgid "Component"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:822 28d3e128fbac4a00ad4ecf2dfca9c31d
+msgid "Space"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:823 6fee14e7de29451ca127ceff6d2b301b
+msgid "**Nodes**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:824 a8f1c16884fb4b049c2e38c78fc73e79
+msgid "O(V)"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:825 d67236a1f35e4f79a0a73045c58ef8e7
+msgid "**Adjacency lists**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:827 43e1d644b1004bc1a31a28d30def8d9d
+msgid "**Edge list**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:829 bd355dab6d4244b580f7be247f1ac598
+msgid "**Weights**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:830 234c05b0e0e047ad97728a8e8c48c22c
+msgid "O(E) - stored in edges"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:831 5898a31c7a944e40b34da90fdb9bc527
+msgid "**Total**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:835 f9221cb9a4d84cecb7cf25ba45b1e60d
+msgid "Comparison with Unweighted Graphs"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:841 4cf74f59b10543a6957b5f873d7fdc7c
+msgid "Feature"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:842 e1575fb4f2474a2b8788da52a2935045
+msgid "Graph"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:844 28742bacd41d42efb0538797cf34c53c
+msgid "Additional Cost"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:845 dff4bf1e02e045a097e9f2a3b7a3dcb0
+msgid "**Edge Storage**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:846 34b44ce0f8ed432d8a24689aa9f5f5b3
+msgid "Edge"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:847 a73520d328904e9a82a3ba1586bb82ff
+msgid "WeightedEdge"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:848 7f23beed56464cc3a968a5ba814aca59
+msgid "+8 bytes (float)"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:849 e967e7e413314af3a34000fe8e4ca972
+msgid "**Weight Query**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:850
+#: ../../source/api/graph/weighted.rst:854 184a4174db2e4acdb13df8174096eb4d
+#: fa180c16672c4901834ac6b260dc04ec
+msgid "N/A"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:852
+#: ../../source/api/graph/weighted.rst:856 a7eb2f6dfe864bbd85a988c0d2d9fd1e
+#: d489ca3cc4c24912ae907e089de8534c
+msgid "New operation"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:853 06d8c1c39761429eb7313eda49a26d92
+msgid "**Total Weight**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:857 6db0cc03056643f696a9330e3755a5b0
+msgid "**Pathfinding**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:858 4d9753eab1684132b7d3f5442fb22bad
+msgid "BFS"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:859 df26051d40404ae48e320dfecf218ff4
+msgid "Dijkstra/A*"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:860 3c4c9841257a4a9b87a84f852f6e10e1
+msgid "More complex"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:861 f5c4df987da44c7e998418da1ee377e6
+msgid "**Use Cases**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:862 ca419e7355f54936af5ba9ccf140503f
+msgid "Topology"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:863 828848eb14e04756a614f6740433b72d
+msgid "Routing, planning"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:864 76d0c3f3eb374e3cb8b02a951447082e
+msgid "Cost-aware"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:867 91ecd3a6719348bd865f8af9ec2b0429
+msgid "When to Use Weighted Graphs"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:870 657fc810f4594d2dbd6c26a731640d9b
+msgid "Use WeightedGraph When"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:872 5abf808994b643039f47dd18f0f56303
+msgid "✅ **Modeling costs, distances, or capacities**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:882 1dcf457878a4401ea840be9efb79801c
+msgid "✅ **Need shortest/longest path algorithms**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:891 1c398792387e4a43a1b81bd03f1f640b
+msgid "✅ **Optimizing routes or flows**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:901 0734688f29fb400480bdbff9db45277e
+msgid "Use WeightedDirectedGraph When"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:903 5b550614c49b4210ae52daaf240dd28c
+msgid "✅ **Asymmetric costs (A→B ≠ B→A)**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:912 bbce673dfcd34944abf24e41b4c6f52f
+msgid "✅ **Directed flows with capacities**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:919 a909e2bd43e141afafe166cb10b29d48
+msgid "✅ **Task scheduling with durations**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:927 9a7e07d739754f59b52183772135b358
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:930 acb1d96b330541119cb91de6d6889f9c
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:932 f083a3ad02d84dcab5448582a8020b1c
+msgid "✅ **Use appropriate weight types**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:940 794f125458a24955b7e9f4f2e94d8c0f
+msgid "✅ **Cache total weight if needed frequently**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:947 0156b043f0af4800bbd1999a18947c9e
+msgid "✅ **Store additional data in edge data**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:958 dfb3ba0b9d65421aae81ff9332cbf3e5
+msgid "✅ **Validate weights for your domain**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:968 6619e46e7d58486ca9dfa788db065fb4
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:970 5fbb782d1d674e4dba4f4dabd404eb98
+msgid "❌ **Don't use string weights**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:980 8924a8325ca249d3bbf46988890aa98b
+msgid "❌ **Don't mix weighted and unweighted edges**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:991 99d5a9c4e74246c4bc626ba2281c362f
+msgid "❌ **Don't forget direction in WeightedDirectedGraph**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1004 71588110eda04650b6a22baff3f91860
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1006 9d9adc929e294f1da081cb56eb734b31
+msgid "**Confusing edge weight with data**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1015 7e4be7dde1114e2c9c5c4b49aa5d1908
+msgid "**Negative weights in shortest path**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1024 18b17c70342345d1844ac82b7cd2eaf6
+msgid "**Not considering direction in costs**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1035 20402c70fecc47269212945e68f92749
+msgid "**Forgetting to update weights**"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1046 65eed17afce645c097bad2dfbfa639f2
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1048 35eb4530305d4243ba4bd445e3e66c68
+msgid ":doc:`graph` - Base unweighted graph"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1049 f12f9b3005074b58a3f969bd341b350b
+msgid ":doc:`directed` - Directed graphs without weights"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1050 7b6524ae8b194dce9156b73b399e805f
+msgid ":doc:`../../guide/graph_structures/weighted` - Weighted graphs user guide"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1051 4b3a59386ad04f1b8505c2e215b3dab6
+msgid ":doc:`../../algorithms/graph_algorithms` - Algorithms for weighted graphs"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1054 3fa25010802e41c1b5ce2e7a9cb717e2
+msgid "References"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1056 f94f80e8fdce42c59c4d3b82d6a94a21
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 24"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1057 690b20f3dee84227853c68d0f70bf5e3
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Chapter 4.4"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1058 ccc5d897f8354d30a96462b9cde172d0
+msgid "Ahuja, R. K., et al. \"Network Flows\", Prentice Hall, 1993"
+msgstr ""
+
+#: ../../source/api/graph/weighted.rst:1059 ba9632c2e64b40baaeb8adcd7301c088
+msgid "Tarjan, R. E. \"Data Structures and Network Algorithms\", SIAM, 1983"
+msgstr ""
+

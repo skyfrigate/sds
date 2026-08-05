@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.BinaryNode.rst:2
+#: 12a4459cdf3a4ee3b3e9fce9cf9429fd
+msgid "sds.tree.node.BinaryNode"
+msgstr ""
+
+#: 60af072e8a0d4c9f9018e153daa2dc9b of sds.tree.node.BinaryNode:1
+msgid "A node for binary trees."
+msgstr ""
+
+#: e455adc2832742b1932b06ca046adb72 of sds.tree.node.BinaryNode:3
+msgid ""
+"Each node contains data and references to left child, right child, and "
+"optionally a parent node. This is the basic building block for binary "
+"trees, binary search trees, AVL trees, and other binary tree structures."
+msgstr ""
+
+#: 48a9a5403ce3444586dc2e3f4b8d08ba of sds.tree.node.BinaryNode:7
+msgid "Internally uses _refs[0] for left and _refs[1] for right."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.BinaryNode.rst
+#: 02ee05da25fc413d95134160222468b9 c914a42a6dfb49eb84f9bfcc50e9b8c6
+#: ff36a7037631420daeaaada5e54e0a6e
+msgid "Parameters"
+msgstr ""
+
+#: 2a691003b0154eb29fe26761701cccd3 2b45984bc2c343789251094696aba227
+#: 9a5b2f20bda842d590311d3d22daf93f of sds.tree.node.BinaryNode:9
+#: sds.tree.node.BinaryNode.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: 56c8615924ae4264b1115823e63834d2 of sds.tree.node.BinaryNode:11
+msgid "Reference to the left child node. Default is None."
+msgstr ""
+
+#: c0cab7c4146d49cfb17c61273bf7b3d8 of sds.tree.node.BinaryNode:13
+msgid "Reference to the right child node. Default is None."
+msgstr ""
+
+#: 294a353efcb340fe8a37cf903f0cbd18 of sds.tree.node.BinaryNode:15
+msgid "Reference to the parent node. Default is None."
+msgstr ""
+
+#: 65772ce01a7a46a284124986a6243ea0 of sds.tree.node.BinaryNode:20
+msgid "The data stored in the node (inherited from Node)."
+msgstr ""
+
+#: 03709531745c4848bbf60bcdfa235f8c 502fc362b8df4a08b4d35ac1843f3e27
+#: 9dd948274e234229ad73dcf80b19e448 a93f9c33ebf3400f945e07d56090234e of
+#: sds.tree.node.BinaryNode
+msgid "type"
+msgstr ""
+
+#: 8cbe5569e1f84a1cbe5af2eef4d489ab of sds.tree.node.BinaryNode:22
+msgid "Any"
+msgstr ""
+
+#: dfe7e34d314f46aba11f08c1610936d2 of sds.tree.node.BinaryNode:26
+msgid "Reference to the left child (property accessing _refs[0])."
+msgstr ""
+
+#: 491478f055524a54b6ad86fe3a2083c8 bf41c802e7334f478e16d796cdd6b937 of
+#: sds.tree.node.BinaryNode:28 sds.tree.node.BinaryNode:34
+msgid "BinaryNode or None"
+msgstr ""
+
+#: 0a09302505ec4550b92d9b371378559f of sds.tree.node.BinaryNode:32
+msgid "Reference to the right child (property accessing _refs[1])."
+msgstr ""
+
+#: 0cc8ebd5fad141d28385a78bf6b37ecf of sds.tree.node.BinaryNode:38
+msgid "Reference to parent node (inherited from Node)."
+msgstr ""
+
+#: 7d0f59c066c149f8b3ace6b203a139ea of sds.tree.node.BinaryNode:40
+msgid "Node or None"
+msgstr ""
+
+#: 1a17f3f1ae00434eb39a7dfb0e38410a 373563d8b00c4d68ae0cf946da848534
+#: 4d2242ded607433ba983cc7451dc9dbb 65ddd0744a0a49e68bcce5a6cf7a4ea8
+#: 7bbb15bd04bc4f5d8723384cfc7d690a fa1b8bf85bf74134b0f262bd1bd5f89a of
+#: sds.tree.node.BinaryNode:42 sds.tree.node.BinaryNode.__repr__:6
+#: sds.tree.node.BinaryNode.__str__:6 sds.tree.node.BinaryNode.is_leaf:6
+#: sds.tree.node.BinaryNode.left:6 sds.tree.node.BinaryNode.right:6
+msgid "Examples"
+msgstr ""
+
+#: 8a2004b902ed4c859637c7d6a9688449 of sds.tree.node.BinaryNode:44
+msgid "Create a simple binary node:"
+msgstr ""
+
+#: 4d92fbf706d643ea96ff1684e6690f84 of sds.tree.node.BinaryNode:54
+msgid "Create a binary tree structure:"
+msgstr ""
+
+#: 6159600f6c624d5795ace9e3d82388d5 of sds.tree.node.BinaryNode:64
+msgid "With automatic parent maintenance:"
+msgstr ""
+
+#: 377a4b7ac1d24f54808558d63791824a of sds.tree.node.BinaryNode:72
+msgid "Check if node is a leaf:"
+msgstr ""
+
+#: 28dfa631172f495f918c53345783e98e 50118d64572b41038c12090c685a094e
+#: cbc013e84df84e178e32091303e20b57 f746bde1ac8242d4add8d5213bd89899 of
+#: sds.tree.node.BinaryNode:81 sds.tree.node.BinaryNode.is_leaf:15
+#: sds.tree.node.BinaryNode.left:16 sds.tree.node.BinaryNode.right:16
+msgid "Notes"
+msgstr ""
+
+#: 6e7c5ae6ae4a4c25b05718ba53d71a68 of sds.tree.node.BinaryNode:83
+msgid ""
+"This class uses __slots__ for memory efficiency. When setting left or "
+"right children, the parent reference of the child is automatically "
+"updated to maintain consistency."
+msgstr ""
+
+#: aaee87f4f9a24cd19991bfe7505bd690 of sds.tree.node.BinaryNode:89
+msgid ":obj:`TreeNode`"
+msgstr ""
+
+#: 65239ecd3f4b4eaba5d4ac9b5ca2c472 of sds.tree.node.BinaryNode:90
+msgid "Node with multiple children for general trees."
+msgstr ""
+
+#: 43defec01bca47128b23677b09e13ee9 of sds.tree.node.BinaryNode:92
+msgid ":obj:`sds.core.node.Node`"
+msgstr ""
+
+#: df49fe1f826948a396d42e998eb9871e of sds.tree.node.BinaryNode:93
+msgid "Abstract base class."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.BinaryNode.rst:22:<autosummary>:1
+#: 0b44096ae1d3478fa5e38e87eb2f8329 177881ec24174602b9d6b211146f4b15
+#: 8109360319e046d6bd985de2b8350f14 of sds.tree.node.BinaryNode.__init__:1
+msgid "Initialize a new binary node."
+msgstr ""
+
+#: 48339f39df1440dda56d1b8e7592f2d9 622b57c84b7e478ca27ca1ba0e8dc400 of
+#: sds.tree.node.BinaryNode.__init__:5
+msgid "The left child node. Default is None."
+msgstr ""
+
+#: 33755466a7f248738abb7c1256013797 6b86f412bfc44ea8a8b60f3819fef9c0 of
+#: sds.tree.node.BinaryNode.__init__:7
+msgid "The right child node. Default is None."
+msgstr ""
+
+#: 3a29268ebc4c4a7e8e042d36b736533a 7cd554dad0d24da884acf69f51938426 of
+#: sds.tree.node.BinaryNode.__init__:9
+msgid "The parent node. Default is None."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.BinaryNode.rst:13
+#: ff04413682c64059888623843dba20b4
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.BinaryNode.rst:22:<autosummary>:1
+#: 40fabc73a9864caca2833c0e026ad6d2
+msgid ""
+":py:obj:`__init__ <sds.tree.node.BinaryNode.__init__>`\\ \\(data\\[\\, "
+"left\\, right\\, parent\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.BinaryNode.rst:22:<autosummary>:1
+#: af5d1a101c894cf985f6704d41989587
+msgid ":py:obj:`is_leaf <sds.tree.node.BinaryNode.is_leaf>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.BinaryNode.rst:22:<autosummary>:1
+#: 08bc06b8888a40dbb97058b9bf255a0c cd4cb5f215454955af4904f1bcd3b4c7 of
+#: sds.tree.node.BinaryNode.is_leaf:1
+msgid "Check if this node is a leaf (has no children)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.BinaryNode.rst:24
+#: e45c03750563435fa9b0631abb769b27
+msgid "Attributes"
+msgstr ""
+
+#: 06c2ca78e596428eaeb98f587f9ee577 of
+#: sds.tree.node.BinaryNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.tree.node.BinaryNode.data>`\\"
+msgstr ""
+
+#: b86fea1f2a614d5684c5594b6b863a95 of
+#: sds.tree.node.BinaryNode.__init__:1:<autosummary>:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: dda8848df52847c0b0f91fc5a97c8ab5 of
+#: sds.tree.node.BinaryNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`left <sds.tree.node.BinaryNode.left>`\\"
+msgstr ""
+
+#: 681d94654a554116ba66e05bcb52f3a8 c487c28482e4495aa3a0e11bbdeb4ded of
+#: sds.tree.node.BinaryNode.__init__:1:<autosummary>:1
+#: sds.tree.node.BinaryNode.left:1
+msgid "Get or set the left child node."
+msgstr ""
+
+#: 224a6ad11e9c42efab1ead49f451c928 of
+#: sds.tree.node.BinaryNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`parent <sds.tree.node.BinaryNode.parent>`\\"
+msgstr ""
+
+#: 921df99a8e1d44b187b9fa473ebc763c of
+#: sds.tree.node.BinaryNode.__init__:1:<autosummary>:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: ff3fcdd2cdb14f45b31d48c36554d340 of
+#: sds.tree.node.BinaryNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`right <sds.tree.node.BinaryNode.right>`\\"
+msgstr ""
+
+#: 81e47f02a8504e62ab0c317195a716cf e46f63caa6da458b8fab870e013925e2 of
+#: sds.tree.node.BinaryNode.__init__:1:<autosummary>:1
+#: sds.tree.node.BinaryNode.right:1
+msgid "Get or set the right child node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.BinaryNode.rst
+#: 11df5d07e7fb4ccb8bbd979fe2e1903a 406294b6f09b41869b58ca55ef94aa6b
+#: 8a028059cbcb4214ac0606c07995d00a b2f3659b87cc4520912303a3f4f33faa
+#: ca82baddf6cc41228a5cf9db3f538cdc
+msgid "Returns"
+msgstr ""
+
+#: 581b3af6ee4b4e10aec5a4e46289abe8 of sds.tree.node.BinaryNode.left:3
+msgid "The left child node, or None if no left child."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.BinaryNode.rst
+#: 3fa58ed820444be6b9f9cec535e38bd2 456f240cf9a7406e9c60f150f38c4c6f
+#: 69d77f7e7b3b4bf8a810bb8bf9c47780 ac3e91069519482f9180be739edb9ca8
+#: eb7c842e5eb646428a449ea8efa243d9
+msgid "Return type"
+msgstr ""
+
+#: 2eddcf810ae74692a01178b524bb4e11 of sds.tree.node.BinaryNode.left:18
+msgid ""
+"This property accesses _refs[0]. Setting this property automatically "
+"updates the child's parent reference."
+msgstr ""
+
+#: 2846f3cb48ca4b0a8916288865c2f741 of sds.tree.node.BinaryNode.right:3
+msgid "The right child node, or None if no right child."
+msgstr ""
+
+#: 87ecd780f35f406c95f9a8d749c0b0f2 of sds.tree.node.BinaryNode.right:18
+msgid ""
+"This property accesses _refs[1]. Setting this property automatically "
+"updates the child's parent reference."
+msgstr ""
+
+#: 43ce818d99db44cf85ce7490ef27d976 of sds.tree.node.BinaryNode.is_leaf:3
+msgid "True if the node has no left or right children, False otherwise."
+msgstr ""
+
+#: e54fb8d9874c4e8a8e6a3c5f3a5de974 of sds.tree.node.BinaryNode.is_leaf:17
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 3ffe2112fdc043a0a37bfea60e344b25 of sds.tree.node.BinaryNode.__repr__:1
+msgid "Return a detailed string representation of the node."
+msgstr ""
+
+#: c524c9090b114012b8fbf60b6f957ed6 of sds.tree.node.BinaryNode.__repr__:3
+msgid "String representation in the form \"BinaryNode(data)\"."
+msgstr ""
+
+#: 6a087ca3820a485681b245c168c7ccfe of sds.tree.node.BinaryNode.__str__:1
+msgid "Return a simple string representation of the node's data."
+msgstr ""
+
+#: 9f2fe74954b948409e5e6271d37d5c5e of sds.tree.node.BinaryNode.__str__:3
+msgid "String representation of the data."
+msgstr ""
+

@@ -1,0 +1,549 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:2
+#: 0c80ffc97b6f44dcbb5ed914cc089387
+msgid "sds.linear.list.LinkedList"
+msgstr ""
+
+#: 06a1af33c0464c8db17195b792170fcb of sds.linear.list.LinkedList:1
+msgid "A singly linked list implementation."
+msgstr ""
+
+#: 303ad35264724cd2bb5e68c58339ff17 of sds.linear.list.LinkedList:3
+msgid ""
+"A linked list is a linear collection where each element (node) contains "
+"data and a reference to the next node in the sequence. This "
+"implementation uses a head pointer to track the beginning of the list."
+msgstr ""
+
+#: 764af21a1fcc4449acbf34d75dc34b2e of sds.linear.list.LinkedList:9
+msgid "The first node in the list (read-only property)."
+msgstr ""
+
+#: 183a30d17add4f6c87ca3e216e26b00e 32ceb317ec5f48ed9701c548dcc69914
+#: 374ce1dc960149c2aaa837708b18abdc 3e67be4d1bea41058dcab34eada55bfe
+#: 560041db728b44daaf11ab20e37e9e89 64da24494e08445489111664319823bd
+#: d1fc723442dc43eda0779965e160c0b5 da2085150ef645a8a2bcc12c19e3a74c of
+#: sds.linear.list.LinkedList
+msgid "type"
+msgstr ""
+
+#: af8c5e746bb4419db7346fb9526af96e of sds.linear.list.LinkedList:11
+msgid "Node or None"
+msgstr ""
+
+#: 28859b4e7ae2474eb8a7ca9d9f5b5c7b of sds.linear.list.LinkedList:15
+msgid "The number of elements in the list (read-only property)."
+msgstr ""
+
+#: 793ad9aa4e94486ba6b2bba03eb5de12 of sds.linear.list.LinkedList:17
+msgid "int"
+msgstr ""
+
+#: 406d71eb7da84a8bb7e402bfded4c6ea 8dbf836c5b7b4c57b33b222eb374e674
+#: 91544e16102f434fa67b244e02e68133 f46f12dddf4e450590b2d73917fa2c28 of
+#: sds.linear.list.LinkedList:31 sds.linear.list.LinkedList:37
+#: sds.linear.list.LinkedList:49 sds.linear.list.LinkedList:61
+msgid "O(n)"
+msgstr ""
+
+#: 375663b5fcd4405591658efd3199fb6c d0a5bd9319164d1dab42166ed31f606b of
+#: sds.linear.list.LinkedList:43 sds.linear.list.LinkedList:55
+msgid "O(1)"
+msgstr ""
+
+#: 1a1847fd397343929398c9c94f0db3d5 1cbdac9b1c6d4331a3825ca3dd1a08f0
+#: 1dd33e1ae00d46d6961f8b31497be0c7 2390e29f0ef8438cb93f68e6544ea43e
+#: 331b5b74f0984a829f533b8213b11f3f 38847fd833224d2ab73e28b620cb15e3
+#: 59c82e88f52b4650926653dcade09064 6a41df0ba4b04829b0f25e059fd4e14c
+#: 8df23d3967124ca9827f5d2f56f9ebce ae2d2309635b4017b06a97bd0d2cc24e
+#: c62f1b4f1e1b4521b107f1e7095425f3 c7b2ce289cf345228d207e997fc7019e
+#: ca0af2c88c6841c1a0d290bcd1ec0fe2 dcc89180f65145b6aac8638ac795f115
+#: ddf0eac729434f71a25635a5acb52c34 e01b6b1fb195406a892a60100f377886
+#: fa4ecf8fe5ad44728fa743069c99550b fd74a6ca529042dd8e037901e028be22 of
+#: sds.linear.list.LinkedList:63 sds.linear.list.LinkedList.__contains__:9
+#: sds.linear.list.LinkedList.__getitem__:11
+#: sds.linear.list.LinkedList.__iter__:5 sds.linear.list.LinkedList.__repr__:6
+#: sds.linear.list.LinkedList.__setitem__:10
+#: sds.linear.list.LinkedList.__str__:6 sds.linear.list.LinkedList.append:6
+#: sds.linear.list.LinkedList.clear:3 sds.linear.list.LinkedList.find:9
+#: sds.linear.list.LinkedList.head:6 sds.linear.list.LinkedList.insert_at:10
+#: sds.linear.list.LinkedList.prepend:6 sds.linear.list.LinkedList.remove:12
+#: sds.linear.list.LinkedList.remove_at:12
+#: sds.linear.list.LinkedList.remove_first:8
+#: sds.linear.list.LinkedList.remove_last:8
+#: sds.linear.list.LinkedList.reverse:3
+msgid "Examples"
+msgstr ""
+
+#: d6c0156d47704576902c906e04d7e503 of sds.linear.list.LinkedList:65
+msgid "Create and populate a list:"
+msgstr ""
+
+#: f3b820734f14472f924f6266b36ff13f of sds.linear.list.LinkedList:74
+msgid "Access elements:"
+msgstr ""
+
+#: e5d0a8f2b71e40d0ba10cb986d96b4da of sds.linear.list.LinkedList:81
+msgid "Iterate over elements:"
+msgstr ""
+
+#: e1c92df561e9430faca65750a73334cd of sds.linear.list.LinkedList:89
+msgid "Modify the list:"
+msgstr ""
+
+#: 010fd761164c428b810ceb55b6a9a15b 0537022bdb494f698016f5cb55089e9d
+#: 15085e2139ff4d76bca530160f5dd77e 1bdff4a47ca544e9b438d491553e4142
+#: 520be5ab06a14bfd89cf376798ba07fc 5624730830fb465f9a2cfd286705bd0b
+#: 5c0b9289437b47cdaa47304704006dea 5e39d836a166430290aa2453c446d1ef
+#: 6c00e4f4ca8d4751b4d89c5972565609 6eaaab66ca0c4172ba8d016e9f8b9234
+#: 93fba4f28197411ab069b95835b1203d c0ec15e25dc14b46a4630b0bfcbb993c
+#: d3b27f94fcfc466397a04c11ad4e2a94 d5123cc3f87a45a3b0cf9166d8aa748f
+#: f36d81d705054ecca53dd8752493c782 ff45b8ff421d48de9d1fb6308db536fa of
+#: sds.linear.list.LinkedList:96 sds.linear.list.LinkedList.__contains__:19
+#: sds.linear.list.LinkedList.__getitem__:24
+#: sds.linear.list.LinkedList.__iter__:19
+#: sds.linear.list.LinkedList.__setitem__:19
+#: sds.linear.list.LinkedList.append:15 sds.linear.list.LinkedList.clear:16
+#: sds.linear.list.LinkedList.find:20 sds.linear.list.LinkedList.head:15
+#: sds.linear.list.LinkedList.insert_at:19
+#: sds.linear.list.LinkedList.prepend:15 sds.linear.list.LinkedList.remove:23
+#: sds.linear.list.LinkedList.remove_at:23
+#: sds.linear.list.LinkedList.remove_first:18
+#: sds.linear.list.LinkedList.remove_last:18
+#: sds.linear.list.LinkedList.reverse:15
+msgid "Notes"
+msgstr ""
+
+#: 1e6e4c6a174d4f9a9c4c0a9588f35e93 of sds.linear.list.LinkedList:98
+msgid ""
+"This implementation maintains only a head pointer, which means append "
+"operations are O(n). For better performance with frequent appends, "
+"consider using DoublyLinkedList which maintains both head and tail "
+"pointers."
+msgstr ""
+
+#: 9ec51889b9754535aaaa35100db35dda of sds.linear.list.LinkedList:104
+msgid ":obj:`DoublyLinkedList`"
+msgstr ""
+
+#: 367359dc6a5d4f0bb6f2fac76d148b70 of sds.linear.list.LinkedList:105
+msgid "Linked list with bidirectional traversal and O(1) append."
+msgstr ""
+
+#: 210aeaacb5164f5c84fa6b6f87a0a399 of sds.linear.list.LinkedList:107
+msgid ":obj:`CircularLinkedList`"
+msgstr ""
+
+#: be13d8ce9ed24e3a81a4c244d307bc84 of sds.linear.list.LinkedList:108
+msgid "Variant where the last node points back to the first."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 25f87b262e8a409a8869ddf9db7e1c84 7a948fa0e6e345bca85fe58eb9ff9822
+#: e3faf3e9d0a54666a339d6e53f0ea596 of sds.linear.list.LinkedList.__init__:1
+msgid "Initialize an empty singly linked list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:13
+#: 9409c870ca904d448b287d2f0392d229
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 00b5c0278860479caa8b3ba7519f0f72
+msgid ":py:obj:`__init__ <sds.linear.list.LinkedList.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 0710ecb2df254ba2ba47f84477163b57
+msgid ":py:obj:`add <sds.linear.list.LinkedList.add>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: bafcc037f208467e9e2b413d05a060c0
+msgid "Add an item to the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: db817443f5e340f2b58ff3e76c17e1a8
+msgid ":py:obj:`append <sds.linear.list.LinkedList.append>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 894c7b450279484c8515ed4971e3fa5d dec8590dafe146869bf50031b5b2a58a of
+#: sds.linear.list.LinkedList.append:1
+msgid "Add an item to the end of the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 52ab362dcfbf4f2db1d2be9e1c52100e
+msgid ":py:obj:`clear <sds.linear.list.LinkedList.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 7d94b509ee0447e6a6cf228d1fc12e98 950ba5fb167c4eb49c905323f7162dde of
+#: sds.linear.list.LinkedList.clear:1
+msgid "Remove all elements from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: e9114bd689294f1fb778aece2fa20937
+msgid ":py:obj:`find <sds.linear.list.LinkedList.find>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 6d6cb5d7a22a43a4833440e4ffd31cda 8ea63672014f47cb97f678729306400e of
+#: sds.linear.list.LinkedList.find:1
+msgid "Find the index of the first occurrence of an item."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: a8a0b05891e441c2aa682ec7c42616f0
+msgid ""
+":py:obj:`insert_at <sds.linear.list.LinkedList.insert_at>`\\ \\(index\\, "
+"item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 237ccca3a49a438484d4d33b29b6f6af 8bb55585e67a49a7bfcd46da04e348a6 of
+#: sds.linear.list.LinkedList.insert_at:1
+msgid "Insert an item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: f4acce9840b846e7a2a802418e8b59c4
+msgid ":py:obj:`is_empty <sds.linear.list.LinkedList.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 95c14f8309ce48e881766003a2afd405
+msgid "Return True if the list is empty."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 9d15c4de63df4974ab468b465e067c82
+msgid ":py:obj:`prepend <sds.linear.list.LinkedList.prepend>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 4f84e5d32bc546ffb2c910d3976ce1e9 9cb84aaf35d64c3092e26141b621e161 of
+#: sds.linear.list.LinkedList.prepend:1
+msgid "Add an item to the beginning of the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: e70284d33c63475db929038173e8dcf1
+msgid ":py:obj:`remove <sds.linear.list.LinkedList.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 66526f0a6c9543909cff544b97bc4f7b 9affcfd7be304cba971d035eaeb65295 of
+#: sds.linear.list.LinkedList.remove:1
+msgid "Remove the first occurrence of an item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 6a03cd083ccb465bb64b9f33610df3f4
+msgid ":py:obj:`remove_at <sds.linear.list.LinkedList.remove_at>`\\ \\(index\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 7581d74af88a41b19f34018c729ebd7d a9930bcccec347e6aa90657e02c35f5e of
+#: sds.linear.list.LinkedList.remove_at:1
+msgid "Remove and return the item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: ffcc820720544419b1cc147bf315df1a
+msgid ":py:obj:`remove_first <sds.linear.list.LinkedList.remove_first>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 0f154ded50e64065aebd28b567dcef63 e1fe3ca1696742a39466b66ad05f08f7 of
+#: sds.linear.list.LinkedList.remove_first:1
+msgid "Remove and return the first item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 389b116a7d6c4a578e1550186fa0ddfd
+msgid ":py:obj:`remove_last <sds.linear.list.LinkedList.remove_last>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 1678d1ea762d48e18f78f8f9ebb7537c 7d20712a361f483497d0727cf1664c0b of
+#: sds.linear.list.LinkedList.remove_last:1
+msgid "Remove and return the last item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 99443e3e9ea84040b7ff1ed31b6d54df
+msgid ":py:obj:`reverse <sds.linear.list.LinkedList.reverse>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:33:<autosummary>:1
+#: 40669b86a0c445478eae08cfc3c09bab 751de1e5f7654f94b8db30d84ff06090 of
+#: sds.linear.list.LinkedList.reverse:1
+msgid "Reverse the list in place."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst:35
+#: b98f8b9544b94e6489d98fd91b453a50
+msgid "Attributes"
+msgstr ""
+
+#: 17840c2a13904ca8a0719b22b64abcf6 of
+#: sds.linear.list.LinkedList.__init__:1:<autosummary>:1
+msgid ":py:obj:`head <sds.linear.list.LinkedList.head>`\\"
+msgstr ""
+
+#: 6d0373133b5c461e85284c4bccd33ec1 b49043972dca47779a3140bdcef8e9d9 of
+#: sds.linear.list.LinkedList.__init__:1:<autosummary>:1
+#: sds.linear.list.LinkedList.head:1
+msgid "Get the first node in the list."
+msgstr ""
+
+#: 1dac1833bad44b34b2666dc09ef86818 of
+#: sds.linear.list.LinkedList.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.linear.list.LinkedList.size>`\\"
+msgstr ""
+
+#: 9402d2e9133a4b0fba649eed64d60776 of
+#: sds.linear.list.LinkedList.__init__:1:<autosummary>:1
+msgid "Get the number of elements in the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst
+#: 4312ef24b75d46f4ab3326f57e45b6e0 57853b414a4d4813a02ba65a7bc0c870
+#: 73cc8603d00e4be5a8bcea4feda3c904 7a40a51a2dd541d2a6681c6cfa54436d
+#: 816df1d7f9594768952a8d1e52a6fc70 8f6dab7b0b2241bd9fdc845d749bae6f
+#: a2efd5a3fd9043b589226f2de864784e b56106ff95ad4cde8ebf8ccc0d2ceace
+#: ba149103cf6c436bbba522a46a8e4c35 f82dc2be33ea4a7685f1e2aece6fe933
+msgid "Returns"
+msgstr ""
+
+#: b90333aebfc24c02a68ba04b39a92655 of sds.linear.list.LinkedList.head:3
+msgid "The first node, or None if the list is empty."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst
+#: 1466174bb221421397dc62a694591271 27fe928d782046e9a7874e9cd813561d
+#: 38c8da363af04e63ba83220079c2d59a 43a7d71bba2444fa81d127c87b48e267
+#: 5cb8b9efab9047218c5d3607f62d731d 7bcf4ae9fece49958c8551f2752c3fce
+#: 8907c1b1ff37461cbd1b310f3b6d4b79 d01a6e383144474ca822f200b0608613
+#: de36aa4f2f4e4e018f164e59a3524838 e43c469d7aa546b2b5174255ce8d34d4
+msgid "Return type"
+msgstr ""
+
+#: aaadf46ae5724bcba88ddca0c8c89e42 of sds.linear.list.LinkedList.head:17
+msgid ""
+"This property is read-only. To modify the list, use methods like "
+"prepend(), append(), or insert_at()."
+msgstr ""
+
+#: 3d80bb3762234c748cb9d13e428e914a of sds.linear.list.LinkedList.clear:18
+msgid ""
+"Time complexity: O(1) This operation simply resets the head pointer, "
+"allowing garbage collection to clean up the nodes."
+msgstr ""
+
+#: bea1e90950894721b12218d5e83f9f98 of sds.linear.list.LinkedList.__iter__:1
+msgid "Iterate over the elements in the list."
+msgstr ""
+
+#: 2f3f41c9ce6946a19296dc6897b88284 of sds.linear.list.LinkedList.__iter__
+msgid "Yields"
+msgstr ""
+
+#: 53f7b15a63e54c039ff6b0a56eb650c4 of sds.linear.list.LinkedList.__iter__:3
+msgid "*Any* -- Elements from the list in order from head to tail."
+msgstr ""
+
+#: f37c320115e84860b7c9493bece24811 of sds.linear.list.LinkedList.__iter__:21
+msgid "Time complexity: O(n) for complete iteration Space complexity: O(1)"
+msgstr ""
+
+#: 2f37de9c1dcc459e81d471baad1b11fb of
+#: sds.linear.list.LinkedList.__contains__:1
+msgid "Return True if item is in the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst
+#: 243d613920ac455f8522623d463a39e6 36f92c3593804698b0cb1dae92517c8c
+#: 54980fbdb8db4131829bbec14bb3809f 82d7f4c1b6864d529bee294e7a009b83
+#: 857fe0718f22436694f55d3abcd7f731 ac4358d1af0046bebe113f43dd1a7de1
+#: ac760f5aba5142d58a5d0d90d144c3d4 ae3abf7ebb214afb995ad19caa44f928
+#: f1291993619144b883dce9ef3f3ac471
+msgid "Parameters"
+msgstr ""
+
+#: 37cdc85366e046a69ace358c22d09892 of
+#: sds.linear.list.LinkedList.__contains__:3
+msgid "The item to search for."
+msgstr ""
+
+#: d8c10980f05143dd945f896392b35452 of
+#: sds.linear.list.LinkedList.__contains__:6
+msgid "True if the item is found, False otherwise."
+msgstr ""
+
+#: 8e92457b9ecb49a7a6adaaf60cf37e97 of
+#: sds.linear.list.LinkedList.__contains__:21
+msgid "Time complexity: O(n) This performs a linear search through the list."
+msgstr ""
+
+#: 07781ff6ccec4c738dd5a62c650582a2 of sds.linear.list.LinkedList.__repr__:1
+msgid "Return a detailed string representation of the list."
+msgstr ""
+
+#: 9e1850dfa58a4c99897569aa1211588b of sds.linear.list.LinkedList.__repr__:3
+msgid "String in the form \"LinkedList([item1, item2, ...])\"."
+msgstr ""
+
+#: 6a109b297e264533b21705f2b193e4bd of sds.linear.list.LinkedList.__str__:1
+msgid "Return a simple string representation of the list."
+msgstr ""
+
+#: 55b82c174b5e4f6785d49117c905b126 of sds.linear.list.LinkedList.__str__:3
+msgid "String showing the list structure with arrows."
+msgstr ""
+
+#: 0af9754770474fb8936ae1f07c0d6a8e of sds.linear.list.LinkedList.__getitem__:1
+msgid "Get the item at the specified index."
+msgstr ""
+
+#: 300e6c1c6bd6481baccb38f44cf3f7a6 52056fc7f508420eb9a6a4e99db82e2b of
+#: sds.linear.list.LinkedList.__getitem__:3
+#: sds.linear.list.LinkedList.__setitem__:3
+msgid "The index (supports negative indexing)."
+msgstr ""
+
+#: daf4cf65be8a4ebf9e5ee4cada591773 of sds.linear.list.LinkedList.__getitem__:6
+msgid "The item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.list.LinkedList.rst
+#: 16bd7373c0e14cb990a227980a873a65 42b675ad3b4f42d0b1efc82034f0196f
+#: 7c36f3160dad4476a27cb70d03500be2 89ec188af51e403a9b4cd9c1883358e9
+#: 9892900aff3c4679a8dc694a454152f9 b6df0f2514644133b1044de569ff76e7
+#: cd6d4fcfeb3d4a52a56b6fa96eb0ea38
+msgid "Raises"
+msgstr ""
+
+#: 1ba80f0bc0d540949b9c4cb488511500 49d59e4ddfef46a481fffa632eee1ef8
+#: b87c4250f09543b58d8ad4fd8465398a f25ac9b88c634be7b017fc5f1bd8a694 of
+#: sds.linear.list.LinkedList.__getitem__:9
+#: sds.linear.list.LinkedList.__setitem__:8
+#: sds.linear.list.LinkedList.insert_at:8
+#: sds.linear.list.LinkedList.remove_at:10
+msgid "If the index is out of range."
+msgstr ""
+
+#: 4eb27d174aed4af9b5ff26130c0d4f66 51b16d0e9e7c4d0db6360b3d306a4f4f
+#: b41cd3817d1a4c9ba5332070b6e86572 c01368d1ab1e4fa682246b61d0d67ffb
+#: cb41308ef9c347538f8a4cab12276247 f6c50414fa834d0785a94a4b06f7a194 of
+#: sds.linear.list.LinkedList.__getitem__:26
+#: sds.linear.list.LinkedList.__setitem__:21 sds.linear.list.LinkedList.find:22
+#: sds.linear.list.LinkedList.insert_at:21 sds.linear.list.LinkedList.remove:25
+#: sds.linear.list.LinkedList.remove_at:25
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 3ab9675d9eba41dfbbf953a3ba2597ad of sds.linear.list.LinkedList.__setitem__:1
+msgid "Set the item at the specified index."
+msgstr ""
+
+#: cdfddc8e465b451b972d455f34d8a504 of sds.linear.list.LinkedList.__setitem__:5
+msgid "The new value."
+msgstr ""
+
+#: 1b5951775192438a9e90e04d4443b845 90a8638f097f40eda7030f79d3cbbd36 of
+#: sds.linear.list.LinkedList.append:3 sds.linear.list.LinkedList.prepend:3
+msgid "The item to add."
+msgstr ""
+
+#: 524cf3c8f65745ee9820232c88232432 bcea8f190e2c4fdd995b4585cff92bda of
+#: sds.linear.list.LinkedList.prepend:17
+#: sds.linear.list.LinkedList.remove_first:20
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 1c58dec2252e4ee4a76fe3ee00534832 of sds.linear.list.LinkedList.append:17
+msgid ""
+"Time complexity: O(n) This implementation must traverse the entire list "
+"to find the end."
+msgstr ""
+
+#: 88c6d28d8ce34bb18a28dacea64a60d3 of sds.linear.list.LinkedList.insert_at:3
+msgid "The index where to insert (0 <= index <= size)."
+msgstr ""
+
+#: 66b2c4544a974c56a1246ddc6f752587 of sds.linear.list.LinkedList.insert_at:5
+msgid "The item to insert."
+msgstr ""
+
+#: 0a86c07478e64983b5c12105e666b762 6850d07717964836b0d7851c1d7b2d44
+#: 9c50379f834e4f5399d8cde8390afe1c d34e8b0c53c24a23914f90ec4cc872a0 of
+#: sds.linear.list.LinkedList.remove:6 sds.linear.list.LinkedList.remove_at:6
+#: sds.linear.list.LinkedList.remove_first:3
+#: sds.linear.list.LinkedList.remove_last:3
+msgid "The removed item."
+msgstr ""
+
+#: 1519d04a88914098bce0aef98c363ad4 25f615ecbad54232a36ed3a6f8885747
+#: 32fa6da777674ee88316dceca38759cc 622faddf66d74524bc0b1f0e028b5f6f of
+#: sds.linear.list.LinkedList.remove:9 sds.linear.list.LinkedList.remove_at:9
+#: sds.linear.list.LinkedList.remove_first:6
+#: sds.linear.list.LinkedList.remove_last:6
+msgid "If the list is empty."
+msgstr ""
+
+#: dc5e3471995a455487c8c2d7c9d5e2ab of
+#: sds.linear.list.LinkedList.remove_last:20
+msgid "Time complexity: O(n) Must traverse to find the second-to-last node."
+msgstr ""
+
+#: 4505acd7575c4975b7ea3d1ae18c0bb4 of sds.linear.list.LinkedList.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: af67679be63a46048996b4d0f513c7b8 of sds.linear.list.LinkedList.remove:10
+msgid "If the item is not found."
+msgstr ""
+
+#: e409835fc5ce40beab88c1360a0afcd1 of sds.linear.list.LinkedList.remove_at:3
+msgid "The index of the item to remove."
+msgstr ""
+
+#: be5cf9fa78c0410ebb3291937ff137c3 of sds.linear.list.LinkedList.find:3
+msgid "The item to find."
+msgstr ""
+
+#: 321aedaf9c914423bb24f6c05ed5b0f2 of sds.linear.list.LinkedList.find:6
+msgid "The index of the item, or -1 if not found."
+msgstr ""
+
+#: 77da0b233d7946f3ab0ed0ed24dbb22a of sds.linear.list.LinkedList.reverse:17
+msgid "Time complexity: O(n) Space complexity: O(1)"
+msgstr ""
+

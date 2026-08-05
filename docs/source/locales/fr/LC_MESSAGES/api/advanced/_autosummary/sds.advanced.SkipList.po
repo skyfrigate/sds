@@ -1,0 +1,482 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:2
+#: 0b34e16ad62d43a1ad9559611e5e6e22
+msgid "sds.advanced.SkipList"
+msgstr ""
+
+#: e49960ea2d35488d9060c462575488d1 of sds.advanced.skip_list.SkipList:1
+msgid "Probabilistic sorted data structure with O(log n) expected operations."
+msgstr ""
+
+#: 0c11d83ac41e400dada85da6729548d6 of sds.advanced.skip_list.SkipList:3
+msgid ""
+"A skip list organises elements in a sorted base linked list while "
+"maintaining express lanes at higher levels for fast traversal. Each node "
+"is promoted to the next level with probability *p*, independently."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst
+#: 106674f7401743639953325cfb0e17c7 2b2be68b5edd485ab603aac3e9101d59
+#: 31403ca1d144403fa9a114347ea86f33 399f9f973cea441fae679e91023467b8
+#: 6f21b74af2454b8b88e5a57edb4680f7 8ab4452805914e199c58043258bc8cc9
+#: e08c581f9ce04b5e854cd8b00c4f0f63
+msgid "Parameters"
+msgstr ""
+
+#: 85e18bb3a48a413399b7557b73c91133 of sds.advanced.skip_list.SkipList:7
+msgid ""
+"Maximum number of levels (inclusive). Must be ≥ 1. A value of 16 handles "
+"up to ~65 000 elements at p=0.5 with high probability; 32 covers billions"
+" of elements."
+msgstr ""
+
+#: e1f46e9783714136a08e95c5e5402ec2 of sds.advanced.skip_list.SkipList:11
+msgid ""
+"Promotion probability per level. Must be in (0.0, 1.0). p=0.5 gives the "
+"classic O(log₂ n) behaviour."
+msgstr ""
+
+#: c0a2f329c33e440395a5785338fdab4c of sds.advanced.skip_list.SkipList:17
+msgid "Maximum height of any node (read-only)."
+msgstr ""
+
+#: 33734e370491463d8a449b9a18515aca 551e82bd91284e33ad2c9d82457ce13f
+#: 5cbf9fcff20a497a93d760207d8288f0 of sds.advanced.skip_list.SkipList
+msgid "type"
+msgstr ""
+
+#: 42018851f88b4ef68a09cfc0fc59c3ea b438de741caf496e8254ac3f505df8b6 of
+#: sds.advanced.skip_list.SkipList:19 sds.advanced.skip_list.SkipList:31
+msgid "int"
+msgstr ""
+
+#: 0dd6dd649e004d84a1cc4c98f769dbb8 of sds.advanced.skip_list.SkipList:23
+msgid "Geometric promotion probability (read-only)."
+msgstr ""
+
+#: 4ef7f123bdb4416c9612f80ca4103f92 of sds.advanced.skip_list.SkipList:25
+msgid "float"
+msgstr ""
+
+#: 6cef1e633a4e44aab7173ed28375ef90 b24d310f32804069bb5bdf0b81479bbd
+#: d8af206b26d8447b8159d3044199516c of sds.advanced.SkipList.level:1
+#: sds.advanced.skip_list.SkipList:29
+#: sds.advanced.skip_list.SkipList.__init__:1:<autosummary>:1
+msgid "Current highest occupied level (0-indexed)."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst
+#: 091e8e22e877498080478d8f57848b5a cf633e6419704588a32f6780e731a1e6
+#: ff56d45e54404e0d9b31a8ae9ce65097
+msgid "Raises"
+msgstr ""
+
+#: 85db901a80244ca79ec190cdec59ef2b of sds.advanced.skip_list.SkipList:33
+msgid "If ``max_level < 1`` or ``probability`` is not in (0, 1)."
+msgstr ""
+
+#: 05f94df64a0b4b15ad163c7672b5e297 3e2ab4a64b0b4f56beaeaf260455ae96
+#: 69d10b1f4d1147d6885ab11c791220b3 7767557bfe2041c299027fda96f3214c
+#: 90a46b8e483446ed9b0a59b4c7668e38 a07c67d344314cd0a3c7066569d920d2
+#: a5334b6aa4734423a1b215ffff3754a7 a5fb1c7d65644ac8a79a67258f7d3870
+#: a7478e4c7b2240aca22e946a339154c9 b296c67f88a947319752825aa1e3d7ae
+#: b63adf4b73af42d0a828662f44427c76 db7c8f81dc2f447392fd5d410f31191d
+#: f305f66c610a4034badee734de80258c fd371660723c4001b9ee40b1ea717050 of
+#: sds.advanced.skip_list.SkipList:35
+#: sds.advanced.skip_list.SkipList.__contains__:9
+#: sds.advanced.skip_list.SkipList.__init__:10
+#: sds.advanced.skip_list.SkipList.__iter__:5
+#: sds.advanced.skip_list.SkipList.__len__:6
+#: sds.advanced.skip_list.SkipList.__repr__:6
+#: sds.advanced.skip_list.SkipList.__str__:6
+#: sds.advanced.skip_list.SkipList.delete:9
+#: sds.advanced.skip_list.SkipList.insert:11
+#: sds.advanced.skip_list.SkipList.items:5
+#: sds.advanced.skip_list.SkipList.max_key:6
+#: sds.advanced.skip_list.SkipList.min_key:6
+#: sds.advanced.skip_list.SkipList.search:9
+msgid "Examples"
+msgstr ""
+
+#: cf33f43f4d5a45f7a8e3dcdddbb3b97e of sds.advanced.skip_list.SkipList:37
+msgid "Insert, search, delete:"
+msgstr ""
+
+#: 679a063fb81c45c5af912f63dfa1dafa of sds.advanced.skip_list.SkipList:56
+msgid "Iteration in sorted order:"
+msgstr ""
+
+#: 02efcf4dddd348beb5975c7c53716c7b 1674bdb3ee274533992e38165c975a5a
+#: 2f365b5cd1674e2e9614f6bb6070661d 3dbbda5f73fe4dfb842e92d6c68a04e7
+#: 449cf4db93b749e7a33cb57d997fe56e 83d33425f8b747c9acaeec3750a8afc8
+#: a6ddee8dd8aa4398ac156cca1ea9aa14 c24ffdc82b714f7d89feacab99456735
+#: c546d5fecdc14c62ae90b773dd4d0b63 cab30299605b4e2398ffd1730bfce867
+#: e85eb23b549c4e61b3d7c92c6eadf3a9 eb671e39f3a04fd487b9b60740e5fdac
+#: f654886fce9247e9a710c07890d567a6 of sds.advanced.skip_list.SkipList:64
+#: sds.advanced.skip_list.SkipList.__contains__:18
+#: sds.advanced.skip_list.SkipList.__init__:16
+#: sds.advanced.skip_list.SkipList.__iter__:13
+#: sds.advanced.skip_list.SkipList.clear:5
+#: sds.advanced.skip_list.SkipList.delete:18
+#: sds.advanced.skip_list.SkipList.insert:21
+#: sds.advanced.skip_list.SkipList.is_empty:6
+#: sds.advanced.skip_list.SkipList.items:13
+#: sds.advanced.skip_list.SkipList.max_key:16
+#: sds.advanced.skip_list.SkipList.min_key:16
+#: sds.advanced.skip_list.SkipList.search:18
+msgid "Notes"
+msgstr ""
+
+#: 4022f8a13c934583a370cd2b940c1be9 of sds.advanced.skip_list.SkipList:66
+msgid ""
+"Duplicate keys: a second ``insert(k, v)`` **updates** the value "
+"associated with *k* rather than inserting a second node. Keys must "
+"support ``<`` and ``==``."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 34d0876a8a524c778e95d916f55a27b9 5415be91674a49859bf5b3be968f83e3
+#: 94923d4d3ab74696af5f9a1fba555254 of
+#: sds.advanced.skip_list.SkipList.__init__:1
+msgid "Initialise an empty skip list."
+msgstr ""
+
+#: 2f0d031ff7264c93a4af2b2bb5a6a950 b5cf65daadf84e6094567809ff87dd32 of
+#: sds.advanced.skip_list.SkipList.__init__:3
+msgid "Maximum node height (default 16)."
+msgstr ""
+
+#: a31b094f5b52413caad5534f523b0c92 f98f23548699492e9f40e55979250022 of
+#: sds.advanced.skip_list.SkipList.__init__:5
+msgid "Per-level promotion probability (default 0.5)."
+msgstr ""
+
+#: 386d617fc9cc4c74afdfb7242ca1ec1d 4b185325fdfe4026b8e45dd8376520a2 of
+#: sds.advanced.skip_list.SkipList.__init__:8
+msgid "If ``max_level < 1`` or ``probability`` not in (0, 1)."
+msgstr ""
+
+#: 57bacde15a144d1894f64b121a9f429c f5bc0d9adfb440efb59f936c3732de4c of
+#: sds.advanced.skip_list.SkipList.__init__:18
+msgid "Time complexity: O(max_level)."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:13
+#: 4e7fd9ce9dfa4867925d8830e8deec67
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: e57e4a00f55d4c3b89fff7563888abac
+msgid ""
+":py:obj:`__init__ <sds.advanced.SkipList.__init__>`\\ "
+"\\(\\[max\\_level\\, probability\\]\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 67d36950d4c2453b9dc511a6982d384c
+msgid ":py:obj:`delete <sds.advanced.SkipList.delete>`\\ \\(key\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: ae24de40ced5484a9ffff887c1d26e85 f0f2938cd0ff49a2bcb057ae6029d3a6 of
+#: sds.advanced.skip_list.SkipList.delete:1
+msgid "Remove the node with the given key."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 8454bd279ac84e75813d45381bfbd5e2
+msgid ":py:obj:`insert <sds.advanced.SkipList.insert>`\\ \\(key\\[\\, value\\]\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 1fc6fadfbb9f45b5af9c36174da38d57 8044c2a84cb64f32ab04f69bc022af13 of
+#: sds.advanced.skip_list.SkipList.insert:1
+msgid "Insert or update a key-value pair."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 0e22e38535c740af9ad8763de33d4e81
+msgid ":py:obj:`items <sds.advanced.SkipList.items>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 09fb11a7810c42cfae3152418043baf0 38fe451345e0449281f5263ec8af5975 of
+#: sds.advanced.skip_list.SkipList.items:1
+msgid "Iterate over (key, value) pairs in sorted key order."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 557916e9bc854e78bca52c66a146723a
+msgid ":py:obj:`max_key <sds.advanced.SkipList.max_key>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 63d3e7a363054987a4f1cd07c065f03e ae2a018c15cc4dff9aa8c1a52fa9dc33 of
+#: sds.advanced.skip_list.SkipList.max_key:1
+msgid "Return the largest key, or None if empty."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 58d3d5c591ad48008a8fae4401c6ca52
+msgid ":py:obj:`min_key <sds.advanced.SkipList.min_key>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 51db9ed936544c6f91e99db56d4347c6 989e4d93c1a243edb09a59ff38001ef7 of
+#: sds.advanced.skip_list.SkipList.min_key:1
+msgid "Return the smallest key, or None if empty."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: c652861be96d457c8d2cf1661a3c5e2a
+msgid ":py:obj:`search <sds.advanced.SkipList.search>`\\ \\(key\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:27:<autosummary>:1
+#: 2cafd2d2d1774f7caa3d8d42a1ece441 4b2ee4c1dddd40eba460906148bb5022 of
+#: sds.advanced.skip_list.SkipList.search:1
+msgid "Return the value associated with *key*, or None if absent."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst:29
+#: 98188f3fdf0745ec8c5157d11e42c526
+msgid "Attributes"
+msgstr ""
+
+#: a0deec33ce9e4ca6836c6b68606447d0 of
+#: sds.advanced.skip_list.SkipList.__init__:1:<autosummary>:1
+msgid ":py:obj:`level <sds.advanced.SkipList.level>`\\"
+msgstr ""
+
+#: 3878f371d4ea4efe98c179cbbf87d5c0 of
+#: sds.advanced.skip_list.SkipList.__init__:1:<autosummary>:1
+msgid ":py:obj:`max_level <sds.advanced.SkipList.max_level>`\\"
+msgstr ""
+
+#: 32d56abf4a964009ae6c0e7d6b084651 8ae8d397aa9340cc98c32990351abe5c of
+#: sds.advanced.SkipList.max_level:1
+#: sds.advanced.skip_list.SkipList.__init__:1:<autosummary>:1
+msgid "Maximum height of any node."
+msgstr ""
+
+#: 54e42465c9f840ad998b987ac74ae846 of
+#: sds.advanced.skip_list.SkipList.__init__:1:<autosummary>:1
+msgid ":py:obj:`probability <sds.advanced.SkipList.probability>`\\"
+msgstr ""
+
+#: 389b1a5e67ac49e1998f3f722bb16d32 7ed8f7bbbdde4cf8b437306a0bac7932 of
+#: sds.advanced.SkipList.probability:1
+#: sds.advanced.skip_list.SkipList.__init__:1:<autosummary>:1
+msgid "Per-level promotion probability."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst
+#: 1e692fd367704b6ea6315f9d3481c23c 2863d61bc8d14ff18c4672b631bafd33
+#: 2d71699733ba42ad9820edf10087e685 40b292ca6bf44c4ca09e1b782bcd0504
+#: 5e0d8d78bfff4b46997012d8a85198fc 6f62151e6e3e4556aca1e693756de68c
+#: a60bbef16302437084ba60b1a408ef43 a9c20e8b088543c08fd624dd735481ea
+#: b46d317bb5004fb9b822e412cf70f52f b9ccae07590846b3954a13f3c8dee43c
+#: ddd16a55edc54f65854e61aa057fc3ee df1356da95314e22b0d1385518ea9fa7
+msgid "Returns"
+msgstr ""
+
+#: 3bd36b5ce9ea4a3ca5f4d1d69dd5b64c cc1320e5b9844967a4a66832406b02cf of
+#: sds.advanced.SkipList.max_level:3 sds.advanced.SkipList.probability:3
+msgid "Value passed at construction."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.SkipList.rst
+#: 0d8b3b064db643d79ed75405d2d95dd0 14ac4185f08043ac91c8d6ed0e9eef04
+#: 249485f4d9864aa4a7c16eb1ecf355bc 317d4490730e457987191039003be1d1
+#: 4810490566dd4c96ba190a4170af714f 4dbb6cc7f07d45a891992ccfa6d5fb0a
+#: 63087caee5be4907b839e77e7d8b54e5 6f247249e91d423bb54e5df5590092aa
+#: 8440d854a36e44c9a9c641bff57bb16a abeee07fa042456fa13012505ab0bd8c
+#: e351c9b226d441e5a6c7e0bba4019cf3 f85226b1ed41494183d30155fe58f8df
+msgid "Return type"
+msgstr ""
+
+#: 1677bd8439904d22bfbfe3f9205a010f of sds.advanced.SkipList.level:3
+msgid "Grows as elements are inserted up to ``max_level``."
+msgstr ""
+
+#: 7b2a9945d0e34315a7feec35505debcc of
+#: sds.advanced.skip_list.SkipList.is_empty:1
+msgid "Return True if the skip list contains no elements."
+msgstr ""
+
+#: f54dbf21463b4bef997be4be5d9459ef of
+#: sds.advanced.skip_list.SkipList.is_empty:3
+msgid "True if length is 0."
+msgstr ""
+
+#: f088cfea117643ccaee6137d70de5afe of
+#: sds.advanced.skip_list.SkipList.is_empty:8
+msgid "Time complexity: O(1)."
+msgstr ""
+
+#: c24836f2f17b4b44bd6ed44dd12341aa of sds.advanced.skip_list.SkipList.clear:1
+msgid "Remove all elements from the skip list."
+msgstr ""
+
+#: 5d144d45eb35415cb10eb4406bfa01fc of sds.advanced.skip_list.SkipList.clear:3
+msgid "Resets the sentinel head and tail pointers and drops all nodes."
+msgstr ""
+
+#: a2bcbb22ee344d7ba1b5bfa4d354e3aa of sds.advanced.skip_list.SkipList.clear:7
+msgid "Time complexity: O(1) — just resets pointers; GC handles nodes."
+msgstr ""
+
+#: 66dbd17b68564ea786dfb128c55d4f4c of sds.advanced.skip_list.SkipList.insert:3
+msgid ""
+"If *key* already exists, its associated value is updated in place. "
+"Otherwise, a new node is inserted at a randomly chosen height."
+msgstr ""
+
+#: 2dece96bbfb94a328f9e9d8d0ac0f3e9 of sds.advanced.skip_list.SkipList.insert:6
+msgid "Comparable key. Must support ``<`` and ``==``."
+msgstr ""
+
+#: 87de94fc486246809c1b83099030c5e1 of sds.advanced.skip_list.SkipList.insert:8
+msgid "Payload to associate with *key*."
+msgstr ""
+
+#: 49b968f3a7174bacb48ef107e5730fa6 5e3659303e434e3ea8e4a6f11eaa275f
+#: 61dcaf3ee5e84851992c6b59a29b3157 91af7d2bcb67416f817d12b1102f72a8 of
+#: sds.advanced.skip_list.SkipList.__contains__:20
+#: sds.advanced.skip_list.SkipList.delete:20
+#: sds.advanced.skip_list.SkipList.insert:23
+#: sds.advanced.skip_list.SkipList.search:20
+msgid "Time complexity: O(log n) average."
+msgstr ""
+
+#: 5a063ccd7f824267857bf1517d70e83f of sds.advanced.skip_list.SkipList.delete:3
+msgid "Key to remove."
+msgstr ""
+
+#: ff172b63d48b4d878cfab3de69dac79a of sds.advanced.skip_list.SkipList.delete:6
+msgid "True if the key was found and removed, False otherwise."
+msgstr ""
+
+#: 9fac1a0de94445239d5e7854ba8900e1 of sds.advanced.skip_list.SkipList.search:3
+msgid "Key to search for."
+msgstr ""
+
+#: 5ee0783454d247b89e7b973f3118ed05 of sds.advanced.skip_list.SkipList.search:6
+msgid "Associated value, or None if not found."
+msgstr ""
+
+#: e6520b74bc3a4020a82b13633f27c16d of
+#: sds.advanced.skip_list.SkipList.__contains__:1
+msgid "Test whether *key* is in the skip list."
+msgstr ""
+
+#: 2f68490aac7842f5af26891d8da7e4bd of
+#: sds.advanced.skip_list.SkipList.__contains__:3
+msgid "Key to test."
+msgstr ""
+
+#: 34d756d67b1a4628bf18a603e2fa03e1 of
+#: sds.advanced.skip_list.SkipList.__contains__:6
+msgid "True if the key is present."
+msgstr ""
+
+#: f233cfad1ca24a08b2ca0aca6acd314e of
+#: sds.advanced.skip_list.SkipList.__len__:1
+msgid "Return the number of key-value pairs."
+msgstr ""
+
+#: e3e5172120a2476a992c2234c1505cf8 of
+#: sds.advanced.skip_list.SkipList.__len__:3
+msgid "Number of elements in the skip list."
+msgstr ""
+
+#: fb4cb77aa18c4c6eb3c9d86177db3373 of
+#: sds.advanced.skip_list.SkipList.__iter__:1
+msgid "Iterate over keys in sorted ascending order."
+msgstr ""
+
+#: 36041ec97a404d399fdde14f7f9e9f1d 74a3d8d354de46b58dac21aefc4da966 of
+#: sds.advanced.skip_list.SkipList.__iter__
+#: sds.advanced.skip_list.SkipList.items
+msgid "Yields"
+msgstr ""
+
+#: 238c42baa2c7448fbb0ccad56485fea0 of
+#: sds.advanced.skip_list.SkipList.__iter__:3
+msgid "*Any* -- Keys in sorted order (level-0 traversal)."
+msgstr ""
+
+#: 67f54d732d3d4bfda5fc0f20e720da99 becfa111ce9940d384e95a4509cb04a6 of
+#: sds.advanced.skip_list.SkipList.__iter__:15
+#: sds.advanced.skip_list.SkipList.items:15
+msgid "Time complexity: O(n)."
+msgstr ""
+
+#: d789d8e24f07417298edf570204af796 of sds.advanced.skip_list.SkipList.items:3
+msgid "*tuple[Any, Any]* -- ``(key, value)`` pairs in ascending key order."
+msgstr ""
+
+#: f13b14d5a90c4f82a66411ba022fd15e of
+#: sds.advanced.skip_list.SkipList.min_key:3
+msgid "Minimum key."
+msgstr ""
+
+#: 9f6feba227ef4e9ea2bea79d1143970b of
+#: sds.advanced.skip_list.SkipList.min_key:18
+msgid "Time complexity: O(1) — first node in the base list."
+msgstr ""
+
+#: 021e07beddbc43e798839d0dcd42e9af of
+#: sds.advanced.skip_list.SkipList.max_key:3
+msgid "Maximum key."
+msgstr ""
+
+#: ff7a8a379a5343a38ebf5f43a4c8680c of
+#: sds.advanced.skip_list.SkipList.max_key:18
+msgid ""
+"Time complexity: O(n) — traverses the base list to the end. For O(1) max "
+"access, maintain a tail pointer (not implemented here)."
+msgstr ""
+
+#: 63e0719b3297478abe4dfc376df8501b of
+#: sds.advanced.skip_list.SkipList.__repr__:1
+msgid "Return a detailed string representation."
+msgstr ""
+
+#: c5b08cb8c15f4f3cb8c0edc73d44f18c of
+#: sds.advanced.skip_list.SkipList.__repr__:3
+msgid "``SkipList(length=n, level=k, max_level=m, probability=p)``."
+msgstr ""
+
+#: eb4f00844af6476a89a46e3e00f076c3 of
+#: sds.advanced.skip_list.SkipList.__str__:1
+msgid "Return a concise string representation."
+msgstr ""
+
+#: 65159ec3d4ed42d48881abc47fed9f27 of
+#: sds.advanced.skip_list.SkipList.__str__:3
+msgid "Human-readable summary."
+msgstr ""
+

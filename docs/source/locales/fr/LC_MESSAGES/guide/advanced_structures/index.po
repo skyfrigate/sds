@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/advanced_structures/index.rst:5
+#: 52b3d64e966a409c887f7a41a2a83cc8
+msgid "Advanced Structures"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:8
+#: 75df6b2f3d2d4879a3276540492d64dc
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:10
+#: 2304fad164ef4344940fae1c2b7eea4d
+msgid ""
+"Advanced data structures solve specialised computational problems with "
+"remarkable efficiency guarantees. They go beyond standard collections by "
+"exploiting probabilistic techniques, internal algorithmic optimisations, "
+"and hybrid designs to achieve near-constant time complexity, compact "
+"space usage, or bounded-error estimation."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:44
+#: 6582eee6cc4a4d2dbb0e78dd602ddba5
+msgid "Structure Overview"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:50
+#: 13563d7f039a4aae96882e51f26937de
+msgid "Structure"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:51
+#: 821305ac1afe4c1d94c37390a3407a28
+msgid "Key Operation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:52
+#: ed5d41f21cc343f68d7b477958280457
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:53
+#: 4cc61503639a4090b6aef2947fc7ed87
+msgid "Primary Use Case"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:54
+#: 8279713b0d8b4f7a823fdd2d41cb356f
+msgid ":ref:`DisjointSet <guide_advanced_disjoint_set>`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:55
+#: 38a3f5f554ab457d97a0bec852a3b8f1
+msgid "union / connected"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:56
+#: df913c960660406d93c442c6c91e9ae0
+msgid "O(α(n))"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:57
+#: 8ddd5c65bab148fdabbc6ef7fda9dd45
+msgid "Dynamic connectivity (Kruskal, components)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:58
+#: 3fee077c7c944c75bbefcccd5089253a
+msgid ":ref:`BloomFilter <guide_advanced_bloom_filter>`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:59
+#: a4854a8bcaec4fd3969be42cc954ef18
+msgid "add / __contains__"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:60
+#: 03cd86446afb49d6b730925c00c81ee5
+msgid "O(k)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:61
+#: 61293a37a8314f4b82716ff88835b6ad
+msgid "Compact membership, deduplication"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:62
+#: ded6bdee437340c5a4eea3988594e9f7
+msgid ":ref:`SkipList <guide_advanced_skip_list>`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:63
+#: 43ff5322d12a4dd4bc3b5b6655234a44
+msgid "insert / search"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:64
+#: 962fa660f20f486a8b35d4433b954569
+msgid "O(log n)\\*"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:65
+#: fd79f2a7635444da8dd43fc8bdd21851
+msgid "Sorted dictionary, order book"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:66
+#: 6a75567b61bd418b833c4081a46d4c57
+msgid ":ref:`HashTable <guide_advanced_hash_table>`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:67
+#: 41dac95b05a949a88e1df832b6b3db3e
+msgid "put / get"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:68
+#: f893eaaa35b04f20a241b65795af75fd
+msgid "O(1)\\*"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:69
+#: bb1636c9b17c4ca0996cad441e75339d
+msgid "Symbol table, key-value cache"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:70
+#: 1839f0c3ed604e82890ddb3b35cbb81f
+msgid ":ref:`LRUCache <guide_advanced_lru_cache>`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:71
+#: 41aeb29c3b294207afdce6cb06382155
+msgid "get / put"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:72
+#: c8f7cec01b014a868567d6c2d3711e96
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:73
+#: 8f6c47dfc3634419ad5d3cac0b943e9c
+msgid "Bounded cache with LRU eviction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:74
+#: a5e9bfc528ad4503b4d178577d4795f1
+msgid ":ref:`FenwickTree <guide_advanced_fenwick_tree>`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:75
+#: 906b5add6e504f7db6ec5b3f9314d922
+msgid "update / prefix_sum"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:76
+#: ac2138362afe4230a4705a4a024c200a
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:77
+#: 21ad504793a34c8c8b8ada6ec9ac1441
+msgid "Prefix sums, rank statistics"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:78
+#: f64ccef762fc420ba7487c9ad622ba84
+msgid ":ref:`CountMinSketch <guide_advanced_count_min_sketch>`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:79
+#: 61759d6863204ee49307fe16cf2ccfe3
+msgid "add / frequency"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:80
+#: eb352bf50e154c65a26f21be077000e0
+msgid "O(d)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:81
+#: 8adeaa0eef2c422d9965bb94856e38c8
+msgid "Frequency estimation over streams"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:83
+#: da786a7a2fdd43e18c661d193edcd694
+msgid "\\* Expected / amortised — k = hash functions, d = depth"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:86
+#: fc7051a9ed9f4d5ebf6fd391850b1718
+msgid "Shared ``Collection`` Interface"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:88
+#: 9905418b386a4978a3ce8a4739713153
+msgid "All structures inherit from :class:`~sds.core.interfaces.Collection`:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:102
+#: 9ea9517774144c66a5cb534108d1fa60
+msgid "Every structure implements:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:104
+#: bb6309932923489b9e4d3cbdc410bf28
+msgid "``is_empty()`` — O(1) emptiness check"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:105
+#: 9e8528f6c86f4532b7e324fb7da0a952
+msgid "``clear()`` — reset to initial state"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:106
+#: 0209c78ac66241c8a05e498cb1937f6f
+msgid "``__len__()`` — number of stored elements (or stream size)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:107
+#: 0be27fbd4aee47288fa26ad5445acaef
+msgid "``__contains__(item)`` — membership test"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:108
+#: d597867306f54ababc7c5defe02f8d99
+msgid "``__bool__()`` — truthiness (delegates to ``not is_empty()``)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:112
+#: 1124941eb8f14cabb85466d5b08801b9
+msgid ""
+"``BloomFilter`` and ``CountMinSketch`` raise ``TypeError`` on "
+"``__iter__`` — individual items cannot be recovered from a probabilistic "
+"structure's internal counters."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:117
+#: f9bf113b46924901a9eb189ddf4a997a
+msgid "Deterministic vs Probabilistic"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:123
+#: 5bf22f64768a418189449b40d7a347a3
+msgid "Deterministic (exact results)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:124
+#: e7b67f222c1a4d40a8bca3014c7225f7
+msgid "Probabilistic (approximate results)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:125
+#: a398a2dd5f574d6097b4cbb79af29cec
+msgid "Hybrid"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:126
+#: 8391c68460f74253904adfa4a43283ee
+msgid "DisjointSet, HashTable, LRUCache, FenwickTree"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:127
+#: 109c1ffad7874558a0b06c4926f90855
+msgid "BloomFilter, CountMinSketch"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:128
+#: d6efffe34e444103a9a5dc050a2424ed
+msgid "SkipList (random levels, exact results)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:130
+#: 8224740bd4de4bbebe82e286861581f4
+msgid "For probabilistic structures:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:132
+#: e1c0cb6e2729416a95755533181cd0aa
+msgid "**No false negatives**: a ``False`` or ``0`` result is always exact."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:133
+#: f6a6291786c94be18fa02a5ed92c4204
+msgid ""
+"**Possible false positives**: a ``True`` or ``> 0`` result may carry a "
+"bounded error."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/index.rst:137
+#: aa84b58dcd7541d49f868abaff9db82c
+msgid "Choosing a Structure"
+msgstr ""
+

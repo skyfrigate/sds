@@ -1,0 +1,454 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractDirectedGraph.rst:2
+#: 2e2ffe25581e404a918088c2dd980e2d
+msgid "sds.graph.interfaces.AbstractDirectedGraph"
+msgstr ""
+
+#: 067767afb7d8489a86a746a95d73ec75 of
+#: sds.graph.interfaces.AbstractDirectedGraph:1
+msgid "Abstract base class for directed graph implementations."
+msgstr ""
+
+#: 06fc52a824b24cba86292616f46bb87d of
+#: sds.graph.interfaces.AbstractDirectedGraph:3
+msgid ""
+"A directed graph has edges with direction: an edge from u to v is "
+"different from an edge from v to u."
+msgstr ""
+
+#: 5658d6ad179345bb8aee5b093cb75533 of
+#: sds.graph.interfaces.AbstractDirectedGraph:6
+msgid "Notes"
+msgstr ""
+
+#: 693d5a1702994ad9afc1a46405dc5de6 of
+#: sds.graph.interfaces.AbstractDirectedGraph:8
+msgid ""
+"Directed graphs have additional concepts: - in-degree: number of incoming"
+" edges - out-degree: number of outgoing edges - predecessors: nodes with "
+"edges pointing to a given node - successors: nodes with edges from a "
+"given node"
+msgstr ""
+
+#: 1b6f0209e77f4c4d8be24b01408f89ce of
+#: sds.graph.interfaces.AbstractDirectedGraph:16
+msgid ":obj:`AbstractGraph`"
+msgstr ""
+
+#: 0f1bd9a1ca6049aea27dda46837f13b2 of
+#: sds.graph.interfaces.AbstractDirectedGraph:17
+msgid "Base graph interface."
+msgstr ""
+
+#: 3850b11fa7aa4cf18f4041de144d3a84 of
+#: sds.graph.interfaces.AbstractDirectedGraph:19
+msgid ":obj:`AbstractUndirectedGraph`"
+msgstr ""
+
+#: 6b7a760bdb82457b8904a378dc25bf57 of
+#: sds.graph.interfaces.AbstractDirectedGraph:20
+msgid "Interface for undirected graphs."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractDirectedGraph.rst:13
+#: dea672941d3941c0812ab0b14b22af45
+msgid "Methods"
+msgstr ""
+
+#: f29a71b077fc42c5b57524237a56b9ad of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`__init__ "
+"<sds.graph.interfaces.AbstractDirectedGraph.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: c00394af86cd4b61a065c8d0d5570566 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`add_edge "
+"<sds.graph.interfaces.AbstractDirectedGraph.add_edge>`\\ \\(edge\\)"
+msgstr ""
+
+#: 2b284e9e0d474a3da086dece1a4c1b14 a32f278419cb4c788418aa1c2866f2dd of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Add a directed edge to the graph."
+msgstr ""
+
+#: 12ee926ecd534091bc17096c8e84def6 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`add_node "
+"<sds.graph.interfaces.AbstractDirectedGraph.add_node>`\\ \\(node\\)"
+msgstr ""
+
+#: 000b225c50354e8ba6cb015165612f7b of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: 6e28000814ff4e2a9a362c698d7c6055 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`clear <sds.graph.interfaces.AbstractDirectedGraph.clear>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: f4cea64c7ce942d0a5fbb86bd0bde93c of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Remove all elements from the collection."
+msgstr ""
+
+#: 0bf7c00f694f49f4bf1e8849faccc98f of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`degree <sds.graph.interfaces.AbstractDirectedGraph.degree>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: 34af00444cfe4e5bab2e04f995477f89 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Get the degree of a node."
+msgstr ""
+
+#: defe2f47035e4e73b189898bd0dfc793 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`edge_count "
+"<sds.graph.interfaces.AbstractDirectedGraph.edge_count>`\\ \\(\\)"
+msgstr ""
+
+#: 0b1d9bfaa3eb4148b9dc7e316dce8e26 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Get the number of edges in the graph."
+msgstr ""
+
+#: ffabd702a17640caa6bb4a9aa5323b66 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`edges <sds.graph.interfaces.AbstractDirectedGraph.edges>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: 266a3973acc24378b4b5eb9b858d89df of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Get all edges in the graph."
+msgstr ""
+
+#: 664807d4f76a4575a309ad5b8d33fa41 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`get_edge "
+"<sds.graph.interfaces.AbstractDirectedGraph.get_edge>`\\ \\(node1\\, "
+"node2\\)"
+msgstr ""
+
+#: 3e16b788b27944c38b0cd6b97274a670 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Get the edge between two nodes."
+msgstr ""
+
+#: d60a4fe78bb9485a9a155051c51d44c1 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`get_node_by_id "
+"<sds.graph.interfaces.AbstractDirectedGraph.get_node_by_id>`\\ "
+"\\(node\\_id\\)"
+msgstr ""
+
+#: 46c39334998a4a5bbe92ef099d26674f of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: de229b2051c04cefba2892246ba76672 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`has_edge "
+"<sds.graph.interfaces.AbstractDirectedGraph.has_edge>`\\ \\(node1\\, "
+"node2\\)"
+msgstr ""
+
+#: 5ad71cd33f4a413bb2b8f14d93c9202c of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Check if an edge exists between two nodes."
+msgstr ""
+
+#: 933062a93092476bb0784309fe6ac453 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`has_node "
+"<sds.graph.interfaces.AbstractDirectedGraph.has_node>`\\ \\(node\\)"
+msgstr ""
+
+#: eb08e4fc5e2a471686bd3aebe1b0149b of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: 99aa423d0f0f4318a11606f0b47c712c of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`in_degree "
+"<sds.graph.interfaces.AbstractDirectedGraph.in_degree>`\\ \\(node\\)"
+msgstr ""
+
+#: 0cae988d1bcf452592771e08612be6bd 3a7e02e77965473d914e13cb1ca28c82 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractDirectedGraph.in_degree:1
+msgid "Get the in-degree of a node (number of incoming edges)."
+msgstr ""
+
+#: 77e3d2beaf224446a70d6de80355cbd6 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`is_acyclic "
+"<sds.graph.interfaces.AbstractDirectedGraph.is_acyclic>`\\ \\(\\)"
+msgstr ""
+
+#: 30b735aede15450185ba1abff20d0f0b 947eb2b1e94f45749509313e4ae29b4d of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractDirectedGraph.is_acyclic:1
+msgid "Check if the graph has no cycles."
+msgstr ""
+
+#: 124b76b661e8460ea5c3b8ce9a4a7957 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`is_connected "
+"<sds.graph.interfaces.AbstractDirectedGraph.is_connected>`\\ \\(\\)"
+msgstr ""
+
+#: 70f63bb27d01478aaae4089e2eb62ca5 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Check if the graph is connected."
+msgstr ""
+
+#: 18ca27009e344cae810a1293985e28e7 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`is_empty "
+"<sds.graph.interfaces.AbstractDirectedGraph.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: e51d32512f594ff8bdb8ce58722ff397 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Return True if the collection is empty, False otherwise."
+msgstr ""
+
+#: 9e3068fb4b444abc9472a328b8593371 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`neighbors "
+"<sds.graph.interfaces.AbstractDirectedGraph.neighbors>`\\ \\(node\\)"
+msgstr ""
+
+#: a8f5c3876c9a4270a4425800b3015136 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Get all neighbors of a node."
+msgstr ""
+
+#: d8f5bed1ba654ce5960ade60b2aac96a of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`node_count "
+"<sds.graph.interfaces.AbstractDirectedGraph.node_count>`\\ \\(\\)"
+msgstr ""
+
+#: db30f74bb20c4ef385d6981b7530c283 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Get the number of nodes in the graph."
+msgstr ""
+
+#: 8bf8ff55580a4758a757f5619d412707 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`nodes <sds.graph.interfaces.AbstractDirectedGraph.nodes>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: 939e1d802bee47038b086b567117a818 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: 6bf5f1cdc2cf41c7878492a2d76cef96 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`out_degree "
+"<sds.graph.interfaces.AbstractDirectedGraph.out_degree>`\\ \\(node\\)"
+msgstr ""
+
+#: 039e2a420a7f4dd6b7c74a839b702160 913f5c3a496b4766a08b2fbd663a1681 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractDirectedGraph.out_degree:1
+msgid "Get the out-degree of a node (number of outgoing edges)."
+msgstr ""
+
+#: 95d3539f10c944268c18202a9b45f095 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`predecessors "
+"<sds.graph.interfaces.AbstractDirectedGraph.predecessors>`\\ \\(node\\)"
+msgstr ""
+
+#: 8ae8bce6c3bc4a37984e2cf6e66bcd51 b793b9ebef754c5d85823884b0ccf2de of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractDirectedGraph.predecessors:1
+msgid "Get all predecessor nodes (nodes with edges to this node)."
+msgstr ""
+
+#: a08b24e3f54e4fa8be2b1f36d9002fdf of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`remove_edge "
+"<sds.graph.interfaces.AbstractDirectedGraph.remove_edge>`\\ \\(edge\\)"
+msgstr ""
+
+#: 5d0ead8f7fa24feabae90501b1254200 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Remove an edge from the graph."
+msgstr ""
+
+#: 18c76d106d3245cebe649ed0be1c4b72 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`remove_node "
+"<sds.graph.interfaces.AbstractDirectedGraph.remove_node>`\\ \\(node\\)"
+msgstr ""
+
+#: 17222b80ba6e482a8357a4651d1e6e4d of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid "Remove a node and all its incident edges from the graph."
+msgstr ""
+
+#: 61d5b191ec0248abac597ac810d679ca of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+msgid ""
+":py:obj:`successors "
+"<sds.graph.interfaces.AbstractDirectedGraph.successors>`\\ \\(node\\)"
+msgstr ""
+
+#: d18f5638343d49fe806be5fee832e778 e5a2a123a69c439698c3defd6cb61ebe of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1:<autosummary>:1
+#: sds.graph.interfaces.AbstractDirectedGraph.successors:1
+msgid "Get all successor nodes (nodes with edges from this node)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractDirectedGraph.rst
+#: 1f1f737d10534ddf9397d7192138ed7b 3196c82472c6459f9ae7aba1526a5beb
+#: 3db0c5b07c064a40a6102c94cbc5564a 820e15b3d2d24e49b50e53184415cd37
+#: fc8c8ac74d924f44a62ddb37cfb1c2c4
+msgid "Parameters"
+msgstr ""
+
+#: dbe2bb4c6d5140bfb471c028b819d6a6 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:3
+msgid "Directed edge to add."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractDirectedGraph.rst
+#: 2da44f7cc50b4b7299bdb6f3c1f0f136 697b5de5e0f144d884ff68f1b9cd2019
+#: 71e528430ce248f1b75cb9558c4fff36 965050686cae4ff68f901816926cdfb1
+#: 98777c1e9a6044c3ab5f89cd95adce8a
+msgid "Raises"
+msgstr ""
+
+#: 1f05059e311c42e3b26fe4634350dd0d of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:6
+msgid "If edge already exists or nodes are not in the graph."
+msgstr ""
+
+#: 811c45c5340e4cf0800858d52d5573bc of
+#: sds.graph.interfaces.AbstractDirectedGraph.in_degree:3
+msgid "Node to get in-degree for."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractDirectedGraph.rst
+#: a87f02a1cffa43bcbb06957b154f54d8 a9ba618a6b864757b421e01990684bbc
+#: bfabf659623c454bb683ba096652154c
+msgid "Returns"
+msgstr ""
+
+#: 4fc2da50f5734527b48cc7ca295215dc of
+#: sds.graph.interfaces.AbstractDirectedGraph.in_degree:6
+msgid "Number of incoming edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.interfaces.AbstractDirectedGraph.rst
+#: 4d9e76b4dd124420beda60b1d66eb377 7fbb7ad7164a4ceba9b11a80bc215e4b
+#: cb4ac2cf5cf74c4bba275c8ebc8665df
+msgid "Return type"
+msgstr ""
+
+#: 03b85760bd8b49edaaa6338ad4b58ca5 164ce8c30a1e44c79563665f5efe907f
+#: 45dc55cf8c4b4944b71058ae72d77f7e 8f0e282df3af4b29baeac88758145adf of
+#: sds.graph.interfaces.AbstractDirectedGraph.in_degree:9
+#: sds.graph.interfaces.AbstractDirectedGraph.out_degree:9
+#: sds.graph.interfaces.AbstractDirectedGraph.predecessors:8
+#: sds.graph.interfaces.AbstractDirectedGraph.successors:8
+msgid "If node is not in the graph."
+msgstr ""
+
+#: 057cfcb970c74988ac3504460a4aef0e of
+#: sds.graph.interfaces.AbstractDirectedGraph.out_degree:3
+msgid "Node to get out-degree for."
+msgstr ""
+
+#: 39c7cf109fd44c1a8787c6e623bc2837 of
+#: sds.graph.interfaces.AbstractDirectedGraph.out_degree:6
+msgid "Number of outgoing edges."
+msgstr ""
+
+#: ea2dced0f9df4bf8a1088f4a00f5d88a of
+#: sds.graph.interfaces.AbstractDirectedGraph.predecessors:3
+msgid "Node to get predecessors for."
+msgstr ""
+
+#: 1679b06469f7476283f7497b3d267587 1f5e8773d5d64ee18a51eb9628849bd2 of
+#: sds.graph.interfaces.AbstractDirectedGraph.predecessors
+#: sds.graph.interfaces.AbstractDirectedGraph.successors
+msgid "Yields"
+msgstr ""
+
+#: eaf7e8a91d414c7a935ae962c80d477a of
+#: sds.graph.interfaces.AbstractDirectedGraph.predecessors:6
+msgid "*GraphNode* -- Predecessor nodes."
+msgstr ""
+
+#: fea1ad1cce4b4f97baf97f6189825b8d of
+#: sds.graph.interfaces.AbstractDirectedGraph.successors:3
+msgid "Node to get successors for."
+msgstr ""
+
+#: f7b9de89c89944a2ac21c5e4352a2bc7 of
+#: sds.graph.interfaces.AbstractDirectedGraph.successors:6
+msgid "*GraphNode* -- Successor nodes."
+msgstr ""
+
+#: 910a3627c28c46e9af36b2942892ca2a of
+#: sds.graph.interfaces.AbstractDirectedGraph.is_acyclic:3
+msgid "True if graph is a DAG (Directed Acyclic Graph)."
+msgstr ""
+

@@ -1,0 +1,731 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/linear_structures/dequeue.rst:5
+#: 5436e724ce4d4c368907ef4364885697
+msgid "Deque Guide"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:10
+#: 14180990541d43ac91720242402f64f3
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:12
+#: 443937d3033e410ca07c8eb2d2871923
+msgid ""
+"A **deque** (double-ended queue, pronounced \"deck\") is a linear data "
+"structure that allows insertion and deletion at **both ends**. Unlike "
+"stacks (LIFO) and queues (FIFO), deques provide maximum flexibility for "
+"element access."
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:33
+#: c90fecb891f7488a97265f7795604eb1
+msgid ""
+"Deques are particularly useful for sliding window algorithms, work-"
+"stealing schedulers, and any scenario requiring efficient operations at "
+"both ends."
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:37
+#: 744d0a0dce9d4e669fbff5746f48fc2d
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:40
+#: 6e8183bdc16e4f808abbb935ba5177cf
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:42
+#: a9324a270981441dbf809f5d811a2031
+msgid "A deque :math:`D` is an ordered collection:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:44
+#: 6da89edb403943a6a7ff04f961a22eef
+msgid "D = \\langle e_1, e_2, \\ldots, e_n \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:48
+#: 447ef3546b4c42cf8fabc5b287534c4e
+msgid ""
+"where both :math:`e_1` (front) and :math:`e_n` (rear) are accessible for "
+"insertion and removal."
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:52
+#: 282c37cda2be4109b2db1fa0bcd8daf0
+msgid "Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:55
+#: 211cc8466d584ee48b8e37924abe7ebb
+msgid "Front Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:57
+#: 99fc15e718204c54a07f4516c3a8a6c0
+msgid "**Add to front:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:59
+#: b3b51407c7834ad1899c9d229eecfcb2
+msgid "add\\_front(D, x) = \\langle x, e_1, e_2, \\ldots, e_n \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:63
+#: 38471f39ef91410b98d6ca7e8e6afb45
+msgid "**Remove from front:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:65
+#: 67bdf05e279d4d058edb9c5cfe31246a
+msgid ""
+"remove\\_front(\\langle e_1, e_2, \\ldots, e_n \\rangle) = (e_1, \\langle"
+" e_2, \\ldots, e_n \\rangle)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:70
+#: e5d21cfdbfe1416183a2e26afd399fd9
+msgid "Rear Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:72
+#: 87da0928651249b2bd0a9267f9185054
+msgid "**Add to rear:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:74
+#: 8903408f920c4e9fb331a98966bc78d9
+msgid "add\\_rear(D, x) = \\langle e_1, e_2, \\ldots, e_n, x \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:78
+#: 1fbedccf70ae47498c6c075517ebf191
+msgid "**Remove from rear:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:80
+#: ea7558ee4071453d8d20fb9c04d0dc51
+#, python-brace-format
+msgid ""
+"remove\\_rear(\\langle e_1, \\ldots, e_{n-1}, e_n \\rangle) = (e_n, "
+"\\langle e_1, \\ldots, e_{n-1} \\rangle)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:85
+#: 066421a39dad4439bdaa7d16130a6d61
+msgid "Properties"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:87
+#: 2a19965663e24115a6f1fc021e073021
+msgid "**Bidirectional access**: Operations at both ends in :math:`O(1)`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:88
+#: 88a3593511c3436b926b5391e71b37db
+msgid "**Generalization**: Subsumes both stack and queue behavior"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:89
+#: 4203c31b99914eed8cf5c3771bfa28b7
+msgid "**Size preservation**:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:91
+#: 79da62f11e954e87a40c87ab619b0a98
+msgid "|add\\_rear(remove\\_front(D))| = |D|"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:96
+#: a55f2c86dce0462499ac215f129dc2b6
+msgid "Deque Invariants"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:98
+#: 8fdf2cf2f0164add959b40d5d965c03a
+msgid "**Size constraint**: :math:`|D| \\geq 0`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:99
+#: 6cfac28173894067a8b56d03a7919b1a
+msgid ""
+"**Front/rear accessibility**: If :math:`|D| > 0`, both :math:`front(D)` "
+"and :math:`rear(D)` are defined"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:100
+#: c65fef21624f4ab2bd41a6cd69545f4c
+msgid ""
+"**Order preservation**: Elements maintain insertion order between "
+"operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:103
+#: 35b88bc0d1f04fdd969f0ee6ea8c23d4
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:106
+#: 37c5983d628b4b1ea814920fe9cb6032
+msgid "Deque ADT"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:129
+#: c1a981756872492b91d65b41fa91806c
+msgid "Implementation Strategies"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:132
+#: 8c5201e1cc074df7bed485a055028c6b
+msgid "Doubly Linked List Implementation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:146
+#: ../../source/guide/linear_structures/dequeue.rst:169
+#: 152e18b7387f49f1a773b6a3571395fe 312eeea14d06442088b611a7edea4d9b
+msgid "**Advantages:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:147
+#: a8a2bb156afd48b19d63fcb96e6f18ec
+msgid "True :math:`O(1)` for all operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:148
+#: 7ab5efe31a6545798b1d238b9c669546
+msgid "No reallocation needed"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:149
+#: 293142efd45140fba138a364e7fd0ce3
+msgid "Dynamic size"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:151
+#: ../../source/guide/linear_structures/dequeue.rst:174
+#: 2a020dfc5415409892c862ea36dae629 93f7417df92e4656b53ed66373c3f201
+msgid "**Disadvantages:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:152
+#: 0e522f735f0e4dd698b3910e7dab858c
+msgid "Extra memory for prev/next pointers"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:153
+#: 1aa1fe7fe07a461295082cd19aebf4c9
+msgid "Less cache-friendly than array"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:156
+#: 24009df691e5495b80c5371aa3f4bf34
+msgid "Circular Array Implementation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:170
+#: b48df445183a4e5390a7f39994c555c4
+msgid "Better cache locality"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:171
+#: 583f913133124c15b1dd56f2a288f4d6
+msgid "Less memory overhead"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:172
+#: 71ab6a7dff87483caa49719ac6b7c1de
+msgid ":math:`O(1)` amortized operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:175
+#: e33e345af2654fcd8f4e8854cb0920d9
+msgid "Reallocation on growth"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:176
+#: b12dabaa21e34fb8b305f44b75e84c1f
+msgid "Wrap-around complexity"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:179
+#: 8d9130d022644e87b3614fa1c3a514de
+msgid "Algorithm Pseudocode"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:182
+#: 2ab4671198c942fe8f22f72c571471d3
+msgid "Add to Front"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:201
+#: 40e665dbe3e14007885c1745a4d2cc16
+msgid "Add to Rear"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:220
+#: 1d643a7201574dd99a62cc8e4d4fd9c1
+msgid "Remove from Front"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:243
+#: 9a1dbda0c40e48089a6a2f220524d6fd
+msgid "Remove from Rear"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:266
+#: e905f54c213c4c368c1d7775a05babf5
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:272
+#: ../../source/guide/linear_structures/dequeue.rst:738
+#: 17486e392cc94fe8aac81fedae18b5ec 89816850eafc4aa6836cc1c5c6f32940
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:273
+#: 877da81876ca4a328fe9c5e1952be4e4
+msgid "Linked List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:274
+#: 3110bb7c224c440e98a34b4b5eea5645
+msgid "Circular Array"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:275
+#: 831fb25854564d1083afc3b836b752af
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:276
+#: ea14d48a50274d4b9108682c75e1d5fa
+msgid "**add_front**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:277
+#: ../../source/guide/linear_structures/dequeue.rst:281
+#: ../../source/guide/linear_structures/dequeue.rst:285
+#: ../../source/guide/linear_structures/dequeue.rst:286
+#: ../../source/guide/linear_structures/dequeue.rst:289
+#: ../../source/guide/linear_structures/dequeue.rst:290
+#: ../../source/guide/linear_structures/dequeue.rst:293
+#: ../../source/guide/linear_structures/dequeue.rst:294
+#: ../../source/guide/linear_structures/dequeue.rst:298
+#: ../../source/guide/linear_structures/dequeue.rst:743
+#: ../../source/guide/linear_structures/dequeue.rst:747
+#: ../../source/guide/linear_structures/dequeue.rst:752
+#: 12c1ca1e19e348f5a1e37b731c1649d4 17f59b1366054e9e83c18aa3b174ccdb
+#: 1e66af47319c4ced82a11de792c74b62 35dc306f8e6b4a4d8f944bcf12e7c56c
+#: 4b00525bd44f4e07a2b0d3b8e516eca6 6574a940fd524d629655275fb7b7aebe
+#: 6731047993a34fa8a4c32412b2b1dc01 86bce58833e74ca69aa305b356511ace
+#: a913c3c0cfb742669841c731a9a5e14f ad28dd1af6e74d109d2043fd4eaee0f9
+#: c630a3fb8edf4eeeba26519b14bf991e cbbbbe4b4b784cec992cf5050fca19bd
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:278
+#: ../../source/guide/linear_structures/dequeue.rst:282
+#: ../../source/guide/linear_structures/dequeue.rst:748
+#: 560f864bf6ab48c79a35f2d4655880c5 a500f2a385d04bac8a3e39fca05bf6e0
+#: f23f160d54264583ba9a899cdfeebe55
+msgid "O(1)*"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:279
+#: ../../source/guide/linear_structures/dequeue.rst:283
+#: 3f7acea526cd4ec7a4601ca17bf876e5 6375ed1649154910ae0e4739cf019ae3
+msgid "Amortized for array"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:280
+#: 738395f620fd47b28d47e87de3c55333
+msgid "**add_rear**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:284
+#: fba04f49a71d4f42a9ba0a55899a8b27
+msgid "**remove_front**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:287
+#: ../../source/guide/linear_structures/dequeue.rst:291
+#: 96a31c838cc54852a8e4586bfebb882a c10a6c6bc3f545d8ad8a68579717c5ac
+msgid "Always constant"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:288
+#: 87a7b92ec23d425b95d2bf6036fdc52f
+msgid "**remove_rear**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:292
+#: e0375fc243c043988ae3d2e9081758cc
+msgid "**peek_front/rear**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:295
+#: b63fd1d38d9d4df2a264949e530eeef5
+msgid "Just read access"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:296
+#: 2d3083c2840e4e2590967381a26f158d
+msgid "**Random access**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:297
+#: ../../source/guide/linear_structures/dequeue.rst:301
+#: ../../source/guide/linear_structures/dequeue.rst:302
+#: ../../source/guide/linear_structures/dequeue.rst:744
+#: ../../source/guide/linear_structures/dequeue.rst:751
+#: ../../source/guide/linear_structures/dequeue.rst:755
+#: ../../source/guide/linear_structures/dequeue.rst:756
+#: 0b85234ffba64bdbb85eed83df3db960 3f3350a874b5477db08138af98b6d6dc
+#: 5d05bf7d2d95499483d63fd9303f0625 a789ff4f79744e35be693bee042eafad
+#: b6226b5947034f0a8d53db5719fcbf66 bd0cf140ea74433fa07452d41194b93a
+#: be048adc92a740d5a30c855c06b1bd6c
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:299
+#: b5b7ce35564e4f9aaf36f3251878bdf6
+msgid "Array advantage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:300
+#: 90082fa9e3514abc81abb2cf12578b70
+msgid "**Space**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:303
+#: 0fb04164c5e54496aa89c521d15854e5
+msgid "Proportional to size"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:306
+#: 3cc55d3d8033456fb5b2f15b68d36129
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:309
+#: 3169f21512a94be2b2b4ddc3db2e7096
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:327
+#: cfec89c560444582a2fae9ecb7a636a7
+msgid "Peek Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:339
+#: 1ffba5adbd17481f8e220fd81a8aa95b
+msgid "Remove Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:350
+#: e720e72e41464d24852368c959b93c87
+msgid "Iteration"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:367
+#: 59929ba42e814290892bdcbce17f8fc5
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:370
+#: 7bfccc6be6b742f687b72a0a328c9c4b
+msgid "Application 1: Sliding Window Maximum"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:372
+#: f674230817a3415f8157560884f29713
+msgid "Find the maximum element in each sliding window of size k."
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:426
+#: b7cad48bfbe04b998d99d163fe01bac0
+msgid "Application 2: Palindrome Checker"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:428
+#: 021b0c36e378456196ee3899c0b147ea
+msgid "Check if a sequence is a palindrome using deque."
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:461
+#: 6eebdbc083f4425f842613e625572ab2
+msgid "Application 3: Work-Stealing Scheduler"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:463
+#: 7a0c016258b94b99bbb0c545c574e4dc
+msgid ""
+"Implement a work-stealing task scheduler where workers can take tasks "
+"from either end of their deque."
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:540
+#: 1940092b88184486b3eb1d5449730af6
+msgid "Application 4: Browser History Navigation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:542
+#: bd33e40777e44e72bf21ffae0291bcd4
+msgid "Implement browser-like forward/back navigation."
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:604
+#: 11e5d02cd8ac44918a62a5845ccb6ec6
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:607
+#: a8852b6ed86f4637a598a2bfc0f3d0a7
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:609
+#: c382df90f3f843868ba23ec1c8713c51
+msgid "✅ **Use for bidirectional access**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:620
+#: 9c7dc11cda154587967a1d035e78f188
+msgid "✅ **Choose deque for sliding windows**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:630
+#: 0d99768936ca488298fc0947a32893a2
+msgid "✅ **Use as both stack and queue**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:643
+#: 93a880543a8a4657890394e6a0e1ec94
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:645
+#: bd3c2f6d3b4e42e9b2866ea49a869b41
+msgid "❌ **Don't use for random access**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:656
+#: 8f6979b4f571475f8290df572b21e9b2
+msgid "❌ **Don't ignore which end matters**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:668
+#: 14c592240aa64f468b56ed90dfdbca7d
+msgid "❌ **Don't use when simple queue/stack suffices**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:683
+#: 9432ef5fafd743ea8ceaa1f02f10cb82
+msgid "When to Use Deque"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:685
+#: af3bc1395774411c89e4124ecc2d32f0
+msgid "**Use deque when:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:686
+#: 9976df027f494d8fa6c118cebed8705b
+msgid "Need efficient operations at **both ends**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:687
+#: b468430da7644e668376a9e117ba224c
+msgid "Implementing sliding window algorithms"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:688
+#: 96e1f84f03fa42cd86079e8f00bac86a
+msgid "Building work-stealing schedulers"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:689
+#: 2bb437b292dd42a1ab63061be015592a
+msgid "Need both stack and queue behavior"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:690
+#: ff3e5892675a421ba0605029982b0a8b
+msgid "Implementing palindrome checks or similar bidirectional algorithms"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:692
+#: fe272495408b4a71a8f6671bf8126ad3
+msgid "**Don't use deque when:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:693
+#: e68841b8f6404059874f2da57c2614ce
+msgid "Only need FIFO (use Queue instead)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:694
+#: 72454469a8284d20833a549678324641
+msgid "Only need LIFO (use Stack instead)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:695
+#: 2ffee0e6a4e24b91954c45ac278b0c46
+msgid "Need frequent random access (use list/array)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:696
+#: 2bb6ab7cd60e433a817fb96beecf30a1
+msgid "Operations are only at one end"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:699
+#: e852f951936b4f2c92b292dee914b1e0
+msgid "Comparison with Alternatives"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:702
+#: 064384950dbd42c8b9eae63ed895db8f
+msgid "Deque vs Queue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:717
+#: 84e60adb8e7f4a079bc61be6df94b3f3
+msgid "Deque vs Stack"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:732
+#: d048af12b948435685c14c53c172bb17
+msgid "Deque vs List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:739
+#: 9e87e56ae485483caf50f45a5be0ea10
+msgid "Deque"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:740
+#: 404aa53145b94dcc8e88e9f59266583b
+msgid "List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:741
+#: b7c9aaf94a56421bb3399688f49324df
+msgid "Winner"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:742
+#: 6dd88bfdfd834b498b1a097fa8ff4ba6
+msgid "Add/remove front"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:745
+#: 5cd6fbf6a04b4cb28fe012c8a2d9de03
+msgid "**Deque**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:746
+#: 7440129a3ba44e21aa88ea68c1d8e1f7
+msgid "Add/remove rear"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:749
+#: ../../source/guide/linear_structures/dequeue.rst:757
+#: 95fb7434ceb44bea9a9344f389b390a7 be106fa24846492c9e4d46ca2e93c8f5
+msgid "Tie"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:750
+#: 6e0879e00f5b4eb4b4bb1aadabe7da83
+msgid "Random access"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:753
+#: 162a918b38bb431daeb5cf2d9f0ad3e8
+msgid "**List**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:754
+#: e0e3c7b6ed00434381847ed37dd98835
+msgid "Memory"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:759
+#: 1a88209ab04c4be185e9d37f79a03511
+msgid "\\* Amortized for list"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:762
+#: 4f7808c48479431192603d486b0de831
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:764
+#: 09d1f0d4e5724855a134fb2b59fd7e9e
+msgid "**Forgetting which end is which**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:771
+#: 97883475e9c4431fb35968e839f213f0
+msgid "**Using wrong structure**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:777
+#: 423c170df7a74fd88b0ecee51e0d3ebc
+msgid "**Empty deque operations**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:785
+#: 40004d2b2fe4456884aaca4f7529f131
+msgid "**Performance expectations**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:793
+#: d60948ea0d92424781892ec447d9d972
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:795
+#: 2190e05999614c2b984576a4ab42c9a7
+msgid ":doc:`/api/linear/queue` - API reference"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:796
+#: 3d3b6d62bcb343ddab04440a2a69cc1f
+msgid ":doc:`queue` - FIFO structure"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:797
+#: ca79e439aaa844509552e473084aed91
+msgid ":doc:`stack` - LIFO structure"
+msgstr ""
+
+#: ../../source/guide/linear_structures/dequeue.rst:798
+#: 086d3e609df04845973573fb314083ab
+msgid ":doc:`linked_list` - Implementation details"
+msgstr ""
+
