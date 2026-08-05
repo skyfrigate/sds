@@ -1,0 +1,653 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:2
+#: 2ab2da31d8994a5a8e1f0c9301da722b
+msgid "sds.graph.graph.Graph"
+msgstr ""
+
+#: 54fbdc249c814cf4949d5d3d89678df4 of sds.graph.graph.Graph:1
+msgid "Undirected graph using adjacency list representation."
+msgstr ""
+
+#: e85294c59a62447fb7a38cdc2a570fde of sds.graph.graph.Graph:3
+msgid ""
+"A graph consists of nodes (vertices) connected by edges. This "
+"implementation uses adjacency lists to store connections, which is "
+"memory-efficient for sparse graphs."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst
+#: 0a7f513f493b4c32904354fb2d46ed90 255d5bdf4e224df2bb7d93e73daa750e
+#: 52b3cf85b5e34b3faca4106adb74eae0 56be8d7286be4f4daa7872ebe50aa4ef
+#: 61221197e186413eac70d02e7d10829a 6ae4aa3f4e464192af9622b84548fac1
+#: 78a242702f9f4726a9dd3fca5ef90dcc a6ed5016cf2549d186575284d781d05d
+#: c3cde91a03c54c86b965a38116ce04e3 e52f6c2722574689b6c498bd22851291
+#: e9fa9536fd4b4416820cb89a2b802880 ea5b9835932845c693741ece84d253e3
+#: effb87c03cb34f7494f115f783b5c4bc f85c42917e2044b194675189dd40de89
+msgid "Parameters"
+msgstr ""
+
+#: a8b22e857c25420f921817bd2fe2aa92 of sds.graph.graph.Graph:7
+msgid ""
+"If True, allows multiple edges between the same pair of nodes "
+"(multigraph). Default is False (simple graph)."
+msgstr ""
+
+#: 939c0a93af3540639436ed38f065a876 of sds.graph.graph.Graph:13
+msgid "Whether multiple edges are allowed (read-only property)."
+msgstr ""
+
+#: 87fb7e0a5c4240b4af6cd10a70e839a3 of sds.graph.graph.Graph
+msgid "type"
+msgstr ""
+
+#: 79c15feacc234e0e963424f255c7051c of sds.graph.graph.Graph:15
+msgid "bool"
+msgstr ""
+
+#: 04d8704349134082ba9c4c9f27a1884a 14541eb5c47148cc9e106e08b3784faf
+#: 22b9d11124b44719b023d73b913c96f0 25b7c2182e9049ffa9445cb0406ffe29
+#: 273e6385f79a49c8966446cb8b03815c 30ed09dd7e514b189c21042470e84bc4
+#: 310c67551e43455bb02bc88a856e001c 35060edb9aad40bba5a01ffe1f4ebced
+#: 3e752eefd7fc4c66815adcd8ade5ae84 486c4aa53015416e8761dc1b9169958c
+#: 48746ea8202c4ea1bfcc042f94e4576f 5e6b4a0b40ba4ca3b2c10ae91d9b5a0e
+#: 5f343b35d5544f809fb5b905e9f382f1 705793be29aa49258096b0b29c44b94c
+#: 73410a9e0fe14d04ae25e87bd60a41f6 77aaa8b9e8604503a87d4a34b9ff7db2
+#: 8371bd2610a343d198623f33abdeab90 84b36b64c4a64feaa599c9e392237670
+#: a63c04498094465fbc89d16f0488acb2 c06f3b32eb814c6fa6ab26cd8b1fc332
+#: cec083d3925840c9ad000735187d84ff dc4ad85ebea440fcb8c3cc91f60dceb5
+#: dc851cb07b804155a829773fe1782377 dd8fa4d0492a42979dc90e6757dc6cab
+#: e522e7f5c2164771b1abd5fea563b2f2 fdef8c88a4d14756a44fa9646ed58e66 of
+#: sds.graph.graph.Graph:17 sds.graph.graph.Graph.__contains__:9
+#: sds.graph.graph.Graph.__init__:6 sds.graph.graph.Graph.__iter__:5
+#: sds.graph.graph.Graph.__len__:6 sds.graph.graph.Graph.__repr__:6
+#: sds.graph.graph.Graph.__str__:6 sds.graph.graph.Graph.add_edge:9
+#: sds.graph.graph.Graph.add_node:9 sds.graph.graph.Graph.allow_multi_edges:6
+#: sds.graph.graph.Graph.clear:3 sds.graph.graph.Graph.degree:11
+#: sds.graph.graph.Graph.edge_count:6 sds.graph.graph.Graph.edges:5
+#: sds.graph.graph.Graph.get_edge:12 sds.graph.graph.Graph.get_node_by_id:9
+#: sds.graph.graph.Graph.has_edge:11 sds.graph.graph.Graph.has_node:9
+#: sds.graph.graph.Graph.is_connected:9 sds.graph.graph.Graph.is_empty:6
+#: sds.graph.graph.Graph.neighbors:10 sds.graph.graph.Graph.node_count:6
+#: sds.graph.graph.Graph.nodes:5 sds.graph.graph.Graph.remove_edge:8
+#: sds.graph.graph.Graph.remove_node:8
+msgid "Examples"
+msgstr ""
+
+#: 3ea982a582f641a0a76a76cb361f476c of sds.graph.graph.Graph:19
+msgid "Create a simple graph:"
+msgstr ""
+
+#: 193b338cafbf46fc8f3dc6f3d2f93a05 of sds.graph.graph.Graph:30
+msgid "Create a multigraph:"
+msgstr ""
+
+#: fc6dadc55ef04030b4afac9a277d798f of sds.graph.graph.Graph:40
+msgid "Check connectivity:"
+msgstr ""
+
+#: 081d884f9a984d7dac82c198630140eb 28952858e1fb4349b955d6ab52cf3b37
+#: 2d94810a4fe049b2bcff29bd4afac478 3e081a2ce48f4267a3c73bea7168c2b4
+#: 66887df92a06404ab02cf63e33376931 6ecd950a55e8479eb3b82fd20600ebb0
+#: 710fd9322c3044d88c266319d6c43ffa 7b43ac073330409e93247ba371fcffa0
+#: 80789887fc1d4d0b82e6f5357081c2df 9d3f0078fca047d5a5a36d2b17b81ed4
+#: a35813327c4941e08c90d789c8d89ba7 b9c2f6d7959b416984ed3191b5828ceb
+#: bbdd9b46a8b24ab3a7258a463a864b1d c8f98fe7f1134a32b0fc8f115dad3ce3
+#: d24d086cad044a89bfc658f84b8b3fd0 d8861b9994fb4f8b900f3fab4bfdfe63
+#: df7a676aa1134fd693f22fcb836fb244 f2778ce731df4bc9b10f1a7755908272 of
+#: sds.graph.graph.Graph:49 sds.graph.graph.Graph.add_edge:37
+#: sds.graph.graph.Graph.add_node:24 sds.graph.graph.Graph.clear:12
+#: sds.graph.graph.Graph.degree:24 sds.graph.graph.Graph.edge_count:19
+#: sds.graph.graph.Graph.edges:16 sds.graph.graph.Graph.get_edge:27
+#: sds.graph.graph.Graph.get_node_by_id:20 sds.graph.graph.Graph.has_edge:26
+#: sds.graph.graph.Graph.has_node:19 sds.graph.graph.Graph.is_connected:29
+#: sds.graph.graph.Graph.is_empty:15 sds.graph.graph.Graph.neighbors:24
+#: sds.graph.graph.Graph.node_count:15 sds.graph.graph.Graph.nodes:15
+#: sds.graph.graph.Graph.remove_edge:21 sds.graph.graph.Graph.remove_node:22
+msgid "Notes"
+msgstr ""
+
+#: 583cc7e609f54ec7a17a1a7507f4fa9a of sds.graph.graph.Graph:51
+msgid ""
+"Time Complexity: - add_node: O(1) - remove_node: O(degree(node) + E) - "
+"add_edge: O(1) or O(degree) if checking duplicates - remove_edge: "
+"O(degree(node)) - has_edge: O(degree(node)) - degree: O(1) amortized - "
+"neighbors: O(degree(node)) - is_connected: O(V + E) with caching"
+msgstr ""
+
+#: ad246e687b4a4e12b0a4cc0c12de9807 of sds.graph.graph.Graph:61
+msgid "Space Complexity: O(V + E)"
+msgstr ""
+
+#: 27899a27378544d9b8088793f45359b5 of sds.graph.graph.Graph:65
+msgid ":obj:`DirectedGraph`"
+msgstr ""
+
+#: 3dbe9d15e2cc4f7bb5190bce0bb6dbd9 of sds.graph.graph.Graph:66
+msgid "For directed graphs."
+msgstr ""
+
+#: f1226ce3d2a24ba4ae0dd37ec77341db of sds.graph.graph.Graph:68
+msgid ":obj:`WeightedGraph`"
+msgstr ""
+
+#: e1f6303aa1b64c61a57818e1966e60d7 of sds.graph.graph.Graph:69
+msgid "For weighted graphs."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 05c9e6dbfc6849b0ae820a84b771979b 1d57dde247714942a4c22f445c953f4b
+#: 32136992855c4183bd97be858d129570 of sds.graph.graph.Graph.__init__:1
+msgid "Initialize an empty graph."
+msgstr ""
+
+#: b7986703bdd64d098fecb858c8a7e5f6 f0d4920d571546d9ac9235c7201136c1 of
+#: sds.graph.graph.Graph.__init__:3
+msgid "Allow multiple edges between same nodes. Default is False."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:13
+#: 7c802e57fd5b4bbcbff8f8749b211ea5
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 3ce329b60eb24b97b9189506c43f98ce
+msgid ""
+":py:obj:`__init__ <sds.graph.graph.Graph.__init__>`\\ "
+"\\(\\[allow\\_multi\\_edges\\]\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: f175ec3af27543e0903fb50497a9aad6
+msgid ":py:obj:`add_edge <sds.graph.graph.Graph.add_edge>`\\ \\(edge\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 24308b39b92146ef9302f5f5a23cc36b 90a8609137094344a33311c689480a2b of
+#: sds.graph.graph.Graph.add_edge:1
+msgid "Add an edge to the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 2f4ce61796ab4befa9407224495a5cf6
+msgid ":py:obj:`add_node <sds.graph.graph.Graph.add_node>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 8246246ebc8543c28c15057ef26616e0 f688340e5f3641bfb6f74b89e13e1d8f of
+#: sds.graph.graph.Graph.add_node:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 0b5b7cb173604643b6d84cf7a722755d
+msgid ":py:obj:`clear <sds.graph.graph.Graph.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 59415c4775f548a992a6e5fe4b40c778 e1fd1e7185c3420fac9d5f0b32764aa1 of
+#: sds.graph.graph.Graph.clear:1
+msgid "Remove all nodes and edges from the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: aa70148d42f24d6082a98fab740faf65
+msgid ":py:obj:`degree <sds.graph.graph.Graph.degree>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 195d8e1b5ffb44a9aedd5787bc4ad1b3 fc6628521478427a9056a1e238371b90 of
+#: sds.graph.graph.Graph.degree:1
+msgid "Get the degree of a node (number of incident edges)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 1d353bd48e2e4bb7a0f5b09ae3a5a6b7
+msgid ":py:obj:`edge_count <sds.graph.graph.Graph.edge_count>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 0a14d09a04e145be8ad59b6d7e1a0267 8b0662b807ef433b8d96cca7951646be of
+#: sds.graph.graph.Graph.edge_count:1
+msgid "Get the number of edges in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 85f94bcee9174f528cce98fd96f525e6
+msgid ":py:obj:`edges <sds.graph.graph.Graph.edges>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 7a35d50b5fdf47c1b7ec0d8dcfa2f304 86a8467e28264fbd852b38030bd9412a of
+#: sds.graph.graph.Graph.edges:1
+msgid "Get all edges in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 057f6977368c4df7a522d1537e18f182
+msgid ":py:obj:`get_edge <sds.graph.graph.Graph.get_edge>`\\ \\(node1\\, node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 512b241467d14f76bacfd84113838d60 5a73182a337040e7b4dedc44964b5d16 of
+#: sds.graph.graph.Graph.get_edge:1
+msgid "Get the edge between two nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 647e156b314548808601be5601e48e07
+msgid ""
+":py:obj:`get_node_by_id <sds.graph.graph.Graph.get_node_by_id>`\\ "
+"\\(node\\_id\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 0eaca52e0b6248f6b98c30136eb50c0d 57423202604c488d8a4e244bafa2a356 of
+#: sds.graph.graph.Graph.get_node_by_id:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 4273b013c94a4f5391c8cc85c59d9dd7
+msgid ":py:obj:`has_edge <sds.graph.graph.Graph.has_edge>`\\ \\(node1\\, node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 445a33576cd04a1bbe45ea3c6a15003a 7aff80d9f0ad4f1480828008485d2f8f of
+#: sds.graph.graph.Graph.has_edge:1
+msgid "Check if an edge exists between two nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: c5688b8ce2fe4dbca1b967ceace88fbc
+msgid ":py:obj:`has_node <sds.graph.graph.Graph.has_node>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 9bffd4355afe48d8974249f268ff4281 addf9e6643b14fd28383a651249e2804 of
+#: sds.graph.graph.Graph.has_node:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: a306e530ee0247d8a1755bac628c02c6
+msgid ":py:obj:`is_connected <sds.graph.graph.Graph.is_connected>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 8e66496c287f48d19826c61861799ef5 f80eea334797401f9dab38a296010c53 of
+#: sds.graph.graph.Graph.is_connected:1
+msgid "Check if the graph is connected."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 0ee4baca85634628a717909e660068e0
+msgid ":py:obj:`is_empty <sds.graph.graph.Graph.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 4dc3a4dd6a4a4138974e11779a3df710 a8e22675fbb34501b948b0e2a076f57c of
+#: sds.graph.graph.Graph.is_empty:1
+msgid "Check if the graph is empty (no nodes)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: da590be7fb9f4acca243d37349b8f39c
+msgid ":py:obj:`neighbors <sds.graph.graph.Graph.neighbors>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 652a3ca028534a928b2a4d89e7029c33 dd863cca93a449b2b76f3984dbc2719c of
+#: sds.graph.graph.Graph.neighbors:1
+msgid "Get all neighbors of a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 66e453eeb87c4d13bb29219cf5452ca6
+msgid ":py:obj:`node_count <sds.graph.graph.Graph.node_count>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 294d6ccfa5194cf0b3315f1c318c0149 fad5754d830247c8aea2d666bf3476cb of
+#: sds.graph.graph.Graph.node_count:1
+msgid "Get the number of nodes in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 4720d01ce80b49a4b5e36efb62095c3d
+msgid ":py:obj:`nodes <sds.graph.graph.Graph.nodes>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 6d8501e2a93846c692a2fd182e640ee0 86b21386155145baab356cd1d1dbf8f9 of
+#: sds.graph.graph.Graph.nodes:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: a98447a149514a61acebc3e0029862a6
+msgid ":py:obj:`remove_edge <sds.graph.graph.Graph.remove_edge>`\\ \\(edge\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: b726e6e1f7b34f6aaf4962a207e6195b d4d38d83203d42de979b65b9b296d251 of
+#: sds.graph.graph.Graph.remove_edge:1
+msgid "Remove an edge from the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: 8c72ac1cede845f08cdba7a392554084
+msgid ":py:obj:`remove_node <sds.graph.graph.Graph.remove_node>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:38:<autosummary>:1
+#: c763784d64b9434194216e7637eada00 db066a278dc24af992c941f120c9b73a of
+#: sds.graph.graph.Graph.remove_node:1
+msgid "Remove a node and all its incident edges from the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst:40
+#: 9c7b39d033434554833ce8df0197b541
+msgid "Attributes"
+msgstr ""
+
+#: e9422c48ed05456dab22b51be8848711 of
+#: sds.graph.graph.Graph.__init__:1:<autosummary>:1
+msgid ":py:obj:`allow_multi_edges <sds.graph.graph.Graph.allow_multi_edges>`\\"
+msgstr ""
+
+#: d76a080986c24bcfb88f4efb54b4e16b d9c19dad0c80419580a10828310736eb of
+#: sds.graph.graph.Graph.__init__:1:<autosummary>:1
+#: sds.graph.graph.Graph.allow_multi_edges:1
+msgid "Check if multigraph mode is enabled."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst
+#: 232f77f3c4a64c8e85e0cedbdc640681 29fc0cdc95ea4162a7daf3ee0455f6a8
+#: 2b903c069b40461d9b1635ea35142278 2ec4a1ad858649bf89b74c3b0b9ee767
+#: 3d8fd05af23b49d78af82d1b4aea149a 3f04a6555eb24f5398feba2ee39baf8e
+#: 486ecdf729db406bb9b20aa5f451f36d 4e712626ce15490196f0f70dc53732b4
+#: 62f04831ee544b189b64c1491bfd920f 6d65fd52ae2c442cb9668431212d9afe
+#: 7cadd332d92b49a495aa49774b1423e9 7e36712914fe4c76b47c4b4fd2693086
+#: 98ea795c52da4e229647cc0ff5c52fd9 c872807d08f54bd89fcd2acbe282ea36
+msgid "Returns"
+msgstr ""
+
+#: cc0901b168384e44b74e5c317fa915e2 of
+#: sds.graph.graph.Graph.allow_multi_edges:3
+msgid "True if multiple edges are allowed."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst
+#: 0f472970274849aab6f22bb9431d5534 2287745424374f5d83ac7ee1af15f8e9
+#: 2bcfdef0524f40e087eb67180be72de0 2e2c037610634728a3fc13ef2149ce91
+#: 2e7ee6bcf2d2449eb745ef7e2ac8e86d 6fa83e9cac4c4871b776601cdbf867ae
+#: 70f92b844a844db7ac8d52d3c821921d 9196769422b44e09a5b5a3307e578d3d
+#: b2b44152fb7e4b2da5f6f3c5ae18e8dc b6a962ca96f24390930e4f8724a8bfce
+#: c64b5025e3f0400bb1482f754664ef42 d570b3c2250241d89f2334249f8466b2
+#: f918a5200c974679b037aaee80229f02 fe632ed2f8ad49488effbd6f975e68c9
+msgid "Return type"
+msgstr ""
+
+#: 335149a092d04e2983f8df6126aaf15a of sds.graph.graph.Graph.add_node:3
+msgid "Node to add."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.graph.Graph.rst
+#: 18e280b58b6f46d983229a0215a78c3b 510d7c185af74514b84413ec0abbc1e9
+#: 8dd7a5fb666548beb829975959655b66 9a9508d490a249b7af9aba02a252578d
+#: bd12fe2eaf1f4d42bba2d58e2f342005 f46e3f63c5a345c7bbee21793812c22d
+msgid "Raises"
+msgstr ""
+
+#: eb958b94bc00455ca0d4c11ac439da36 of sds.graph.graph.Graph.add_node:6
+msgid "If node is not a GraphNode."
+msgstr ""
+
+#: f2f9b7c409cb48f787819d8a3f669e59 of sds.graph.graph.Graph.add_node:7
+msgid "If node already exists in the graph."
+msgstr ""
+
+#: f991e21d84ad42b88f54805758bdc9b9 of sds.graph.graph.Graph.add_node:17
+msgid "Duplicate nodes raise error:"
+msgstr ""
+
+#: 0030a3863f824f9eb511f054c8b7bbbb 8dcf0f9f4b164e2593f78ab69ea4d03d
+#: 95676b918eda41f1b1c4f8dc29a72f43 a8bd212860b24ca7b59857bfcfc06a18
+#: cfcb84e1d8a44924949e5f4dd39669b6 d08d34076832418b9bdfd86283e4424b
+#: df5bddbd7cad49b6980ba562ae650c18 of sds.graph.graph.Graph.add_node:26
+#: sds.graph.graph.Graph.clear:14 sds.graph.graph.Graph.edge_count:21
+#: sds.graph.graph.Graph.get_node_by_id:22 sds.graph.graph.Graph.has_node:21
+#: sds.graph.graph.Graph.is_empty:17 sds.graph.graph.Graph.node_count:17
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: ed671d25b53049c99501fae998cddc79 of sds.graph.graph.Graph.remove_node:3
+msgid "Node to remove."
+msgstr ""
+
+#: 5be7e4a542964d488e8a764fa57cf804 91820e4136a6490baf6c3c74c89106c2
+#: d0a0143b440c4064baaa13857eb9829e of sds.graph.graph.Graph.degree:9
+#: sds.graph.graph.Graph.neighbors:8 sds.graph.graph.Graph.remove_node:6
+msgid "If node is not in the graph."
+msgstr ""
+
+#: 0d5fab0ea2644bc88d684fab7fa2d4a2 of sds.graph.graph.Graph.remove_node:24
+msgid ""
+"Time complexity: O(degree(node) + E) All edges incident to the node are "
+"also removed."
+msgstr ""
+
+#: 8d0e9605b46449fcba2050ef89d2f6b3 a1b985319afc4ca2923ef2170c106ea6 of
+#: sds.graph.graph.Graph.__contains__:3 sds.graph.graph.Graph.has_node:3
+msgid "Node to check."
+msgstr ""
+
+#: 331d7f42016d47f2ab44402845ff5117 b45d648a09174a9ba0b23b76b2745173 of
+#: sds.graph.graph.Graph.__contains__:6 sds.graph.graph.Graph.has_node:6
+msgid "True if node is in the graph."
+msgstr ""
+
+#: 1dbbb68ab9dc4ba5a6843d5f4fa06692 of sds.graph.graph.Graph.add_edge:3
+msgid "Edge to add."
+msgstr ""
+
+#: 56a5f2db6c1d4578aa49d9a159dc49cf of sds.graph.graph.Graph.add_edge:6
+msgid "If edge is not an Edge instance."
+msgstr ""
+
+#: e18dbf29f49a4e5b973ce3ac95260e00 of sds.graph.graph.Graph.add_edge:7
+msgid ""
+"If either node is not in the graph, or if edge already exists     and "
+"multigraph mode is disabled."
+msgstr ""
+
+#: ed8d1363c2274261818b0555bc951b0d of sds.graph.graph.Graph.add_edge:20
+msgid "Duplicate edges in simple graph raise error:"
+msgstr ""
+
+#: 65e5a1464ed34af6abe404a963043658 of sds.graph.graph.Graph.add_edge:27
+msgid "But allowed in multigraph:"
+msgstr ""
+
+#: 67425f7b5f0041a982e9a35e7a50db23 of sds.graph.graph.Graph.add_edge:39
+msgid "Time complexity: O(1) for multigraph, O(degree(node)) for simple graph."
+msgstr ""
+
+#: 738b6b1edd7849eeb8953786d1f89244 of sds.graph.graph.Graph.remove_edge:3
+msgid "Edge to remove."
+msgstr ""
+
+#: 3628c8fce8bd4d4da72eebbd23bc2685 of sds.graph.graph.Graph.remove_edge:6
+msgid "If edge is not in the graph."
+msgstr ""
+
+#: 11b80f336ef94bcea7333eee5c10fb59 of sds.graph.graph.Graph.remove_edge:23
+msgid ""
+"Time complexity: O(E) to find edge, O(degree) to update adjacency. For "
+"multigraphs, removes the first matching edge found."
+msgstr ""
+
+#: 287b54e7c7924dbf8565d90bb161fc0b c2ddfe1cbcda4b9bae402785098d2fec of
+#: sds.graph.graph.Graph.get_edge:3 sds.graph.graph.Graph.has_edge:3
+msgid "First node."
+msgstr ""
+
+#: 9c1242bfdd15406796e2cd212d99487e f973b18586d740f59cb7d59d01883028 of
+#: sds.graph.graph.Graph.get_edge:5 sds.graph.graph.Graph.has_edge:5
+msgid "Second node."
+msgstr ""
+
+#: 7910b63319f4430aa5768b5ddd4b6020 of sds.graph.graph.Graph.has_edge:8
+msgid "True if edge exists (either direction for undirected graph)."
+msgstr ""
+
+#: 7fc0dc8cfad340d7b2feda5c667710db of sds.graph.graph.Graph.has_edge:28
+msgid "Time complexity: O(1) amortized using adjacency set."
+msgstr ""
+
+#: 7fd7ba6a7aa641749c7613d0876b91ed of sds.graph.graph.Graph.get_edge:8
+msgid ""
+"The edge if it exists, None otherwise. For multigraphs, returns the first"
+" edge found."
+msgstr ""
+
+#: faa65a470bc242c89df973a019964975 of sds.graph.graph.Graph.get_edge:29
+msgid ""
+"Time complexity: O(E) in worst case. For multigraphs, returns first "
+"matching edge."
+msgstr ""
+
+#: 90597a8046d141a4a641af4d29a387ec of sds.graph.graph.Graph.neighbors:3
+msgid "Node to get neighbors for."
+msgstr ""
+
+#: 479cfabb065d4c7baae6e63a3303759e 6b1481043569493c96faf70dc9a75b0d
+#: cdf5ef76c6ed4c508525a2cf58c5ce1c fa388497c1a348cc8a6db46578029ff0 of
+#: sds.graph.graph.Graph.__iter__ sds.graph.graph.Graph.edges
+#: sds.graph.graph.Graph.neighbors sds.graph.graph.Graph.nodes
+msgid "Yields"
+msgstr ""
+
+#: 9c1b064155ee4591bd9ed5e286356075 of sds.graph.graph.Graph.neighbors:6
+msgid "*GraphNode* -- Neighbor nodes."
+msgstr ""
+
+#: e4a13e78fb13441b86ba9df356dd982b of sds.graph.graph.Graph.neighbors:26
+msgid "Time complexity: O(degree(node))"
+msgstr ""
+
+#: 58b5729ac9244d5f9afe29cc3d3e0025 of sds.graph.graph.Graph.degree:3
+msgid "Node to get degree for."
+msgstr ""
+
+#: 017479f7850d4369b440fc13b6504af6 of sds.graph.graph.Graph.degree:6
+msgid "Number of edges incident to the node."
+msgstr ""
+
+#: 04b2e3c0436248b3994c8d1e65b06564 of sds.graph.graph.Graph.degree:26
+msgid ""
+"Time complexity: O(1) amortized. For multigraphs, counts each edge "
+"separately."
+msgstr ""
+
+#: 488c11d146fe430d8b010147660af1b5 e5c8c785cf574ebe88583492992b1a17 of
+#: sds.graph.graph.Graph.__iter__:3 sds.graph.graph.Graph.nodes:3
+msgid "*GraphNode* -- All nodes in the graph."
+msgstr ""
+
+#: 752d01bf54604b82b2eb4c9143c68efe of sds.graph.graph.Graph.nodes:17
+msgid "Time complexity: O(V)"
+msgstr ""
+
+#: 57c162eac7cc495da65632e98916bbd0 of sds.graph.graph.Graph.edges:3
+msgid "*Edge* -- All edges in the graph."
+msgstr ""
+
+#: 0be3b019f6334c99a38abcac91afa7ea of sds.graph.graph.Graph.edges:18
+msgid "Time complexity: O(E)"
+msgstr ""
+
+#: 8b89c20183a74d1db8c47949d24e29e2 8ff599ef153a42a594fc8a71eff1408e of
+#: sds.graph.graph.Graph.__len__:3 sds.graph.graph.Graph.node_count:3
+msgid "Number of nodes."
+msgstr ""
+
+#: 09caec371e754a388a75e5415486774d of sds.graph.graph.Graph.edge_count:3
+msgid "Number of edges."
+msgstr ""
+
+#: 2a6eede38dcf4cc6bc0b70d52e7da1ee of sds.graph.graph.Graph.is_connected:3
+msgid "A graph is connected if there is a path between any two nodes."
+msgstr ""
+
+#: 19e150d8c2c8452b913e9025a8f37005 of sds.graph.graph.Graph.is_connected:5
+msgid ""
+"True if graph is connected, False otherwise. Empty graph is considered "
+"connected."
+msgstr ""
+
+#: 30742689de214436a068146287a4ad83 of sds.graph.graph.Graph.is_connected:31
+msgid ""
+"Time complexity: O(V + E) with caching. Uses BFS to check connectivity. "
+"Result is cached until graph structure changes."
+msgstr ""
+
+#: 9ff49406cb044c9e922f7dbc2623bbbd of sds.graph.graph.Graph.get_node_by_id:3
+msgid "ID of the node to retrieve."
+msgstr ""
+
+#: 55ec3ff7ac1a431cac7f5d4d3b0d54a0 of sds.graph.graph.Graph.get_node_by_id:6
+msgid "The node if found, None otherwise."
+msgstr ""
+
+#: ea09632120aa4004803c706211a20a33 of sds.graph.graph.Graph.is_empty:3
+msgid "True if graph has no nodes."
+msgstr ""
+
+#: b0ba6cca8d03430ab6ff2c84d181dd02 of sds.graph.graph.Graph.__len__:1
+msgid "Return the number of nodes in the graph."
+msgstr ""
+
+#: da7152033ac341c1b83699c0c5e13459 of sds.graph.graph.Graph.__contains__:1
+msgid "Check if node is in the graph."
+msgstr ""
+
+#: bcdcd348e97643dd90e6850959f747fa of sds.graph.graph.Graph.__iter__:1
+msgid "Iterate over nodes in the graph."
+msgstr ""
+
+#: 197d4a62c3b543a9b07c2f70c3226bec of sds.graph.graph.Graph.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 3563009a72294c8f8139efbcd4bd9990 e21c66452e0c421e8fc5e6efd39e2716 of
+#: sds.graph.graph.Graph.__repr__:3 sds.graph.graph.Graph.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: caa0334dd5924d8ca50a29c0a3d2eed5 of sds.graph.graph.Graph.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+

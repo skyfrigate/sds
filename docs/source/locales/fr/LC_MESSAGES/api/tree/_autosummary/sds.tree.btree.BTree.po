@@ -1,0 +1,523 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:2
+#: 4ff6a67526a4456e96d7aeb33d6e2d37
+msgid "sds.tree.btree.BTree"
+msgstr ""
+
+#: 38dd2a4c1bdf467190db35a408dc3be8 of sds.tree.btree.BTree:1
+msgid "B-Tree implementation."
+msgstr ""
+
+#: b1c5105258f148548052c825f816ae45 of sds.tree.btree.BTree:3
+msgid ""
+"A B-Tree is a self-balancing search tree where each node can contain "
+"multiple keys and have multiple children. It maintains the following "
+"properties:"
+msgstr ""
+
+#: 94b3157a96094a99a5050f0e70a9a6b2 of sds.tree.btree.BTree:7
+msgid "Every node has at most 2t-1 keys"
+msgstr ""
+
+#: 055e70583d884a8595f8b04bc14b6bf2 of sds.tree.btree.BTree:8
+msgid "Every non-leaf node has at least t-1 keys (except root)"
+msgstr ""
+
+#: 17697489873d4d7a905f3f16415a728d of sds.tree.btree.BTree:9
+msgid "Root has at least 1 key (if tree is non-empty)"
+msgstr ""
+
+#: a5239b273481427f94e3130499cd9d5d of sds.tree.btree.BTree:10
+msgid "All leaves are at the same depth"
+msgstr ""
+
+#: 98c388899bf64ad9a308dafdca613cc6 of sds.tree.btree.BTree:11
+msgid "A non-leaf node with k keys has k+1 children"
+msgstr ""
+
+#: 61e14e32d5c146c8871dcad286bd4421 of sds.tree.btree.BTree:12
+msgid "Keys in each node are in ascending order"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst
+#: 0ebe7624540547e28f1b5d358770be0e 3e17a9b288b04b10a9b68c151148a4d6
+#: 55d2964e82584ada81e2e2569ab8e0f8 6366c8c49f154fa18601de847b9cbbcd
+#: 849285100c7c4032b2e0babccbf0fbcf 89e29b51e5394c3691f42bca77edb764
+#: f9af8e48292348daa866920c19090715
+msgid "Parameters"
+msgstr ""
+
+#: 1f590412c3d440f68b54830b2df4180e of sds.tree.btree.BTree:14
+msgid ""
+"Minimum degree (minimum number of keys is t-1, maximum is 2t-1). Must be "
+">= 2. Default is 3."
+msgstr ""
+
+#: ec51f04aa66e453fb75af1a542387db9 of sds.tree.btree.BTree:20
+msgid "The root node of the tree (read-only property)."
+msgstr ""
+
+#: 452cf9c7a8ed42f5b99c9963664e86e4 5d6c5482f6dd4f139e0329aa28b009e7
+#: 6979afd671444d1c85830dac573690d4 of sds.tree.btree.BTree
+msgid "type"
+msgstr ""
+
+#: 1f1972ec668c45ca91eb9ffff7e39c06 of sds.tree.btree.BTree:22
+msgid "BTreeNode or None"
+msgstr ""
+
+#: a71068cacef9456fbb1641b6cc824cb7 of sds.tree.btree.BTree:26
+msgid "The number of keys in the tree (read-only property)."
+msgstr ""
+
+#: b391e81868734f5b9d72fff1a7b5e659 cf2f5141e8ce43b7b78fd23e5e857533 of
+#: sds.tree.btree.BTree:28 sds.tree.btree.BTree:34
+msgid "int"
+msgstr ""
+
+#: 25e9212c798840b69bc81bd2ba5a6f2d of sds.tree.btree.BTree:32
+msgid "The minimum degree of the tree (read-only property)."
+msgstr ""
+
+#: 021b758243c7496882b64951983ade75 086dc4796c834aafaa843120e540eba1
+#: 33c08bda527a4473b06613b061a723b5 36772bc57a554da4a50be430b5b25bf1
+#: 39d175c08dd1418b87b43cc735c5e54e 53261c3187e24697a50ef0a658d60c30
+#: 57f5f3918c08488b9537321aef9905df 6d29c27912c942f89fd70ff2d8fa6809
+#: 90f539a4eac348eea18f4fa77650e139 9667ee53ee6949cfb630c522cf47d188
+#: a8cb67d6a3cd4a3fadfbf03965505cfa aac53fed00fa4fb49c8dbdb7bffc38f9
+#: b1f7415adbbb445d987df23af45fd320 b569f5c5c9da4ef0a429509b5a38e0d2
+#: c1371282fd454d6bb16a442e6c441277 c8cd12cc1c274cdba4240437fce1868e
+#: cb6279110beb4785bb838d68f3090cbc f55e7fa42d8e4c44ad952fca3baad315 of
+#: sds.tree.btree.BTree:36 sds.tree.btree.BTree.__contains__:9
+#: sds.tree.btree.BTree.__init__:8 sds.tree.btree.BTree.__iter__:5
+#: sds.tree.btree.BTree.__repr__:6 sds.tree.btree.BTree.__str__:6
+#: sds.tree.btree.BTree.clear:3 sds.tree.btree.BTree.find_max:8
+#: sds.tree.btree.BTree.find_min:8 sds.tree.btree.BTree.height:6
+#: sds.tree.btree.BTree.inorder_traversal:5 sds.tree.btree.BTree.insert:8
+#: sds.tree.btree.BTree.level_order_traversal:5 sds.tree.btree.BTree.remove:12
+#: sds.tree.btree.BTree.root:6 sds.tree.btree.BTree.search:9
+#: sds.tree.btree.BTree.t:6
+msgid "Examples"
+msgstr ""
+
+#: 34a7cb93911b4ee2a3ab6e2c5f8a14ad of sds.tree.btree.BTree:38
+msgid "Create and populate a B-Tree:"
+msgstr ""
+
+#: b9bcc3ef877a445f88f03683c730b6d7 of sds.tree.btree.BTree:48
+msgid "Search for keys:"
+msgstr ""
+
+#: c20debb717114fde9249e5e9ab76e5e6 of sds.tree.btree.BTree:57
+msgid "Iterate in sorted order:"
+msgstr ""
+
+#: 9428ec4bf1d84fdfb365d03259bde805 of sds.tree.btree.BTree:62
+msgid "Find minimum and maximum:"
+msgstr ""
+
+#: 6591a572c91f4333ae32f0f15cb2ce66 of sds.tree.btree.BTree:69
+msgid "Remove keys:"
+msgstr ""
+
+#: 02300849db7b4f68bc3c5bf5c2abc375 35dbb2ac829642d985fa2dd8d2d2884c
+#: 471affd4e3fa4cd5ad85953f76ddcb0f 4f797754ab044e08b01b68e646dd0102
+#: 5294394305fb48a1bcf4c21287f1a617 66e4071c7b0b4aaaa9c1ad5a62613c51
+#: 922f42631aab4c60907c8ab947f8f033 9eb80ba519ce4fbabfb7e3e8f7ab1d05
+#: a4903487bac5448ba8d0b94dfc7927cd f0d22ee540c54607846f35b34f9e36d8 of
+#: sds.tree.btree.BTree:78 sds.tree.btree.BTree.clear:12
+#: sds.tree.btree.BTree.find_max:17 sds.tree.btree.BTree.find_min:17
+#: sds.tree.btree.BTree.height:15 sds.tree.btree.BTree.inorder_traversal:13
+#: sds.tree.btree.BTree.insert:23 sds.tree.btree.BTree.level_order_traversal:13
+#: sds.tree.btree.BTree.remove:22 sds.tree.btree.BTree.search:18
+msgid "Notes"
+msgstr ""
+
+#: c17ddcea17754c9fa2d2bf8cefcb44f1 of sds.tree.btree.BTree:80
+msgid ""
+"Time Complexity (guaranteed): - insert: O(log n) - search: O(log n) - "
+"remove: O(log n) - find_min/max: O(log n) - height: O(1)"
+msgstr ""
+
+#: 596d9fe107b0434b82c1b1a9a0e638f9 of sds.tree.btree.BTree:87
+msgid ""
+"B-Trees are optimized for systems that read/write large blocks of data. "
+"The parameter t should be chosen based on block size for optimal I/O."
+msgstr ""
+
+#: 52704f90064c4a01811e5c3601b4ab13 of sds.tree.btree.BTree:90
+msgid ""
+"Duplicate keys are not allowed. Attempting to insert an existing key has "
+"no effect."
+msgstr ""
+
+#: b0c0ec73c8904f71aca10512573cd482 of sds.tree.btree.BTree:95
+msgid ":obj:`BTreeNode`"
+msgstr ""
+
+#: 53c2b76a78cf4c44925930ef8400403c of sds.tree.btree.BTree:96
+msgid "Node class used internally."
+msgstr ""
+
+#: 35af8aa2c992493890b7b3cc14cf5330 of sds.tree.btree.BTree:98
+msgid ":obj:`BinarySearchTree`"
+msgstr ""
+
+#: 23e181414d8e4e36ab4b549a5b6b7f00 of sds.tree.btree.BTree:99
+msgid "Simpler binary search tree."
+msgstr ""
+
+#: f9edcc6a47684377bd6d4c22fb9279ff of sds.tree.btree.BTree:101
+msgid ":obj:`AVLTree`"
+msgstr ""
+
+#: 02a894bed97b421ab41eb7bf7ca1e7ab of sds.tree.btree.BTree:102
+msgid "Height-balanced binary search tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 5b9b5df80e574d9ab8ff2f7b02c8ebed 62f974b035a3454cb3bd286d8bc64f37
+#: 92b75e175be64b2f8fb5d3472d6579f4 of sds.tree.btree.BTree.__init__:1
+msgid "Initialize an empty B-Tree."
+msgstr ""
+
+#: 384de2c8dab84503849d1bbee8dc4225 77362aa917064c73b4eae3abcd9ff9a7 of
+#: sds.tree.btree.BTree.__init__:3
+msgid "Minimum degree. Must be >= 2. Default is 3."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst
+#: 28c8188f2a9d4d72b84da1db0ac75611 2c32f160946d4b11be8ce65e451caf9e
+#: 3b68c6d5496b4868ac42773a1d2e26ee 5a633bde733b4098a35a9288d27f00d1
+#: 5d602ac8a2654aafa751b435bc2a24d2
+msgid "Raises"
+msgstr ""
+
+#: 1ed26ff16d104a408c33ff704a6ee035 858013e52cd84da780f1c8a414e7d31d of
+#: sds.tree.btree.BTree.__init__:6
+msgid "If t < 2."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:13
+#: 4d5d54cb70e0486bb499d7df22455e29
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 8ba9c309784f4663acc5d2577e18e616
+msgid ":py:obj:`__init__ <sds.tree.btree.BTree.__init__>`\\ \\(\\[t\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 54007f785aca4098a0bb39677f8762fe
+msgid ":py:obj:`clear <sds.tree.btree.BTree.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 479911c990114ea38762103dd7f7bebf 5c0a9ecd5b2440508fc1e82624743e2e of
+#: sds.tree.btree.BTree.clear:1
+msgid "Remove all keys from the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 31e43af6f9aa41cbacbd35fca69b5c8b
+msgid ":py:obj:`find_max <sds.tree.btree.BTree.find_max>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 0583bc9cdb2441b28b24080fed088061 a9c8278a6321461ca9dc408585d840ab of
+#: sds.tree.btree.BTree.find_max:1
+msgid "Find and return the maximum key."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: cd625d211e8a4604abe89cd29f24b02b
+msgid ":py:obj:`find_min <sds.tree.btree.BTree.find_min>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 2fc0f89b1a0840838d2a285a6b336fa2 ca8da2838fb44c139d1a1eb6af07bd4b of
+#: sds.tree.btree.BTree.find_min:1
+msgid "Find and return the minimum key."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: fce40894fcbd4fb49c515a638824b14c
+msgid ":py:obj:`height <sds.tree.btree.BTree.height>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 79dfb8c2f43b4fa28ea61b28cce810df f300d9a56c5c40feb37570977b47f78a of
+#: sds.tree.btree.BTree.height:1
+msgid "Return the height of the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: e2bab3ea98e04295863678622a666086
+msgid ""
+":py:obj:`inorder_traversal <sds.tree.btree.BTree.inorder_traversal>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 2356f68fde0c4ac6be996d07806933d3 511a7bf575a14da2886c6e01ba7c4d9b of
+#: sds.tree.btree.BTree.inorder_traversal:1
+msgid "Yield keys in sorted order (inorder traversal)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 833cea0f58f9423681f7dc827f06de95
+msgid ":py:obj:`insert <sds.tree.btree.BTree.insert>`\\ \\(key\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 0b97f3a6e0d54cf78d8b48ac650eb79c 73d4f55293ef4a18a45e14850572b1bd of
+#: sds.tree.btree.BTree.insert:1
+msgid "Insert a key into the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: c8b8d1b11d794fdba837615e2a62d965
+msgid ":py:obj:`is_empty <sds.tree.btree.BTree.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 4592e7760d064b43bea888d05a52cbd7
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: a5fedbfb79874604979ca8ef0fa62a2c
+msgid ""
+":py:obj:`level_order_traversal "
+"<sds.tree.btree.BTree.level_order_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 7dcd074cfa2d48e6b9ccfec39dc2e380 fb1ec5ca7bf14b17ae630e74f6f39cee of
+#: sds.tree.btree.BTree.level_order_traversal:1
+msgid "Yield keys level by level (breadth-first)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 91d81380dd8a4796b87b219c46a1fab3
+msgid ":py:obj:`remove <sds.tree.btree.BTree.remove>`\\ \\(key\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 0d150fae274642a3badaae24bf020541 fb5b37e025294af5abed0a22edc17fc3 of
+#: sds.tree.btree.BTree.remove:1
+msgid "Remove and return a key from the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 78166e3835fe44a98d13c8606eeda222
+msgid ":py:obj:`search <sds.tree.btree.BTree.search>`\\ \\(key\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:31:<autosummary>:1
+#: 27283402ef9c495ca2d41aac09b6cc5e b70d37ae2173423ea7eb157c9f03ae0e of
+#: sds.tree.btree.BTree.search:1
+msgid "Search for a key in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst:33
+#: ee0827b157f44f2e861f867352ba01a4
+msgid "Attributes"
+msgstr ""
+
+#: afdb8f81b14d4cc7b5dc58419716cf27 of
+#: sds.tree.btree.BTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`root <sds.tree.btree.BTree.root>`\\"
+msgstr ""
+
+#: 042de9f9b20644a5a6680e15057e9876 9899bfe419dd43ba989449c374e77d6f of
+#: sds.tree.btree.BTree.__init__:1:<autosummary>:1 sds.tree.btree.BTree.root:1
+msgid "Get the root node of the tree."
+msgstr ""
+
+#: 78c2e8bd00ad417ab259f515841645b3 of
+#: sds.tree.btree.BTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.btree.BTree.size>`\\"
+msgstr ""
+
+#: 833a2749d1614f9d875a3e35c234834e of
+#: sds.tree.btree.BTree.__init__:1:<autosummary>:1
+msgid "Get the number of nodes in the tree."
+msgstr ""
+
+#: cd736d4306154a69aa71dbacc008b3f1 of
+#: sds.tree.btree.BTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`t <sds.tree.btree.BTree.t>`\\"
+msgstr ""
+
+#: 7cf2053701de4cd1b1359b533ce2ed70 b06935223a054414a502cc3052e02e2a of
+#: sds.tree.btree.BTree.__init__:1:<autosummary>:1 sds.tree.btree.BTree.t:1
+msgid "Get the minimum degree of the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst
+#: 346db6f9b9bd4a999fd99e79499bb02f 3f3e835daee947f790db518824f2bde8
+#: 51b7640e912f4f3797239e13057189c8 5f59a095337e4bca87c84d58dd58b584
+#: 757e9cec514f486ca59e441fdbf31be7 b1eb2f6d519a44c4b6a1cdf4ade75056
+#: b3850fe30e564cecb578d32e5ac9ed49 d2fce2ac915d4048b60d3e5fafa00060
+#: e2f64e89039a405e89229d26f76768f5 ede17d3765484edba70e54efbf1d16dd
+msgid "Returns"
+msgstr ""
+
+#: f43c7cdb0a2f4061a58a09dd38dbd609 of sds.tree.btree.BTree.root:3
+msgid "The root node, or None if tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.btree.BTree.rst
+#: 0a4560c848d04995ab7729b970ca77c7 23764a8232404082a4d00508a259ce22
+#: 36553757f60343de9a4e9ffe5abf112d 3747be45e2ee444ca6e6764a96612d30
+#: 394eb196e9f548fa835bb022481f9717 47a33c3c10ea4fa38cc428fb99639fce
+#: 6c5b180e91b14ef8b8a63269d8c3ce26 8a44557f5f14427aa3ee847e8ff68461
+#: 9eef13f8179547f880ad25cd496d4e7b f158137fe03a4bba92550892ed727427
+msgid "Return type"
+msgstr ""
+
+#: 5f624801260246acba96693ef33eb01b of sds.tree.btree.BTree.t:3
+msgid "The minimum degree."
+msgstr ""
+
+#: 14ab3da7dbc34758a8e516bcfd2430c8 of sds.tree.btree.BTree.height:3
+msgid "Height of the tree, or -1 if empty."
+msgstr ""
+
+#: 8db4a864eb4c4e5a8789138f85d4dcf6 of sds.tree.btree.BTree.height:17
+msgid "Time complexity: O(1) - height is tracked during operations."
+msgstr ""
+
+#: 528c3eb4efa24151b7ec960eb080b7c6 of sds.tree.btree.BTree.search:3
+msgid "Key to search for."
+msgstr ""
+
+#: 545f09216ec24bdbaac8d4354308812a of sds.tree.btree.BTree.search:6
+msgid "True if key is found, False otherwise."
+msgstr ""
+
+#: 0f3a3cbab1e047318e8050841de61d26 342de3c1ca034874a085c14aeee96721
+#: 50a6b333f4bc4e06b2cb92e589889a4e cd2b1128294049299488ac34ff24ab57
+#: dee7273961ef40b280667976777e91da of sds.tree.btree.BTree.find_max:19
+#: sds.tree.btree.BTree.find_min:19 sds.tree.btree.BTree.insert:25
+#: sds.tree.btree.BTree.remove:24 sds.tree.btree.BTree.search:20
+msgid "Time complexity: O(log n)"
+msgstr ""
+
+#: 01a38ee465a54145ac7f35bc28072add of sds.tree.btree.BTree.insert:3
+msgid "If the key already exists, the insertion is ignored (no duplicates)."
+msgstr ""
+
+#: c90e462a6f014aef8c9e459c0b9fb431 of sds.tree.btree.BTree.insert:5
+msgid "Key to insert. Must be comparable."
+msgstr ""
+
+#: 254d3a91284d47bfbb08f1378885ff0e of sds.tree.btree.BTree.insert:17
+msgid "Duplicate keys are ignored:"
+msgstr ""
+
+#: c6c17daf392e4f60bf40ff27927e4e7f of sds.tree.btree.BTree.remove:3
+msgid "Key to remove."
+msgstr ""
+
+#: 459246b68ceb4df6bfbd10be42f838ad of sds.tree.btree.BTree.remove:6
+msgid "The removed key."
+msgstr ""
+
+#: 0344ac3ad5704e9dbdd53b3dfd21a396 79dd9f4f4ec3469a8b96b5cb8462dfa3
+#: 7a4343a051b743d9b40b8202789215ef of sds.tree.btree.BTree.find_max:6
+#: sds.tree.btree.BTree.find_min:6 sds.tree.btree.BTree.remove:9
+msgid "If tree is empty."
+msgstr ""
+
+#: 2c585caa80bf4694b438eb65b2cad8ce of sds.tree.btree.BTree.remove:10
+msgid "If key is not found."
+msgstr ""
+
+#: 252988580ed148e29bbeb24ac0dff096 of sds.tree.btree.BTree.find_min:3
+msgid "The minimum key."
+msgstr ""
+
+#: c1d97faca5e44612b1e5edfd10a2f0b8 of sds.tree.btree.BTree.find_max:3
+msgid "The maximum key."
+msgstr ""
+
+#: ae633e1551794940a4950df4c0d4323e of sds.tree.btree.BTree.clear:14
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: c8fac21090084fc3a9e741ae4e39a61e d277ad586bc14f199194d01fd581a75f
+#: e48e8408b7d64d918646ffdb3ad4d55f of sds.tree.btree.BTree.__iter__
+#: sds.tree.btree.BTree.inorder_traversal
+#: sds.tree.btree.BTree.level_order_traversal
+msgid "Yields"
+msgstr ""
+
+#: 799408e7e1f94566b49b5d835edacfff e7d54631b216413689745d953a324b7f of
+#: sds.tree.btree.BTree.__iter__:3 sds.tree.btree.BTree.inorder_traversal:3
+msgid "*Any* -- Keys in ascending order."
+msgstr ""
+
+#: 5f0d59ee2e3245168e5a9073090cf31a ad8de5f525594343b3d2cf050dbc8a57 of
+#: sds.tree.btree.BTree.inorder_traversal:15
+#: sds.tree.btree.BTree.level_order_traversal:15
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 4e5c5c9b68ab45f9b17886bb0ec1f907 of
+#: sds.tree.btree.BTree.level_order_traversal:3
+msgid "*Any* -- Keys in level order."
+msgstr ""
+
+#: 955c93c0ec2b4712852ad378fe408f7b of sds.tree.btree.BTree.__iter__:1
+msgid "Iterate over keys in sorted order."
+msgstr ""
+
+#: afcce0ac51dd4903a0e34273f0fb87dd of sds.tree.btree.BTree.__contains__:1
+msgid "Check if key is in tree."
+msgstr ""
+
+#: b7f4d42556844f11a22fdc59c634c5d9 of sds.tree.btree.BTree.__contains__:3
+msgid "Key to check."
+msgstr ""
+
+#: 7371f28f730f438388103852a786ac2a of sds.tree.btree.BTree.__contains__:6
+msgid "True if key exists."
+msgstr ""
+
+#: dfbc773e13804d7395c203a5a9d8d42c of sds.tree.btree.BTree.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: 4cbf915550074d77b251d42e42d27818 9fa459c2254d4134b4d542bea8d394d7 of
+#: sds.tree.btree.BTree.__repr__:3 sds.tree.btree.BTree.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 4729010a78344d1a9920024472924ad8 of sds.tree.btree.BTree.__str__:1
+msgid "Return string showing keys in sorted order."
+msgstr ""
+

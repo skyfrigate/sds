@@ -1,0 +1,320 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/advanced_structures/skip_list.rst:5
+#: 7349d80da3ef4b708c99f0373a0366ad
+msgid "Skip List — User Guide"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:9
+#: eca071a868f84eb7881e35abd295d570
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:12
+#: 3f28e1accfaf4bbe86ecd02cdec61a4b
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:14
+#: f6f8ab6f0cf04285a2a11be87590b0f1
+msgid ""
+"A **Skip List** is a probabilistic alternative to balanced trees. It "
+"maintains a sorted linked list (level 0) augmented with several express-"
+"lane linked lists, enabling O(log n) average-case search, insertion, and "
+"deletion without deterministic rotations or rebalancing."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:20
+#: 1b225f508d7646f296cffa4e0233d2e8
+msgid "Mathematical Foundations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:23
+#: 122f4065cc0443a0b0069fe0f298cfd2
+msgid "Multi-Level Structure"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:25
+#: 4227597c940448829b88895cc08a5960
+msgid ""
+"A Skip List of maximum height :math:`L` is a family of linked lists "
+":math:`S_0 \\supseteq S_1 \\supseteq \\cdots \\supseteq S_L` where:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:28
+#: add1cbff8ded46ee8cc93e8e4ec28186
+msgid ":math:`S_0` — base list containing all elements (sorted)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:29
+#: bba687f91696481985c743128a8d8c55
+#, python-brace-format
+msgid ""
+":math:`S_i` — subset of :math:`S_{i-1}`; each element is promoted with "
+"probability :math:`p`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:46
+#: 3be7abbea4464636a10f2aa66541333c
+msgid "Expected Complexity"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:48
+#: f396c9256c7e4aab94b482691f5f73da
+msgid "With promotion probability :math:`p` and :math:`n` elements:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:50
+#: e4f8a1f10f8848568ef5ab385ec8d5ea
+#, python-brace-format
+msgid "Expected height: :math:`E[L] = O(\\log_{1/p} n)`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:51
+#: 73ef05b7b51c45eda7644613cb6394e3
+msgid ""
+"Expected space: :math:`O(n / (1-p))` — i.e. :math:`O(2n)` for :math:`p = "
+"0.5`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:57
+#: 551cb9945a974dc786b3853b17ecfe21
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:58
+#: fdb73b4360d3492fbc34929d90116640
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:59
+#: 646145f818cf44de84c5e7b87de382e7
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:60
+#: 2db8571348ca40cc9d9b2d780332ff1e
+msgid "``insert(key)``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:61
+#: ../../source/guide/advanced_structures/skip_list.rst:64
+#: ../../source/guide/advanced_structures/skip_list.rst:67
+#: 338440a720aa4dc886624591eb655c37 55227f759e344ac5ac16c80d043b3567
+#: 9729699ae8ae4b979771485333b44712
+msgid "O(log n)\\*"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:62
+#: 323ebe3557ea40e6b7ac9d1ad11bb1f7
+msgid "Updates value if key exists"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:63
+#: 34a545c41cb04ff7aa8cd9153d44a45f
+msgid "``delete(key)``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:65
+#: 7cf33d7ff27f491594a0a512f4c6ee2f
+msgid "Returns False if absent"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:66
+#: f520e1825f9a4ae991f71499ca3f5421
+msgid "``search(key)``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:68
+#: 55c8f1ef6eb6484db1195c2d4538dcef
+msgid "Returns None if absent"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:69
+#: ac167fba39f2460fb5edd57427ea53cf
+msgid "``min_key()``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:70
+#: 3cd84711ec1147c49a111409202b4d23
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:71
+#: f58ecdc2b5a34cefac02c49041b9515f
+msgid "First node in base list"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:72
+#: f807bad313864fe4bf1f6df8e1892ab7
+msgid "``max_key()``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:73
+#: ../../source/guide/advanced_structures/skip_list.rst:76
+#: 85ab4fcd962c48db8b8dcb3ac70a6c56 8e71198839274f56b300eb8ab736be9f
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:74
+#: e811a799a87342a286e1921b15ec66c2
+msgid "Traverses base list"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:75
+#: 2b5f49b3c99c49e3b8c1ff4993d49cf4
+msgid "``__iter__``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:77
+#: faeaca330edd4ea29a8f5088a807acd3
+msgid "Level-0 traversal"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:79
+#: 0097e7d0fd0343ce8db5e7778370c001
+msgid "\\* Expected — p = promotion probability"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:82
+#: 15c228dd07c3495d8de6e452be9cdec8
+msgid "Level Randomisation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:84
+#: 364161f5f6414a02a72be75deb1c8d0e
+msgid "The height of a new node is drawn by successive Bernoulli trials:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:92
+#: 6040dc8200d84781a5f04b60c04caca8
+#, python-brace-format
+msgid ""
+"This follows a truncated geometric distribution: :math:`P(\\text{level} ="
+" k) = p^k (1-p)`."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:96
+#: 399fa95ddc544b5c8c9b9cfd5cc623d7
+msgid "SDS Implementation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:122
+#: 869ad49312f946109620a6c7bcd64170
+msgid "Usage"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:125
+#: 1e88673bc3084d45b7a21fde4a59b9fb
+msgid "Construction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:138
+#: 3d95b15bc14947d48fb49cf101f9b7d5
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:179
+#: 5fe43d8cf88a4724acd33aa23ee3baa2
+msgid "Range Queries"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:191
+#: 43a9afa532934d60a2e832e1f44d836b
+msgid "Real-World Use Cases"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:194
+#: 6585ea76114a44eebaa4a8b11b78475b
+msgid "Order Book"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:209
+#: 542aafbd5718480fad370e330ead8298
+msgid "Leaderboard"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:222
+#: 3f52d689a9874168a9226b4b5fe85a15
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:224
+#: 394f4d8de6c741f39a39747ea38d36c2
+msgid ""
+"✅ Set ``max_level = ceil(log(n) / log(1/p))`` to match the expected "
+"number of elements."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:227
+#: da924fd1e74247d38cd4c443e82dd88e
+msgid "✅ Prefer ``p = 0.5`` (O(log₂ n) behaviour) unless memory is constrained."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:229
+#: 2721c3f13997414e9d0b13740e30a59e
+msgid "✅ Use ``insert(k, v)`` to update values — no duplicate node is created."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:231
+#: c5bef3ebc780431ab2ab92fe43fe5579
+msgid ""
+"❌ Avoid calling ``max_key()`` in tight loops — it is O(n). Maintain a "
+"tail pointer if frequent maximum access is required."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:235
+#: db465470b78d456583f02d4c6813811d
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:237
+#: afbe02039e934e26aa5d500b25485b66
+msgid ""
+"Pugh, W. (1990). \"Skip Lists: A Probabilistic Alternative to Balanced "
+"Trees\". *Communications of the ACM*, 33(6), 668-676. DOI: "
+"`10.1145/78973.78977 <https://doi.org/10.1145/78973.78977>`_"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:241
+#: 9c437fd957214ad6aa05b1d838706bcd
+msgid ""
+"OpenDSA — Skip Lists. https://opendsa-"
+"server.cs.vt.edu/ODSA/Books/Everything/html/SkipList.html"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:245
+#: 0aa363005a00476f8c23a1fa2d1ddf2a
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:247
+#: 263f2c04b1e04093a14ecf762d7c0b36
+msgid ":ref:`api_advanced_skip_list` — API Reference"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/skip_list.rst:248
+#: 8f34211f3c364137aaf9ad4dfec5f7b7
+msgid ":ref:`guide_advanced_hash_table` — O(1) key-value lookup"
+msgstr ""
+

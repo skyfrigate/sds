@@ -1,0 +1,1006 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/tree_structures/btree.rst:5
+#: 4f33c86338b04d2e88fa9387eedc86c0
+msgid "B-Tree Guide"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:10
+#: 408cddc831fb4531b3be11c7718fea82
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:12
+#: 91a9839157f843f3979f8443dc7d60f3
+msgid ""
+"A **B-Tree** is a self-balancing search tree optimized for systems that "
+"read and write large blocks of data. Unlike binary trees where each node "
+"has at most 2 children, B-Tree nodes can have many children, reducing "
+"tree height and minimizing disk I/O operations. B-Trees are the "
+"fundamental data structure behind modern database systems and file "
+"systems."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:40
+#: 538948462d934fc8ae7862c81e658876
+msgid ""
+"B-Trees are ideal for storage systems where reading/writing a block of "
+"data has similar cost regardless of block size. By storing multiple keys "
+"per node, B-Trees minimize the number of disk accesses required for "
+"operations."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:45
+#: c1f3e2250a864d5e9d13b9f2bbdba004
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:48
+#: b5639b731882477b8d017ff7ada9d539
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:51
+#: 38e4cc021a8442e09b0d9e9972067afa
+msgid "B-Tree of Minimum Degree t"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:53
+#: 84b856c89dfe45ada9a0083a54c82e70
+msgid "A B-Tree of **minimum degree** :math:`t \\geq 2` satisfies:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:55
+#: 0205a5ac6b9e457b97b0ee8fad4ee7a3
+msgid "**Every node has at most** :math:`2t-1` **keys**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:57
+#: 9a9703046efb4a5b8acf83151290fc87
+msgid "\\forall node \\in T: |keys(node)| \\leq 2t - 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:61
+#: ab8c5f5cef914b8a83066c9d66a18a1f
+msgid "**Every non-root node has at least** :math:`t-1` **keys**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:63
+#: 2aeb7fec86b44debbebf28a5017550e5
+msgid "\\forall node \\neq root: |keys(node)| \\geq t - 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:67
+#: 012fcd1193a54be4b0a2182e1c26aa1e
+msgid "**Root has at least 1 key** (if tree is non-empty)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:69
+#: 8b3e4444b96142abb7ebd51dac2b8cd1
+msgid "|keys(root)| \\geq 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:73
+#: 7b9833dc8f414e3dba8cfecb8f623e95
+msgid "**All leaves are at the same depth**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:75
+#: c6432dee7a7e4b6e887cd8cbf2da4b0c
+msgid "\\forall leaf_1, leaf_2: depth(leaf_1) = depth(leaf_2)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:79
+#: 5add7ef61046462fbf7d91dbb7bf2362
+msgid "**A non-leaf node with** :math:`k` **keys has** :math:`k+1` **children**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:81
+#: 5eed7c7fcf4f4daf8a801acc910b2d4c
+msgid "|children(node)| = |keys(node)| + 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:85
+#: 94eebd0c0f2743fe9091366df10d24ac
+msgid "**Keys in each node are sorted**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:87
+#: 08e2621e320245bc9ff566214cd52033
+msgid "keys(node) = [k_1, k_2, \\ldots, k_n] \\implies k_1 < k_2 < \\cdots < k_n"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:92
+#: c3f5a01aa61041c2a268b50061df855e
+msgid "Node Structure"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:94
+#: 5c50eafd34214339bb6aad3ce9343513
+msgid ""
+"For a node with keys :math:`[k_1, k_2, \\ldots, k_n]` and children "
+":math:`[c_0, c_1, \\ldots, c_n]`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:96
+#: cf99d94e545948eea86e010b76c800bb
+#, python-brace-format
+msgid "\\forall i: \\max(c_i) < k_{i+1} < \\min(c_{i+1})"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:100
+#: 914f41f4b2024ed5a094bcf581b3b50c
+msgid "This creates a search tree property across multiple keys per node."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:103
+#: 633780ca36ba46089d8d788464535338
+msgid "Tree Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:106
+#: a34ebb971a4d4469b4befd98db478b31
+msgid "Height Bounds"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:108
+#: 6d8ae6b430d84542a1607b082c1fe968
+msgid "For a B-Tree with :math:`n` keys and minimum degree :math:`t`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:110
+#: 59e2c7935a3d4ec9a4b7209e5d8a7022
+msgid "**Minimum height** (maximum branching):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:112
+#: 942b37ea898844449b629cbc3c40f2ad
+#, python-brace-format
+msgid "h_{min} = \\lceil \\log_{2t}(n+1) \\rceil - 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:116
+#: a382148e3eb845c391f7a9bce29e2bd0
+msgid "**Maximum height** (minimum branching):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:118
+#: bc2a05c6a89b41cfb66e64a7627e1a6d
+#, python-brace-format
+msgid "h_{max} \\leq \\log_t\\left(\\frac{n+1}{2}\\right)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:122
+#: cad37fe02f9743e8a841dd334e825c14
+msgid ""
+"**Key insight**: Height grows **logarithmically** with the number of "
+"keys, but the base is :math:`t`, not 2. Larger :math:`t` means shorter "
+"trees."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:125
+#: 2011e4294c7d476997e0971e4cd37fda
+msgid "Node Capacity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:127
+#: 71a8793194e646e3bd34cd1e96ccf6c7
+msgid "For minimum degree :math:`t`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:133
+#: 4bfca040153c4b789503f35f68ad8c4b
+msgid "Property"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:134
+#: f5966a14e164490fba0d874528534b5f
+msgid "Minimum"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:135
+#: 671fa200b6be4f5c882c096a7b367ca2
+msgid "Maximum"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:136
+#: d652858ec292434e8cfdf4258ae8dd96
+msgid "**Keys per node**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:137
+#: 4c1aed09d2c34963bb037fd2d35e63cf
+msgid ":math:`t-1` (except root)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:138
+#: ../../source/guide/tree_structures/btree.rst:144
+#: 20fc564714964db79c37f6c2f17eb39d abc016ff348f42e695af8e6695b9a87f
+msgid ":math:`2t-1`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:139
+#: bc824b9cf3a44aa6834df984e49b4eb0
+msgid "**Children per node**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:140
+#: 78d9aeea959e4c5886f0899f450c3ce3
+msgid ":math:`t` (except root)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:141
+#: a52c1edcdb0748b8a3e4f736e76f6ed8
+msgid ":math:`2t`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:142
+#: 9c0d0af7a5ee421eba76629075443f29
+msgid "**Keys in root**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:143
+#: 57f692b52a554179a03c2024eefb6f65
+msgid "1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:145
+#: a36513f26f0e4527a77dd4aa8a0d335d
+msgid "**Total keys (height h)**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:146
+#: 98dba3b2a1f34fd1a09f9d940f46c58c
+msgid ":math:`2t^h - 1`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:147
+#: b5d6780b831d4dfe93a465e7b6bcfb14
+#, python-brace-format
+msgid ":math:`(2t)^{h+1} - 1`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:150
+#: 36d743cb1e544b90855642f43fe8e171
+msgid "Disk Access Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:152
+#: 6a2ea69432634a6f89ecae9baf497be3
+msgid "B-Trees minimize disk I/O by:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:154
+#: ba5113fb9404454487d97158efeeb3ef
+msgid "**Cost model**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:156
+#: e16b852b294a41edb39496289be389d1
+#, python-brace-format
+msgid ""
+"\\text{Total I/O} = (\\text{tree height}) \\times (\\text{cost per node "
+"access})"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:160
+#: 871b107436b4453cba976bd4256e7648
+msgid ""
+"Since height :math:`= O(\\log_t n)` and :math:`t` can be large (e.g., "
+"1000), we achieve:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:162
+#: 32e9dfb560c2432b9be2be7e7559542d
+#, python-brace-format
+msgid "\\text{I/O operations} = O(\\log_{1000} n) \\ll O(\\log_2 n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:166
+#: aa49acc816c842049dfca58c93ffe406
+#, python-brace-format
+msgid ""
+"For 1 billion keys: :math:`\\log_{1000}(10^9) \\approx 3` disk accesses "
+"vs :math:`\\log_2(10^9) \\approx 30` for binary trees!"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:169
+#: b299038e2091412cb4041d922270ee28
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:172
+#: b2949546960d40b6b89798125304105a
+msgid "Abstract Data Type"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:203
+#: 1201539abfdd44de8c03e9a9579f022a
+msgid "Search Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:231
+#: 49da38aecabe40c7a4a9d8cf46e64cdc
+msgid "**Disk I/O**: :math:`O(h) = O(\\log_t n)` reads"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:233
+#: 6d2a4f23049d4e91be5f67f3a16b694c
+msgid "**CPU time**: :math:`O(t \\cdot h) = O(t \\log_t n)` comparisons"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:236
+#: c108c3cdb4a247229511f391c471e16b
+msgid "Insertion Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:239
+#: 309289c1a8d54fc3a349486c916f6f30
+msgid "Two-Pass Insertion (Splitting on the Way Down)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:296
+#: 77584d6e91fb4f0b81ccef6a628e50c8
+msgid "Split Child Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:328
+#: ../../source/guide/tree_structures/btree.rst:410
+#: 26c28a84f1e6467fab86000a26b12d14 c8ced29c18ed4287a131cd02f618e6dd
+msgid "**Visualization**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:340
+#: 63b5c0eed3c948509571ba5502790d26
+msgid "**Disk I/O**: 3 writes (constant)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:343
+#: aa0d7fa0ceb4495dab30765eca811a5f
+msgid "Deletion Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:345
+#: 45438a486f854b03b006a47030428d37
+msgid "Deletion is more complex, requiring merges and redistributions:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:379
+#: 064d0986a3ff4cc2ae438b3b3fa35f89
+msgid "Merge Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:381
+#: df9adc57bf7a4001b0d171e34a0d6871
+msgid "When a child has only :math:`t-1` keys:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:425
+#: 113f0cf6cc3f46389b88a656c761cc2d
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:428
+#: 826d201f536d470f937e9792ee64e3fd
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:434
+#: 072d0674676d4aa08bb89716bf3290de
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:435
+#: 61fcf2c054c54c3e963817da9ea25d5e
+msgid "Disk I/O"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:436
+#: a874fa7a5c5f4f2ca7089bbaeb860728
+msgid "CPU Time"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:437
+#: c33accc0ed8e4c0999fd74b9618c8020
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:438
+#: 88a9199042af4baebc5cdd3e1d6d5022
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:439
+#: ../../source/guide/tree_structures/btree.rst:443
+#: ../../source/guide/tree_structures/btree.rst:447
+#: 10e4413ab08c42e6bee82569b7b73f10 4d3cab4fbad64e039d1168b151c9109e
+#: 5486fd63cbf74d42938e921928509860
+msgid "O(log_t n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:440
+#: ../../source/guide/tree_structures/btree.rst:444
+#: ../../source/guide/tree_structures/btree.rst:448
+#: 095e10de38a845d3b363534dba5db692 91677ce59d89472eb4f08958ac365e83
+#: e74e47c359074ad09a8d1d83c6062c07
+msgid "O(t log_t n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:441
+#: 1f75f20f0c064aba9e449b794137e161
+msgid "h disk reads"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:442
+#: 6b457e3b180843cb9ff4f77350fd83cb
+msgid "**Insert**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:445
+#: 46b2cbd7ddb54fc3b7a55234d2a77252
+msgid "Split cascade"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:446
+#: fcd4f8492e264905af8478ee570a51fa
+msgid "**Delete**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:449
+#: d891371c282d4a63a2646202f1b89bda
+msgid "Merge cascade"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:450
+#: e774f2d3ba7d46c38b926cc97250c83c
+msgid "**Split**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:451
+#: ../../source/guide/tree_structures/btree.rst:455
+#: 7f4c30f239f94d738fafa61298044daf 97b78487c42e48b7b890bca6210c13cd
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:452
+#: ../../source/guide/tree_structures/btree.rst:456
+#: def24ce4fa464608adb8ebfb0cf5c1f7 e2d41661045e4f54a93375fca53117ee
+msgid "O(t)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:453
+#: 027d3ca3be844714ada2b78357ded3c1
+msgid "3 disk writes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:454
+#: a981a65da3f149c79592babb2e3af902
+msgid "**Merge**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:457
+#: e3c83288ae974d85b6cdd10518d32287
+msgid "2 disk writes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:458
+#: 808cfc454cd44664bb18559618c07f3a
+msgid "**Traverse**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:459
+#: f03379640c234583a84a583f595ea040
+msgid "O(n/t)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:460
+#: 93375d46ebea40c48fd552d491184e41
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:461
+#: e7b23a633abb4bc1a1fbdaf63e54108e
+msgid "Visit all nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:463
+#: 69d9c37465f941b2b9fd71504fc69d0a
+msgid ""
+"**Key insight**: Disk I/O dominates. With large :math:`t` (e.g., 1000), "
+"height is extremely small."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:466
+#: 9457623f2c174a82b76c20fda9f257b5
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:468
+#: 4036b19bc63c467f82cb2616321ee3e7
+msgid "**Node storage**: O(n) keys total"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:469
+#: ef56a2f5dd2c42dbbe4018deff390d94
+msgid "**Wasted space**: Up to 50% per node (when nodes are minimally filled)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:470
+#: 2f261b9005344dd1872b54682364c7a9
+msgid "**Average fill**: Typically 69% (from theoretical analysis)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:471
+#: 2e84bcac2dd14f3fa71fead99aa1e828
+msgid "**Pointers**: O(n) child pointers"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:474
+#: 00c9ba95b8994ca385e8f71ff39c84b9
+msgid "Optimal Degree Selection"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:476
+#: acc7ca5e34ce48dfaeb89191fe85b850
+msgid "For disk-based systems:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:478
+#: e84f1abb0a7d4ab4af7ab91ca18b4d9e
+msgid ""
+"t = \\left\\lceil \\frac{\\text{disk block size}}{\\text{key size + "
+"pointer size}} \\right\\rceil"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:482
+#: bb0d6073508945a598ec25fe6ef12a18
+msgid ""
+"**Example**: - Block size: 4KB = 4096 bytes - Key + pointer: 16 bytes - "
+"Optimal :math:`t \\approx 256`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:487
+#: 5224ccb88d0243d1a5440c4f07fab009
+#, python-brace-format
+msgid ""
+"This gives :math:`\\log_{256}(10^9) \\approx 3.8` disk accesses for 1 "
+"billion keys!"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:490
+#: a3f286f002694c70b2f9c8ef20906470
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:493
+#: f012508c198f4a7fa51a292b28927f6a
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:504
+#: 67e3241b49c7458698bf97ee0a3f4bdd
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:507
+#: 115ec98b1b644b259359136ca002a345
+msgid "Creating and Configuring"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:524
+#: 6853dfaa54bc49d3bc135d271873c677
+msgid "Insertion"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:538
+#: e3e61728784f4531b4aac9d17a1e6ab6
+msgid "Searching"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:548
+#: 76c9170ba7314e749eb2cb4f9be516ee
+msgid "Deletion"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:560
+#: b8b89445421c499980db74c51737d97a
+msgid "Range Queries"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:579
+#: 856de94379974b349a6ff1e19e88f91d
+msgid "Min/Max Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:588
+#: b59593fdc5564b7d95c46cb5a3fba9c7
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:591
+#: 3015e851d2ad40c8accba544238a6c76
+msgid "Application 1: Database Index"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:593
+#: 7652607ea0134252b3ee80f7062e07f2
+msgid "B-Trees are the foundation of database indexes:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:666
+#: c6ba03bc643141f5ab28a7a3faad4411
+msgid "Application 2: File System Directory"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:668
+#: abc8e41765d74e50a0f5e33f08a62b34
+msgid "B-Trees in file systems (like ext4, NTFS):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:762
+#: df729778fc734292885f318f36483c59
+msgid "Application 3: Time-Series Database"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:764
+#: d83554edda274bdfb7def9994abc698f
+msgid "Efficient time-range queries:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:868
+#: ceb08fd8542e46778dfb49e2734f0ef6
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:871
+#: 7a0591499af5416fb62bc13bf81748a0
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:873
+#: 64634fe50fb141b2aca420ef71663ee9
+msgid "✅ **Choose t based on storage block size**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:884
+#: 0a4a2b4d60564b5d920ee9330a1fbcc0
+msgid "✅ **Use B-Trees for disk-based storage**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:893
+#: 7a81785f03c7427f8a75567f83941e77
+msgid "✅ **Leverage range query efficiency**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:902
+#: a9517ad4b0ac442b852d903e9d10e96a
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:904
+#: 101888d8e02646d4a77c40378cb9ba8c
+msgid "❌ **Don't use small t for large datasets**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:914
+#: ead2cf2d27684fba9c8535fb89d02835
+msgid "❌ **Don't use B-Trees for in-memory only**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:925
+#: 75ee6a9147494668976314bbe759c0a8
+msgid "❌ **Don't forget about cache effects**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:935
+#: 22d8294ed90045daae02125415081aeb
+msgid "Comparison with Other Trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:941
+#: 53239901be1849d4b047e77ee52b11c4
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:942
+#: b48fc6e3381c4dbabed927e6e2075ae1
+msgid "B-Tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:943
+#: 743c05e713b148a69e10077985d3bb56
+msgid "Binary BST"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:944
+#: a436a92b800d48818fa613d46e7f77ff
+msgid "AVL Tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:945
+#: 19e8ea851363405c9253ac411c2a76db
+msgid "Red-Black"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:946
+#: 42a5c60df2604905814092a3ec5901ec
+msgid "**Node capacity**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:947
+#: f534bb9733844ef69f024c7e50459df4
+msgid "Many keys"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:948
+#: ../../source/guide/tree_structures/btree.rst:949
+#: ../../source/guide/tree_structures/btree.rst:950
+#: 0c5704adbd294007bb79ee1256231ed8 816e94c2b310413b8398491adf42c285
+#: 82002f5834ca43e4b7850b3d0f610224
+msgid "1 key"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:951
+#: da217061b2c24ba19801646d962be5a0
+msgid "**Height (1M keys)**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:952
+#: 3ae2a0369e8042b2b758dde10103ae52
+msgid "~3 (t=100)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:953
+#: ../../source/guide/tree_structures/btree.rst:954
+#: ../../source/guide/tree_structures/btree.rst:955
+#: 14ec6c001519469f967e5a0ddbe1f3b2 2ec4872569584a5a994d0ee83def9227
+#: 860385b317a64daa934d7808631caba6
+msgid "~20"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:956
+#: 3527772e097d48f392177977e9387d3c
+msgid "**Disk I/O**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:957
+#: 24f76be25afb444ea79604c88ab9561e
+msgid "Minimal"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:958
+#: ../../source/guide/tree_structures/btree.rst:959
+#: ../../source/guide/tree_structures/btree.rst:960
+#: 0c6d3ba0e5e74f3c9f1492df943c1277 44c9754d2fa341aaa0f7829e8622dc57
+#: d98cf078f32c48f2a9a72bd6a4622016
+msgid "High"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:961
+#: ab6f1175103748c192c18f1493a084d8
+msgid "**Cache efficiency**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:962
+#: a28886a6a3bf48f78dff3d0626d8377c
+msgid "Excellent"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:963
+#: ../../source/guide/tree_structures/btree.rst:964
+#: ../../source/guide/tree_structures/btree.rst:965
+#: 14e16588c49649b1816e4e6a18ce3093 15196da864ff427695d8e5232192c11a
+#: 556afb6d5ffc471b9eeb13928a0af4f8
+msgid "Poor"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:966
+#: 42b3b35744d740ccac8a2337d40cc075
+msgid "**Best for**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:967
+#: ddd85986d64e4549882b5729253c2842
+msgid "Databases"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:968
+#: c246197080c2454ca5f48a47f8c14680
+msgid "General"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:969
+#: 6d488d0242f44d98bc0d5f1ae8eb7d2e
+msgid "Searches"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:970
+#: d92a5a1ba9d04be982984de535beebbe
+msgid "Updates"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:973
+#: f774dd0ee2f445609dd5f1c235e84ed3
+msgid "When to Use B-Trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:975
+#: 723a512669764dfe84feca02cf77e7d9
+msgid "**Use B-Trees when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:976
+#: 29d6a34941a7419aa11e457bf675c58f
+msgid "Data stored on disk/SSD"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:977
+#: 631c5e4bc4e245fa9d0350a9e452ef5b
+msgid "Minimizing I/O is critical"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:978
+#: a3607b40782d45c1a90ea4054e869d92
+msgid "Dealing with millions+ records"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:979
+#: 9c89200729794ad7810c8304e453e27d
+msgid "Range queries are common"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:980
+#: 6b63e683cad14ab6af8bf74ecd838bc7
+msgid "Block-oriented storage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:982
+#: 4a9fb714e28443378ace1f7d64609714
+msgid "**Don't use B-Trees when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:983
+#: 2f0c1fc2984e46fcbbc77daf0bde8562
+msgid "All data fits in memory"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:984
+#: 8413475304334866a44679900169d557
+msgid "Only equality searches"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:985
+#: f53615041bf84cf28b81455651f098ac
+msgid "Very small datasets (< 1000)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:986
+#: 6dd5ea4f3c534bea8775afdac14631c3
+msgid "Random access memory only"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:989
+#: cca9806585894f9aa13d56d80e96193e
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:991
+#: a9e61f1263ab48baa7e4d59278da90b1
+msgid ":doc:`/api/tree/btree` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:992
+#: 15f62d1b55b745838edaf7a2d3dce46f
+msgid ":doc:`binary` - Compare with binary trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:993
+#: 7af788fe63d24b0c8358522eb2a66bee
+msgid ":doc:`avl` - Compare with balanced binary trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:996
+#: b37502e5a8e2467588caaf7456192603
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:998
+#: cc3526488bec456393752b13285e0d5d
+msgid ""
+"Bayer, R., McCreight, E. \"Organization and Maintenance of Large Ordered "
+"Indices\", 1972"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1000
+#: 05ded1e8742e4d3b92418cd8aa08dd9c
+msgid "Original B-Tree paper introducing the data structure."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1002
+#: bede129f8b5a4ed48233e14322688402
+msgid ""
+"Wikipedia contributors. \"B-tree\". Wikipedia. "
+"https://en.wikipedia.org/wiki/B-tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1005
+#: 5ca40db5dab54a289815010b4d8ee353
+msgid "Comprehensive overview with visualizations."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1007
+#: 58ee76bb40a741488a0bde24554d4c41
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 18"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1009
+#: dec34380edc943ce9788f51d7bcd19b4
+msgid "Detailed mathematical analysis of B-Trees."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1011
+#: b974914092fc43749a6f7de2245b7c07
+msgid ""
+"Galles, D. \"B-Tree Visualization\". USFCA. "
+"https://www.cs.usfca.edu/~galles/visualization/BTree.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1014
+#: eab6ac2308cb4d12b815656c5183db6f
+msgid "Interactive B-Tree visualization tool."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1016
+#: a82a580ae3a741679f6df0131ce283f1
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 3\", Section 6.2.4"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1018
+#: 04d96664ddd84b76b1fba34cc7edd731
+msgid "Comprehensive analysis of B-Trees and variants."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1020
+#: 66e86f3f203c42fa923da2f8b457c119
+msgid "SQLite. \"Database File Format\". https://www.sqlite.org/fileformat.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1023
+#: 23f8d97120eb480589365a6bd043c204
+msgid "Real-world B-Tree implementation in SQLite database engine."
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1025
+#: 55ee8d8f8e464101b20ae22869e739e7
+msgid ""
+"PostgreSQL. \"B-Tree Indexes\". "
+"https://www.postgresql.org/docs/current/btree.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/btree.rst:1028
+#: b072374a83a24e0090678ab486b1a242
+msgid "PostgreSQL's B-Tree index implementation details."
+msgstr ""
+

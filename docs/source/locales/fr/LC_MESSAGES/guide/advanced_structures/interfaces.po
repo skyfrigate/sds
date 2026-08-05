@@ -1,0 +1,468 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/advanced_structures/interfaces.rst:5
+#: 7fc09af1d45448f3af355fc9ffd06dd2
+msgid "Abstract Interfaces for Advanced Structures"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:9
+#: 2b2f9c8f0e5148659174aa27badfc2d1
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:12
+#: f5e0330b5e22445b8fb7bce51be63f90
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:14
+#: 0169a48d0ed84c45a0acbfbabcf9b4db
+msgid ""
+"Abstract interfaces define formal contracts for advanced data structures,"
+" ensuring consistency, enabling polymorphism, and facilitating code "
+"reuse. This guide explores interface design patterns and best practices."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:19
+#: be2c9345dfb74877ae14496900c08593
+msgid "What Are Abstract Interfaces?"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:21
+#: 7ee8ba7ac3d04aa5b611e8f440ff7b14
+msgid "An abstract interface is a contract that:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:23
+#: 45ce610abefb4ad49074b87c6a48327e
+msgid "**Defines method signatures** without implementation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:24
+#: 0efb9e8b19e34d8dacf0b4582c58ea77
+msgid "**Specifies behavior** through documentation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:25
+#: 45b42f7066ad4c8184413bf51daf9b4d
+msgid "**Enforces consistency** across implementations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:26
+#: f0336caa4b4541178b7ebc7f8b3def84
+msgid "**Enables polymorphism** for generic algorithms"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:61
+#: e53eb41a59a3430f85543cbc202cae52
+msgid "Why Use Abstract Interfaces?"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:63
+#: afe6a67ab1ea40c8a90c869fd47a2578
+msgid "**1. Contract Definition**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:65
+#: 2c068f9d17cb45c8a7873eed747435b0
+msgid "Interfaces specify *what* operations are available, not *how* they work:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:89
+#: 237bd01345ee4bd88bac305c63b565a3
+msgid "**2. Polymorphism**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:91
+#: 7b95527e3fec4f2287df4e88422d8eb8
+msgid "Write algorithms that work with any implementation:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:112
+#: 2753aef6ddbc4986afcd1378c1caed38
+msgid "**3. Flexibility**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:114
+#: 86b8d71af77842b48da8d10334cdf36a
+msgid "Swap implementations without changing client code:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:126
+#: b15c29139dca4a9482710ab47461fb91
+msgid "**4. Testing**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:128
+#: 2c15baff0d83472dbaaf4d2d0d202ea9
+msgid "Create mock implementations for unit tests:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:145
+#: ae2ffe9b853f4821a27c40bcdc61015a
+msgid "Interface Design Patterns"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:148
+#: d652d925565d4abf8d4a745bd331c295
+msgid "Disjoint Set Interface"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:150
+#: ff60ccb559c64d80b3097688cf10491f
+msgid "The **AbstractDisjointSet** interface supports dynamic connectivity:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:152
+#: ../../source/guide/advanced_structures/interfaces.rst:259
+#: 77be2037706949359515d6f0083f6c6f a91efe00cb5342acaab5f1514a601313
+msgid "**Mathematical Foundation**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:154
+#: 18f17271c96d4e08bf7a81601564658d
+msgid ""
+"A partition of a set S is a collection of disjoint subsets whose union "
+"equals S:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:156
+#: b31549788dd6432590bc32673bd43a3c
+#, python-brace-format
+msgid "\\mathcal{P} = \\{S_1, S_2, \\ldots, S_k\\}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:160
+#: c522f71968a1469bbf2da89535352df4
+msgid "Such that:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:162
+#: 2d0e56ab1d7c45928bc89cdbc295f66b
+#, python-brace-format
+msgid ""
+"\\bigcup_{i=1}^{k} S_i = S \\quad \\text{and} \\quad S_i \\cap S_j = "
+"\\emptyset \\text{ for } i \\neq j"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:166
+#: ../../source/guide/advanced_structures/interfaces.rst:267
+#: 13efb74dd3c34b689028965b5e516157 9156587fe7704b65a94e9b3f9e0a782e
+msgid "**Interface Contract**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:196
+#: ae57430acd144ad3b48e90367e3b4acd
+msgid "**Implementation Requirements**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:198
+#: 8069634ba0b04ba99077d1e4cfa4ab22
+msgid "Any implementation must guarantee:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:200
+#: 626b1661f4dc46c886c1f5a240884897
+msgid "**Correctness**: Operations maintain partition invariants"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:201
+#: cf3663a5f1824e7bbb300f2c9acb70c1
+msgid "**Efficiency**: Nearly constant amortized time (O(α(n)))"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:202
+#: da9b7f1f648e4a28be4d09de1bf1dcd1
+msgid "**Consistency**: find(x) == find(y) ⟺ connected(x, y)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:227
+#: d733012c48214d4b9364e6c689088cf8
+msgid "**Generic Algorithms**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:255
+#: da0dd03a51cd40debda5bf4eb8f9bc48
+msgid "Probabilistic Set Interface"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:257
+#: bb7c0e5648eb4f159ac26d587698d34f
+msgid ""
+"The **AbstractProbabilisticSet** interface supports approximate "
+"membership:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:261
+#: 88d907f6a64a4163a982a599544e8b34
+msgid "Probabilistic structures trade accuracy for space:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:263
+#: a6168abfbf3d4453a18fa34b0cb37642
+#, python-brace-format
+msgid ""
+"P(\\text{false positive}) > 0 \\quad \\text{but} \\quad P(\\text{false "
+"negative}) = 0"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:295
+#: 75c2b1d20bc948afa54f5f2cab0d045d
+msgid "**Probabilistic Guarantees**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:297
+#: 86d6775b964a40939243050e327a0a54
+msgid "Implementations must ensure:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:299
+#: d641d4c0fc1b43c890ac3196845247b8
+#, python-brace-format
+msgid "\\forall x: x \\in S \\Rightarrow \\text{contains}(x) = \\text{True}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:303
+#: a936a52ae28947daa1614fd373809b95
+msgid "But may have:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:305
+#: a7be9e4a28fa4401b3ab1e463c8a9023
+#, python-brace-format
+msgid "\\exists x: x \\notin S \\wedge \\text{contains}(x) = \\text{True}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:335
+#: fe59786712634f2c961a907dcae7bf49
+msgid "**Generic Applications**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:364
+#: 81e6b2e390334ebeab1a48bf02a928ba
+msgid "Implementing Custom Interfaces"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:367
+#: 3f0d9bc5225f4155ade431e3404ebd6e
+msgid "Step-by-Step Implementation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:369
+#: af889c697a654111b8ea1905183cc05c
+msgid "**1. Import Abstract Base**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:377
+#: d3913586172d4a269fa94dbb7dbbe441
+msgid "**2. Define Class Structure**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:393
+#: 0908f25d9652437d9c4d9628e62fe926
+msgid "**3. Implement Required Methods**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:460
+#: 4d58e72ca5f74bfda3069d07e9be94af
+msgid "**4. Add Optional Enhancements**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:473
+#: a104f031d5214ccf9ba4e9771ce67344
+msgid "**5. Test Implementation**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:498
+#: 863fa0af0c864dfd9b490c7d5f1fc527
+msgid "Advanced Implementation Patterns"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:500
+#: 97f193ac99da4e48b0fee3d581451e81
+msgid "**Pattern 1: Weighted Union-Find**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:547
+#: c46c01fdc4d24f3290a220abbeb58e44
+msgid "**Pattern 2: Persistent Union-Find**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:587
+#: 159f757ecbb341fd9633317ae8469b05
+msgid "**Pattern 3: Monitored Union-Find**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:638
+#: 9e33b0b09bda4e91a83b40408b878f2f
+msgid "Testing Interface Implementations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:641
+#: d7637b880d8c4f6db0fa589aea5e19b8
+msgid "Contract Verification"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:643
+#: 3d75a04de5ab4bcda910c62c83990ff9
+msgid "**Generic Test Suite**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:742
+#: 1e6cc535f4b34a2a8416ec028a5a9622
+msgid "Performance Benchmarking"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:744
+#: 7e3f49844eb743f18336e6f3ff7bbafa
+msgid "**Comparative Benchmarks**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:801
+#: bb9e178b74fb4805894e60cad526a637
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:804
+#: 376ff129f73a4156a952e4957f7d3ba0
+msgid "Interface Design Principles"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:806
+#: 600dbc8607724351a72eb75d1f88b08d
+msgid "**1. Keep Interfaces Minimal**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:808
+#: b3cdb3f3206744eabef6fbfff3d2fff8
+msgid "Only include essential operations:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:847
+#: 0012331a831d4194b8d16bf4837939d0
+msgid "**2. Document Contracts Clearly**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:849
+#: ba6d767eea394ea2afffdc38173423b1
+msgid "Specify expected behavior:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:884
+#: 5445985d9558413997eb53be414afdd3
+msgid "**3. Design for Extension**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:886
+#: 11136b305f19418bab8b21abfef1c67a
+msgid "Allow implementations to add features:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:902
+#: f32612fe71894a2c9d50fc743a0f7e8b
+msgid "Usage Guidelines"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:904
+#: ae72b0b644a4419c955a0a61dbc6d5d2
+msgid "**1. Program to Interfaces**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:918
+#: 929bf5528fa3435782723b50dca538e9
+msgid "**2. Use Type Hints**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:932
+#: 1dbfc2dd362341b2a96eadf278961033
+msgid "**3. Verify Implementations**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:947
+#: 5273d0b61dd54bdfa7f4ed8808214059
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:950
+#: 790b5ad7a59947d8aac6de3ca41e3664
+msgid "Factory Pattern"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:990
+#: f8105cc36e7b49e8bce29de31709e832
+msgid "Strategy Pattern"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:1020
+#: 3fcf4254b4044f9f8322842d52ef4289
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:1022
+#: 83a8896be294404f8e4dc3fcddd7fbeb
+msgid ":ref:`api_advanced_interfaces` - API documentation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:1023
+#: 10bee6b14bfb46be8c4b73b5ba1d7b74
+msgid ":ref:`guide_advanced_disjoint_set` - Disjoint Set guide"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:1024
+#: cd86e968b87044dcbce827ada23d913f
+msgid ":ref:`guide_design_patterns` - General design patterns"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:1027
+#: a5302c41087c4f1693cdb54688f7390a
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:1029
+#: b01dfee9ef254a58b5002d22c7e4e090
+msgid ""
+"Gamma, E., et al. (1994). \"Design Patterns: Elements of Reusable Object-"
+"Oriented Software\". Addison-Wesley."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:1032
+#: f478891cefd145f791384a01534375eb
+msgid ""
+"Martin, R. C. (2017). \"Clean Architecture: A Craftsman's Guide to "
+"Software Structure and Design\". Prentice Hall."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:1035
+#: 5358528f82ab40ff997b9e0e78224741
+msgid ""
+"Bloch, J. (2018). \"Effective Java\" (3rd ed.). Addison-Wesley. Chapter "
+"4: Classes and Interfaces."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/interfaces.rst:1038
+#: 477e4022441541a89b15cfbf1f8cdafa
+msgid ""
+"Phillips, D. (2018). \"Python 3 Object-Oriented Programming\" (3rd ed.). "
+"Packt Publishing. Chapter 5: When to Use Object-Oriented Programming."
+msgstr ""
+

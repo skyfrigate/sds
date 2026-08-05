@@ -1,0 +1,859 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/tree_structures/red_black.rst:5
+#: 025593cbd439464abe56c63fcb1fbf37
+msgid "Red-Black Tree Guide"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:10
+#: 2e537627c2a04e47b7d7b69aa6de5236
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:12
+#: 37ac54d3c8ba41829269e4bfe5cd2d10
+msgid ""
+"A **Red-Black tree** is a self-balancing binary search tree where each "
+"node has an additional color attribute (RED or BLACK). Through specific "
+"color-based rules and rotations, Red-Black trees maintain approximate "
+"balance, guaranteeing O(log n) operations while requiring fewer rotations"
+" than AVL trees during insertions and deletions."
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:40
+#: 4bddffa0b03e4372b8f56da0576d3af7
+msgid ""
+"Red-Black trees are preferred over AVL trees when insertions and "
+"deletions are more frequent than searches, as they require fewer "
+"rotations to maintain balance while still guaranteeing logarithmic "
+"height."
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:45
+#: c0473ef49cf24d1a88effd27a206cd2c
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:48
+#: 4012b2691c4f4b368cbd762fb7f0c022
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:51
+#: cc71d22c73514f8189439822d7bf313e
+msgid "Red-Black Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:53
+#: c078bede64e745eba0f486aebcf6f4ec
+msgid "A Red-Black tree is a BST that satisfies five properties:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:55
+#: 052f2928bfd9458cbfe9b1deeff34157
+msgid "**Color Property**: Every node is either RED or BLACK"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:57
+#: 80d4b50b76314b7f9ba62212b4eb6f10
+msgid "\\forall node \\in T: color(node) \\in \\{\\text{RED}, \\text{BLACK}\\}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:61
+#: 963c41b136de478e8ffa6528139553e7
+msgid "**Root Property**: The root is BLACK"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:63
+#: 092933801b2543eba918069b0bb949d1
+#, python-brace-format
+msgid "color(root) = \\text{BLACK}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:67
+#: 48ed8cc36a5945f3a6bcefde5f6e2791
+msgid "**Leaf Property**: All leaves (NIL nodes) are BLACK"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:69
+#: eec050ca3c9243ac959928b65c44d0bf
+#, python-brace-format
+msgid "color(NIL) = \\text{BLACK}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:73
+#: 8d20435a717a42f893386391f554b69a
+msgid "**Red Property**: If a node is RED, both children are BLACK"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:75
+#: 4bc111dffed54644aad031c6fb5fa143
+#, python-brace-format
+msgid ""
+"color(node) = \\text{RED} \\implies color(node.left) = color(node.right) "
+"= \\text{BLACK}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:79
+#: 746330af298f419fb412f600139cc66c
+msgid ""
+"**Black-Height Property**: All paths from a node to descendant leaves "
+"contain the same number of BLACK nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:81
+#: 3de91b008f5e4333b25dc40a9d122c85
+#, python-brace-format
+msgid ""
+"\\forall node \\in T: bh(\\text{all paths from node to leaves}) = "
+"\\text{constant}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:86
+#: a344ecb65c9f4dd9ba92d63073b4d6e0
+msgid "Black-Height Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:88
+#: a7df6743e1e84c598cabf07530823f43
+msgid ""
+"The **black-height** :math:`bh(node)` of a node is the number of BLACK "
+"nodes on any path from (but not including) the node to a leaf:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:90
+#: 751e364e6cee415da4aa94c490f29f39
+#, python-brace-format
+msgid ""
+"bh(node) = \\begin{cases}\n"
+"0 & \\text{if } node = NIL \\\\\n"
+"bh(child) & \\text{if } color(node) = \\text{RED} \\\\\n"
+"bh(child) + 1 & \\text{if } color(node) = \\text{BLACK}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:99
+#: 98c5c759fa454b85abe894af1b13eb05
+msgid "Tree Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:102
+#: 073e73e14ef54a6bb981a305abc7d092
+msgid "Height Bounds"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:104
+#: 0f61f89df1e94d9089d779dbfa07bbe8
+msgid ""
+"For a Red-Black tree with :math:`n` internal nodes and black-height "
+":math:`bh`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:106
+#: 43966dc0f3f34a678ebbcb260f42d1e3
+msgid "**Minimum nodes for black-height** :math:`bh`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:108
+#: 6b8991a43f674edea1bbabc1c6440d6c
+#, python-brace-format
+msgid "n \\geq 2^{bh} - 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:112
+#: 782e783c3d90418b83e5127fe2ce5d05
+msgid "**Maximum height**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:114
+#: b7bb0268a933451f8cf2c7ac88bce01e
+msgid "h \\leq 2\\log_2(n + 1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:118
+#: 4d3acd51305246da8a6cb39947064abf
+msgid ""
+"This is at most twice the height of a perfectly balanced tree, making "
+"Red-Black trees \"approximately balanced.\""
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:120
+#: 0214db90f2b5445b8101daf5624dc535
+msgid ""
+"**Proof sketch**: - Any path has at least :math:`bh` BLACK nodes - At "
+"most half the nodes can be RED (Red Property) - Therefore: :math:`h \\leq"
+" 2 \\cdot bh \\leq 2\\log_2(n + 1)`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:126
+#: e3a64c27b1ec49f2a8f64cccb80c3959
+msgid "Rotation Mathematics"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:128
+#: 81954719ddfb4644bae17b997ddda49a
+msgid ""
+"Red-Black trees use the same rotations as AVL trees but with color "
+"adjustments:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:130
+#: a3d2c21611af407689eb1d65a1e4023b
+msgid "**Left Rotation with Recoloring**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:140
+#: ebf0d8ba340f40dd8bd9d2bf1b4ca023
+msgid "Colors :math:`c1, c2` are adjusted based on the violation being fixed."
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:143
+#: 0fad8b87846e4ec289f35073c39fb745
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:146
+#: 1bbb558f22bb4f1b996fb259674f7046
+msgid "Abstract Data Type"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:175
+#: caa735c32d85428585cc1a90ff3be4eb
+msgid "Insertion Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:178
+#: 0eb69270fde04a689d90a4ff77a4690b
+msgid "Basic Insertion"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:216
+#: 9aa76e9101a044fd80fb550f746856fd
+msgid "**Time complexity**: O(log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:219
+#: 083246b3235b4ca39c67723946ab9717
+msgid "Insertion Fixup"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:221
+#: 9c1ccaba7c9f4db98a39f5da0768d056
+msgid "After standard BST insertion, fix violations:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:258
+#: 08afe7479b48435aa6b0ab222663a2ae
+msgid "**Cases explained**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:260
+#: fdc394f81639469884077d901098a69c
+msgid "**Uncle RED**: Recolor parent, uncle, and grandparent"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:261
+#: 42897c017f704a719c02ccf791c2ad33
+msgid "**Uncle BLACK, zig-zag**: Rotate to convert to case 3"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:262
+#: ca996a9700424ce59a2210443b5fd98a
+msgid "**Uncle BLACK, zig-zig**: Rotate and recolor"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:265
+#: e32227dad75f4d71b0b4e8cdebfbcb2a
+msgid "Deletion Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:267
+#: e4d0c1d55dd24756b7dbcc32effd3644
+msgid "Deletion is more complex than insertion:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:310
+#: bc08b2bccda8474d8abd50c8f55264a8
+msgid "**Time complexity**: O(log n) **Rotations per delete**: At most 3"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:314
+#: 5952e904865f4bf2b9dfb8ee110f883c
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:317
+#: 3fe797c03f364c168f92c678bc935232
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:323
+#: ../../source/guide/tree_structures/red_black.rst:361
+#: 3aede9c451dc444a8ec962088a3b0817 b18a4cc10e384972a725aabd730bf8f6
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:324
+#: 58d0f4b85bc94182b522f3529a0efa00
+msgid "Best"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:325
+#: e6c15a103dd14642b08b172ee64bd119
+msgid "Average"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:326
+#: b9ed6c1bd1df42aa9d8dc76a4c010fa9
+msgid "Worst"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:327
+#: ../../source/guide/tree_structures/red_black.rst:364
+#: 041d2f183a2e4be1b55ce07da4abc88a 5228930f8da849098cd7309d5c4fe35d
+msgid "**Insert**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:328
+#: ../../source/guide/tree_structures/red_black.rst:329
+#: ../../source/guide/tree_structures/red_black.rst:330
+#: ../../source/guide/tree_structures/red_black.rst:332
+#: ../../source/guide/tree_structures/red_black.rst:333
+#: ../../source/guide/tree_structures/red_black.rst:334
+#: ../../source/guide/tree_structures/red_black.rst:337
+#: ../../source/guide/tree_structures/red_black.rst:338
+#: ../../source/guide/tree_structures/red_black.rst:340
+#: ../../source/guide/tree_structures/red_black.rst:341
+#: ../../source/guide/tree_structures/red_black.rst:342
+#: 0af7f2d047bc4afaa3858bcb36fd9b15 28ee7ff97e664220800b25f43ecfd944
+#: 334487a8e70a45d085a70b587fe9758a 40400e2bb74b40699a086819f63afc1e
+#: 6b2f1f0666004071b1defbfcdf3bab1a 76185d30dc9e45399aaba1087e66bec9
+#: 786899124e3a40119b92efdcbc4f102d 7fcbb941d876418eb3168f17b80eaec7
+#: 8860b758953c4e20bfeda9d568e9d7b0 a7fdd5ec5acb43aa9896a28dae4112b4
+#: d48871253623440197e3c76686400ff2
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:331
+#: ../../source/guide/tree_structures/red_black.rst:367
+#: 878f758280744431a9d07c6fe00a6bb6 8b624de33dc44496a1afbc8a55c0f998
+msgid "**Delete**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:335
+#: f675de4f43a6444591ff9a65598789a6
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:336
+#: 244a7a464c4544509307b1fa1f600d0b
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:339
+#: 2586878d541644788514c8a5f1592f55
+msgid "**Find Min/Max**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:343
+#: ../../source/guide/tree_structures/red_black.rst:625
+#: 873b8ec3c9d5420895a7db334f079e32 bda360985df042379ddcfa4e8f1dd9fe
+msgid "**Height**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:344
+#: ../../source/guide/tree_structures/red_black.rst:345
+#: ../../source/guide/tree_structures/red_black.rst:346
+#: ../../source/guide/tree_structures/red_black.rst:348
+#: ../../source/guide/tree_structures/red_black.rst:349
+#: ../../source/guide/tree_structures/red_black.rst:350
+#: 7911d867a57a4ae290f807919aa90c7d 8c4a0ac419d8440b827f3431661c08cc
+#: 952aabe7fc3a4697b2d11e7f40dd631c abab70809d8740a8bfea789b7eec7866
+#: cb00529189434835893f2d21c3fd06cb ce6a1eed0a3c4aeda8f784ee397460fe
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:347
+#: 04c206aaa9cb458cb068617c33bd221a
+msgid "**Traversal**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:352
+#: 76c64820b3ae41808d2a7f032ae472f2
+msgid "**Guaranteed O(log n) for all operations!**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:355
+#: ef99c17b25a5427b86f6ab5c62db44f5
+msgid "Rotation Count Comparison"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:362
+#: ../../source/guide/tree_structures/red_black.rst:623
+#: 604a0a63840947e69a9405b8224b15e6 9b82f8f04d13408fb04a1b631185957f
+msgid "AVL Tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:363
+#: ../../source/guide/tree_structures/red_black.rst:624
+#: 8a97ca45c7c849f18591946154d4d6bc ae9127f44dd64843b65e0699a1490682
+msgid "Red-Black Tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:365
+#: ../../source/guide/tree_structures/red_black.rst:366
+#: 6dd2710641d942249163402ebeece530 70dfa1418ba840c088ed413dca1370b7
+msgid "2 rotations max"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:368
+#: 35246ab5d0ca44d0a981f2245c11db9c
+msgid "O(log n) rotations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:369
+#: d492df424898448ca8f114ec509b286c
+msgid "3 rotations max"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:370
+#: c986e2435c85466fbb6f3dcb2f441875
+msgid "**Recoloring**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:371
+#: 00d0c0f9d43e4d778bab6a1b181951b4
+msgid "N/A"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:372
+#: c92d5082716e4ff688ccf67743cef10f
+msgid "O(log n) per operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:374
+#: 0f5c55c5cddf453a8d519c35a09dbcc7
+msgid ""
+"Red-Black trees perform fewer rotations on average, making them faster "
+"for insertion/deletion-heavy workloads."
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:377
+#: 3ac70246ef5d45e985cfe2b6a204285a
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:379
+#: a8c8cefdfb0340e2ad920073e49b4c1e
+msgid "**Tree storage**: O(n) for n nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:380
+#: 82cdb0dc0455496a96055093e3f1ff46
+msgid "**Color storage**: O(n) - one bit per node"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:381
+#: 47b7836c31584c0480909ed8399a8fab
+msgid "**NIL sentinel**: O(1) shared across all leaves"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:382
+#: fd3ae500d12f4be581aae71ef6ccb768
+msgid "**Recursion stack**: O(log n) - bounded by height"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:385
+#: 5131a75c8f3e42a39c141258a6701dea
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:388
+#: 5a7e08a5c5cd46e0a90fe52baf9d8046
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:399
+#: e002683291264f6e8de63d0db5ffeccf
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:402
+#: c8a807bf9aa940b7a531ac7de39b2183
+msgid "Creating and Populating"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:421
+#: 3cc4209dd177476a9887350788ddd35d
+msgid "Automatic Balancing"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:436
+#: 02055e519660404a93f0ce3fc0d5b7b3
+msgid "Searching"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:450
+#: ede29b56874d434f845e29bd463f60e9
+msgid "Deletion"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:463
+#: 96f7ec34ca94475d93fc204760b23c2c
+msgid "Traversals"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:480
+#: c4743d1f6bff463cb719c82737d9747c
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:483
+#: e2b629f5b8b446faa0b5f999e53047cd
+msgid "Application 1: In-Memory Database Index"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:485
+#: 05735e03da9b4ba79aceb8374d379051
+msgid "Red-Black trees in production databases:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:537
+#: b2feb8b2df3f40f9899eac780f1a5593
+msgid "Application 2: Task Scheduler"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:539
+#: ed0cd2eb08884f65bb8a0a6fae7e2283
+msgid "Real-time task scheduling:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:613
+#: 96d47613f329404397cd43d8a7e4a131
+msgid "Comparison: AVL vs Red-Black"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:616
+#: 6f91b528b2d84ac889d8ba709a7915be
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:622
+#: 89f8dcd9f01d44d29e905bee34e6e351
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:626
+#: e7582d2ba9b2410a9fa2ead0e772fc36
+msgid "h ≤ 1.44 log n"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:627
+#: 01374a223f6846d88f2de17a5b769870
+msgid "h ≤ 2 log n"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:628
+#: 1270627ba9764ec0b78b81e699b50b00
+msgid "**Search Speed**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:629
+#: e2a0efa174f1453ab0fdc41988dfff2f
+msgid "Slightly faster"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:630
+#: 3c3ebe9fa3924c8eba3e36a1a3109839
+msgid "Slightly slower"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:631
+#: 37505f2fe0dc4c3ea5c34bef9e254e0b
+msgid "**Insert Rotations**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:632
+#: ../../source/guide/tree_structures/red_black.rst:633
+#: 191935fb57434279bd3ed5a459a83a3f 6617682d4a634ffaac0d00a8ac9c7716
+msgid "Up to 2"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:634
+#: a8a32ecd9b5845f8abfd709de2301e8e
+msgid "**Delete Rotations**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:635
+#: 852061ea9f7c498fa8f6e744fbf09096
+msgid "Up to O(log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:636
+#: eab6b41162e64165b690df790b5ab4d2
+msgid "Up to 3"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:637
+#: 86ea91548f37456e9e9e3f0d18fde1e9
+msgid "**Rebalancing Cost**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:638
+#: 85d650558c374d48b5dd9a62f67a0e55
+msgid "Higher"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:639
+#: 2ce1810dc32e4614aaf79e04f70989f3
+msgid "Lower"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:640
+#: dd0b7bc3374a4d159e614d7561c186ea
+msgid "**Memory**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:641
+#: 78e2000dd4464eb28849532f4b740603
+msgid "Height per node"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:642
+#: 7d4ebc58d1bc493ea4b7a7ae0a104b6f
+msgid "1 bit color per node"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:645
+#: 31a354e81c2b4812815f378a34764530
+msgid "When to Use Each"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:647
+#: 0eafaec4f36b45108805df553251751d
+msgid "**Use AVL Tree when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:648
+#: 0eb8025ee7b24e8b8c98350c72948366
+msgid "Searches greatly outnumber updates (90%+ reads)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:649
+#: e59aff02777a4cd9bd01d841b8190324
+msgid "Need the absolute minimum height"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:650
+#: 29848429ad5b4843a58b55380df8ecb5
+msgid "Search speed is critical"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:651
+#: cb011e92e09d46039cf6ec5316fdd3c1
+msgid "Memory for height storage is acceptable"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:653
+#: 7076dff9abc7407c95568d1512755ff6
+msgid "**Use Red-Black Tree when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:654
+#: aebd845b7f7a46d08673a9e7cb9c0128
+msgid "Frequent insertions and deletions (balanced workload)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:655
+#: a3fa974841d34624ae745c160c450c3d
+msgid "Updates matter more than searches"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:656
+#: a3c347e8a290420fac387608dbd7a977
+msgid "Need stable, predictable performance"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:657
+#: 8840f50536a14822b3758b879dbaf1cc
+msgid "Minimal rebalancing overhead required"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:659
+#: 2fb86bd085ae465999da6609b646f487
+msgid "**Real-world examples:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:660
+#: 101f0536734944e6a3e50e64622a6850
+msgid "AVL: Read-heavy caches, static databases"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:661
+#: 0cd7a13468c445258fa63a5c4086badc
+msgid "Red-Black: Linux kernel, Java TreeMap, C++ std::map"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:664
+#: 314d843544a74e55a0052bedc60ffb61
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:667
+#: bb0ccd5b99274c09b9239457967e489d
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:669
+#: 67f55d65f1d74541aed37460e626852d
+msgid "✅ **Use Red-Black for update-heavy workloads**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:684
+#: 685a68de9d2e40e399a7f99b8d95fa61
+msgid "✅ **Trust the balancing guarantees**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:694
+#: 7132a7b606c144a1b8fc0882329e3477
+msgid "✅ **Use for general-purpose balanced trees**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:703
+#: c0641e060535450bbdb23aacc76b8e26
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:705
+#: 26d78b11949d471ca573a065ea5c4af5
+msgid "❌ **Don't use if searches dominate**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:713
+#: 6bfb62f057b24d148dec0dc2ee372ef1
+msgid "❌ **Don't implement custom color management**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:720
+#: 7a72f588c8f3437fb200df3ff0d5550b
+msgid "❌ **Don't forget about simpler alternatives**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:728
+#: cbbd89cf936548dcaf03d1d0079edcb0
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:730
+#: 066fc8af259c493eb5c143a8d365d5fb
+msgid ":doc:`/api/tree/balanced` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:731
+#: 5817b83eff2443ab83f2dff5560bc694
+msgid ":doc:`avl` - Compare with AVL trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:732
+#: 06d0c7f2501a4304acccf4d8db8bfc76
+msgid ":doc:`binary` - BST fundamentals"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:735
+#: 219f0f0e04654889825cc19ddf14e907
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:737
+#: d15848f78c3e4dbd839707b2edfcc90e
+#, python-format
+msgid ""
+"Wikipedia contributors. \"Red-Black Tree\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Red%E2%80%93black_tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:740
+#: a160899ea46746638a98309519548cc0
+msgid "Comprehensive overview of Red-Black tree properties and algorithms."
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:742
+#: 7b96821c253e468abcb0e17a1b0cef67
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 13"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:744
+#: 955f164cf0fe4221ab970e0012f0a23c
+msgid "The definitive academic reference for Red-Black trees."
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:746
+#: d3355e863d3c4f0dbab61138b7a72247
+msgid ""
+"Sedgewick, R. \"Left-Leaning Red-Black Trees\", 2008 "
+"https://www.cs.princeton.edu/~rs/talks/LLRB/LLRB.pdf"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:749
+#: 7f40b2ef6fae44ba8ab6e9ce8ec4ae7d
+msgid "Simplified Red-Black tree variant with cleaner implementation."
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:751
+#: 26d3c42da0444062b71b139f0380bad7
+msgid ""
+"Halim, S. \"Red-Black Tree Visualization\". VisuAlgo. "
+"https://visualgo.net/en/bst"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:754
+#: 10b67877888047f786a0845838cc4d0a
+msgid "Interactive visualization of Red-Black tree operations."
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:756
+#: a2f49398648140e69775fa775a3f5103
+msgid ""
+"Galles, D. \"Red-Black Tree Visualization\". USFCA. "
+"https://www.cs.usfca.edu/~galles/visualization/RedBlack.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:759
+#: 4ee2444e6a0c4c69843c71917cb6612b
+msgid "Step-by-step animated Red-Black tree operations."
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:761
+#: 7b692cd402814b9fac0d9dcef92add0a
+msgid ""
+"Guibas, L. J., Sedgewick, R. \"A Dichromatic Framework for Balanced "
+"Trees\", 1978"
+msgstr ""
+
+#: ../../source/guide/tree_structures/red_black.rst:763
+#: e6c831ceca414c649f9fc5266b73ad98
+msgid "Original paper introducing the symmetric binary B-tree (Red-Black tree)."
+msgstr ""
+

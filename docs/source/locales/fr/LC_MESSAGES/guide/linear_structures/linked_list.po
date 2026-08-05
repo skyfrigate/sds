@@ -1,0 +1,927 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/linear_structures/linked_list.rst:5
+#: 2591422918c24287b906e46b13fd014f
+msgid "Linked Lists Guide"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:10
+#: 9afc6f1b4a1e46d695b844782ea789eb
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:12
+#: b3c7e522f5ef47089af2af414b18d59c
+msgid ""
+"**Linked lists** are fundamental linear data structures where elements "
+"are stored in nodes connected by references (pointers) rather than in "
+"contiguous memory locations. Unlike arrays, linked lists do not require "
+"contiguous memory allocation, making them highly flexible for dynamic "
+"insertion and deletion operations."
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:18
+#: 22c65af341414e5d8fe34f60d3dc289c
+msgid "Types of Linked Lists"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:20
+#: 0de8c4494f4b49848fd43edbedaab40d
+msgid ""
+"There are three main variants of linked lists, each with specific use "
+"cases and characteristics:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:24
+#: ../../source/guide/linear_structures/linked_list.rst:466
+#: ../../source/guide/linear_structures/linked_list.rst:717
+#: 29a77030fa0746169f0252cbc4286cc7 8c6d338b70dd4e4e92b509d7a4dee598
+#: 9702c642c24645029a2b24c7846a4adb
+msgid "Singly Linked List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:26
+#: f029843906c14489a195294d7ab57f96
+msgid ""
+"In a **singly linked list**, each node contains data and a reference to "
+"the **next** node in the sequence. Traversal is unidirectional (forward "
+"only)."
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:41
+#: ../../source/guide/linear_structures/linked_list.rst:70
+#: ../../source/guide/linear_structures/linked_list.rst:95
+#: 1036129402044e8e91771088241cbc44 273e2fcf6cd64985a6af004a2a4f67da
+#: 3a29214a0bcf49e89ec94f3706a1b0d7
+msgid "**Characteristics:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:43
+#: dde61a4a7fe644feb888f239df46cd83
+msgid "**Memory efficient**: Only one pointer per node"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:44
+#: 88c0ff14f179424dad3cef7067abc9c7
+msgid "**Forward traversal only**: Cannot move backward"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:45
+#: 5cacff323f7c41c39f243b34c509c88a
+msgid "**Prepend**: O(1) - efficient insertion at head"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:46
+#: 4de03d02c54140a1be6e664fc55080a5
+msgid "**Append**: O(n) without tail pointer, O(1) with tail pointer"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:47
+#: 5e65426ee848425f85e72f9df55c493c
+msgid "**Best for**: Stacks, forward-only iteration"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:50
+#: ../../source/guide/linear_structures/linked_list.rst:496
+#: ../../source/guide/linear_structures/linked_list.rst:729
+#: 395417b3f01c43a7aa3c2f2c40985c7b bde7ba3f60eb4905b6ad5f6984744301
+#: e2babdaf370d4ee1915a698304dfd7b7
+msgid "Doubly Linked List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:52
+#: 2910a3a90bc145b58694b1ca0ae035b0
+msgid ""
+"In a **doubly linked list**, each node contains data and references to "
+"both the **next** and **previous** nodes. This enables bidirectional "
+"traversal."
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:72
+#: 821c876bf4ec40938cd271eb14e250f0
+msgid "**Bidirectional**: Can traverse forward and backward"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:73
+#: 1287213b98fc48dc86108480350f9d03
+msgid "**Extra memory**: Two pointers per node"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:74
+#: 4c7fab01e7a149b1a9c31c8a8867af37
+msgid "**Efficient operations at both ends**: O(1) prepend and append"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:75
+#: 28212a80066f4405b1d6cc05a6ebf86d
+msgid "**Remove from tail**: O(1) (unlike singly linked)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:76
+#: 734b56d351ea47b3bb6b70870bc06a04
+msgid "**Best for**: Deques, LRU cache, undo/redo systems"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:79
+#: ../../source/guide/linear_structures/linked_list.rst:518
+#: ../../source/guide/linear_structures/linked_list.rst:741
+#: 3856b977c99b47cfa7aff7f8ba20dfed 9b51a5fa740c47f1bfc9c45c2d721b4b
+#: fb4fe3ad86d341beba131e3f1edd4ed3
+msgid "Circular Linked List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:81
+#: fd8fd5952c504b5abdd8034a0c649327
+msgid ""
+"In a **circular linked list**, the last node points back to the first "
+"node, forming a cycle. No node points to null."
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:97
+#: f3223634d6d24446951b66cea5cda5ed
+msgid "**No endpoints**: Circular structure with no null references"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:98
+#: 93530a4ddf894dc6a1a20875ab4b8f8a
+msgid "**Continuous traversal**: Can loop indefinitely through nodes"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:99
+#: 3ee8a4f7f57d42beaaf002f1ede2c752
+msgid "**Rotation operations**: Efficient O(1) rotation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:100
+#: 0765b109b4ca418aa3d96d7533edf5fc
+msgid "**Risk**: Easy to create infinite loops if not handled carefully"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:101
+#: 8f9729455c134708bacc2211d68cdead
+msgid "**Best for**: Round-robin scheduling, circular buffers, music playlists"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:104
+#: 75c2f44a69e141ef88c710abead38c11
+msgid "Choosing the Right Type"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:110
+#: dbf08cd4eef346709025bf50d7a890cf
+msgid "Feature"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:111
+#: b4f0770281e540ed8d87d8d6801c8155
+msgid "Singly Linked"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:112
+#: 879fe12d1bee4501a3bcf8bd9eeb4555
+msgid "Doubly Linked"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:113
+#: ../../source/guide/linear_structures/linked_list.rst:408
+#: 435c783a6b8e434493d6753a4965e60b eae9a7969b4c471a87b8c6035f5a55c7
+msgid "Circular"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:114
+#: 52bba76c161847e694b4f83d8757724c
+msgid "**Memory per node**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:115
+#: e510b627e0684a588f88a0558334bf85
+msgid "1 pointer"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:116
+#: d36c9359a811402aa3689244cd4f4a80
+msgid "2 pointers"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:117
+#: c03afce91ba34b2e92fb29a65e2819d4
+msgid "1+ pointers"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:118
+#: 21e2a0679bed435da2d5fa59e5a9288d
+msgid "**Traversal**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:119
+#: 95f9980ca7464abea3f6b541484e4572
+msgid "Forward only"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:120
+#: ef111db08de849bc9dbd9cb20bfe1d63
+msgid "Bidirectional"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:121
+#: 194e3d4b011e4ed898e9d121bead59e1
+msgid "Continuous loop"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:122
+#: 641656e2cc8b4bbc922e44f5ca35711b
+msgid "**Remove from tail**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:123
+#: ../../source/guide/linear_structures/linked_list.rst:125
+#: ../../source/guide/linear_structures/linked_list.rst:411
+#: ../../source/guide/linear_structures/linked_list.rst:413
+#: ../../source/guide/linear_structures/linked_list.rst:416
+#: ../../source/guide/linear_structures/linked_list.rst:417
+#: ../../source/guide/linear_structures/linked_list.rst:418
+#: ../../source/guide/linear_structures/linked_list.rst:419
+#: ../../source/guide/linear_structures/linked_list.rst:424
+#: ../../source/guide/linear_structures/linked_list.rst:431
+#: ../../source/guide/linear_structures/linked_list.rst:432
+#: ../../source/guide/linear_structures/linked_list.rst:433
+#: ../../source/guide/linear_structures/linked_list.rst:434
+#: ../../source/guide/linear_structures/linked_list.rst:439
+#: ../../source/guide/linear_structures/linked_list.rst:441
+#: ../../source/guide/linear_structures/linked_list.rst:443
+#: ../../source/guide/linear_structures/linked_list.rst:446
+#: ../../source/guide/linear_structures/linked_list.rst:447
+#: ../../source/guide/linear_structures/linked_list.rst:448
+#: ../../source/guide/linear_structures/linked_list.rst:449
+#: ../../source/guide/linear_structures/linked_list.rst:451
+#: ../../source/guide/linear_structures/linked_list.rst:452
+#: ../../source/guide/linear_structures/linked_list.rst:453
+#: ../../source/guide/linear_structures/linked_list.rst:454
+#: 00eada27f00b4621b192d1e2f23334db 01a98c983eee4263936e595ff1f8c27d
+#: 11abe9c8f58a418cad545103213b6be2 1988b459612a4b3f94b7175d8492cc71
+#: 2639f8e1217b434389991fcea22a3565 297a96bae0e84d13b2492a458b1332bc
+#: 2cef8d3c242749cd996cb0eb1847c24b 42af6977b6874c3a9a06d280985b49ba
+#: 45b7add3ba0146a79185a3a1ac5b28f1 471f6d237d524dadbd448429422d2020
+#: 4dc50b718e6849e886cfca0045056a3b 4f60d969cb1a4bec8cf6ba681074fe50
+#: 5c36c2d313e04e318b9fc53eb6b76299 6ea2543f74e84f988e825dc584943657
+#: 9a3559ba5f5e4760a7ac6bb03e34eb88 9b0fd52ac68941a7829cc39474c1d159
+#: a2b93f666d7c4e17924d2cb33b672fd4 aa337d9fe1ad442f9524596a8c078a9f
+#: b12d17cb2c7f4805a7be768f95ba3ffd bbf348cb3048491d94b4872bebad8b92
+#: c6150f9d7b2149b9bf2e417950d66a0e dbbda8ec571a4381bab691cd237cc4ba
+#: e0eefbc494e74b1ab6b0bcccf1074df7 e9600fe2c88541e187b5326b2ce3ff64
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:124
+#: ../../source/guide/linear_structures/linked_list.rst:414
+#: ../../source/guide/linear_structures/linked_list.rst:421
+#: ../../source/guide/linear_structures/linked_list.rst:422
+#: ../../source/guide/linear_structures/linked_list.rst:423
+#: ../../source/guide/linear_structures/linked_list.rst:427
+#: ../../source/guide/linear_structures/linked_list.rst:428
+#: ../../source/guide/linear_structures/linked_list.rst:436
+#: ../../source/guide/linear_structures/linked_list.rst:437
+#: ../../source/guide/linear_structures/linked_list.rst:438
+#: ../../source/guide/linear_structures/linked_list.rst:442
+#: ../../source/guide/linear_structures/linked_list.rst:444
+#: 00ffe42974744346bde138d4e7b05441 03ec41590fb9431894ea3189fdca6875
+#: 0b634a7175be4e319f5fadb78b319b65 21f0d026d20247a4bfb726acfdba4f2c
+#: 35a865a5f8414933837e070e6ef83dc1 41bbdb10632d4bc6ae3d1605702f00e9
+#: 714be347a8f845af8e2562158a4616ab 7a345a5a803a40e680369129cd1f825c
+#: 8263b3c5d969419ca62f40ec2d3389a1 892f13f46e664658ac3428adf2d6a31d
+#: 8dbe3e42322947b99e5b1ed5b0d1faea d137c8f52de844528b5735185257f89a
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:126
+#: 97f835313d3f4b9b82415bc85d3f5c9e
+msgid "**Complexity**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:127
+#: 107bda6439bb415fbc336d8e0709a1fa
+msgid "Simple"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:128
+#: ../../source/guide/linear_structures/linked_list.rst:129
+#: a0e50989ab0e4a30b4a6d3341fdb7981 f260e7bed17043839f8dfa94dd319813
+msgid "Moderate"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:130
+#: 5bfd2cf737f445118967b94fa9cd8f8c
+msgid "**Typical use**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:131
+#: d512f911090748d2a0946c678abd8e85
+msgid "Stacks, queues"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:132
+#: 6be438edec4b463fa22ec2607d420131
+msgid "Deques, caches"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:133
+#: a96cc04c458e4392bfe645ff9d613e88
+msgid "Schedulers, playlists"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:136
+#: aef2342351314d77af27a792ab9f36ae
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:139
+#: 82a1827024a0458898c4e7a2625bab5b
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:141
+#: f61d9ee23ebc438382bdee46bf77db24
+msgid "A linked list :math:`L` is a sequence of nodes:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:143
+#: 1bafc0d46b1f4e29a8dce69583af83ae
+msgid "L = \\langle n_1, n_2, \\ldots, n_k \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:147
+#: c19d5759b6e5440bb2b29303c7330b83
+msgid "where each node :math:`n_i` contains:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:148
+#: a0874614e64c434291e7441196125d41
+msgid "**data**: :math:`d_i \\in D` (data domain)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:149
+#: 0fbdb69fb75b4299b16f9f1a8672d793
+#, python-brace-format
+msgid "**next**: :math:`n_{i+1}` or :math:`\\text{null}`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:151
+#: 70904043227c4d11be87192f0929aed2
+msgid "For doubly linked lists, nodes also contain:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:152
+#: 926fb49a33c34eccb36b5afd9c4a1ff7
+#, python-brace-format
+msgid "**prev**: :math:`n_{i-1}` or :math:`\\text{null}`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:155
+#: 8008557fdd5d416daef9f3de329af261
+msgid "Node Structure"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:157
+#: b1ed7c5edc77493aa3367eab7597a10b
+msgid "**Singly Linked Node:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:159
+#: b7742119bb894533b95412e8afc2fe45
+msgid "Node_s = (data, next)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:163
+#: 5b72967eca464c1d8759065c80cae3e9
+msgid "**Doubly Linked Node:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:165
+#: 6c6d8e48e6b6432e8507232b7e3295e4
+msgid "Node_d = (data, next, prev)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:170
+#: 47d532857bf245708d16268b410a961e
+msgid "Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:173
+#: 7a610faa1e214a67bc355d34f804ae61
+msgid "Insertion Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:175
+#: 55c11dae70a4454ab0b8587d30d75467
+msgid "**Prepend** (insert at head):"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:177
+#: 21d314f0c8a94cb181294513a4deb576
+#, python-brace-format
+msgid "prepend(L, x) = \\langle n_{new}, n_1, n_2, \\ldots, n_k \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:181
+#: b43b2c4ead15481e8525e081ccd1056e
+#, python-brace-format
+msgid "where :math:`n_{new}.data = x` and :math:`n_{new}.next = n_1`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:183
+#: d3ef75c6703940ebbc9418a5d0fa8a99
+msgid "**Append** (insert at tail):"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:185
+#: ab22e20da4f24a618bf17b441f70b1a3
+#, python-brace-format
+msgid "append(L, x) = \\langle n_1, n_2, \\ldots, n_k, n_{new} \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:189
+#: dc37ee4454164155b9761f372ed22f6d
+#, python-brace-format
+msgid "where :math:`n_{new}.data = x` and :math:`n_k.next = n_{new}`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:191
+#: a4127b03ea9f4feabd2e20ffda07b732
+msgid "**Insert at position** :math:`i`:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:193
+#: f4097dc30b834f94b6fc287559240927
+#, python-brace-format
+msgid ""
+"insert\\_at(L, i, x) = \\langle n_1, \\ldots, n_{i-1}, n_{new}, n_i, "
+"\\ldots, n_k \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:198
+#: 7a11d07ef6064742b2520b9b4d5e6744
+msgid "Deletion Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:200
+#: 54c2f1c9ec1a4352b3ed1dc7fdbd74df
+msgid "**Remove first:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:202
+#: c4c222e601f14a76a03225ee71a584c8
+msgid ""
+"remove\\_first(\\langle n_1, n_2, \\ldots, n_k \\rangle) = (n_1.data, "
+"\\langle n_2, \\ldots, n_k \\rangle)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:206
+#: 9dcb5ca0e71d4f6d8e2614653a54a86c
+msgid "**Remove last:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:208
+#: 3aed2b5e8595470290077fb48bffe228
+#, python-brace-format
+msgid ""
+"remove\\_last(\\langle n_1, \\ldots, n_{k-1}, n_k \\rangle) = (n_k.data, "
+"\\langle n_1, \\ldots, n_{k-1} \\rangle)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:213
+#: fe0f58eded9e4c16b552c3387339bad4
+msgid "List Properties"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:215
+#: 39dfb3c717a24397b076ed0a1f69c484
+msgid "**Length:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:217
+#: bc2169d30351443cb1b75b2758ad4eca
+#, python-brace-format
+msgid "|L| = k \\text{ where } L = \\langle n_1, \\ldots, n_k \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:221
+#: d1b57b80f0a64ccd921120f5c3a3a021
+msgid "**Access by index:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:223
+#: 8344b5e6bc5949cbbce9539483a0cf29
+#, python-brace-format
+msgid "L[i] = n_i.data \\text{ for } 0 \\leq i < k"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:227
+#: 24db6faa12ca414da18f76d6d9b73b6e
+msgid "**Invariants:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:229
+#: 45c42caf37d64097930528f01c2b1faf
+#, python-brace-format
+msgid "**Chain integrity**: :math:`\\forall i < k : n_i.next = n_{i+1}`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:230
+#: 99f1ed03686244748db5082eda00cee8
+msgid "**Bidirectional consistency** (doubly linked): :math:`n_i.next.prev = n_i`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:231
+#: 041050dac4d9444780e572fab1891c74
+msgid "**Circularity** (circular): :math:`n_k.next = n_1`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:234
+#: 404f98e0f7c84bbd9f4616c29e187abc
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:237
+#: 1c6ed05bbf974abca856e39ef6b3e576
+msgid "Singly Linked List ADT"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:261
+#: ffa7982ccf3d4f8e8fd8b206ee038108
+msgid "Implementation Algorithms"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:264
+#: 8295964f4a5c439faeda5df671501993
+msgid "Prepend (Insert at Head)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:279
+#: d11076fe08c042929dc35424e8f94cc2
+msgid "Append (Insert at Tail)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:301
+#: 3e8980267ed842b6a2befeb47b497a40
+msgid "Insert at Index"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:324
+#: 788aa126b14f45f99d49df9c6afcd2ae
+msgid "Remove First"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:342
+#: e35c1252daf1487a8e871e46b0a7e84f
+msgid "Reverse"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:362
+#: 108ed36e60234d188abbc45bb106f957
+msgid "Doubly Linked List Algorithms"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:365
+#: 9b62a4864fb94785bc9dac555298c6ad
+msgid "Insert at Head"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:382
+#: 6f1dfad74e564977b5c4096adb90bd6c
+msgid "Insert at Tail"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:399
+#: 3835f13a34054e19aff37b7b79643292
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:405
+#: c17de96d6c104bc5880ff976f4c868ce
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:406
+#: 395f0ae04420485f8613d9f948787345
+msgid "Singly"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:407
+#: 044cd32047de4bcdab063e39ac20bdf2
+msgid "Doubly"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:409
+#: beb40d40ce1d4b0ba7f5a508e65bd9b0
+msgid "Array"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:410
+#: 4c7155c6699a48fbbc292d743167ff1e
+msgid "**Access by index**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:412
+#: f3b231309cf549119e40e1e0861cf9cf
+msgid "O(n/2)*"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:415
+#: 5d89ea45f8894728b41a76f2644081b2
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:420
+#: 527a1e58d89a4d7381739c2a13314255
+msgid "**Prepend**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:425
+#: f84e679a7aaa448794146f7ce6e605eb
+msgid "**Append**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:426
+#: f93fdc8959c54a098e282e74c71bc9ac
+msgid "O(n)**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:429
+#: 30a5cb07cc104fecb441b5f0a3380885
+msgid "O(1)***"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:430
+#: 0ef00b39f55647fc9fcbd274af7b1f27
+msgid "**Insert at i**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:435
+#: ede442b6a3b34f27863751031b9963bb
+msgid "**Remove first**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:440
+#: 1848448ac6514805899040ba87a9599f
+msgid "**Remove last**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:445
+#: 0c974155015a4ea991012bef9551e2e9
+msgid "**Reverse**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:450
+#: c331f94253f14daa87bf6554c8684a33
+msgid "**Space**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:456
+#: 664d0ff2e491427ba6e419174e990f89
+msgid "\\* Can start from nearest end"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:458
+#: ae5bbc66187d46ae95d2f2d6c752528c
+msgid "\\** O(1) with tail pointer"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:460
+#: 7ede50c4c94d498e9b1cd8b7a5a3acc6
+msgid "\\*** Amortized"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:463
+#: 6188278b5c904c548cbf539cf5a3c9c3
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:537
+#: 62034beac2834b13bdd4473c95ec4c03
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:540
+#: 160d10e559b74f3cac94879608b0f388
+msgid "Application 1: Music Playlist (Circular)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:577
+#: e66e582f46d44908bf63b6a7bbad8658
+msgid "Application 2: LRU Cache (Doubly Linked)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:610
+#: 23dd3140bdf2432db04778e5391b1126
+msgid "Application 3: Polynomial Representation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:651
+#: a82a6872f42042d28a4cc2e208ee346e
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:654
+#: ca4133c93e214196a2197aac01c0c2f9
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:656
+#: d3e530916f3f494eb0c6681ca55f9a14
+msgid "✅ **Use iteration, not indexing**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:668
+#: 6882df02645b4377ab020d394dbfc62b
+msgid "✅ **Choose right variant**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:680
+#: 9221d288424a4129b52812160f121633
+msgid "✅ **Clear when done**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:687
+#: 8d94521a2dc74812891822a01bfa9b15
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:689
+#: bd5786272b384abfb549fe43cfd2a898
+msgid "❌ **Don't use for random access**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:702
+#: 47a8422f85bd4065a62595cb3c1a750d
+msgid "❌ **Don't forget bounds checking**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:714
+#: 38de83fc2f4d406c8014c8e662f762a3
+msgid "When to Use"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:719
+#: ../../source/guide/linear_structures/linked_list.rst:731
+#: ../../source/guide/linear_structures/linked_list.rst:743
+#: 75f3881082bd4a43b4af1638aaa89e28 779c08b591774556b9ab91237708a90f
+#: acd36350056b48d2bd4c377e2fb1f83b
+msgid "**Use when:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:720
+#: aad033fedd8d4102b3a4a728de40a2c7
+msgid "Frequent prepend operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:721
+#: 987307bda2b944acbe4d1ac0b2b8eeb6
+msgid "Memory is constrained"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:722
+#: 215084c45af84ba8baedbbf5695302be
+msgid "Only forward traversal needed"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:724
+#: ../../source/guide/linear_structures/linked_list.rst:736
+#: ../../source/guide/linear_structures/linked_list.rst:748
+#: 459d9c25364645269fa063c80e4c5b27 af3b5770944c4ac2991f901d21ac901a
+#: f394458c35dc4c7e87061b089b7b8263
+msgid "**Don't use when:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:725
+#: 2684fdca8f59454195e59172af69e195
+msgid "Need frequent appends (use doubly)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:726
+#: c2e5b73fb7ff4c53800001825f7e1968
+msgid "Need random access (use array)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:732
+#: 25d3643d5e2c4333a8a3f45a1d29e8b5
+msgid "Need bidirectional traversal"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:733
+#: beb6b22969f948c3b4c9d80ef52f92b7
+msgid "Frequent operations at both ends"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:734
+#: fd87299dcbea43ab8383e64b8e832e83
+msgid "Implementing deque or LRU cache"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:737
+#: 38fe8deefadf4912ab2fc2830b29e325
+msgid "Memory is very limited"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:738
+#: e94d6a0c34c34e1c9e4084d4b8697e7e
+msgid "Only need forward traversal"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:744
+#: c40b9ba2cd9d42d19c66e83ca458fe54
+msgid "Round-robin scheduling"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:745
+#: 2d3329179270445ab96254fc5f3adeda
+msgid "Circular buffers"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:746
+#: 8024f62a02f64bcd8b273e00c9944bbb
+msgid "Music playlists"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:749
+#: f6a7df201e4343458ffd41c5c13fe9f3
+msgid "Need clear endpoints"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:750
+#: b885f18de1bf4a9fb353b6410ecb1a07
+msgid "Risk of infinite loops"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:753
+#: 5931b064e31b43afa67d0bf7620f11f6
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:755
+#: d057c5233768452794a88b0d59b3d98d
+msgid "**Infinite loops in circular lists**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:756
+#: ce4a7444e99644adb6aa9bfd3862f889
+msgid "**Memory leaks from broken links**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:757
+#: 64ba0a511546470499d3d8a4828915ae
+msgid "**O(n²) from repeated indexing**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:758
+#: 28e135c370004ecfa61d4fbb854cfc8f
+msgid "**Forgetting to update size**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:761
+#: 7cd6e1e9f8f14d338f5c028354619fc0
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:763
+#: bbfd8e2815194e929bbe5a3fa25ec2f6
+msgid ":doc:`/api/linear/list` - API reference"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:764
+#: a02331d6fddd46f39e2264008b9333a9
+msgid ":doc:`stack` - Built on linked lists"
+msgstr ""
+
+#: ../../source/guide/linear_structures/linked_list.rst:765
+#: d553f385664b4ba1add7d986a4201ada
+msgid ":doc:`queue` - Queue implementations"
+msgstr ""
+
+#~ msgid ""
+#~ "**Linked lists** are fundamental linear "
+#~ "data structures where elements are "
+#~ "stored in nodes connected by references"
+#~ " (pointers) rather than in contiguous "
+#~ "memory locations."
+#~ msgstr ""
+

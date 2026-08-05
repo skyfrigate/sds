@@ -1,0 +1,538 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/core/_autosummary/sds.core.interfaces.rst:2
+#: 66a65c2e13eb4d78bff8975b801908ed
+msgid "sds.core.interfaces"
+msgstr ""
+
+#: 06cf2f58e5cc4ef5bc545648b132d577 of sds.core.interfaces:1
+msgid "Abstract base classes defining interfaces for data structures."
+msgstr ""
+
+#: a62ea4928927471295dd7918baa7ee77 of sds.core.interfaces:3
+msgid ""
+"This module provides the foundational abstract base classes (ABCs) that "
+"define the interfaces for all data structures in the sds library. These "
+"interfaces ensure a consistent API across different implementations."
+msgstr ""
+
+#: 5a9c373545a64884af348ae68a363b2c of sds.core.interfaces:7
+msgid ""
+"The hierarchy is: - Collection: Base interface for all collections - "
+"LinearCollection: Interface for linear data structures (lists, stacks, "
+"queues)"
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.interfaces.rst:14
+#: 2063a554ae1e4f108a7ae04568aa19b6 8ed65ba66dee4d0ebb0877cb057a4443 of
+#: sds.core.interfaces:12
+msgid "Classes"
+msgstr ""
+
+#: d5bb133e1deb47aa88c69ea76ad1c6d7 of sds.core.interfaces:13
+msgid "Collection"
+msgstr ""
+
+#: 4a06d9200a4a4f0d8d621f78034ae037 c9d3efdbe66c42dab90d7aba9df3648d
+#: e3ef379c447a42308f98080b6b6c4a82 of sds.core.interfaces:14
+#: sds.core.interfaces.Collection:1
+#: sds.core.interfaces.Collection:1:<autosummary>:1
+msgid "Abstract base class for all collections."
+msgstr ""
+
+#: a38855762db24e9bb9c8fdd90d0456bd of sds.core.interfaces:15
+msgid "LinearCollection"
+msgstr ""
+
+#: 5ffe9e936dac4e709f93eb34ec98416e 6eaee3177879483f841193da9994ee7b
+#: e607be2d13714fe29d40032b95e1e159 of sds.core.interfaces:16
+#: sds.core.interfaces.Collection:1:<autosummary>:1
+#: sds.core.interfaces.LinearCollection:1
+msgid "Abstract base class for linear data structures."
+msgstr ""
+
+#: 11719cdd6fe04e018aa808e1c046eede 26fb9018cc9340a4aacc64ef45af37b4
+#: 2b69d6fcb2f6434c846a3e6cdbd263ef 3918959315b74228b45e118f36088806
+#: 40f7c95f594140d7a744cc81bb68dcd5 725eda88992c429fb30cee5c61b08f1a
+#: 76970d5dceed43eeb1c23b0e8937a22c 88fecd07946e4d999d30206ea420df8c
+#: ad49480e102e4ae58ca2deefd7e23643 c0f1488cfe3f47238388b6bd1268f257
+#: f34db17665fb4ef2aa04079bb0137ad0 of sds.core.interfaces:18
+#: sds.core.interfaces.Collection:35 sds.core.interfaces.Collection.__bool__:9
+#: sds.core.interfaces.Collection.__contains__:9
+#: sds.core.interfaces.Collection.__iter__:6
+#: sds.core.interfaces.Collection.__len__:6
+#: sds.core.interfaces.Collection.clear:6
+#: sds.core.interfaces.Collection.is_empty:6
+#: sds.core.interfaces.LinearCollection:21
+#: sds.core.interfaces.LinearCollection.add:12
+#: sds.core.interfaces.LinearCollection.remove:20
+msgid "Examples"
+msgstr ""
+
+#: dd9f6c7331174bf6beb77c9b42fb4155 of sds.core.interfaces:20
+msgid "Implementing a simple collection:"
+msgstr ""
+
+#: 12fcbca7c6624ec3a07260efbb6b71f3 370dfcb4efff473b88b9188a11c4538b
+#: 591b209616d74df9bed298f2a2f78206 727152f1b5d941b087948ce19897d42a
+#: 80b0cbf22f85425c8bcdb9a9f10fa1da 8af8effeca3a42a586baed5833388f51
+#: 8d9eec14266c478a9bb6b80a9ab36ecf 92cc01ff8c8b4d0b8b1074ab13712336
+#: a05c21a9507e4e758613a443b7a5c5f3 b0ba82f2b9ec482b87005457bfc0b8c7
+#: bd48ac1355594f5a8599b247bacaf5bf of sds.core.interfaces:37
+#: sds.core.interfaces.Collection:69 sds.core.interfaces.Collection.__bool__:24
+#: sds.core.interfaces.Collection.__contains__:18
+#: sds.core.interfaces.Collection.__iter__:20
+#: sds.core.interfaces.Collection.__len__:15
+#: sds.core.interfaces.Collection.clear:19
+#: sds.core.interfaces.Collection.is_empty:15
+#: sds.core.interfaces.LinearCollection:54
+#: sds.core.interfaces.LinearCollection.add:20
+#: sds.core.interfaces.LinearCollection.remove:30
+msgid "Notes"
+msgstr ""
+
+#: 7a9c31c0acfb42589936a19fed6c906c of sds.core.interfaces:39
+msgid ""
+"All classes in this module are abstract base classes and cannot be "
+"instantiated directly. They must be subclassed with concrete "
+"implementations of all abstract methods."
+msgstr ""
+
+#: b8a915291c1a40cbba41791fce1bd5bd of sds.core.interfaces:45
+msgid ":obj:`sds.linear`"
+msgstr ""
+
+#: 090eb7dc8801471a91cf5f85ad886aff of sds.core.interfaces:46
+msgid "Linear data structure implementations."
+msgstr ""
+
+#: 999513db8e6d407490d75ea732d7f467 of sds.core.interfaces:48
+msgid ":obj:`sds.trees`"
+msgstr ""
+
+#: b196cd3e596949b89ddd967eda841415 of sds.core.interfaces:49
+msgid "Tree data structure implementations."
+msgstr ""
+
+#: f9ccea9083cf45d68f7e48983c5f9fab of sds.core.interfaces:51
+msgid ":obj:`sds.graphs`"
+msgstr ""
+
+#: 4362702046db48909d67d3212c523d8d of sds.core.interfaces:52
+msgid "Graph data structure implementations."
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.interfaces.rst:8
+#: db85d2b2df674a09bd7d03452f383788
+msgid "Functions"
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.interfaces.rst:12:<autosummary>:1
+#: 8dc2596b4d1649b791ac0b2591bc04e8
+msgid ""
+":py:obj:`abstractmethod <sds.core.interfaces.abstractmethod>`\\ "
+"\\(funcobj\\)"
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.interfaces.rst:12:<autosummary>:1
+#: f8e86ff56da444548d97bb0a89f3235d
+msgid "A decorator indicating abstract methods."
+msgstr ""
+
+#: b6c6065de2df4a5c9272b807d3a12897 of
+#: sds.core.interfaces.Collection:1:<autosummary>:1
+msgid ":py:obj:`ABC <sds.core.interfaces.ABC>`\\ \\(\\)"
+msgstr ""
+
+#: b1cb70b7cb8d403a9334bb78d22326ec of
+#: sds.core.interfaces.Collection:1:<autosummary>:1
+msgid ""
+"Helper class that provides a standard way to create an ABC using "
+"inheritance."
+msgstr ""
+
+#: 7f3161b5a1764cecb1457dcad47e1796 of
+#: sds.core.interfaces.Collection:1:<autosummary>:1
+msgid ":py:obj:`Collection <sds.core.interfaces.Collection>`\\ \\(\\)"
+msgstr ""
+
+#: 59e4f1574b1a4bd5b74747b06abf0b86 of
+#: sds.core.interfaces.Collection:1:<autosummary>:1
+msgid ":py:obj:`LinearCollection <sds.core.interfaces.LinearCollection>`\\ \\(\\)"
+msgstr ""
+
+#: f0bd3c002d324369bd545805fc682bbe of sds.core.interfaces.Collection:3
+msgid ""
+"Defines the minimal interface that all data structures must implement. "
+"This includes operations for querying size, checking emptiness, clearing,"
+" iterating, and checking membership."
+msgstr ""
+
+#: e740ae36c6e64a0fb129a49488774cf1 of sds.core.interfaces.Collection:7
+msgid ""
+"All concrete data structures in the sds library should inherit from this "
+"class or one of its subclasses."
+msgstr ""
+
+#: 45bf2f4d4a0c4d868e147d3e745b2ece 982bdf9c411240c5ac479e900310723f of
+#: sds.core.interfaces.Collection:12 sds.core.interfaces.Collection.__len__:1
+msgid "Return the number of elements in the collection."
+msgstr ""
+
+#: 56a15d06352245019678b2dd36a43853 of sds.core.interfaces.Collection:16
+msgid "Return True if the collection is empty."
+msgstr ""
+
+#: 0bcf6b0088c74938815c805cc82d65fd d4cec7aa57b54f9088da5653db668044 of
+#: sds.core.interfaces.Collection:20 sds.core.interfaces.Collection.clear:1
+msgid "Remove all elements from the collection."
+msgstr ""
+
+#: 72da124192e74cbcb1b272cc2813e1b3 e1d00d276e044d85879660ed3e320773 of
+#: sds.core.interfaces.Collection:24 sds.core.interfaces.Collection.__iter__:1
+msgid "Return an iterator over the collection."
+msgstr ""
+
+#: 0b6953dfaa104a339f66f8c80a670867 of sds.core.interfaces.Collection:28
+msgid "Return True if item is in the collection."
+msgstr ""
+
+#: e4606ac7071a4119b8756deae0044ee0 of sds.core.interfaces.Collection:32
+msgid "Return True if the collection is not empty."
+msgstr ""
+
+#: 5bdb20883d224e1c88e109aa96104ded of sds.core.interfaces.Collection:37
+msgid "Create a concrete implementation:"
+msgstr ""
+
+#: eb7ba3edaaa8436d8194e0d0d7ed24e2 of sds.core.interfaces.Collection:56
+msgid "Use the collection:"
+msgstr ""
+
+#: 05ab9a29469c42418d34caa491c2d553 of sds.core.interfaces.Collection:71
+msgid ""
+"This class uses the Abstract Base Class (ABC) mechanism from the abc "
+"module. Attempting to instantiate Collection directly will raise a "
+"TypeError."
+msgstr ""
+
+#: eac26f34f45e4bfd8878da0df771732a of sds.core.interfaces.Collection:74
+msgid ""
+"The __bool__ method is implemented as a concrete method that delegates to"
+" is_empty(), so subclasses don't need to override it."
+msgstr ""
+
+#: ac3cb18d3ddf4bfdb4f83ce65eaff553 of sds.core.interfaces.Collection:79
+msgid ":obj:`LinearCollection`"
+msgstr ""
+
+#: bc7895c4867a41009645fc1bff8e7c82 of sds.core.interfaces.Collection:80
+msgid "Extended interface for linear data structures."
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.interfaces.rst
+#: 0d8ca890e8cb4933a8b83ade18bfbf0b 111c813868dd477b9619b34b5a29f5bb
+#: 1ea5ed2bb2c84d56ae9da0c770c4b3ff 2223532a4cdd4c2a90293461fbba61d3
+#: 4a0050b0132b4ab99a03acb1c4cad710 518b7f80c7b14b6090c6d3327cad123a
+msgid "Returns"
+msgstr ""
+
+#: 0c77bd311fe84e74a61bcd8d3c79f340 of sds.core.interfaces.Collection.__len__:3
+msgid "The number of elements currently in the collection."
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.interfaces.rst
+#: 2169a38f1ec142ac8b47f192d920faff 593e5a8563b04c2199595616b5378b67
+#: 60d14d56ecf14e3093d385fb7daf2ce5 6cf2ef446f9443eb923a5e99b528d60a
+#: b73cb4b524464285b2cdb2e0c29cfaab f126a2f9a37f421fac03d795342d47ec
+msgid "Return type"
+msgstr ""
+
+#: a78e5bf27d46469687a5e22a4609a20b of
+#: sds.core.interfaces.Collection.__len__:17
+msgid ""
+"This method enables the use of Python's built-in len() function. "
+"Implementations should return the count in O(1) time when possible."
+msgstr ""
+
+#: 4e1f81e33ecf41ffbe6cdccb7ff7e109 of
+#: sds.core.interfaces.Collection.is_empty:1
+msgid "Return True if the collection is empty, False otherwise."
+msgstr ""
+
+#: 06a68dc2de4e4293ba0411a609e76c94 of
+#: sds.core.interfaces.Collection.is_empty:3
+msgid "True if the collection contains no elements, False otherwise."
+msgstr ""
+
+#: 203e8a005e6548779e28cdc9b8cbbf5b of
+#: sds.core.interfaces.Collection.is_empty:17
+msgid ""
+"This is often more efficient and clearer than checking len(collection) =="
+" 0. Implementations should return the result in O(1) time."
+msgstr ""
+
+#: aa25683fa83c46888c5255209b5c20ba of sds.core.interfaces.Collection.clear:3
+msgid ""
+"After this operation, the collection will be empty and len(collection) "
+"will return 0."
+msgstr ""
+
+#: ab0f96124fe0423f847c8710c19688ec of sds.core.interfaces.Collection.clear:21
+msgid ""
+"This operation should be implemented efficiently, ideally in O(1) time by"
+" simply resetting internal references rather than removing elements one "
+"by one."
+msgstr ""
+
+#: 3684830fc9da4180a8a97290ae5bc6e4 of
+#: sds.core.interfaces.Collection.__iter__:3
+msgid "An iterator that yields elements from the collection."
+msgstr ""
+
+#: 013e1004c2e343d09597b13ce6cb2e4c of
+#: sds.core.interfaces.Collection.__iter__:22
+msgid ""
+"This method enables the use of Python's iteration protocol. The order of "
+"iteration is implementation-dependent and should be documented in "
+"concrete subclasses."
+msgstr ""
+
+#: f3f478f2f20e45dc8438fcf5a20db636 of
+#: sds.core.interfaces.Collection.__contains__:1
+msgid "Return True if item is in the collection, False otherwise."
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.interfaces.rst
+#: 7d7c062b2ed842ffbd4b6aee31335d83 c5fb0f201dcd445e9ac5a80421fafa23
+#: f0e0699064f44fcd81c6f9c2c7e9fd16
+msgid "Parameters"
+msgstr ""
+
+#: 8197fa9034d740eeb4cec73eb9fbd047 of
+#: sds.core.interfaces.Collection.__contains__:3
+msgid "The item to search for in the collection."
+msgstr ""
+
+#: 7c7f520090f645bdb49101cbc94cd052 of
+#: sds.core.interfaces.Collection.__contains__:6
+msgid "True if the item is found, False otherwise."
+msgstr ""
+
+#: 5d2d98fcd897415dbc545ace8187f7d2 of
+#: sds.core.interfaces.Collection.__contains__:20
+msgid ""
+"This method enables the use of Python's 'in' operator. The time "
+"complexity is implementation-dependent but is typically O(n) for unsorted"
+" collections and O(log n) or O(1) for sorted or hashed collections."
+msgstr ""
+
+#: d79d59581db74987bbdd2bf3376d4095 of
+#: sds.core.interfaces.Collection.__bool__:1
+msgid "Return True if the collection is not empty, False otherwise."
+msgstr ""
+
+#: 8cddef1339e347079917665fe580d902 of
+#: sds.core.interfaces.Collection.__bool__:3
+msgid ""
+"This method is implemented concretely and delegates to is_empty(). "
+"Subclasses typically don't need to override this method."
+msgstr ""
+
+#: fbb62cc5ccef4a81b76b5fffe5d529fb of
+#: sds.core.interfaces.Collection.__bool__:6
+msgid "True if the collection contains at least one element, False if empty."
+msgstr ""
+
+#: cc9e4d4e0e904dc5bc6e80e690c01b16 of
+#: sds.core.interfaces.Collection.__bool__:26
+msgid ""
+"This method enables truthiness testing of collections in conditional "
+"statements. An empty collection is considered False, a non-empty "
+"collection is considered True."
+msgstr ""
+
+#: 3014e557c2f8465fa26195f9cb2dec47 of sds.core.interfaces.LinearCollection:3
+msgid ""
+"Extends Collection with operations specific to linear structures such as "
+"lists, stacks, queues, and deques. Linear collections maintain elements "
+"in a sequence with defined positions."
+msgstr ""
+
+#: 08cc6249615a4a7380f058fdf215f744 241338ff37b44e1e94d85607eb007778
+#: 37f6e3e559fc4d5eab52a5347b1f1c6c of sds.core.interfaces.LinearCollection:9
+#: sds.core.interfaces.LinearCollection.add:1
+#: sds.core.interfaces.LinearCollection.remove:41
+msgid "Add an item to the collection."
+msgstr ""
+
+#: 5fc8643c3c3447cfb372735863dcfa59 6c5c6f2025514ffc9fc8272f965a600d of
+#: sds.core.interfaces.LinearCollection:13
+#: sds.core.interfaces.LinearCollection.remove:1
+msgid "Remove and return an item from the collection."
+msgstr ""
+
+#: a943bb38e8394e3c9096ad65718978bd of sds.core.interfaces.LinearCollection:18
+msgid "__len__, is_empty, clear, __iter__, __contains__, __bool__"
+msgstr ""
+
+#: 91fa4c2f0b4248ef87889359deaab0e5 of sds.core.interfaces.LinearCollection:23
+msgid "Create a concrete linear collection:"
+msgstr ""
+
+#: 8719060c252c41b9ba7359428cd621f5 of sds.core.interfaces.LinearCollection:44
+msgid "Use the linear collection:"
+msgstr ""
+
+#: f24d4e6952034b5592382279db0311a5 of sds.core.interfaces.LinearCollection:56
+msgid ""
+"This class extends Collection and inherits all its abstract methods. "
+"Concrete implementations must provide implementations for all abstract "
+"methods from both Collection and LinearCollection."
+msgstr ""
+
+#: 8428f806343f4529ba74ef4a207c1372 of sds.core.interfaces.LinearCollection:60
+msgid ""
+"The semantics of add() and remove() are intentionally generic to allow "
+"different linear structures to implement them according to their specific"
+" behavior (e.g., LIFO for stacks, FIFO for queues)."
+msgstr ""
+
+#: f2aa3dd4b7fc40aa835d30789c5411e3 of sds.core.interfaces.LinearCollection:66
+msgid ":obj:`Collection`"
+msgstr ""
+
+#: 116644466e144edebb4c558a096d9408 of sds.core.interfaces.LinearCollection:67
+msgid "Base interface for all collections."
+msgstr ""
+
+#: 5cb4cfe0a9eb40bdbae1a239a70568e4 of sds.core.interfaces.LinearCollection:69
+msgid ":obj:`sds.linear.LinkedList`"
+msgstr ""
+
+#: cfc148d33d044366a160e4a8db7be666 of sds.core.interfaces.LinearCollection:70
+msgid "Concrete linear collection implementation."
+msgstr ""
+
+#: d1d0a82b7ffe425dbc8cd912d2560761 of sds.core.interfaces.LinearCollection:72
+msgid ":obj:`sds.linear.Stack`"
+msgstr ""
+
+#: f40efa0afa8941009addc3ef00f15fbb of sds.core.interfaces.LinearCollection:73
+msgid "LIFO linear collection."
+msgstr ""
+
+#: 262d51c164134e509e181265c30ac299 of sds.core.interfaces.LinearCollection:75
+msgid ":obj:`sds.linear.Queue`"
+msgstr ""
+
+#: a56cdcc3aed941868f1723a35ff535a9 of sds.core.interfaces.LinearCollection:76
+msgid "FIFO linear collection."
+msgstr ""
+
+#: 0a94462d4cfc43979e45263c1c275cd8 of
+#: sds.core.interfaces.LinearCollection.add:3
+msgid ""
+"The specific behavior (where the item is added) depends on the concrete "
+"implementation. For example: - Stack: adds to the top - Queue: adds to "
+"the rear - List: typically adds to the end"
+msgstr ""
+
+#: 9aaaf3b411cf44debf3b3f80b29ab46a of
+#: sds.core.interfaces.LinearCollection.add:9
+msgid "The item to add to the collection."
+msgstr ""
+
+#: 7ee6cc32cfa54a1b97f0c89f1852abe2 of
+#: sds.core.interfaces.LinearCollection.add:22
+msgid ""
+"This method should not raise an exception for typical usage. If the "
+"collection has a maximum capacity, implementations should raise "
+"FullStructureError when attempting to add to a full collection."
+msgstr ""
+
+#: b88e289075f14c31882ed66e88ec3f2c of
+#: sds.core.interfaces.LinearCollection.add:28
+msgid ":obj:`remove`"
+msgstr ""
+
+#: 7694a0ed4bb74fd5af5027345cedb687 of
+#: sds.core.interfaces.LinearCollection.add:29
+msgid "Remove an item from the collection."
+msgstr ""
+
+#: c23cb55e219944f9b8f05bfaef83a5e1 of
+#: sds.core.interfaces.LinearCollection.remove:3
+msgid ""
+"The specific behavior (which item is removed) depends on the concrete "
+"implementation. For example: - Stack: removes from the top (most recently"
+" added) - Queue: removes from the front (least recently added) - List: "
+"removes the specified item"
+msgstr ""
+
+#: 70773b0c2a3048a1958b920ff1cc0fe8 of
+#: sds.core.interfaces.LinearCollection.remove:9
+msgid ""
+"The item to remove. The interpretation depends on the implementation: - "
+"For some structures (like lists), this is the value to find and remove - "
+"For others (like stacks/queues), this parameter might be ignored"
+msgstr ""
+
+#: 67d53a5c2cbf487bac5b2a3bf0ef44a8 of
+#: sds.core.interfaces.LinearCollection.remove:14
+msgid "The removed item."
+msgstr ""
+
+#: ../../source/api/core/_autosummary/sds.core.interfaces.rst
+#: 700b8d11d0b4415a91affdde735a4e22
+msgid "Raises"
+msgstr ""
+
+#: de773159d70a438da7e160a0bbf3d31d of
+#: sds.core.interfaces.LinearCollection.remove:17
+msgid "If the collection is empty."
+msgstr ""
+
+#: d7eca40cb50d40efa4ca8fbd25105c18 of
+#: sds.core.interfaces.LinearCollection.remove:18
+msgid "If the item is not found (for structures that search for a specific item)."
+msgstr ""
+
+#: 36c6762085f44be58cf496d925b7999e of
+#: sds.core.interfaces.LinearCollection.remove:32
+msgid "Implementations should document their specific removal behavior clearly."
+msgstr ""
+
+#: b15b25bd6497453ca3914bd7f81832bc of
+#: sds.core.interfaces.LinearCollection.remove:34
+msgid ""
+"For structures with specific removal semantics (Stack, Queue), consider "
+"providing more specific methods (pop, dequeue) that delegate to this "
+"method."
+msgstr ""
+
+#: 481c3e31ae2c4168bd7929e291be1521 of
+#: sds.core.interfaces.LinearCollection.remove:40
+msgid ":obj:`add`"
+msgstr ""
+

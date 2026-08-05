@@ -1,0 +1,1114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/graph.rst:5 264cee20bf4b43f9b95bf2e0d1f8a46b
+msgid "Graph"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:10 b5a3b067319b4bd889b21032ee5e6279
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:12 8407468aa71049ea99ff69f3296be517
+msgid ""
+"The Graph class implements an undirected, unweighted graph using "
+"adjacency list representation. This is the foundational graph structure "
+"in SDS-Tools, providing efficient storage and traversal for sparse "
+"graphs."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:30 fb913b1bb31f4eb086d30f8426d50515
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:37:<autosummary>:1
+#: 0b975f7dd64b4487ba8c6c7cfba752ae
+msgid ":py:obj:`Graph <sds.graph.graph.Graph>`"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:37:<autosummary>:1
+#: 1df445e652b748c397c87d9fcc57e357 3fbbfab924084eb0b45da6e41b0f55a2 of
+#: sds.graph.graph.Graph:1
+msgid "Undirected graph using adjacency list representation."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:39 5c53070b31cd48d39660e872afff02d5
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:42 bac2012e898d49509f78c8d737e7abf9
+msgid "Graph Class"
+msgstr ""
+
+#: 513509fe7cac4dfaba26e5ce58882751 of sds.graph.graph.Graph:1
+msgid "Bases: :py:class:`~sds.graph.interfaces.AbstractGraph`"
+msgstr ""
+
+#: 180888484b614084bd2d2707eac13878 of sds.graph.graph.Graph:3
+msgid ""
+"A graph consists of nodes (vertices) connected by edges. This "
+"implementation uses adjacency lists to store connections, which is "
+"memory-efficient for sparse graphs."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst 03175a2067a140f28d8f387a9ab03863
+#: 0c8678317f6c4462b831211482afe31f 20e739167e2a43609ad7e034c8d0be5d
+#: 2470b89d75b047de9e3bec5b7fb83dca 2ba6d3d2cb5140ea8cd737fbd889c127
+#: 41b65553b9cb49e29017d234c429374b 53f1fe5aebc1462993f279a040328af4
+#: 5c24a2f0aee54a8ea423f51125c25caa 5cb4195691ac436998a421f4c823054b
+#: 5cf54374438d4edd8c1fe70956d9e5a2 6e094bcc3a7249048a10cf7fc1f541c1
+#: 72d175e7bf864c6c980e263dd2cbca19 76d7eff3e29f400a8d2db529503c3c1d
+#: 8450ef569a3d479092df22ab7374c20b 86239336ea794637b39f0daf9cd7b6bf
+#: 8688343aa910442885a82c503aaa9bfa 8a34fc60fe5b4767bfb7bb6f3ae5618d
+#: b30d52a7b5694e64a88d4f5ca7890964 bfbe2fc22a6340ac951674b76ed7869c
+#: c2b2bbfe75f9417cba809b17e08bb8bf c46750b4c34241a79938f85329ab9647
+#: d062e557be9d4c668765123b8dbca909 d5e8a5b89ef047af8ed036c25173f0b6
+#: dfa4d8513dbe45fdab0253433ce98072 e4fb2e8085104a6381319a08470e4413
+msgid "Parameters"
+msgstr ""
+
+#: 819b3400ed76441eae3215d1a0f33985 of sds.graph.graph.Graph:7
+msgid ""
+"If True, allows multiple edges between the same pair of nodes "
+"(multigraph). Default is False (simple graph)."
+msgstr ""
+
+#: 13666fc9e074419780736e27015efec2 of sds.graph.graph.Graph:13
+msgid "Whether multiple edges are allowed (read-only property)."
+msgstr ""
+
+#: ce9e74331e8b49bead93e6002c413304 of sds.graph.graph.Graph
+msgid "type"
+msgstr ""
+
+#: fc036ed5b6144caaa47d757c2314e681 of sds.graph.graph.Graph:15
+msgid "bool"
+msgstr ""
+
+#: 0c61b4cbbd074448890ea5e67f85317d 0c6a1a06fbb14c73849e23fba3943de7
+#: 0f08dee997754bb29c42a267947cb010 11cb89eff75f413e9ab39671f7c55e3e
+#: 133fc3ef59d44462aa10f2a094a87c33 152b5f722ff14b5c86797a9399ddf031
+#: 16c80465832841c0a31a8bcee36832d3 1ab7309a1c3c4623b82cfa2ba98b9948
+#: 1c45714621644cb9936843d4c823e44e 20030c1568da437f9163479fe9fd5654
+#: 284975cfd48d47ca98420b2ccd0aebbc 2ff212f92a554b008837bc021404852a
+#: 3034cc99da054e37abddbd0b3755c9c0 3d47cf9308b34c4c8c6628e953c3bb23
+#: 43b18c90908b4f43baaff54e44df39d7 43b71b6ffd9a447a87148fe85c44463c
+#: 4b9983691fed4f4aad3ba2003997f889 58da23dd721d4adcbee5ea1ca5c00bc4
+#: 5b025537c36a42c1b5ac1fa1f59c6ae6 5d8d99be7c394a0180818e396f798bc6
+#: 62a8be3ad1dd4749aec9886eeb418949 6399b7bc672f44339de3772c36ae3f02
+#: 6fa1c708a4884bb0a17c125811a26119 785c5a9a7651444e940a857b578dfa24
+#: 7b8e4b6c6226423c9656dd4956998a33 7be91ba803fc405eb1489584bb96f4b2
+#: 7c58f5faf40d4db0b3d2698c702e256c 86a7f976481048febe04d91cc418c483
+#: 873c2b1fdde94cbc92e9098cbd1100fd 8cf22ecdf2cd42f196842c5c89716c41
+#: 90e92d775f2b4c67ae2e66926a477326 9588a55d89cb4bc68e233ba30dfa2774
+#: 9b83bc54be2a471ea1d82776b74869e9 a715245d941641afa3becbace7ee646c
+#: aa2fed2edf4c44dc822101c8e10db716 add7c6e87953412ca8ce4edbc3c6ad46
+#: b02edb3e9f524727b39c8fa870d9578c b0859a6c08ed41fdaf9d2a01c8a559c7
+#: b112db7e5e164199994fa0f9b3532d55 c1e7b289fe2647c291341c59b2484977
+#: d20bf40ddbf24f3897731d2f639f2dcc d7ae3d33c29d4e0b96d6dda29a06b01e
+#: db1425a6b93440f6912c7ad237398b4a e2935429e006481a8086a77449068a8f
+#: e7ac2dd53d6c465899b641fabb52f0b4 ead7cfba57be4f04b0cca12152227137
+#: eb8d97f41dd04fb5a27ccfba6fe7202f f3de35cf21214910aee1b504de322600
+#: f6434cac50f84d6cb6191d4b5c1573d4 of sds.graph.graph.Graph:17
+#: sds.graph.graph.Graph.__contains__:9 sds.graph.graph.Graph.__init__:6
+#: sds.graph.graph.Graph.__iter__:5 sds.graph.graph.Graph.__len__:6
+#: sds.graph.graph.Graph.__repr__:6 sds.graph.graph.Graph.__str__:6
+#: sds.graph.graph.Graph.add_edge:9 sds.graph.graph.Graph.add_node:9
+#: sds.graph.graph.Graph.allow_multi_edges:6 sds.graph.graph.Graph.clear:3
+#: sds.graph.graph.Graph.degree:11 sds.graph.graph.Graph.edge_count:6
+#: sds.graph.graph.Graph.edges:5 sds.graph.graph.Graph.get_edge:12
+#: sds.graph.graph.Graph.get_node_by_id:9 sds.graph.graph.Graph.has_edge:11
+#: sds.graph.graph.Graph.has_node:9 sds.graph.graph.Graph.is_connected:9
+#: sds.graph.graph.Graph.is_empty:6 sds.graph.graph.Graph.neighbors:10
+#: sds.graph.graph.Graph.node_count:6 sds.graph.graph.Graph.nodes:5
+#: sds.graph.graph.Graph.remove_edge:8 sds.graph.graph.Graph.remove_node:8
+msgid "Examples"
+msgstr ""
+
+#: 1762afe6553d4baa8fb73945aadbc9f3 of sds.graph.graph.Graph:19
+msgid "Create a simple graph:"
+msgstr ""
+
+#: 8621f4af544e45609239d8129e1c7f41 of sds.graph.graph.Graph:30
+msgid "Create a multigraph:"
+msgstr ""
+
+#: dba8fe9d5ae540bc93d4944a4dbb8500 of sds.graph.graph.Graph:40
+msgid "Check connectivity:"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:463 006e9d92a6d6409688d501ebae6a910c
+#: 10baaf88c8844040b9b18947f2cefa5f 163e38b2515744fa9f3e3ccf58d94707
+#: 1915ed3127904655978072ed38576f8f 1a61382454aa4d938467a6066599c9b5
+#: 1e4aba3c3d204d6e923691890e0fd464 2b3f8c6e3835417b9476e2c0fcdf72f9
+#: 30627cc774a94f1a9c1d826be967bcd8 356f19511b1c47c3a3344be862761cb4
+#: 3602fff1aef344808392761338559789 39f25ac911cf4ff9b05e2bf7134e9384
+#: 4021653f067d491686e600670f6c0d09 4d045f6716e446ebbd9d9513e716f367
+#: 4d0c7715651c467f8e925b9134bdc534 6463add4371841a3930f63cf194c438c
+#: 65e1ad397f034df5a771c2b763cbed33 6745b79ec54f4f9286ed07fa2b7768c7
+#: 6941f57c530b441097afdb3b3433b902 6cab2c3d5d0d4a789fdb5898881f294b
+#: 780b4ea2a88a4eca9e8e5d3f262268aa 7c2365ae363a4abc968f6070bd2b9f83
+#: 80db725067bb4f19a9c24c55afa8641e 8abd2aebbc6242299ca60b61fd1ab405
+#: 91cfdcc8bcce4dfe8d47b39c0da5f178 92de502f9e8a4e1c8aa4895dbdff2ed6
+#: a47a92cdca4d404e8127b68e86446170 a526bd18eb0b454093076969f918c6df
+#: aa346ab4ee0a46d9b43929330701b12d ab628214b2dc445e8832303a25350620
+#: afb6f9f3f6d747a0ba5f353a0c712111 b432001b4f864ed1b4d0fb7ef23a65ba
+#: b994c59cd039408cb4105f13363c2f75 c35037d8026b40d787425d796dbce342
+#: ca7a6b82f52d4df48a5a06078329d577 f46d64d90de642fbba4e169f9faf79d8
+#: f94c3cacebe84c82b3749408e59cc803 of sds.graph.graph.Graph:49
+#: sds.graph.graph.Graph.add_edge:37 sds.graph.graph.Graph.add_node:24
+#: sds.graph.graph.Graph.clear:12 sds.graph.graph.Graph.degree:24
+#: sds.graph.graph.Graph.edge_count:19 sds.graph.graph.Graph.edges:16
+#: sds.graph.graph.Graph.get_edge:27 sds.graph.graph.Graph.get_node_by_id:20
+#: sds.graph.graph.Graph.has_edge:26 sds.graph.graph.Graph.has_node:19
+#: sds.graph.graph.Graph.is_connected:29 sds.graph.graph.Graph.is_empty:15
+#: sds.graph.graph.Graph.neighbors:24 sds.graph.graph.Graph.node_count:15
+#: sds.graph.graph.Graph.nodes:15 sds.graph.graph.Graph.remove_edge:21
+#: sds.graph.graph.Graph.remove_node:22
+msgid "Notes"
+msgstr ""
+
+#: 733bb9bd88a64ad0a1c8e68348361c0b of sds.graph.graph.Graph:51
+msgid ""
+"Time Complexity: - add_node: O(1) - remove_node: O(degree(node) + E) - "
+"add_edge: O(1) or O(degree) if checking duplicates - remove_edge: "
+"O(degree(node)) - has_edge: O(degree(node)) - degree: O(1) amortized - "
+"neighbors: O(degree(node)) - is_connected: O(V + E) with caching"
+msgstr ""
+
+#: 411255a97c56428e8509e46a8678e094 of sds.graph.graph.Graph:61
+msgid "Space Complexity: O(V + E)"
+msgstr ""
+
+#: e8f1bc82291648f98200a02301f57568 of sds.graph.graph.Graph:65
+msgid ":obj:`DirectedGraph`"
+msgstr ""
+
+#: 547aed9b373244df8133889e3611b65a of sds.graph.graph.Graph:66
+msgid "For directed graphs."
+msgstr ""
+
+#: 4d9a33fa35604790b35cb48203cad3fc of sds.graph.graph.Graph:68
+msgid ":obj:`WeightedGraph`"
+msgstr ""
+
+#: 1a8f881c4d794d6282364eb00e2b4456 of sds.graph.graph.Graph:69
+msgid "For weighted graphs."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:51 5a0f417cc9b64499adfdafe9f53d5aa4
+msgid "Constructor"
+msgstr ""
+
+#: ac75dedee7454c7e9009b2ededf406c7 ba341236378e428bb61163653e7a2aa1 of
+#: sds.graph.graph.Graph.__init__:1
+msgid "Initialize an empty graph."
+msgstr ""
+
+#: 39770d0a964b4b57be79a2178fe3b5bc 7252b7e9e6224b8ca1b7c10234650e6b of
+#: sds.graph.graph.Graph.__init__:3
+msgid "Allow multiple edges between same nodes. Default is False."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:55 f8068f433457457f8f2d166c73e48a6f
+msgid "Properties"
+msgstr ""
+
+#: d658dcf2589440a4ac8edbc5351ff6f1 fcc5f36dc34543ec87738e248601f285 of
+#: sds.graph.graph.Graph.allow_multi_edges:1
+msgid "Check if multigraph mode is enabled."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst 028a6415058f480491964c30398ef461
+#: 04efea5638334f898d28dcf0ba41a5fd 09fa79866ce14adfada460c280bf1971
+#: 1b71c0da5601435e8e396e38c330c58f 26b4d283f4c04fc39bf11096c4469570
+#: 2901636eb3084bd78880b981cc80fd81 2e80be94858e48a384676599a9722b74
+#: 30f6ba45db2e417e9654cfebb1a03b3d 323b886a79bd4b9c8290177186450455
+#: 4a41d43df41842a1b545f0bf20ddf543 4b711b16c9f6423fb1fa0098c083e9e4
+#: 4d1431f4ad7a43feb86fd5a64a194db6 621503db3bf8423e9ed89f30024b0650
+#: 6ee09248c3aa4808b5d5dabb8c3ca1c7 6f6bc55e66694aba8f02f4f077b2e80e
+#: 757c7d13b8054f839d8a65b193b39a90 8f6ee6a8a97742468ee2fd7a6cbf2154
+#: a0589a66b5c149cd9736c45d62af27c9 aa5ced15898b4adda1569847865d4a45
+#: ba08b77b296e4b149b1b5b355ab9dca7 d00afd3b6dc142e7872689233bc788c0
+#: defe44b0904c4e2f8445412ff4e9bf06 e2319d06de0a4536872df1d8d500fc2b
+#: ebac4e2cfc864be9b8c3b2dd54354a9f f12b93902db34a079b81cf322ba0203e
+#: f138198648f547d992563d55096a8067 fa261f5d43dc4702b900fb65c28833d6
+#: ffd2e7de74ed4dbe8a4f9e8adef8e25d
+msgid "Returns"
+msgstr ""
+
+#: 5299e4d5543d496e93eeab10802fe8e9 76f1d26c4bcb4613abca155383e88fc5 of
+#: sds.graph.graph.Graph.allow_multi_edges:3
+msgid "True if multiple edges are allowed."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst 026bbdf675eb4c498535fb30b47709cf
+#: 0b9ad922825641669ede9e478ef10cc7 0bca78c18c8f434496608c257cccdd82
+#: 16c013017f944ad89f9a5212bf4f7f63 2abcbffd68af40019224ef011f1e4769
+#: 35095df111b24a8cae1074f7a664ed22 3c2a18fd555b4be980fff811482082b8
+#: 41c997e8cb064b9d9a4e5a4b37ca05c6 44728ecc9e4d49fc8d860c3d7eff3339
+#: 5be28e4f820246a29b61974ff01f6461 5e634b0a9d4c46858c1a1afc6bfcaa59
+#: 7164a65f642d4145a76167ac918c0a01 9be5bad18da244cba18254518c030898
+#: a028162f16a84eb4b4ba92b5ba561120 a70040f2cdd04621a49a42931dd7c63c
+#: a85b2048341a47859578c2ee27ac3bd4 ac574b61239d474b81517c54318bb47a
+#: bb130e1913484854a23e31a47ad7812d bd91ba01b0314cf48027090559089fdb
+#: be2710ad210a4345ab541919008c2b5a c567657dca244bf39110d862b044d222
+#: d407f42ecfad4416ac6dd168d2bfcf9e d89ec263395649b7beef8485ae5493f6
+#: f0a5c80c606b4a82a1b6fe993950ac7f f36f6b4c6389498b8531fd318aded97f
+#: f4230da190d34f31b024e881a469305e fcd97ecbd627418e8a79a99b7946a684
+#: ff4e974888d144d4866e096f696271c0
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:59 b2748e9940654f1480b12909b46fcb83
+msgid "Node Operations"
+msgstr ""
+
+#: 3b513a9e66434a75a44535c8678c6749 841db6a9173b4ad0a7dbd53d277d7e6c of
+#: sds.graph.graph.Graph.add_node:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: 14b6ae671b8c406ca927196ee3f68408 e448b9b6216745b5ba0a97e4d0659b92 of
+#: sds.graph.graph.Graph.add_node:3
+msgid "Node to add."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst 0c5c2564da284bdda6099751c63bc83b
+#: 0ff0dc4d9b484a3a87c553c68140e3a8 29b39fa8b26e40a2b3d382cdb1d5a563
+#: 3b974e448c3a4431aa9f5790d4f68e98 51634bc60a094472833dfd963fbb65d6
+#: 5e8ad8382d504e36a98f8864e9c88839 921c8718ac0445b095b798cf94adcaec
+#: 94497000e47c4d3cb222bbde7054b811 a3835eedf0914de5923a70ba31b4dc0b
+#: bde6c89e950d4842824e5030ca3a453b e39fdd90165148238e92fbeca4d1a5b0
+#: e3ee42461a754b21bf1e663597d73330
+msgid "Raises"
+msgstr ""
+
+#: 062513603e174cf2b97ceae2bd718476 41cad49c382844898786c2901bc97530 of
+#: sds.graph.graph.Graph.add_node:6
+msgid "If node is not a GraphNode."
+msgstr ""
+
+#: 5165330705d0419ba55ed1dd037428a0 5820ac2b162746259878f8803feb0d92 of
+#: sds.graph.graph.Graph.add_node:7
+msgid "If node already exists in the graph."
+msgstr ""
+
+#: 2471a9d089da493fbde21d22ced7d7fa 269a15259f354e888162140e5e163465 of
+#: sds.graph.graph.Graph.add_node:17
+msgid "Duplicate nodes raise error:"
+msgstr ""
+
+#: 17b9e69c20164443b3d3a6d73952672a 342c5709a07c43d481c0327fab14c6a7
+#: 3501a967f0dc4087ac78bb73c71ad39f 35fe96674bdb4cc4aaa78713410445a3
+#: 536529ca17f84f5d94b597fd7376bec4 5b204133ca1748f2951d5b78cc6f9a89
+#: 750480a32e954c119f90ce4fb5ffc4f5 7cb1c88e5f14488ca00c2a317e22f2bd
+#: 83c22a6c0a554319b5af03cc98e6cdeb 88ee2e149b714e9bb37662090533b6ef
+#: 9086494015cc488aa1a7d680b6bbf836 aa2e7fec6f5e41b0be5363bef12cd7fe
+#: d737d9be97874e1fb90ad923e88200f6 e04be66db2f346489e29dd4615fb85d6 of
+#: sds.graph.graph.Graph.add_node:26 sds.graph.graph.Graph.clear:14
+#: sds.graph.graph.Graph.edge_count:21 sds.graph.graph.Graph.get_node_by_id:22
+#: sds.graph.graph.Graph.has_node:21 sds.graph.graph.Graph.is_empty:17
+#: sds.graph.graph.Graph.node_count:17
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 29daec0cc85642748b7eab780f319d03 c0397e23dd514b5ca6eb58d4aa4666a6 of
+#: sds.graph.graph.Graph.remove_node:1
+msgid "Remove a node and all its incident edges from the graph."
+msgstr ""
+
+#: 35887d7d6ab5420b9d271cce1ce44342 b74525290adb4ec5adfb276501862018 of
+#: sds.graph.graph.Graph.remove_node:3
+msgid "Node to remove."
+msgstr ""
+
+#: 13a44bbabfc145bca418ad8152f20df1 6d2d505b1a30495297cdfca2876ca743
+#: a6fdc8d4402941e489746b650f80d7fa b0f840f760444676b99ec078f38da133
+#: d2f5e637805c4208b92e37cdb9cc41e4 ef45656b8361493abc580b007ae27c52 of
+#: sds.graph.graph.Graph.degree:9 sds.graph.graph.Graph.neighbors:8
+#: sds.graph.graph.Graph.remove_node:6
+msgid "If node is not in the graph."
+msgstr ""
+
+#: 0f11ac3bc9b749499e6804ae9ed571f1 3fd88c55d36947d28d8a793f92789ed3 of
+#: sds.graph.graph.Graph.remove_node:24
+msgid ""
+"Time complexity: O(degree(node) + E) All edges incident to the node are "
+"also removed."
+msgstr ""
+
+#: 667eb5f5e0c44bb698b8d32c9a5efed8 f66e439487bd489ca2d5d81267870828 of
+#: sds.graph.graph.Graph.has_node:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: 461638025a314bbba8a24e8595d70314 491963064e9b4fa584d48f441f56ac37
+#: 535dfdff3731413dbc726abe9b020fbe bdd7ccfa048545198d578d1c82c24460 of
+#: sds.graph.graph.Graph.__contains__:3 sds.graph.graph.Graph.has_node:3
+msgid "Node to check."
+msgstr ""
+
+#: 1d2accea32884203a0bbe8552f5b9cd4 3e5737edf1274f8f8339e219c85b0371
+#: 53f7ec0354b644dab2c8de792f1dfa5e afe10866188a4bbc8fd8e6310cfce535 of
+#: sds.graph.graph.Graph.__contains__:6 sds.graph.graph.Graph.has_node:6
+msgid "True if node is in the graph."
+msgstr ""
+
+#: 3c341a55123c4aa5ac1d4d82d82059a8 61c0675753fc43c999f5cabd1d1ddc8f of
+#: sds.graph.graph.Graph.get_node_by_id:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: 3462913a0ebb48c8b87a10e43642cb0c 8070ba2116ed4de184def17ac8c9a0b2 of
+#: sds.graph.graph.Graph.get_node_by_id:3
+msgid "ID of the node to retrieve."
+msgstr ""
+
+#: 70e04ca4c04e466ca70121d6fff33d8a b4c52b4e3b8445d1ae695e67165dc599 of
+#: sds.graph.graph.Graph.get_node_by_id:6
+msgid "The node if found, None otherwise."
+msgstr ""
+
+#: 17c77538e869452f8f757f68a4858ac1 26c77dc79fd44978b6b67004da74ff37 of
+#: sds.graph.graph.Graph.nodes:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: 0eba62113f764c2d89795361b1ba29e5 4c104158e45942a590e0f828460562ea
+#: 554304fa3cd14ab1850cb7e31dd7fbc5 5fb68192fe574a4781bf9458876f15a8
+#: 92691a72f7504b45a51456e9ac143ad3 983f74f67421448fa9902226bb853a99
+#: c95406143ff044b1aeb5ec60c65f2eaf d864ba2c82d74fb0a9f93ccb6323a9f3 of
+#: sds.graph.graph.Graph.__iter__ sds.graph.graph.Graph.edges
+#: sds.graph.graph.Graph.neighbors sds.graph.graph.Graph.nodes
+msgid "Yields"
+msgstr ""
+
+#: 75837286e5984f4a92d6a060584f49da a4550a2b63744c7a9a2655abef8191b3
+#: c6fa107c53544a5f999029696b0119c8 f181df7695b6472591cbc91b19317b06 of
+#: sds.graph.graph.Graph.__iter__:3 sds.graph.graph.Graph.nodes:3
+msgid "*GraphNode* -- All nodes in the graph."
+msgstr ""
+
+#: 0b4c677628bf4405bd4ed3dd4ba85375 ef2e88c9ed754ae0929bd71b61cd1872 of
+#: sds.graph.graph.Graph.nodes:17
+msgid "Time complexity: O(V)"
+msgstr ""
+
+#: 6038a29a5f2041cfa64d734816a7c545 73646c86d2954006ac1fe6a9ea2e1341 of
+#: sds.graph.graph.Graph.node_count:1
+msgid "Get the number of nodes in the graph."
+msgstr ""
+
+#: 28116226a5404862961eed3898de0eec 6c255aa59f7f475699bd2b2fa10ea82a
+#: 7e1ae6b78ed04672bae4b9438357deb5 efa18885913e4419b2e6aa9198d05b2d of
+#: sds.graph.graph.Graph.__len__:3 sds.graph.graph.Graph.node_count:3
+msgid "Number of nodes."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:68 6f4f299b821b4b0c8a5c180af19ba9c1
+msgid "Edge Operations"
+msgstr ""
+
+#: 5f4f61dac7834155891525603561c795 b77a02c93f1f401389052538ed15eccc of
+#: sds.graph.graph.Graph.add_edge:1
+msgid "Add an edge to the graph."
+msgstr ""
+
+#: 3704fe2ca43a42229754ec254c6894ce 96db4c299d794af29e1c0ccf476eb60d of
+#: sds.graph.graph.Graph.add_edge:3
+msgid "Edge to add."
+msgstr ""
+
+#: 734e092b3b0847e79c9d878c89ef8edd d90a7e37f62e4bbb88799f3b5f37241b of
+#: sds.graph.graph.Graph.add_edge:6
+msgid "If edge is not an Edge instance."
+msgstr ""
+
+#: 0245faf6a593441c87b229943ccb0bd5 9a6dfaaa09cc4039b46632888e562d92 of
+#: sds.graph.graph.Graph.add_edge:7
+msgid ""
+"If either node is not in the graph, or if edge already exists     and "
+"multigraph mode is disabled."
+msgstr ""
+
+#: 40108b57d0b1452caad301b46ad3dbec a23ecdf0b29a4522bb7f5a4076164345 of
+#: sds.graph.graph.Graph.add_edge:20
+msgid "Duplicate edges in simple graph raise error:"
+msgstr ""
+
+#: 605dd03051db4d1da0e2dcd21fc0a6ad 816703829ffc436ab03edfe50fa3042f of
+#: sds.graph.graph.Graph.add_edge:27
+msgid "But allowed in multigraph:"
+msgstr ""
+
+#: 2573046fad8440a2b9fc79dde60fffe9 3670091a7a1449ac9c7f79e216643c13 of
+#: sds.graph.graph.Graph.add_edge:39
+msgid "Time complexity: O(1) for multigraph, O(degree(node)) for simple graph."
+msgstr ""
+
+#: bfc15072baa74490849ed42d0b9487d1 f904f09daf244251b7e1cad1695728b1 of
+#: sds.graph.graph.Graph.remove_edge:1
+msgid "Remove an edge from the graph."
+msgstr ""
+
+#: 09cb20cd01724970830f765fb93e9ef2 b9dc5225640741f9a9243cb3e413f0f3 of
+#: sds.graph.graph.Graph.remove_edge:3
+msgid "Edge to remove."
+msgstr ""
+
+#: 3ffc220358a24a20bf0cf3b6f4ba6682 432143f72b944beead394445279410f5 of
+#: sds.graph.graph.Graph.remove_edge:6
+msgid "If edge is not in the graph."
+msgstr ""
+
+#: 0a9a96b1bbe843a79a616a5568466d65 afb6de3ee9b945f4ae0c31fb617121a1 of
+#: sds.graph.graph.Graph.remove_edge:23
+msgid ""
+"Time complexity: O(E) to find edge, O(degree) to update adjacency. For "
+"multigraphs, removes the first matching edge found."
+msgstr ""
+
+#: 70f674f91bd64fec8221edd3d68e97bd e4ea76af686e4e339b891315fb371eaa of
+#: sds.graph.graph.Graph.has_edge:1
+msgid "Check if an edge exists between two nodes."
+msgstr ""
+
+#: 70ab957784cf4e16aa7c027f32d0cf78 8e0079b6a4ac48d2b7aa24a69af8558f
+#: 99aafdd7a4a2439383bc5cbe212d84fb b4869645d7d549268a541abcac421414 of
+#: sds.graph.graph.Graph.get_edge:3 sds.graph.graph.Graph.has_edge:3
+msgid "First node."
+msgstr ""
+
+#: 3134a413f6fa4f058c38fb232c364901 3c07d7e29d304fe1ba23a1edaa5a3f19
+#: ea5cdc9a3d6147ecbd35da6ff8906de3 f2acffe5b5f1464cb02e4c312d11447b of
+#: sds.graph.graph.Graph.get_edge:5 sds.graph.graph.Graph.has_edge:5
+msgid "Second node."
+msgstr ""
+
+#: 3bb2f4ff7c584fff9add89d88033561f 66e97323a22149569042248b8ef9556e of
+#: sds.graph.graph.Graph.has_edge:8
+msgid "True if edge exists (either direction for undirected graph)."
+msgstr ""
+
+#: 3f9daa9ac59d4549acfc64f5f975be72 6bf471b6d20d49e48034abaa3e0864fc of
+#: sds.graph.graph.Graph.has_edge:28
+msgid "Time complexity: O(1) amortized using adjacency set."
+msgstr ""
+
+#: 7b937f88550e4dc9a6ed879d912ae841 e6d8dc3f8f46404bbbbc7352706c77f2 of
+#: sds.graph.graph.Graph.get_edge:1
+msgid "Get the edge between two nodes."
+msgstr ""
+
+#: 7a438e4ca9d043e1adf34810e1aecfd9 85b91c6a71a346778b32b420e8f86844 of
+#: sds.graph.graph.Graph.get_edge:8
+msgid ""
+"The edge if it exists, None otherwise. For multigraphs, returns the first"
+" edge found."
+msgstr ""
+
+#: 7a417317da0e4cfab5bf0f8b4758d270 968075130ab84d40b08d46cb25197c97 of
+#: sds.graph.graph.Graph.get_edge:29
+msgid ""
+"Time complexity: O(E) in worst case. For multigraphs, returns first "
+"matching edge."
+msgstr ""
+
+#: b3e152c844714f1d9125f7c9b97ca96d cdb21ce0fb1b4a03818b4e7ca4e82343 of
+#: sds.graph.graph.Graph.edges:1
+msgid "Get all edges in the graph."
+msgstr ""
+
+#: 7c402c65ae9f4d3d819f01c71c81813b c71c453e96094854ba4a73d4dba636d4 of
+#: sds.graph.graph.Graph.edges:3
+msgid "*Edge* -- All edges in the graph."
+msgstr ""
+
+#: 60cd56a1d18444d78b9f5b16d8d717f3 b66ccdf277b54a1f8d289c559fe81a0f of
+#: sds.graph.graph.Graph.edges:18
+msgid "Time complexity: O(E)"
+msgstr ""
+
+#: bc0a665daf064b8e85f7448435afb9ed c25ae16f9f7443c2aedd14b28f83c5b0 of
+#: sds.graph.graph.Graph.edge_count:1
+msgid "Get the number of edges in the graph."
+msgstr ""
+
+#: 59e059f6922044628d7c74a9cbb1ac30 a8070b1a66084d04be8229d82f60c1d0 of
+#: sds.graph.graph.Graph.edge_count:3
+msgid "Number of edges."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:77 01dda514290d4f45bb304f6cd48b8db9
+msgid "Graph Queries"
+msgstr ""
+
+#: 5e69ae2531164fdd816fdbf940b3d15a f1dfec68f7434bb7bef357342e7cce05 of
+#: sds.graph.graph.Graph.neighbors:1
+msgid "Get all neighbors of a node."
+msgstr ""
+
+#: 2c140aa739c94d40b72ad2f2436b15b2 bcd9fcfab58a4066943ec010482dee2e of
+#: sds.graph.graph.Graph.neighbors:3
+msgid "Node to get neighbors for."
+msgstr ""
+
+#: 167a673b29ce4879b51c20bcf69247e0 f16e4e0a6890424485b3937ccf691d99 of
+#: sds.graph.graph.Graph.neighbors:6
+msgid "*GraphNode* -- Neighbor nodes."
+msgstr ""
+
+#: 1cdd744d4e3a4e6297f5bbc30baf1550 32892506437b4cf0ad29c02fccca0e30 of
+#: sds.graph.graph.Graph.neighbors:26
+msgid "Time complexity: O(degree(node))"
+msgstr ""
+
+#: 22db061dc5d44bc19ef66aa6ef4a7c5c 63d1f5b5b91944a28e86ef3abf4ccf7c of
+#: sds.graph.graph.Graph.degree:1
+msgid "Get the degree of a node (number of incident edges)."
+msgstr ""
+
+#: 2a863f06c3304f5db9924d8e2456ab61 5e99dc3aabb64acc871e1773688f9428 of
+#: sds.graph.graph.Graph.degree:3
+msgid "Node to get degree for."
+msgstr ""
+
+#: 02d3e84dd529479c8f17e97cee6d83ec 27646b4a1ef14a6dbcdac621dafb7dd0 of
+#: sds.graph.graph.Graph.degree:6
+msgid "Number of edges incident to the node."
+msgstr ""
+
+#: 1c61a97bf6cf45fd97ae41c22aebf1a7 cad9f682a1fc44a9b6fb4f42421e5d02 of
+#: sds.graph.graph.Graph.degree:26
+msgid ""
+"Time complexity: O(1) amortized. For multigraphs, counts each edge "
+"separately."
+msgstr ""
+
+#: 831e3256dd68426a9f62fd70d17dec5f af66d802f95f4e27af31175f96286e6d of
+#: sds.graph.graph.Graph.is_connected:1
+msgid "Check if the graph is connected."
+msgstr ""
+
+#: 03b0431a4aeb49e98cba9042c63deebb 19b27a0808504a58bd99385ade30a3ee of
+#: sds.graph.graph.Graph.is_connected:3
+msgid "A graph is connected if there is a path between any two nodes."
+msgstr ""
+
+#: 7e975b5b119047f79bef8af235ae1310 f217ab528cd645b8812ec79d606f0d9c of
+#: sds.graph.graph.Graph.is_connected:5
+msgid ""
+"True if graph is connected, False otherwise. Empty graph is considered "
+"connected."
+msgstr ""
+
+#: 924d8a53d6b64dc68635152a2b6653ba c9ddc6644f9145729f440610557244dd of
+#: sds.graph.graph.Graph.is_connected:31
+msgid ""
+"Time complexity: O(V + E) with caching. Uses BFS to check connectivity. "
+"Result is cached until graph structure changes."
+msgstr ""
+
+#: 06d49576dc04435890fd93da53f4dc7e db6ec0c8220a47f599bd31b2254f5ac3 of
+#: sds.graph.graph.Graph.is_empty:1
+msgid "Check if the graph is empty (no nodes)."
+msgstr ""
+
+#: 59df75d6a82646aa8c021118b50f9c86 b0e902d5c0c4444f8c3e9383d2f853c6 of
+#: sds.graph.graph.Graph.is_empty:3
+msgid "True if graph has no nodes."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:84 ba5df3b6061d4216b21efb3923aa9aba
+msgid "Utility Methods"
+msgstr ""
+
+#: 470dea4ab4754fbf98f38c52e269948f d249ebcef46345cbac96826918297ad8 of
+#: sds.graph.graph.Graph.clear:1
+msgid "Remove all nodes and edges from the graph."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:88 232512bceecb47359b712d456b7351f2
+msgid "Special Methods"
+msgstr ""
+
+#: e1360c24c638413ba4a309812f1f0ed4 fc0ce3664f544933a093c38926e4d599 of
+#: sds.graph.graph.Graph.__len__:1
+msgid "Return the number of nodes in the graph."
+msgstr ""
+
+#: 145c8ea00a1d46dfa0ef4ccf8cbd1123 ba14be7b36604a10b88f789b2857d1ce of
+#: sds.graph.graph.Graph.__contains__:1
+msgid "Check if node is in the graph."
+msgstr ""
+
+#: 472958e294284b4f88567c6858d31fb1 770e3d6fc03c409ea04e4c02ba840005 of
+#: sds.graph.graph.Graph.__iter__:1
+msgid "Iterate over nodes in the graph."
+msgstr ""
+
+#: 038006cc8ccd4fe4b5eda47357286ae2 854afbc1a97d48e4baa4887fc981e0e6 of
+#: sds.graph.graph.Graph.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 372ea1001fb3450c8375746c6f819eb9 6472d919ab054054818b0ffa20d72494
+#: d13867c80ac3424fa0069110ae4f5c20 f65078031c494eba824024d18869d5e0 of
+#: sds.graph.graph.Graph.__repr__:3 sds.graph.graph.Graph.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 1e0eef3bfe304dd2855fe3430103081d 683d90ec5b394412a8168f538d220ba9 of
+#: sds.graph.graph.Graph.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:96 3e89e5512f50466897eed0d360ecefa5
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:99 1a00c7f9700144d1a51af3ff363b933e
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:102 3165d3ba793140cdb27311ec99c7cd57
+msgid "Creating a Graph"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:117 bb6e6b302ba348db95e911096a77a198
+msgid "Adding Nodes"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:137 2622588abc7c410c9f634bd582269f97
+msgid "Adding Edges"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:155 380a9372ce6348a8b6b92ff203e6587f
+msgid "Querying the Graph"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:172 0121e31585414a7d8c9f774274ccf45c
+msgid "Graph Traversal"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:189 b277a1dc0f154cfe9c1ecc1ed97c0601
+msgid "Neighbors and Degree"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:203 60caf8b7da3641089c8c0ee77e329f08
+msgid "Connectivity"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:217 27848602c0eb4406976a7f85c3650bda
+msgid "Removing Elements"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:231 833c7cb93a1642beb6f7eb948fda891b
+msgid "Multi-Edges"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:254 140b14a92ffe4b9d8e1395c4dc2258b4
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:257 bb1224d4432c4b4989c94219b5e1b238
+msgid "Example 1: Social Network"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:259 037e8260f6a54c218f659229a7d6ce15
+msgid "Modeling friendships:"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:322 fad95b6e22b546158ca10d4a0450d780
+msgid "Example 2: Network Topology"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:324 da658f4add8941f9945ead0b745f0869
+msgid "Computer network connections:"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:390 ef7173e9e2344e5a92c52006cecb4bc5
+msgid "Example 3: Course Prerequisites"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:392 bb8d5e3d7c944a209aec3b18b3bb46f9
+msgid "Modeling course dependencies:"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:452 73573aff60714983aa6f612f6cf4708e
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:455 d5b166a1958b40b38ae7f4d1d6c4e163
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:461 ../../source/api/graph/graph.rst:521
+#: 1bc849a396c2440cb42fdc52971bb5d3 979a8ae0893d49e18aaddae4d0861e23
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:462 9c5cd0463c0044e89c8cfb5144743838
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:464 f848484fc3b74f3a8c132516185ac798
+msgid "``add_node(node)``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:465 ../../source/api/graph/graph.rst:471
+#: ../../source/api/graph/graph.rst:501 ../../source/api/graph/graph.rst:530
+#: ../../source/api/graph/graph.rst:531 ../../source/api/graph/graph.rst:532
+#: ../../source/api/graph/graph.rst:535 ../../source/api/graph/graph.rst:539
+#: 17cf12e6a0cf407d9b901ebcddb695b6 201f808c92654ef9b9a886556a35d23a
+#: 2c37f9512cca4c308b3d79259fcfdc08 5b3df96651ab4b25a674f37ad58ddba6
+#: 66b870a0ba0c44fb9bc98dbe83d81e9a 6cb242e1e89942a99bfa631f9f7df37a
+#: cec6d3063d864fcf8d935aa137f34805 d310bdd1a2e148dfaeba0aa4f4db04d1
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:466 459d8289518a4133b66fd87f7e7f193e
+msgid "Hash table insertion"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:467 fd37a683c82b4f3db83c0665510a2109
+msgid "``remove_node(node)``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:468 7883ed64e06943a69d60fa68d0cf9ab3
+msgid "O(degree + E)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:469 eb265f322fa346009250179b2e6d81d9
+msgid "Must update adjacency lists"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:470 e2b1d1ffa0ec4f2eaca7110fe3f6f0c9
+msgid "``has_node(node)``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:472 6c155162d2da49c2996c61aa76e111cb
+msgid "Hash table lookup"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:473 1b947efc5a514e80ae23f1bd62e21ccc
+msgid "``add_edge(edge)``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:474 e594b5722147489f96b04bf92028f5e0
+msgid "O(1) or O(degree)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:475 60bfca97db024ee0bd9a4c63a7bdad6a
+msgid "O(degree) if checking duplicates"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:476 9b78c13da40246eb848406a04b9fd082
+msgid "``remove_edge(edge)``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:477 ../../source/api/graph/graph.rst:483
+#: ../../source/api/graph/graph.rst:498 ../../source/api/graph/graph.rst:528
+#: ../../source/api/graph/graph.rst:536 ../../source/api/graph/graph.rst:538
+#: ../../source/api/graph/graph.rst:540 ../../source/api/graph/graph.rst:544
+#: 1073c3f11a5b44cc9d49c0ab235c19c1 1073eefd83f34e5fa8355f2cc206d0b2
+#: 26a97a4986d348c3abebc42c1c558bde 2ab15afde50240ce9716e2d7024a54f3
+#: d65f3e71e4034f61b1f9212c8fc798d6 e7301e1a85154f47acbb477a225d9691
+#: eb9d2ed12a5446e09461c0f6e98698fb f5a607a8c75d4436b70f52f1c5e629e5
+msgid "O(E)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:478 041aba70831745b98b6f423eab10ac80
+msgid "Must find edge in list"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:479 a78bb55a7c8740eba1baad112ac4ea8b
+msgid "``has_edge(n1, n2)``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:480 757f945875d04601bd13f235871631f3
+msgid "O(1) amortized"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:481 3bee1c73882e4eaba88607b1584cf629
+msgid "Set membership check"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:482 62ec40cb40444f558e4adf367a282a7e
+msgid "``get_edge(n1, n2)``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:484 2b6e04418ba3447a800a9bba2e6d6f99
+msgid "Linear search in edge list"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:485 02af9d2f1a8746f391bd3679e0a94c2c
+msgid "``neighbors(node)``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:486 ../../source/api/graph/graph.rst:534
+#: ../../source/api/graph/graph.rst:542 4541e3d130bc48e3b276d4abdc313bbc
+#: c056fd46cec24b3893462cf3075908b2 f1ebaee3455c4d3980fa97d097c13932
+msgid "O(degree)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:487 5e8944133a1747a196bf826173c7cb68
+msgid "Iterate adjacency set"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:488 32aaba707e7645f49e2e669d37ba444e
+msgid "``degree(node)``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:489 b13e7bea8df34e209c94189c7b981ae6
+msgid "O(1) or O(E)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:490 d4f5b3e14fc94d48a1114785feca3149
+msgid "O(1) for simple graph"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:491 1abe8a7975a94592922890c31e5dab0e
+msgid "``is_connected()``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:492 ../../source/api/graph/graph.rst:526
+#: 7ce8894b544145c98e9f8a3b3d7f69a1 b457c585b38b45bba2f0b8289c3efc46
+msgid "O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:493 5e6ba1cd9f03477b9ed3b4aae195a8c2
+msgid "BFS traversal, cached"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:494 98f134818a984ff693afcca9cb667243
+msgid "``nodes()``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:495 ../../source/api/graph/graph.rst:543
+#: 59156b0805ca4525b5da742401b84acc 8d46f0cb117b4a5d8b9beebae6f295e9
+msgid "O(V)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:496 db0bb94e5b33468b938f98c71eda5ff6
+msgid "Iterate all nodes"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:497 57b15f5b78d74e56b212adb21c7ddbab
+msgid "``edges()``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:499 40df2bb5ce464dd5bfbb891be34b0b6c
+msgid "Iterate all edges"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:500 b53ec14f27104d75aa6b6ab93f3fd5e5
+msgid "``clear()``"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:502 ad640d35595a4e80b7f0f797aa428e6f
+msgid "Clear references"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:505 1c2486b70b094bc9a4f47886f604577a
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:507 d713c452250d420bb64469ee7a57f778
+msgid "**Node storage**: O(V) where V = number of vertices"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:508 7d0d69ca22af4aeeb219fdb7e4c0fd0a
+msgid "**Adjacency lists**: O(V + E) where E = number of edges"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:509 7c8fb86d0d4e47a7a26345966d642471
+msgid "**Edge list**: O(E)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:510 f52516afb8ee416490634934df6414e3
+msgid "**Total**: O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:512 7230b9fe5cf04b7ea84597aaca54072a
+msgid "This is optimal for sparse graphs where E << V²."
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:515 436d5e0495784d19967774e504e3c3af
+msgid "Comparison with Other Representations"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:517 4392bc7dbc024cb897703764aa90eb3d
+msgid "Graph Representation Comparison"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:522 6520378aabda4aaaa1d2d0c57e7fbcba
+msgid "Adjacency List"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:523 b31929808ca5490dbde938f0ad38b3f3
+msgid "Adjacency Matrix"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:524 8bf1469a81ca40099e4e49a9a1f9b85e
+msgid "Edge List"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:525 a762bc5e9a2848a89ca1eebaeb7be8f1
+msgid "**Space**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:527 e65530a29c6f4c01bca8fd8698bde7f1
+msgid "O(V²)"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:529 426a3630d56e424a9fd905cf263eeb0f
+msgid "**Add Edge**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:533 195019865f77429b9cf0c66b1d6d8ce4
+msgid "**Has Edge**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:537 eb03398d722848ccaeebf4b41d1dbc61
+msgid "**Remove Edge**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:541 5ef0d9a60b604151af349aa5a55b043d
+msgid "**Get Neighbors**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:545 12dddf111d50404ebb77fbb1993cd329
+msgid "**Best For**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:546 c50d2bc275f244eeb0d8cee0094f6699
+msgid "Sparse graphs"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:547 185413672ce2486899ec05299f0f5c78
+msgid "Dense graphs"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:548 4c8bd50c675343d8842df1d512e19ba2
+msgid "Simple storage"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:551 dd9494790b654c54a45ed056b622ef21
+msgid "Graph Type Comparison"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:575 b56ae7d285db479e8c81baba77a7a36e
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:578 9e64f2e03f484b2eaef10db58cb2ea3f
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:580 7bd89553320245e291096aad90480bde
+msgid "✅ **Use for sparse graphs**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:588 c324038ee74542bd9a0a9752d0a36c91
+msgid "✅ **Check node existence before operations**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:597 138c11e1b82c4a3bafc499bde3a63ee7
+msgid "✅ **Use cached connectivity**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:604 70f5ce3e19144bb8aa70e239197a91a2
+msgid "✅ **Iterate efficiently**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:617 1d95712f616c42df93d84b10d3adf5ce
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:619 c5824e508a7e4a62a27a8c3df9508e97
+msgid "❌ **Don't add duplicate nodes**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:631 f54fcbf960b4496aa3c69b267e49e329
+msgid "❌ **Don't modify during iteration**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:644 bbc7c0840f794fd49338e6ad51334e3f
+msgid "❌ **Don't use for dense graphs**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:656 071f1d5efcc74d84883de0837aa4df2c
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:658 70b0bcd1faf344aaa31723542643eef6
+msgid "**Forgetting graph is undirected**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:666 5fe913a216a24bf7990877462c89dd07
+msgid "**Not handling multi-edges correctly**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:680 49b13ce04bf345158849bb65d43dd7d3
+msgid "**Memory leaks with large graphs**"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:689 ee18a000a19c4a3cb25c076a7f7bfa10
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:691 cac860db44b549a7ad504234892cef53
+msgid ":doc:`directed` - Directed and undirected graphs with validation"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:692 71f2e8b20f2443c49f9d75d42dbf8439
+msgid ":doc:`weighted` - Weighted graphs"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:693 ab895f4e0ccd4a22bac5d562863a61a8
+msgid ":doc:`adjacency` - Alternative representations"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:694 07157124b49d4cf491735aa781df9b26
+msgid ":doc:`../../guide/graph_structures/general` - User guide"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:697 b62d8bc2d6ce4f088f579dc067d08540
+msgid "References"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:699 02b2b4cb447a4ca8a3b7b4c2b4da3aaf
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 22"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:700 93e86c9904cd48eb9825572790146a51
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Chapter 4"
+msgstr ""
+
+#: ../../source/api/graph/graph.rst:701 dfd78e0a2a7f4074903aa781395ef2ab
+msgid "West, D. B. \"Introduction to Graph Theory\", 2nd Edition, Pearson, 2001"
+msgstr ""
+

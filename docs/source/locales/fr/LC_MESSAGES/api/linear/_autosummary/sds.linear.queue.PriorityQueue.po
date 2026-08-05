@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:2
+#: a134fff377ea437fb3a589a9dc503edf
+msgid "sds.linear.queue.PriorityQueue"
+msgstr ""
+
+#: 514158cf36de4bf3b9a6ed26737e31ec of sds.linear.queue.PriorityQueue:1
+msgid "A Priority Queue implementation using a sorted linked list."
+msgstr ""
+
+#: 444a2e2231e54e2094a9ec9a99a81f66 of sds.linear.queue.PriorityQueue:3
+msgid ""
+"Elements are dequeued in order of their priority (lowest value = highest "
+"priority by default)."
+msgstr ""
+
+#: 597b93ee4ba94fea8286817c7444eb87 of sds.linear.queue.PriorityQueue:7
+msgid "The number of elements in the queue (read-only property)."
+msgstr ""
+
+#: 1f794075da284d7d9ab370643a4ed3e5 4922f2e6c9444b5490fbec40afa23ff1
+#: 79353039c1a84dfda0db2799ce234796 901198548e54473ea3dfb07cbe53859e of
+#: sds.linear.queue.PriorityQueue
+msgid "type"
+msgstr ""
+
+#: 957a27e1e9644261880322e472088557 of sds.linear.queue.PriorityQueue:9
+msgid "int"
+msgstr ""
+
+#: 667aa61685444eb9b2a9c590eee27982 of sds.linear.queue.PriorityQueue:23
+msgid "O(n) - must find correct position"
+msgstr ""
+
+#: 386e3131fae24c3fbe7bf3afeafc3a3e of sds.linear.queue.PriorityQueue:29
+msgid "O(1) - always remove from front"
+msgstr ""
+
+#: 231d4de695054b559fef304813b6884e of sds.linear.queue.PriorityQueue:35
+msgid "O(1)"
+msgstr ""
+
+#: 932137ee88bb433e84b5a54d773d902f of sds.linear.queue.PriorityQueue:37
+msgid "Examples"
+msgstr ""
+
+#: 887d88e509e84cb1b8a9e0d9cfeb5409 of sds.linear.queue.PriorityQueue:50
+msgid ":obj:`Queue`"
+msgstr ""
+
+#: 60b60c9f87cb4ee68c6b8af0086a0c00 of sds.linear.queue.PriorityQueue:51
+msgid "FIFO queue without priorities."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 4da7b29ab3234173b278aa6d6fc6448c 92d353e6da524009b23c3286b2cf064c
+#: f41c4970f4a941f599044f931a3c35b2 of
+#: sds.linear.queue.PriorityQueue.__init__:1
+msgid "Initialize an empty priority queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst
+#: 491d804159464020b1576bd840e6646d a5919ad42edc48e980cabb1148688bca
+#: a91626457222455da3640f37293bf9f2
+msgid "Parameters"
+msgstr ""
+
+#: a46b1ff9140343aaa35e2a21754d8ce6 c82ace4899024eb1b2d6d443d87cd4f6 of
+#: sds.linear.queue.PriorityQueue.__init__:3
+msgid "If True, higher values have higher priority. Default is False."
+msgstr ""
+
+#: e5065bbde50346e6b69ce629dad1b35f e50dfd1b93a84677a906394b3ccb6e78 of
+#: sds.linear.queue.PriorityQueue.__init__:5
+msgid "Function to extract priority from items. Default is identity."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:13
+#: 7fc7905a934240008c448206c63e422c
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: dd01f20bb7e944d6b7a06f647b9407c8
+msgid ""
+":py:obj:`__init__ <sds.linear.queue.PriorityQueue.__init__>`\\ "
+"\\(\\[reverse\\, key\\]\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 4433b8e749b542d3962ed142221d8367
+msgid ":py:obj:`add <sds.linear.queue.PriorityQueue.add>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 7cafdac298f749afb67599b53dabcc7d e850a01b7a3343b4bbaa14cc40f60c14 of
+#: sds.linear.queue.PriorityQueue.add:1
+msgid "Add an item to the queue (enqueues by default)."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 9044f6a74a0045ba9a0c3112db0842ea
+msgid ":py:obj:`clear <sds.linear.queue.PriorityQueue.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 2a4bc359f86a4419bd488b06014ac6ed 5ffeac3de895486da823945751c66c1a of
+#: sds.linear.queue.PriorityQueue.clear:1
+msgid "Remove all elements from the queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: ede5440376e9472ca3cfe1c7b5825a90
+msgid ":py:obj:`dequeue <sds.linear.queue.PriorityQueue.dequeue>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 41208077b0bb4c4ba67e9fcfe8e5945a df38bd9547c74d2a97c985daafd0807f of
+#: sds.linear.queue.PriorityQueue.dequeue:1
+msgid "Remove and return the item with highest priority."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 085aa57938b6445192f0c1ecad47a481
+msgid ":py:obj:`enqueue <sds.linear.queue.PriorityQueue.enqueue>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 1abe22ff8c4749dc95720617f44acc52 778a42cb828d43b7adea1ca37039c0cf of
+#: sds.linear.queue.PriorityQueue.enqueue:1
+msgid "Add an item to the queue based on its priority."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: ab4f86db65c0480fb978510d4f0b8748
+msgid ":py:obj:`is_empty <sds.linear.queue.PriorityQueue.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 05a53ffd769b4314b1e9e7c65ff39687 57c1b7d3dbe94be69b285430ec601547 of
+#: sds.linear.queue.PriorityQueue.is_empty:1
+msgid "Return True if the queue is empty."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 2298e7ddd0bf4ada8e598936b845ba12
+msgid ":py:obj:`peek <sds.linear.queue.PriorityQueue.peek>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 0863f5ef564b4b8ebb18541e3616adbc 9c7df919dced4dde91951012594c06b5 of
+#: sds.linear.queue.PriorityQueue.peek:1
+msgid "Return the item with highest priority without removing it."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 3f594fb90a954537963a20ab28f66645
+msgid ":py:obj:`remove <sds.linear.queue.PriorityQueue.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:28:<autosummary>:1
+#: 3c40d343181444659cddea2eceb3e9bc c7ef5d98899b45a5bdd9b5f390f3fd00 of
+#: sds.linear.queue.PriorityQueue.remove:1
+msgid "Remove a specific item from the queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst:30
+#: 598dd6bc47a142ecb6efe506da688445
+msgid "Attributes"
+msgstr ""
+
+#: 1caf42337c714434992aaeb02f06e68f of
+#: sds.linear.queue.PriorityQueue.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.linear.queue.PriorityQueue.size>`\\"
+msgstr ""
+
+#: 72fe354f53fe495fa9e811e95a12c988 cf36d0a539ae4682b158391359fda252 of
+#: sds.linear.queue.PriorityQueue.__init__:1:<autosummary>:1
+#: sds.linear.queue.PriorityQueue.size:1
+msgid "Get the number of elements in the queue."
+msgstr ""
+
+#: 614c5714407944118fa9cd69c46c62b9 of sds.linear.queue.PriorityQueue.__len__:1
+msgid "Return the number of elements in the queue."
+msgstr ""
+
+#: 9aadd9583cb94983b17bd126d3cf389d of
+#: sds.linear.queue.PriorityQueue.__iter__:1
+msgid "Iterate over elements in priority order."
+msgstr ""
+
+#: e8b5360d17b44fde8c48df0ddfdd6517 of
+#: sds.linear.queue.PriorityQueue.__contains__:1
+msgid "Return True if item is in the queue."
+msgstr ""
+
+#: 1ecb0644a756433f8df10c0f5f146162 of
+#: sds.linear.queue.PriorityQueue.__repr__:1
+msgid "Return a detailed string representation."
+msgstr ""
+
+#: e1135ef0919643fd81ffc7eacf95a1a2 of sds.linear.queue.PriorityQueue.__str__:1
+msgid "Return a simple string representation."
+msgstr ""
+
+#: ce425da7c9d845ecbe3f965ef6a49af4 of sds.linear.queue.PriorityQueue.enqueue:3
+msgid "The item to enqueue."
+msgstr ""
+
+#: 68659e4fb02c4931b3ccab0f5e2965bd 6d080aa6ccdc4d1788140a7b14c6b222
+#: d75209d8a23e4d4680c7cce7bfd1b362 of sds.linear.queue.PriorityQueue.dequeue:8
+#: sds.linear.queue.PriorityQueue.enqueue:6
+#: sds.linear.queue.PriorityQueue.peek:8
+msgid "Notes"
+msgstr ""
+
+#: b2294771eac74622aa84c30d60cb3553 of sds.linear.queue.PriorityQueue.enqueue:8
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst
+#: 6a143cdf783a42368db01948beb42a80 fa0b2e1ee2f84f4b9e3419ec32c1ad20
+msgid "Returns"
+msgstr ""
+
+#: 171e2073af9f47dd975f407c0cf69b06 8b0d057eec254d779e532a895d8ad688 of
+#: sds.linear.queue.PriorityQueue.dequeue:3
+#: sds.linear.queue.PriorityQueue.peek:3
+msgid "The item with highest priority."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst
+#: c8a48b5a57674e0e88ea9d7c5fbccf53 ce18d7680431474a9eff4ad2f86bcb31
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityQueue.rst
+#: 548cd37752d4444994761ef304a3042f ad14cd9ee3ab4de5a72b371f083d5841
+msgid "Raises"
+msgstr ""
+
+#: 1ae45ee5094048218129dd9033dff2e5 b4bc728e3bc942dc8341d543fd5b0349 of
+#: sds.linear.queue.PriorityQueue.dequeue:6
+#: sds.linear.queue.PriorityQueue.peek:6
+msgid "If the queue is empty."
+msgstr ""
+
+#: 8edc5d8758444ba6ab1d6e286000896a a38c430728c64f3f84b581ef2e78bc6b of
+#: sds.linear.queue.PriorityQueue.dequeue:10
+#: sds.linear.queue.PriorityQueue.peek:10
+msgid "Time complexity: O(1)"
+msgstr ""
+

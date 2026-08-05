@@ -1,0 +1,1018 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/btree.rst:5 ../../source/api/tree/btree.rst:482
+#: 7550f14a12444ac0946a7361b6cbf23f bbe01952e8bf4f1ca4fe438ef9c4d744
+msgid "B-Tree"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:10 5d666e899c5e4a44bdb26313030b5b9b
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:12 5073a4a5283449d588cdb08b0313f843
+msgid ""
+"This module provides a B-Tree implementation optimized for disk-based "
+"storage systems. B-Trees maintain sorted data and allow searches, "
+"insertions, and deletions in logarithmic time with a base determined by "
+"the node capacity, minimizing disk I/O operations."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:38 c2f89da77c94452988238dfcf3fde5ba
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:45:<autosummary>:1
+#: 98d3bf403eb9486d881cd50c68bdb2a0
+msgid ":py:obj:`BTree <sds.tree.btree.BTree>`"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:45:<autosummary>:1
+#: 95e24b3e80da421aa3d310f68e42efc4 d1bed6315f2b4cae808deaccd33737ab of
+#: sds.tree.btree.BTree:1
+msgid "B-Tree implementation."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:47 0268d64ba19b4cf4a6a3b3a5f86eb81a
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:50 a41d320257584f0e83bab6fca7310d33
+msgid "BTree"
+msgstr ""
+
+#: 4ce2226fcc854c2296e6a7fecb59fb73 of sds.tree.btree.BTree:1
+msgid "Bases: :py:class:`~sds.tree.interfaces.AbstractTree`"
+msgstr ""
+
+#: 2338048810614d5abcb46c4f6a105cd4 of sds.tree.btree.BTree:3
+msgid ""
+"A B-Tree is a self-balancing search tree where each node can contain "
+"multiple keys and have multiple children. It maintains the following "
+"properties:"
+msgstr ""
+
+#: 65ac674fdb9d4d4e958fa576eca56078 of sds.tree.btree.BTree:7
+msgid "Every node has at most 2t-1 keys"
+msgstr ""
+
+#: 9e5a6fb12bcd4cc987c835c4d7a0c911 of sds.tree.btree.BTree:8
+msgid "Every non-leaf node has at least t-1 keys (except root)"
+msgstr ""
+
+#: aa7607b98c0749b6af428116dfba4c6a of sds.tree.btree.BTree:9
+msgid "Root has at least 1 key (if tree is non-empty)"
+msgstr ""
+
+#: d4810fc840e14dadb7ad43ec00bb38d2 of sds.tree.btree.BTree:10
+msgid "All leaves are at the same depth"
+msgstr ""
+
+#: b06a538915784e5c964890ad14d98959 of sds.tree.btree.BTree:11
+msgid "A non-leaf node with k keys has k+1 children"
+msgstr ""
+
+#: 9084d87589534b01b2611bbb0674719f of sds.tree.btree.BTree:12
+msgid "Keys in each node are in ascending order"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst 27e9054775a74cc2bfe828c7643ccd9e
+#: 2d160c5b32f04def83caebe83025aa6a 3b066633f7dd4a21801741b7dbf3685a
+#: 53709216032949198fc265d1d87c8073 5c4985241e104357aad326351e181322
+#: 6bcfc7e71d624112997dd0b43d642030 7512c64bddab4b199d8a3ee4a3c7c209
+#: 8d13ef2524554086b8ed7c86ad7df9f9 9b1d329f36da4e37a856e320fdf47162
+#: f766c6fc98f34ac9b9234cd3e88010d2 fea5024a1672459396c7a4d77acdeb20
+msgid "Parameters"
+msgstr ""
+
+#: c74496da0c9a416d8e279be11cbf659b of sds.tree.btree.BTree:14
+msgid ""
+"Minimum degree (minimum number of keys is t-1, maximum is 2t-1). Must be "
+">= 2. Default is 3."
+msgstr ""
+
+#: d6febebcc49c46e799f13c264cddba67 of sds.tree.btree.BTree:20
+msgid "The root node of the tree (read-only property)."
+msgstr ""
+
+#: a76d64cc6183486ba765ded038985f61 f7399581b6584332b1206044f8e33560
+#: f82e649ced8c41ac8da8870c35b1f57c of sds.tree.btree.BTree
+msgid "type"
+msgstr ""
+
+#: 83858404eb51432ab7b65d8ca67b5bc8 of sds.tree.btree.BTree:22
+msgid "BTreeNode or None"
+msgstr ""
+
+#: ce3e616f6510439d9c8898860ee9ceb2 of sds.tree.btree.BTree:26
+msgid "The number of keys in the tree (read-only property)."
+msgstr ""
+
+#: 25738dbc8aba423f98362cbea341e0a0 4ad08882d0c4436a8ce968599fa13cd7 of
+#: sds.tree.btree.BTree:28 sds.tree.btree.BTree:34
+msgid "int"
+msgstr ""
+
+#: a9a8530b0614489ab47460355072d1f1 of sds.tree.btree.BTree:32
+msgid "The minimum degree of the tree (read-only property)."
+msgstr ""
+
+#: 02f33f081b054cb398c71dd7ff31d333 048b9e0c81f44f6087ceb165e77f6872
+#: 04ce199d501c4da9bdaea76221160b9c 065aaaa6318048f193d31e925b94da3c
+#: 0bb49f13b5ab4b6898e2d3d8d3514280 0c1081481125450eb356c3610845e2be
+#: 2353a6e5faf6456fa8ef9a7eadefe794 248435986a73451a9a9361d39fe15a93
+#: 26c240dd022243659e7db4379133fe75 2951350c994146a58faa8aa33e70f683
+#: 2c87d59bbfc94e948e37b349c400e638 2f7af4e4c69443b6969909fddf61b18e
+#: 3318d537e56241bda48e7973d279aa5f 3934eff62fb74798b6b4888bf32da49f
+#: 3f18317053c24a07998ed61ec7dbe875 4198c1d8e21f4fde86724a777582f128
+#: 41c5677f75624f85b584ae254083f28d 4e3d22342e0043d7923b8fae9d0a578c
+#: 4f120db70da04a92a6f65a5d95e2420e 51106eebd33f4a6b92744331bac9a6ec
+#: 60f0b10e2b574a9c8bc97c086144c2f4 6403d531f9b14a4a852608aafb1d6e95
+#: 6988c250f1664936a4af2cb757ce9731 6c3d89d6fc58425eb7586f2c09e18491
+#: 6c53ca5547c845d097fcbba09fcf8110 71ebc5cd77034b20ad957d4d82bafbdd
+#: 76e4849fe73a46efa879e8e017992fa0 83be73c1e997446788750418d3d86c63
+#: 92e4e999a0954640990e434eee4c0d33 a277c83de270423c8149fdeb2116fe93
+#: a76c9a94b209425fadafa3ff70fa7217 aa4cea4fe77f447d80491d8077629b75
+#: b8232adc986d4da783a8b13873fc5002 ced9ad131dc84cc386590d3ebab1afd9
+#: d074f40428ac4d4996ac22148babd03b f4444305e437470b9466038c1ff15234 of
+#: sds.tree.btree.BTree:36 sds.tree.btree.BTree.__contains__:9
+#: sds.tree.btree.BTree.__init__:8 sds.tree.btree.BTree.__iter__:5
+#: sds.tree.btree.BTree.__repr__:6 sds.tree.btree.BTree.__str__:6
+#: sds.tree.btree.BTree.clear:3 sds.tree.btree.BTree.find_max:8
+#: sds.tree.btree.BTree.find_min:8 sds.tree.btree.BTree.height:6
+#: sds.tree.btree.BTree.inorder_traversal:5 sds.tree.btree.BTree.insert:8
+#: sds.tree.btree.BTree.level_order_traversal:5 sds.tree.btree.BTree.remove:12
+#: sds.tree.btree.BTree.root:6 sds.tree.btree.BTree.search:9
+#: sds.tree.btree.BTree.size:6 sds.tree.btree.BTree.t:6
+#: sds.tree.interfaces.AbstractTree.__len__:6
+#: sds.tree.interfaces.AbstractTree.is_empty:6
+msgid "Examples"
+msgstr ""
+
+#: 6d06c7f0ccd243599003ed822216628b of sds.tree.btree.BTree:38
+msgid "Create and populate a B-Tree:"
+msgstr ""
+
+#: b005bfb5e1cb41f38d06fb9a1077b541 of sds.tree.btree.BTree:48
+msgid "Search for keys:"
+msgstr ""
+
+#: 60a315ddb6564c30b214ad5c54717973 of sds.tree.btree.BTree:57
+msgid "Iterate in sorted order:"
+msgstr ""
+
+#: 4329c1ab02474c4298db265e552e7e67 of sds.tree.btree.BTree:62
+msgid "Find minimum and maximum:"
+msgstr ""
+
+#: d006b4813e1a4fa18b2f975c3bf8b485 of sds.tree.btree.BTree:69
+msgid "Remove keys:"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:424 059c04689de240d2b9713113e3fec1e7
+#: 0feb80eabf5a4c8dacfdc96de0c9bda0 187287ffb1ae4638ae6412bb2ef124fc
+#: 196bf454709749a397958fbb4f99f8f0 1f712969e23e47d89223d26f75603bae
+#: 2d6b8d3f396b4a418b2e758569d482b7 3af7c11baa01499a82ec56b5bd135b35
+#: 3f8a4c3f019c4750a23f3630d95034ed 416b38573e2240c9a11573870da124d8
+#: 46c34fe3a32347ef977be77b31f9aa55 6998d50fef674179a8e7612fe8cd0829
+#: 7ddc2d7cbe3f407db22d2651ca036b0a 87b9ad9d8bc0447bbdb36056ffb2644d
+#: 8b06ab0ff3204fdba6114f4ba3408203 91283ca9cdef49d7ae1491e0ad4a9fdf
+#: ab603d777c62413a97d2639899ebcf3f af0c3bf7db0140fbb62e4c9892dee535
+#: b3357fc36559439e920f2dc54bcb2f66 c81bd69fb9c74869a02f9097de7dd613
+#: cd97dee3dcc84c45ae931f5f924293f5 e570269cdd814f7aac2b6f6bcc78eea2
+#: e6fe8d808535403081be5edc6465e74f e7cecb498d1d4a0087e1de7843abd3fb of
+#: sds.tree.btree.BTree:78 sds.tree.btree.BTree.clear:12
+#: sds.tree.btree.BTree.find_max:17 sds.tree.btree.BTree.find_min:17
+#: sds.tree.btree.BTree.height:15 sds.tree.btree.BTree.inorder_traversal:13
+#: sds.tree.btree.BTree.insert:23 sds.tree.btree.BTree.level_order_traversal:13
+#: sds.tree.btree.BTree.remove:22 sds.tree.btree.BTree.search:18
+#: sds.tree.btree.BTree.size:15 sds.tree.interfaces.AbstractTree.__len__:15
+#: sds.tree.interfaces.AbstractTree.is_empty:15
+msgid "Notes"
+msgstr ""
+
+#: ed48b518028547a181ab3e9200c2a181 of sds.tree.btree.BTree:80
+msgid ""
+"Time Complexity (guaranteed): - insert: O(log n) - search: O(log n) - "
+"remove: O(log n) - find_min/max: O(log n) - height: O(1)"
+msgstr ""
+
+#: 3815d04c0a0a4a928857873d48b7b5b7 of sds.tree.btree.BTree:87
+msgid ""
+"B-Trees are optimized for systems that read/write large blocks of data. "
+"The parameter t should be chosen based on block size for optimal I/O."
+msgstr ""
+
+#: 592005d030ce4359bdd7521cd1a685e3 of sds.tree.btree.BTree:90
+msgid ""
+"Duplicate keys are not allowed. Attempting to insert an existing key has "
+"no effect."
+msgstr ""
+
+#: 6ec638640ad6481b9413e6719381dd38 of sds.tree.btree.BTree:95
+msgid ":obj:`BTreeNode`"
+msgstr ""
+
+#: 8181d2aaa99243bcbdcb9e51c39be0c7 of sds.tree.btree.BTree:96
+msgid "Node class used internally."
+msgstr ""
+
+#: 229c0a96843f4fd8a060f5fa97442e66 of sds.tree.btree.BTree:98
+msgid ":obj:`BinarySearchTree`"
+msgstr ""
+
+#: bedb6d99ceb2446ebf1f793126e47e2f of sds.tree.btree.BTree:99
+msgid "Simpler binary search tree."
+msgstr ""
+
+#: 154cb967fa164125aa8fc1c2d08096c3 of sds.tree.btree.BTree:101
+msgid ":obj:`AVLTree`"
+msgstr ""
+
+#: 6adf19c20abf45d0bfa8611197230cc0 of sds.tree.btree.BTree:102
+msgid "Height-balanced binary search tree."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:59 5833a42db08e40c3a92212cd58ee976e
+msgid "Constructor"
+msgstr ""
+
+#: f80c2d0db2444eac9030c60bc940a88a fd696a01fd344267a3fe1891b7f4a4ca of
+#: sds.tree.btree.BTree.__init__:1
+msgid "Initialize an empty B-Tree."
+msgstr ""
+
+#: b1f885d88d5a4bc8bd8b677acf396ae9 ea2c0b133360483283cac2bd4fe65966 of
+#: sds.tree.btree.BTree.__init__:3
+msgid "Minimum degree. Must be >= 2. Default is 3."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst 0524519368ad4d1ab83798ff5fe03c37
+#: 13ed048672574bb8abe832c545866a17 5cbe5ce0cbc84e4db0a5e31f0413a444
+#: 5e4e24f4a1d24d97bc1bfb5ba392278d 76404db576314c11be64e4cfda3d7142
+#: 968e9b775dae442fbb8f802f18917974 c007fc68e3544711bfa22079d7b2cdb4
+#: f0de5481bc7e4d2eb89699a0ef11d11e
+msgid "Raises"
+msgstr ""
+
+#: 7f20158e6ae446f1b5cac613cb14b10f 96d116d7bead455189cb36c63925b83e of
+#: sds.tree.btree.BTree.__init__:6
+msgid "If t < 2."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:63 b7cafd81c1934be5a46e7086b8774d92
+msgid "Properties"
+msgstr ""
+
+#: 347eb1e3513d4f178418d4efe1a22ed0 3e44e15e7f0e4ed2bfa3991ca8962561 of
+#: sds.tree.btree.BTree.root:1
+msgid "Get the root node of the tree."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst 0fb1631137104e9c97c458acf4d79294
+#: 11b242dc3bae46fa85acf82e3f35f3dd 20e9dc88a1514f9ba401de75bd628b5a
+#: 213a9afb2c4f479eb8e7bb43f2740681 2adc93046b60423a9040d8fbaa86db53
+#: 2fa32c969d414b4ca56985ac5b740475 327879e3d5894523af74504e473e7659
+#: 4a33543eee3047d4813b53905497cb3f 5b58d6003f7c428a940096f9901113e9
+#: 6141814142ae49de877a3761412c96ca 694353653dfb41c49524369b796dae6e
+#: 6e79883765954482bd46c8681f30ff89 707a8f1ce19449d9a5e455da1853d12e
+#: 73d18644f3ac45c9abc617e52d815d0c 850af58f66c84adfb4ea32a9bbcacf97
+#: 85e5e53a674d47d89c424cc6da00004d 907f14b6bb3b421b8fdb45b9968ef889
+#: afd1fe653c16493eb76c23c989208bd2 cc59d2dc950a443c8368bd98c9f74758
+#: e58c1dbe3e6a416681ed11a1a79d082e f20ad2c81b9d4a37aebda7fd8d0215b2
+#: f35c954ccc5b49e4a9ba7a50951803f9 ff4cefd6e6794e468d89ae016b93a552
+msgid "Returns"
+msgstr ""
+
+#: 688282be5983437cb48591ebcbb36c44 bb1b6e8a05ee4c6f87713b2a783eb652 of
+#: sds.tree.btree.BTree.root:3
+msgid "The root node, or None if tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst 0ffebd8ddbc04e3b82dacf9c9a8d985f
+#: 18e0252241ff46ad992298c5f1ad13ca 193bab11d38241a1b4b3bd21deaccf22
+#: 2c01e8875a0744868ce39b39a914c179 2d563dcf23434228977ca05ba9a74ee9
+#: 4694f037609b49f784f5e448395efa4b 5149e867049a4d99a47fa140aaa3129f
+#: 5e54ad9c942b4f2b92c10963dbd5e5d6 65b6705d6c9d43d4a161bed4980dbccf
+#: 7bf4457126964524b5e9b7b8c93a3a6f 9059df03a8de47a89cf05f585c721094
+#: b001e392e06d42f49ac83c0261d240f0 b1327b4d28ea49ec88146fa01b6bbc72
+#: b42afe73cd0b41348c458b3cdf5f6d26 b50bbc0f27cf4211b237283547c6a5fc
+#: ca607b5cd7434849864143e742f01728 cd9bf7ea75e248b5a97967416a1f01f0
+#: d76d7d0946e241c3bb4ad3dd5ee04d50 d93402069257466b86532867e6ed8969
+#: d9570e82cc064737b8e98f1bc33348a4 e47dfe82b155440dadb7a5b966b759dc
+#: e5d4ce9b06ad451cbf3a36d12458c73f ec0712d28d4b4d08b1f0e94dd270468b
+msgid "Return type"
+msgstr ""
+
+#: 714c62453d4e43808649a0e6317eb639 of sds.tree.btree.BTree.size:1
+msgid "Get the number of nodes in the tree."
+msgstr ""
+
+#: f046f88aede7401bb6bfb7ddff6d34ed of sds.tree.btree.BTree.size:3
+msgid "The number of nodes currently in the tree."
+msgstr ""
+
+#: 0f7966613cb142c5b3fe69ebb924d4c1 7d56556cf980423191727ab800bf7803
+#: b66710f7c27f4a69a50042c5ec06f407 cb80ca4cd0e8405ca39879eb6ddbfaf3
+#: f91a4c3bd3014eb08c4154129187a0e4 of sds.tree.btree.BTree.clear:14
+#: sds.tree.btree.BTree.size:17 sds.tree.interfaces.AbstractTree.__len__:17
+#: sds.tree.interfaces.AbstractTree.is_empty:17
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 50957eb12b1449ae84ef5dfe401c43b7 of sds.tree.btree.BTree.size:21
+msgid ":obj:`__len__`"
+msgstr ""
+
+#: 6c4fa49b5a8f4425acf4709892f540c5 of sds.tree.btree.BTree.size:22
+msgid "Returns the same value."
+msgstr ""
+
+#: 3f4e90952adf485eabee1e08478ee443 55516903eec048cf8f93a86dc8b4b96a of
+#: sds.tree.btree.BTree.t:1
+msgid "Get the minimum degree of the tree."
+msgstr ""
+
+#: 46aff4c06bce4764843fb6f57b797102 879dd906d5624a9cbf6f5f3229f48e89 of
+#: sds.tree.btree.BTree.t:3
+msgid "The minimum degree."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:69 f8e058cf093b440fad711524329fcd29
+msgid "Core Operations"
+msgstr ""
+
+#: a754a062f8f14271957a50c29ff90d01 efcfd0c845f5437ca608bde880a42222 of
+#: sds.tree.btree.BTree.insert:1
+msgid "Insert a key into the tree."
+msgstr ""
+
+#: 58759870eb414d85b3625531b7ab14cf d607e0776b444fc19597af2966ec86b6 of
+#: sds.tree.btree.BTree.insert:3
+msgid "If the key already exists, the insertion is ignored (no duplicates)."
+msgstr ""
+
+#: 2a3df31b43db4ea6a4b223392ec9adc0 4f2ae9dce92c4d02b8adada3a284454f of
+#: sds.tree.btree.BTree.insert:5
+msgid "Key to insert. Must be comparable."
+msgstr ""
+
+#: 67f8aad456f7495f9c93166558eb7390 c2b4b363f59a482097dd4bd23ea7cdea of
+#: sds.tree.btree.BTree.insert:17
+msgid "Duplicate keys are ignored:"
+msgstr ""
+
+#: 0eef32987c9a4e2ebe90af46a2ec7a3b 38d1deea0d7b4915b1a54e6033f90852
+#: 3b2d990556b14d40a63d35b75d51583b 3f914f3802be494ba5a661528d7224d6
+#: 43b3ace453fb4510923e46f8a4cd5880 6d011bd595594857878e8169559bb71a
+#: 7267f7adbf534bdab714240963ef5e5d d282385b607842cbb8708ed4ca2c842e
+#: d57e0abc6ac148069ebdd40390bf594b ed6db06af1734f5cbec859502aa26b72 of
+#: sds.tree.btree.BTree.find_max:19 sds.tree.btree.BTree.find_min:19
+#: sds.tree.btree.BTree.insert:25 sds.tree.btree.BTree.remove:24
+#: sds.tree.btree.BTree.search:20
+msgid "Time complexity: O(log n)"
+msgstr ""
+
+#: 2ccd3e2d547b4662820abc8e742761af c8ee58621abd42b4895af30f5cd8b4c8 of
+#: sds.tree.btree.BTree.remove:1
+msgid "Remove and return a key from the tree."
+msgstr ""
+
+#: 72eebc34145d423398a06e0df9e6eb32 e87a9b9faa6c4e1199d52faec37e61c4 of
+#: sds.tree.btree.BTree.remove:3
+msgid "Key to remove."
+msgstr ""
+
+#: 34cefeab44a74e63b596e988cbbcf828 620375d8c51844538b4d9d5b04f46b29 of
+#: sds.tree.btree.BTree.remove:6
+msgid "The removed key."
+msgstr ""
+
+#: 0ba3ebd116d14bb4b364ce35ac4e4a66 12478576b4654b128d3c79c941a7cfc7
+#: 4b5cd8a9d6dc49f6b81fd94adccc955a 5685a52c73bd4640949c486c19261541
+#: 8b7884a3b6cd4f85826925ad18bd56f1 bb5d53a412334e1f8f06427d08841ff6 of
+#: sds.tree.btree.BTree.find_max:6 sds.tree.btree.BTree.find_min:6
+#: sds.tree.btree.BTree.remove:9
+msgid "If tree is empty."
+msgstr ""
+
+#: 7d99f44945a64b248e18b6fdc34d8eae cfc47c8a5da24dda9b3f558e181c5040 of
+#: sds.tree.btree.BTree.remove:10
+msgid "If key is not found."
+msgstr ""
+
+#: 0577bc0cf1124777b975fd4124897079 c9099e47d2594d98be2334ed47cd61e4 of
+#: sds.tree.btree.BTree.search:1
+msgid "Search for a key in the tree."
+msgstr ""
+
+#: 2cb0667b2be84c14a939567bf5ae271b 5527cee1605f4db28b495687b9f52cfa of
+#: sds.tree.btree.BTree.search:3
+msgid "Key to search for."
+msgstr ""
+
+#: 85946ba5a34f4fa0b1b30d87ac377cb7 f1ff4a0e083f41c1b76d98bf5b417e4b of
+#: sds.tree.btree.BTree.search:6
+msgid "True if key is found, False otherwise."
+msgstr ""
+
+#: ba7a727e507f475e91d935c030f26d6f f31c72c4ff334621ac56983502abda87 of
+#: sds.tree.btree.BTree.height:1
+msgid "Return the height of the tree."
+msgstr ""
+
+#: bcb501c6f0064ce0b4f0b864aacd1f05 fa66912be06d4228a54ea374f15de361 of
+#: sds.tree.btree.BTree.height:3
+msgid "Height of the tree, or -1 if empty."
+msgstr ""
+
+#: 12df9f81d0a84a639768921af1555183 88e3d477d29b4ff89eeeb1cdac1cde5b of
+#: sds.tree.btree.BTree.height:17
+msgid "Time complexity: O(1) - height is tracked during operations."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:76 80063bbe76dd41599be0db52479dce18
+msgid "Traversal Methods"
+msgstr ""
+
+#: 0aecc46eba0e4775a38436ac27542fdc c5a9e9e7a42c4e05a995a98a9a5ecad4 of
+#: sds.tree.btree.BTree.inorder_traversal:1
+msgid "Yield keys in sorted order (inorder traversal)."
+msgstr ""
+
+#: 05fed11a46a245e5be1552139e636f5f 0f535fb3953d418db6dfa13b575aae66
+#: 9063a35661da40cebf65e1f93bd7695a 9662c52743054559b9e01e5917db1236
+#: b00be15b3846430ba64d22dc65bd8ea4 b5ab60fd497d4150b17d591a6ed673d1 of
+#: sds.tree.btree.BTree.__iter__ sds.tree.btree.BTree.inorder_traversal
+#: sds.tree.btree.BTree.level_order_traversal
+msgid "Yields"
+msgstr ""
+
+#: 1a5efbb6046b4d918f311fc2d27506b7 3a948e801822436085d4b73c4e06ea15
+#: de4b2d68b08c4b32b97f9663ca132c0c fce28ed66c2048dfa08569245af8e830 of
+#: sds.tree.btree.BTree.__iter__:3 sds.tree.btree.BTree.inorder_traversal:3
+msgid "*Any* -- Keys in ascending order."
+msgstr ""
+
+#: 1b6f9029c34a4166ad505f00f352a973 717d8d64435a48e19b72c28ec866be84
+#: e66b3d78ed784457b0961f46ae05810d f2e783a096184c21a9b9fdda74820cbb of
+#: sds.tree.btree.BTree.inorder_traversal:15
+#: sds.tree.btree.BTree.level_order_traversal:15
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 115848f815564ea6b8c2f576341b3bcf c45c8fe999f6406eb069c2bc9f469d22 of
+#: sds.tree.btree.BTree.level_order_traversal:1
+msgid "Yield keys level by level (breadth-first)."
+msgstr ""
+
+#: 943b453fec2a4de58608ac01ee94d171 a4681d8b7ac6486aaa42b1b4a9df4ea7 of
+#: sds.tree.btree.BTree.level_order_traversal:3
+msgid "*Any* -- Keys in level order."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:81 34d0f6b5488e46ca8397afb18606cd70
+msgid "Utility Methods"
+msgstr ""
+
+#: 3658dff354924159bbbba4a253f78d38 of
+#: sds.tree.interfaces.AbstractTree.is_empty:1
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: 8a377e59440743099dc4f4f3bbeea7e4 of
+#: sds.tree.interfaces.AbstractTree.is_empty:3
+msgid "True if the tree contains no nodes, False otherwise."
+msgstr ""
+
+#: 537824d9c9164807a19d039e4bf7d3a4 610d85a714034687ae22b6c2b38e8d27 of
+#: sds.tree.btree.BTree.clear:1
+msgid "Remove all keys from the tree."
+msgstr ""
+
+#: 183e45e67b874a8a8a270dc7605cd030 5fa889aea06249aaa6488dbfac4c63af of
+#: sds.tree.btree.BTree.find_min:1
+msgid "Find and return the minimum key."
+msgstr ""
+
+#: 46eb0cad4cee4c159a6860b27394477c 626c173050694c14a27f3148158132f1 of
+#: sds.tree.btree.BTree.find_min:3
+msgid "The minimum key."
+msgstr ""
+
+#: 85610a1ce61f4ca28c895cae23f5b4ab ad8c5e9d8ccc409ab2e4387b82319706 of
+#: sds.tree.btree.BTree.find_max:1
+msgid "Find and return the maximum key."
+msgstr ""
+
+#: 086ea649681f4691b2d71d173401a31c 56efc2d78e394cc0b65bda57e4fb85e7 of
+#: sds.tree.btree.BTree.find_max:3
+msgid "The maximum key."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:88 21acfee76ff44eb9a7ddf4a1f8c32286
+msgid "Special Methods"
+msgstr ""
+
+#: 82dfb01ce33c4471970264b62de75cc5 of
+#: sds.tree.interfaces.AbstractTree.__len__:1
+msgid "Return the number of nodes in the tree."
+msgstr ""
+
+#: d959ab0f8f1742b7995ddb68e6034e7f of
+#: sds.tree.interfaces.AbstractTree.__len__:3
+msgid "The number of nodes."
+msgstr ""
+
+#: 5165197138fd4fddb4d80558fe3f14d5 d80a23b683f842e4bcebadbd225f0a57 of
+#: sds.tree.btree.BTree.__iter__:1
+msgid "Iterate over keys in sorted order."
+msgstr ""
+
+#: 935897f3a3814572a036026a38b40d45 dd0f6b089ab8405e98283fd798db2806 of
+#: sds.tree.btree.BTree.__contains__:1
+msgid "Check if key is in tree."
+msgstr ""
+
+#: 168ad2ceb1054dac9e8f0e3e6b521c97 c3ea3d65bf9247b59cc486ceb942b57e of
+#: sds.tree.btree.BTree.__contains__:3
+msgid "Key to check."
+msgstr ""
+
+#: 0e772ca1c08540d394e077eeb5fa7d4b fc2fa177a74e495bbcdafdd4409e2cd2 of
+#: sds.tree.btree.BTree.__contains__:6
+msgid "True if key exists."
+msgstr ""
+
+#: 0237cf3fc086473b9286939ae9e03b90 ad43d1f77b984eae851f4727bb93d88e of
+#: sds.tree.btree.BTree.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: 0a773b6ec49d4e0c94c60a0dec9f35f9 518da04b41ca481190946555c1da4930
+#: d119cb8d6a3442dba2269b4584391d3d e31cac100cf242a8aaa76520298dff77 of
+#: sds.tree.btree.BTree.__repr__:3 sds.tree.btree.BTree.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 57eefd0c97b14867b0e5c82075da0c46 b9b4d52d151241fbbba8ec706819252e of
+#: sds.tree.btree.BTree.__str__:1
+msgid "Return string showing keys in sorted order."
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:96 a209c9d9969b4f53a34d3b97b9169352
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:99 5e19367bfd004d5c88b127bffc7ff4d6
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:102 4b091f2870bf4b289b3a49afcd5a0a0a
+msgid "Creating and Configuring"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:119 abf3a795d0c14a428dbf354fe26935c6
+msgid "Insertion and Search"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:138 12ad3e4946cc466d883d34804b2b96bc
+msgid "Deletion"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:150 82c5b8922a454f35ba70cabfc448dd93
+msgid "Range Queries"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:169 738a9774f55742d0addc22479db6ea52
+msgid "Min/Max Operations"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:178 49b1545268b947fc899742fc1c38699c
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:181 37e564e88dd6411f8fb69b8ca2f5f629
+msgid "Example 1: Database Index"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:183 60c719de505d44438efd6ee7280f06fd
+msgid "Disk-based database index using B-Tree:"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:250 d84fe79aa87d48b9b0d39ad2f95f4fbb
+msgid "Example 2: File System Directory"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:252 89493205e3a14e68be0a097a8d7afdfa
+msgid "B-Trees in file systems (like ext4, NTFS):"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:333 b64a8edd52824ec3958bb21a340fee92
+msgid "Example 3: Time-Series Database"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:335 737d5a32a6a84337b54bf0b31e57b04d
+msgid "Efficient time-range queries:"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:412 9c1a96c96c1942858f05acd6bfaa6401
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:415 4d70299497104a00bef4753e722210e0
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:421 d021263e752f420c8343721baaf7da7c
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:422 ec000cd316f0400ab51547ebbe0d3707
+msgid "Disk I/O"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:423 3af4b3c407d54863aba8c11b5890ff5a
+msgid "CPU Time"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:425 51e2ba3efc454939be601bb0b59dac2a
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:426 ../../source/api/tree/btree.rst:430
+#: ../../source/api/tree/btree.rst:434 2e828695a8924215819ba6ce81c6736c
+#: 796a9cd347cd4537ab16ab158b404d9a af772db998fc48048f124097beb40c27
+msgid "O(log_t n)"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:427 ../../source/api/tree/btree.rst:431
+#: ../../source/api/tree/btree.rst:435 3be3c9bfb1134eae81b0187307409567
+#: 648a7c2450104c85ac980fc83876905e ad14e0bc378e4c12885188ffdda7c5ff
+msgid "O(t log_t n)"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:428 f7cfcebdb24140a397e7bb82db55fcaa
+msgid "h disk reads"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:429 fcf2907c459f46f28d413ce00bf6ad56
+msgid "**Insert**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:432 6b1df51aedbc4782a0c23fe9e604eb58
+msgid "Split cascade"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:433 7a1c040fbf5a4dbc81304ab232e9bc99
+msgid "**Delete**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:436 2e72b2fd651f41c58402125245905513
+msgid "Merge cascade"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:437 4b830d8df7f846b8a6e5418a73b77c73
+msgid "**Split**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:438 ../../source/api/tree/btree.rst:442
+#: 062d938cddf24a79a805fb1fdc602d6d 28d2e8878b364a2a8bd389be1e4e6516
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:439 ../../source/api/tree/btree.rst:443
+#: 00ca8e9c5b0f4e3b92a1feaa409adc71 b33c5de161434cf2a87b2cf90d9dd169
+msgid "O(t)"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:440 aeaacc667fbe479f99a056b842a57cae
+msgid "3 disk writes"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:441 12b5d09e016941a7813101ed7db87f6d
+msgid "**Merge**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:444 92438b631d3e499ebe8a29a0436b09bf
+msgid "2 disk writes"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:445 74a8212605d741b0909a7ed880477c30
+msgid "**Traverse**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:446 e0b554db43f94a7db9ba8ce082402fa6
+msgid "O(n/t)"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:447 84b2fa776b114f138c4a6429f043b62d
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:448 0d5e8f2959ee4348bf1b0da0f696daef
+msgid "Visit all nodes"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:451 d823c740c17949689c88ca177e830a8f
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:453 7c6440e7fc9a44e6ac6f2c4cad115dfc
+msgid "**Node storage**: O(n) keys total"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:454 63f68f77d84b4f79a29236ff669f8ac5
+msgid "**Wasted space**: Up to 50% per node (when nodes are minimally filled)"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:455 e2ef56488131415fb08e0624e44af810
+msgid "**Average fill**: Typically 69% (from theoretical analysis)"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:456 ac39ab74b1c24c7e9ff7d4978f9d3ad4
+msgid "**Pointers**: O(n) child pointers"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:459 05dfcc2998104fb281c1042c07198fb5
+msgid "Optimal Degree Selection"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:461 285b99f69fee428eb5f54b7eb75b30c9
+msgid "For disk-based systems:"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:463 898973369f6e4808a0e9fbb6c815bb13
+msgid ""
+"t = \\left\\lceil \\frac{\\text{disk block size}}{\\text{key size + "
+"pointer size}} \\right\\rceil"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:467 5e48d23b9bf74e2285f5a75f555f14eb
+msgid ""
+"**Example**: - Block size: 4KB = 4096 bytes - Key + pointer: 16 bytes - "
+"Optimal t ≈ 256"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:472 43d62c9118e94c1c973c0368e9237ced
+#, python-brace-format
+msgid ""
+"This gives :math:`\\log_{256}(10^9) \\approx 3.8` disk accesses for 1 "
+"billion keys!"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:475 899aa47de4e34cd8b412cfd3f839e4f9
+msgid "Comparison with Other Trees"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:481 ca3198a35429411988f92a2d245aef9b
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:483 1a1b5c882f9145ccab22bfcf21a3f9a1
+msgid "Binary BST"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:484 30e3dc701b3041fc8e113361e482f0c6
+msgid "AVL Tree"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:485 d36e791872d748eba8eaabdaa62351de
+msgid "Red-Black"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:486 625336d14fa54705997df65a5275601f
+msgid "**Node capacity**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:487 78d9e7856e3b467ca4103888ff3b9da8
+msgid "Many keys"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:488 ../../source/api/tree/btree.rst:489
+#: ../../source/api/tree/btree.rst:490 16558d3af8f04adf986c0d01de3ffd2b
+#: 44e49af8060e46179f24150cab6d4727 5d2d7710043041d3adf6784d3b6a1b83
+msgid "1 key"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:491 c5090075b0c8477283ae8ee43aedf7e6
+msgid "**Height (1M keys)**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:492 ed427140c45b4cc0bb13deb704b7b5c0
+msgid "~3 (t=100)"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:493 ../../source/api/tree/btree.rst:494
+#: ../../source/api/tree/btree.rst:495 38a2097c58e5457cb006ab0510dc42b6
+#: 48f2f16867824132aa83561e0bb30c69 a88d77c3805d4c02898658d2361c6d97
+msgid "~20"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:496 78f7b1ba001a45aaa541bbdecdd66343
+msgid "**Disk I/O**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:497 2c41a774d53e4ba89ea2b7edc1fc450b
+msgid "Minimal"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:498 ../../source/api/tree/btree.rst:499
+#: ../../source/api/tree/btree.rst:500 11a0291a9a1e40bf9f6596f6c61f0ce4
+#: bb1414c7843a447daeda510ea273e571 ef048ab12e394f46a61fd838145f8801
+msgid "High"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:501 e35d0c8d51df489d9ed21b1fc0d7dd6e
+msgid "**Cache efficiency**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:502 514df2c73d164a7e88d36fc6e96ffa64
+msgid "Excellent"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:503 ../../source/api/tree/btree.rst:504
+#: ../../source/api/tree/btree.rst:505 27e8055c03b641c98ba4436e0b4533c2
+#: 2ea6379899fd4c809fb4b1a822ee64a7 9f6358f499514682b5f5f8eea54b3272
+msgid "Poor"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:506 c4b6c06ff40b46b4aa1e374964988fb2
+msgid "**Best for**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:507 49d98e675f664fa6bac9f3e9a2fb0729
+msgid "Databases"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:508 51d01647676c407baf95dfa398a96f91
+msgid "General"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:509 a9be52939fd247b8b9987fabbc9f3783
+msgid "Searches"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:510 66d4d57ecc7140f68daf5f34db7ec11d
+msgid "Updates"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:513 770a63eeaa294dc18021a222ed8eb12d
+msgid "When to Use B-Trees"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:515 575fddcdca1b4660b6713512294cd9de
+msgid "**Use B-Trees when:**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:516 20984601654740cc9173aec92882c140
+msgid "Data stored on disk/SSD"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:517 3e3f7010b05b47589d346b6a497a80a1
+msgid "Minimizing I/O is critical"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:518 64697e6bffeb4bcf9720908c7e086c17
+msgid "Dealing with millions+ records"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:519 634b401e7381466793e5fdd93d5f63ae
+msgid "Range queries are common"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:520 414b3981f3c44d238590736674f5bd34
+msgid "Block-oriented storage"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:522 488a26b4ac004170887dd4bfece494df
+msgid "**Don't use B-Trees when:**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:523 429d38ec80ac4c0f943bded5720817ce
+msgid "All data fits in memory"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:524 d08ce1c541e94756ae0a1f20b8cbea6e
+msgid "Only equality searches"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:525 3375e38316994e33895c15c8e7e5ba81
+msgid "Very small datasets (< 1000)"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:526 b6a8e68538d645b3a94e35df6e440ac8
+msgid "Random access memory only"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:529 40acb3c2eb91447e942a28f2154715f2
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:532 5bf3ce5ab8244a689dfc0f56aa8aa771
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:534 0df528ec33a34443b419afea0ef802ef
+msgid "✅ **Choose t based on storage block size**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:545 811d15c1fe0f48c9a0ede4a2c04e66f3
+msgid "✅ **Use B-Trees for disk-based storage**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:554 3c4c90236527479bbf8c6a840b894f32
+msgid "✅ **Leverage range query efficiency**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:563 a8fe1992cca848f183f9daa279520587
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:565 28c91193aa6c4e07be48117152191bda
+msgid "❌ **Don't use small t for large datasets**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:575 e49249d9c7d548daa0fb26d055ce0971
+msgid "❌ **Don't use B-Trees for in-memory only**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:586 324cd61b15c14838b7e34ca45aaee874
+msgid "❌ **Don't forget about cache effects**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:596 f1909895987c4bd0915a61c2ebce8f51
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:598 1be39de6ceb94aa5a4606da0ad9583d9
+msgid "**Choosing wrong t value**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:606 aa1ca7217f5f4172862ccb72dc2006e7
+msgid "**Using for small datasets**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:613 6cf4ddd9fba4444f920e2656b7ff7a83
+msgid "**Ignoring disk access patterns**"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:621 e1ff779e349f4697aa15b7a87d411de7
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:623 c7a87b23ed7c4859ad8a7c35ec63ff7a
+msgid ":doc:`binary` - Binary search trees"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:624 e53f573cbf4e42a7b948883e67abe625
+msgid ":doc:`balanced` - AVL and Red-Black trees"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:625 7a463d33c01c4a99a071ca3d21618dd7
+msgid ":doc:`../../guide/tree_structures/btree` - B-Tree theory and guide"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:628 b459415d4dcb4fb6960f54eda434d087
+msgid "References"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:630 9332586ddac84b49b6a71a7b3279827b
+msgid ""
+"Bayer, R., McCreight, E. \"Organization and Maintenance of Large Ordered "
+"Indices\", 1972"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:631 43cf68aaeaa84565abf1c027bf561a31
+msgid "Comer, D. \"The Ubiquitous B-Tree\", ACM Computing Surveys, 1979"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:632 8ccf0beb3c2e46ca8b02b713b309aed8
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 18"
+msgstr ""
+
+#: ../../source/api/tree/btree.rst:633 0bf00d4c8a5d436ca87cfa7e469dd893
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 3\", Section 6.2.4"
+msgstr ""
+

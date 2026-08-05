@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.GraphNode.rst:2
+#: b72cc0ff3fe54bcf9d680e2ee26899da
+msgid "sds.graph.GraphNode"
+msgstr ""
+
+#: cc090c4b1fb34b20b45633bcab1f6ab7 of sds.graph.node.GraphNode:1
+msgid "A node for graph data structures."
+msgstr ""
+
+#: 1012b303e648443692e9770571f61cac of sds.graph.node.GraphNode:3
+msgid ""
+"Graph nodes are simple containers for data with a unique identifier. "
+"Unlike tree or list nodes, they do not maintain references to other nodes"
+" internally. Instead, connections between nodes are managed by Edge "
+"objects and the Graph class."
+msgstr ""
+
+#: bf750e96260d4849a045a3e1e5cbb945 of sds.graph.node.GraphNode:8
+msgid "The _refs list inherited from Node is not used by GraphNode."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.GraphNode.rst
+#: 4ba2fab99a084ce2816d9a99895766e6 524479471b2644a4a68b8cfe008c33f0
+#: af795a9b7fd44a38b952ce039e91c0a6 ba06e13a4d204b779bb1afcc46fcf831
+msgid "Parameters"
+msgstr ""
+
+#: 148e1493aab04d2682c7e88c1a7ea818 2f6be82d2f7c45e98e75ff9b3502bedb
+#: e77281c6b11c407a925caefb24fd3453 of sds.graph.node.GraphNode:10
+#: sds.graph.node.GraphNode.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: 8e7ade35f2b947d28ef503f122a2e9e2 of sds.graph.node.GraphNode:12
+msgid ""
+"Unique identifier for the node. If None, a UUID is generated "
+"automatically. Default is None."
+msgstr ""
+
+#: 6beb250580af4ba48531ea3a519ea658 of sds.graph.node.GraphNode:18
+msgid "The data stored in the node (inherited from Node)."
+msgstr ""
+
+#: 7c8ee728ea3c4d72806e5a0514008c75 ddccf9f9cc7d4a599ffcabfbfdc26936
+#: f972d1e5148f46f6a99cd5d96f88713a of sds.graph.node.GraphNode
+msgid "type"
+msgstr ""
+
+#: e9613c39aaf04354b26f781e3066c0c8 of sds.graph.node.GraphNode:20
+msgid "Any"
+msgstr ""
+
+#: 32a0b0890acc4e46bf362070c8b86b8c of sds.graph.node.GraphNode:24
+msgid "Unique identifier for the node (read-only property)."
+msgstr ""
+
+#: 92a7361b52de4153b5ec8dff85f1bbf6 of sds.graph.node.GraphNode:26
+msgid "str"
+msgstr ""
+
+#: 4afd5c92f56a4a5eab70afd0358742dc of sds.graph.node.GraphNode:30
+msgid "Inherited from Node but typically not used in graphs."
+msgstr ""
+
+#: d208d3d7ed1e45b5aef1e6f68c8aa6ec of sds.graph.node.GraphNode:32
+msgid "Node or None"
+msgstr ""
+
+#: 16a09e10602f450c8436dc2fbca88015 1c21bc4ad91344ba8735418eaabe6e28
+#: 35da2c5217904e5089812cc741feb45e 5e0a22fd66be49ecabdcfdb0e833d12d
+#: 8fa05472332646709b2c671089abe05b a57dc89c6a484ccbbb0f4e25823c0e5d
+#: abb47c5d855442d998fa27d2945710c0 b7855e801b284c999a29ede3358706a3 of
+#: sds.graph.GraphNode.id:6 sds.graph.node.GraphNode:34
+#: sds.graph.node.GraphNode.__eq__:11 sds.graph.node.GraphNode.__hash__:6
+#: sds.graph.node.GraphNode.__init__:9 sds.graph.node.GraphNode.__repr__:6
+#: sds.graph.node.GraphNode.__str__:6
+msgid "Examples"
+msgstr ""
+
+#: 260e0818492643d8b93f612526a3c93e of sds.graph.node.GraphNode:36
+msgid "Create nodes with automatic IDs:"
+msgstr ""
+
+#: ee6f5a8129e846f08a609a5040a9ed90 of sds.graph.node.GraphNode:45
+msgid "Create nodes with explicit IDs:"
+msgstr ""
+
+#: bee279353bba4181901c3054481319e5 of sds.graph.node.GraphNode:54
+msgid "Nodes can store any type of data:"
+msgstr ""
+
+#: 445a6652de514c279438fdd91681eac5 8abd1809b007414a9daca369323e4a30
+#: 8babedd2565145dca2c0deca33f8ece2 aef8964734034da89bcf9b643ff953a9 of
+#: sds.graph.GraphNode.id:12 sds.graph.node.GraphNode:60
+#: sds.graph.node.GraphNode.__eq__:21 sds.graph.node.GraphNode.__hash__:13
+msgid "Notes"
+msgstr ""
+
+#: 4b8727165fcc4e608e21ea070f254200 of sds.graph.node.GraphNode:62
+msgid ""
+"This class uses __slots__ for memory efficiency. The _refs list is "
+"inherited but remains empty - graph structure is managed externally "
+"through Edge objects."
+msgstr ""
+
+#: 966bbd9fbab442c38c6924ffb0f1b0c0 of sds.graph.node.GraphNode:66
+msgid ""
+"GraphNode does not maintain connections to other nodes directly. Use the "
+"Graph class and Edge objects to define and manage graph structure."
+msgstr ""
+
+#: f8a6203bedee43d78a7b46cb2ad27377 of sds.graph.node.GraphNode:71
+msgid ":obj:`sds.core.node.Node`"
+msgstr ""
+
+#: 86f212a4286e46c282625e39cf4b739b of sds.graph.node.GraphNode:72
+msgid "Abstract base class."
+msgstr ""
+
+#: 60f5809c01c24d11a6e508f47d863baf of sds.graph.node.GraphNode:74
+msgid ":obj:`sds.graphs.edge.Edge`"
+msgstr ""
+
+#: fd25c81f8696433cb8d645a13f80a7d4 of sds.graph.node.GraphNode:75
+msgid "Edge class for graph connections."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.GraphNode.rst:21:<autosummary>:1
+#: 21df9f08db6c429497ada800a591fec2 e7dea4d97c6842a79f651b0a0e174227
+#: ec3d1c4d9c3b4167b076101c656b4fd2 of sds.graph.node.GraphNode.__init__:1
+msgid "Initialize a new graph node."
+msgstr ""
+
+#: dfda398cf98b4f15a2ced07365bb3223 e7844e043a454faaaea7c6c228257b52 of
+#: sds.graph.node.GraphNode.__init__:5
+msgid ""
+"Unique identifier for the node. If None, a UUID is generated. Default is "
+"None."
+msgstr ""
+
+#: c12b40f895e44337ae9dee5c524457ec e135163f50a24c89b1f7e36f6e0791fb of
+#: sds.graph.node.GraphNode.__init__:11
+msgid "Create node with automatic ID:"
+msgstr ""
+
+#: 4cd24e8d2952459f91364acceb476325 caa46eee1ab040a5a4eaea86c34cd074 of
+#: sds.graph.node.GraphNode.__init__:17
+msgid "Create node with custom ID:"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.GraphNode.rst:13
+#: 9e64bdf7948348578373210fc13c4f61
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.GraphNode.rst:21:<autosummary>:1
+#: d395cedcd599475589227679afcb5622
+msgid ""
+":py:obj:`__init__ <sds.graph.GraphNode.__init__>`\\ \\(data\\[\\, "
+"node\\_id\\]\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.GraphNode.rst:23
+#: 46cd3f34898744f2986491a4dee2607e
+msgid "Attributes"
+msgstr ""
+
+#: 51d60312b6f74dfe9d6b172f7a9d7641 of
+#: sds.graph.node.GraphNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.graph.GraphNode.data>`\\"
+msgstr ""
+
+#: d4470063eda44baf84bc013782be6efd of
+#: sds.graph.node.GraphNode.__init__:1:<autosummary>:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: 87ea56724876486eaeba5778c0008425 of
+#: sds.graph.node.GraphNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`id <sds.graph.GraphNode.id>`\\"
+msgstr ""
+
+#: 23508473e9994256b3813c4884d9ed9c b51ef3f999bf4c8387a9d2f8cfb4a7d8 of
+#: sds.graph.GraphNode.id:1 sds.graph.node.GraphNode.__init__:1:<autosummary>:1
+msgid "Get the unique identifier of the node."
+msgstr ""
+
+#: c437a390e28044b98b8ec1844317a130 of
+#: sds.graph.node.GraphNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`parent <sds.graph.GraphNode.parent>`\\"
+msgstr ""
+
+#: 1142a00003e142f6b7ed018cdff517e2 of
+#: sds.graph.node.GraphNode.__init__:1:<autosummary>:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.GraphNode.rst
+#: 159ae63f4a044ebf97d201e60bdef62e 63016040f03048faa15cd43706e1c396
+#: 6b0e91d5284e4ac39e1275b05a44e550 b41c511eeaf04fed83a29e577d347a07
+#: fa15bc9b04384ac58029d40118297574
+msgid "Returns"
+msgstr ""
+
+#: 1e353e70bcf44f5ebbfe576a8f72f7c9 of sds.graph.GraphNode.id:3
+msgid "The unique identifier for this node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.GraphNode.rst
+#: 1a8c5eda73db4205a419eb0542a1c550 4751b7b274614201bb8fe91d89298830
+#: 5befbbe70af44ac2a9344fd5ac89ae85 7e95c1c020e947ad83c16b844557473a
+#: df4f2cc420f648ce85e51c62678afeec
+msgid "Return type"
+msgstr ""
+
+#: f339c73c850d47a9bf0452e68069c686 of sds.graph.GraphNode.id:14
+msgid ""
+"This property is read-only. The ID is set at initialization and cannot be"
+" changed afterward."
+msgstr ""
+
+#: 3f33db53678b48b38b408b9a9ebd82d0 of sds.graph.node.GraphNode.__repr__:1
+msgid "Return a detailed string representation of the node."
+msgstr ""
+
+#: 2912a19a36bb4d49a1dd8eeecc610ca6 of sds.graph.node.GraphNode.__repr__:3
+msgid "String representation in the form \"GraphNode(id=..., data=...)\"."
+msgstr ""
+
+#: 55dafa172e2f48b8824c3ad7287cc6c3 of sds.graph.node.GraphNode.__str__:1
+msgid "Return a simple string representation of the node."
+msgstr ""
+
+#: 4066573b81dd4003a1d48a3601a91e31 of sds.graph.node.GraphNode.__str__:3
+msgid "String showing ID and data."
+msgstr ""
+
+#: 01bcf5754a9e40948ac02978e57f30fd of sds.graph.node.GraphNode.__eq__:1
+msgid "Check equality based on node ID."
+msgstr ""
+
+#: 65cec6e0b6e545ab903c22bc93afcc8b of sds.graph.node.GraphNode.__eq__:3
+msgid "Two GraphNodes are considered equal if they have the same ID."
+msgstr ""
+
+#: 6d0ad83bee014d48a1e17775538be6a4 of sds.graph.node.GraphNode.__eq__:5
+msgid "The object to compare with."
+msgstr ""
+
+#: 3318c81ae4f84185bfa4a39706518391 of sds.graph.node.GraphNode.__eq__:8
+msgid "True if other is a GraphNode with the same ID, False otherwise."
+msgstr ""
+
+#: 4dfeb12ddbbc47ccb1bddc8a24426d04 of sds.graph.node.GraphNode.__eq__:23
+msgid ""
+"Equality is based solely on the node ID, not the data. This allows nodes "
+"to be used in sets and as dictionary keys."
+msgstr ""
+
+#: 1f951fba2c254fc985a7a50eb9198f94 of sds.graph.node.GraphNode.__hash__:1
+msgid "Return hash based on node ID."
+msgstr ""
+
+#: 2b1cf78f57a5448a9a8a4d4113cec07f of sds.graph.node.GraphNode.__hash__:3
+msgid "Hash value of the node ID."
+msgstr ""
+
+#: 0a7788159c624eca9e10384ca3413d1e of sds.graph.node.GraphNode.__hash__:15
+msgid ""
+"This allows GraphNodes to be used in sets and as dictionary keys. Hash is"
+" based on the ID, so nodes with the same ID have the same hash."
+msgstr ""
+

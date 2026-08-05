@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/_autosummary/sds.linear.node.DoublyNode.rst:2
+#: 63c19b2204c84743bb02ad86590a00bf
+msgid "sds.linear.node.DoublyNode"
+msgstr ""
+
+#: b710da6d64ae41f4965045eb5bddc2c8 of sds.linear.node.DoublyNode:1
+msgid "A node for doubly linked lists."
+msgstr ""
+
+#: 340f81bb14e54ae68275709f5eb1d419 of sds.linear.node.DoublyNode:3
+msgid ""
+"Each node contains data and references to both the next and previous "
+"nodes in the sequence. This allows for bidirectional traversal of the "
+"list."
+msgstr ""
+
+#: 4d843b1f8df84cc9a6cf4b63eabb0b9c of sds.linear.node.DoublyNode:6
+msgid "Internally uses _refs[0] for next and _refs[1] for prev."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.node.DoublyNode.rst
+#: 7b748632ef394e2186ea9b249dd38392 b9270ec3118748438378d3f5ceae5789
+#: d0c3c0025ecb4b35be73ddb23ef3b1e2
+msgid "Parameters"
+msgstr ""
+
+#: 33c02820d7354c6fb9b5626254ae66e5 4ae74e86d8af4af3b8c0ef85121d0538
+#: 7f2a26c51cbd4eb68477178390bf0690 of sds.linear.node.DoublyNode:8
+#: sds.linear.node.DoublyNode.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: 58f4e0e0d8c8446a85d02b721254c1d4 of sds.linear.node.DoublyNode:10
+msgid "Reference to the next node in the list. Default is None."
+msgstr ""
+
+#: 9c47d1b4e8204b5fa55ef7ce746a602c of sds.linear.node.DoublyNode:12
+msgid "Reference to the previous node in the list. Default is None."
+msgstr ""
+
+#: 8ff807c277fc452fae736b1775de1f0f of sds.linear.node.DoublyNode:17
+msgid "The data stored in the node (inherited from Node)."
+msgstr ""
+
+#: 1e052da60dd7430ba4aea08f30d68155 4b0376e0f61d429594d3e413aa9e2a52
+#: 7ce0bdf6e97549da941ac34c18ea112d cdd02dfd193a4509a522229923c0c97d of
+#: sds.linear.node.DoublyNode
+msgid "type"
+msgstr ""
+
+#: 2615a4a7e8f14df59cfeafb071ad9d8a of sds.linear.node.DoublyNode:19
+msgid "Any"
+msgstr ""
+
+#: 701f08df3ddb461194282474a081621e of sds.linear.node.DoublyNode:23
+msgid "Reference to the next node (property accessing _refs[0])."
+msgstr ""
+
+#: 723f59cacf1c49c495bca1603d709a2a e9eecc17d37f4b868e9ede703e14acf1 of
+#: sds.linear.node.DoublyNode:25 sds.linear.node.DoublyNode:31
+msgid "DoublyNode or None"
+msgstr ""
+
+#: 0ee45aea961547d48237529ee40daa68 of sds.linear.node.DoublyNode:29
+msgid "Reference to the previous node (property accessing _refs[1])."
+msgstr ""
+
+#: 6562a924e047472cb9eaee246161ecf9 of sds.linear.node.DoublyNode:35
+msgid "Reference to parent node (inherited from Node)."
+msgstr ""
+
+#: 0ea353eb5a8d41d1aaa5d3c6ae903736 of sds.linear.node.DoublyNode:37
+msgid "Node or None"
+msgstr ""
+
+#: 314c3ffa59be4529a3aa2ea5ee9dfeb9 5268a6a7c33447fca56d7405ecc063a2
+#: 59fa211c87fd4323b2ab5b5abd92fee9 8090f554a6334e8492c7bcfcf6bf3b1a
+#: c726a53b6c4f4ef8a338350fc5ac4feb of sds.linear.node.DoublyNode:39
+#: sds.linear.node.DoublyNode.__repr__:6 sds.linear.node.DoublyNode.__str__:6
+#: sds.linear.node.DoublyNode.next:6 sds.linear.node.DoublyNode.prev:6
+msgid "Examples"
+msgstr ""
+
+#: b4316e4bf96d4978a5ab780f9aa01fa8 of sds.linear.node.DoublyNode:41
+msgid "Create a simple doubly linked node:"
+msgstr ""
+
+#: 9873701448d04ca7985ef2ad0e6e2984 of sds.linear.node.DoublyNode:51
+msgid "Create a bidirectional chain:"
+msgstr ""
+
+#: 25a288584cb849128b87714125a66bf1 of sds.linear.node.DoublyNode:61
+msgid "Traverse forward:"
+msgstr ""
+
+#: 6b5918ae90f9407aa6c6b35adf338bdd of sds.linear.node.DoublyNode:68
+msgid "Traverse backward:"
+msgstr ""
+
+#: 17c50dca3bcf48a0911da0edd56f4b01 1db8082e349a46b9933903f491cc5568
+#: 5d0b0f5a9e2f4edaafd80827612f650d of sds.linear.node.DoublyNode:75
+#: sds.linear.node.DoublyNode.next:14 sds.linear.node.DoublyNode.prev:14
+msgid "Notes"
+msgstr ""
+
+#: 2caeaff5133b4690a9c47a5a2a9cdde3 of sds.linear.node.DoublyNode:77
+msgid ""
+"This class uses __slots__ for memory efficiency. When building "
+"bidirectional chains, you must manually maintain the symmetry between "
+"prev and next references."
+msgstr ""
+
+#: eaf95a7d10f543dba80554331c334745 of sds.linear.node.DoublyNode:83
+msgid ":obj:`SimpleNode`"
+msgstr ""
+
+#: 8476e5b5e9f545f0a808b044faefe951 of sds.linear.node.DoublyNode:84
+msgid "Node with unidirectional link."
+msgstr ""
+
+#: 700a8d96eabb4d52ac9818eac009a336 of sds.linear.node.DoublyNode:86
+msgid ":obj:`sds.core.node.Node`"
+msgstr ""
+
+#: ff441e90b04441169698c664fa39d4b2 of sds.linear.node.DoublyNode:87
+msgid "Abstract base class."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.node.DoublyNode.rst:21:<autosummary>:1
+#: 1e837dd3246b4739983b8bcf6d7f694b 733b1e5a60ba4ec487b18ca10ef32b0b
+#: 7e929f0c4cd7496c8af52700aeaf06e1 of sds.linear.node.DoublyNode.__init__:1
+msgid "Initialize a new doubly linked node."
+msgstr ""
+
+#: 6cc681c349274bbdace1cb38a660a43b ef0576df1ce94ffdbe0632b46fe95d68 of
+#: sds.linear.node.DoublyNode.__init__:5
+msgid "The next node in the list. Default is None."
+msgstr ""
+
+#: 1ad0aab6b5894026865107e89ec03006 eb3e566b1e0b48b7b2f6f2e252570e17 of
+#: sds.linear.node.DoublyNode.__init__:7
+msgid "The previous node in the list. Default is None."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.node.DoublyNode.rst:13
+#: 0d1e39969b36403f85c32b6c864f973a
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.node.DoublyNode.rst:21:<autosummary>:1
+#: 848247eca8574ba79ea059faa96b646d
+msgid ""
+":py:obj:`__init__ <sds.linear.node.DoublyNode.__init__>`\\ \\(data\\[\\, "
+"next\\_node\\, prev\\_node\\]\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.node.DoublyNode.rst:23
+#: e3988d675e1643a88e2a01185c49d552
+msgid "Attributes"
+msgstr ""
+
+#: 4aca113a23ba4bc7bfe9603aa4bb196a of
+#: sds.linear.node.DoublyNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.linear.node.DoublyNode.data>`\\"
+msgstr ""
+
+#: 45db34738d43491f9df5ce706cbe004d of
+#: sds.linear.node.DoublyNode.__init__:1:<autosummary>:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: 40c61aaf1f074cb8bf6befb30862c0c7 of
+#: sds.linear.node.DoublyNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`next <sds.linear.node.DoublyNode.next>`\\"
+msgstr ""
+
+#: 46b1132cbb46404f943eede7e8a23bb0 ce4f152773a24bb58a97a4e8fe63b53d of
+#: sds.linear.node.DoublyNode.__init__:1:<autosummary>:1
+#: sds.linear.node.DoublyNode.next:1
+msgid "Get or set the next node in the list."
+msgstr ""
+
+#: 8371f76c03864d4b9e3bcc17d3e227d5 of
+#: sds.linear.node.DoublyNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`parent <sds.linear.node.DoublyNode.parent>`\\"
+msgstr ""
+
+#: 97edb7e6b52d44b4bef7477a40c5c191 of
+#: sds.linear.node.DoublyNode.__init__:1:<autosummary>:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: 77696093ad6a4fa98b7f4a3f17f4f9d6 of
+#: sds.linear.node.DoublyNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`prev <sds.linear.node.DoublyNode.prev>`\\"
+msgstr ""
+
+#: 4035cda20077445ca3f715e584af09c9 8a8f4182952f4de09c56bceb2ae7123f of
+#: sds.linear.node.DoublyNode.__init__:1:<autosummary>:1
+#: sds.linear.node.DoublyNode.prev:1
+msgid "Get or set the previous node in the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.node.DoublyNode.rst
+#: 08935a56bd9648e79564ac212d41e084 8309a9abbbf441c38881b0a44f836116
+#: a156559dd12a417e9850dafe9b3ed934 bbe3f243c1ce4210a670dca4c736f6f9
+msgid "Returns"
+msgstr ""
+
+#: ccee498df4e04d75a204ae9a42155421 of sds.linear.node.DoublyNode.next:3
+msgid "The next node in the list, or None if this is the last node."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.node.DoublyNode.rst
+#: 21bdd13b2b4c447691cf4b73c67f7d5c 2b9f4af2f48247c08d2789cff7b521cf
+#: aaa33c645a6843b58e7c47d72d51e7c1 ca8d4f87f172457894d1092f33d8e60e
+msgid "Return type"
+msgstr ""
+
+#: 378b0d96cca24b63825417f7f1bcb64b of sds.linear.node.DoublyNode.next:16
+msgid "This property accesses _refs[0]."
+msgstr ""
+
+#: 06a0396ba71f4e44a6289986977844d1 of sds.linear.node.DoublyNode.prev:3
+msgid "The previous node in the list, or None if this is the first node."
+msgstr ""
+
+#: 5e1a24d311484a68ba32b792510f1464 of sds.linear.node.DoublyNode.prev:16
+msgid "This property accesses _refs[1]."
+msgstr ""
+
+#: 9d69483cab8e4b4281ba1624b04de687 of sds.linear.node.DoublyNode.__repr__:1
+msgid "Return a detailed string representation of the node."
+msgstr ""
+
+#: d99bacfcea274123876c1ca38637f266 of sds.linear.node.DoublyNode.__repr__:3
+msgid "String representation in the form \"DoublyNode(data)\"."
+msgstr ""
+
+#: d30b1149e21d4274912a8e99f3d3b10b of sds.linear.node.DoublyNode.__str__:1
+msgid "Return a simple string representation of the node's data."
+msgstr ""
+
+#: 9e4c31a3689b487eba9730fa236f8612 of sds.linear.node.DoublyNode.__str__:3
+msgid "String representation of the data."
+msgstr ""
+

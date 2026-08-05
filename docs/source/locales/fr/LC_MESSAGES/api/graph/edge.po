@@ -1,0 +1,1135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/edge.rst:5 60cf6c82470542d1baf29b6644efe375
+msgid "Graph Edge Classes"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:10 657cf25ccfdd42a0b1dfb5b7aa8e9f6f
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:12 4487e47f28ab4b6b97353a8af16b3864
+msgid ""
+"This module provides edge implementations for connecting nodes in graph "
+"structures. Edges can be directed or undirected, weighted or unweighted, "
+"allowing representation of various graph types and relationships."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:51 772a453d87354a588207f80aa4a0f4ac
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:61:<autosummary>:1
+#: fb9a4b5613c843568528a295f315427a
+msgid ":py:obj:`Edge <sds.graph.edge.Edge>`"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:61:<autosummary>:1
+#: 524f3c3a13a143adbaa74771853aac6b dda3fbae028a48c5bf817e8305f441cc of
+#: sds.graph.edge.Edge:1
+msgid "Base class for undirected, unweighted edges."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:61:<autosummary>:1
+#: bff5b0bd978e4b3cb5d029ec16ceada3
+msgid ":py:obj:`DirectedEdge <sds.graph.edge.DirectedEdge>`"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:61:<autosummary>:1
+#: 05929054d7a4400e98c969338c9e71e8 f5c81fefedc64ec8bccf772643f4bf54 of
+#: sds.graph.edge.DirectedEdge:1
+msgid "Edge with a direction from source to target."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:61:<autosummary>:1
+#: 8e1e4f8315314599b8ca08a19fb67849
+msgid ":py:obj:`WeightedEdge <sds.graph.edge.WeightedEdge>`"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:61:<autosummary>:1
+#: ef597459680b4adf82968769e60f5ccc ff153f97786241d7b23a2ce319ccdfac of
+#: sds.graph.edge.WeightedEdge:1
+msgid "Edge with an associated weight value."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:61:<autosummary>:1
+#: ade9a3d8415b4e9ab0cee88eb2abfd1e
+msgid ":py:obj:`WeightedDirectedEdge <sds.graph.edge.WeightedDirectedEdge>`"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:61:<autosummary>:1
+#: 0032c298702f42569c8f0ea57287117e 23f6245a92e54b2394f9a23d89e65d5d of
+#: sds.graph.edge.WeightedDirectedEdge:1
+msgid "Edge that is both weighted and directed."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:63 fa93db9166b0415cbc68be62cafc6e31
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:66 57c18c44c9504ee7883fd0b671f00c73
+msgid "Edge (Base Class)"
+msgstr ""
+
+#: 5ea967d0810a40ffbc3554f600bbb45d of sds.graph.edge.Edge:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: d784c5bcb1b34835898880ea1e24a019 of sds.graph.edge.Edge:3
+msgid ""
+"An edge connects two nodes in an undirected graph. The edge has no "
+"inherent direction, so (u, v) is equivalent to (v, u)."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst 01088efcc06c4cc989144eb1724f0243
+#: 190f0599fb2043f69b91dd0d3e8b35f6 1ed484c3195c408cab936e9d4738903f
+#: 1f677ca462e74732a5bbe1ea109a24e6 3cfc9aa661be438bb269355638867a5b
+#: 3e16184be5e940289887a0ca9b4e76ee 42c3a351e6fd468d82e98f219b5a421b
+#: 440fecbdcc0943838603815b3d3883b5 46aa85b0946d44d6b19403f895e0c1e2
+#: 4d94207b17bd4c5abd2d213a5a4c5bdf 5a92408146474d9092de1905a1989308
+#: 6dc7cdbc0b14422c97a771179a6fc69b 7c6ef45c748a40dfafb7979addf3ae5c
+#: 964fec214dc74ae78b942203200c3477 9a2293e55f934b8c89a95479de41835e
+#: 9eda3a1b861747f89eee7b6cd25b5c40 a3b25d49b50249d29feed2b52bd9ea36
+#: a89c206adbcf4c859af8df55ecde719b ae78aa41bca64f9cbe5441a0734c36bc
+#: d0cedbd1ef214687af75c88967ab40ed def253e6f2d443ddbb1ec0595dbd0943
+#: e028c1db27bc4045abeb24e0ecfca497 ff895525699847748142817487305c66
+msgid "Parameters"
+msgstr ""
+
+#: 50e7a4c10e9e4d4f971c53ca60f1c352 of sds.graph.edge.Edge:6
+msgid "First node connected by the edge."
+msgstr ""
+
+#: ffeb9fac975b4ef8b022c7bbf573189b of sds.graph.edge.Edge:8
+msgid "Second node connected by the edge."
+msgstr ""
+
+#: 2662212b93564d3ab850769b0826c70a of sds.graph.edge.Edge:10
+msgid "Additional data associated with the edge. Default is None."
+msgstr ""
+
+#: 6374ab28b6cc4781b3ab365c030a2ffb of sds.graph.edge.Edge:15
+msgid "First node (read-only property)."
+msgstr ""
+
+#: 022bc98e71974d558182f6bde8b98e39 029bb242ae154effb8b476fd7050da56
+#: 0fd3e39556c04b9eb1f1eec9abccefb3 1548e020dc38453998bda821e23aa843
+#: 1a0eb9007c2041c69985b82f5575b9bf 34005647f68d416cb3c762aa49b7f83d
+#: 451316a98e6e4274b82b231dcbee65ae 6140b43996fe4e65a53ed941c2cbf84f
+#: a7ce3908449e4116ae9f3e919fb777d9 aed21eb67eaf4681869e26dce832fc45
+#: fbfe20f272e74472ab42e57531de8ab7 of sds.graph.edge.DirectedEdge
+#: sds.graph.edge.Edge sds.graph.edge.WeightedDirectedEdge
+#: sds.graph.edge.WeightedEdge
+msgid "type"
+msgstr ""
+
+#: 2e2721796295418882e5318a953e879e 5eec2145cdb34de7a1d91e8577c6eaf4
+#: aae4aafda9b94e15af557578d372b99a bc3a53baa8bd47228b0ec9d1ddc675d2
+#: bf3fc0ea0910454cb615c47e9f4e8375 c8142220e0814985beff31cf35732cc3
+#: fbdbb9e51d07406597250b657ca2e918 fe54057abf5a4d55ad4656bd2401acb1 of
+#: sds.graph.edge.DirectedEdge:17 sds.graph.edge.DirectedEdge:23
+#: sds.graph.edge.DirectedEdge:29 sds.graph.edge.DirectedEdge:35
+#: sds.graph.edge.Edge:17 sds.graph.edge.Edge:23
+#: sds.graph.edge.WeightedDirectedEdge:24
+#: sds.graph.edge.WeightedDirectedEdge:30
+msgid "GraphNode"
+msgstr ""
+
+#: 14eca6e266364eef93a6abb1f9db2f5a of sds.graph.edge.Edge:21
+msgid "Second node (read-only property)."
+msgstr ""
+
+#: 76dcafc2985c40ffaba3418afca54fbf of sds.graph.edge.Edge:27
+msgid "Additional edge data (read-only property)."
+msgstr ""
+
+#: 7f5273d68d864fc2a20f50dd9aef436b of sds.graph.edge.Edge:29
+msgid "Any"
+msgstr ""
+
+#: 059a855908604771998cf73182404431 0d2d1cbb20d141e7935e60a23057335f
+#: 187d6a3ac206413081a83fefc2131dfb 350e1f6b2cde487cbb3f9b09aa10984f
+#: 3d353591c5bd444aa3db2833e6c0cf46 3fa950136dc2480daa0cb2098a60126b
+#: 4af9920a88924af1a056661829841b57 4b0ddfdd724b4ee9841e27db71b9daa4
+#: 61480e6bc3b14c7f8a0839c2a70cfd25 65f05ec4f7cb4401a9ce955260c1a324
+#: 680ee9164ac84b049e05b117b6cd1442 77a6a912b00c4ddf90a2d81ee5a351e2
+#: 8069b1881c414be3b48b9a24e8878b37 a1128daf58e846419a82f7f6c8bc2887
+#: a64b4b85e606434b8e7e052ce70fa7d5 a6e609abed79429bb6349cb4b21c77d4
+#: abbc96a731aa4ab1a5c86f37c3c9331e df804893bf2d47449305a0f364d0ee8b
+#: e1ac766e3f214922b12fe334e2b01faf e8ff1cbb25b04b5e8c3fe268e1fc925c of
+#: sds.graph.edge.DirectedEdge:37 sds.graph.edge.DirectedEdge.connects:13
+#: sds.graph.edge.Edge:31 sds.graph.edge.Edge.__eq__:9
+#: sds.graph.edge.Edge.__repr__:6 sds.graph.edge.Edge.__str__:6
+#: sds.graph.edge.Edge.connects:13 sds.graph.edge.Edge.incident_to:9
+#: sds.graph.edge.Edge.is_self_loop:6 sds.graph.edge.Edge.other_node:11
+#: sds.graph.edge.WeightedDirectedEdge:32 sds.graph.edge.WeightedEdge:21
+msgid "Examples"
+msgstr ""
+
+#: 004f84bec4594a309ce78f7db5ea2729 of sds.graph.edge.Edge:42
+msgid "Store additional data:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:754 15e6ce72d5e44fe2a16bac98cfb0b2b8
+#: 31362fe72d2c4316b71372cc37351c2c 89dff3b7261d4deaa9beda7084877f0d of
+#: sds.graph.edge.DirectedEdge:51 sds.graph.edge.Edge:48
+msgid "Notes"
+msgstr ""
+
+#: 6a59be3b20a640bbb30f435db61b1963 of sds.graph.edge.Edge:50
+msgid "Edges are immutable after creation. Use __slots__ for memory efficiency."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:75 ../../source/api/graph/edge.rst:108
+#: ../../source/api/graph/edge.rst:132 ../../source/api/graph/edge.rst:149
+#: 2111247e81254d2dba2f2ddfcb98627f 3d984e535e4d4b38b7770c41e3e37c3b
+#: 8500f39a912d4035a5c61df856fe1a69 f267bfe0a11f40e6acc5c302aa9ee372
+msgid "Constructor"
+msgstr ""
+
+#: 9c28de8521224511ac7036a51441eab2 c09f2759c2dd416ab68ba2837a87d982 of
+#: sds.graph.edge.Edge.__init__:1
+msgid "Initialize an undirected edge."
+msgstr ""
+
+#: 1fd6218ad09d44f1a270d8f14566f427 5aa5f4110e224351b88dcb51168068f0
+#: 6b978f02e04c46e5b3d1b65fa7a1ad97 8ff7e6c509a5494594201d8666e71db9
+#: bf615457fa154e588a21b825480d6915 of sds.graph.edge.Edge.__init__:3
+#: sds.graph.edge.WeightedEdge:6 sds.graph.edge.WeightedEdge.__init__:3
+msgid "First node."
+msgstr ""
+
+#: 2bf74b35c2244266a3778472398077c9 4bb6e5e650a0411e8a168b7c706ed41c
+#: 587dd53fed3340eaa38f0bd7159569eb 63666e178d794310abd9ab03c2e243bc
+#: 67b487d8da674c89acf447c3d6a0aa98 of sds.graph.edge.Edge.__init__:5
+#: sds.graph.edge.WeightedEdge:8 sds.graph.edge.WeightedEdge.__init__:5
+msgid "Second node."
+msgstr ""
+
+#: 2a88c44c34b143e7ba993fde9a097283 502294759c264d2e9ee1b40916a8d228
+#: 50327965f83a4c1cad5262fd7ed7688d 541550cbb4bd49fba6a6bb551f456053
+#: 7b46b937764c47ca81b6f920f54cf642 8beffae59a3c4863a039ddf779a52887
+#: a6501030a5b747edb24f31490413b082 b328981442f94c748d1f2fbc22e2ab3a
+#: cdb7c35daa2f490184f063333390c9f9 d03d9a778482450b9603a6044f7d90a6
+#: d6ecdef9538c415d81cb77fe3d3b9161 of sds.graph.edge.DirectedEdge:10
+#: sds.graph.edge.DirectedEdge.__init__:7 sds.graph.edge.Edge.__init__:7
+#: sds.graph.edge.WeightedDirectedEdge:11
+#: sds.graph.edge.WeightedDirectedEdge.__init__:9
+#: sds.graph.edge.WeightedEdge:12 sds.graph.edge.WeightedEdge.__init__:9
+msgid "Additional data. Default is None."
+msgstr ""
+
+#: 88a0867fd38c4da7bbd6d76706b9784d eadf5a8522d8423caab157ebc6cf038e of
+#: sds.graph.edge.Edge.__init__:9
+msgid "Allow self-loops. Default is False."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst 212273f739cc45319165d2dd355cccf3
+#: 48dbe7e50e614f04a95912356da28caf 70b8cd9c7b8049cfb315bce58b28fb14
+#: 72e1d852df0f44b2b1c7afe243c61f45 7f162fed6a844c379befa58420fdf7e7
+#: dc8bdf6fd7744eb49e6f5d2ddca79e86
+msgid "Raises"
+msgstr ""
+
+#: bbdb2f13bc1b46b2b881363c7c95f962 facd2527ff3b4b8d81b355cc98531322 of
+#: sds.graph.edge.Edge.__init__:12
+msgid "If node1 or node2 is not a GraphNode."
+msgstr ""
+
+#: b3874a4335bf49678c93712772e3fe2d ebfa9682835946d69b80add15f558161 of
+#: sds.graph.edge.Edge.__init__:13
+msgid "If node1 and node2 are the same and allow_self_loop is False."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:79 ../../source/api/graph/edge.rst:112
+#: ../../source/api/graph/edge.rst:136 ../../source/api/graph/edge.rst:153
+#: a276681369ae4193ac7975165322c5ef ad17d72bb43b41528008fb75fcae2317
+#: cd7550dfc0a54147be689c80a6bb769b e0d608c733414922b966a837afac4895
+msgid "Properties"
+msgstr ""
+
+#: 586d9baac4fc4ba29a910c5f04306329 900350cc4e82443ba4b9abbcf7b6dc21
+#: 9d93355e888645179b04f1a43bb9f204 of sds.graph.edge.DirectedEdge.node1:1
+#: sds.graph.edge.Edge.node1:1
+msgid "Get the first node."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst 045372c5917e4b4c9758dcfd1ca8b521
+#: 0cf01c97aaa4455a9cdf09e9be8cebc9 1717ffcbec5a4558b7e9b093f3d82c60
+#: 21a2aa8261a140038c0dc90d8035ec47 27249006306d4dbea937643616e65fe8
+#: 2919f800f9cf4cadbc8bc792469d43fb 2ba83db11cb644bfa2a1d2383fecd37c
+#: 2d29195021ce4b8991380ba664d0f962 33ce3149f748463b8619575fe9d71a95
+#: 37f477080f0e4272a6318fdf23d9908b 48a190826fb543a4ab920f232e706a29
+#: 49319c96af98482a9c69784afae4cc8a 53d394a083274c86afe22577f253c5c7
+#: 5c9ae7e0b1c1474f93c13924efd9b207 63030d6221954b86841d34f364490ec4
+#: 6348ff161f8642e1a23beef32a6bd96c 64d1431ffdcd43fdb18c1088e1cc7c7c
+#: 6895ec317c1c4b999376db2578c06180 6afe32c98f6f415ab4654aef73a49bef
+#: 6b36bf543b06408088ff3238b6e31973 767aefb4f6fb4da0a1f35dc9ae768c39
+#: 7852cbc27f8344a881e61bb3c47308bc 7a1fbf7a02f04092befe057b00f2dcb4
+#: 7d83b3aeff3c4573ac59067d91e9a65b 89fc146a158e44e9b67f26c1c2a76624
+#: 8b3fb8c29ea44c3b912de6301acb1d73 8c9ca42d20b049cc8f6204cfedd68032
+#: 8e5cb53c7d4d47a9a6b17a213a6eb4af 9662231f0a354b798d6cc867346134c3
+#: a64f219a2c17419ea3e20f0578e43741 a8b6c8fb20d541f4a69b9d4e98497891
+#: afa79e7f3d144ec28af8efeaf5e682ec b5838b990a03450ab93766a788218e29
+#: b6883cc4f6f14090ba444be2b41c45bc c0dc36a15ca8436887b49df7b8d59e83
+#: c4a779d8de9a42c182572a0ef08ec779 c87976a921994f70a39c819a7bb07f38
+#: ca4c890c19cd425d999c73ca8590a04f dd6d1c7530f6445aa5abb79ca24c2704
+#: f10d6e5564ee4402a16208ea87a78dbb f2f5c6bb205f425d953a7cc751eeb6e0
+#: f6cdcc39edd84833a5ad68f53474defc f7aea75a9c9f4ce39e670f35b7795541
+#: f9c556ad0651441bb3230e215e2d69ab
+msgid "Returns"
+msgstr ""
+
+#: 178de8ee1c854b4399543a33ccedeeff 62672ec3a66f4fee88fe1423bf465ff5
+#: 85754f2cef144e248dda021583c23e4a of sds.graph.edge.DirectedEdge.node1:3
+#: sds.graph.edge.Edge.node1:3
+msgid "The first node."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst 01b0654930cd4440812ac7204000b43e
+#: 1530672b7ef54bc6a02d28713407762f 1638ec315d6946a7bb59500fedeec55b
+#: 2208e22f0bd94128950853e3a08bb7ad 2e3142190657491cb4e52001840d4bda
+#: 2fb3f9c6718f49d58122545cd5853c6a 2fcc0367a0fd43e3baa31a48b61029c2
+#: 34095bdcfc164c06904e6f8fa5004f47 3d10dbf525af44c992f03978d3544813
+#: 3eedc39bbf55444b9ccf648af305bee4 5dff188bec3b4705b5dadc9b7cb84f62
+#: 5f6c67e0e87d42a39f180682c3381442 61b28279fda2405685c187418de164f6
+#: 66fea0ef85b9434aaa09dc3c742440c5 7041c6d2b9944f8c9a9f2f7726489f42
+#: 70b588532a56448a81883184a1b312cd 7c09a107e0a449a8a7dc3f7ed4fc315d
+#: 8813fe1bb44b48c6960f51cac1c255ba 88cd708284804f86968d968cb3883135
+#: 97b4f92b87c8400ab73d49de32c8568a 98baf10c385c40309ac417d4ee74119d
+#: 98c4b3d491ac4c6980e467af7105f41c 9d239527134749f594d4fa7af9b0a2cc
+#: ad7701ce6d7b43ffa74235047a476a27 b41b40a760eb45d994a7073b5f042138
+#: b4a94533f6cb488c98f62cc2c9bb5ccd c167ed1a5e604931886b522f93281c52
+#: c5f2367f79f640298a86690abab6bc6c cb25962fcbdf4198b3b617148945415d
+#: cf51dc4a65cb40aab3a890eab8018ed1 cf99ee6776854e93bb3e8e036621fe09
+#: cfce567fb8784eecb9aea855db872d09 d2c95608237b4e4b873807dd6a833a31
+#: d3813698773742da873be99aade7c210 d77333f28afe43129e9eb5ce95e599f6
+#: d955a871797e4fb8b3dc2c521c93c8b0 e18b5bee238a4e10b547b7c459f44172
+#: e3913dc98db44298864972ab3bacdb3f e6aae1023fe54b0e80e6ef66f3143f73
+#: eb7fc2a5570d41819a4e007c22af0f27 ed9806d857934ce398f715e05355dc2e
+#: efd5c2ac3bf5475bba66ec870caa1cd1 f458da9cb6904fce8e0e3910a1ddf8dd
+#: f604994a1ec14558af1666f06765093f
+msgid "Return type"
+msgstr ""
+
+#: 980390441f8f401989e1761b590d596f af6dc904b50d420e9bfb5f3c915372c7
+#: fffb5c1d8e8e45098db4cef04a237193 of sds.graph.edge.DirectedEdge.node2:1
+#: sds.graph.edge.Edge.node2:1
+msgid "Get the second node."
+msgstr ""
+
+#: 1ba03d1b9e324524a0fe02c76eef2f91 657e9242c39c4004a5bcfb388e804300
+#: aa6b9db882e64e678cb24f9cc7cf0480 of sds.graph.edge.DirectedEdge.node2:3
+#: sds.graph.edge.Edge.node2:3
+msgid "The second node."
+msgstr ""
+
+#: 0dae6eda96af42b3bbea43a45454fbae f292b5a47f88475299589f5fca19feb7 of
+#: sds.graph.edge.Edge.data:1
+msgid "Get the edge data."
+msgstr ""
+
+#: cc10bb9374444934a772d4e8a31f1ae1 d3a4b6d777854f44b206728788c304c6 of
+#: sds.graph.edge.Edge.data:3
+msgid "The edge data."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:85 ../../source/api/graph/edge.rst:119
+#: 598d521441c3401b9e0a59afa369bd67 f34b8b0e09a142c49910f60894a6cbff
+msgid "Methods"
+msgstr ""
+
+#: 35064c7fe89c466d8bc3694491a80983 8b8da609ebfd4c38b1458c6552a6435a of
+#: sds.graph.edge.Edge.connects:1
+msgid "Check if edge connects two specific nodes."
+msgstr ""
+
+#: 16eeec561bd34aefb1dbfe1a677d84b8 667171dcc40845eeb830026b262a17c3 of
+#: sds.graph.edge.Edge.connects:3
+msgid "For undirected edges, order doesn't matter."
+msgstr ""
+
+#: 5502862682044db4b7b15763cac10074 ffb699825ece4e6a84a6e87ce6d80106 of
+#: sds.graph.edge.Edge.connects:5
+msgid "First node to check."
+msgstr ""
+
+#: 4eff9e66a1ef46faa1772ee255068f1f 8d104cb3206e4a46bc53a43dc18b14ac of
+#: sds.graph.edge.Edge.connects:7
+msgid "Second node to check."
+msgstr ""
+
+#: a0c70256574f41f59811ab6d2cdae227 ca25fa20e25342eb8b2e7e4b9f4b6ebc of
+#: sds.graph.edge.Edge.connects:10
+msgid "True if edge connects node_a and node_b."
+msgstr ""
+
+#: 3a463c793ed24f28b86c7542e4ee0c3b 94220b2cbdb941bf9e64d3531b94ab82 of
+#: sds.graph.edge.Edge.incident_to:1
+msgid "Check if edge is incident to a node."
+msgstr ""
+
+#: 0bd213fe6afe45f7b270225b0f4e9f69 6ef4026c38f54ca484da0a4e0a5a9778 of
+#: sds.graph.edge.Edge.incident_to:3
+msgid "Node to check."
+msgstr ""
+
+#: 4dd6a3e731864d26ac761c3b9d4e662b f1287fcca20f468a88c3a9892f646e8b of
+#: sds.graph.edge.Edge.incident_to:6
+msgid "True if edge touches the node."
+msgstr ""
+
+#: caa9ff34210042eda8056605395e0401 e673e278685f43a4a56c1b74662714aa of
+#: sds.graph.edge.Edge.other_node:1
+msgid "Get the other node connected by this edge."
+msgstr ""
+
+#: 539d4744ccb0408d9b5b864f38574073 e0c624ad5b4341eba300ac814370ddc1 of
+#: sds.graph.edge.Edge.other_node:3
+msgid "One of the nodes in the edge."
+msgstr ""
+
+#: 48cf0005ad884478a5405358041234d7 ca4048e451164e448df2f74ccdbfa45c of
+#: sds.graph.edge.Edge.other_node:6
+msgid "The other node."
+msgstr ""
+
+#: 48c7f292b2b543f18a713044f6b11d35 80689964e1eb4231966d647698e3e6bf of
+#: sds.graph.edge.Edge.other_node:9
+msgid "If node is not part of this edge."
+msgstr ""
+
+#: 902b1728642349e6bec5ce2f5a202ecf 9f93a891f49544eea34e2bc65244f192 of
+#: sds.graph.edge.Edge.is_self_loop:1
+msgid "Check if this edge is a self-loop."
+msgstr ""
+
+#: 2e2718d30db04ba8ada71da711a45bd7 56da4ba0363245c1acd21e06230c2450 of
+#: sds.graph.edge.Edge.is_self_loop:3
+msgid "True if the edge connects a node to itself."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:92 47e02c2e2b514e69bf90ab5eb9c00914
+msgid "Special Methods"
+msgstr ""
+
+#: 0128f079e9da4e17a301d05568fdf7af 1366dacd49694ddaa567c5d05e0e3d52 of
+#: sds.graph.edge.Edge.__eq__:1
+msgid "Check equality based on connected nodes."
+msgstr ""
+
+#: 337b84cd73444ad5b09f170386f3e615 66c1f10d7c024d2dacbc971b4eddf09b
+#: 92753894fe0b43c0bca5a5496a533c28 of sds.graph.edge.DirectedEdge.__eq__:3
+#: sds.graph.edge.Edge.__eq__:3
+msgid "Object to compare with."
+msgstr ""
+
+#: 119d2700cabb4d8e95c6fb5c6e0e543c dbceafaaa52f460ab5e670d0876dedad of
+#: sds.graph.edge.Edge.__eq__:6
+msgid "True if edges connect the same nodes (order-independent)."
+msgstr ""
+
+#: b7a19fc79adc4ecf90b4adc117ec227d fde5b06e803541469a11e68e3741ec10 of
+#: sds.graph.edge.Edge.__hash__:1
+msgid "Return hash based on connected nodes."
+msgstr ""
+
+#: 1a60203fa8f5417ea0681d3cec16dad9 96e673d338b64dbb9964cee85ca09f10 of
+#: sds.graph.edge.Edge.__hash__:3
+msgid "Hash value (order-independent for undirected edges)."
+msgstr ""
+
+#: 46169bf8947244e7b999aef4c4d0c65b 58fe262b534b4765a39582611c41232b
+#: b47dbdad71484a64a187de5ac20b73cb b7074c4269b14641a8c4422b73651cdc
+#: bc77b0bb310849b4b00810de0e0d9843 of sds.graph.edge.DirectedEdge.__repr__:1
+#: sds.graph.edge.Edge.__repr__:1
+#: sds.graph.edge.WeightedDirectedEdge.__repr__:1
+#: sds.graph.edge.WeightedEdge.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 0d828ab8fa31436fb91dea350a83fc87 b3a2fad8c69f45f2bbc3210d59673edd
+#: bffdfe801f75419cb997c5b0bab3fc38 e9318c13a10c479b9fa0b10cfc2db83b of
+#: sds.graph.edge.Edge.__repr__:3 sds.graph.edge.Edge.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 4843dad2200347dd9196ede79d24bae9 8864992319c14191aa536fbb857e5451
+#: affede5906104a69bb56cd56f68e9afb c6d81bec6bb4411ab424b5cca44a3006
+#: cec2f369dea04f00b6cd824a258acedf of sds.graph.edge.DirectedEdge.__str__:1
+#: sds.graph.edge.Edge.__str__:1 sds.graph.edge.WeightedDirectedEdge.__str__:1
+#: sds.graph.edge.WeightedEdge.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:99 ../../source/api/graph/edge.rst:542
+#: 11d7aeb5801949689a9d0ef2e69f1e2e 4a3be8bcf4d04ba3a1233128b23dfe56
+msgid "DirectedEdge"
+msgstr ""
+
+#: 420b7882eb7f4850870842bb5443abc5 bdcba26180584543b4686424c7944ed1 of
+#: sds.graph.edge.DirectedEdge:1 sds.graph.edge.WeightedEdge:1
+msgid "Bases: :py:class:`~sds.graph.edge.Edge`"
+msgstr ""
+
+#: 254f55f345804009a3f99d12935b54c6 of sds.graph.edge.DirectedEdge:3
+msgid ""
+"A directed edge has an explicit direction from a source node to a target "
+"node. The edge (u, v) is different from (v, u)."
+msgstr ""
+
+#: 3e212b113f404a0aa606e8066790d5ee of sds.graph.edge.DirectedEdge:6
+msgid "Source node (tail of the edge)."
+msgstr ""
+
+#: 35131255ec4440668d3706392cfc1ba3 of sds.graph.edge.DirectedEdge:8
+msgid "Target node (head of the edge)."
+msgstr ""
+
+#: 009ae81569164f39bcde66614cafe8be db6a63c4ca7046a78a51cdbcde55108d of
+#: sds.graph.edge.DirectedEdge:15 sds.graph.edge.WeightedDirectedEdge:22
+msgid "Source node (read-only property)."
+msgstr ""
+
+#: b2de33fa4243499eba984028298bf075 c9c6bf62de7c4a888911198cac000428 of
+#: sds.graph.edge.DirectedEdge:21 sds.graph.edge.WeightedDirectedEdge:28
+msgid "Target node (read-only property)."
+msgstr ""
+
+#: 742f4ef8b6d74fd88e42a9c78ffe25da of sds.graph.edge.DirectedEdge:27
+msgid "Alias for source (inherited property)."
+msgstr ""
+
+#: 288beef372674ad38536e97adb693e8c of sds.graph.edge.DirectedEdge:33
+msgid "Alias for target (inherited property)."
+msgstr ""
+
+#: c73166e861b942a49d9f1c3f0b4129bb of sds.graph.edge.DirectedEdge:53
+msgid "DirectedEdge overrides connects() to respect direction."
+msgstr ""
+
+#: 69c05dbbbc614bab991284f74ff5baef 8b2455ed9873486882bbf1455e698d03 of
+#: sds.graph.edge.DirectedEdge.__init__:1
+msgid "Initialize a directed edge."
+msgstr ""
+
+#: 14ff424abd414f06b2e7db8fe774b94d 3b09ab4414ec46ec942c644a90b1f90a
+#: 805727f6f4e94395b5a229b2e57f3126 a5d56d633f7c421b93f7a102a315038e
+#: b9b3d2e37b4f46c28ee939ed4e72693f of sds.graph.edge.DirectedEdge.__init__:3
+#: sds.graph.edge.WeightedDirectedEdge:5
+#: sds.graph.edge.WeightedDirectedEdge.__init__:3
+msgid "Source node."
+msgstr ""
+
+#: 0c91676eb44d42378a3ef69d3077be66 0f3c3b6988a74f40a79c14487397a465
+#: 256d4262a79449f09c95839407610e56 6dcf7bf56a5a4d5da1d83f195c5aa155
+#: b7f47084b3a1430cb73adbece4cf8096 of sds.graph.edge.DirectedEdge.__init__:5
+#: sds.graph.edge.WeightedDirectedEdge:7
+#: sds.graph.edge.WeightedDirectedEdge.__init__:5
+msgid "Target node."
+msgstr ""
+
+#: 40971def0d204fc6b7617a57819900ba a740ee4f526c429383c06fde5b6e6bdb
+#: e6b0eb1c6a1d4c8084e1bff3c2233a0b of sds.graph.edge.DirectedEdge.source:1
+#: sds.graph.edge.WeightedDirectedEdge.source:1
+msgid "Get the source node."
+msgstr ""
+
+#: 088568a232c940349fc7a4741dfb3ce3 4456667f1a3345909ec8dfc7c4fa7d6c
+#: ac13b8dcc3574c159202b5783c680c3a of sds.graph.edge.DirectedEdge.source:3
+#: sds.graph.edge.WeightedDirectedEdge.source:3
+msgid "The source node."
+msgstr ""
+
+#: 7151e999b6b04cba8667ed1ee270e691 cdbfe42bf0ae41498d504f1acecd72b3
+#: d6c4e2d3fe174924b36232b1c3747f92 of sds.graph.edge.DirectedEdge.target:1
+#: sds.graph.edge.WeightedDirectedEdge.target:1
+msgid "Get the target node."
+msgstr ""
+
+#: 3a9bad7a73e5487eb3591fc7018579c9 d84ae36250b541cabd9f7f28268bd8c9
+#: fdd52c7283b3470d8a7726ad4abf9242 of sds.graph.edge.DirectedEdge.target:3
+#: sds.graph.edge.WeightedDirectedEdge.target:3
+msgid "The target node."
+msgstr ""
+
+#: 936341209ec8486ca54b7e5e2755fc6d bf94de2005b8440abb365a6c05a126de of
+#: sds.graph.edge.DirectedEdge.connects:1
+msgid "Check if edge goes from node_a to node_b."
+msgstr ""
+
+#: 78a8ad12b80e4606a63d86e32202080d d0471eeda3fd4cd599dfb9d705d10603 of
+#: sds.graph.edge.DirectedEdge.connects:3
+msgid "For directed edges, order matters: edge must go from node_a to node_b."
+msgstr ""
+
+#: 093a05391fd14dc8b9dcfe2cb829f250 42e098978deb49d79c2fe5d3ec0845ac of
+#: sds.graph.edge.DirectedEdge.connects:5
+msgid "Expected source node."
+msgstr ""
+
+#: a5e4ad5b6c404fa5b00de7390087bc1e cbd3d5e03455480bb85c4b56a1e747fa of
+#: sds.graph.edge.DirectedEdge.connects:7
+msgid "Expected target node."
+msgstr ""
+
+#: 07584b55c776422bbf396e5685008394 d2525ea6e7954b0082664042be92e097 of
+#: sds.graph.edge.DirectedEdge.connects:10
+msgid "True if edge goes from node_a to node_b."
+msgstr ""
+
+#: 093d44d9bc4741a88800418e4f25d318 of sds.graph.edge.DirectedEdge.__eq__:1
+msgid "Check equality respecting direction."
+msgstr ""
+
+#: 7d191c9433d0433ba2791529e63ea32e of sds.graph.edge.DirectedEdge.__eq__:6
+msgid "True if edges have same source and target."
+msgstr ""
+
+#: c49ebe3388f2400688c18124b7e480ad of sds.graph.edge.DirectedEdge.__hash__:1
+msgid "Return hash respecting direction."
+msgstr ""
+
+#: d9659133752845cdb11189cc7305019a of sds.graph.edge.DirectedEdge.__hash__:3
+msgid "Hash value (order-dependent for directed edges)."
+msgstr ""
+
+#: a75fd8efd9c34526a2cb68f4e7347924 of sds.graph.edge.DirectedEdge.__repr__:3
+msgid "String representation with arrow."
+msgstr ""
+
+#: 9b9ca0304d294ab5abe967165776b5fa of sds.graph.edge.DirectedEdge.__str__:3
+msgid "String with arrow showing direction."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:123 ../../source/api/graph/edge.rst:543
+#: cb827f7bf2a04df8aa949ab2822a94a6 f6979470e63849aa966d5f9dcfa2129f
+msgid "WeightedEdge"
+msgstr ""
+
+#: aad7cfd6d1124e7baf1cb68519f1a2fa of sds.graph.edge.WeightedEdge:3
+msgid ""
+"A weighted edge has a numeric weight representing cost, distance, "
+"capacity, or other metrics."
+msgstr ""
+
+#: 0818794b1f3c44cf98f60b20f1681dab 1cc53310ce2a4953a50dad39aaf15fd5
+#: b029454c44114f488afdfccf7d023e43 bdceff41bbbd416ca2f583e79bc22090
+#: daa44054265442e19c63f8184f33a833 dcb4dcde4f264e21ac6b377877dbd5ea of
+#: sds.graph.edge.WeightedDirectedEdge:9
+#: sds.graph.edge.WeightedDirectedEdge.__init__:7
+#: sds.graph.edge.WeightedEdge:10 sds.graph.edge.WeightedEdge.__init__:7
+msgid "Edge weight. Default is 1.0."
+msgstr ""
+
+#: 30a1f6ff9b73401ab4b49bb3c306c9da 750f9dfd806f4120aac66a4ebbc4a24c of
+#: sds.graph.edge.WeightedDirectedEdge:16 sds.graph.edge.WeightedEdge:17
+msgid "Edge weight (read-only property)."
+msgstr ""
+
+#: 1c00c207715b4acc9323bc4b8d65799a bb185040f1464fc6a91e3ae22dab9c5b of
+#: sds.graph.edge.WeightedDirectedEdge:18 sds.graph.edge.WeightedEdge:19
+msgid "float"
+msgstr ""
+
+#: fc93e4235b684ebf92d023c08d24a50c of sds.graph.edge.WeightedEdge:29
+msgid "Default weight is 1.0:"
+msgstr ""
+
+#: 869e96cc5d8f49139a7797f889ed46a5 a451c14326824634ab57995d1a29867e of
+#: sds.graph.edge.WeightedEdge.__init__:1
+msgid "Initialize a weighted edge."
+msgstr ""
+
+#: 485993eff59d4ffb99d7c2b5f9622c9b 5132e9fa5d6e4e82845a4906c24aa84c of
+#: sds.graph.edge.WeightedEdge.__init__:12
+msgid "If weight is not numeric."
+msgstr ""
+
+#: 691cf081a62840dfaafc03143a556f82 6e887e0fbda24a858e497b22a5a100ff
+#: 9e7cda78dc264182b1371f3f73058d6a df33caab37a245a3bd49c32ebf50f406 of
+#: sds.graph.edge.WeightedDirectedEdge.weight:1
+#: sds.graph.edge.WeightedEdge.weight:1
+msgid "Get the edge weight."
+msgstr ""
+
+#: 66ba44aa38094da38286ed7834a6074c d44b00cc9dfd4f79b89e3da0a2b84bf4
+#: fa8fdde802794ecb98ea392ce7bebe2b fac02c5b3a24485a9d57f1f9b90ea8dc of
+#: sds.graph.edge.WeightedDirectedEdge.weight:3
+#: sds.graph.edge.WeightedEdge.weight:3
+msgid "The edge weight."
+msgstr ""
+
+#: a4e460c8de7b40ce8e0727a3d18d3b36 deec9452a4aa4a079e92dbbfd70bbc44 of
+#: sds.graph.edge.WeightedEdge.__repr__:3 sds.graph.edge.WeightedEdge.__str__:3
+msgid "String showing weight."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:140 ../../source/api/graph/edge.rst:544
+#: a908daf91e17479d8e85895a6bcffcca e7a397cd42ba495989969407a6cc9eff
+msgid "WeightedDirectedEdge"
+msgstr ""
+
+#: 3870cfafd20945b7be343bb13871c855 of sds.graph.edge.WeightedDirectedEdge:1
+msgid "Bases: :py:class:`~sds.graph.edge.DirectedEdge`"
+msgstr ""
+
+#: 99019e27b6ac4c50878c54d0451c4d7b of sds.graph.edge.WeightedDirectedEdge:3
+msgid "Combines the properties of DirectedEdge and WeightedEdge."
+msgstr ""
+
+#: 8c1924a8e55c48c6bd48dd7f64b989d0 a3ba97b6fcba4b7582c90b71c065ffcd of
+#: sds.graph.edge.WeightedDirectedEdge.__init__:1
+msgid "Initialize a weighted directed edge."
+msgstr ""
+
+#: 9184494a4950439f95f149f69c3106c5 e5a8db971c4b4585b2d54882e02444af of
+#: sds.graph.edge.WeightedDirectedEdge.__repr__:3
+#: sds.graph.edge.WeightedDirectedEdge.__str__:3
+msgid "String showing direction and weight."
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:159 72a2daa311404f0eaae21d222252d15b
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:162 55eed2ced42740169779ecb06014154f
+msgid "Undirected Edges"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:164 47e2d683b4c84292b490ced964eed7a0
+msgid "Basic undirected edge connecting two nodes:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:190 35e7b7ee273a44ba9c84c346f5a36b05
+msgid "Edge with Data"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:192 88ea46f448f64bf889ab7f09e67477fc
+msgid "Storing additional information on edges:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:212 44161b426cbb4cd884042f0b1de4aa6c
+msgid "Directed Edges"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:214 06d81e73f7804ef68587169f60750bbb
+msgid "Edges with explicit direction:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:240 810feb07d3df42bf88b2733ef4234188
+msgid "Weighted Edges"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:242 161b103186fc485eb4683b88a8355a88
+msgid "Edges with numeric weights:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:263 bea81fa0f8514f5aa8ae2bd06e620782
+msgid "Weighted Directed Edges"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:265 3cc1bd0fb4ee451db364a8d0d99ccf72
+msgid "Combining direction and weight:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:287 c1affe3261a346e484b491005b4c9e11
+msgid "Self-Loops"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:289 516b7451b60d4eeba851132a72203323
+msgid "Edges connecting a node to itself:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:311 4bb8a59b5694459ab098834d7725d169
+msgid "Edge Equality and Hashing"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:313 5b5bf2d8080146dc99a7a678b376ce7b
+msgid "Understanding edge comparison:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:341 e6537fdc635e45a4925d569ebadb66a2
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:344 9293fe54edbd4e0d8981963b328b048b
+msgid "Example 1: Social Network"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:346 845c916ee7a64247a095114796771c11
+msgid "Modeling friendships and follows:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:394 fabad085c77b4f219d3f675194c793aa
+msgid "Example 2: Transportation Network"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:396 05404c57a5e1485a8205a29e33cb4bc4
+msgid "Weighted graph for route planning:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:442 21bc73dffa1749edb28a2063ca0e1615
+msgid "Example 3: Task Dependencies (DAG)"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:444 7acdebfe73a44cd8a4b6a3554332f992
+msgid "Directed acyclic graph for project planning:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:490 edfc3f626f9d4ea6b4b8a57f08c74f39
+msgid "Example 4: Citation Network"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:492 200b767f206e48a68b372f7971d47a70
+msgid "Weighted directed graph for academic papers:"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:531 61d289bd4b144985942bebdc15a868c0
+msgid "Edge Type Comparison"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:534 71c4988503fd478e979940cc8a513544
+msgid "Feature Matrix"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:540 3e65a4d3ba0c4492a9d8e5280577165c
+msgid "Feature"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:541 113cd201e8234a468aeda4fa2e860fe5
+msgid "Edge"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:545 16902370550848449c4390fffbab9dbe
+msgid "**Direction**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:546 ../../source/api/graph/edge.rst:548
+#: 12c5eb15b29d4bcfbc720f6ccba5c5d9 db19d6f3a17c413c864815b216486c75
+msgid "None"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:547 ../../source/api/graph/edge.rst:549
+#: ../../source/api/graph/edge.rst:553 ../../source/api/graph/edge.rst:554
+#: ../../source/api/graph/edge.rst:556 ../../source/api/graph/edge.rst:558
+#: 13f1e548ad664bc88c32b9e9ce9ced55 28037590ace540658a936421a2ac24d3
+#: 4287cf2ee0924bf2b61e456fe2801350 44f682eea3e64795956af1ec3e23e0a9
+#: 4c100eba4b464684ba329048d03d107c 530044d95aa249a6973af035aaaa5e8f
+msgid "Yes"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:550 ce0994bcfcd44c67a5665d96f34f0b6f
+msgid "**Weight**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:551 ../../source/api/graph/edge.rst:552
+#: ../../source/api/graph/edge.rst:557 ../../source/api/graph/edge.rst:559
+#: 176159c04aca456e9fed889760747eb7 22666406993a48af8eae8cd601ada712
+#: 85c051a249a74499876ecefb7df105c0 e16713952dad4886baedaf9d8868dc81
+msgid "No"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:555 6c71492cf8ab4f4f9c71e035a899955f
+msgid "**Symmetric**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:560 ce28b43178d94c1797429f24774ef24a
+msgid "**Use case**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:561 218b6a004a924b1d8d5b1206c9b5c2cd
+msgid "Friendship"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:562 512e3040b3824c42bf5571ffe81498c7
+msgid "Follows"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:563 88a3728fefa1415cab35d4d4dfce08ba
+msgid "Distance"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:564 837d9bbbb97149c59f698cfab264271e
+msgid "Flow"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:567 020f1131f5b84e55920e84755072d720
+msgid "When to Use Each Type"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:588 5cf9401429d44a2da595d282d0ad9645
+msgid "**Decision guide:**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:590 28b3eea9cc1f484f8bdc5c2356bd7d6b
+msgid "**Edge**: Symmetric relationships (friendship, physical connections)"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:591 c3e789241eb740b2bbb387b78c38cf85
+msgid ""
+"**DirectedEdge**: Asymmetric relationships (follows, parent-child, "
+"citations)"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:592 226ddfdd71014ff0a0ed55e4f08d967a
+msgid "**WeightedEdge**: Distances, costs, similarities"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:593 662d5c2b18f44f30a22a9a2ff8e4831c
+msgid "**WeightedDirectedEdge**: Flow networks, weighted paths with direction"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:596 6f85e2936c924f51834f5156cb73b985
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:599 49295bb03b5b44cc941e7ae64555eb89
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:601 632f46e4089c4b57b48976188d20e7a2
+msgid "✅ **Choose appropriate edge type**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:614 0643aacbe2634fbe89af162f17395ba9
+msgid "✅ **Store rich data in edge data attribute**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:626 f3e5f3f136ba407b8faf5382553e52ed
+msgid "✅ **Use edge equality for deduplication**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:636 addd155ce2e44415b941f6e5c2dbd77e
+msgid "✅ **Handle self-loops explicitly**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:647 40fa6ffe702d4fa6a99b92c26a14094b
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:649 035af586132342f88349144f0fc8b967
+msgid "✗ **Don't mix edge types inconsistently**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:665 f77a62dbc4f54d6f802a3d2dd881e26b
+msgid "✗ **Don't create self-loops without explicit permission**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:675 2e77124bbcf34087beacae25a003e999
+msgid "✗ **Don't assume edge mutability**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:686 dbcafa3e4bc94deab2914801524cf353
+msgid "✗ **Don't ignore direction in DirectedEdge**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:700 651830d406f842a2b2e1ad61be53efa0
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:702 765d00eaa2b246d4a2c2b5aa58ef1e46
+msgid "**Confusing connects() semantics**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:716 7a6bf123d1b145d0b65ff8ef5ef1a1b0
+msgid "**Forgetting to handle None weights**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:728 b481a7c7b23b46d0b7083965289fd239
+msgid "**Not checking edge type**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:743 aac2e558b065413f8bc839ea4a46817a
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:746 57bc1a7ba4c04dffb763977bab57d6a9
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:752 0d38da5e12664d18891ea6c5be921e19
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:753 c3f189b1d0be49c7a74ef255bd076c4b
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:755 fb344b4178b64e22bcd4a005f9d64d84
+msgid "Create edge"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:756 ../../source/api/graph/edge.rst:759
+#: ../../source/api/graph/edge.rst:762 ../../source/api/graph/edge.rst:765
+#: ../../source/api/graph/edge.rst:768 ../../source/api/graph/edge.rst:771
+#: 51cec3f2a07046b2bd126621a219a68b 5d3437e7b8e7437a93ba14ca1b93098e
+#: 73ee0beee4464703967a8f5c77f8c620 82738319fefc4e2088a48524a1c8e4de
+#: cac674e07cc44d529878f39524a9b281 f89a9cc659204e799b5c06e9a85ee4e6
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:757 fe7baeff2a6c46e8b7ca6700bc382cf9
+msgid "All edge types"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:758 f3fb8daf016646048c82dea7bd3b4d76
+msgid "Check connects"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:760 43ec1da2b07c4b6e91869f0d41a2426a
+msgid "Node ID comparison"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:761 e1ebb5fae4404358ac0216ec62c7b716
+msgid "Check incident_to"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:763 c2074dbb49104924a8acf97e8cfdd736
+msgid "Node ID lookup"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:764 9905b3da83db4a6599b3ee95a40d4c75
+msgid "Get other_node"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:766 5925a55bdf8c451a817ef07c191b054e
+msgid "Direct access"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:767 45b69e71879c4e7a9b44a4b0dbb86c00
+msgid "Edge equality"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:769 f1489dfffe3e496b92f8110815a85aeb
+msgid "ID comparison"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:770 8e200ca6002c4a908fe62d9a0f40ec26
+msgid "Edge hashing"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:772 6f6f461c56c2462993504abe10dbf0cf
+msgid "Hash of node IDs"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:775 120d005118af418e9d2476808109e361
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:781 c74e0179b523405cbdc319b8f469b7a8
+msgid "Component"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:782 06ea6d5ef6014c448ed54cbbdcef44c2
+msgid "Space"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:783 e2f1fa70f3c34ee98c849df189549ff5
+msgid "**Edge**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:784 277b38092e50412c9a0fc89c38caf62b
+msgid "2 node references + optional data"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:785 7e7491e20099480dabf1bd02c86deb92
+msgid "**DirectedEdge**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:786 ec302b68b7754043abfb869fe1b63808
+msgid "Same as Edge"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:787 053016f744e74130a89a4128a183108e
+msgid "**WeightedEdge**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:788 2d0857f75094476aa4d16923fd80c3cb
+msgid "Edge + 1 float (8 bytes)"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:789 e2f83b4916d3431b88a6172495a81b2e
+msgid "**WeightedDirectedEdge**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:790 8f973c6e11f04a4aa20632e5c62fceca
+msgid "DirectedEdge + 1 float"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:791 4df454f20b144abcb6dfbff5241a2f01
+msgid "**Typical total**"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:792 cf75a1931d134bcf96338eab688e8afb
+msgid "~80-120 bytes per edge"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:795 c531680bdec54c26858fd80c249db313
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:797 df10833b924e43f0afd4166192e09ccb
+msgid ":doc:`node` - GraphNode class for vertices"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:798 ddfdfdc7134e48c0ac8e1790898e1e17
+msgid ":doc:`graph` - Graph implementations using edges"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:799 c94b837054d843dbb883dbd43c0a0f3b
+msgid ":doc:`directed` - Directed graph implementations"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:800 aa8d8124cb5c4c10bcae203136852884
+msgid ":doc:`weighted` - Weighted graph implementations"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:801 8d75bba7c59c4d4db2f02bbfcb358877
+msgid ":doc:`../../guide/graph_structures/index` - Graph structures guide"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:804 be9c5f7195db4da29442e9bf3f24fae3
+msgid "References"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:806 73672ce8747b403ea5f632d51128f400
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 22"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:807 4480b2c58db342af98aba215a212e8dc
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Section 4.1-4.2"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:808 c21c82aa81044d54bdad39d39dc0fe6b
+msgid "West, D. B. \"Introduction to Graph Theory\", 2nd Edition"
+msgstr ""
+
+#: ../../source/api/graph/edge.rst:809 62ba1232a11b4dc996be628d7928b2fd
+msgid ""
+"Bondy, J. A., Murty, U. S. R. \"Graph Theory\", Graduate Texts in "
+"Mathematics"
+msgstr ""
+

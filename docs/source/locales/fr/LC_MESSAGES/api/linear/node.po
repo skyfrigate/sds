@@ -1,0 +1,812 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/node.rst:5 5e7d8790ce204a16bad080747840e4aa
+msgid "Linear Node Classes"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:10 2fcdd529e9fb46c394f5358f2353fa6c
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:12 f374589a480441dd942d69de4f8d3255
+msgid ""
+"This module provides node implementations for linear data structures such"
+" as linked lists, stacks, and queues. Each node type is optimized for its"
+" specific structure."
+msgstr ""
+
+#: ../../source/api/linear/node.rst:40 4c5888b7830b4730bf7518c96645dba2
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:48:<autosummary>:1
+#: 7ce51597f7a7431ea5c5d8b9a6ce5a7b
+msgid ":py:obj:`SimpleNode <sds.linear.node.SimpleNode>`"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:48:<autosummary>:1
+#: 403486c9e6de40ec99c3d7f1278716c3 b2ac6a04139a4487b28be23d6aa1c7b4 of
+#: sds.linear.node.SimpleNode:1
+msgid "A node for singly linked lists."
+msgstr ""
+
+#: ../../source/api/linear/node.rst:48:<autosummary>:1
+#: c942fa83f5434ed3a73f9c84071111be
+msgid ":py:obj:`DoublyNode <sds.linear.node.DoublyNode>`"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:48:<autosummary>:1
+#: 8b6f3c4923c84dd99a6a2fb61167354c e8552085e4aa46588090dec09474ebda of
+#: sds.linear.node.DoublyNode:1
+msgid "A node for doubly linked lists."
+msgstr ""
+
+#: ../../source/api/linear/node.rst:50 d1bdbeda99174c158f48e3abe807af4c
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:53 ../../source/api/linear/node.rst:357
+#: 0623d8d8cceb4ecfbe6d389700b59892 a7da9de6c7fc4d8f91a2c15b6ac1a4f4
+msgid "SimpleNode"
+msgstr ""
+
+#: 411fe7004cc64c2ebccc96b10347383c 6d6dcb7e53f648de98bc34f5b2ec8491 of
+#: sds.linear.node.DoublyNode:1 sds.linear.node.SimpleNode:1
+msgid "Bases: :py:class:`~sds.core.node.Node`"
+msgstr ""
+
+#: 54d794dcb5894a2eb9b6968b12eb395d of sds.linear.node.SimpleNode:3
+msgid ""
+"Each node contains data and a reference to the next node in the sequence."
+" This is the basic building block for singly linked lists, stacks, "
+"queues, and other linear data structures."
+msgstr ""
+
+#: 156c38618e504aa4974fbe4218e71810 of sds.linear.node.SimpleNode:7
+msgid "Internally uses _refs[0] to store the next node reference."
+msgstr ""
+
+#: ../../source/api/linear/node.rst 2321b2e5b91847e0b4eb14f90f7e73ff
+#: 4decb97a05a34c5eb4831b488f627e70 5d9234578a374c489a379e0759b94242
+#: 939008dcc48e475d903fc389d4c3dd8a e0b4b6746fbc4303803ac2c4ff7824a2
+#: f9c8aaae088b4c5780238fd545b45080
+msgid "Parameters"
+msgstr ""
+
+#: 099e3003d8d84d73bce0b3dd1d8832ce 1fbdf65d59124d82a7814c81432cc5c8
+#: 2e10d4904d3347b08a27949750dc7ec2 597f3590cb654ae1bbfe8cfe5762bd16
+#: 8c8aae093fb6436f98bf1eb2f01a3931 fb0241f1715c47f6b95236cb45b33afe of
+#: sds.linear.node.DoublyNode:8 sds.linear.node.DoublyNode.__init__:3
+#: sds.linear.node.SimpleNode:9 sds.linear.node.SimpleNode.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: 8741b228e1104ab990c4a849ccc4a919 88d7da7fe81e478987c24f93e3efc99c of
+#: sds.linear.node.DoublyNode:10 sds.linear.node.SimpleNode:11
+msgid "Reference to the next node in the list. Default is None."
+msgstr ""
+
+#: 1d0502a4d9b14acea050c6c4e619e615 ba6bef9c9bd8440ea01914f7b89fad8d of
+#: sds.linear.node.DoublyNode:17 sds.linear.node.SimpleNode:16
+msgid "The data stored in the node (inherited from Node)."
+msgstr ""
+
+#: 1afb5284a4564a3286a4e11e3326cda0 1bdbb823bca44c36be0b7c428752a43b
+#: 31f5cac7057d4c309add04955c19e316 7e0cf3d688784891ae44c4d0bc387add
+#: 86bf76a166b04c2181e82cec6cdcf772 a534d9dfd6054af89a78395a9ba61bc4
+#: d6381b30e4684ced877b872505812985 of sds.linear.node.DoublyNode
+#: sds.linear.node.SimpleNode
+msgid "type"
+msgstr ""
+
+#: c9b16f4c03ea4e82a4bd76a6ea37d9b2 d037d944803f496fb7809d0a686531c7 of
+#: sds.linear.node.DoublyNode:19 sds.linear.node.SimpleNode:18
+msgid "Any"
+msgstr ""
+
+#: 4f8acceb05ec48d6a37df7ed78427a0f b30e964bcf384504b2ac9df60252300b of
+#: sds.linear.node.DoublyNode:23 sds.linear.node.SimpleNode:22
+msgid "Reference to the next node (property accessing _refs[0])."
+msgstr ""
+
+#: 92a22a7b0d0146eaa0c27114ae58b6d2 of sds.linear.node.SimpleNode:24
+msgid "SimpleNode or None"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:75 ../../source/api/linear/node.rst:106
+#: 303491f046e04740b21675e51d9f1e99 30f604ba243e4e35bc0fc11a932bc2da
+#: 855b0098eda14e3cb5ce402a2ba5a3a6 f4b68f05ce77405595e0f1f4d446103e of
+#: sds.linear.node.DoublyNode:35 sds.linear.node.SimpleNode:28
+msgid "Reference to parent node (inherited from Node)."
+msgstr ""
+
+#: 23a976d32f234ce789e931a9802ef097 628b063baf8f45d4ae9b30e8d9a6b8b3 of
+#: sds.linear.node.DoublyNode:37 sds.linear.node.SimpleNode:30
+msgid "Node or None"
+msgstr ""
+
+#: 39dd03a20c9b4a47ba1920764e4eaa84 4024539375e1410dbe7d0ea625250752
+#: 42368dffd64c4090ae31dee4436fecd8 49fb61d79a144e9a846a685af50d8f4f
+#: 63ac272c1ae8421b910f50f521b9464b 65fb806a6a9c4731b1366e971dc27e87
+#: 6b671d6cfe70465fa768a5355fc8dac7 72ab4d822e534af4a8430733057e16aa
+#: 97da70277043451f9100310ab9470351 9cdf7c3195ec4848a031920e3d021b1a
+#: af20d89e11724678b85d7096fcb6d4a2 cb2a56b9f77347a7b288e71a9de67a37
+#: cfb30b8c7cd04cc8aae2fbdd48610c58 d27ce2571fcc4d65b5d30da61476a9c5
+#: d9aeb33150e34eaa97d08f6e2ce57b53 e644849e829540e487f04264d425465f
+#: f5b8c9141e5942a69b1692031307a5b1 fe8fbe906470460dbd629389b037d17f of
+#: sds.linear.node.DoublyNode:39 sds.linear.node.DoublyNode.__repr__:6
+#: sds.linear.node.DoublyNode.__str__:6 sds.linear.node.DoublyNode.data:6
+#: sds.linear.node.DoublyNode.next:6 sds.linear.node.DoublyNode.prev:6
+#: sds.linear.node.SimpleNode:32 sds.linear.node.SimpleNode.__repr__:6
+#: sds.linear.node.SimpleNode.__str__:6 sds.linear.node.SimpleNode.data:6
+#: sds.linear.node.SimpleNode.next:6
+msgid "Examples"
+msgstr ""
+
+#: 5ca1aff8dd324dfbb2c64add87f94433 of sds.linear.node.SimpleNode:34
+msgid "Create a simple node:"
+msgstr ""
+
+#: 2793d20b7e564d9fb90b3b3625429e8f of sds.linear.node.SimpleNode:42
+msgid "Create a chain of nodes:"
+msgstr ""
+
+#: f8bf5fa9102241ecb58ae1e5683bd31f of sds.linear.node.SimpleNode:54
+msgid "Modify node data and links:"
+msgstr ""
+
+#: 0122f90b6afd46a7a6d2945114b056a5 031df7f9fb47482fa095a2611cd15d56
+#: 16603ec0bedd4ee292fb59d83e47a5fc 4fe572cef2aa49abb2c0f7fde61dcc0e
+#: 5eef6eb115ed48cfaaa4f953f036469c 7fd0ff5856b24aa1a74e24719dd359e5
+#: a0376465ff9349c2b72ba517f3ae92fb c00985fca4e546b4bc260d686d8b13e0
+#: e8f2c2b14648410d9ac58406a6c4fcb0 f9e22cd16807412a9b93606a90430340 of
+#: sds.linear.node.DoublyNode:75 sds.linear.node.DoublyNode.data:16
+#: sds.linear.node.DoublyNode.next:14 sds.linear.node.DoublyNode.prev:14
+#: sds.linear.node.SimpleNode:64 sds.linear.node.SimpleNode.data:16
+#: sds.linear.node.SimpleNode.next:14
+msgid "Notes"
+msgstr ""
+
+#: 080afa5400eb4b8c9456a8d1f807aa9a of sds.linear.node.SimpleNode:66
+msgid ""
+"This class uses __slots__ for memory efficiency. The next reference is "
+"stored in _refs[0] and exposed via a property."
+msgstr ""
+
+#: 3680fb30bc984a16856301c0a0ec8608 of sds.linear.node.SimpleNode:71
+msgid ":obj:`DoublyNode`"
+msgstr ""
+
+#: 5b718495d20440e285f6479b57307da7 of sds.linear.node.SimpleNode:72
+msgid "Node with bidirectional links."
+msgstr ""
+
+#: 889e920386fa4bab84b28901dad631fc efbc849b80334f108c44ed1a0f5d78e9 of
+#: sds.linear.node.DoublyNode:86 sds.linear.node.SimpleNode:74
+msgid ":obj:`sds.core.node.Node`"
+msgstr ""
+
+#: 3cb31c065b7a4430bee2fea6741a1a8b b2e51bb7330e4244b22a224e57227135 of
+#: sds.linear.node.DoublyNode:87 sds.linear.node.SimpleNode:75
+msgid "Abstract base class."
+msgstr ""
+
+#: ../../source/api/linear/node.rst:62 ../../source/api/linear/node.rst:92
+#: 407b06e552904a79b59d237027357536 c3f88661beb44c10846a6a5640b93e77
+msgid "Constructor"
+msgstr ""
+
+#: aa824f966b3c417aa0e701db197c39c7 efa832b78c3340988168e473a765fe3f of
+#: sds.linear.node.SimpleNode.__init__:1
+msgid "Initialize a new simple node."
+msgstr ""
+
+#: 3d5e49e50d2f4738abf2ab55249c2761 7f2a93fdc4ac4f0f8f15cde1b6ece110
+#: 913f8dd64b4545c495cb40fc891cfabc a24428904ae24894979c0e4eb5cc6092 of
+#: sds.linear.node.DoublyNode.__init__:5 sds.linear.node.SimpleNode.__init__:5
+msgid "The next node in the list. Default is None."
+msgstr ""
+
+#: ../../source/api/linear/node.rst:66 ../../source/api/linear/node.rst:96
+#: 2eac9849bbfe47609d899d2ad5430aa0 bb576082d72a4a36a095cdc2d25aa45f
+msgid "Properties"
+msgstr ""
+
+#: 2a52fc77c663473183556457aa66a463 809991588e4a472c8fffa423416a1b96
+#: 8a84fa554dcf46d4830fe312753465e7 c519abd757134d4f8ff1210186b5d488 of
+#: sds.linear.node.DoublyNode.next:1 sds.linear.node.SimpleNode.next:1
+msgid "Get or set the next node in the list."
+msgstr ""
+
+#: ../../source/api/linear/node.rst 0218c61b81de40bf9525778fd8221ab3
+#: 268f65d8f3864a8ebaf8570fa9d53082 42595e2434db4f62aef7d5b0e2e723c0
+#: 61f1d48f3401412d81d05139c76a7f41 638fe101285f4a3ca4b406098b6e3943
+#: 8b9f733d48d94c6e82ef921801a7cdc4 92468bfc208d47fa9d9fec0fcb54926c
+#: 9ae3fba57b094181b3e1a16c9bf6c0c6 a011a4fa809543d89ff96c460ffdcd59
+#: a600a2aef8bd42af828af09d7c300e92 a9c1e3ecced44d97b4edfc632f398bdf
+#: afaab0771b1d4443ac6d63a14f7459f9 ccf6c7f6b9aa43de86ea97cdf7d51dc7
+#: dfaaf71317eb4325901c67ab8a787666 e5fa6374957948e3a734515319953f9c
+#: f67f2a3aa9d74fdd9e421238f1d72c5f
+msgid "Returns"
+msgstr ""
+
+#: 6c73fe04add24536a471a8b6ac9cbad9 893495a0a22d4d888e7314c2225a3d0c
+#: d14438f1ef0a493bbbe8fe6939ea1839 da5947f0eed74c2b9dd8a6f6cf22baa7 of
+#: sds.linear.node.DoublyNode.next:3 sds.linear.node.SimpleNode.next:3
+msgid "The next node in the list, or None if this is the last node."
+msgstr ""
+
+#: ../../source/api/linear/node.rst 1d033f9cf46b4069a2b71c15edf4bd37
+#: 243f5b171c7b405f9842e54e62d2c269 2f55d0e326364bff86fca3c390556b09
+#: 31fefbe15c474046ae3e83c99d5f8545 4d4e813a19c34e72bfce5882cd8148de
+#: 72d79c21bd834b1dafd93d38ecdacde1 8b9941f86e614800a2a3ddb24aa2d7ac
+#: a20ef06ee475440da7b9d2642077141f a50639e79d7c4c47873881f60999d92d
+#: b4564df54e5d4b2abddcd590ef890acc be095fd4ecea480ca803cca300cef707
+#: c4428405264e4666b100a72361295eae d22cb2c146e345bfa817a00e5439587e
+#: de2a9b9df86d4307ab98874c3a9c0f9e eb9b82bbb14846208e11ef60d401028d
+#: f12bbe3a312e4ea3bc8bc68fb75220d9
+msgid "Return type"
+msgstr ""
+
+#: 12861e90c89843248d211ee21150ca30 5991d9ee9a9e4b80a8683602122ff6e6
+#: 9565d71fae7d4fc2a869c0ba13ac1b2f e9e427aca84244e7987cc578bbc6eaf1 of
+#: sds.linear.node.DoublyNode.next:16 sds.linear.node.SimpleNode.next:16
+msgid "This property accesses _refs[0]."
+msgstr ""
+
+#: 8c9fb8a5b12444e9960df312ba7416f5 d63c55c7c8fd46a2b7d4b400953ce875 of
+#: sds.linear.node.DoublyNode.data:1 sds.linear.node.SimpleNode.data:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: 9615525aed254cee999139289c3d5046 c44538b742c74775aac6a9e4877395d2 of
+#: sds.linear.node.DoublyNode.data:3 sds.linear.node.SimpleNode.data:3
+msgid "The data stored in the node."
+msgstr ""
+
+#: 01316fcca7b840079616b0b2e5a4c126 be9bb30036524a70975b1de47e3b46b1 of
+#: sds.linear.node.DoublyNode.data:18 sds.linear.node.SimpleNode.data:18
+msgid ""
+"This property is defined in the abstract base class and inherited by all "
+"concrete node types."
+msgstr ""
+
+#: ../../source/api/linear/node.rst:71 ../../source/api/linear/node.rst:102
+#: 5acd168616b64d308a157b0394c039cc b22232e781a749b3899048a6431ba7de
+msgid "Inherited Properties"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:78 ../../source/api/linear/node.rst:109
+#: 26d8b6072c0f4315970b72a83a5e8b9c 525c21b86dd64c3fae19142494a00544
+msgid "Methods"
+msgstr ""
+
+#: 00efe9f871024403a5d0b63d77ebe8af 156d2338742f4b4bb0f2cbf5e5847f86
+#: 6f89b95e279c45ceb1e07f40cad4c00d 7f2419c6959c4acabbce6d2e640ddf57 of
+#: sds.linear.node.DoublyNode.__repr__:1 sds.linear.node.SimpleNode.__repr__:1
+msgid "Return a detailed string representation of the node."
+msgstr ""
+
+#: 824fa7f7c4ed40c88a06bc216397cdd5 858afee2398b47f3afc6eb81d5c49f8a of
+#: sds.linear.node.SimpleNode.__repr__:3
+msgid "String representation in the form \"SimpleNode(data)\"."
+msgstr ""
+
+#: 4a01f821bdf8444cbdefe783fd5b3f60 4fcf0113c24f41cd8d7abafa59558e18
+#: 53c4c721c5144b1d8abdfe2ecddd3c15 dbb03330935e47f2b485ac36a100f25c of
+#: sds.linear.node.DoublyNode.__str__:1 sds.linear.node.SimpleNode.__str__:1
+msgid "Return a simple string representation of the node's data."
+msgstr ""
+
+#: 0da69c9ab6bd4b8791e583b851756ff1 46354d8b526d48a68ab884b95b97e387
+#: 4d689ca99df5445aa3fab4b7d0f450a1 576552ed727448b5aa36cfe9975dc7c9 of
+#: sds.linear.node.DoublyNode.__str__:3 sds.linear.node.SimpleNode.__str__:3
+msgid "String representation of the data."
+msgstr ""
+
+#: ../../source/api/linear/node.rst:83 ../../source/api/linear/node.rst:358
+#: 4dfffa26627c4613b29eb37357a29fbc f6e77354d4ef45698989bb09d00dc15b
+msgid "DoublyNode"
+msgstr ""
+
+#: 53eef9016c414370acdde13289932c45 of sds.linear.node.DoublyNode:3
+msgid ""
+"Each node contains data and references to both the next and previous "
+"nodes in the sequence. This allows for bidirectional traversal of the "
+"list."
+msgstr ""
+
+#: 48b4d7ffb3e447c9b9f7e721316b5372 of sds.linear.node.DoublyNode:6
+msgid "Internally uses _refs[0] for next and _refs[1] for prev."
+msgstr ""
+
+#: f443442be66d408b8c2bc0c45f968529 of sds.linear.node.DoublyNode:12
+msgid "Reference to the previous node in the list. Default is None."
+msgstr ""
+
+#: 6569352df5e04abf9429d2940e859b87 7a12789e9a35450a99be7a133bd72f6d of
+#: sds.linear.node.DoublyNode:25 sds.linear.node.DoublyNode:31
+msgid "DoublyNode or None"
+msgstr ""
+
+#: 66eedeebff7447f6a981135739ff2b8d of sds.linear.node.DoublyNode:29
+msgid "Reference to the previous node (property accessing _refs[1])."
+msgstr ""
+
+#: 7bc9c49b8ec945d4a6d177da68315615 of sds.linear.node.DoublyNode:41
+msgid "Create a simple doubly linked node:"
+msgstr ""
+
+#: dfb016287c6a42e4ab801e8f1c05c2a1 of sds.linear.node.DoublyNode:51
+msgid "Create a bidirectional chain:"
+msgstr ""
+
+#: 9429ebfc2c344988baf24405eb333427 of sds.linear.node.DoublyNode:61
+msgid "Traverse forward:"
+msgstr ""
+
+#: 655b736d26224adf9afabda477d776b7 of sds.linear.node.DoublyNode:68
+msgid "Traverse backward:"
+msgstr ""
+
+#: d01c0c0033e4419b8f087851f3ad4556 of sds.linear.node.DoublyNode:77
+msgid ""
+"This class uses __slots__ for memory efficiency. When building "
+"bidirectional chains, you must manually maintain the symmetry between "
+"prev and next references."
+msgstr ""
+
+#: 1e0ea81bfb67489ea0620e3a060b702a of sds.linear.node.DoublyNode:83
+msgid ":obj:`SimpleNode`"
+msgstr ""
+
+#: 4c51fe957fcc44c3b27db1de6b1720e8 of sds.linear.node.DoublyNode:84
+msgid "Node with unidirectional link."
+msgstr ""
+
+#: 6c07b20a32674be8945190c77b91f9ec 97ed7ebccacb4859803009203edad887 of
+#: sds.linear.node.DoublyNode.__init__:1
+msgid "Initialize a new doubly linked node."
+msgstr ""
+
+#: 3dee65ad45f54324aa75f48af5541c48 dad516d6c4304c64966fbe4854dd0bd3 of
+#: sds.linear.node.DoublyNode.__init__:7
+msgid "The previous node in the list. Default is None."
+msgstr ""
+
+#: 0b25d23d58874182a966b8d9b7134f32 32742442b7cd43e9b0fc7c7db73c7984 of
+#: sds.linear.node.DoublyNode.prev:1
+msgid "Get or set the previous node in the list."
+msgstr ""
+
+#: 72080e6791d14f12a756055b6dc998c7 a2b09b9f4aa34dcf9ca8eee828c16ef3 of
+#: sds.linear.node.DoublyNode.prev:3
+msgid "The previous node in the list, or None if this is the first node."
+msgstr ""
+
+#: 5ddbcf6dd1be49408286928e3ce5f035 820d6c6c268b4c6cb181aa8c30c1e362 of
+#: sds.linear.node.DoublyNode.prev:16
+msgid "This property accesses _refs[1]."
+msgstr ""
+
+#: 6080b083dc134b76b4347eaeb0a23a0b 76221c86af6d402ea387b3be3f129719 of
+#: sds.linear.node.DoublyNode.__repr__:3
+msgid "String representation in the form \"DoublyNode(data)\"."
+msgstr ""
+
+#: ../../source/api/linear/node.rst:114 308a1034109b467ea50764e961cee281
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:117 90fac33e1c204034ab7a7ca4addd3cbf
+msgid "SimpleNode Examples"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:120 ../../source/api/linear/node.rst:201
+#: 6d406496e912469887430a816e9e12f0 f67611fdd5844900b073da672697885a
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:144 825fee7b239a42dab38a8adbec56ff4d
+msgid "Modifying Node Data"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:158 6e64efb61e6b46418a938dafa393c057
+msgid "Building a Linked List"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:178 ../../source/api/linear/node.rst:262
+#: 01b34062a55945c0878c26bdba01e10b d598273c620f4b559795c87e8cda3e29
+msgid "Inserting Nodes"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:198 ba6115756993495fac34c8285288e949
+msgid "DoublyNode Examples"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:214 9b129e84300041c4b5156a861f34e75b
+msgid "Creating Bidirectional Chain"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:246 fef2ddf56e6240919b39b6ed866850f7
+msgid "Convenient Initialization"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:286 39fd84686ff34ff89cfab4289523a048
+msgid "Removing Nodes"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:298 ca85918091d54a98a3b1f7fd09ab791a
+msgid "Memory Layout"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:301 4d9e2393c4fe41ce8b9338e5b0264b89
+msgid "SimpleNode Memory Structure"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:324 d11b7c695ac34f48865245daa5d80c7b
+msgid "DoublyNode Memory Structure"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:347 1261c22f5eea4009a840478a7a38cc3f
+msgid "Comparison"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:350 97dcc97efa6d456f8988fbbd71b440c8
+msgid "SimpleNode vs DoublyNode"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:356 ec98fe8a732448e3baf10a1bf59d5587
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:359 7c171a37f1b04f13b77ef3947c1a709b
+msgid "**Memory**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:360 46c74ab36391409cb0a6ac0cb32fa849
+msgid "16 bytes per node"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:361 45d0caaee7d14b35bc5d7db9bbccf04e
+msgid "24 bytes per node"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:362 824f840fe84e49a499cfd42203ed5543
+msgid "**Traversal**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:363 4a314387d1b44c3a9f301fd4ce71c1c2
+msgid "Forward only"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:364 1932e427f1fc4e2f8000c35ca025128c
+msgid "Both directions"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:365 81f719e6534c4f04a38d489219a63e19
+msgid "**Insertion**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:366 ../../source/api/linear/node.rst:369
+#: 02888b1a1629425da82c4527a51fbd10 70e2eb55db7444a996d855b90635de4e
+msgid "O(1) if have prev node"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:367 ../../source/api/linear/node.rst:370
+#: 764128ad0c6a4552a807adb6216437ce f356375dae254277a7b3590d938febc4
+msgid "O(1) always"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:368 c046e0dd84e044e0b6ecb022a2be04bf
+msgid "**Deletion**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:371 33dd0eab7f08405c880d0fd324b6a177
+msgid "**Use Case**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:372 3ff4745985c649d480b8e07d8b39b850
+msgid "Simple lists, stacks"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:373 a6e181c3dee74bbc924890cda6720fe4
+msgid "Deques, LRU cache"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:374 ef8b4847194840e281f01139e10fa8e6
+msgid "**Complexity**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:375 2db5dd26ef294d3fa55214abcf06ce22
+msgid "Simpler to implement"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:376 afc3d8d848e64c5d89e31b31fbdcd2d8
+msgid "More bookkeeping"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:379 bcc3ae2e9fa44b93b376a79cad7ee466
+msgid "When to Use Each"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:381 1d057c6d0b5144c895a44bb93882c284
+msgid "**Use SimpleNode when:**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:382 657183bc13124a6f9eae12e3b374a86e
+msgid "Only forward traversal needed"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:383 348058b338cf444c802f4a6b3deb032b
+msgid "Memory is constrained"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:384 b7821be08c884d718633a5697b3b98b8
+msgid "Implementing stacks or queues"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:385 203dbd6c948f4a0f88a8e6510e2c8e15
+msgid "Building simple linked lists"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:386 f7be110aa6eb4bb990026ab0432f235d
+msgid "Don't need backward references"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:388 b5af016d5a994371ae7b7bea5bf6e3a2
+msgid "**Use DoublyNode when:**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:389 e2793fb5ff7a47b4af5d7ae30287b7e7
+msgid "Need backward traversal"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:390 62b1bdb8216e47f4ae82e85ed3cbe15b
+msgid "Implementing deques"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:391 f81b4d155fc54adda8833b8f016a3779
+msgid "Building LRU caches"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:392 84c75d9d27d8497a8b7e288dff1ab34a
+msgid "Need O(1) insertion/deletion anywhere"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:393 f1dcb9cb75dc422596354bcaea7489de
+msgid "Extra memory acceptable"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:396 b1d962565d0840cebe770471f144b36e
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:399 029031b624924db3a2411f37d20197d1
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:401 942d89be3d49484890bd32d672633ed3
+msgid "✅ **Use appropriate node type**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:411 28657ad973ff406f9083dffd148d3c40
+msgid "✅ **Maintain link consistency**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:422 6f1add7d3559412988db21eb8d6e3501
+msgid "✅ **Check for None before traversal**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:438 bc622b63412d462292276e051044cde1
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:440 6d6c5a784cab4abb91edb159645ea5eb
+msgid "❌ **Don't create circular references accidentally**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:455 37fa9af5bbbe4e86ade4e465dcc7f7f3
+msgid "❌ **Don't forget to update both links in DoublyNode**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:465 ea47fd57de5c4157a5b933cc79ae71b9
+msgid "❌ **Don't modify data during iteration**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:477 bb9e2adbf48d4f6b880d661cb4b7a3e9
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:480 bf81a58e23e84834b545e756edfef95f
+msgid "Stack Pattern (SimpleNode)"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:518 196f764628664dea91b90efe86c11f0e
+msgid "Queue Pattern (SimpleNode)"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:559 ed2f7a03d21a47aebaa338eb2d6c3469
+msgid "Deque Pattern (DoublyNode)"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:631 19708ea2c25e4a02966f7c7454bb3d08
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:633 9bef284a235e4148ba37f9cfb9664e8e
+msgid "**Forgetting to update both links**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:644 934f80ee35a54e0ea8d2ad07933e0388
+msgid "**Creating memory leaks**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:652 93d13080949e4846a428ed309676a148
+msgid "**Not handling empty cases**"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:661 8006adbccfa74822a754687473dda3c3
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:663 ed22b690955a4f488e21e85d2d6f6c47
+msgid ":doc:`interfaces` - Abstract linked list interface"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:664 5d836c15abf94caca6e79df710920baa
+msgid ":doc:`list` - Concrete linked list implementations"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:665 6b03a1d29eed4b65817eaa80fc1ca1ff
+msgid ":doc:`../../guide/linear_structures/linked_list` - Linked list guide"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:668 da0389b1625a4d2db138f84c783a413d
+msgid "References"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:670 a2efd7514a214cfb9b14ecdcf57dba0f
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 1\", Section 2.2"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:671 ed537a01da884e80b542d89b147983eb
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 10"
+msgstr ""
+
+#: ../../source/api/linear/node.rst:672 7372fccd702148588f1313b4bfd06693
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Section 1.3"
+msgstr ""
+
+#~ msgid "Node Classes"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This module provides node implementations "
+#~ "for linear data structures. Nodes are"
+#~ " the fundamental building blocks of "
+#~ "linked-based structures, containing data "
+#~ "and references to other nodes."
+#~ msgstr ""
+
+#~ msgid "Special Methods"
+#~ msgstr ""
+
+#~ msgid "Creating a simple node:"
+#~ msgstr ""
+
+#~ msgid "Chaining nodes:"
+#~ msgstr ""
+
+#~ msgid "Creating a doubly linked node:"
+#~ msgstr ""
+
+#~ msgid "Building bidirectional chains:"
+#~ msgstr ""
+
+#~ msgid "Node Type Comparison"
+#~ msgstr ""
+
+#~ msgid "Feature"
+#~ msgstr ""
+
+#~ msgid "**Direction**"
+#~ msgstr ""
+
+#~ msgid "Unidirectional (forward only)"
+#~ msgstr ""
+
+#~ msgid "Bidirectional (forward and backward)"
+#~ msgstr ""
+
+#~ msgid "1 reference (next)"
+#~ msgstr ""
+
+#~ msgid "2 references (next, prev)"
+#~ msgstr ""
+
+#~ msgid "Forward and backward"
+#~ msgstr ""
+
+#~ msgid "**Use Cases**"
+#~ msgstr ""
+
+#~ msgid "Stacks, simple lists"
+#~ msgstr ""
+
+#~ msgid "Deques, complex lists"
+#~ msgstr ""
+
+#~ msgid "**Link Management**"
+#~ msgstr ""
+
+#~ msgid "Simpler"
+#~ msgstr ""
+
+#~ msgid "More complex (must maintain symmetry)"
+#~ msgstr ""
+
+#~ msgid "Implementation Notes"
+#~ msgstr ""
+
+#~ msgid "Internal Structure"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Both node classes inherit from "
+#~ ":class:`sds.core.node.Node` and use the "
+#~ "``_refs`` list internally:"
+#~ msgstr ""
+
+#~ msgid "**SimpleNode**: Uses ``_refs[0]`` for the ``next`` reference"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**DoublyNode**: Uses ``_refs[0]`` for ``next``"
+#~ " and ``_refs[1]`` for ``prev``"
+#~ msgstr ""
+
+#~ msgid "Memory Efficiency"
+#~ msgstr ""
+
+#~ msgid "Both classes use ``__slots__`` for memory efficiency:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This prevents the creation of "
+#~ "``__dict__`` for each instance, significantly"
+#~ " reducing memory overhead when creating "
+#~ "large numbers of nodes."
+#~ msgstr ""
+
+#~ msgid ":class:`sds.core.node.Node` - Abstract base node class"
+#~ msgstr ""
+
+#~ msgid ":doc:`list` - List implementations using these nodes"
+#~ msgstr ""
+
+#~ msgid ":doc:`../../guide/linear_structures/index` - User guide"
+#~ msgstr ""
+

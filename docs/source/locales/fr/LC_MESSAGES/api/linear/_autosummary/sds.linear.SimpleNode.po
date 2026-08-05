@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/_autosummary/sds.linear.SimpleNode.rst:2
+#: 4320ecf066a4441aa35eb787fccb6f55
+msgid "sds.linear.SimpleNode"
+msgstr ""
+
+#: 1811f0146ee0433b82f9460feae610ef of sds.linear.node.SimpleNode:1
+msgid "A node for singly linked lists."
+msgstr ""
+
+#: adead0dac9a948a59c5a2112bbf8dddd of sds.linear.node.SimpleNode:3
+msgid ""
+"Each node contains data and a reference to the next node in the sequence."
+" This is the basic building block for singly linked lists, stacks, "
+"queues, and other linear data structures."
+msgstr ""
+
+#: 28f505bdec064d1991828d53c04e2039 of sds.linear.node.SimpleNode:7
+msgid "Internally uses _refs[0] to store the next node reference."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.SimpleNode.rst
+#: 580e079bedc445bdbec201d71f2d4f29 c03c4af2f0b74462a529597aec5baa26
+#: ce2070e053a242238e448c656f2123b1
+msgid "Parameters"
+msgstr ""
+
+#: ea661bb3cc97464eaff72780006789e6 ebed0f57192e4edea375ddc3f0ce8e6b
+#: f0f816231bc04be38ee0954a9221d89f of sds.linear.node.SimpleNode:9
+#: sds.linear.node.SimpleNode.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: e7858bd1972e475089f08063fb0c479f of sds.linear.node.SimpleNode:11
+msgid "Reference to the next node in the list. Default is None."
+msgstr ""
+
+#: a397863ac1984ae4b8c87f6c5bb37840 of sds.linear.node.SimpleNode:16
+msgid "The data stored in the node (inherited from Node)."
+msgstr ""
+
+#: 2da4b5e240ae46108dff73a5d6a3da51 6ba1b205f9b844f0b40e01284b3cba3d
+#: a9e761582c474c5f90e847fc95ec24ad of sds.linear.node.SimpleNode
+msgid "type"
+msgstr ""
+
+#: 36b4af10bb5749729fd20fa4130f48eb of sds.linear.node.SimpleNode:18
+msgid "Any"
+msgstr ""
+
+#: c4dff79186524d5a9a4848a16a002972 of sds.linear.node.SimpleNode:22
+msgid "Reference to the next node (property accessing _refs[0])."
+msgstr ""
+
+#: 28d0228389d4455bae8c0247f2aafdb1 of sds.linear.node.SimpleNode:24
+msgid "SimpleNode or None"
+msgstr ""
+
+#: fd0b76aaa67447078ebc278e3461299b of sds.linear.node.SimpleNode:28
+msgid "Reference to parent node (inherited from Node)."
+msgstr ""
+
+#: e242f3b4831c4575958b6f5732692b7d of sds.linear.node.SimpleNode:30
+msgid "Node or None"
+msgstr ""
+
+#: 26b0e10d566b4563b8818f8794ba3263 635f260852314435b5f7c9b8c06d56b3
+#: 89d0001329e044c2b8788b1ea88ff077 b9a89dbae2e8482892dc1c7e29b098d1 of
+#: sds.linear.SimpleNode.next:6 sds.linear.node.SimpleNode:32
+#: sds.linear.node.SimpleNode.__repr__:6 sds.linear.node.SimpleNode.__str__:6
+msgid "Examples"
+msgstr ""
+
+#: 7c0f8e7b6c0142b59ae8a2c688839f5b of sds.linear.node.SimpleNode:34
+msgid "Create a simple node:"
+msgstr ""
+
+#: baea275bd8f243cca3e3bb80c6af2cb5 of sds.linear.node.SimpleNode:42
+msgid "Create a chain of nodes:"
+msgstr ""
+
+#: 977418caf1544610b9733803fb5b710a of sds.linear.node.SimpleNode:54
+msgid "Modify node data and links:"
+msgstr ""
+
+#: 161774ac386b44e181187fd7b83f6aad 60b42dcd1b8b409597d6b3369606b622 of
+#: sds.linear.SimpleNode.next:14 sds.linear.node.SimpleNode:64
+msgid "Notes"
+msgstr ""
+
+#: f625f6e4a85d4543b1b34103a7e7b96b of sds.linear.node.SimpleNode:66
+msgid ""
+"This class uses __slots__ for memory efficiency. The next reference is "
+"stored in _refs[0] and exposed via a property."
+msgstr ""
+
+#: 824035a013d840edaf5adb380362d6de of sds.linear.node.SimpleNode:71
+msgid ":obj:`DoublyNode`"
+msgstr ""
+
+#: 9c8f4ad81b9f42209548c57b12dcfee8 of sds.linear.node.SimpleNode:72
+msgid "Node with bidirectional links."
+msgstr ""
+
+#: 340e3240d9514d41a523e99034fdce5e of sds.linear.node.SimpleNode:74
+msgid ":obj:`sds.core.node.Node`"
+msgstr ""
+
+#: f6fb577627464e63adb13ead8aff924e of sds.linear.node.SimpleNode:75
+msgid "Abstract base class."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.SimpleNode.rst:21:<autosummary>:1
+#: 2046d0ea21a44efaa707d80571807196 b4f02ac74a4645e7acb101899cf13028
+#: c08a06226aa640f49cc99550a3b04bd7 of sds.linear.node.SimpleNode.__init__:1
+msgid "Initialize a new simple node."
+msgstr ""
+
+#: 0371e6b9f7dd4b35afe9348e62c8581a f2a655ac2add4658914cacd8f52bd4c8 of
+#: sds.linear.node.SimpleNode.__init__:5
+msgid "The next node in the list. Default is None."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.SimpleNode.rst:13
+#: 948b0a6424df4e0e8da8b219f67817e7
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.SimpleNode.rst:21:<autosummary>:1
+#: 41c4e2de59ae4f90ba956f96c2c07210
+msgid ""
+":py:obj:`__init__ <sds.linear.SimpleNode.__init__>`\\ \\(data\\[\\, "
+"next\\_node\\]\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.SimpleNode.rst:23
+#: d1d98f81022c4439baa8e68b7e950bcd
+msgid "Attributes"
+msgstr ""
+
+#: e5c61d2d4d6e4f14b07896572429a6df of
+#: sds.linear.node.SimpleNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.linear.SimpleNode.data>`\\"
+msgstr ""
+
+#: 0965ebf9b56a4dacaa63c65102c4bcc1 of
+#: sds.linear.node.SimpleNode.__init__:1:<autosummary>:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: 342086e1fd8641a6bdc76259caace877 of
+#: sds.linear.node.SimpleNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`next <sds.linear.SimpleNode.next>`\\"
+msgstr ""
+
+#: 40057878cd4c41cc97c38f711d6cb29e fef6cde3ceae4c1885f099f869b4b125 of
+#: sds.linear.SimpleNode.next:1
+#: sds.linear.node.SimpleNode.__init__:1:<autosummary>:1
+msgid "Get or set the next node in the list."
+msgstr ""
+
+#: 4f0b014eef88449d87962e5a0e57f6fb of
+#: sds.linear.node.SimpleNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`parent <sds.linear.SimpleNode.parent>`\\"
+msgstr ""
+
+#: cc7373c595d143b080b977c64ab71ed6 of
+#: sds.linear.node.SimpleNode.__init__:1:<autosummary>:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.SimpleNode.rst
+#: 09a4a04083654d179a8b33f455226786 8f385bf31c80462fb4be7cfe0fcd4792
+#: be3731a861cd4e62b34fbec215610916
+msgid "Returns"
+msgstr ""
+
+#: d4275cddd59341d184c207e6b953d76a of sds.linear.SimpleNode.next:3
+msgid "The next node in the list, or None if this is the last node."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.SimpleNode.rst
+#: 40c92f6b3c1a4d8f8c8f441e8db2d8fe c48cbf25d763436cbbc8aa0266d23e50
+#: f543b0b3f6034a3b83ab7106faad8f6e
+msgid "Return type"
+msgstr ""
+
+#: f6749d941e57407a804f0f4e7ca318e0 of sds.linear.SimpleNode.next:16
+msgid "This property accesses _refs[0]."
+msgstr ""
+
+#: 22cca794483843d7b9b6ec77c10334a4 of sds.linear.node.SimpleNode.__repr__:1
+msgid "Return a detailed string representation of the node."
+msgstr ""
+
+#: 34dd251a96764482b8dfef5c908d8cba of sds.linear.node.SimpleNode.__repr__:3
+msgid "String representation in the form \"SimpleNode(data)\"."
+msgstr ""
+
+#: 866b00d8a80742fcab30e27acdb73f87 of sds.linear.node.SimpleNode.__str__:1
+msgid "Return a simple string representation of the node's data."
+msgstr ""
+
+#: b57f00a0ef3047e1af9a4895a3c309f8 of sds.linear.node.SimpleNode.__str__:3
+msgid "String representation of the data."
+msgstr ""
+

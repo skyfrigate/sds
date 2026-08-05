@@ -1,0 +1,934 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:2
+#: 50f77da791d1483491aa3e557851e95c
+msgid "sds.linear.interfaces.AbstractLinkedList"
+msgstr ""
+
+#: 625baeda3c5c4a1aa44c385dff8d12f4 of
+#: sds.linear.interfaces.AbstractLinkedList:1
+msgid "Abstract base class for linked list implementations."
+msgstr ""
+
+#: b26f48926231436094eb9f740c674f77 of
+#: sds.linear.interfaces.AbstractLinkedList:3
+msgid ""
+"This class defines the common interface that all linked list variants "
+"(singly linked, doubly linked, circular) must implement. It extends "
+"LinearCollection with list-specific operations like indexed access, "
+"insertion, and specialized removal methods."
+msgstr ""
+
+#: a818faf374e84f589b28812fd2e4ecd7 of
+#: sds.linear.interfaces.AbstractLinkedList:8
+msgid ""
+"All concrete linked list implementations should inherit from this class "
+"and provide implementations for all abstract methods."
+msgstr ""
+
+#: c9d2f7023ff94ea09a3c96e32de560e9 of
+#: sds.linear.interfaces.AbstractLinkedList:13
+msgid "The number of elements in the list (read-only property)."
+msgstr ""
+
+#: bdc092e9c485429d8a42e1a7f17b15eb of sds.linear.interfaces.AbstractLinkedList
+msgid "type"
+msgstr ""
+
+#: f114012f835b421fbb130f7c1838dffb of
+#: sds.linear.interfaces.AbstractLinkedList:15
+msgid "int"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 2b8d90d043684213beb64d7f290ad181 5baf46cd44654d3bbc21fad54fbc21f5
+#: 75cb45e23c8c4d0c97971fdb51460317 abf3919ecd6b4cb4ad608a5e5e03820c of
+#: sds.linear.interfaces.AbstractLinkedList:19
+#: sds.linear.interfaces.AbstractLinkedList.append:24
+#: sds.linear.interfaces.AbstractLinkedList.prepend:1
+msgid "Add an item to the beginning of the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 0c97d1d1d59748d2b2bceebb2bd361e6 9f00b896bba44ff2a701063ba17e8a93
+#: d73bbd5562834125ab1f009763e3187a ed09a0dc87a44d26876b3c331ea3c5ec of
+#: sds.linear.interfaces.AbstractLinkedList:23
+#: sds.linear.interfaces.AbstractLinkedList.append:1
+#: sds.linear.interfaces.AbstractLinkedList.prepend:22
+msgid "Add an item to the end of the list."
+msgstr ""
+
+#: 137fcf15302c41168cee5596c1424507 of
+#: sds.linear.interfaces.AbstractLinkedList:27
+msgid "Insert an item at a specific index."
+msgstr ""
+
+#: 016fc9524683474a9c0902a36c75b4ae of
+#: sds.linear.interfaces.AbstractLinkedList:31
+msgid "Remove and return the first item."
+msgstr ""
+
+#: 3506be7ba6af4f588ee209fba470525f of
+#: sds.linear.interfaces.AbstractLinkedList:35
+msgid "Remove and return the last item."
+msgstr ""
+
+#: 01cea54e4fec46ee9887dd0288795aa3 of
+#: sds.linear.interfaces.AbstractLinkedList:39
+msgid "Remove and return the item at a specific index."
+msgstr ""
+
+#: 59aba07e068f48a8ad9e3ec6af9d009d of
+#: sds.linear.interfaces.AbstractLinkedList:43
+msgid "Find the index of an item."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 5c20dc83c4d34a75a4c5616af7404952 ad6ef291abc447cebf0bcfff5c982eb8
+#: c526efffcbc4463c994aed2816813c02 of
+#: sds.linear.interfaces.AbstractLinkedList:47
+#: sds.linear.interfaces.AbstractLinkedList.reverse:1
+msgid "Reverse the list in place."
+msgstr ""
+
+#: 9ae74f207c64427085e266f334405c98 of
+#: sds.linear.interfaces.AbstractLinkedList:51
+msgid "Get item at index."
+msgstr ""
+
+#: 8d1a964f60b4439db1fb7ba4ee10c0e1 of
+#: sds.linear.interfaces.AbstractLinkedList:55
+msgid "Set item at index."
+msgstr ""
+
+#: 0ed6122d4d674f0590f40d1446b7131e 38ee01676a514f54a6c1ed2daee3b16b
+#: 4cd294d45f704d3eb54f87fda57cb970 51be754cedbb4da58a39ec2737dadb8f
+#: 5e1b53d891d3425caa0ad09b834b07f3 7e887f20e26d425ab15a53b6bb0fe0a0
+#: a1e227cfa763447a9400b218a6497db7 a7496ccf1a4e47e5880060ea269e6e7f
+#: b88072a80bf541d5961df7f9acc63a47 b9d3ccc4aba24c58b2a883c59b2fd45e
+#: bb1131f6407c43c2b1e4c7accc4bc4b8 bf5b433875864857ac6096fb1a68935e
+#: ca4787331bbe40629af660e06ed7d761 f3c88b5dbe324c599dc1467f2b0a335c
+#: f6ff015461a043db8af55329c046343b of
+#: sds.linear.interfaces.AbstractLinkedList:58
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:16
+#: sds.linear.interfaces.AbstractLinkedList.__len__:8
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:15
+#: sds.linear.interfaces.AbstractLinkedList.add:9
+#: sds.linear.interfaces.AbstractLinkedList.append:6
+#: sds.linear.interfaces.AbstractLinkedList.find:9
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:14
+#: sds.linear.interfaces.AbstractLinkedList.is_empty:8
+#: sds.linear.interfaces.AbstractLinkedList.prepend:6
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:15
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:8
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:8
+#: sds.linear.interfaces.AbstractLinkedList.reverse:5
+#: sds.linear.interfaces.AbstractLinkedList.size:9
+msgid "Examples"
+msgstr ""
+
+#: 216d767012de4e759cc7ac7c9a0b6f4d of
+#: sds.linear.interfaces.AbstractLinkedList:60
+msgid "Any concrete linked list can be used polymorphically:"
+msgstr ""
+
+#: 298e950673b44066b92cd51a5aae31fb 5fc01ee9d223456da614516a00caebe5
+#: 676a6c47a0544be8a150f624d523cb51 6ec846b93fef4850b1ca975d3c3fa234
+#: 708abe99eb0c44ef97043ce94e63c370 8254fac34b224103b1a14fd65b204f32
+#: 8734619fd7ce4d238e49d43d25393617 af756a5a7961435aad6e0b8f626bb6ea
+#: b7f53e04bb364b6eb397dfa940401a4c c58e8735bc2e4ce989831d6e42aadaf2
+#: c83edffa84a34093957b9a366a2cfd16 ceac9d3912b6433c80a743ede1d937d1
+#: df7fc9b41e664ef78cd3d10c51abc072 ec1b2c51572948d78fbf3cf363e96d01
+#: f2b63681acad4f1fba899d7b85496962 of
+#: sds.linear.interfaces.AbstractLinkedList:73
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:29
+#: sds.linear.interfaces.AbstractLinkedList.__len__:17
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:31
+#: sds.linear.interfaces.AbstractLinkedList.add:17
+#: sds.linear.interfaces.AbstractLinkedList.append:15
+#: sds.linear.interfaces.AbstractLinkedList.find:20
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:29
+#: sds.linear.interfaces.AbstractLinkedList.is_empty:17
+#: sds.linear.interfaces.AbstractLinkedList.prepend:15
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:33
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:18
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:18
+#: sds.linear.interfaces.AbstractLinkedList.reverse:17
+#: sds.linear.interfaces.AbstractLinkedList.size:18
+msgid "Notes"
+msgstr ""
+
+#: 047adcfaee0149d7850cf69c7a1df666 of
+#: sds.linear.interfaces.AbstractLinkedList:75
+msgid ""
+"This class is abstract and cannot be instantiated directly. Concrete "
+"subclasses must implement all abstract methods."
+msgstr ""
+
+#: de724258c35f4f1a94a1786b66e5a996 of
+#: sds.linear.interfaces.AbstractLinkedList:78
+msgid ""
+"The size property is defined here but relies on subclasses to maintain an"
+" internal _size attribute."
+msgstr ""
+
+#: b748e3142d5c4e3bbe1acf760db3dc75 of
+#: sds.linear.interfaces.AbstractLinkedList:83
+msgid ":obj:`LinearCollection`"
+msgstr ""
+
+#: c7eb260a64154175b5b842a5d8258ba8 of
+#: sds.linear.interfaces.AbstractLinkedList:84
+msgid "Parent interface for linear data structures."
+msgstr ""
+
+#: b947cce6a4b2453dbf9a4a79abc5d19f of
+#: sds.linear.interfaces.AbstractLinkedList:86
+msgid ":obj:`LinkedList`"
+msgstr ""
+
+#: 17c3ea0fee434661a5b461edfe76b7db of
+#: sds.linear.interfaces.AbstractLinkedList:87
+msgid "Singly linked list implementation."
+msgstr ""
+
+#: 98af3528e14649f291ef14cdcfffbab5 of
+#: sds.linear.interfaces.AbstractLinkedList:89
+msgid ":obj:`DoublyLinkedList`"
+msgstr ""
+
+#: 27a2aa45a5a74adf8498def2c0ad9839 of
+#: sds.linear.interfaces.AbstractLinkedList:90
+msgid "Doubly linked list implementation."
+msgstr ""
+
+#: 2b4cb2cb4754462c8d09504cff11bad4 of
+#: sds.linear.interfaces.AbstractLinkedList:92
+msgid ":obj:`CircularLinkedList`"
+msgstr ""
+
+#: a4c64ef3c5c9450bb14615bf25ba5d05 of
+#: sds.linear.interfaces.AbstractLinkedList:93
+msgid "Circular linked list implementation."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: cf8fcf6a4e2b4c97993c9690cdd4eb30 ec613ce8a0e44b6ebabf129f4eea7a20
+#: ee67534516d2481f9e1c756d2c61737c of
+#: sds.linear.interfaces.AbstractLinkedList.__init__:1
+msgid "Initialize the abstract linked list."
+msgstr ""
+
+#: 01701188bf0a46edaf0b249219a91829 2737641da9fc42bbb8e1a9019191674e of
+#: sds.linear.interfaces.AbstractLinkedList.__init__:3
+msgid ""
+"Subclasses should call this via super().__init__() and then initialize "
+"their own internal attributes."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:13
+#: 37c6f1b1de144e009080e1fde5fdf3d4
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 416f6efea66243708fc54ee1d1a6ff4a
+msgid ""
+":py:obj:`__init__ <sds.linear.interfaces.AbstractLinkedList.__init__>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 680a2010e4694c5ea61a60d8c84b313c
+msgid ":py:obj:`add <sds.linear.interfaces.AbstractLinkedList.add>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 86a390ee993e4639a91cd19b7aea0231 b8447703c59047b6bb7c12b5111be26e of
+#: sds.linear.interfaces.AbstractLinkedList.add:1
+msgid "Add an item to the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 879f96ab4124415c8c7c56ff0c1e0979
+msgid ""
+":py:obj:`append <sds.linear.interfaces.AbstractLinkedList.append>`\\ "
+"\\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 6b561d95fab0461a99e230f687b76b75
+msgid ":py:obj:`clear <sds.linear.interfaces.AbstractLinkedList.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 08d60bf566c549e0bcfea33318d955dc
+msgid "Remove all elements from the collection."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 513f11ae280d475ca5463ab768294b55
+msgid ""
+":py:obj:`find <sds.linear.interfaces.AbstractLinkedList.find>`\\ "
+"\\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: ccbb23458aa9498baa30bc44f765794d ea8f45ee6f5547e0ae9dbd2bd0fc6501 of
+#: sds.linear.interfaces.AbstractLinkedList.find:1
+msgid "Find the index of the first occurrence of an item."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: c9d68040878542cc87983ecb6b8fed55
+msgid ""
+":py:obj:`insert_at "
+"<sds.linear.interfaces.AbstractLinkedList.insert_at>`\\ \\(index\\, "
+"item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 764edd9f6f874330882e2aba01191fd3 ff2f4a7bd48e49a18bdd4913a9135229 of
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:1
+msgid "Insert an item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: c89fdf8f19414b55b118f6e9ca7c9d0f
+msgid ""
+":py:obj:`is_empty <sds.linear.interfaces.AbstractLinkedList.is_empty>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 1e2d07d7ea154034a8f3c545e3f4ad29 c44d80aa79084a45bb7826059c4e1fe8 of
+#: sds.linear.interfaces.AbstractLinkedList.is_empty:1
+msgid "Return True if the list is empty."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 1e1de06aca2340e7b1a5ec69e41a1b75
+msgid ""
+":py:obj:`prepend <sds.linear.interfaces.AbstractLinkedList.prepend>`\\ "
+"\\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: ef672a7671844b52ba136efc16aaf450
+msgid ""
+":py:obj:`remove <sds.linear.interfaces.AbstractLinkedList.remove>`\\ "
+"\\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 5915cb67ec9b4082a86b3389c4fa9003
+msgid "Remove and return an item from the collection."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 0d7d3f9fa27541fc9bf18921b2734fea
+msgid ""
+":py:obj:`remove_at "
+"<sds.linear.interfaces.AbstractLinkedList.remove_at>`\\ \\(index\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: dc9e441de3f34435bc23fc36ec82e678 ecd29dc433ac4b9a9cbab852f79c744f of
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:1
+msgid "Remove and return the item at the specified index."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 90cdad6bf5be4c24bfea1a34c559cb80
+msgid ""
+":py:obj:`remove_first "
+"<sds.linear.interfaces.AbstractLinkedList.remove_first>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 01be24b1e8bf4b1f987b05b6f8f16a7f b8269836c7304798863442bc35986de8 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:1
+msgid "Remove and return the first item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 8f34d341314147d4a08f06a1b15dc9e6
+msgid ""
+":py:obj:`remove_last "
+"<sds.linear.interfaces.AbstractLinkedList.remove_last>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 02da2522c2364b3aa804a844fa274c7b b00323d481624e97a63976c04194540b of
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:1
+msgid "Remove and return the last item from the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:33:<autosummary>:1
+#: 3a694f0565b84fde9eea937b97fc7315
+msgid ""
+":py:obj:`reverse <sds.linear.interfaces.AbstractLinkedList.reverse>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst:35
+#: 4706947dc0004b91838a10f747adb435
+msgid "Attributes"
+msgstr ""
+
+#: 13cb00dffb4f434f8d0d050135761530 of
+#: sds.linear.interfaces.AbstractLinkedList.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.linear.interfaces.AbstractLinkedList.size>`\\"
+msgstr ""
+
+#: 3366a52aff354372bd7158fc48fbd117 3f601183295148cf895d713c32bb9856 of
+#: sds.linear.interfaces.AbstractLinkedList.__init__:1:<autosummary>:1
+#: sds.linear.interfaces.AbstractLinkedList.size:1
+msgid "Get the number of elements in the list."
+msgstr ""
+
+#: ad0865fd27d14c0dbb09f35f946bae9c of
+#: sds.linear.interfaces.AbstractLinkedList.size:3
+msgid ""
+"This is a read-only property. The size is maintained internally and "
+"updated automatically by add/remove operations."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst
+#: 0855c65433784174a345ff1ed86d610d 411f9f6917b3481baa916317ffb80bd0
+#: a19e322ef14e446f9ca290321e6fbbd3 b2c13f78d56f4f2281bfba99c183d24b
+#: ea56109423c44d72885b4708b2c9ad80 ee0bae175c954a9886928932cd29f9cf
+#: f8494e5692ba4ca294b0c46895174da8 fa7d8d0c4b1146698e401f97cab2b9f2
+msgid "Returns"
+msgstr ""
+
+#: 34587fee05654b7da5d3a26ddb5c16d1 of
+#: sds.linear.interfaces.AbstractLinkedList.size:6
+msgid "The number of elements currently in the list."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst
+#: 1f35dce3b56c493fa3e6bf6d65a4408e 2818075e5b474078842a35fc90e64bc4
+#: 456b70e4313e4ee486ed82ddb3e9b70f 4f9ea2f9cfb941dc88679bc9adc4f1d7
+#: 55e9ca7a919c48298a882de361939ff3 aebbe4d78ab546d7bfce7886d36c534b
+#: b7c00a0f3cca4864a1f1a857960698b8 fbe9933b496e4005af881892ef2aa361
+msgid "Return type"
+msgstr ""
+
+#: 7486d199687d46a4a2ea2e5209f6e17d of
+#: sds.linear.interfaces.AbstractLinkedList.size:20
+msgid ""
+"This property provides O(1) access to the list size without needing to "
+"traverse the entire list."
+msgstr ""
+
+#: da38587a44f44a8e90981dda97e95c3a efa359c942ad43b0b74983a3f8d4534b of
+#: sds.linear.interfaces.AbstractLinkedList.is_empty:23
+#: sds.linear.interfaces.AbstractLinkedList.size:25
+msgid ":obj:`__len__`"
+msgstr ""
+
+#: a68b1da778a8435d87629a027662a0dc of
+#: sds.linear.interfaces.AbstractLinkedList.size:26
+msgid "Returns the same value, allowing use of len(list)."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst
+#: 02d1bb6a73f64f57974223571cb972f8 3698960b92c4404ba918411c9da9804f
+#: 5a00c12aacb44fc686aa3f16348bf695 679e7bffb089423580b4c7d0c3e84989
+#: 7c7f8294d4e9472c9c2fcc3fc3ee2db9 82435f538ab04b97af8b52220990c612
+#: b2cad625e28c47148d46990e84925888 fd635f2ba3724bb39e052c4189428ea2
+msgid "Parameters"
+msgstr ""
+
+#: b2452e6f96fe40baa46ed1dc6077b590 of
+#: sds.linear.interfaces.AbstractLinkedList.prepend:3
+msgid "The item to add to the beginning of the list."
+msgstr ""
+
+#: 2d281dbae4c249418be8b5364df05da3 of
+#: sds.linear.interfaces.AbstractLinkedList.prepend:17
+msgid "This operation should be O(1) for all linked list implementations."
+msgstr ""
+
+#: 1409cb5cd04044bc8526dbd7b253a660 bef55f3891814f73aa21c86edb5d1f34
+#: e705f3a183854662aae6ca8330b0a937 f32e80f523f14f8f8c30c9bcdf64363b of
+#: sds.linear.interfaces.AbstractLinkedList.add:24
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:38
+#: sds.linear.interfaces.AbstractLinkedList.prepend:21
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:32
+msgid ":obj:`append`"
+msgstr ""
+
+#: a0edd1f08dfa459397f1831c342ba57d f822d2b66a8e497f90bc775fb0e00822 of
+#: sds.linear.interfaces.AbstractLinkedList.append:26
+#: sds.linear.interfaces.AbstractLinkedList.prepend:24
+msgid ":obj:`insert_at`"
+msgstr ""
+
+#: 3a4c9d0e5ecf4358b7ec75d3e1ccc79c b45b1749409844b3b7a84558dd93557a of
+#: sds.linear.interfaces.AbstractLinkedList.append:27
+#: sds.linear.interfaces.AbstractLinkedList.prepend:25
+msgid "Insert an item at a specific position."
+msgstr ""
+
+#: 63d24cf0c1224fd3815634c6eaac4ad7 of
+#: sds.linear.interfaces.AbstractLinkedList.append:3
+msgid "The item to add to the end of the list."
+msgstr ""
+
+#: 9a9fa99130474fc7a243d7f9c20b20a7 of
+#: sds.linear.interfaces.AbstractLinkedList.append:17
+msgid ""
+"Time complexity varies by implementation: - Singly linked list without "
+"tail: O(n) - Doubly linked list with tail: O(1)"
+msgstr ""
+
+#: 22ab19f458d048608be61ab14cf55005 694fe8997c4141d3b406d4a83d748315
+#: 9e501a228f484a33a75cbad51ddbc321 cf117963bf65433fbbdca08b50d16e40 of
+#: sds.linear.interfaces.AbstractLinkedList.add:27
+#: sds.linear.interfaces.AbstractLinkedList.append:23
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:35
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:30
+msgid ":obj:`prepend`"
+msgstr ""
+
+#: b8d5170e27604d9890788c63e33dd946 of
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:3
+msgid ""
+"All items at and after the specified index are shifted to the right. "
+"Negative indices are supported and count from the end of the list."
+msgstr ""
+
+#: a4a098cb796e48a09a53097e3b2f9b3a of
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:6
+msgid ""
+"The position at which to insert the item. Must satisfy -len(list) <= "
+"index <= len(list)."
+msgstr ""
+
+#: 7d947308cd59401a9f05380bed6debff of
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:9
+msgid "The item to insert."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.interfaces.AbstractLinkedList.rst
+#: 64a344dce4354b5590adc8580148e329 7709bbe8cebd4bed945770625c2aad99
+#: 9558a653bd474b4ba47554e058a27615 baf0a78711cb404c9135e0806e8f236b
+#: cedeb3ef420d4c2296abaafb64faa030 fc4cd37081364716a16a98a902b6d572
+msgid "Raises"
+msgstr ""
+
+#: 148f49511a5a4c468ee43f0259759e0c 38493071b5b3406496200b87ce57136d
+#: 9f6a73b4e11849d2909c3c1d77983f8e cca5827410874e78aeea2232d5b30379 of
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:14
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:13
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:12
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:13
+msgid "If the index is out of range."
+msgstr ""
+
+#: 7e693e3905184667b535443550319cc1 of
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:23
+msgid "Negative indices work from the end:"
+msgstr ""
+
+#: fbdcf278cd4142e4a531e8fbec72a7c3 of
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:31
+msgid "Time complexity is O(n) as it requires traversing to the insertion point."
+msgstr ""
+
+#: 746759a13bdf4e8782a622d00eff61c4 of
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:36
+msgid "Optimized insertion at the beginning (O(1))."
+msgstr ""
+
+#: c64f1f3b88e742eda3af46bb9d9b0ebd of
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:39
+msgid "Insertion at the end."
+msgstr ""
+
+#: af11797a35d04a02a44971d636fa32ed eea05ee8159a43e1ab72dab862131eb4
+#: f20b6bc0a17b4b708acb5999a68c1dba of
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:41
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:27
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:29
+msgid ":obj:`remove_at`"
+msgstr ""
+
+#: 2566ed29b5d0493b8c151c3b10dc76bb 33ea8f4d2d054920985436f55c948e4f
+#: e35864a5b5eb4ba1b8fa02a090245c58 of
+#: sds.linear.interfaces.AbstractLinkedList.insert_at:42
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:28
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:30
+msgid "Remove an item at a specific index."
+msgstr ""
+
+#: be1b7c7fc89342198105941e3bcb1711 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:3
+msgid "The item that was at the beginning of the list."
+msgstr ""
+
+#: 3915c87d736e4b4886196471cae2e202 39bdffc05d044d7d936d3390b282a435
+#: 5545adfeadd94c7287791c68216fa081 8583d10289824ef8bafd837cebdc5964
+#: d794b7268c0f4f1ea8cd221673b60211 of
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:13
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:12
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:12
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:6
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:6
+msgid "If the list is empty."
+msgstr ""
+
+#: 0f0a335d5d554f22b98812bf70a862a2 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:20
+msgid "This operation is O(1) for all linked list implementations."
+msgstr ""
+
+#: 318a2b7230c940d0acb735cc383feb65 d0744fb60c044453a1097a2187d63fcd of
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:42
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:24
+msgid ":obj:`remove_last`"
+msgstr ""
+
+#: 45a951be18834a3daa21099f8735d947 e6cc985d1eef47a3b19420ab8f4fbd64 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:43
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:25
+msgid "Remove the last item."
+msgstr ""
+
+#: f64f492818a54b16a045d23e1150a292 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_first:31
+msgid "Add an item to the beginning."
+msgstr ""
+
+#: 7320157cf7eb473ebb6e03d90ede6f3a of
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:3
+msgid "The item that was at the end of the list."
+msgstr ""
+
+#: 41b25a87bb8c4ebaa79593993174bfc6 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:20
+msgid ""
+"Time complexity varies by implementation: - Singly linked list: O(n) - "
+"must traverse to find second-to-last node - Doubly linked list with tail:"
+" O(1)"
+msgstr ""
+
+#: 706cb20c84cc461892f73d6de6ff6558 ff0923f1b86c46c7a933aaf951de83ac of
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:39
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:26
+msgid ":obj:`remove_first`"
+msgstr ""
+
+#: 16a087b4d3bf41feb9f7b86534522c34 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:27
+msgid "Remove the first item."
+msgstr ""
+
+#: b147b1bb703a48a2b27e0bcc6dcbc450 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_last:33
+msgid "Add an item to the end."
+msgstr ""
+
+#: 10a4f6ace8ed41ec8709cb18df3c9433 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:3
+msgid "Negative indices are supported and count from the end of the list."
+msgstr ""
+
+#: 2a24782c1ed94e0a94bb3b3ca393db57 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:5
+msgid ""
+"The position of the item to remove. Must satisfy -len(list) <= index < "
+"len(list)."
+msgstr ""
+
+#: 7bb16efdbe40411286a9d604072faffd of
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:9
+msgid "The item that was removed."
+msgstr ""
+
+#: a50deda63a9244bd930d080bf938cc3e ac4702e411354d9bbc9547084357e496 of
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:25
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:26
+msgid "Negative indices:"
+msgstr ""
+
+#: bfc1f9ff5d4c4746b0c76ced630d9a68 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:35
+msgid "Time complexity is O(n) as it requires traversing to the removal point."
+msgstr ""
+
+#: 28348a48abb946178faeb4d2d01acd94 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:40
+msgid "Optimized removal at the beginning (O(1))."
+msgstr ""
+
+#: 0ce242f81b1340a5882cfafd707f6ce3 c1cf0ee7bf0943e5824e9d1018991f86 of
+#: sds.linear.interfaces.AbstractLinkedList.find:30
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:45
+msgid ":obj:`remove`"
+msgstr ""
+
+#: 1a6a3b8e5c0b4facbbe749afd6506c58 of
+#: sds.linear.interfaces.AbstractLinkedList.remove_at:46
+msgid "Remove by value instead of index."
+msgstr ""
+
+#: df6f936b736c4bfba4e77144a33b9087 of
+#: sds.linear.interfaces.AbstractLinkedList.find:3
+msgid "The item to search for."
+msgstr ""
+
+#: 444177025b1244688b372cc2670cce6f of
+#: sds.linear.interfaces.AbstractLinkedList.find:6
+msgid "The index of the first occurrence of the item, or -1 if not found."
+msgstr ""
+
+#: ea3fa271a5a5414882b0bd45b2a790ea of
+#: sds.linear.interfaces.AbstractLinkedList.find:22
+msgid ""
+"Time complexity is O(n) as it requires linear search. The search stops at"
+" the first match."
+msgstr ""
+
+#: 4bcf1fcaff6948529c2deea107a69829 of
+#: sds.linear.interfaces.AbstractLinkedList.find:27
+msgid ":obj:`__contains__`"
+msgstr ""
+
+#: bb0a8d06871742efa902c3efdddb0dd5 of
+#: sds.linear.interfaces.AbstractLinkedList.find:28
+msgid "Check if an item exists (returns bool)."
+msgstr ""
+
+#: 3661c8cd776e487ca96fe5e4489337b7 of
+#: sds.linear.interfaces.AbstractLinkedList.find:31
+msgid "Remove the first occurrence of an item."
+msgstr ""
+
+#: db565165cfc94094b6bfe8fa77cfdba4 of
+#: sds.linear.interfaces.AbstractLinkedList.reverse:3
+msgid "This operation modifies the list itself rather than creating a new list."
+msgstr ""
+
+#: 7e32e9328afa4abb80ec7b8b8aff2678 of
+#: sds.linear.interfaces.AbstractLinkedList.reverse:19
+msgid ""
+"Time complexity is O(n) as all links must be reversed. Space complexity "
+"is O(1) as reversal is done in place."
+msgstr ""
+
+#: 0fe607c5354c49aeb1c630035751b7e7 of
+#: sds.linear.interfaces.AbstractLinkedList.reverse:24
+msgid ":obj:`__reversed__`"
+msgstr ""
+
+#: 9359686b6a7d4b9fa0da14a2fbf4c7bd of
+#: sds.linear.interfaces.AbstractLinkedList.reverse:25
+msgid "Return a reverse iterator (for doubly linked lists)."
+msgstr ""
+
+#: 2517d9771bc34c0fbaafb834ea97a1f7 of
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:1
+msgid "Get the item at the specified index."
+msgstr ""
+
+#: bf3d381d618a4a8d8bab76620943da90 of
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:3
+msgid ""
+"This enables list-style indexing: lst[index]. Negative indices are "
+"supported and count from the end."
+msgstr ""
+
+#: c87ce77c1101470ea875b3d5a31a92b7 of
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:6
+msgid ""
+"The position of the item to retrieve. Must satisfy -len(list) <= index < "
+"len(list)."
+msgstr ""
+
+#: c5d992b8ced14f689e9af2477691453e of
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:10
+msgid "The item at the specified index."
+msgstr ""
+
+#: 9e9ee0b7225f4bc4b06b3e5e203b22dc of
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:31
+msgid ""
+"Time complexity is O(n) as linked lists don't support random access. For "
+"doubly linked lists, the implementation may optimize by starting from the"
+" tail for indices in the second half of the list."
+msgstr ""
+
+#: fad3d1358df1446a87904f7d0e164840 of
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:37
+msgid ":obj:`__setitem__`"
+msgstr ""
+
+#: 417232f8eb074c359b983ede0cb8e0c3 of
+#: sds.linear.interfaces.AbstractLinkedList.__getitem__:38
+msgid "Set the item at a specific index."
+msgstr ""
+
+#: f05eb974c2cd443a96a5ec506baa7d16 of
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:1
+msgid "Set the item at the specified index."
+msgstr ""
+
+#: 7cbf4088bdf641799ce2e9699707d78c of
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:3
+msgid ""
+"This enables list-style assignment: lst[index] = value. Negative indices "
+"are supported and count from the end."
+msgstr ""
+
+#: 08efa9602edb471cb69931a82278d806 of
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:6
+msgid ""
+"The position of the item to update. Must satisfy -len(list) <= index < "
+"len(list)."
+msgstr ""
+
+#: f86bf6adab64488ba1de038a70290b26 of
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:9
+msgid "The new value to store at the index."
+msgstr ""
+
+#: b085751e0cb3435e83e23b10df519be5 of
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:33
+msgid "Time complexity is O(n) as it requires traversing to the index."
+msgstr ""
+
+#: fc916d11e266476dbbf5bc5ac17d471b of
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:37
+msgid ":obj:`__getitem__`"
+msgstr ""
+
+#: 1102164d8bbf49ad9f297a1bba9dd465 of
+#: sds.linear.interfaces.AbstractLinkedList.__setitem__:38
+msgid "Get the item at a specific index."
+msgstr ""
+
+#: 04340d6183824b169c1a2e5db7e1b9e2 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:1
+msgid "Return the number of elements in the list."
+msgstr ""
+
+#: e5210ba4c6244f39b7e56f4d9a74371e of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:3
+msgid "This method enables the use of Python's built-in len() function."
+msgstr ""
+
+#: 5035817e65cd4cc59ca9f71c66d2e2f9 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:5
+msgid "The number of elements in the list."
+msgstr ""
+
+#: c2c94b0c356f461ebf426952dd18d31d of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:19
+msgid ""
+"This is a concrete implementation that delegates to the size property. "
+"Subclasses don't need to override this method."
+msgstr ""
+
+#: 4ab6ba354cc4458cb069670ba2580d28 bb9d808b89ac452ca7056fe3b6390580 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:22
+#: sds.linear.interfaces.AbstractLinkedList.is_empty:19
+msgid "Time complexity is O(1)."
+msgstr ""
+
+#: e7899e2cecf84784b7457781c1d40184 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:26
+msgid ":obj:`size`"
+msgstr ""
+
+#: a9798d4bfa5e45899739661b79ab73c5 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:27
+msgid "Property that returns the same value."
+msgstr ""
+
+#: 1ad45c8d37e94882b86f22353b486b86 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:29
+msgid ":obj:`is_empty`"
+msgstr ""
+
+#: 1e43cebd4470445f898bd6385d34384c of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:30
+msgid "Check if the list is empty."
+msgstr ""
+
+#: bc26b7ab9fa94a0ba88be47028f060ac of
+#: sds.linear.interfaces.AbstractLinkedList.is_empty:3
+msgid "This is a concrete implementation provided for convenience."
+msgstr ""
+
+#: 28b589a217c8457981b9767fefdaa958 of
+#: sds.linear.interfaces.AbstractLinkedList.is_empty:5
+msgid "True if the list contains no elements, False otherwise."
+msgstr ""
+
+#: ef4f19df307e4466998a98edcb18b362 of
+#: sds.linear.interfaces.AbstractLinkedList.is_empty:24
+msgid "Get the number of elements."
+msgstr ""
+
+#: fc2cdd2efde24f7986b4e3f1641640c1 of
+#: sds.linear.interfaces.AbstractLinkedList.is_empty:26
+msgid ":obj:`__bool__`"
+msgstr ""
+
+#: f873cca9c6d043ccb0aa85c204b01bf6 of
+#: sds.linear.interfaces.AbstractLinkedList.is_empty:27
+msgid "Used in boolean contexts."
+msgstr ""
+
+#: 503bd76cc00748deb3e90f01a7054b39 of
+#: sds.linear.interfaces.AbstractLinkedList.add:3
+msgid ""
+"This is a concrete implementation that delegates to append(). It's "
+"provided to satisfy the LinearCollection interface."
+msgstr ""
+
+#: 2afcd55c2222413e89fd1adb95bbc9bc of
+#: sds.linear.interfaces.AbstractLinkedList.add:6
+msgid "The item to add."
+msgstr ""
+
+#: 72a6d5f28ba547f39de618a3a07e85fd of
+#: sds.linear.interfaces.AbstractLinkedList.add:19
+msgid ""
+"This method is equivalent to append() and is provided for compatibility "
+"with the LinearCollection interface."
+msgstr ""
+
+#: 202031bd3a70439da94868c50ccdb7bf of
+#: sds.linear.interfaces.AbstractLinkedList.add:25
+msgid "Explicitly add to the end."
+msgstr ""
+
+#: 44abfc02211846fca19199dd94a1895a of
+#: sds.linear.interfaces.AbstractLinkedList.add:28
+msgid "Add to the beginning."
+msgstr ""
+

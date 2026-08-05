@@ -1,0 +1,532 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/linear_structures/queue.rst:3
+#: 4e667a014acc4aeda7c737689558bca2
+msgid "Queue Guide"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:8
+#: a2ed7e84e4804897a81f8ae004764907
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:10
+#: 81bcca28fc864c90b0eac7fd3201fca6
+msgid ""
+"A **queue** is a fundamental linear data structure that follows the "
+"**First-In-First-Out (FIFO)** principle. Think of it like a line at a "
+"store: the first person in line is the first to be served."
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:33
+#: 7997bd5624914d4c9b187392caa738c0
+msgid ""
+"This guide covers queues, deques (double-ended queues), and priority "
+"queues."
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:36
+#: 6333dcb3a35b4196b6d942cbe0da2f47
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:39
+#: bbe7845218bb4192978334831670fe8d
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:41
+#: e4b7d731893147199cbec103cc938e3b
+msgid "A queue :math:`Q` is an ordered collection:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:43
+#: 195b92e37b164b0e8cca88a8d78b7b7f
+msgid "Q = \\langle e_1, e_2, \\ldots, e_n \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:47
+#: a82cebc876744fd8a2e2358e9640e6d0
+msgid ""
+"where :math:`e_1` is the **front** element (oldest, will be removed next)"
+" and :math:`e_n` is the **rear** element (newest, just added)."
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:50
+#: 8420154933904c0ab7c7b6c416f17d70
+msgid "Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:53
+#: 67c9d3435bb940b3a417d74cfee929db
+msgid "Enqueue Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:55
+#: 93cf2071954043bcae090ccfb383d258
+msgid "Adds an element to the rear:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:57
+#: 21606eaeb91b4a4497febe2081c64883
+msgid "enqueue(Q, x) = \\langle e_1, e_2, \\ldots, e_n, x \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:61
+#: ../../source/guide/linear_structures/queue.rst:75
+#: b512017c506145eba37076d9954e1bab bd8a65fb288640f4a229dbfbd2583c13
+msgid "**Properties:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:62
+#: daa86f88d2d94d99a7a751703c6fa669
+msgid ":math:`|Q'| = |Q| + 1`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:63
+#: 536d14c4fbbd4b65b4ee36675280f47f
+msgid ":math:`rear(Q') = x`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:64
+#: 7b000d4e912246b4ab292b018acf87d7
+msgid ":math:`front(Q') = front(Q)` if :math:`|Q| > 0`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:67
+#: adb337cbbaba4e6a91924959250e113f
+msgid "Dequeue Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:69
+#: 64de15513ca34e6ebd9a343b8bdb5e24
+msgid "Removes and returns the front element:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:71
+#: a33fd336616b4149b27b24bcb5bba6ce
+msgid ""
+"dequeue(\\langle e_1, e_2, \\ldots, e_n \\rangle) = (e_1, \\langle e_2, "
+"\\ldots, e_n \\rangle)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:76
+#: 6a7e2661021c4de4afb2ca3f953debad
+msgid ":math:`|Q'| = |Q| - 1`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:77
+#: 25fe67294d694b3b9e692a6125bf153e
+msgid "Undefined for empty queue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:80
+#: 07cbbef98bc04f9eaebb427d37dd0783
+msgid "Queue Invariants"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:82
+#: eec28c3decc9471cb45423c100f932c0
+msgid ""
+"**FIFO ordering**: :math:`enqueue_i` before :math:`enqueue_j \\implies "
+"dequeue_i` before :math:`dequeue_j`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:83
+#: b49010da3e004966848e8d05e4a61133
+msgid "**Size**: :math:`|Q| \\geq 0`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:84
+#: c0299095ff344908b7152dff2292393c
+msgid "**Front accessibility**: If :math:`|Q| > 0`, :math:`front(Q)` is defined"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:87
+#: b7d82df465334cda93ea0613dff2176b
+msgid "Deque Extensions"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:89
+#: 7946ba9c224145f4a2992abe96887484
+msgid "A **deque** (double-ended queue) allows operations at both ends:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:91
+#: 7f77649504a547c6b347a153babcbaa2
+#, python-brace-format
+msgid ""
+"\\begin{align*}\n"
+"add\\_front(Q, x) &= \\langle x, e_1, e_2, \\ldots, e_n \\rangle \\\\\n"
+"add\\_rear(Q, x) &= \\langle e_1, e_2, \\ldots, e_n, x \\rangle \\\\\n"
+"remove\\_front(Q) &= (e_1, \\langle e_2, \\ldots, e_n \\rangle) \\\\\n"
+"remove\\_rear(Q) &= (e_n, \\langle e_1, \\ldots, e_{n-1} \\rangle)\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:101
+#: f45c8c02e7f0495691ab8012971a01e3
+msgid "Priority Queue Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:103
+#: 7aa6467916b34c79ae7efe12e21065e7
+msgid "A priority queue dequeues by priority rather than insertion order:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:105
+#: c5bfe502fb034716b9aced89085d6c93
+#, python-brace-format
+msgid ""
+"dequeue(PQ) = (e_i, PQ \\setminus \\{e_i\\}) \\text{ where } "
+"priority(e_i) = \\max_{e \\in PQ} priority(e)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:110
+#: d36b261389364dc9ad88db370b1d218c
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:113
+#: 2894597ac0c7447497a2624dabd922f0
+msgid "Queue ADT"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:132
+#: 56a81818539a437dac09986fbdfbfb47
+msgid "Implementation Strategies"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:135
+#: 87f2ac81231846938be918151c384f66
+msgid "Array-Based (Circular Buffer)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:148
+#: ../../source/guide/linear_structures/queue.rst:172
+#: 0deb1ee6dff1459fb9c755ff8229a64d 9da0be4446844c5cb704eed59651056b
+msgid "**Advantages:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:149
+#: 4576fcb686f348efaafc694f380a66bf
+msgid "O(1) enqueue and dequeue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:150
+#: 105e9c6b20a74fc282aec8f3904d6b78
+msgid "Good cache locality"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:151
+#: c89165681bb14c2c80af83ff005d99b5
+msgid "Fixed memory usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:153
+#: ../../source/guide/linear_structures/queue.rst:177
+#: 167c4e217c90428783e2404eca7dba97 a6ab7efd07cf43839c5be80a54bf49b4
+msgid "**Disadvantages:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:154
+#: b26a96fb681042a88d8c2e0df98e8b3a
+msgid "Fixed size (without reallocation)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:155
+#: 16dd28a1f645448b8c3995ad430a47fa
+msgid "Complexity in handling wrap-around"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:158
+#: 76a0c657d8fb4dc4b73cd6732aa745e7
+msgid "Linked List Implementation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:173
+#: 9fab3d5d22f5465fac3af76ae254b674
+msgid "Dynamic size"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:174
+#: 8c9b5194f28741b2a9b4c5df4a590d56
+msgid "Simple logic"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:175
+#: 3728b43a8a314f0e814c91c51a4a5047
+msgid "O(1) operations (with tail pointer)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:178
+#: 3dd74155ee0f4550bece8e25b42f76c9
+msgid "Extra memory for pointers"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:179
+#: c71fdb8339ba4fc387caeb3cdff3077e
+msgid "Less cache-friendly"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:182
+#: 2bf22f75fd4546cda80fe1e1ba97fef3
+msgid "Algorithm Pseudocode"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:185
+#: d1137d63fecb4225ba4ae6a0c99b89fe
+msgid "Queue Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:221
+#: 57342baa564046c2bc07ba67266dc41e
+msgid "Deque Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:237
+#: adee73a5dc494621bfdefc2c1eadf40c
+msgid "Priority Queue Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:258
+#: 48131193586b4cd589428be118a2988f
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:264
+#: 1c6b6099c2374680b0973970b8b677af
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:265
+#: ../../source/guide/linear_structures/queue.rst:512
+#: 3dd98e9d4e2c4deb9c3c5d6e79b8cf18 b8db87df86694eef8191f72ef9bd004c
+msgid "Queue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:266
+#: ../../source/guide/linear_structures/queue.rst:527
+#: 0492f7b22e574a579a86856f5ce3b9b0 7614d43997804145a43ff32c4c6ab08f
+msgid "Deque"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:267
+#: ../../source/guide/linear_structures/queue.rst:539
+#: 321640ae6e924b3e9ee8535891279043 342e006879d44cf9a4e5c7ecc7ca5f19
+msgid "Priority Queue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:268
+#: 06ecf6b1d5c04da7855ab27b10feb4f0
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:269
+#: 968dc8092b8042ae963aac366707e8ff
+msgid "**Enqueue/Add**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:270
+#: 8c5be60bcae24b11a64c685ab247dbcc
+msgid "O(n)*"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:271
+#: ../../source/guide/linear_structures/queue.rst:275
+#: ../../source/guide/linear_structures/queue.rst:276
+#: ../../source/guide/linear_structures/queue.rst:277
+#: ../../source/guide/linear_structures/queue.rst:280
+#: ../../source/guide/linear_structures/queue.rst:281
+#: ../../source/guide/linear_structures/queue.rst:282
+#: 11d75feaa0d14356b9ce844ad8b2568f 31730e1aec9c4e4e82e32c83446d662b
+#: 3e4e2822622c47029d9ea9517d387b78 b0be3f69905b49998e155d4e6237282c
+#: b7713e0d1fe34cbaa21eb648e1b1cdfa df8a015ad6af44d1b8a2b6f6304bd5aa
+#: f122fc6dc4b04b06b8d8e865202eb4ed
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:272
+#: ../../source/guide/linear_structures/queue.rst:285
+#: ../../source/guide/linear_structures/queue.rst:286
+#: ../../source/guide/linear_structures/queue.rst:287
+#: ../../source/guide/linear_structures/queue.rst:290
+#: ../../source/guide/linear_structures/queue.rst:291
+#: ../../source/guide/linear_structures/queue.rst:292
+#: 2f8e1a419c1e46eb829ca1a52f670963 339c86aa4ee8475aa27cd2289803cc1d
+#: 4aa48dbf046b4d189341a8972ec7dc05 552a48780a044fe58bda49b3a3900101
+#: 5e326f83b6024e219a5b8a4b2f0a5e78 69ebe28d25f941afb23c37ea2e659bbf
+#: e1ff6a5683aa4333b67c08578b862293
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:273
+#: 907d2aa479cf4286b9264dc43a89f1b5
+msgid "Without tail pointer"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:274
+#: 45d759850d6f4f448009bb0ca04a9078
+msgid "**Dequeue/Remove**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:278
+#: 12060803674a4297a19e44ed3293aa78
+msgid "Always from front"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:279
+#: a527b1f0615a4b3bba7bf7e090bc7230
+msgid "**Peek**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:283
+#: 4f600a99e2bd41b69352b9f18b9c8bba
+msgid "Just read, no modify"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:284
+#: fbb8779c1fd14c7e8d35113e3d3964e7
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:288
+#: 66f7770983a94c25bae07dad9dd9a1fb
+msgid "Linear scan"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:289
+#: 3b06105ea1934d06be85bd162290ff42
+msgid "**Space**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:293
+#: bc03f2e2b76b41a1bfa10a1166c2a2cd
+msgid "Proportional to size"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:296
+#: a43f53a328ba4ec68e36469a6a3d8aae
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:299
+#: 6df6aa474dc04e2394e3f3a895fc27bf
+msgid "Basic Queue Usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:322
+#: a0301ed9af4d4210b1d35000fc5e3d8d
+msgid "Deque Usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:342
+#: 996606b21a5747409c24d903a0fd5001
+msgid "Priority Queue Usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:360
+#: 1c1f09e3ef214c38ba66ca2cecc71cf6
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:363
+#: 30e38a3a801b43128de2eb1c2965299f
+msgid "Application 1: Task Scheduler"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:395
+#: 511bfcceac574d638cc33c8760092496
+msgid "Application 2: BFS Algorithm"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:435
+#: 93f527d5144849559a1aab7aec81f758
+msgid "Application 3: Sliding Window (Deque)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:473
+#: b1b3cb9768ec4655bf4e36b00223a48a
+msgid "Application 4: Event Simulator (Priority Queue)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:509
+#: 92fd95bece1f41c1976afbdaa872afec
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:514
+#: 473bde05d23041eb8f75bf054a95e291
+msgid "✅ Use for FIFO, task scheduling, BFS"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:529
+#: fd2eb6e3e2cc4d6a8e40ff8a5d466602
+msgid "✅ Use for operations at both ends"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:541
+#: c8f17d38baa34587a191a6917428c9d2
+msgid "✅ Use for priority-based processing"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:551
+#: b03cf2251f0342199317f68303c1d899
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:553
+#: b1b2a39900b94e24bb7cb5230398aaf3
+msgid "**Queue vs Stack confusion**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:554
+#: 86f12a8a2f374f7090e5f10e986c2a6b
+msgid "**Forgetting FIFO order**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:555
+#: df847070c5ff47dc8a08ce2731347b3b
+msgid "**Priority queue direction** (low number = high priority by default)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:558
+#: d1b9462f69f5486bb7b5e45a06b77761
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:560
+#: 0e35a3d029a148e3bab3c186dd20f221
+msgid ":doc:`/api/linear/queue` - API reference"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:561
+#: cbf883f70abb498daf323107cae59e2d
+msgid ":doc:`stack` - LIFO alternative"
+msgstr ""
+
+#: ../../source/guide/linear_structures/queue.rst:562
+#: da00c694519b4bbe8e31a7502f481944
+msgid ":doc:`linked_list` - Implementation details"
+msgstr ""
+

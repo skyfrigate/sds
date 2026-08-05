@@ -1,0 +1,1525 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/graph_structures/index.rst:141
+msgid "Foundation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:151
+msgid "Graphs with Edge Weights"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:160
+msgid "Implementation Strategies"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:5
+#: 117fbcb017f746fe856914a965ebfe0a
+msgid "Graph Structures"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:8
+#: f74180e5533a442d992f727fcc22d343
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:10
+#: 6b9f0ac7a0e24c48b9df921ac4c95a62
+msgid ""
+"Graph data structures represent relationships between objects through "
+"nodes (vertices) and edges (connections). Unlike linear structures with "
+"sequential relationships or trees with hierarchical relationships, graphs"
+" can represent arbitrary connections, making them ideal for modeling "
+"networks, dependencies, and complex relationships."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:31
+#: eed6df2da42a45ffb4666a8d3e416fc3
+msgid ""
+"This section covers all graph structures provided by SDS-Tools, from "
+"basic undirected graphs to weighted directed graphs and specialized "
+"representations."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:35
+#: bf8ad4bd693d44379794c5c89be78cd5
+msgid "Overview"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:38
+#: 0f1fa752780e492093845c5cfd8177aa
+msgid "Types of Graph Structures"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:40
+#: 68b9be36416f47c8996282fb0d615d6e
+msgid ""
+"SDS-Tools provides several graph implementations, each optimized for "
+"specific use cases:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:46
+#: 666cb14fbdb24999bd0d6a3b75d46d0d
+msgid "Structure"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:47
+#: 67b0d23b4a8e4d1a8b2a73ee666d9b2a
+msgid "Key Property"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:48
+#: 33ef9e6172ba40e7ade8c04b5bb68660
+msgid "Primary Use Cases"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:49
+#: 160c070ebdd54d23ab34fba3926d3291
+msgid "**Graph**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:50
+#: 0b92d1992194484c9430f3eac63dc1d7
+msgid "Undirected, unweighted"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:51
+#: 7d52db36180f48cc877f0acbd1661731
+msgid "Social networks, connections"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:52
+#: 89e1fd5ae99549f3b1a523ad204b9e7e
+msgid "**DirectedGraph**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:53
+#: 3e6bcd1d6a654e71873c16f69ce8307a
+msgid "Directed edges"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:54
+#: 3453a1ea4fcf427bb31d0b54341efba2
+msgid "Dependencies, workflows, citations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:55
+#: 61539a46c368442f88025933ba733bb0
+msgid "**UndirectedGraph**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:56
+#: efd96ff93ea546b9985a7aa4db1c6ccc
+msgid "Explicit undirected validation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:57
+#: 93009737f9fe42c4a83429969de2437c
+msgid "Symmetric relationships"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:58
+#: 5b60f1d3413d4566a040cd75699ce466
+msgid "**WeightedGraph**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:59
+#: fccbb6e41e694b30b8a860b08eddbb48
+msgid "Undirected with edge weights"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:60
+#: 474f575a032c4cb09461f566f7dbb737
+msgid "Distance networks, costs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:61
+#: 73c33b42038547479fe1b670dd9f4c49
+msgid "**WeightedDirectedGraph**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:62
+#: 426a85fc1b924d6bb7750127bdff68fc
+msgid "Directed with edge weights"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:63
+#: 56575c43d3df402f8350980cbf4c3546
+msgid "Routing, flow networks"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:64
+#: 84f6058d2d10484bbd58457067eb5dc9
+msgid "**AdjacencyListGraph**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:65
+#: f520c9572226491d87b25eb2cecac84a
+msgid "Explicit list representation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:66
+#: 0c498fc534454ff495243e8ba5b6981a
+msgid "Sparse graphs, memory-efficient"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:67
+#: 0a1dc0c035a344baaf406cbc2a52f86d
+msgid "**AdjacencyMatrixGraph**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:68
+#: 2d8093dd40624119afa7cdac568600b0
+msgid "2D matrix representation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:69
+#: 0f686433584e445eaa620c0b19361e5c
+msgid "Dense graphs, O(1) edge lookup"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:72
+#: d7213b39aa19415b8c814f2ca78c0a2e
+msgid "Graph Terminology"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:94
+#: 422895279d684b55affc51b389567b4f
+msgid "**Key Terms:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:96
+#: 88213dfc8bd2493e9366b5660f357126
+msgid "**Vertex (Node)**: A point in the graph representing an entity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:97
+#: 2b896627a0b943299df670b508acd25a
+msgid "**Edge (Arc)**: A connection between two vertices"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:98
+#: 73f6babff77f4498a2351fed62b20eff
+msgid "**Adjacent**: Two vertices connected by an edge"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:99
+#: 91c2d67a95a44d8496e992ac81d098ba
+msgid ""
+"**Degree**: Number of edges incident to a vertex * **In-degree**: Number "
+"of incoming edges (directed graphs) * **Out-degree**: Number of outgoing "
+"edges (directed graphs)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:102
+#: 7b4ca629cc44486bb00b3d1a9f028597
+msgid "**Path**: Sequence of vertices connected by edges"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:103
+#: ba45b909c0054b8c992477896e49658e
+msgid "**Cycle**: Path that starts and ends at the same vertex"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:104
+#: 3a395dcea3a14a6297d7a39db7aee649
+msgid "**Connected**: Every vertex reachable from every other vertex"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:105
+#: fc2b7e5056fe47b0bcb145069d3a9e59
+msgid "**Weight**: Numeric value associated with an edge"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:106
+#: 22449107d5264f409f160343aa5302ac
+msgid "**Directed**: Edges have a direction (source → target)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:107
+#: 9a7a7c78bebf44d09a213a7f3dca3149
+msgid "**Undirected**: Edges are bidirectional"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:110
+#: 1179678490a5437e8029a9a5f5d4cf38
+msgid "Choosing the Right Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:136
+#: 35d6398a4b404695b177609543c783ee
+msgid "Detailed Guides"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:139
+#: e0e9e845b1704b2bb95a1bbb80f10c47
+msgid "Basic Graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:149
+#: 2109657d480f431ea8d41ddaf223ef7d
+msgid "Weighted Graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:158
+#: caf16620383b404ca8354fd6c182677e
+msgid "Graph Representations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:167
+#: f24fc6b20c11401580d88fc339d7fb28
+msgid "Quick Start"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:170
+#: b7844939941f4d1f82bb0791a73c5679
+msgid "Undirected Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:172
+#: bda63a51631a48fd8dc8070d0107e6e7
+msgid "Basic graph for symmetric relationships:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:205
+#: 983ae5198d524ee398f5e6b664f4b8ec
+msgid "Directed Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:207
+#: 2be998b3ca3c408cb92655031a490924
+msgid "Graph with directed edges for asymmetric relationships:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:243
+#: 58c77d967ac542fab38a5bf43b80c44f
+msgid "Weighted Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:245
+#: c58b37cc77ce43c4bb56250bed3e8148
+msgid "Graph with edge weights for costs or distances:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:277
+#: 316a85168cfe4bc786424a21af1bc699
+msgid "Adjacency Representations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:279
+#: 05c01648c5164b82817e68f4b5bf58f5
+msgid "Different representations for different use cases:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:311
+#: 2a7c3042005a4c07a9b83b585010adb7
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:314
+#: aa5b1e46059149779cd918de27d24b83
+msgid "Pattern 1: Path Finding"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:316
+#: 3afcfe9338a94199807c5fd2de5e9587
+msgid "Find if a path exists between two nodes:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:360
+#: 761370cbb5c548cfb402a8500a3be8d9
+msgid "Pattern 2: Cycle Detection"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:362
+#: b955ce2f4d4c4b38a7fd1aa6f2fb9e90
+msgid "Detect cycles in directed graphs:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:400
+#: fb1c63e181bf411a9dae089f4a2bfed5
+msgid "Pattern 3: Shortest Path (Unweighted)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:402
+#: 7e36c9deefbc487e9a7b9c0e28c1dcab
+msgid "Find shortest path in unweighted graph:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:438
+#: b419cf1b1d854fc7ae7efc27e7796ac3
+msgid "Pattern 4: Topological Sort"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:440
+#: e1bf8efa8c4b4f0894e941edb1e5d4b0
+msgid "Order tasks by dependencies:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:473
+#: fafcfd04a6244ac583c8a003f6529897
+msgid "Performance Comparison"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:476
+#: 7d0deb369cec48f8bad69c734fc2f99f
+msgid "Operation Complexity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:482
+#: fdd65cabff19469cb01293123406471c
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:483
+#: ../../source/guide/graph_structures/index.rst:571
+#: 49df7c4e98084c1183e2a5eca70e5677 afe366294a104b509e901b327c3a58d1
+msgid "Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:484
+#: ../../source/guide/graph_structures/index.rst:572
+#: 63831876231546fa8bcc9523147009b8 7be9f1483a1e4672ac0faa8f7310ee53
+msgid "DirectedGraph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:485
+#: 2b0efa34ca2743fd886062e93e77376d
+msgid "AdjacencyList"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:486
+#: 2f63cd8b939b44aca389af4c5dd62705
+msgid "AdjacencyMatrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:487
+#: fe2ffa5f68454296b2ae4b42b938d6c5
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:488
+#: c3e7126923d94ccc8a966175b1aa34a2
+msgid "**Add Node**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:489
+#: ../../source/guide/graph_structures/index.rst:490
+#: ../../source/guide/graph_structures/index.rst:491
+#: ../../source/guide/graph_structures/index.rst:492
+#: ../../source/guide/graph_structures/index.rst:495
+#: ../../source/guide/graph_structures/index.rst:496
+#: ../../source/guide/graph_structures/index.rst:497
+#: ../../source/guide/graph_structures/index.rst:498
+#: ../../source/guide/graph_structures/index.rst:510
+#: ../../source/guide/graph_structures/index.rst:513
+#: ../../source/guide/graph_structures/index.rst:514
+#: ../../source/guide/graph_structures/index.rst:515
+#: ../../source/guide/graph_structures/index.rst:516
+#: ../../source/guide/graph_structures/index.rst:525
+#: ../../source/guide/graph_structures/index.rst:526
+#: ../../source/guide/graph_structures/index.rst:527
+#: ../../source/guide/graph_structures/index.rst:596
+#: ../../source/guide/graph_structures/index.rst:597
+#: ../../source/guide/graph_structures/index.rst:598
+#: ../../source/guide/graph_structures/index.rst:599
+#: 02a55122765e49fb9d2fa1d2ab022e61 15be3d05b3bd4743aa695a4755752b36
+#: 2a39607a9e68453d923365baab787042 43d516485cf54778828f15b64e73115f
+#: 62b1b031093a49c29705812eb49a7998 717d35737f734f68a58ad6d008ed82a8
+#: 781a4f44983e42dbb7bcd6fc6413b319 7b2e6ba2be10444c8cb2acf0333cf285
+#: 829db735c1c44b8c8e3a6bbcf217a46c 89c3d98f09f44400ab4d988bb5a7ad72
+#: a20b317539c542aebc68c384f13458ef ac43385cfe924152b41fd60e49d5d4d7
+#: af71340ae87a4361b23f2c66a805d3ff b83c0cfa0d274cf3b7aa2301e0c808a7
+#: b961379624164bdb8af3e608b98c6588 c73ef051618c4e7fa2b750d8673ee7a5
+#: c8c9727e97e24ea78be69185856596e6 ca8293ff6e584309b3074376c6b90ddf
+#: d4c773ca99eb4161b72e7342f39e6660 f10fedd20ef94d3ca7d06100341c5e0b
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:493
+#: becf434470bd44de8a548b3e7511b5ad
+msgid "Constant time"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:494
+#: 29e53a0a04d74811a07ded59f98ea1d3
+msgid "**Add Edge**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:499
+#: ../../source/guide/graph_structures/index.rst:529
+#: 165c45b3cd2b40b18dd219c028b029d4 1ab81f998f82450f8b93eb8ec2203d63
+msgid "Amortized"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:500
+#: 7f07234b24ac4dac83b9940b8e347cf4
+msgid "**Remove Node**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:501
+#: ../../source/guide/graph_structures/index.rst:502
+#: ../../source/guide/graph_structures/index.rst:503
+#: 21d5a3adbd224bdd9021aa192a2a596e 6d7fcec6a4c14bf48b3ecc506576bb97
+#: 897e67a0f7cb48babff4448aa82a1fa3
+msgid "O(degree + E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:504
+#: ../../source/guide/graph_structures/index.rst:522
+#: ../../source/guide/graph_structures/index.rst:528
+#: 340d78e4e1464d0b83b939759972cd91 52b3cf0d84624642a114fbc4584e5c50
+#: 5a3f3a196b1f4aca87cff2fa1753037e
+msgid "O(V)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:505
+#: 8c01731be6c8413ea5be196b0c3d16dc
+msgid "Remove incident edges"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:506
+#: 91e70eb0040d44288480fefc7fad33f9
+msgid "**Remove Edge**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:507
+#: ../../source/guide/graph_structures/index.rst:508
+#: ../../source/guide/graph_structures/index.rst:509
+#: ../../source/guide/graph_structures/index.rst:554
+#: 02b8209d8a6f4d069a826dd834737eda 0ac66c6f19f4478494e7c88a2f0e9dd1
+#: 365960c491b14e3498d43728975725a6 39ea642e6d834076a61e3b11ef192e81
+msgid "O(E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:511
+#: 691d2d2cc21e4faa87672de6b1da1d0c
+msgid "Matrix: O(1)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:512
+#: 1e89f5a7448c423d96e79dd1c96eb86e
+msgid "**Has Edge**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:517
+#: 68979e8f33714343a4f2f7b065abcd3f
+msgid "Using adjacency"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:518
+#: b413895d9a8344a3af03945a415659e5
+msgid "**Get Neighbors**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:519
+#: ../../source/guide/graph_structures/index.rst:520
+#: ../../source/guide/graph_structures/index.rst:521
+#: 7049a3ea9dd549419bcafccde385a213 73243a2b91dd40bc980ec3258144b8f2
+#: 97169647980c4ce690f6feba31b5b44b
+msgid "O(degree)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:523
+#: 83ee02e49774450cb32282dc200f844a
+msgid "Matrix: all nodes"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:524
+#: b4a367ea9037469e947881a2303c115c
+msgid "**Degree**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:530
+#: b506d06972394ec0859dd316eabd08b4
+msgid "**Is Connected**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:531
+#: ../../source/guide/graph_structures/index.rst:532
+#: ../../source/guide/graph_structures/index.rst:533
+#: ../../source/guide/graph_structures/index.rst:548
+#: ../../source/guide/graph_structures/index.rst:591
+#: ../../source/guide/graph_structures/index.rst:592
+#: ../../source/guide/graph_structures/index.rst:593
+#: 02b37b8dfdf3427185dbbd6dd4020ac5 2aba6a6ab878407588fd024e6fa944af
+#: 4b74932a61ac4962b388edf2fecd0a50 5748729309b34b41902a6237bff27272
+#: 68a15df59c9441b3b803d7fe63348b85 9d83936dda4648a28b0ae372bfdd7cfc
+#: b5b239845b3a4d329b94e5d1e56e1cc1
+msgid "O(V + E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:534
+#: ../../source/guide/graph_structures/index.rst:551
+#: ../../source/guide/graph_structures/index.rst:594
+#: 1c41eddc957f4a2ab3fcf0ab2e99557e 9ded82d946cd44bbab67bbbe66c6513e
+#: 9e681892b87344248a767d8419a9e5d1
+msgid "O(V²)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:535
+#: 5169c61d60ea42d0bc831be84ca1fa29
+msgid "BFS/DFS"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:538
+#: ../../source/guide/graph_structures/index.rst:545
+#: 12145a75b5174299bee677ff889a387b 864d04c147264599aeb4f56da02152a7
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:544
+#: 70816578bf3c4aaebb60c9ee437c3a50
+msgid "Representation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:546
+#: 3aaba40af2a846ec83cc997e613b907d
+msgid "Best For"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:547
+#: 0325cc7a1052434a9b020adb03249a7e
+msgid "**Adjacency List**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:549
+#: 5756149a2d2a457e8eefed24751dd664
+msgid "Sparse graphs (E << V²)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:550
+#: 65f73ec2039e45f7871bf7c9c81bdd50
+msgid "**Adjacency Matrix**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:552
+#: edf40c3248a744d88f2800b372ca7bac
+msgid "Dense graphs (E ≈ V²)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:553
+#: e922c18b12434d2e83f7aad310866df9
+msgid "**Edge List**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:555
+#: 991f2059a65d486ba62fd16e0f998450
+msgid "Simple storage"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:557
+#: c1f8ac6f531c4e77a09cb48fd990aa5c
+msgid "**Guidelines:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:559
+#: 7a6d1a4fe2aa4dec9dd0248a21b2c3da
+msgid "**Sparse graphs** (few edges): Use adjacency list"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:560
+#: 818942dc70c24723b87d50c5da6da1c5
+msgid "**Dense graphs** (many edges): Use adjacency matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:561
+#: 628dda5998ca4637bf3674b98d7cf338
+msgid "**Edge-centric operations**: Use edge list"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:564
+#: 78f9c2d219b946e5b5782e0b904b9920
+msgid "Graph Type Comparison"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:570
+#: 7ac6c7ff1b104b268816465ec3ebe0f8
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:573
+#: 7a768225d572497287ecae969453c7c5
+msgid "WeightedGraph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:574
+#: 5c2dc9b56d32409584c63653ec9b9833
+msgid "Matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:575
+#: b99cdbfa7d2d485194c80f2f4ce39b27
+msgid "**Directionality**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:576
+#: ../../source/guide/graph_structures/index.rst:578
+#: d16daad3f627442f8cbbb2606a1186ec e1596632b56343cebd235d6b158c5b93
+msgid "Undirected"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:577
+#: f0ed8fe9ea734a61b10415a92ab5e6a8
+msgid "Directed"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:579
+#: 5a4f315a611a4355bcd25e8592a8266b
+msgid "Both"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:580
+#: 457a404ab599441bbda1fc13016ed48e
+msgid "**Edge Weights**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:581
+#: ../../source/guide/graph_structures/index.rst:582
+#: ../../source/guide/graph_structures/index.rst:589
+#: cca142ba0dcf40d7bfd813cb24defe37 e1e93ea5fa56401f8b970e78eb951aa5
+#: fb857a53631f4d369c5eb6b61a807c53
+msgid "No"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:583
+#: 63e92560af4940b38b3c191ea0e3083b
+msgid "Yes"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:584
+#: ../../source/guide/graph_structures/index.rst:586
+#: ../../source/guide/graph_structures/index.rst:587
+#: ../../source/guide/graph_structures/index.rst:588
+#: 1461d873c3804617a963bf63ad8b9cac a6936ff9802949b3b78e77acd107498a
+#: bf79c4ae241f4401b3e92f814d9a6522 e3ccec1cd005460989fb792e9de3b433
+msgid "Optional"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:585
+#: bbf3485861774724ba0b09c61c85abd9
+msgid "**Multi-edges**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:590
+#: 1f96e4a8cee949dca10784fc47119773
+msgid "**Memory**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:595
+#: 4e299ce0a08c49f3829cb0eb324288e7
+msgid "**Edge Lookup**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:602
+#: 8507eff8137f42a68ffc9e763d50c5f9
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:605
+#: 57d56ba9f3f3451da131e95be084bec8
+msgid "Choosing Operations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:607
+#: 47492f010b504263aff1ac6d4328bcc0
+msgid "✅ **Use appropriate graph type**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:623
+#: 59c00f2005084fd0880ca3a07000efd7
+msgid "✅ **Check connectivity before operations**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:634
+#: 4873e8b6295a415595da82d4936da7dc
+msgid "✅ **Use iterators for large graphs**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:646
+#: 31e8446ff9d44d4fa7d019e11d7d6579
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:648
+#: 61ac7c8d39aa4d189e4ac155c649efd6
+msgid "❌ **Creating circular references manually**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:655
+#: 43fc9ab2316f4bd2845b4d4de8ad0661
+msgid "❌ **Not handling disconnected graphs**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:668
+#: edab17d9869e4148aecc4ad2b46b4ca9
+msgid "❌ **Using wrong representation**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:679
+#: c84ce254f1cb415096835978c7caf6b6
+msgid "❌ **Modifying during iteration**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:693
+#: 377c94a5c5a04ff794405b8d31038665
+msgid "Algorithm Integration"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:696
+#: 4838c721bfa74e28892b83ecbcd9eb6b
+msgid "Common Graph Algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:698
+#: 3409d5b318e544e8b8fae12fbf52ddbb
+msgid "**Traversal Algorithms:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:700
+#: f1972010ad424b15b53bae0a22085e47
+msgid "**BFS (Breadth-First Search)**: Level-by-level exploration"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:701
+#: 37e065d1ceb94d76b3937e09f28187ba
+msgid "**DFS (Depth-First Search)**: Explore deeply before backtracking"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:703
+#: 5cea3eedbdc84f9993692364411010fd
+msgid "**Shortest Path Algorithms:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:705
+#: 0d29a3ae74e94fdc99ea98c904bb594e
+msgid "**Dijkstra's Algorithm**: Shortest paths from source (weighted)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:706
+#: 5246564328d14e7da1f8f6840eb35607
+msgid "**Bellman-Ford**: Handles negative weights"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:707
+#: 16294f66f5fd4a4598fdb117144705b1
+msgid "**A* Search**: Heuristic-guided pathfinding"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:709
+#: 25a5e2cb90cf41349585d4b2229e9980
+msgid "**Minimum Spanning Tree:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:711
+#: 462470d0cc8b4440a07c0ce22ff5a873
+msgid "**Kruskal's Algorithm**: Sort edges, add if no cycle"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:712
+#: 67065e99bdfc4cfc9992fe3a2cef55da
+msgid "**Prim's Algorithm**: Grow tree from starting vertex"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:714
+#: 605c241e908f447583bac6747860d9fa
+msgid "**Network Flow:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:716
+#: 0413e0d66f964c9a8c40dde17b3912b5
+msgid "**Ford-Fulkerson**: Maximum flow in networks"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:717
+#: c9ed47dbcbf3498aa3193edac8fc4bf6
+msgid "**Edmonds-Karp**: BFS-based Ford-Fulkerson"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:719
+#: 4b5520fb945e40f6bc206492a95a487a
+msgid "**Connectivity:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:721
+#: 45d20609385145fcaaadeb25b9240f13
+msgid "**Tarjan's Algorithm**: Strongly connected components"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:722
+#: 1a6cfe74c67e4a1ab736fc5a60bca6e6
+msgid "**Kosaraju's Algorithm**: Alternative SCC algorithm"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:725
+#: 042861176be541aaa663386fbc9a7d58
+msgid "Example: BFS Implementation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:751
+#: cc05f063b2164810bea22203cec9064d
+msgid "Example: DFS Implementation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:772
+#: 333dc9c628b54c90af66dd1a70c6ed3c
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:774
+#: 2a4aa8b1cdb441c1b7f6f43d043fecf9
+msgid "**Social Networks**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:776
+#: d087cf3eb01b43d6aaee00d2f3633437
+msgid "Friendship graphs (undirected)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:777
+#: 35d6e0f6c03345a680fed3649a8223b6
+msgid "Follower networks (directed)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:778
+#: 90e0c479b66d43e9877fa99b2c8af444
+msgid "Community detection"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:779
+#: 69bcc2e910a34658ab83b2c611cee191
+msgid "Influence analysis"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:781
+#: 0bacc4d0eb5b459c96cc174251dfbc15
+msgid "**Transportation Networks**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:783
+#: b1798c94f9a745d29b6a9c24f01f4cfa
+msgid "Road networks (weighted undirected)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:784
+#: b8b36115233548e386813eb8906f7c8d
+msgid "Flight routes (weighted directed)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:785
+#: 6dcbae93b6364507b69fac484be24078
+msgid "Public transit systems"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:786
+#: 4c7122e1ae3943aba17275825637ca83
+msgid "Shortest path routing"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:788
+#: 851ce78acb43458fb3d80a97f44d8332
+msgid "**Dependency Management**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:790
+#: 7abc2e18a7234057a2b25b0022b32a85
+msgid "Software package dependencies (directed acyclic)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:791
+#: 2b27e7219fde4fbfaa6cf961ca20aa20
+msgid "Build systems"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:792
+#: 0354351766154203b3c3ebb18c13bcd9
+msgid "Task scheduling"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:793
+#: 232aecd0ebf74b9393d0a9207d943f86
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:795
+#: 786df4448863414d982a769b2bfb2d29
+msgid "**Web and Internet**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:797
+#: 121a7263558e461dbbacbefa11863dd8
+msgid "Web page links (directed)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:798
+#: ../../source/guide/graph_structures/index.rst:811
+#: c61eb27553834e11a238c401565a6167 ff7661efe3fe4332accf7690c1a51cec
+msgid "Network topology"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:799
+#: ef38d887bfc9479fbfcc50c7079e078e
+msgid "Citation networks"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:800
+#: d97509a7bbe34e2c9a029f0d26bbe91a
+msgid "Recommendation systems"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:802
+#: 0ae27dac96ab4f6288fc8b92ab65048e
+msgid "**Biology and Chemistry**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:804
+#: 512438a2f6054cd2bcd3f75c1f7aa6b8
+msgid "Protein interactions"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:805
+#: 38605a318c0f46fe9e53f32ff58f6303
+msgid "Neural networks"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:806
+#: 88b7afc3f622408b8f62c693eb623024
+msgid "Molecular structures"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:807
+#: 466ce0b20b2b496ba4c56e85657a7629
+msgid "Evolutionary trees"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:809
+#: 663041b8df05479d8f2ffd1ddd66df64
+msgid "**Computer Networks**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:812
+#: 2a6f8c0ebdd842cb9f0b57462c09406f
+msgid "Routing protocols"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:813
+#: 29b408bd2e20416094503d0079294245
+msgid "Load balancing"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:814
+#: 2d0704e4df0144ee8b88b21144d5d568
+msgid "Fault tolerance"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:816
+#: 8a5edb89e87f45be8a3c9e6d3ccf8936
+msgid "**Game Development**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:818
+#: 296568e201fa480ea8dc06c115bf43f0
+msgid "Navigation meshes"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:819
+#: c04e7b188ab34ca994be800ac9645509
+msgid "State machines"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:820
+#: e70cfaa3c4a240d6b1a7a0fbde6ad8aa
+msgid "Dialogue systems"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:821
+#: 98c70f5cba56486885f39b83105d94e6
+msgid "AI pathfinding"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:823
+#: deb4919bc1b8464e9d746b4b7f4fe568
+msgid "**Project Management**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:825
+#: bb965b55330d423dae863f1d2299b67e
+msgid "PERT charts"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:826
+#: a7a760f9ac5c4d7d9ac56a340a987af1
+msgid "Critical path analysis"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:827
+#: 8612e336a16640f4a4fe6bffe002d857
+msgid "Resource allocation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:828
+#: 68bcb895a56d4637a2b01b4e53083c40
+msgid "Timeline dependencies"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:831
+#: 7e7ae10dee6c4f8680c4ae0d6ed492cd
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:833
+#: 89ca996d4f42429ea49c09df053ca9b6
+msgid ":doc:`../../api/graph/index` - API reference for graph structures"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:834
+#: cfbab412c474480c80e3c3548ec39a27
+msgid ":doc:`../linear_structures/index` - Linear structures guide"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:835
+#: 33e692ed81c546a5add4981cebac1ae5
+msgid ":doc:`../tree_structures/index` - Tree structures guide"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:838
+#: 2367d9b2baa54681a93db6b82860da5b
+msgid "External Resources"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:840
+#: b44103a6d87645d3b471a5f6d363815c
+msgid ""
+"`VisuAlgo: Graph Structures <https://visualgo.net/en/graphds>`_ - "
+"Interactive visualizations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:841
+#: 769507ef202b47e999689e639ea616f0
+msgid ""
+"`Graph Visualization <https://www.cs.usfca.edu/~galles/visualization/>`_ "
+"- USFCA visualizations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:842
+#: b761413e2a6c4919951bd3326032183e
+msgid "`NetworkX Documentation <https://networkx.org/>`_ - Python graph library"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:843
+#: f3d8506e57644efe8511341926a485d5
+msgid ""
+"`Boost Graph Library "
+"<https://www.boost.org/doc/libs/release/libs/graph/>`_ - C++ graph "
+"library"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:846
+#: 731fcabc33554f4f87875c950cc81db6
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:849
+#: a16bdf75ce1846fda5e99a3082510b76
+msgid "Academic Resources (Open Access)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:851
+#: 0d18003f64cf44a0b6a10a4eee5f4d18
+msgid ""
+"Wikipedia contributors. \"Graph (discrete mathematics)\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:854
+#: 6bdfbff1f2954ad3961a5c9597b99440
+msgid "Comprehensive overview of graph theory fundamentals and terminology."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:856
+#: 3013f33afca04503ad22e76d566acebb
+msgid ""
+"Wikipedia contributors. \"Graph theory\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Graph_theory"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:859
+#: dce7055a728b49f0bbf34688acfbc57a
+msgid "Mathematical foundations of graph theory with proofs and theorems."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:861
+#: c3bf07edbbb64ab9b020b4dd4e12442e
+msgid ""
+"Shaffer, C. A., et al. \"OpenDSA Data Structures and Algorithms Modules "
+"Collection\". https://opendsa-"
+"server.cs.vt.edu/ODSA/Books/Everything/html/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:864
+#: 85ad521a9f0e44b1939c0eb5e46c7564
+msgid "Interactive textbook with modules on:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:866
+#: 2c1e3c16e56e49c38153188119400f56
+msgid "\"Graph Representations\""
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:867
+#: 107bbc7e735d4a3fb48b8b6881832994
+msgid "\"Graph Traversals\" (BFS, DFS)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:868
+#: cfe47249243548cc83c4da87180b542e
+msgid "\"Shortest Paths Algorithms\""
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:869
+#: eba346cb7f584f398050e54f904f46b0
+msgid "\"Minimum Spanning Trees\""
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:871
+#: 3cc260430546417986d076379c025fee
+msgid ""
+"MIT OpenCourseWare. \"6.006 Introduction to Algorithms\". "
+"https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:874
+#: 56fa17dc6b6b41b7b879dd55090bc062
+msgid "Free course materials including lectures on:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:876
+#: db3270537b9e4589adf8870ef40c8305
+msgid "Graph search (BFS, DFS)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:877
+#: a5f727f764384bf4914a6dfcc6525105
+msgid "Shortest paths (Dijkstra, Bellman-Ford)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:878
+#: ../../source/guide/graph_structures/index.rst:919
+#: 83cde948d2de4c86989751e28c52ebce c0b9fa8d64584241ad80d167b279e591
+msgid "All-pairs shortest paths"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:880
+#: b2e829ec6b574b9a9a5d4bd148e8487b
+msgid ""
+"Halim, S., Halim, F. \"VisuAlgo - Graph Data Structures\". "
+"https://visualgo.net/en/graphds"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:883
+#: 93f078f30f28400c970a4b156e6da250
+msgid "Interactive visualizations for:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:885
+#: ../../source/guide/graph_structures/index.rst:900
+#: ee5a8c52956c4ed89dca4408f8ff482d f0040285f3954664b7895cb239923642
+msgid "Graph representations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:886
+#: eb6da049a555436ab7a3d763118c319b
+msgid "Graph traversals"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:887
+#: 8a8a505c879445b59c384f4b8c8b7e56
+msgid "Minimum spanning tree algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:888
+#: ../../source/guide/graph_structures/index.rst:902
+#: e5d37a67a11a4d6e9797501337b9c8e9 f608a175bc384615865256359bb777d5
+msgid "Shortest path algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:890
+#: f0a5932aa9e547e8925e7bdf9fbb913e
+msgid ""
+"Stanford CS Education Library. \"Linked List Basics\". "
+"http://cslibrary.stanford.edu/103/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:893
+#: 1432f85fc8884a54bb5eb7524afed898
+msgid "Fundamentals applicable to graph node structures."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:895
+#: 492eda6a15cf464a901942612dac62e6
+msgid ""
+"GeeksforGeeks. \"Graph Data Structure\". https://www.geeksforgeeks.org"
+"/graph-data-structure-and-algorithms/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:898
+#: d7e5b7879a814dd2b592e7b11e4e76ff
+msgid "Practical tutorials covering:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:901
+#: 5c1fda23508b4cf698d3506ba0c809a4
+msgid "Graph traversal algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:903
+#: ../../source/guide/graph_structures/index.rst:917
+#: ../../source/guide/graph_structures/index.rst:956
+#: 4922c1a1f6184a299a2820ce8678f0fe 6fbe74b792ee4623a3b6659666c853d6
+#: b5dc00f4cbcc4967b7c0e32f5ed862c2
+msgid "Minimum spanning trees"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:904
+#: b5ba823b333a4c1f89059ea27c6532d2
+msgid "Interview questions"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:907
+#: 7983a820b26b456fbeadd09163ca53cd
+msgid "Classic Literature"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:909
+#: 55784f5c4aa64838a2023f8f7c21b671
+msgid ""
+"While not freely available online, these are cited as authoritative "
+"references:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:911
+#: ddae387a3ce94a6c85b23be7633b9224
+msgid ""
+"Cormen, T. H., Leiserson, C. E., Rivest, R. L., Stein, C. \"Introduction "
+"to Algorithms\", 3rd Edition, 2009. MIT Press."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:914
+#: c00c538789c9442f8abb6f4514752674
+msgid "Part VI: Graph Algorithms (Chapters 22-26)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:916
+#: 5b36e7c79007461689774b59b10c5391
+msgid "Elementary graph algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:918
+#: 6566e10fac004ac2bc3d1304fc886816
+msgid "Single-source shortest paths"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:920
+#: a625308ac5f0475497feec2d57208f88
+msgid "Maximum flow"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:922
+#: 64ba4551b50443d99b13506900daf7c8
+msgid ""
+"Dasgupta, S., Papadimitriou, C., Vazirani, U. \"Algorithms\", 2008. "
+"McGraw-Hill."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:925
+#: a87c63f14e474d9db8208df98883738a
+msgid "Chapter 3-4: Graphs and paths"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:927
+#: a64168010965456fb03a9038c6608f19
+msgid "*Note: Free PDF available from authors' websites*"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:929
+#: fe40be476a3548728d80112ac31a7b06
+msgid ""
+"Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, 2011. Addison-"
+"Wesley."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:932
+#: 9dcf8052e6c04a8daa2a419776b277ff
+msgid "Part 4: Graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:934
+#: cb5a8c42a8384f8b8cd028400c6043ed
+msgid "Companion website: https://algs4.cs.princeton.edu/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:936
+#: 45bc390dc13a4e97b6f88818e87760a3
+msgid ""
+"Goodrich, M. T., Tamassia, R., Goldwasser, M. H. \"Data Structures and "
+"Algorithms in Python\", 2013. Wiley."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:939
+#: 3e27e45f416543059fabd1badc1d9612
+msgid "Chapter 14: Graph Algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:941
+#: eda3609b18db4023b3a9c18327a06eae
+msgid ""
+"West, D. B. \"Introduction to Graph Theory\", 2nd Edition, 2001. Prentice"
+" Hall."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:944
+#: 413b744892bf49d48482064b118dc25f
+msgid "Comprehensive mathematical treatment of graph theory."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:947
+#: 329d31e541cd458f931ec14df50cd716
+msgid "Online Courses"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:949
+#: 947cda421c5d43b5b26afca9ca4285ad
+msgid ""
+"Princeton University. \"Algorithms, Part II\" (Sedgewick & Wayne). "
+"https://www.coursera.org/learn/algorithms-part2"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:952
+#: 484f6128e3eb477e841350cbc868ad0c
+msgid "Free course covering:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:954
+#: fee19d67530c48a9adc8913645142263
+msgid "Undirected graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:955
+#: 15c58195d3c14e6f99cc72d43c52bf76
+msgid "Directed graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:957
+#: 3df675c152d74916b71ee42f18d2aa74
+msgid "Shortest paths"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:959
+#: 18083549b3ad4b2097a9f63e2e3e38a2
+msgid ""
+"Stanford University. \"Algorithms Specialization\". "
+"https://www.coursera.org/specializations/algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:962
+#: a33e7a20498d42fc8a9e515acdbb784a
+msgid "Graph search, shortest paths, and data structures."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:964
+#: 0304cff1e7fb4178a17bff30d9de5378
+msgid ""
+"MIT OpenCourseWare. \"Introduction to Algorithms\". "
+"https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:967
+#: 6661e0427498456b901b0247ea8bdb82
+msgid "Video lectures on graph algorithms."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:970
+#: 9382c695c4a7477ea08159246b76e387
+msgid "Research Papers (Open Access)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:972
+#: 408a3397fbee4fd9ad4abc58e5fab12c
+msgid ""
+"Dijkstra, E. W. \"A note on two problems in connexion with graphs\", "
+"1959. Numerische Mathematik 1, 269-271. "
+"https://doi.org/10.1007/BF01386390"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:976
+#: d5de1a6b39f74f94a66605a09e2aff64
+msgid ""
+"Kruskal, J. B. \"On the shortest spanning subtree of a graph\", 1956. "
+"Proceedings of the American Mathematical Society 7(1), 48-50."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:979
+#: 8b48144210a94402b43cb6163255e84d
+msgid ""
+"Tarjan, R. E. \"Depth-first search and linear graph algorithms\", 1972. "
+"SIAM Journal on Computing 1(2), 146-160."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:983
+#: 0353374c23004830a0ebd1849ac8f12f
+msgid "Tools and Software"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:985
+#: cb94b16c45474e16ab29be6b2f396e4f
+msgid ""
+"NetworkX Development Team. \"NetworkX Documentation\". "
+"https://networkx.org/documentation/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:988
+#: 0a4821fd9a3740218c733977bfb9a5e2
+msgid "Python library for complex networks (compatible with SDS-Tools)."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:990
+#: 9aafe327451244dda8baa7fb154903ab
+msgid "Graphviz. \"Graph Visualization Software\". https://graphviz.org/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:993
+#: 5b03471484af4730836b5b5c915d294d
+msgid "Open-source graph visualization tools."
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:995
+#: e95c72aeb54f4d0981f6229d7606bda6
+msgid ""
+"Gephi Consortium. \"Gephi - The Open Graph Viz Platform\". "
+"https://gephi.org/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/index.rst:998
+#: 21a78a9b26134e0dbe856d7262f86a12
+msgid "Interactive visualization and exploration platform."
+msgstr ""
+

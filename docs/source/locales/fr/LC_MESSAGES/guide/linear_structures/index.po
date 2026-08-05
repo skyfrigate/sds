@@ -1,0 +1,380 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/linear_structures/index.rst:78
+msgid "Stack (LIFO)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:84
+msgid "Queue (FIFO)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:90
+msgid "Other Structures"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:5
+#: 8e89579fc3c4497f8314ac7b25cee0ab
+msgid "Linear Structures"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:8
+#: 17e5a18ab5cf41d3b6f5a11065c5b07a
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:10
+#: e2596cdd6fd540f08cbfd4f9532b20b9
+msgid ""
+"Linear data structures organize elements in a sequential manner where "
+"each element (except the first and last) has exactly one predecessor and "
+"one successor."
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:23
+#: 5f5b45721ec24c3aa74bfb7d26227e3e
+msgid "This section covers all linear structures provided by SDS-Tools."
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:26
+#: 4c5c47d9094b48ae92acc1a3c563f317
+msgid "Overview"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:29
+#: 5fe376e211c44da18bbd4b78041474c2
+msgid "Types of Linear Structures"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:31
+#: 5c3a968cd435406085e2f80edb756d1a
+msgid ""
+"SDS-Tools provides several linear structures, each optimized for specific"
+" access patterns:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:37
+#: d2acde8c6ee346b5bed62f6e49872780
+msgid "Structure"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:38
+#: 94794a3fa72a4eda8db3e3850d0590ad
+msgid "Access Pattern"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:39
+#: 737e87ef60234de4b27175b15b44eb31
+msgid "Primary Use Cases"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:40
+#: 307b31f8b3c54fa2b4c40840ea42167a
+msgid "**Stack**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:41
+#: d68ba60f60854af887e4db4f77de849f
+msgid "LIFO (Last-In-First-Out)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:42
+#: 2e684fd87e804711bd9f7be677c730ac
+msgid "Function calls, undo operations, expression evaluation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:43
+#: 795fe898886f4c78ba283b8820c3abec
+msgid "**Queue**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:44
+#: 784c522519ff4be4b73080e4e1aaf22c
+msgid "FIFO (First-In-First-Out)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:45
+#: d580c604dee24e769caa6c40210aa949
+msgid "Task scheduling, BFS, print queues"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:46
+#: 4537205ef33c4293b0d68ebe0cadd9b5
+msgid "**Deque**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:47
+#: 5ed68aaeff7f47b48302e4ae80d7d337
+msgid "Both ends"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:48
+#: 2d2c7dd0bfe24df68209a3c6ffd92c39
+msgid "Sliding window, work stealing"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:49
+#: 553fa1ad75b84c33b87fb7aa540f4fb4
+msgid "**Priority Queue**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:50
+#: 66e018cfe0af4ee0b899a567f2a7a494
+msgid "By priority"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:51
+#: 756143f0fdc944e0a28fc2249f088d68
+msgid "Event simulation, Dijkstra's algorithm"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:52
+#: 5333315e3efc4032964f37cf8158e0aa
+msgid "**Linked List**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:53
+#: 62e8877d73c9479380061b00cb37034b
+msgid "Sequential"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:54
+#: 8362a293117d4b1d8fa2d226074dd610
+msgid "Dynamic insertion/deletion"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:57
+#: a4c1be06753a49e8bc4c9168e3c2db71
+msgid "Choosing the Right Structure"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:76
+#: 481863c5340f4d5dadcdd0ae17ca78f2
+msgid "Detailed Guides"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:99
+#: 2257612b96394eb489f2f514713e9f7e
+msgid "Common Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:101
+#: fbfc516f0f914600b9cf8bdd3e07a24e
+msgid "All linear structures in SDS share a consistent interface:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:104
+#: 9ed8791d364d4c10bb80cd9dcbffdb9b
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:131
+#: dab73f0beb644134811eb2b197f5140c
+msgid "Comparison Matrix"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:134
+#: a5f267588b8d400e843b1ab665d83e4e
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:140
+#: 8e4002d3af734e9f9c38625f465aa97f
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:141
+#: ea36b21fd5f04e4eb47b502ef1938a9f
+msgid "Stack"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:142
+#: 121246f1b2da4642a0fa9ec3fd835809
+msgid "Queue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:143
+#: 00075fe7950845038d9873fabab38f9a
+msgid "Deque"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:144
+#: e08705f121a74ccdb1ca4323b611ddbc
+msgid "Priority Queue"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:145
+#: 023dc61d4f8d44ef97cae739c7a4d1f3
+msgid "Linked List"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:146
+#: 60596329f67d45fbac3d3633277a8a58
+msgid "Insert at end"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:147
+#: ../../source/guide/linear_structures/index.rst:148
+#: ../../source/guide/linear_structures/index.rst:149
+#: ../../source/guide/linear_structures/index.rst:151
+#: ../../source/guide/linear_structures/index.rst:155
+#: ../../source/guide/linear_structures/index.rst:157
+#: ../../source/guide/linear_structures/index.rst:159
+#: ../../source/guide/linear_structures/index.rst:161
+#: ../../source/guide/linear_structures/index.rst:166
+#: ../../source/guide/linear_structures/index.rst:167
+#: ../../source/guide/linear_structures/index.rst:169
+#: 3309a1eae1ba4fef921ae87dadd5a1a7 3559bc523d6740ffb8c5ce37fefe184c
+#: 35b3d6bbae524a4695ac11d7853e8e05 4fa972437e724582affe845f12fe1b81
+#: 5597ef64a4eb42588ef143043cacaeb9 80f640ebd54e430686c7d94168b6d493
+#: 9982c4fe97d44807ab7b636408527b93 a55e9e9827b6498db5ebc9d221282eef
+#: b8cf664936914280b67800b1bbc4b0fb d4a19363580d4d4d89f498e0ffba352a
+#: ff42479ccc864a918645d8bc0a33a0a8
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:150
+#: ../../source/guide/linear_structures/index.rst:168
+#: 0321d01a6cd94bb186c10f0c306f3344 099ad82d339c4f73913c6e9f40e87819
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:152
+#: 809a7d19b6f04e5498a8e360b06d1973
+msgid "Insert at front"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:153
+#: ../../source/guide/linear_structures/index.rst:154
+#: ../../source/guide/linear_structures/index.rst:156
+#: ../../source/guide/linear_structures/index.rst:160
+#: ../../source/guide/linear_structures/index.rst:162
+#: ../../source/guide/linear_structures/index.rst:165
+#: ../../source/guide/linear_structures/index.rst:171
+#: ../../source/guide/linear_structures/index.rst:172
+#: ../../source/guide/linear_structures/index.rst:173
+#: ../../source/guide/linear_structures/index.rst:174
+#: 00c17a0268804429b1a857d9c62be917 09a6c288fa084452a2504679bf28256f
+#: 51108189a65a4e31a36616df092be7c3 69653adbe41040f6b9181ba4e9802351
+#: 894e45f860754ffc8755d16e63b1ff70 90c90b50e9c44cfc87fceb5ff7286d10
+#: e1545f1be7b24e33b4429a50f77c5756 e43973af20d445f5b7133a4827b2ebf7
+#: e529b6ac833640d1ad72e91babd15e6d e83daef1c0644c42a8f83dcbbc291816
+msgid "N/A"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:158
+#: 7b85bd8edbb14acc9e96de4d380c83e5
+msgid "Remove from end"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:163
+#: a11c560a8a8a45118228ce1b0b18c2d9
+msgid "O(1)*"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:164
+#: 810303d5e15b4b4cb14e529b387e9b74
+msgid "Remove from front"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:170
+#: 257cbac65a1845deaa099579b68dc87e
+msgid "Access by index"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:175
+#: ../../source/guide/linear_structures/index.rst:177
+#: ../../source/guide/linear_structures/index.rst:178
+#: ../../source/guide/linear_structures/index.rst:179
+#: ../../source/guide/linear_structures/index.rst:180
+#: ../../source/guide/linear_structures/index.rst:181
+#: 61f73ac504e746e8b3ae49fc91aa11de 62a59f56377542818120aaff910239ae
+#: 98c1739b6cb54ad393af3a34c69f48e0 a9373b8a33ec4d33a76f4ae062d6a74c
+#: d0862d2045fc46e2bcd62bd53034b609 f5c04fdaea2145758bd48ce630878047
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:176
+#: 3dca8ed302284cd5b8871e36846353db
+msgid "Space complexity"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:183
+#: 99337b42498e498cb4a8658570308ba1
+msgid "\\* With tail pointer"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:186
+#: 9c382436574e493db0e44955bc5069ca
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:189
+#: 44d0ec459bad4b4bb42e0f13432c60b9
+msgid "Pattern 1: Processing in Reverse Order"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:191
+#: 9e1a2bf9747349bca15793384b4d8e06
+msgid "Use a **Stack** when you need to process items in reverse order:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:212
+#: a2d6b40d603c4dccbd36bf46611ea253
+msgid "Pattern 2: First-Come-First-Served"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:214
+#: 077c481674a748afbb14c54fb783f4bf
+msgid "Use a **Queue** for fair ordering:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:233
+#: 2ec52850c2aa4758965d37e5392f99b1
+msgid "Pattern 3: Sliding Window"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:235
+#: 405dcd458e0b4182b0f04661bc546ddf
+msgid "Use a **Deque** for efficient sliding window operations:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:263
+#: 113ccf025a144c71abaca1fcd644d20d
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:265
+#: 55bf0e4ddb1748f9a64fe9f3bfecc0fd
+msgid ":doc:`../../api/linear/index` - API reference for linear structures"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:266
+#: 3f7ba2ff52884c9da793477c3cf0ea39
+msgid ":doc:`../tree_structures/index` - Tree structures guide"
+msgstr ""
+
+#: ../../source/guide/linear_structures/index.rst:267
+#: 416a9ebdfd9b44a7a30ce84979f203ca
+msgid ":doc:`../graph_structures/index` - Graph structures guide"
+msgstr ""
+

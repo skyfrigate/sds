@@ -1,0 +1,1048 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:5
+#: d82aa67d5e7048db985687df5ea26ca9
+msgid "Disjoint Set (Union-Find) - Complete Guide"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:9
+#: edb0204002314fcdbacda7fa080d93f7
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:12
+#: 5f21fb08105b464492ffce6b7d57c053
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:14
+#: 59e929e5b26c43e18077cee6f6962576
+msgid ""
+"The Disjoint Set data structure, also known as **Union-Find** or **Merge-"
+"Find Set**, is a fundamental structure for managing partitions of "
+"elements into disjoint subsets. It efficiently supports two primary "
+"operations: uniting sets and finding which set an element belongs to."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:20
+#: c7be7eaa13774d4ea0528bbe124cbc2b
+msgid "What is a Disjoint Set?"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:22
+#: 2a365fec2e394c6fa648c034682bbcfb
+msgid ""
+"A disjoint set maintains a collection of **non-overlapping** (disjoint) "
+"sets:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:24
+#: 451de3fa55c3455f92d75dc35e2fc29b
+#, python-brace-format
+msgid "\\mathcal{F} = \\{S_1, S_2, \\ldots, S_k\\}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:28
+#: 3855e0ee890d4946ac3a8b65a56c0337
+msgid "Where:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:30
+#: 2cade4b175f94d32907d48ef15abcba4
+msgid "Each :math:`S_i` is a non-empty set"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:31
+#: e27946acf968448cafa27b6f7b66039e
+msgid ""
+":math:`S_i \\cap S_j = \\emptyset` for :math:`i \\neq j` (disjoint "
+"property)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:32
+#: 7f344bd8565c4eb28a63acc4c26f6ff8
+#, python-brace-format
+msgid ":math:`\\bigcup_{i=1}^{k} S_i = U` (covers all elements in universe U)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:34
+#: e10864945abd4fd0a692757de4bdc5da
+msgid "**Example Partition:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:50
+#: 1ec8379a07fe4da6900894e7eb2391e4
+msgid "Visual Representation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:91
+#: 9e12b3fc49a845779a4d23dde550f520
+msgid "Why Use Disjoint Sets?"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:93
+#: 202aba91586d4177ba649ca5949993f4
+msgid "**Problem Domain:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:95
+#: 9ce355fdf1df43e88595d190f277c415
+msgid "Disjoint sets excel at problems involving:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:97
+#: 3c4aa73383ac4641b7b103088786f44e
+msgid "**Dynamic Connectivity**: Track whether elements are connected"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:98
+#: f2fca98434c345a6ac76535d014ea7f6
+msgid "**Equivalence Classes**: Group elements by equivalence relations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:99
+#: cb68a1fe6e484f3c873e6b57e45c7ce7
+msgid "**Network Components**: Find connected components in graphs"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:100
+#: b09f990f325e43efba0a754709b8ab10
+msgid "**Image Segmentation**: Group similar pixels"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:101
+#: 2dc460a5774447bda01f347c9d34f3fa
+msgid "**Clustering**: Partition data by similarity"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:103
+#: 9030abdbab3448c1a16982a1855ab6d4
+msgid "**Advantages:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:105
+#: 07077074a46f497e87960488a555065e
+msgid "Nearly constant time operations (α(n) ≈ O(1))"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:106
+#: 9f6a87f611a043a88e55bfa48cfe6d53
+msgid "Simple implementation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:107
+#: 3ad99e8768ea40a5acaa05774f2ca26d
+msgid "Low memory overhead: O(n) space"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:108
+#: 8ecdbc5fe67f4e15a635a1f9dabee14e
+msgid "Efficient for large datasets"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:111
+#: 4e93885cd45d4ac6a21035b084243107
+msgid "Mathematical Foundation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:114
+#: 393741a2e3f8403c80fb8cec4abc922e
+msgid "Set Theory Background"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:116
+#: 06098c80e5f7407caf3ad3892e10aea1
+msgid "**Partition Definition**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:118
+#: 4267ff601494414799de5766a4311a44
+#, python-brace-format
+msgid ""
+"A partition :math:`\\mathcal{P}` of set :math:`S` is a collection of "
+"subsets such that:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:120
+#: 2ba4b385b146464da95cc44902c454c2
+#, python-brace-format
+msgid ""
+"**Non-empty**: :math:`\\forall P_i \\in \\mathcal{P}: P_i \\neq "
+"\\emptyset`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:121
+#: 98e4be48242743738449ad4f49a0c58c
+#, python-brace-format
+msgid ""
+"**Disjoint**: :math:`\\forall P_i, P_j \\in \\mathcal{P}, i \\neq j: P_i "
+"\\cap P_j = \\emptyset`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:122
+#: 841c11778561489b8c0a88222d40df16
+msgid "**Exhaustive**: :math:`\\bigcup_{P \\in \\mathcal{P}} P = S`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:124
+#: 65d72339d9b747cf9e5ad57f1bd1da31
+msgid "**Equivalence Relations**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:126
+#: 1763369d1c1a4fa48f1a748e12d1d5bc
+msgid ""
+"Partitions correspond to equivalence relations. A relation :math:`\\sim` "
+"is an equivalence relation if it is:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:129
+#: 6af3ff0efa9345e9bd93323fd3b23908
+msgid "**Reflexive**: :math:`\\forall x: x \\sim x`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:130
+#: 0d3b2663d41c4b12be1cd39a7ee556cc
+msgid "**Symmetric**: :math:`\\forall x,y: x \\sim y \\Rightarrow y \\sim x`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:131
+#: c5d984833ce44472a95009569010b740
+msgid ""
+"**Transitive**: :math:`\\forall x,y,z: (x \\sim y) \\wedge (y \\sim z) "
+"\\Rightarrow x \\sim z`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:157
+#: 4d5237f161e34ab591fbf7734bd35388
+msgid "Operations & Invariants"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:159
+#: 58617dee9c2c472b902709bfc5528339
+msgid "**Core Operations:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:161
+#: aef4aafc505d43f2ba6767dcb9e2cfb5
+#, python-brace-format
+msgid "**make_set(x)**: Create singleton set :math:`\\{x\\}`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:163
+#: 19e0b66506f04a1287e73127c8dd0979
+msgid ""
+"\\text{make\\_set}(x): \\mathcal{F} \\rightarrow \\mathcal{F} \\cup "
+"\\{\\{x\\}\\}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:167
+#: e054ad3e3d7149328fa083061277d0ce
+msgid "**find(x)**: Return representative of set containing :math:`x`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:169
+#: caf93c439c524e94b4acd3d8b8a14543
+#, python-brace-format
+msgid "\\text{find}(x) = r \\text{ where } x \\in S_r \\in \\mathcal{F}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:173
+#: 1aebfecfcafd4062b484436b0de894b5
+msgid "**union(x, y)**: Merge sets containing :math:`x` and :math:`y`"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:175
+#: 2a1d9c8cb387443b82efe72ab2fe2ecb
+#, python-brace-format
+msgid ""
+"\\text{union}(x,y): \\mathcal{F} \\setminus \\{S_x, S_y\\} \\cup \\{S_x "
+"\\cup S_y\\}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:179
+#: 6ba0e7a2320244c9a89b3ecfeb0b5392
+msgid "**Invariants:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:181
+#: 024ae41373df40339e429476313f81d8
+msgid "After any sequence of operations:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:183
+#: 6151dfcc4c1f4844898fc15960b1009e
+#, python-brace-format
+msgid ""
+"\\forall x,y: \\text{connected}(x,y) \\Leftrightarrow \\text{find}(x) = "
+"\\text{find}(y)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:187
+#: 25700aa56db84eddb8eb9666e9e488d5
+#, python-brace-format
+msgid "|\\mathcal{F}| + \\sum_{i=1}^{m} [\\text{union}_i \\text{ merged}] = n"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:191
+#: 787a0286579c4f9daa8d70b126d88c8a
+msgid ""
+"Where: - :math:`n` = total elements - :math:`m` = number of union "
+"operations - :math:`[\\cdot]` = Iverson bracket (1 if true, 0 if false)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:197
+#: 56843814b4614a2c997d7bd5cdbdb96b
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:199
+#: 7a65ad7f425b4023a7d48c6bea6fc8b1
+msgid "**Without Optimizations:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:204
+#: ../../source/guide/advanced_structures/disjoint_set.rst:222
+#: 2cbe2a4f379445eaafd8504f1e9c04fe 8364a10c41664e26943ecef2e869464b
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:205
+#: ../../source/guide/advanced_structures/disjoint_set.rst:223
+#: 5d8d7be629dc4986b3e3a15180923edb 9a2e7ee9e8ff4c2daa39c0af91a88a41
+msgid "Worst Case"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:206
+#: ../../source/guide/advanced_structures/disjoint_set.rst:224
+#: a40ba64e80ed4ffa8cb5cd9dcd826933 ae0e5cd0d6fd4f48a46e8df5b0e2869b
+msgid "Amortized"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:207
+#: ../../source/guide/advanced_structures/disjoint_set.rst:225
+#: 3ec33cfa625d4d648914f4a125d26b3c aeec9f829bfa4af091f5405b8265e45f
+msgid "make_set"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:208
+#: ../../source/guide/advanced_structures/disjoint_set.rst:209
+#: ../../source/guide/advanced_structures/disjoint_set.rst:226
+#: ../../source/guide/advanced_structures/disjoint_set.rst:227
+#: 49f6503753424a4d968f5bce8ed35ced b7a12286986a4221801cf0202989e326
+#: dd6bd0889f194824b37cbdc6b550b022 e5acb7fb1f284b4d887f68d10a4f5d21
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:210
+#: ../../source/guide/advanced_structures/disjoint_set.rst:228
+#: 1bea21072e4b433a8aed6406fce9d1f0 820d41bf72b4488b93020dc25376ac47
+msgid "find"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:211
+#: ../../source/guide/advanced_structures/disjoint_set.rst:212
+#: ../../source/guide/advanced_structures/disjoint_set.rst:214
+#: ../../source/guide/advanced_structures/disjoint_set.rst:215
+#: 22be0098de1d423ea7bd9bf93a1e5117 5b592b0ee5a74b7aaf674103bba7bb3d
+#: a035c35e218c43718a9edb6dd8b406d0 fc49e8c2a85644cb9121579eeaa65f5b
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:213
+#: ../../source/guide/advanced_structures/disjoint_set.rst:231
+#: 0eb9549e228c4f22a8fde76772431bde 894b0ed8fe074e05a3d3a94f466fc27f
+msgid "union"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:217
+#: 9af31c0413fd457db7824f77795413c1
+msgid "**With Path Compression + Union by Rank:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:229
+#: ../../source/guide/advanced_structures/disjoint_set.rst:232
+#: 02ac4efc262245ca93775d5a7adbd7be a9026978728548d29b3ee07a78f2f6e5
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:230
+#: ../../source/guide/advanced_structures/disjoint_set.rst:233
+#: 0f1dec4d706a434ea4e7e250c7230df2 427ea41868054d1d9f9d502e12aafede
+msgid "O(α(n))"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:235
+#: 1ea0442edf394cda89ee07cd54ebf680
+msgid "Where :math:`\\alpha(n)` is the **inverse Ackermann function**:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:237
+#: dbe27dedda61432fb5ae7dfc0a086118
+#, python-brace-format
+msgid "\\alpha(n) = \\min\\{k: A_k(1) \\geq n\\}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:241
+#: 15aa44ea6e5b4ddb9be0004758ccdcce
+msgid "**Practical Values:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:246
+#: 2462cbb10f9d41e8825df5b44e72fcb6
+msgid "n"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:247
+#: 7e06e0e73a6f4308af9a9c7431196f3e
+msgid "α(n)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:248
+#: 4329bc27249149649f90d7c8702e611e
+msgid "Interpretation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:249
+#: e2c03c00a36c4dd785325be9afef6da5
+msgid "10"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:250
+#: 9e7f1a7a5d5d49b59ca6da6d48e8cf95
+msgid "2"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:251
+#: 5dd0e0f69db14c388738b3a804074d2f
+msgid "Very small"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:252
+#: bd61b32663404c029c2c800b472ec52e
+msgid "1,000"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:253
+#: 2345b2ad588d452db7f76439a7ec7852
+msgid "3"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:254
+#: 0a45fe74a3f54d49a0c81a8c9de91ee8
+msgid "Small"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:255
+#: 2a5b077cfb37429eb857d30e52d985e8
+msgid "1,000,000"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:256
+#: b4f689e9c68e423aac040b92e04c76ee
+msgid "4"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:257
+#: ecb63cc85e654fe3b8be519fd582087f
+msgid "Still small"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:258
+#: bf31ca775a9846c0889f821fe03985b3
+msgid "10^80"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:259
+#: 1b154477909a409c826dc561584a7ec1
+msgid "≤ 4"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:260
+#: 96a593c9441749d996a1dbfee77c0b2f
+msgid "Effectively constant"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:263
+#: 486ca98499424f60b501bd79a73157ae
+msgid ""
+"For all practical purposes, :math:`\\alpha(n) \\leq 4`, making operations"
+" effectively constant time."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:267
+#: 25ffb542591b404ea85267bb432117f3
+msgid "Implementation Details"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:270
+#: dd67ad05121d48d6a9f919c832f5a801
+msgid "Forest Representation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:272
+#: e5ec05848305401bad73b1d3816fe1a4
+msgid "Disjoint sets are represented as a **forest of trees**:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:274
+#: 7c50d98c85554f42b773dbbc7073bab7
+msgid "Each tree represents one set"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:275
+#: 1e1b8ebda4bd4f6282995b6742fdba04
+msgid "Root node represents the set"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:276
+#: fbc05e98b51f41c286c7f58f19c55452
+msgid "Nodes point to their parent"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:277
+#: 13aaea88aa954037a20813f0312c06e4
+msgid "Root nodes point to themselves"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:303
+#: d2c473c32eac4a54b668abbebb3806f2
+msgid "**Data Structure:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:315
+#: 64141d5b242a431487732a5a1f662cb5
+msgid "Path Compression"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:317
+#: b346e176d1c4419ca5518d91800396af
+msgid "**Problem**: Repeated find() operations traverse long chains."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:319
+#: 66426ffa18544aa08cd6afa3fe9fddb1
+msgid "**Solution**: Make all nodes on path point directly to root."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:345
+#: ../../source/guide/advanced_structures/disjoint_set.rst:437
+#: 1cbd13bafa5c480f9101cd4e02ccdb02 8772ea661fb244c2acf8c13029cb8d5f
+msgid "**Implementation:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:360
+#: d6eaf68654684066bc20292fbeeadc29
+msgid "**Effect on Complexity:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:362
+#: c6af3bdaf66a4c9fb06d3b888701f750
+msgid "Without compression:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:364
+#: ce6cc239d83e47a391db1b8fab02fc45
+msgid "T_{\\text{find}} = O(h) \\text{ where } h = \\text{tree height}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:368
+#: 81b24d121ac1401095fc9fffea0481bc
+msgid "With compression:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:370
+#: 45cafd4fb69e428688351b9ce2b156eb
+msgid "T_{\\text{find}} = O(\\alpha(n)) \\text{ amortized}"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:375
+#: d8627e2ee18f4ecb907677efcf557046
+msgid "Union by Rank"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:377
+#: 9cd11844555441609b4d5d1ad5db3b8e
+msgid "**Problem**: Naive union creates unbalanced trees."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:379
+#: fb8e880bc3394d82a1a0e5c47860dc30
+msgid "**Solution**: Always attach smaller tree under root of taller tree."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:381
+#: 5a8eede5bb5246d7bb027c9f0f36cc4e
+msgid "**Rank Definition:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:383
+#: e4dc96adb1da4a2b87913d2408febe94
+msgid "Rank is an upper bound on tree height:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:385
+#: ff415de53a22411ebee0986b364853ca
+#, python-brace-format
+msgid "\\text{rank}(x) \\leq \\text{height}(x)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:389
+#: f0710e0897574f1682ab9f2eaeff1484
+msgid "**Rules:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:391
+#: 1586b924c706489c888713e9a5608c67
+msgid "New singleton: rank = 0"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:392
+#: 8f7422a0293a4fa59e691fdaaf1fcc7e
+msgid "Union of different ranks: no change"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:393
+#: 2f5c7719ebb2464b8b91cf6bfef6f975
+msgid "Union of equal ranks: increase rank by 1"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:468
+#: 69f2831a13324be9804cf6697518c2e7
+msgid "**Theorem**: With union by rank alone:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:470
+#: 9b6ba5a2282545b69d5cadc66bce018d
+#, python-brace-format
+msgid "\\text{height}(T) \\leq \\log_2(n)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:474
+#: fd6703a0c7b64a85942b26258046d8e3
+msgid "Proof sketch: A tree of rank :math:`k` has at least :math:`2^k` nodes."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:477
+#: 3b5ad01c84be4b748bac6a390cf35e62
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:480
+#: fc21e92acebf4571b1c94459fa54b330
+msgid "Getting Started"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:520
+#: 66e0ece47dfd43aab871d21517303c25
+msgid "Common Operations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:522
+#: a5e77550d78442eb9367f6b60521511b
+msgid "**Creating Elements**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:542
+#: ca9b59bb355148ecbec0a9b20d83dba8
+msgid "**Finding Representatives**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:558
+#: 91ae31ae828c41a5ad032d8430d1b016
+msgid "**Checking Connectivity**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:570
+#: 499a867e8a8444618e28ce0f1dba57ef
+msgid "**Component Analysis**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:592
+#: b8b9bee538eb4b98bd2a8f51883a3989
+msgid "Graph Algorithms"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:595
+#: 5fb13d069cff4f99ac69087f5a43a45b
+msgid "Connected Components"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:597
+#: 4de9a9a1f4734b1e906431d4534e03d9
+msgid "**Problem**: Find all connected components in an undirected graph."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:599
+#: f67b3bfd229940aaaf009b50c7197f70
+msgid "**Algorithm:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:601
+#: 6783cfa739ad458b995c920662a20c53
+msgid "Create singleton set for each vertex"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:602
+#: 74513d26a2c34f58bc199b88d0db8904
+msgid "For each edge (u, v): union(u, v)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:603
+#: 4b642824062147ca9d5c08f4d727c886
+msgid "Count remaining sets"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:658
+#: 52f38ec93a4447bbb642007cb6d27fcf
+msgid "**Complexity:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:660
+#: 3a82ce0fed374b8f892817e4d7327f02
+msgid "O(|V| \\cdot \\alpha(|V|) + |E| \\cdot \\alpha(|V|)) \\approx O(|V| + |E|)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:665
+#: b2a52eb2426f4bfb8002e6c5de354eae
+msgid "Cycle Detection"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:667
+#: afd3853fcf0e4ab699a6166a7aa6a2cc
+msgid "**Problem**: Determine if an undirected graph contains a cycle."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:669
+#: f5db3484b0ac4f5cbee80f78a059e608
+msgid ""
+"**Insight**: Adding edge (u, v) creates cycle iff u and v already "
+"connected."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:714
+#: 00094100a8c34a8d8a76a39c7424084e
+msgid "**Complexity**: O((V + E) · α(V))"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:717
+#: c306348b847b4c87acc20cc8c19bc075
+msgid "Minimum Spanning Tree (Kruskal's Algorithm)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:719
+#: a11ae9b6939d46409d9ec17c8aec8891
+msgid "**Problem**: Find minimum spanning tree of weighted graph."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:721
+#: 673a53aa5a4349c4b7b16211d6a5ff0b
+msgid "**Algorithm** (Kruskal, 1956):"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:723
+#: 032ef916235449baa2b7ff525cc116be
+msgid "Sort edges by weight"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:724
+#: ac3fa234161a4f96a7d0518fd8877fbb
+msgid "Initialize each vertex as singleton set"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:725
+#: 24e70a20bb4b48068a9942158821983b
+msgid ""
+"For each edge (u, v, w) in sorted order: - If u and v in different sets: "
+"add edge to MST, union(u, v)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:727
+#: f6118eb8349948489194447a37211110
+msgid "Stop when MST has V-1 edges"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:810
+#: 916100b94f14431f862b762d15b48575
+msgid "**Correctness**: Greedy choice property + optimal substructure."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:812
+#: ca659f382675478880458cde9d2febd9
+msgid "**Complexity**:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:814
+#: 5ccbfcb88f0c485197d8daa9dfb2222f
+msgid "O(E \\log E + E \\cdot \\alpha(V)) \\approx O(E \\log V)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:819
+#: 943f1eea249b4a81aad7489dd5c5ecdd
+msgid "Dynamic Connectivity"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:821
+#: 5268eece151a4f9986fa05907ebc1a31
+msgid "**Problem**: Maintain connectivity as edges are added dynamically."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:892
+#: e8c3c408ef384d8493433b9f5ad2cd92
+msgid "Advanced Applications"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:895
+#: ac5f132ec429475db27f6a03d443ff0c
+msgid "Least Common Ancestor (LCA)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:897
+#: 4b029c1e290d409f9230bc6298295a8a
+msgid "**Problem**: Find LCA of nodes in a tree using offline algorithm."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:899
+#: aff2fdd2626f4234a71dcd011f047556
+msgid "**Tarjan's Algorithm**:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:987
+#: 96b2a87bd44f4b8d873c0915cef85b34
+msgid "Image Segmentation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:989
+#: c0c2bef578d04107bac2d8ffd81285c3
+msgid "**Problem**: Segment image into regions of similar color."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1058
+#: d2ade3f3abc94a0b80b8ac1acd51f11c
+msgid "Social Network Analysis"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1060
+#: 6afc2f934af84899b9ac89825fc1ee3f
+msgid "**Problem**: Identify communities in social networks."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1154
+#: dc3e640f013146e39598c472fc962df5
+msgid "Equivalence Relations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1156
+#: 124faa2b1522448b9da01f00b49f1dd4
+msgid "**Problem**: Track equivalence classes dynamically."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1217
+#: fedd91fce5194afdad3c1801b6a970b9
+msgid "Performance Optimization"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1220
+#: ae0e2d3259d74e21a748462b3b893450
+msgid "Benchmarking"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1270
+#: b9359e37903f49528ffa915cabf36105
+msgid "Memory Optimization"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1272
+#: 49289b016cde42f9a69c4f575779e264
+msgid "**For Integer Elements:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1314
+#: 034c5f1873824b0caf70e66441c907bc
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1317
+#: f82932f4f3cf48c29f28ac319245f0ae
+msgid "Do's and Don'ts"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1319
+#: 27a245a37b3049ecbadf303e956bca20
+msgid "**✓ DO:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1337
+#: cdb358f5aea2428d9f8e36522ecf1d62
+msgid "**✗ DON'T:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1353
+#: 1348dd211aa34bc994392a3a9839ce71
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1355
+#: 9dfa9ade2f1745c59c52611f602ea7c2
+msgid "**1. Forgetting Initialization**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1371
+#: 8d8fba44649147809f9299688cfe0ba9
+msgid "**2. Incorrect Cycle Detection**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1391
+#: adf249e7dc8242888c4ccdcd7e529b05
+msgid "**3. Inefficient Repeated Queries**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1408
+#: a8e379d714c549a09ebdc78f5e2d4016
+msgid "Design Patterns"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1410
+#: b147bf0618df4bdba12a3448e37993cf
+msgid "**Pattern 1: Pre-check Union**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1421
+#: 2b75d1e204c1476cabd1478c6dfb5293
+msgid "**Pattern 2: Batch Processing**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1433
+#: 547e421986d844fb9a19e1ba59f120d1
+msgid "**Pattern 3: Component Tracking**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1459
+#: a7591d6543e7463cbca8dfc1816924fc
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1461
+#: 662710049fe5433aae62998a5c36bd0d
+msgid ":ref:`api_advanced_disjoint_set` - API Reference"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1462
+#: 9b596c620301405ab2c8fdb389ee4844
+msgid ":ref:`api_advanced_interfaces` - Abstract interfaces"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1463
+#: 741e21e5fd0041e5a180efaefcea9d85
+msgid ":ref:`guide_algorithms_graph` - Graph algorithms"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1464
+#: 1afbd31d4b484fc4bb74384750ac27d3
+msgid ":ref:`guide_algorithms_mst` - Spanning trees"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1467
+#: f12928ad9dbc4b06855634b77dededd8
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1469
+#: 3eb20c825cde4785b50ba3936a68efd8
+msgid "**Open Access Resources:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1471
+#: 39170ddf1dc743be89251c44dd27bcba
+msgid ""
+"Galler, B. A., & Fisher, M. J. (1964). \"An improved equivalence "
+"algorithm\". *Communications of the ACM*, 7(5), 301-303. DOI: "
+"10.1145/364099.364331"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1475
+#: 394640d8bbd84208a77f1b423cccdd06
+msgid ""
+"Tarjan, R. E. (1975). \"Efficiency of a Good But Not Linear Set Union "
+"Algorithm\". *Journal of the ACM*, 22(2), 215-225. DOI: "
+"10.1145/321879.321884"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1479
+#: b31568fedc5b46d7b2889b739725a0d7
+msgid ""
+"Tarjan, R. E., & van Leeuwen, J. (1984). \"Worst-case Analysis of Set "
+"Union Algorithms\". *Journal of the ACM*, 31(2), 245-281. DOI: "
+"10.1145/62.2160"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1483
+#: 9a4ce650f64644628d2254a3b09c050f
+msgid ""
+"Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). "
+"\"Introduction to Algorithms\" (3rd ed.). MIT Press. Chapter 21: Data "
+"Structures for Disjoint Sets. Available: https://mitpress.mit.edu/"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1488
+#: 2b4cab04a536471e8eceb2f0798e2f0d
+msgid ""
+"Galil, Z., & Italiano, G. F. (1991). \"Data structures and algorithms for"
+" disjoint set union problems\". *ACM Computing Surveys*, 23(3), 319-344. "
+"DOI: 10.1145/116873.116878"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1492
+#: 561ed05268714733aa3fed5a944563da
+msgid ""
+"Kruskal, J. B. (1956). \"On the shortest spanning subtree of a graph and "
+"the traveling salesman problem\". *Proceedings of the American "
+"Mathematical Society*, 7(1), 48-50. DOI: 10.2307/2033241"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1497
+#: dc5763b8a5574ba48b9f170f929929d4
+msgid "**Further Reading:**"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1499
+#: f766eec7c9764514bc3d3379d6e00866
+msgid ""
+"Sedgewick, R., & Wayne, K. (2011). \"Algorithms\" (4th ed.). Addison-"
+"Wesley. Section 1.5: Union-Find."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1502
+#: ed7ae158254e467e9db45df07c4d5cc1
+msgid ""
+"Kleinberg, J., & Tardos, É. (2005). \"Algorithm Design\". Pearson. "
+"Chapter 4: Greedy Algorithms (Minimum Spanning Trees)."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/disjoint_set.rst:1505
+#: 0742736f6143454b816cdc327151b3f6
+msgid ""
+"NIST Dictionary of Algorithms and Data Structures. "
+"https://www.nist.gov/dads/"
+msgstr ""
+

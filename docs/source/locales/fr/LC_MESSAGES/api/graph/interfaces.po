@@ -1,0 +1,1071 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/interfaces.rst:5 54440dcc3d31465d8036cd2e75e0d86b
+msgid "Graph Interfaces"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:10 0257551919d9438db4c56c37a9b5a9ea
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:12 ff9e944c07804c838740ed650e746099
+msgid ""
+"This module defines the abstract base classes (interfaces) for all graph "
+"data structures in the SDS library. These interfaces ensure a consistent "
+"API across different graph implementations and provide a foundation for "
+"polymorphic graph operations."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:58 4372ee1b87a34842bb04deafb61aeb36
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:66:<autosummary>:1
+#: 3f1be69b972c433fb89a6a52d13cbe2f
+msgid ":py:obj:`AbstractGraph <sds.graph.interfaces.AbstractGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:66:<autosummary>:1
+#: a57d9b5e50a24d43a5b29e7c2c27fc73 e82ac11e2846422eb5fb38027c4d1f01 of
+#: sds.graph.interfaces.AbstractGraph:1
+msgid "Abstract base class for all graph implementations."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:66:<autosummary>:1
+#: 0a6bfcde9e33442598e7e25200c89194
+msgid ""
+":py:obj:`AbstractDirectedGraph "
+"<sds.graph.interfaces.AbstractDirectedGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:66:<autosummary>:1
+#: 6776b64c20c04fde8347afe3b630fb65 e7e2e56bc6d3485ca424412137c718b4 of
+#: sds.graph.interfaces.AbstractDirectedGraph:1
+msgid "Abstract base class for directed graph implementations."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:68 1e1e4e7b291846c28beec6853a0c8ba1
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:71 21d79b05ce2c4f958c2395b88cb417f4
+msgid "AbstractGraph"
+msgstr ""
+
+#: 8d72047cd7e643e9b592fa4142d4524c of sds.graph.interfaces.AbstractGraph:1
+msgid "Bases: :py:class:`~sds.core.interfaces.Collection`, :py:class:`~abc.ABC`"
+msgstr ""
+
+#: af8a1976a10940d3ad76f4bdcbaa66b1 of sds.graph.interfaces.AbstractGraph:3
+msgid ""
+"This class defines the core interface that all graph types must "
+"implement. It extends Collection to provide common operations like size, "
+"emptiness, and iteration."
+msgstr ""
+
+#: 0fdfd32ad0b042578640dde9227091fe of sds.graph.interfaces.AbstractGraph:7
+msgid ""
+"A graph consists of nodes (vertices) connected by edges. This abstract "
+"class defines operations for managing both nodes and edges."
+msgstr ""
+
+#: 956b24f40df345dc9f99870745f58207 af7ccaea34a343ed8babbe98eab822bf
+#: b7f2f49cda8f4539aa18bf730d828cdf d70b7f7c11194765ab6c30192bfe2aea
+#: ec33ed9a38524db09bb137d95a1abccd of
+#: sds.core.interfaces.Collection.__contains__:18
+#: sds.core.interfaces.Collection.__iter__:20
+#: sds.core.interfaces.Collection.__len__:15
+#: sds.graph.interfaces.AbstractDirectedGraph:6
+#: sds.graph.interfaces.AbstractGraph:10
+msgid "Notes"
+msgstr ""
+
+#: 684beef3ce624bceadb46370bfa46db3 of sds.graph.interfaces.AbstractGraph:12
+msgid ""
+"Concrete implementations must provide: - Node management (add_node, "
+"remove_node, has_node) - Edge management (add_edge, remove_edge, "
+"has_edge) - Neighbor queries (neighbors, degree) - Traversal support "
+"(nodes, edges) - Graph properties (is_connected, etc.)"
+msgstr ""
+
+#: ac1f047d741a4b61ae6a6983fc347335 of sds.graph.interfaces.AbstractGraph:21
+msgid ":obj:`AbstractDirectedGraph`"
+msgstr ""
+
+#: ac4f959664f844658bacf996dafb4555 of sds.graph.interfaces.AbstractGraph:22
+msgid "Interface for directed graphs."
+msgstr ""
+
+#: e1e99365b2ff406a8082787597edc2fa f087477720794b2e8c71d60cb32ce51d of
+#: sds.graph.interfaces.AbstractDirectedGraph:19
+#: sds.graph.interfaces.AbstractGraph:24
+msgid ":obj:`AbstractUndirectedGraph`"
+msgstr ""
+
+#: 09ad33ff9ab2426fbb28b4d8a2af5026 3afc66599f644429b310f55e90a5ed05 of
+#: sds.graph.interfaces.AbstractDirectedGraph:20
+#: sds.graph.interfaces.AbstractGraph:25
+msgid "Interface for undirected graphs."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:80
+#: ../../source/api/graph/interfaces.rst:127 591f07b11cd348029ab3b57f757c1392
+#: 5fe77c0b28624527859e855a0393522f
+msgid "Constructor"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:84 7925b9861e9a4541828c5433503c7907
+msgid "Properties"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:88 562fc9b7730540808a1b2e29e79d6a73
+msgid "Node Operations"
+msgstr ""
+
+#: 23e7e1b41fcb49d780bd5276ae07e3b7 d6d6f12c5b42404696ae4f417d65c38c of
+#: sds.graph.interfaces.AbstractGraph.add_node:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst 04f7ab6ca3414df28a64d494bb6b6382
+#: 0a0a6b5314fc407896037e5445ecd0d3 2b0be7654d64454ba7051d3f311cbc8e
+#: 2d8cce79d25b4e22973a132219840be3 3afcd9fa471e46e7afa06d2a08bd3c7f
+#: 4c30ee0e8a08423bb8e2f42f0a138fed 4f4eeec93d72485a921e3d9d3e16eda0
+#: 52dc151c79804459a40fa27d787deb56 55276eb3e4694f0ab643073a17c2bc78
+#: 5d7f39f5ee76407da55d6ac192460187 5ea9739f359d47fbb72e59c41cf189ee
+#: 6e59fc5fc9f34893855f33557e4435db 7f6e7f55376046429841d4f7b61a2113
+#: 87b65c8634d8455394dd83f2c2253fbc 8b87614806644730ad14688cf8ac5df8
+#: 923313253e8e40648c2f34c98e92903a 9366d5bad7df47ed8e280be9b89cc802
+#: 9f88ca54f56642f9b79cdfd6650a67d7 a0f551eebc4c486b935a36c6a9cc6370
+#: a623fe8602ea4171b6171033f3fa6d0f ad97c66519cf4ebf9f1bc4047eaabbb4
+#: b02d30a4cb7c4c1e870e0bac80395a01 b49939205c084b62807c9a655c7eaf44
+#: b55b04e6c4c448068eec49ca2bf86278 c07f6674b2ec44ab9132e3325ad651ab
+#: c6b1fb9fc2cb449cb767e7bee546de1a c7433d258c24401dac61050062f6f7ed
+#: edbc5023da9b4b05a0964e4de6f7e413 fb7202b280e54d5b9647f814ac9910a9
+#: fee88ba112774647a8cb12b9a17a477c
+msgid "Parameters"
+msgstr ""
+
+#: 1e6c0d2f111f459596a05ee002920796 626b25aa2fdd444bb358a3cbda0a40bb of
+#: sds.graph.interfaces.AbstractGraph.add_node:3
+msgid "Node to add."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst 08f1b5077f814339943349e8c87ba2c6
+#: 0d1787f6d16a4b5095784f10a35cada7 102616963ee1463586b3ee9da9114593
+#: 1b1158d2d1174e4cafb944fe19af1856 3603e6897b9b461b8f4d87983a9031e4
+#: 4006b1d06a134a4b92b75e2361486b3e 5bf5558804e84501b8dcfb12c51f5aa1
+#: 62787734d6a94e5885e8763cb50146e3 74b916fe8e4c45b4aec8215de8d4ce32
+#: 7b4dca593caf43a4a0c48f0d2210189d 9164060b80b748ffa4415480cc1bd8b4
+#: a1782a2e033046b7b73936c589896d96 adbe20ad608d4083aca54908cce9892f
+#: caf42ae94dce4c2692bf48bffc980fa9 ced92ddd93d9444b9c0795bb03af5352
+#: cfbbc076b4c04469a5b30014c0fe6cda da3e22994f6f4046bbafb3ba86e13fd0
+#: e828f97bb9d344d38ce447882f58f7ba ef9ffc95926049d6be2aecce7bbb2ba9
+#: f13e5969958a45cbb642ae2657b0b4b1 f62694d0d8334917bf20eb920659f694
+msgid "Raises"
+msgstr ""
+
+#: b79777f962cd4007955cdb4d16b33081 bccf3a95cb5a4f30a4ec75eca9784db7 of
+#: sds.graph.interfaces.AbstractGraph.add_node:6
+msgid "If node already exists in the graph."
+msgstr ""
+
+#: 81e6c549add94639ae395414bf9fc305 f4902f27b516428d91a6715ef4d95013 of
+#: sds.graph.interfaces.AbstractGraph.remove_node:1
+msgid "Remove a node and all its incident edges from the graph."
+msgstr ""
+
+#: 8870f107a2f8477e908bf0b220813b39 97dfb7cafdb349f0925c90a96cc647de of
+#: sds.graph.interfaces.AbstractGraph.remove_node:3
+msgid "Node to remove."
+msgstr ""
+
+#: 0764db7876f54677aa5e2126c5ef1ad1 14db67ef95994a4c9a1b3c9603f4de8a
+#: 1bb94fb6868642a89584accf4a462941 2dcfca0744174518b48f4fc3df4215f7
+#: 3f8d6640ab594c8fae326ce03ea8367e 4642863fa3084497aa3476b31c4ebfaf
+#: 726ea4113c044fd18a43089782202ca2 73b498da3faa479bb2d0d9698d40d296
+#: 758c2b07b821436783e34c423363ec2a 7dac683f710f4c0aba7b96a17f068a81
+#: aa3adef854f247139ba847d0bb80a55e deecfbc4639c4681bc0b5174f07b8e27
+#: e77c9ed7313842bbabfc3ec0c1a20d46 eefcdaaca8834b289c2d189a7c3ea2cb of
+#: sds.graph.interfaces.AbstractDirectedGraph.in_degree:9
+#: sds.graph.interfaces.AbstractDirectedGraph.out_degree:9
+#: sds.graph.interfaces.AbstractDirectedGraph.predecessors:8
+#: sds.graph.interfaces.AbstractDirectedGraph.successors:8
+#: sds.graph.interfaces.AbstractGraph.degree:9
+#: sds.graph.interfaces.AbstractGraph.neighbors:8
+#: sds.graph.interfaces.AbstractGraph.remove_node:6
+msgid "If node is not in the graph."
+msgstr ""
+
+#: b056e833680b4a9db6d1334089a17d08 df76d9e406cf46448159b076ba1e352b of
+#: sds.graph.interfaces.AbstractGraph.has_node:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: 82f3291e9c6c401fbfaf15871fae77c4 8990ac8adc4a40499084ce395bf062e3 of
+#: sds.graph.interfaces.AbstractGraph.has_node:3
+msgid "Node to check."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst 01491e3006d64991bc8a3485c997781d
+#: 1fc4270a24c941c187099ccff3e1fcaf 2d9b847e14724072847f7fd5619ebe08
+#: 3aeb8b6f90964eb4ba30cd8ab3b32479 443822d0b4424da49900276a5327ac54
+#: 44e2401827be40f7b798abb898af79d6 46471f168a1f44ac9de665d3f618ace4
+#: 4f16dc18923f4e71a616e96c54ec2d6f 5c267ce376fd47459c37394628a4b67a
+#: 63a95590fe8f4e33a24452bd644d6e06 70233137fd994c2e918a0a2b86b7c6d5
+#: 78c98c2f9cdb482caa83b8aa85a00bba 80b4d91764e444a183e545cbfdcc53ec
+#: 86c9aba3c14749b1bddc3fac72805ea4 8a6977e8f9304ab1b13b56e7dd75264c
+#: 9789158b6afa4e09b772848383e9ff05 9ae9cddf6352448f94476e2b789e2540
+#: b562b7d4e584480ca7a1de4675a5cd25 c0597d5d461b40ec8b0d20fed07d0fa9
+#: ce3068c607eb40f497114cce16b208ea da5bc023d8f14f1c9ec06892a4385fa2
+#: daa8ead82a09450a8ca44d5cff756a73 dc8148f1f8264e1cbafda60475a6bcdd
+#: e1da911c92d44fee982187470643449b ed3d426acad74cc88334e4b08a4bbc51
+msgid "Returns"
+msgstr ""
+
+#: c9ca8cb411f345cca7c00fcaec0599ea ef0a158ef56247fe9a35b587dfdd9fe0 of
+#: sds.graph.interfaces.AbstractGraph.has_node:6
+msgid "True if node is in the graph."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst 0103e940d8f54e5b99cf45fb0aafb466
+#: 094dfe37b2924eb59d09c8574516f6c0 107f24f4874b48dd91a90c44e7c21608
+#: 132a57e3262c425a98f92b199bc131c0 309c8eeb27ce430bab4feb18b4c2811e
+#: 36a30b99692b4378952e1416f4afcdb2 3a4783f3b7534ee0b23742cb33185d90
+#: 46d04c1e4eff41aab1b588294ffbfee9 4fbe07d4ad29458eaa813430d7aa0b71
+#: 530747036ae5458eb8316a722700290f 81202e75d7d84925a45adf9db41da507
+#: 8a510136fd1644ee92814de50098e517 9755ec987536430f857a2e59fe5c7cbe
+#: 98c612a3de3f4545968a0c5180022956 9b4377d408824bacae6813380d6455d2
+#: a38cefea0da54c55bdee28d38097017b a52387d3209548bd934020cced743e9d
+#: a6c32e0c324142a28970f49931167ac3 bfc6726a5ff8497caaa788ba05050d61
+#: cef65600f8cc439fbda3b7fd0e83cff3 d97f831bdace4814917b58ee5d707a26
+#: eaa12ed95935476584e956757903d6d9 ecad28d042b34add97091756ac6a0206
+#: f76af48421ff477e8b6e30dab2ee00f0 f92f314003334200a135240c749b66e3
+msgid "Return type"
+msgstr ""
+
+#: 8b7d521fe6654dd9b6cee8070d14007e f9a5c78ef89945f9928c9df156bab04f of
+#: sds.graph.interfaces.AbstractGraph.get_node_by_id:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: 9aa13adece95463bbdb1d379b1138e51 daa750d5306b417986a0b1ec8a58390a of
+#: sds.graph.interfaces.AbstractGraph.get_node_by_id:3
+msgid "ID of the node to retrieve."
+msgstr ""
+
+#: 454d7a0e1500459393788d851656d74d 59a463f2a6144838ae3898d948e62e75 of
+#: sds.graph.interfaces.AbstractGraph.get_node_by_id:6
+msgid "The node if found, None otherwise."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:95 7a713d9e4aaf43818eef7567164586d7
+msgid "Edge Operations"
+msgstr ""
+
+#: 2902a41863004616862947ee2f8c843d 38a86116c321402388d40a627cab61e1 of
+#: sds.graph.interfaces.AbstractGraph.add_edge:1
+msgid "Add an edge to the graph."
+msgstr ""
+
+#: 2b11753933b84c07abd70aa7c92c258c 9e1a495a212b453c9a96f6726d6ba326 of
+#: sds.graph.interfaces.AbstractGraph.add_edge:3
+msgid "Edge to add."
+msgstr ""
+
+#: 92e0ece506e3453d891489260e8bc250 b06ce3d3bec841789eae36612f047dfe of
+#: sds.graph.interfaces.AbstractGraph.add_edge:6
+msgid "If edge already exists or if nodes are not in the graph."
+msgstr ""
+
+#: 10dc9203ac964ace97bc9dbd81b61914 9d86fc99559b44158bf05d722de6220f of
+#: sds.graph.interfaces.AbstractGraph.remove_edge:1
+msgid "Remove an edge from the graph."
+msgstr ""
+
+#: 81b64ab5d1ca4af6b7b4b3d72c6b75b9 a7197423f0324a40a7e115f82da6fdef of
+#: sds.graph.interfaces.AbstractGraph.remove_edge:3
+msgid "Edge to remove."
+msgstr ""
+
+#: 07c798e31f434089aa728a1ab84f56aa f1f6ebae5ff2442fa6e8b935874ff6cd of
+#: sds.graph.interfaces.AbstractGraph.remove_edge:6
+msgid "If edge is not in the graph."
+msgstr ""
+
+#: be86523a460c482fbf82cc98c4d920d4 cc54e62efd924b848648489b1d593b84 of
+#: sds.graph.interfaces.AbstractGraph.has_edge:1
+msgid "Check if an edge exists between two nodes."
+msgstr ""
+
+#: 139eed9586cd437ca60c2d06a0494927 5102f8e74707419b9cbf7f04e68a7e3c
+#: 6806b8a28a204fcb9192a162c8d3a063 f400702bfce2485d9ede3ef077d45a66 of
+#: sds.graph.interfaces.AbstractGraph.get_edge:3
+#: sds.graph.interfaces.AbstractGraph.has_edge:3
+msgid "First node."
+msgstr ""
+
+#: 5fdaa6c0fa6e446fa6813cd10308c869 b8ba68303be6443188305673b0c1440d
+#: e9eb8c5f5ab24d0f83a72d7baa8357ec efd9d488af5a42b7a311dc5b9d734abf of
+#: sds.graph.interfaces.AbstractGraph.get_edge:5
+#: sds.graph.interfaces.AbstractGraph.has_edge:5
+msgid "Second node."
+msgstr ""
+
+#: 5bcb89afb64b416f9ad754651a88574b c9397afba25442278cf501bc772ee56d of
+#: sds.graph.interfaces.AbstractGraph.has_edge:8
+msgid "True if edge exists."
+msgstr ""
+
+#: 7f5979c45a7146ae91bc40859924d75c def9f3820a664c5fa0b60675e611172e of
+#: sds.graph.interfaces.AbstractGraph.get_edge:1
+msgid "Get the edge between two nodes."
+msgstr ""
+
+#: 169c38d99c5546daa31a52224691712c 9f83d03f33274439ac538d0a3fc3d851 of
+#: sds.graph.interfaces.AbstractGraph.get_edge:8
+msgid "The edge if it exists, None otherwise."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:102 8522437b94414098ad287a5017f90669
+msgid "Query Methods"
+msgstr ""
+
+#: 6b014a2b31c64327b444a272e0f80f71 d5f28a4f10304e5da3a27c67477fe2d7 of
+#: sds.graph.interfaces.AbstractGraph.neighbors:1
+msgid "Get all neighbors of a node."
+msgstr ""
+
+#: 7bd54aa17f8341e6b705732c532f6068 9636e14478944f5394d9233950992a1a of
+#: sds.graph.interfaces.AbstractGraph.neighbors:3
+msgid "Node to get neighbors for."
+msgstr ""
+
+#: 023a2d6942824bbd8f4f26caedc4c003 0eed04aaf61f47f49bbdab428eed792d
+#: 11a5f67437744b068906ed4d38596dbe 2b365a46c8c345089500296061d30533
+#: 657241f09124497982a7063896597ff6 876aeca1d5dc4dda8d0da6dc751eac65
+#: c778bb53e14a46dc82f4d743efef5e8f cc9023816d43455ab8625c1bfbd570fc
+#: e1c945a4ba6f48a68c08d1ef3df80f56 fad13c8050dc4d5f944386c1d256a007 of
+#: sds.graph.interfaces.AbstractDirectedGraph.predecessors
+#: sds.graph.interfaces.AbstractDirectedGraph.successors
+#: sds.graph.interfaces.AbstractGraph.edges
+#: sds.graph.interfaces.AbstractGraph.neighbors
+#: sds.graph.interfaces.AbstractGraph.nodes
+msgid "Yields"
+msgstr ""
+
+#: 1c888531cc9a47e9999804aaa1019d64 acec9a1e68ed4a2d924873402451ba3e of
+#: sds.graph.interfaces.AbstractGraph.neighbors:6
+msgid "*GraphNode* -- Neighbor nodes."
+msgstr ""
+
+#: 5836bcebfb7345a6910fca902a2f69ed cb768283668c4174bb9ec094d445ed91 of
+#: sds.graph.interfaces.AbstractGraph.degree:1
+msgid "Get the degree of a node."
+msgstr ""
+
+#: 2f5bdfce9dcf475c8cf2849e4cb50082 6d790884990641df9b12bcc4668bf4c4 of
+#: sds.graph.interfaces.AbstractGraph.degree:3
+msgid "Node to get degree for."
+msgstr ""
+
+#: 75943c8be60643828e2c48b742016e94 a670c25202154026abb577103c558604 of
+#: sds.graph.interfaces.AbstractGraph.degree:6
+msgid "Number of edges incident to the node."
+msgstr ""
+
+#: 9135e17b468d4a0ebad04efbc8efc27b dc32256e0bef43d19dd15ee89c9f3288 of
+#: sds.graph.interfaces.AbstractGraph.nodes:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: 061fcd45261f478da15c64a43dff1c03 27fbd67f2c694e0fa0fa290f96f18592 of
+#: sds.graph.interfaces.AbstractGraph.nodes:3
+msgid "*GraphNode* -- All nodes in the graph."
+msgstr ""
+
+#: b7bb6422f7e04a5fab804049afb74aeb be23bc7d1fd2446ea4e4d8626559d9a2 of
+#: sds.graph.interfaces.AbstractGraph.edges:1
+msgid "Get all edges in the graph."
+msgstr ""
+
+#: 89cc2f9f09764ddc88f5371178eb9d11 e53626a5eda0442ea84854cacf8dbf7a of
+#: sds.graph.interfaces.AbstractGraph.edges:3
+msgid "*Edge* -- All edges in the graph."
+msgstr ""
+
+#: 19edfb78d2424a84865e0b0b34f73004 219a8622166149e0bbe9c9e5b99aba38 of
+#: sds.graph.interfaces.AbstractGraph.node_count:1
+msgid "Get the number of nodes in the graph."
+msgstr ""
+
+#: 12bba88df7ee4b9c9fcbe8bf394e18f6 513f3e4c1d1944b58456d306ff775b43 of
+#: sds.graph.interfaces.AbstractGraph.node_count:3
+msgid "Number of nodes."
+msgstr ""
+
+#: 584bf7420d4544c0b80a471e5bcc2b24 96b70656290747c3af854a47dd50ee1d of
+#: sds.graph.interfaces.AbstractGraph.edge_count:1
+msgid "Get the number of edges in the graph."
+msgstr ""
+
+#: 4129fab0343b4f28b7d260320b0eefb4 c0ec7d960f454a4784b651c5f0a8cd6f of
+#: sds.graph.interfaces.AbstractGraph.edge_count:3
+msgid "Number of edges."
+msgstr ""
+
+#: 3362af11981f449c9ac6d3d525b5dd8d d34bfc3caee6444fadf9620b41fe21fb of
+#: sds.graph.interfaces.AbstractGraph.is_connected:1
+msgid "Check if the graph is connected."
+msgstr ""
+
+#: 2214d71c26604aa4953bfc876c528a5f 3e8e411d5ba64fb18a67d9f87e73f1b9 of
+#: sds.graph.interfaces.AbstractGraph.is_connected:3
+msgid "True if there is a path between any two nodes."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:112 cee7477ac97241849b8e443b53b6f963
+msgid "Special Methods"
+msgstr ""
+
+#: 42f0dbeee39a48d5a1fa867cf0363aa3 of sds.core.interfaces.Collection.__len__:1
+msgid "Return the number of elements in the collection."
+msgstr ""
+
+#: 0e59334967d84d0ba54d5c035a32e251 of sds.core.interfaces.Collection.__len__:3
+msgid "The number of elements currently in the collection."
+msgstr ""
+
+#: 2b547860a74f4c47acccff62e1d4e923 7b42251eaa8848458902e8b7292067cc
+#: 9f90e2bfd99d4db58b2e489bf0570539 of
+#: sds.core.interfaces.Collection.__contains__:9
+#: sds.core.interfaces.Collection.__iter__:6
+#: sds.core.interfaces.Collection.__len__:6
+msgid "Examples"
+msgstr ""
+
+#: 806f6d78a5af402fa29f6bc871e8de04 of
+#: sds.core.interfaces.Collection.__len__:17
+msgid ""
+"This method enables the use of Python's built-in len() function. "
+"Implementations should return the count in O(1) time when possible."
+msgstr ""
+
+#: 1133c073478a49b69e5cc425429881d1 of
+#: sds.core.interfaces.Collection.__contains__:1
+msgid "Return True if item is in the collection, False otherwise."
+msgstr ""
+
+#: 357a98a16220401f9eac0469ab4bc8d6 of
+#: sds.core.interfaces.Collection.__contains__:3
+msgid "The item to search for in the collection."
+msgstr ""
+
+#: 939a9c2978a34336bf6449a5cd1aa635 of
+#: sds.core.interfaces.Collection.__contains__:6
+msgid "True if the item is found, False otherwise."
+msgstr ""
+
+#: 65042afbe6af42cfa01885fc99081085 of
+#: sds.core.interfaces.Collection.__contains__:20
+msgid ""
+"This method enables the use of Python's 'in' operator. The time "
+"complexity is implementation-dependent but is typically O(n) for unsorted"
+" collections and O(log n) or O(1) for sorted or hashed collections."
+msgstr ""
+
+#: 01e5c251846f4742ba947c84b279fe97 of
+#: sds.core.interfaces.Collection.__iter__:1
+msgid "Return an iterator over the collection."
+msgstr ""
+
+#: ae84369a771d4edf952cf7376344af45 of
+#: sds.core.interfaces.Collection.__iter__:3
+msgid "An iterator that yields elements from the collection."
+msgstr ""
+
+#: a97a5e33af4b43759de5e7fc99d45917 of
+#: sds.core.interfaces.Collection.__iter__:22
+msgid ""
+"This method enables the use of Python's iteration protocol. The order of "
+"iteration is implementation-dependent and should be documented in "
+"concrete subclasses."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:118 fc545c4ab8f14ce4b831d72468cd185f
+msgid "AbstractDirectedGraph"
+msgstr ""
+
+#: 2dc352939b1c485d988c2e2f670f660c of
+#: sds.graph.interfaces.AbstractDirectedGraph:1
+msgid "Bases: :py:class:`~sds.graph.interfaces.AbstractGraph`"
+msgstr ""
+
+#: df3df35960e7415f91cf3dc02c0d9fff of
+#: sds.graph.interfaces.AbstractDirectedGraph:3
+msgid ""
+"A directed graph has edges with direction: an edge from u to v is "
+"different from an edge from v to u."
+msgstr ""
+
+#: 4b2e09bd1d4b49bd974cb79b93c83565 of
+#: sds.graph.interfaces.AbstractDirectedGraph:8
+msgid ""
+"Directed graphs have additional concepts: - in-degree: number of incoming"
+" edges - out-degree: number of outgoing edges - predecessors: nodes with "
+"edges pointing to a given node - successors: nodes with edges from a "
+"given node"
+msgstr ""
+
+#: 3bd01bfe40db4fbbb99eed0c8e7fe814 of
+#: sds.graph.interfaces.AbstractDirectedGraph:16
+msgid ":obj:`AbstractGraph`"
+msgstr ""
+
+#: 2812a75b161244ee9747dc6dbacec14f of
+#: sds.graph.interfaces.AbstractDirectedGraph:17
+msgid "Base graph interface."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:131 d76527cbbd3541d9946b9db45a263d16
+msgid "Directed Graph Operations"
+msgstr ""
+
+#: 4f4b633979c34c6cb3ca012091cb326d eb0369273b3644a7a779e87989cfdef6 of
+#: sds.graph.interfaces.AbstractDirectedGraph.in_degree:1
+msgid "Get the in-degree of a node (number of incoming edges)."
+msgstr ""
+
+#: 99be8958b55f4b60a31719511858947c f32f46607b1b4cc3be00a7f4425699e0 of
+#: sds.graph.interfaces.AbstractDirectedGraph.in_degree:3
+msgid "Node to get in-degree for."
+msgstr ""
+
+#: 44f4f67b1ac649b59965a83545275c67 c94ecb8dfbfc4588838e5f7ef678ab37 of
+#: sds.graph.interfaces.AbstractDirectedGraph.in_degree:6
+msgid "Number of incoming edges."
+msgstr ""
+
+#: 2185fd889fad4a50afb328fe3b4af0e9 97098baa0b724fe8bbbd2eb5fa29e4eb of
+#: sds.graph.interfaces.AbstractDirectedGraph.out_degree:1
+msgid "Get the out-degree of a node (number of outgoing edges)."
+msgstr ""
+
+#: 786008c61e2241de8c08bec66b94e31d dc5c9e45fb75473fbe954d51d39379f2 of
+#: sds.graph.interfaces.AbstractDirectedGraph.out_degree:3
+msgid "Node to get out-degree for."
+msgstr ""
+
+#: ab88bf28282e400b8a2adb180144a115 aecc530a0f2446828b52ba39743bdf77 of
+#: sds.graph.interfaces.AbstractDirectedGraph.out_degree:6
+msgid "Number of outgoing edges."
+msgstr ""
+
+#: 52b85f8f629545e28d0ad0faee4d5561 631f843bc777438f8691536b9eadd435 of
+#: sds.graph.interfaces.AbstractDirectedGraph.predecessors:1
+msgid "Get all predecessor nodes (nodes with edges to this node)."
+msgstr ""
+
+#: 45a27be8c09244f4b68ebc49ba9bb52d a08b23accb564b9b9d30eefef49c933d of
+#: sds.graph.interfaces.AbstractDirectedGraph.predecessors:3
+msgid "Node to get predecessors for."
+msgstr ""
+
+#: 4f766ee66be941f281a50d0a5f0bb8dd 620b9210939647339b14f29ab872ca7c of
+#: sds.graph.interfaces.AbstractDirectedGraph.predecessors:6
+msgid "*GraphNode* -- Predecessor nodes."
+msgstr ""
+
+#: 7d0df03c0d67443a9d62163e8941c201 ad58169102ca4af28d33ef25716754b0 of
+#: sds.graph.interfaces.AbstractDirectedGraph.successors:1
+msgid "Get all successor nodes (nodes with edges from this node)."
+msgstr ""
+
+#: 737efc5959bb4271a3cc9c060527b001 84def1fc01ce44fe841cb70aeb07b31b of
+#: sds.graph.interfaces.AbstractDirectedGraph.successors:3
+msgid "Node to get successors for."
+msgstr ""
+
+#: 77d8a525a6dc4a14a0a9d603b4609518 e6be698876d64c12a3ff84eb11c3ea00 of
+#: sds.graph.interfaces.AbstractDirectedGraph.successors:6
+msgid "*GraphNode* -- Successor nodes."
+msgstr ""
+
+#: 40d694fdf7164585bd50ab50b81c9ca9 d13f4cd0872d47328d22d2e76c2f1e25 of
+#: sds.graph.interfaces.AbstractDirectedGraph.is_acyclic:1
+msgid "Check if the graph has no cycles."
+msgstr ""
+
+#: 053f4a90adb84a47b44d4efde227b442 39c5476f00ed4d1d95793599fac07cbf of
+#: sds.graph.interfaces.AbstractDirectedGraph.is_acyclic:3
+msgid "True if graph is a DAG (Directed Acyclic Graph)."
+msgstr ""
+
+#: 43c0525cdafe405f96c4a77270aada01 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:1
+msgid "Add a directed edge to the graph."
+msgstr ""
+
+#: ce668bb0c2f947599ba573a1a9a69a82 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:3
+msgid "Directed edge to add."
+msgstr ""
+
+#: 9b73bb98fa7f4fc59f6fa1a493850b39 of
+#: sds.graph.interfaces.AbstractDirectedGraph.add_edge:6
+msgid "If edge already exists or nodes are not in the graph."
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:139 b8532cfb373041ddaf5b78dc5f70102b
+msgid "Interface Hierarchy"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:141 06cfc8ff78444cb2922f6bbba76ba73d
+msgid "The graph interface hierarchy provides increasing specialization:"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:156 1a80fdcd59484dd79eb7a8f418d63ed8
+msgid "**Interface guarantees:**"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:158 4d5979e046e043c69a7b89d5450b5566
+msgid "All graph types support common operations (add_node, add_edge, etc.)"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:159 a345c9767fb740eab48dcd5727d333f4
+msgid ""
+"Directed graphs add direction-specific operations (in_degree, successors,"
+" etc.)"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:160 dded2985f22f42e8bb62ca3a4ae7b202
+msgid "Consistent API enables polymorphic graph algorithms"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:163 c5cf236e750e40598c277b24a09803b0
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:166 90474f73c80c4532b897ca6faa9dd5c8
+msgid "Implementing Custom Graphs"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:168 339ea676cd034bf5bf205bc4673d8469
+msgid "Using AbstractGraph as a base:"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:312 6c2c4c70eea84793b4ab485ecc65f0e9
+msgid "Polymorphic Graph Operations"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:314 f2f3dbfe9a45412295ad906356c9f102
+msgid "Working with any graph type through the interface:"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:366 d6cf5aa097dc4abf8ad266cb2fd82f91
+msgid "Implementing Directed Graphs"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:368 847fe04715a745b6bd944d4ffc00c2b0
+msgid "Using AbstractDirectedGraph:"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:444 0898d4e8c3c940708ee270188cf0cf4f
+msgid "Type-Safe Graph Algorithms"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:446 52ccf50ffc404d9c8701e10dccc9dee0
+msgid "Using type hints with interfaces:"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:508 3812a27e0b864583a3d36353e2b49691
+msgid "Interface Method Requirements"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:511 976ae3659194494e88f7bd40b222c4fd
+msgid "AbstractGraph Methods"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:513 10ef2bef863844699f446c85b72b2b1d
+msgid "All concrete graph classes must implement:"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:519
+#: ../../source/api/graph/interfaces.rst:586 0ab9daf03661407289fcb39fbdeb4800
+#: b756458c0a6f4d759978fdb9768049b0
+msgid "Method"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:520 98e2f84bc49c4ff8a0a0786060820ce2
+msgid "Required"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:521
+#: ../../source/api/graph/interfaces.rst:587 0361c01e46bf40e2a83b63cf9003e23f
+#: b8738f81866e41c08871a486d8308473
+msgid "Purpose"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:522 15e706f877d7402d85a57576a1bf2208
+msgid "``add_node(node)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:523
+#: ../../source/api/graph/interfaces.rst:526
+#: ../../source/api/graph/interfaces.rst:529
+#: ../../source/api/graph/interfaces.rst:532
+#: ../../source/api/graph/interfaces.rst:535
+#: ../../source/api/graph/interfaces.rst:538
+#: ../../source/api/graph/interfaces.rst:541
+#: ../../source/api/graph/interfaces.rst:544
+#: ../../source/api/graph/interfaces.rst:547
+#: ../../source/api/graph/interfaces.rst:550
+#: ../../source/api/graph/interfaces.rst:553
+#: ../../source/api/graph/interfaces.rst:556
+#: ../../source/api/graph/interfaces.rst:559
+#: ../../source/api/graph/interfaces.rst:562
+#: ../../source/api/graph/interfaces.rst:565
+#: ../../source/api/graph/interfaces.rst:574 03f141f614914689a2ff1e5e774e9628
+#: 1a59e99897714f42b8c1d830a481efd3 281e9993e2de402688daec22fc6ccd78
+#: 3249541b1ff549bbbc24c16b1f120a1d 335a4aca4ac94fa78e6b8f5ad501f214
+#: 4b53c1f875b243f3a3245e47a0392b41 508122ed6f7a4cf9bf19d42f232867b2
+#: 52039e75affb41f5b682ed8e8d9d2e22 5aaeeb6256e242ba83f7914c1e753264
+#: 84a5161a11e84818a75612e93ac22aa4 b8e979c409784204a19a3e8d1117e55d
+#: d1df77f530454ba2a50e9a9f9da30e4f d8c54c0dfd4f40b39244a04b4cc7a65d
+#: ddfc791e63e84e45abb40fc94a17c88a ee5819ea4b544b0a8dac1ddef8cb2b53
+#: f95aa783461e4ab4b56cb901513a7d89
+msgid "Yes"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:524 28b15eddffc9481eaf397d1b7d1c5a5e
+msgid "Add node to graph"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:525 ec8d0ce259274b6d87b74b9d2902d2f5
+msgid "``remove_node(node)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:527 1e5ada3bd7d1465ba8f5ab42a55ac877
+msgid "Remove node and incident edges"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:528 2ada42dbba0c45f1a6269859324d0e49
+msgid "``has_node(node)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:530 0f0f2f250e2d4534b67104ad53b2a529
+msgid "Check node existence"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:531 ab976aac639a45209c9da98bb085cf3c
+msgid "``add_edge(edge)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:533 3ccb3c0bf20a483bafe8b48662bbadee
+msgid "Add edge between nodes"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:534 b8964827292d41238077b0cadc43928e
+msgid "``remove_edge(edge)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:536 c9a6a40064d24ba08e8196a2d8546f4c
+msgid "Remove specific edge"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:537 74e7fee644254befbea41673e8963b0d
+msgid "``has_edge(n1, n2)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:539 3d57e5184650458b8681aa2b1b84d0cb
+msgid "Check edge existence"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:540 0e0ef0e79ced4494b2f719d16cc22a02
+msgid "``get_edge(n1, n2)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:542 23868fdc62a44bdda8ead3a04fbb2eee
+msgid "Retrieve edge object"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:543 3b6f55c46609437695928ac04fbce968
+msgid "``neighbors(node)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:545 c9ea4bfda9fe4a269dddfa2361d266a7
+msgid "Iterate node's neighbors"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:546 2ea55233a2044a7984d35b1fb1d7e10c
+msgid "``degree(node)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:548 b967a7965f664fba97227a36458d6aa0
+msgid "Get node degree"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:549 dd5fa3077b3641e5b589b807f42d81d4
+msgid "``nodes()``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:551 12d3913039a14894b789b671afaa9fc1
+msgid "Iterate all nodes"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:552 7e59bb465e1144478b1471d43dc16c92
+msgid "``edges()``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:554 a2a36ae0c3304512bbea166d648c4f3c
+msgid "Iterate all edges"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:555 3c9de9df031e40c7a00a5b15528acf01
+msgid "``node_count()``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:557 6a46ff3a9b9f4cde96f0088ff1384a69
+msgid "Number of nodes"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:558 5ef3d67b7d354eae897dcbeda88d3141
+msgid "``edge_count()``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:560 051fe4a15eb94efe9155b615eaca2c15
+msgid "Number of edges"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:561 bbeb8576aa5c4202804e8f400e4e3a1c
+msgid "``is_connected()``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:563 ea2b6fcd8f6745fdabdc809bf5dcc8d8
+msgid "Check connectivity"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:564 1c1dd40462d5486ba879ebdf44233cf1
+msgid "``get_node_by_id(id)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:566 016f388fa4584fbb8cdb0729f5320137
+msgid "Lookup by ID"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:567 d13358380e8f4596a9a2e8226bbea65c
+msgid "``size``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:568
+#: ../../source/api/graph/interfaces.rst:571 3c6cf69f8bc54badb6aa9deed157bb19
+#: 7d6fcb5c0df2430794af7cc0bd6b834f
+msgid "No"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:569 59f58533b817496f83eee1970b1a0831
+msgid "Inherited property"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:570 67cfdfbf035748ddb43227fd5e647287
+msgid "``is_empty()``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:572 19902906c8aa45a6a3d404ac1c2ed61f
+msgid "Inherited method"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:573 87b11348d27d43e68de349eef034e35a
+msgid "``clear()``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:575 0b858378ebfb4872a8bc23816ddc43ae
+msgid "Remove all elements"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:578 11654ba2d7a84da8902ba1f3a99f8e2b
+msgid "AbstractDirectedGraph Additional Methods"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:580 421a5414f4f54ed28fc5fdd909828eb0
+msgid "Directed graph classes must additionally implement:"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:588 b5c4b3345dcf4dd3b2eaef31befb4ff9
+msgid "``in_degree(node)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:589 bd372598604d45c781eb3871d9fc09aa
+msgid "Count incoming edges"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:590 e080eb04355c48908afac06c34926006
+msgid "``out_degree(node)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:591 e480aa8416d7437ba230127f55d220df
+msgid "Count outgoing edges"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:592 22a8f3db04e24d30a7d462cd8657d173
+msgid "``predecessors(node)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:593 fcea9658445c4def94c55ff346172546
+msgid "Iterate nodes pointing to this node"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:594 da605fdc6e1c4435aadac3dcacd5ac4b
+msgid "``successors(node)``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:595 7ac28afe0d8344679f0075dd0196d415
+msgid "Iterate nodes this node points to"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:596 ea2d095c2e784e0e87969b59c7bb2c16
+msgid "``is_acyclic()``"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:597 21c99484e3b0441baed96b8642bc9c6e
+msgid "Check if graph is a DAG"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:600 f0a02dbd770b49d49610048fc1aab2fb
+msgid "Design Patterns"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:603 91d7b185cec24c67bb9e1497bf4d9ad1
+msgid "Template Method Pattern"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:605 41d941c53ee04adbac98ea20aaecb23d
+msgid "Abstract classes define the template, concrete classes fill in specifics:"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:626 184efa2505144387969123935ccbc5bd
+msgid "Strategy Pattern"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:628 ea334f12814e47988742331665f1164d
+msgid "Different implementations for different use cases:"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:653 343a27b6191a422f94b33f8a0e80756a
+msgid "Visitor Pattern"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:655 95d40cea7cb0405eb23e7aaa1c7d318b
+msgid "Traverse graphs uniformly:"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:689 74349d1ddb134876b18937beb48f7500
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:692 631063f9ed064297aa3eabddbccd667c
+msgid "Interface Implementation"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:694 1b566f24f36744a3860ac9a9dec48f21
+msgid "✅ **Always call super().__init__()**"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:703 8a5b88b6954745f49b476a6ca8a8efe1
+msgid "✅ **Update _size consistently**"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:715 94ad46ef46b348228c080e02c30830f7
+msgid "✅ **Implement all abstract methods**"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:725 ddb2a88de72446a4a5f9a599298f79e0
+msgid "Using Interfaces"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:727 444ddb82b42340dbb6d5d963aae29933
+msgid "✅ **Program to interfaces, not implementations**"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:744 a2e8b4b4bc5140ffaa34177f0d85499d
+msgid "✅ **Use type hints for clarity**"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:759 a8b99c9600d74f0491a5fa35e022f8a7
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:762 d55fe2b900bd43119a0da4ccfa875bbf
+msgid "Graph Metrics"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:786 f4c945c5f074489982f9735101d1523d
+msgid "Graph Transformation"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:808 fbace3684c684c1bb47a3bdbff106266
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:810 66d8b86337174e6e9c664452967b3c00
+msgid ":doc:`node` - GraphNode implementation"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:811 d1c08cd94c1647129bee2c84fcaf21c0
+msgid ":doc:`edge` - Edge implementations"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:812 48a1c4e8cc8744bd8113e95d0da1f231
+msgid ":doc:`graph` - Concrete graph classes"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:813 f11f6a4d10ba43419365196b496a10e5
+msgid ":doc:`directed` - Directed graph implementations"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:814 e164442481ed49feb647a67b85ce688b
+msgid ":doc:`../../guide/graph_structures/index` - Graph structures guide"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:817 897d9ba02a7a462b9305ab8563a05cc1
+msgid "References"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:819 310594752af642e9b8a82fe9f5d85de9
+msgid ""
+"Gamma, E., et al. \"Design Patterns: Elements of Reusable Object-Oriented"
+" Software\", 1994"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:820 41885306f6e44072aeff2b6b75c6539c
+msgid "Martin, R. C. \"Clean Architecture\", Chapter 11: DIP"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:821 e673f39a37d84c58a48befccb289407c
+msgid "Liskov, B. \"Data Abstraction and Hierarchy\", OOPSLA '87"
+msgstr ""
+
+#: ../../source/api/graph/interfaces.rst:822 d97a706517a84f80b64d44f6a31a2d13
+msgid "Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, Part VI"
+msgstr ""
+

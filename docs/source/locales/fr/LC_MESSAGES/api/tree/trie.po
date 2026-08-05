@@ -1,0 +1,1026 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/trie.rst:5 ../../source/api/tree/trie.rst:55
+#: ../../source/api/tree/trie.rst:498 002c8eb5aa1049d09c6d2da89e78141a
+#: 8ce769f4db264594b6fe31bd5ff8461f c8b5826a9f8f42e2a525213cc1de7d50
+msgid "Trie"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:10 ab9655fb57b94618a403d5ad1e5f5278
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:12 eb0dbc02a23e484a8e92d0ceaf8941e5
+msgid ""
+"This module provides a Trie (prefix tree) implementation optimized for "
+"string operations. Tries enable efficient prefix-based searches, making "
+"them ideal for autocomplete systems, spell checkers, and dictionary "
+"implementations."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:42 14133f1b23ab44c78e26df4cf3588eb8
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:50:<autosummary>:1
+#: 40db3f1255db42c688ceef8e7b029011
+msgid ":py:obj:`Trie <sds.tree.trie.Trie>`"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:50:<autosummary>:1
+#: 500f279523b74925b154261c45361596 770499ec223b495fafcf00f0ca802320 of
+#: sds.tree.trie.Trie:1
+msgid "Trie (Prefix Tree) implementation for efficient string operations."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:50:<autosummary>:1
+#: 86eb0d6aed1a41d1801f834d1568a4e5
+msgid ":py:obj:`TrieNode <sds.tree.trie.TrieNode>`"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:50:<autosummary>:1
+#: 856e063a1fae40f2ae6e74bc11dd4b8a fe5bdafc3b744c5daa62d7ab55d040d5 of
+#: sds.tree.node.TrieNode:1
+msgid "Node for Trie (prefix tree) structure."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:52 2ed74cec72e34895bcef7685de67d87d
+msgid "Detailed Documentation"
+msgstr ""
+
+#: 182190a411b9433383bac4cfb656c2db of sds.tree.trie.Trie:1
+msgid "Bases: :py:class:`~sds.core.interfaces.Collection`"
+msgstr ""
+
+#: 892537bf1d1a4a2b9ae07f1acb4e05e2 of sds.tree.trie.Trie:3
+msgid ""
+"A Trie is a tree-like data structure where each node represents a "
+"character. Words are formed by paths from the root to nodes marked as "
+"end-of-word. This structure allows efficient prefix-based operations."
+msgstr ""
+
+#: c04a7e5691ba4a2c88160ade59af03d7 of sds.tree.trie.Trie:9
+msgid "The number of words stored in the trie (read-only property)."
+msgstr ""
+
+#: 35f1756d35eb47009bd5500a29fcc2f3 71d675bdee1641cfa101ad5dc0af5ec4
+#: f47caf7f9b2a4cb78262004c6c9168fb of sds.tree.node.TrieNode
+#: sds.tree.trie.Trie
+msgid "type"
+msgstr ""
+
+#: 32a3405dfc9a484daa03b7e39b045ca9 of sds.tree.trie.Trie:11
+msgid "int"
+msgstr ""
+
+#: 074c4f45f83f4c16ab2af67ac6945ba9 1113021058bc470da48f00fa4101d580
+#: 184de53705dd4dcfb1b803c7f2e92dc5 1b0f8a6d6e1840e3afe05a84bdbdade8
+#: 228d4284d5d5422d86b45cced952349b 3a2d4dbb226547ce9b87e2ac24287158
+#: 3e4a62556f4741a9af605dc97eb089e0 4e2273f3dec6452ea75a5fe5033898cf
+#: 61fe3335caf5496fad2b05a7cb0257ee 675a5a82836a44d694cec33cd707f75d
+#: 67c549fb4fab48cfab1219f71ff50971 68c0495fe1b44874931d8ce33d97eee3
+#: 6a1abfe6c83542bdae91cf724bd81f0f 6c0e8181d7654a6492ce866e45a36c19
+#: 73a4a124b6c54fbfa983daee65bde3fd 822283aa3e9c4bc2af54a8a8844e1170
+#: 8e6462e9cbdf4135a6f6f47bc7eb37f5 915dea398c904f3dbabfa7226b94d6f1
+#: 9334736cb50b40178de6a67eedef7d11 9dc7e248dc314364a24480f52c126098
+#: 9f7e5095e761408f8aedb3ea41a7c612 a9c46bed25014151a87a831a793be9e3
+#: aa995c39294e44ff8ab62dcfebce6e61 b2f337d3ab60434e8d611f40bd09b594
+#: b643b80bcbba493cba35a4f82871ea9e bc139694759e412b8ef04cc17b08bab0
+#: c58c1485b0434314ad7d9e60158c3e7f cada7b2c886444bb88a9468e7f3b216f
+#: cc016bf9a63047679df4bd3175ede16b d97096aa397f400bbb76489ff6abceb3
+#: e2b1410eaba14b3e9de1878b2a818e67 e496a2e27c9a4d20bae603e92840f7ee
+#: e6526aabf2fd42df8a5e0187db12c53a eb1b205637e1442fba4d3e2f9d1fa421
+#: eb4f095c523c4418bb1724ff81adb55b f6fb502787d1424a87ac95eba6364e39
+#: fb000ad1c4204368a7d8cc2902c6139d of sds.tree.node.TrieNode:27
+#: sds.tree.node.TrieNode.__repr__:6 sds.tree.node.TrieNode.__str__:6
+#: sds.tree.trie.Trie:13 sds.tree.trie.Trie.__contains__:9
+#: sds.tree.trie.Trie.__iter__:5 sds.tree.trie.Trie.__len__:6
+#: sds.tree.trie.Trie.__repr__:6 sds.tree.trie.Trie.__str__:6
+#: sds.tree.trie.Trie.autocomplete:11 sds.tree.trie.Trie.clear:3
+#: sds.tree.trie.Trie.count_words_with_prefix:9 sds.tree.trie.Trie.insert:8
+#: sds.tree.trie.Trie.is_empty:6 sds.tree.trie.Trie.longest_common_prefix:6
+#: sds.tree.trie.Trie.remove:9 sds.tree.trie.Trie.search:9
+#: sds.tree.trie.Trie.size:6 sds.tree.trie.Trie.starts_with:9
+#: sds.tree.trie.Trie.words_with_prefix:9 sds.tree.trie.TrieNode.children:6
+msgid "Examples"
+msgstr ""
+
+#: 521a29d8ee00406aba553cd678bacd61 of sds.tree.trie.Trie:15
+msgid "Create and populate a trie:"
+msgstr ""
+
+#: d3710ba466d448f688875504aeeb59d6 of sds.tree.trie.Trie:24
+msgid "Search operations:"
+msgstr ""
+
+#: 5584538c31264a5f893b3ced5c6212b8 of sds.tree.trie.Trie:33
+msgid "Autocomplete:"
+msgstr ""
+
+#: 6175719a79a443799d73aa54db007d75 of sds.tree.trie.Trie:39
+msgid "Remove words:"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:459 00bcb47f02a44763928407c6ededcc38
+#: 0337f496db1a4d27a13c372ef11d1297 0390de4c5a764cd38e4e2672faa45182
+#: 04bde4b69aff4dd9b5348abc30dbfa3b 19931c07842846e3abbd8410a62c621d
+#: 2ff1cc50afab46d482d57617444a1cd6 33075ca9831d45df8ae03436b0c192ae
+#: 3e91f8423d6f4ba296d0f7e4c88c4c83 5350aafb92a744d9bd0704b9b08a2258
+#: 56a54f234eb947a894424072864e7c3e 66ed7beb62194a36882973bc6d9b2f38
+#: 8440452e7ada4201a1a85c866855004e 98453f49bab04b1ca8eca2d9f6d17cac
+#: b4745f6253cc48e9851595cb05515804 b6b11bc625be41ca931bdecfa66152a7
+#: bc1d5c42635643478d3703a6b0b540d2 c3ea4a5dcb4e4c2ba3707c89043c9aad
+#: d9332e0dd7c74acea9d2cc600ad5ba1b dc193d56a7854e49a857df0a955d1570
+#: e3ea6faa299b452788af2d423a53310b eb4f32233c1c46e18b3592a9406e6be9
+#: eda3389e4dfb445aa92c28d031dd2446 fbc2ac862f754d7ab626212e0280bffe of
+#: sds.tree.node.TrieNode:41 sds.tree.trie.Trie:47
+#: sds.tree.trie.Trie.__iter__:13 sds.tree.trie.Trie.autocomplete:22
+#: sds.tree.trie.Trie.clear:11 sds.tree.trie.Trie.count_words_with_prefix:18
+#: sds.tree.trie.Trie.insert:19 sds.tree.trie.Trie.longest_common_prefix:21
+#: sds.tree.trie.Trie.remove:23 sds.tree.trie.Trie.search:20
+#: sds.tree.trie.Trie.starts_with:19 sds.tree.trie.TrieNode.children:15
+msgid "Notes"
+msgstr ""
+
+#: 6bfc481966fd4ff7abd9e9e7b331d0ea of sds.tree.trie.Trie:49
+msgid ""
+"Time Complexity (m = word length, p = prefix length): - insert: O(m) - "
+"search: O(m) - starts_with: O(p) - remove: O(m) - autocomplete: O(p + n) "
+"where n is number of completions"
+msgstr ""
+
+#: ae454940893447a68fd08092f8f527fc of sds.tree.trie.Trie:56
+msgid ""
+"Space Complexity: - Worst case: O(ALPHABET_SIZE * N * M) - Best case: O(N"
+" * M) when words share prefixes"
+msgstr ""
+
+#: 1dff7fc1ad734c0c89807a9e9e41fcab of sds.tree.trie.Trie:60
+msgid ""
+"The Trie is case-sensitive by default. Convert to lowercase if case-"
+"insensitive behavior is desired."
+msgstr ""
+
+#: bec0d1c33fc8432c90d61591e96f1cf0 of sds.tree.trie.Trie:65
+msgid ":obj:`TrieNode`"
+msgstr ""
+
+#: 4053b79f2f644378a1fb2300af1c0c19 of sds.tree.trie.Trie:66
+msgid "Node class used internally."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:64 ../../source/api/tree/trie.rst:106
+#: 3ca5b6cb8ed64bdeadb77ca93767ade6 cb9cb97dc9454891842ec042b92b7bc1
+msgid "Constructor"
+msgstr ""
+
+#: 195904f3d6ab4c82ac49724972ffcf59 59b9db89406a4f65929c537522080517 of
+#: sds.tree.trie.Trie.__init__:1
+msgid "Initialize an empty trie."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:68 ../../source/api/tree/trie.rst:110
+#: 24acaf24d00a4aa1919c519757756bf4 8fac28f416194de6810b91734b12cc76
+msgid "Properties"
+msgstr ""
+
+#: 4acfd0d986dc46aaafa39013b46a049d e7bd1d789e1742f1b78040e0b1a327e2 of
+#: sds.tree.trie.Trie.size:1
+msgid "Get the number of words in the trie."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst 00126d994e6148f6b282304b128fa9a3
+#: 037d6517f82340a981042a730ab3ac35 09f0a24d16474fa9ad8fdbafd1d6dde9
+#: 0ac08d3fb101415abaa55e0b127944c6 160f24372f9b4d66877e3bb73411e940
+#: 1b01d0e4739643169b65d7facc795c9e 2235728109ba4d33974b764c41119018
+#: 2e17d0c4de2545a9901d587142ea7077 301c5841488c45da9514e2654008461a
+#: 46247030cd4b4b8784234ca308a12db1 4badb006627f497e8619a6a54825d3f0
+#: 5000b9694963459481a987be0c936d45 5c4b1658a6b1451593ecf40389cce108
+#: 61e01683fb114e20bf728a142a7efa75 626ccba48a344fa99378d92ad26bf11c
+#: 640ae09174e64852b21ba154e5dea4dd 73909057adc047be87442866061b8f38
+#: 906b633f4b58497e8381159d72ac496f 937fa6876394483c8031aa811ade3c96
+#: a236b03163c1406491b6a6fa1013c97c a86d28e52cb04596bd96e130c73054d4
+#: bd9118fb35054a098462ec81239788cb bef1bb6fb0ac46b1b5a10493499d82d6
+#: c195ae7e80ca441c97f1f0b55d061b99 d07f161a2dbf4cd6aa192c5394307974
+#: d1bd17844d4b44d9a7c8119084571b2f d1c49219f88144b1a9d1b2c32436fa4a
+#: dfbd8d5429c847c2882d0b9bd86a34a1 efcc51d5c456441889201483f01a123d
+msgid "Returns"
+msgstr ""
+
+#: 1312a4b488384f099a639b0634cccc43 d1734b98643f457e8eb6d579a5e62c37 of
+#: sds.tree.trie.Trie.size:3
+msgid "Number of words stored."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst 0501376a927544dc9e770eb197f5d6b4
+#: 22a33c58ecb8487282b95bd9700360e6 22ceb655745b42179a4610b8d71390a2
+#: 2b8bc79508484f65aa660f88fb0b046a 2d66cbc957e34d3b990e6cc2998c24f9
+#: 2d8369e02f7f43efa9b79aa2c8d795cc 36bd05b5c3634b64a0fc22f32eae3dbf
+#: 3c29f435bf1f4facae5145fdc1191fcf 470385727f1f4d5080c4a7df80f7e96c
+#: 4777d25fe0de436293ee7f18690be015 47f3a2fef11b40de9991c9793d644eb1
+#: 51f335980bfb4559a5821975d24107c2 53cfa77b7a614c76828730e088788851
+#: 5740d94796bf4fe4818693a91e9b7b70 6185b32c1e6f403f8f3185e701aed92b
+#: 85d2f5680b28469ead1621b5bdd2867f 99da1e3ffa1e44f0a50c92229855013c
+#: a1e6f9eb3959430b8ca6fd5729c93aea a85114e8bffc4e35b291b45236b0147a
+#: aac90c23d3c64387bef969e805b07682 acf62c4c198c4a9d97eadb5dfb73202c
+#: b094fd6fb0d8403796f8c88c478c87bb b7e6db26d83a47fba19bb236d1edbf9a
+#: bd056eb83f3e405988e40d4bc402c298 c428ad433e1d4d8fa0d57aaa39adaad1
+#: cc0c6c46cdce4981a27a0e3b066b375e cc9cfcaa2b2a4de0b26c88f23d4790eb
+#: d2113862ff87400fabb0c6ee55fd2695 e860f66d690a4538af090140e26ffa6c
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:72 f7128d5641764d6795988f3ec8e76cf7
+msgid "Core Operations"
+msgstr ""
+
+#: 6e5022d9bd074a6d8a42b992295596e5 c51a235e051e4d14aef151842ba7f5d2 of
+#: sds.tree.trie.Trie.insert:1
+msgid "Insert a word into the trie."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst 03475770be8e43afa7d8d51c1e09aaed
+#: 0f7bb36d0be340969525e4a8aebf9c1b 48258eb889034553a38ce3bf56072d67
+#: 4bbb1e94bec24a0187200d1136b8314c 4fec76fe79db4beb9945e8564e5493d9
+#: 662c72644f0b48a681ad4395c749665e 9f0a134050ab475f87b7ffbb67888b51
+#: 9fb3e34296954a39963d9ed638323802 a88d91208a7345fba18fa94b12b33d44
+#: acaed4f1fc7f4228baf36962a840a673 bcb65eac0e7747e2aef8118ef35402eb
+#: d2cade9d138f436d8d38d4b210fa2840 de0ec9de9e7447e58995732557413845
+#: e1b7cbca3223448eb3cc9d993e549385 f4f401a8530743ba9eaa72fb1b6c6e43
+#: fc1829ae68654c11b3d0a432d8ab333b
+msgid "Parameters"
+msgstr ""
+
+#: 6c770ec87883423d81440f539b18b6a3 a9571e5192d84efbaaa0ac604bf79c79 of
+#: sds.tree.trie.Trie.insert:3
+msgid "The word to insert. Must be non-empty."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst d54dc94ca29b4a7caecfddf5d5eff400
+#: e3c6439a9721477e9a9809c0aede91a8
+msgid "Raises"
+msgstr ""
+
+#: 7a1caad2fa524732998ae81a39719507 fc23d4ce9f5243b3bd6519e230d5acdf of
+#: sds.tree.trie.Trie.insert:6
+msgid "If word is empty."
+msgstr ""
+
+#: 555540a4e4814715971b0f88cce926e1 eadab1f267f44bf4b04d3d1a92274adb of
+#: sds.tree.trie.Trie.insert:21
+msgid ""
+"Time complexity: O(m) where m is the length of the word. If the word "
+"already exists, this operation has no effect on size but ensures the word"
+" is marked."
+msgstr ""
+
+#: bb0e2fee273b454a99c8c73dc60c39be db560d81f4b340c19f01b593c54ece6f of
+#: sds.tree.trie.Trie.remove:1
+msgid "Remove a word from the trie."
+msgstr ""
+
+#: 2fc1840652f0467c9c06c512c95a9c60 a8816da6f6a54203b83b293f0576eca8 of
+#: sds.tree.trie.Trie.remove:3
+msgid "The word to remove."
+msgstr ""
+
+#: ce087754423e4467adc6d21d1960757c d42810cd0af84ce986dfb3f5563e85fb of
+#: sds.tree.trie.Trie.remove:6
+msgid "True if the word was removed, False if it wasn't in the trie."
+msgstr ""
+
+#: 619d44e8cb1548c6934ec335fe9f8f21 ad040ff9ec914cc0950a9364f7af1851 of
+#: sds.tree.trie.Trie.remove:25
+msgid ""
+"Time complexity: O(m) where m is the length of the word. This operation "
+"only unmarks the end-of-word flag and removes nodes if they become "
+"unnecessary."
+msgstr ""
+
+#: 8a6a997887a9442c8406cfdb4acb9d7f 8f984290d666469080b1dd4aa34cb6c5 of
+#: sds.tree.trie.Trie.search:1
+msgid "Search for a complete word in the trie."
+msgstr ""
+
+#: 1b9f28a9565c4813b58f452a3156d4eb 3f95a9022758476eae2f59e70ba2a48a of
+#: sds.tree.trie.Trie.search:3
+msgid "The word to search for."
+msgstr ""
+
+#: 0cbc75037dda431e816f7ee8c74e8882 778d87aa248745ecb7d8ba6d415f8cd1 of
+#: sds.tree.trie.Trie.search:6
+msgid "True if the word exists, False otherwise."
+msgstr ""
+
+#: c208700548a247cf8ffbe054ac9f0a25 e4384cc187224b538a28b5550fd85a73 of
+#: sds.tree.trie.Trie.search:22
+msgid "Time complexity: O(m) where m is the length of the word."
+msgstr ""
+
+#: 6f48ef8ddfe84367af18b443b0230a30 c8c8884b24c2412ca38686d16005cf20 of
+#: sds.tree.trie.Trie.starts_with:1
+msgid "Check if any word in the trie starts with the given prefix."
+msgstr ""
+
+#: 420f6b94008949afbe95432fd5a2c42d 69e55fb15b9045c6b9a5c3ef3ad8f7e5
+#: 7d9e8413e8214a29820942611230cee6 80b0dc71771a4721b3dd7251dc80113f
+#: e8417f6e64b548d69e06c06b1cc3686b eca485bf5c234845b5341493b776c2a9
+#: f3d2d7888aac45ba9406b88f4a5192bb of sds.tree.trie.Trie.autocomplete:3
+#: sds.tree.trie.Trie.count_words_with_prefix:3
+#: sds.tree.trie.Trie.starts_with:3 sds.tree.trie.Trie.words_with_prefix:3
+msgid "The prefix to search for."
+msgstr ""
+
+#: 503500b7e71647cf91e232f56cf6ac66 560aa1429cd54a84a019869b24b37137 of
+#: sds.tree.trie.Trie.starts_with:6
+msgid "True if at least one word has this prefix, False otherwise."
+msgstr ""
+
+#: ad19348ed3914862833a01efe12c8ed6 d39cf131cf86458c8be82e8f2d89da50 of
+#: sds.tree.trie.Trie.starts_with:21
+msgid "Time complexity: O(p) where p is the length of the prefix."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:79 39126f1e2fe3468fa07b65bbaebb8f9c
+msgid "Prefix Operations"
+msgstr ""
+
+#: b8d36743289d4a878e33a87b9501447a e40ec6cbc71d418ba030d751d7941715 of
+#: sds.tree.trie.Trie.autocomplete:1
+msgid "Get all words that start with the given prefix."
+msgstr ""
+
+#: 3b83f0d1801e427b8078a95de7de1e39 947898a346f54cda96ecd20f389c41ec of
+#: sds.tree.trie.Trie.autocomplete:5
+msgid "Maximum number of suggestions to return. Default is None (all)."
+msgstr ""
+
+#: 7ed4d121a9694a3c820d2f0c58feb649 abb93402421049f1af9621bcd57c15b1 of
+#: sds.tree.trie.Trie.autocomplete:8
+msgid "List of words that start with the prefix."
+msgstr ""
+
+#: 1cf1e99a53c14dfda9356349cbb465bc bcef24a6f62049d49cd4120c3b96fb29 of
+#: sds.tree.trie.Trie.autocomplete:24
+msgid ""
+"Time complexity: O(p + n*m) where: - p is the length of the prefix - n is"
+" the number of matching words - m is the average length of matching words"
+msgstr ""
+
+#: 877f77451bf244ed91acd74ca758b01d f050be584bc9446497e49d02518d7e3e of
+#: sds.tree.trie.Trie.count_words_with_prefix:1
+msgid "Count how many words start with the given prefix."
+msgstr ""
+
+#: 5bfecdfbf0cd47f9a1f8b81688417859 75fabb49dab94e98ad90237e662d7282 of
+#: sds.tree.trie.Trie.count_words_with_prefix:6
+msgid "Number of words with this prefix."
+msgstr ""
+
+#: b2b6fb2360354ab1a206a6daa181f34d ef4b014adff9484687939717d9443a51 of
+#: sds.tree.trie.Trie.count_words_with_prefix:20
+msgid ""
+"Time complexity: O(p + n) where p is prefix length and n is the size of "
+"the subtree."
+msgstr ""
+
+#: b47a5e11a9fd4cccbfe9a963544d07b4 ecb700fd053d4fe38ce8f3fdc971ab68 of
+#: sds.tree.trie.Trie.longest_common_prefix:1
+msgid "Find the longest common prefix of all words."
+msgstr ""
+
+#: 0d41d273805f4bdea5e8678a76072ec2 79ee6d16e0484eff9b1b6482526fa5e2 of
+#: sds.tree.trie.Trie.longest_common_prefix:3
+msgid "The longest common prefix, or empty string if none."
+msgstr ""
+
+#: 4ab39b848fc84bbd8ab93d9fcf59a850 74e3a4497ba14458b18df9d0dca5eab8 of
+#: sds.tree.trie.Trie.longest_common_prefix:23
+msgid "Time complexity: O(m) where m is the length of the shortest word."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:85 7889b4fb0fc84397a806b3e9229a013a
+msgid "Utility Methods"
+msgstr ""
+
+#: 3607863950bb4425a3fce60eb6b63122 ae33d35776954611ae96291968b70c04 of
+#: sds.tree.trie.Trie.is_empty:1
+msgid "Check if the trie is empty."
+msgstr ""
+
+#: 9a900591ee52488296ea0a5a004ab9f8 ad2b3bbfafda475f9fff6841b60fb32e of
+#: sds.tree.trie.Trie.is_empty:3
+msgid "True if empty, False otherwise."
+msgstr ""
+
+#: 4dcd1c55b95e4fabb0a9d6c7ce43de1f fd105929220f43b9b3f281480641a1a5 of
+#: sds.tree.trie.Trie.clear:1
+msgid "Remove all words from the trie."
+msgstr ""
+
+#: 20e8b999263a429ebd176bf1fe983867 2a4dee7ed8804c7ca86fd89792bc0cfa
+#: 317d94f113f24f548cff8f20c7c7ce1c aecf069af29e45a38ee76c10ec2348a6 of
+#: sds.tree.trie.Trie.clear:13 sds.tree.trie.TrieNode.children:20
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:90 fcb713e36d84438a901079ae49a3c55e
+msgid "Special Methods"
+msgstr ""
+
+#: bc413d28550c4aa2ad9a8e1add012115 bd9cf46faaf549158df0876d600e715d of
+#: sds.tree.trie.Trie.__len__:1
+msgid "Return the number of words in the trie."
+msgstr ""
+
+#: 27271f4ba93542a48e542e4e8af1bcfe d995268f9c3c47688585d4f6995e3e32 of
+#: sds.tree.trie.Trie.__len__:3
+msgid "Number of words."
+msgstr ""
+
+#: 4269c69ec304494f9bff8fe9648eea89 49a97d4e4c294abdab2903673234f071 of
+#: sds.tree.trie.Trie.__iter__:1
+msgid "Iterate over all words in the trie."
+msgstr ""
+
+#: 6e2bdcfab74449f4b9a7ba8f00e8769d 9098e4a7ce98498aa0f5d32c629fb0bf of
+#: sds.tree.trie.Trie.__iter__
+msgid "Yields"
+msgstr ""
+
+#: 00681682ebfe460c9c804e5b90757e43 a7cc2643c2a448b49479460a4b9ca25e of
+#: sds.tree.trie.Trie.__iter__:3
+msgid "*str* -- Words in lexicographic order."
+msgstr ""
+
+#: 0a50b22428fa497399efbf9a78f5841c 44196d39169c442781964688db7f7fa1 of
+#: sds.tree.trie.Trie.__iter__:15
+msgid ""
+"Time complexity: O(n*m) where n is number of words and m is average word "
+"length."
+msgstr ""
+
+#: 03c25aedd89149cb9e8fdc29d3c972d5 9e5606078f794847a96bca8060872e60 of
+#: sds.tree.trie.Trie.__contains__:1
+msgid "Check if a word is in the trie."
+msgstr ""
+
+#: 46da2804ea6b4620bf51fcbcbf0ad9da 73080097d01343d09c1d225ffe50e977 of
+#: sds.tree.trie.Trie.__contains__:3
+msgid "The word to check."
+msgstr ""
+
+#: 4224308972bb4fb89eb605ef40fab8cd 75318ea9d0294e78941c6f2c372459b6 of
+#: sds.tree.trie.Trie.__contains__:6
+msgid "True if word exists in trie."
+msgstr ""
+
+#: 60d921275808445a81468be609b72aea ba94eb8430ef43c090b16bf3460a0854 of
+#: sds.tree.trie.Trie.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: 2a3feb824e4e494db2aac255e05730aa 40aaf4b1f45948499a07429cb15ff23a
+#: f23f2fdc3bef4e7ba150443e364ff669 f40e1276b3524f8191bd3da9d449a3d8 of
+#: sds.tree.trie.Trie.__repr__:3 sds.tree.trie.Trie.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 23292e2962294b9ea1ef90bbaef593d8 78c6c9a092e04371bbc950628065eb3d of
+#: sds.tree.trie.Trie.__str__:1
+msgid "Return string showing all words."
+msgstr ""
+
+#: 028df44ab81d46f49e640eac8dff0014 of sds.tree.trie.Trie.words_with_prefix:1
+msgid "Alias for autocomplete with no limit."
+msgstr ""
+
+#: 4dff2aa93be34f1296c8f607ebf41674 of sds.tree.trie.Trie.words_with_prefix:6
+msgid "All words starting with the prefix."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:98 de54dd1ae9654a3b9b49aa1d512ab66c
+msgid "TrieNode"
+msgstr ""
+
+#: 17ebd1ae3b884159befe14d2156146ac of sds.tree.node.TrieNode:1
+msgid "Bases: :py:class:`~sds.core.node.Node`"
+msgstr ""
+
+#: 60197d1801774fc59e2056667af4c423 of sds.tree.node.TrieNode:3
+msgid ""
+"A Trie node maps characters to child nodes and tracks whether it marks "
+"the end of a valid word. Each node can have multiple children, indexed by"
+" character."
+msgstr ""
+
+#: bee723e57f7e466393070e7ab2ac61f8 of sds.tree.node.TrieNode:7
+msgid ""
+"The children are stored in a dictionary mapping characters to TrieNode "
+"objects, allowing O(1) access to any child by character."
+msgstr ""
+
+#: b9e633ceb074477c8ce1674ada387075 of sds.tree.node.TrieNode:10
+msgid ""
+"This is fundamentally different from TreeNode's list-based children, so "
+"TrieNode inherits directly from Node rather than from TreeNode."
+msgstr ""
+
+#: 5d3caa86bf8f425ea782b28bcf40dd0c of sds.tree.node.TrieNode:17
+msgid "Dictionary mapping characters to child nodes (accessed via property)."
+msgstr ""
+
+#: 42f3394998e141e095510b89ce41172d of sds.tree.node.TrieNode:19
+msgid "Dict[str, TrieNode]"
+msgstr ""
+
+#: 6345fc7308694b50b025151afad9102b of sds.tree.node.TrieNode:23
+msgid "True if this node marks the end of a valid word."
+msgstr ""
+
+#: 8662e4cc865541e79bab9af5e9527f3e of sds.tree.node.TrieNode:25
+msgid "bool"
+msgstr ""
+
+#: ceaa74efafe541eea91dfb2749a176fe of sds.tree.node.TrieNode:43
+msgid ""
+"This class uses __slots__ for memory efficiency. Unlike other Node types,"
+" Trie nodes use a dictionary for children rather than a list, as they "
+"need character-based indexing."
+msgstr ""
+
+#: 37e95d5d1de645a78ebc363c0889ca10 of sds.tree.node.TrieNode:47
+msgid "The inherited _refs list is not used in TrieNode."
+msgstr ""
+
+#: 23de9424de0e41c7b34ef120b96d6f27 of sds.tree.node.TrieNode:51
+msgid ":obj:`Trie`"
+msgstr ""
+
+#: 5f7d1ebec52f411585ca9f8c9ad0893e of sds.tree.node.TrieNode:52
+msgid "Trie implementation using this node type."
+msgstr ""
+
+#: 9883d735980a4ffebe73ad1880672b1d of sds.tree.node.TrieNode:54
+msgid ":obj:`Node`"
+msgstr ""
+
+#: 0aed109aeaae49dab3e805b0c2d54ff9 of sds.tree.node.TrieNode:55
+msgid "Abstract base class."
+msgstr ""
+
+#: de4b7f40ef9e4e3abb8ffa440b12c4f4 of sds.tree.node.TrieNode:57
+msgid ":obj:`TreeNode`"
+msgstr ""
+
+#: 0db96b8c446248f8ad3d2fbd9153770b of sds.tree.node.TrieNode:58
+msgid "List-based children for general trees."
+msgstr ""
+
+#: b426a223d1c047e4a23e85c0dd9b1694 ee716fb00de74d0a86d9897c4fee659d of
+#: sds.tree.node.TrieNode.__init__:1
+msgid "Initialize a Trie node."
+msgstr ""
+
+#: 5a5200fbc8694a81bcb49679c7b88d9f a01b9d1f41d841c5b7fa073ea2f7f658 of
+#: sds.tree.node.TrieNode.__init__:3
+msgid "Creates an empty node with no children and not marking end of word."
+msgstr ""
+
+#: 03efb2a0bbb0409e8ddf9e8e58a72d1e 041eb29b50a0448680e1b0ecb2c8e6b0 of
+#: sds.tree.trie.TrieNode.children:1
+msgid "Get the dictionary of child nodes."
+msgstr ""
+
+#: 81ba70c9e3334b6993d9f95da19a12f1 dca0cb482f5d4196bd4036c291404f88 of
+#: sds.tree.trie.TrieNode.children:3
+msgid "Dictionary mapping characters to child nodes."
+msgstr ""
+
+#: 9968e974167045b29c88080f714cee8f efaf5f36818b4de08905b8a42575b526 of
+#: sds.tree.trie.TrieNode.children:17
+msgid ""
+"This property provides direct access to the children dictionary. "
+"Modifications to the returned dictionary affect the node."
+msgstr ""
+
+#: 51ab0a2aa70f4182913d9dc6f08fb230 of sds.tree.node.TrieNode.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 6bc5cf6d311f4946a9e0127231b2fc0f of sds.tree.node.TrieNode.__repr__:3
+msgid "String representation showing children count and end status."
+msgstr ""
+
+#: 246a882c6fc84067bb9bab43368e2427 of sds.tree.node.TrieNode.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+
+#: ccde4573b9bf41c5aa7c9307ada3e65d of sds.tree.node.TrieNode.__str__:3
+msgid "String showing number of children."
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:115 41246a194afb415b862b8a90497ca8a8
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:118 7f70f2fd7e424ea88075ca2bb507eb45
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:121 8ac1ab59c28f4e6095b6165090235306
+msgid "Creating and Populating"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:140 89d6063781f74fd2ba2b5910bc2e2ae8
+msgid "Building from Word List"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:157 fee1c4ccb22d4a1ab552576a734eb648
+msgid "Searching"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:172 bd5f5d46ca15461a871a9821ecb89db3
+msgid "Autocomplete"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:187 8eb2963eb67b4711b988c200fb4a3bbe
+msgid "Word Operations"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:206 14a7fcecf27f4a479262b6f4c07a5d5f
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:209 be2f2533df5447aaa0161dad58ca4032
+msgid "Example 1: Autocomplete System"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:211 a44d6a8b70bd4c60a2e7c94b6e408442
+msgid "Production-ready autocomplete with ranking:"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:274 fb80cbb33e3f4101b142f68a99cbfcde
+msgid "Example 2: Spell Checker"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:276 8e0e3341a1dd41d7b733d0bb01c15f8f
+msgid "Spell checking with suggestions:"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:358 3f59c6dc6f3a4fff8a606a222dfd1b68
+msgid "Example 3: Search Engine Index"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:360 92d96e9c0286478190661bbe6fbcb549
+msgid "Inverted index with prefix search:"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:448 1cbaf4602b854a3c9e82ad19fb7ffa66
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:451 a6c1a9e269cb4c3fb45f0eb4f766016a
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:457 744c8bfc1d564e42bba6571be189911b
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:458 8ae9f51935354247ba6ab8b7de6c3329
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:460 0be34a35eaac4e4d83198192ebb802cf
+msgid "**Insert**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:461 ../../source/api/tree/trie.rst:464
+#: ../../source/api/tree/trie.rst:467 ../../source/api/tree/trie.rst:479
+#: ../../source/api/tree/trie.rst:501 3d62f86f676b4160bd02164ba2ed8bc9
+#: 4c9d36f033a6469696f3b110ee4b5b1e 8d9e384fc9ae457db02b170780140c86
+#: b148f45cb55b47a095cf7b7d3d26620e baa42b5fc99f4475afb17a19e071d710
+msgid "O(m)"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:462 639c414ecc224e019cb62358dd701626
+msgid "m = word length"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:463 89c4c596d026487cb9f24633d68110d9
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:465 c0bc11bc41a44e3ea5f2c1d1d4753291
+msgid "Independent of # words!"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:466 270038adf96b4ca6a179b25bc9b6c6ec
+msgid "**Delete**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:468 5dc9d1ac2eef4819b93bda5a751dc634
+msgid "May need to remove nodes"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:469 4bfb8741dbc04f9f91442dd3a54aff36
+msgid "**Prefix check**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:470 ../../source/api/tree/trie.rst:504
+#: 699553817e6c4b0a920fefac48da6bde cc8e9fb402e14be1bb2d9c726692ba3a
+msgid "O(p)"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:471 483a08b097924af986bccb9436bb595f
+msgid "p = prefix length"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:472 ../../source/api/tree/trie.rst:512
+#: 84c54f6550aa44e8b33dca52bf8108a2 a1ad90b8311b45369879693c2d69c604
+msgid "**Autocomplete**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:473 72c15dcabc9b49a981af505ce0bd46c0
+msgid "O(p + nk)"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:474 f62ebca6fe9c4740901efc0a548741c8
+msgid "n results, length k"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:475 22ebb75c49314f8f95498f5f23ca5deb
+msgid "**Count prefix**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:476 ff3af84e41b740fd90f9c5ac94648444
+msgid "O(p + nodes)"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:477 36c2d4cbc0a640598086c1ee6a6479d6
+msgid "Traverse subtree"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:478 f69cf26bd27541779efa5a8a3ef5e8c0
+msgid "**Longest common prefix**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:480 382db228fea24551aed728ab769720fa
+msgid "m = shortest word"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:483 2959ecc68e484e4cb018da36ef18ae5b
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:485 951f86a4943d4783827c919a755cb8bc
+msgid "**Best case**: O(m) - all words identical"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:486 fe161f40f6bb47c9b959159e60d1956e
+msgid "**Worst case**: O(nm) - no shared prefixes"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:487 ca49daacd78241a7a3d65c497292ac35
+msgid "**Average case**: O(nm·α) where α ∈ [0.3, 0.7]"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:488 a34c9622d6a34056bb9872f8fe07c783
+msgid "**Memory per node**: Typically 200-2000 bytes (depends on alphabet size)"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:491 be0269a17dc547d9937663a2bf087b9d
+msgid "Comparison: Trie vs Hash Table"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:497 9262a97946f04157879ec7793e1f5ae4
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:499 387e3d88865348fb9c3747f4b76e8754
+msgid "Hash Table"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:500 42b75d3dfadf401d847e1138d089f478
+msgid "**Exact lookup**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:502 1d2b2d49d2f24fe796dcccaf34ba1a11
+msgid "O(1) average"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:503 1f8b5741d9d747dea26bd23eca9b0cd7
+msgid "**Prefix search**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:505 17ad3c1773dd45e1a5da90bc28cdcab3
+msgid "O(n) - must check all"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:506 80acb9070ce04934ae4ff30da2a047d3
+msgid "**Sorted iteration**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:507 e881e84a1037458286623e5a995e2cc4
+msgid "O(n) - natural order"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:508 12502ec2f795467680f0698039eb2fdb
+msgid "O(n log n) - must sort"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:509 6418823238434857a47761e11200a53f
+msgid "**Space**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:510 67b1ae1bf4c942abbfeefff00c75847b
+msgid "O(nm·α) - shared prefixes"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:511 de5b98c70b854e4d97b7d2ced508e95b
+msgid "O(n) - exact size"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:513 fe016d9877894382b5e24aa13a782c34
+msgid "O(p + results)"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:514 c2a123b388524551b37dd7ac18ebce8b
+msgid "Impossible efficiently"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:515 d08739e2476a4b94ac0c9891d5a77ad2
+msgid "**Collisions**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:516 7eeaa8c363d84e958591935b9cc346ff
+msgid "None"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:517 6061fd796fa5402187b0581bc16090bb
+msgid "Possible"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:520 ec5963838a974dc6a89c741ac9e45a63
+msgid "When to Use Each"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:522 483aa3570ab44aafbaa4c8b4a8f3641d
+msgid "**Use Trie when:**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:523 ba73aca738d04db1b7a47d1075934818
+msgid "Need prefix operations"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:524 729d77945ada4be4aa0a4656aed87863
+msgid "Autocomplete required"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:525 d7b8a1afbe7b41c2993794dcee9420ab
+msgid "Sorted iteration needed"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:526 3025fe677a3d42dcb39dd19b51e189d9
+msgid "Natural language processing"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:527 d52ccb1f11e94bcc85af49dd573143c9
+msgid "Memory available"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:529 9fbda00ca740460a9694bd3661427fae
+msgid "**Use Hash Table when:**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:530 e7043a24ad7b427ca01e515d9f0084bd
+msgid "Only exact matches needed"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:531 b917377ecedd45759a678262859ca3ad
+msgid "Memory constrained"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:532 1c119e69f02946f98bb65cdf1a9a4abe
+msgid "No prefix operations"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:533 5446f9c51d864a9b892f0ac3bb9a889b
+msgid "Very large keys"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:534 abf5f3976bf14769a9cce3c4927cc4bd
+msgid "Need O(1) lookups"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:537 5285456624b140e4943b594012723807
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:540 af622dacf89a40ee956f83bc8d4a2abf
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:542 0ec5f47c89534d41bcc334808427c41a
+msgid "✅ **Use Tries for prefix operations**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:552 cc173e14b4144faea20312373d52c5b3
+msgid "✅ **Normalize input**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:560 cfaea4e2adfd45ddabca62ce775246ee
+msgid "✅ **Consider memory trade-offs**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:568 78d8ea471147490dab97666947daf6ab
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:570 e448fd97f5e8440c843c66b8537b5ccb
+msgid "❌ **Don't use for exact-match-only lookups**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:580 6d91e12a48694be59170d1311ece03a2
+msgid "❌ **Don't forget about radix trees**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:587 64f63fbaf0224aa3b9f78e7b9c3476c8
+msgid "❌ **Don't store huge words**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:601 e7871ffb907e4c4b9367f92b75fb079c
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:603 e2f44d441cb94097b241fd6ea0d50595
+msgid "**Not normalizing input**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:610 da5e060adf884f44bfd51749ccbf4a12
+msgid "**Using for non-string data**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:617 76e73a3e4dfc418e960f1afbef937598
+msgid "**Ignoring memory usage**"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:625 81de5aedcceb4a2498f37448a1e92137
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:627 ad9e4d83619e4170af298969c8389544
+msgid ":doc:`general` - General tree structures"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:628 c97ce2baef11403b9824163f548f2639
+msgid ":doc:`binary` - Binary search trees"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:629 f2a6a62664cf40dd9e75db5ebb530522
+msgid ":doc:`../../guide/tree_structures/trie` - Trie theory and guide"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:632 68a098c7814d4e1ba001aa3f6b918181
+msgid "References"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:634 42d28b309ac5458aa1e25626f32b7ddc
+msgid "Fredkin, E. \"Trie Memory\", 1960"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:635 d9c50d710b0a4f4383dffc3dc871f0c5
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 3\""
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:636 afdfd44de1d8479fba0eb19f2b6ff043
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition"
+msgstr ""
+
+#: ../../source/api/tree/trie.rst:637 be314cecea4043a593f9986c72f7fed1
+msgid ""
+"Morrison, D. R. \"PATRICIA—Practical Algorithm To Retrieve Information "
+"Coded in Alphanumeric\", 1968"
+msgstr ""
+

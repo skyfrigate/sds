@@ -1,0 +1,887 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/adjacency.rst:5 fa2f3e49351347b1a237424416be3d1f
+msgid "Adjacency Representations"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:10 7ebb8aa199454df9affd9cccd9e04fd3
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:12 5be046b4c1f9479db0e146cafdb34f22
+msgid ""
+"This module provides explicit adjacency-based graph implementations that "
+"optimize for different use cases. While the base Graph class already uses"
+" adjacency lists internally, these classes make the representation "
+"explicit and provide specialized optimizations."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:38 a02535e0eb0e4f8bbd18e6ad7a0a7859
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:46:<autosummary>:1
+#: 8a77b6e8d0804fd4b605f20597233331
+msgid ":py:obj:`AdjacencyListGraph <sds.graph.adjacency.AdjacencyListGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:46:<autosummary>:1
+#: 660f5376c5b844c09ba9c6456ed8402b 79426fcbd83b4e7db9f842ae8924ee2f of
+#: sds.graph.adjacency.AdjacencyListGraph:1
+msgid "Explicit adjacency list graph implementation."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:46:<autosummary>:1
+#: 6aa2e1ff63d64158a909c8718c996a0f
+msgid ":py:obj:`AdjacencyMatrixGraph <sds.graph.adjacency.AdjacencyMatrixGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:46:<autosummary>:1
+#: 4c5f70477f854a109f7cb4b61be24261 fdcf1256d2ad4e3fb645181c64b91899 of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:1
+msgid "Graph implementation using adjacency matrix representation."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:48 8f9c7bfcd99f4a26a25dda0ac25d038f
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:51 0d3402ac583d4fee8c19436f820f8f80
+msgid "AdjacencyListGraph"
+msgstr ""
+
+#: 9d40764eafe644bbb1dc5057bdfd6317 c50cfbe03ad8463693eb0e9578b4ec5f of
+#: sds.graph.adjacency.AdjacencyListGraph:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph:1
+msgid "Bases: :py:class:`~sds.graph.interfaces.AbstractGraph`"
+msgstr ""
+
+#: 9c284d82ef604c3fa42dc49a4ce64c7d of sds.graph.adjacency.AdjacencyListGraph:3
+msgid ""
+"This implementation makes adjacency list representation explicit, storing"
+" neighbors for each node in a dictionary of sets. While similar to the "
+"base Graph class, this version emphasizes the adjacency list structure."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst 1365c13aa69142ec93b8990fa690e6fe
+#: 1e8b0f23011044e8b541b2fd7f7f1272 3264a4a4c5f94d07bbc92b413092e0ac
+#: 36feff973da64343a602a834390dec40 42453eb042ff44c99d81f49bc0289935
+#: a64ab332d30448a087e431602d8292b6 acd8b856257c4db98cc332489399361c
+#: c078709eac124768805f50b9c650bae4
+msgid "Parameters"
+msgstr ""
+
+#: 6849d5aef1204a7ba3a76c74dbd8a7c6 of sds.graph.adjacency.AdjacencyListGraph:8
+msgid "If True, allows multiple edges between same nodes. Default is False."
+msgstr ""
+
+#: 23b0c7bfbe154834b235166a3f0ed597 e528d7e4e69a49648779b830ef65f89f of
+#: sds.graph.adjacency.AdjacencyListGraph:13
+#: sds.graph.adjacency.AdjacencyMatrixGraph:19
+msgid "Whether multiple edges are allowed (read-only property)."
+msgstr ""
+
+#: 2d0a5da548964399837fb6f776a01634 7ee8330c31d143b5a6a63ab1db958caf
+#: bfedd72d792e483d822c7b309b679c5c of sds.graph.adjacency.AdjacencyListGraph
+#: sds.graph.adjacency.AdjacencyMatrixGraph
+msgid "type"
+msgstr ""
+
+#: 253c979b31da4601be49fabaa08d5e73 f9f86eed67f7429aa723892613d9e372 of
+#: sds.graph.adjacency.AdjacencyListGraph:15
+#: sds.graph.adjacency.AdjacencyMatrixGraph:21
+msgid "bool"
+msgstr ""
+
+#: 26aeabc3e9f74c36a622e655382d2fb3 391a900915994888bd37562cf7449328
+#: 42156cbaa0024a53b50a647cfdab5e12 5024ae3e8af8460c8f8d9ddf1001e5ae
+#: ba1cbf9ceb364f3b90ba8de92e24f940 fbac39de18ef4c6eb4a395c81a18c081 of
+#: sds.graph.adjacency.AdjacencyListGraph:17
+#: sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list:11
+#: sds.graph.adjacency.AdjacencyMatrixGraph:23
+#: sds.graph.adjacency.AdjacencyMatrixGraph.get_matrix:6
+msgid "Examples"
+msgstr ""
+
+#: 307cabc00b0f406c9d1b4232d0377751 of
+#: sds.graph.adjacency.AdjacencyListGraph:19
+msgid "Create and use adjacency list graph:"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:557 b6a6c31a1d944724890c31c29ccf04d5
+#: c801ea7c754143ed894742a9c15813c1 f1fd5d2f0a614e05b6629e29bf7e8f8d of
+#: sds.graph.adjacency.AdjacencyListGraph:30
+#: sds.graph.adjacency.AdjacencyMatrixGraph:36
+msgid "Notes"
+msgstr ""
+
+#: 62638bb54b514863a8e69f3c681188a3 of
+#: sds.graph.adjacency.AdjacencyListGraph:32
+msgid ""
+"Time Complexity: - add_node: O(1) - add_edge: O(1) amortized - has_edge: "
+"O(1) amortized - neighbors: O(degree)"
+msgstr ""
+
+#: 2dd4ff694b94470eb503ada746281cf0 of
+#: sds.graph.adjacency.AdjacencyListGraph:38
+msgid "Space Complexity: O(V + E) Memory-efficient for sparse graphs."
+msgstr ""
+
+#: 6a9e151d31b24e769f092ddb5a0eed4d of
+#: sds.graph.adjacency.AdjacencyListGraph:43
+msgid ":obj:`Graph`"
+msgstr ""
+
+#: 44fed80bc21f4c5c860cfa6e9073b4c2 of
+#: sds.graph.adjacency.AdjacencyListGraph:44
+msgid "Base graph implementation."
+msgstr ""
+
+#: 86d57375bb484727b2bf481356ef1ce3 of
+#: sds.graph.adjacency.AdjacencyListGraph:46
+msgid ":obj:`AdjacencyMatrixGraph`"
+msgstr ""
+
+#: 668af8a92d144a338736fbcf836e8112 of
+#: sds.graph.adjacency.AdjacencyListGraph:47
+msgid "Matrix-based representation."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:60
+#: ../../source/api/graph/adjacency.rst:118 3a3a21ea6d9e4e53b6485858228c014b
+#: cd6fddc52ed44f77bc7a483fbabd35b7
+msgid "Constructor"
+msgstr ""
+
+#: 01d71651f6c84a7ea63e12724634b5ca c09fd5ae8b5a40db819d6c4b1c5ec05d of
+#: sds.graph.adjacency.AdjacencyListGraph.__init__:1
+msgid "Initialize an empty adjacency list graph."
+msgstr ""
+
+#: 46aaf7ab72dd46cfb381c101304b2754 97aaa377ca8348148cc8b89dc410bd70 of
+#: sds.graph.adjacency.AdjacencyListGraph.__init__:3
+msgid "Allow multiple edges between same nodes. Default is False."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:64
+#: ../../source/api/graph/adjacency.rst:122 056ec81307f34e839c8abbbd9bcaf763
+#: b16685aabab045d7a34b98267bbc3cbc
+msgid "Properties"
+msgstr ""
+
+#: 84a69b8deffc4bd6890bc58719b68b4b dd7f40baf15b4b37bccaa54061c52ed6
+#: e7461144c4364271b8b3b34159843175 fbe266a64e4e4317a48f06c218648ce5 of
+#: sds.graph.adjacency.AdjacencyListGraph.allow_multi_edges:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.allow_multi_edges:1
+msgid "Check if multigraph mode is enabled."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:68
+#: ../../source/api/graph/adjacency.rst:127 46f9ddc1227a474bb841ac7124376079
+#: 89f988d26f6e4a2c987ca5c58374aea3
+msgid "Node Operations"
+msgstr ""
+
+#: 066363a3a70742968b278937620536c1 636f58354b3b4e2bb10731b0c2632870
+#: 684b0f11132e4492bf2da340c8b914df f05ea888948b43a1a8ea4376a61f0318 of
+#: sds.graph.adjacency.AdjacencyListGraph.add_node:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.add_node:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: 00aa8855a96d48c59f1434e3d41f6757 84eb4aaa9d27467dba26cff23f0771be
+#: cf2312c443d24cedb9bef1d7df6e5485 d35f485a985f4267a42495c40c1c2ae5 of
+#: sds.graph.adjacency.AdjacencyListGraph.remove_node:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.remove_node:1
+msgid "Remove a node and all its incident edges."
+msgstr ""
+
+#: 2d6437142f8d4ddcad1ae3c2256733ab ee9accb8cceb45c0877839253299b974
+#: eef044d005af474c8c18b24818d9d858 f95c2037eaa84bca8075391ecbc2311a of
+#: sds.graph.adjacency.AdjacencyListGraph.has_node:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.has_node:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: 9d8151a4e7364d2eba1650e81deb9941 b79e8251537941e2a5131da563448570
+#: cf6b90694bd7459680b7aa46fbeca829 eb3839bdf88b4129bcae86d80eecbc7e of
+#: sds.graph.adjacency.AdjacencyListGraph.get_node_by_id:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.get_node_by_id:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:75
+#: ../../source/api/graph/adjacency.rst:134 2485c8f030cb41b49df4a48c6e168cb8
+#: 30861599eb3146f886a9c4dd1930e40e
+msgid "Edge Operations"
+msgstr ""
+
+#: 5cca2646c1f24176bf96e1517ea4f583 a105dddd334d4cb89cad89a7d90c7c4d
+#: a79f584ef67e49e8aa2dfac048d5f10a f4e72a8b6d7449e3ae8bec4c3c61d6ee of
+#: sds.graph.adjacency.AdjacencyListGraph.add_edge:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.add_edge:1
+msgid "Add an edge to the graph."
+msgstr ""
+
+#: 34fe98693f9a4d06956e6e41c6e750b6 70feecfee79f484fbdf02ff08683b23e
+#: 8724adc82c304d359b14eebf374a204d d39b960e70b3429cb9b9544179d982f1 of
+#: sds.graph.adjacency.AdjacencyListGraph.remove_edge:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.remove_edge:1
+msgid "Remove an edge from the graph."
+msgstr ""
+
+#: 32c5311de54b46a7a780e0f3dcdaedc9 91eaec85da1b4bd5bf66c288093299c6
+#: a5fcf33729d447db858206b1e4e37b0e c4705a66df0f45c1a511ec5169f1b965 of
+#: sds.graph.adjacency.AdjacencyListGraph.has_edge:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.has_edge:1
+msgid "Check if an edge exists between two nodes."
+msgstr ""
+
+#: 35ce4fc7f05743b293be8eeef51cd7ae 471a5b59987b429bb13190478394b834
+#: 97889c3b5b7e460aaa5481bcde5c73e5 a06f07a87c7643a5b4cd0785a774b321 of
+#: sds.graph.adjacency.AdjacencyListGraph.get_edge:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.get_edge:1
+msgid "Get the edge between two nodes."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:82 1f3ad0e3e84a456cbec6281af83ebbe8
+msgid "Adjacency Operations"
+msgstr ""
+
+#: 49d4b073cfe44a77968ea3a1e44630b4 a1df81679ee24c90af3623684621f492 of
+#: sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list:1
+msgid "Get the adjacency list for a specific node."
+msgstr ""
+
+#: 9cecbebdceb84210827189356158130e d6c3e70b6bb247ce8dca42a9921f45a1 of
+#: sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list:3
+msgid "ID of the node."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst 22693b09ed8f4dbca9a1f1f1fee46d79
+#: 47be3d87f1364583b6c0636a02d6f235 62a86adc15cd431c9cd9af3bb0da5b85
+#: fabc67c8157a4e64a44eb195161aa09e
+msgid "Returns"
+msgstr ""
+
+#: 25100fff17314a54a2921ed83a3b4b9a 57491f88db484789a2878a47b8a60b30 of
+#: sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list:6
+msgid "Set of neighbor node IDs."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst 099c55da66334231ac05da33dd3d3c93
+#: 34bb0ade46ee42259330bb4275137e74 77371564c52a47e6ba9410076524085a
+#: b8fefeb5a545497996b62998fe459988
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst b3c8653afe0141068a840916aa569849
+#: f97a9d582ab34976a437ee1809bf246f
+msgid "Raises"
+msgstr ""
+
+#: 0bebcc02ee52410db01cc2bde6515a3a 871970b4176c4e66903aad84946ef81c of
+#: sds.graph.adjacency.AdjacencyListGraph.get_adjacency_list:9
+msgid "If node is not in the graph."
+msgstr ""
+
+#: a9f9c8324c9042da9322ea91cb322bd8 b9ada9bbec0b44a098e7c5804eae468f
+#: cd4cda66bb424664829ef7994da9ed05 fac8514a675946b488f7321974cf35b2 of
+#: sds.graph.adjacency.AdjacencyListGraph.neighbors:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.neighbors:1
+msgid "Get all neighbors of a node."
+msgstr ""
+
+#: 20b625f36ff7423ea3b36e29fb6c75d9 3d14785051894e78bf9cc1b92d22d66b
+#: 7fa58e9600ae48ef85ca3e5d08e31c54 bc551d30965e4910a12b27a330763bb6 of
+#: sds.graph.adjacency.AdjacencyListGraph.degree:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.degree:1
+msgid "Get the degree of a node."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:88
+#: ../../source/api/graph/adjacency.rst:147 1300152e741d4101a208141bdc6e183e
+#: d6e7a6f67f404e2f9f47851c90115ac2
+msgid "Traversal"
+msgstr ""
+
+#: 7394877381174f9d96fd891a9fdd41d9 7a8cc8eea1bd46dcb63a5c0a26c27179
+#: cc43f65b5f4d4f88801c6c03415cc3a5 f3b58bdbdf954a21b722e6777016d6ed of
+#: sds.graph.adjacency.AdjacencyListGraph.nodes:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.nodes:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: 6a85a5b68fe3434785403732d61b5475 9dedb6800925489ebd51625dfe71475d
+#: baaa5da7a0e14528892d81a994f0c327 fdcfa9ce7ed74aca95b45773f1ca220f of
+#: sds.graph.adjacency.AdjacencyListGraph.edges:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.edges:1
+msgid "Get all edges in the graph."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:93
+#: ../../source/api/graph/adjacency.rst:152 4e74a326f8004c5f8d0e652f63ca3f48
+#: eddf3a7af7944b0e97c0b6ea23fa8833
+msgid "Graph Properties"
+msgstr ""
+
+#: 095ff5a13cb541cdb301da67a748ccb3 692f7f82f4f942639d71a31925ba9f13
+#: 950c6cafccd84efb8d38c27b225a463f c85519210a8645b9805947e11abbfcac of
+#: sds.graph.adjacency.AdjacencyListGraph.node_count:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.node_count:1
+msgid "Get the number of nodes."
+msgstr ""
+
+#: 5cd30dc166cc4290a4544861442b84d3 8fe0f81a8b26407b997bbcfa507663eb
+#: b1fe4a2658eb4ae7a94ac35c517c19c5 e8409866877e4311b6304366e0309ff7 of
+#: sds.graph.adjacency.AdjacencyListGraph.edge_count:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.edge_count:1
+msgid "Get the number of edges."
+msgstr ""
+
+#: 353e47fd253f4554b25deed4d7880783 9643a012dc3d4ce9b3524bbcd44bf1ad
+#: d642e6da2b69409383bfa1df1b0d5373 f371bf0be00d41eba64ad907c358efe3 of
+#: sds.graph.adjacency.AdjacencyListGraph.is_connected:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.is_connected:1
+msgid "Check if the graph is connected."
+msgstr ""
+
+#: 40d2247100ce4f38b27b64091e79db2e 67c94e1c7cc94eedb37dde7df934354a
+#: e368a0a637814b568da584a35188a6f4 f22da6d0278d40d18c288731a7b105f4 of
+#: sds.graph.adjacency.AdjacencyListGraph.is_empty:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.is_empty:1
+msgid "Check if the graph is empty."
+msgstr ""
+
+#: 1ec0f7278081423cbf89d6587274bb86 6c582dbea39b4fd7a8500c3cc93961eb
+#: a41c0671bfaf42b48406953eebec4905 c72e55d639cd4f4984385b1f05d43b9c of
+#: sds.graph.adjacency.AdjacencyListGraph.clear:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.clear:1
+msgid "Remove all nodes and edges."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:101
+#: ../../source/api/graph/adjacency.rst:160 391c96e5175c4574ac852572fb66c422
+#: 6398725bd1954bfaa55dcbe5f9520d04
+msgid "Special Methods"
+msgstr ""
+
+#: 2b63901953d6450aa708b9caa4c5bd03 6d163d6e6edc41c689fa297c7850a9d2
+#: 8b0a72dfb9cf491b9955dadb80adbd01 b4b30d343a864947a605a2bab17de86d of
+#: sds.graph.adjacency.AdjacencyListGraph.__len__:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.__len__:1
+msgid "Return the number of nodes."
+msgstr ""
+
+#: 2e955cd4d6014baf99815b349328389d 43028e24418d40eda813696402f9d8f5
+#: 489dfde9ac5748ea8501d858df2859e9 e90c4adfd43e4c46a2da2170ddbf471d of
+#: sds.graph.adjacency.AdjacencyListGraph.__contains__:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.__contains__:1
+msgid "Check if node is in the graph."
+msgstr ""
+
+#: 43977b611d6e44debcf50b6c2d9c1df0 49482dc7e2bc4f179f2f5cdd3a6c4c19
+#: 62c06cb698fc4dcca3fce76abee2288e 87293f3c0a484919b818ef424ccd8a2f of
+#: sds.graph.adjacency.AdjacencyListGraph.__iter__:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.__iter__:1
+msgid "Iterate over nodes."
+msgstr ""
+
+#: 90fb1d40f5544c88a3f7c8399be4a4c3 979e43d090204109aeecda2ff647f1fa
+#: a990529f008042aaa9a28398482cd95c de83716661174384be32287af52625ef of
+#: sds.graph.adjacency.AdjacencyListGraph.__repr__:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 189a5bb37ad546458485ef51083c19e6 385237aabdf548ffa875c27cde6ecb45
+#: 7f05c0cdc341481cba881e00900c9e44 d970afa2f5b543be93b314b471bc92a0 of
+#: sds.graph.adjacency.AdjacencyListGraph.__str__:1
+#: sds.graph.adjacency.AdjacencyMatrixGraph.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:109 c6139cd0bec74ba9961139f1ed750808
+msgid "AdjacencyMatrixGraph"
+msgstr ""
+
+#: 6824e940befd4f66bcdcc2eac923ac06 of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:3
+msgid ""
+"Uses a 2D matrix to store edge information. Efficient for dense graphs "
+"with O(1) edge lookup but requires O(V²) space."
+msgstr ""
+
+#: f1ccf2b1497b4ea4a28e621a131dbc6f of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:6
+msgid "Maximum number of nodes the graph can hold. Default is 100."
+msgstr ""
+
+#: 55d20e4031a049d5b17001fc4b728ab9 of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:8
+msgid "If True, matrix stores edge counts. Default is False."
+msgstr ""
+
+#: ca3517288d654368b23f9cd72f4a7c3d of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:13
+msgid "Maximum capacity (read-only property)."
+msgstr ""
+
+#: 03ad67d8e5d54d3d8b9590eb1a850978 of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:15
+msgid "int"
+msgstr ""
+
+#: 6024db5364704f81a3577ec2543d3846 of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:25
+msgid "Create a matrix graph:"
+msgstr ""
+
+#: 36f64c2168e3403796647d4f5d8003ac of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:38
+msgid ""
+"Time Complexity: - add_node: O(1) - add_edge: O(1) - has_edge: O(1) - "
+"neighbors: O(V)"
+msgstr ""
+
+#: c0b6a9f8be02474f856d211856b307a1 of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:44
+msgid "Space Complexity: O(V²) Best for dense graphs where V is bounded."
+msgstr ""
+
+#: 4ef94d5ef4dc46798a399a29e2a7244f of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:49
+msgid ":obj:`AdjacencyListGraph`"
+msgstr ""
+
+#: 4939cf1952dc49d48f027f89787527ec of
+#: sds.graph.adjacency.AdjacencyMatrixGraph:50
+msgid "List-based representation (better for sparse graphs)."
+msgstr ""
+
+#: 328f28c661ad4ca8a978658e8271b295 a9a49bc5f2114697bd044b0ceb8101f4 of
+#: sds.graph.adjacency.AdjacencyMatrixGraph.__init__:1
+msgid "Initialize an empty adjacency matrix graph."
+msgstr ""
+
+#: 60d91ef113384defa0c78baa0427f0ae ba6f6015f9c44c798b852e7d8cee909b of
+#: sds.graph.adjacency.AdjacencyMatrixGraph.__init__:3
+msgid "Maximum number of nodes. Default is 100."
+msgstr ""
+
+#: 297fb4cb009c4c698167ac7d702483d9 5d4927ebec3944dfab3bf655f50fa0b9 of
+#: sds.graph.adjacency.AdjacencyMatrixGraph.__init__:5
+msgid "Allow multiple edges. Default is False."
+msgstr ""
+
+#: 42c7569656fd487691c2724e86588408 53ae45fd19b54f32bdd6e512587a172e of
+#: sds.graph.adjacency.AdjacencyMatrixGraph.max_nodes:1
+msgid "Get the maximum number of nodes."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:141 c7b5cc3bdc8140e689a700b2490b12f4
+msgid "Matrix Operations"
+msgstr ""
+
+#: 703c84cd9d004bb285b1627c2fdb4f6e 97588b8753d14dcfbe100b72eef03ee1 of
+#: sds.graph.adjacency.AdjacencyMatrixGraph.get_matrix:1
+msgid "Get a copy of the adjacency matrix."
+msgstr ""
+
+#: 361455bfa98949d687ed490b017c6e21 666b0d3b5f5d4c5996c5f9773cf2dc97 of
+#: sds.graph.adjacency.AdjacencyMatrixGraph.get_matrix:3
+msgid "Copy of the adjacency matrix."
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:168 832f8d2cd3bc4ecc905979c085ef93cf
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:171 79ce64280bb0451aafa0fdf33e888e5b
+msgid "AdjacencyListGraph Examples"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:174 eb0ed858f4654e1980567436c2e0de7f
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:201 9824c038df5f4202843937d58c9c40f3
+msgid "Accessing Adjacency Lists"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:222 bbf655ea418c4975a4eae472638ca511
+msgid "Multigraph Support"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:241 0d3e73997dd54af085bcf946d00b35aa
+msgid "Connectivity Check"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:269 99c995e49be346dab6f44d8d68bcbc16
+msgid "AdjacencyMatrixGraph Examples"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:272 91e8d40aff364c128cf09824dd5a5217
+msgid "Creating Matrix Graph"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:298 ac76eed5d1864ed48959b4769986d4f7
+msgid "Matrix Access"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:318 f167d44af2a84e37a82299fd92166236
+msgid "Dense Graph Operations"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:344 746d8780533f43d9abee02581a308d85
+msgid "Multigraph with Matrix"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:366 e2ff008264664ee4a4ef44d9d31bf7a2
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:369 47cccbc4a0604638a40e8b0544621734
+msgid "Example 1: Social Network (Adjacency List)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:450 30d4182bf181448685a4ffc1b241d5f3
+msgid "Example 2: Distance Matrix (Adjacency Matrix)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:545 56c744ce5a854229b7fddca1cea885b2
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:548 2cb119d58e7c47819618409af3be2d49
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:554 2cbd0e9a0c4e474286258c059bbc7cfe
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:555
+#: ../../source/api/graph/adjacency.rst:599 0362259fd1ee4dc3a0f9f916db87339e
+#: d14a377f56654823b0833de1aea5d860
+msgid "Adjacency List"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:556
+#: ../../source/api/graph/adjacency.rst:600 1361b3d8c9034550b1df8709008f98ef
+#: f97999cb87e84d5ba8dce01c5a4c5fe1
+msgid "Adjacency Matrix"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:558 0ec0f299cf9340cbaf38142ec22a38a2
+msgid "**add_node**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:559
+#: ../../source/api/graph/adjacency.rst:560
+#: ../../source/api/graph/adjacency.rst:567
+#: ../../source/api/graph/adjacency.rst:568
+#: ../../source/api/graph/adjacency.rst:572
+#: ../../source/api/graph/adjacency.rst:576 07dab9b95c534bbba49ce049c12b6b90
+#: 35f60f15a10841948637c2d723be6a5d 3924ee0420d84c13af2fa45f1b5909c2
+#: a1d90f1c50a5405c950237da6c9ef536 a6c53e2bdc20440c839a27b97f530ffa
+#: f1bde9798b3d4005a8d8ca77ee3fabd5
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:561 cd15e55e0d6641a6a730f04687d48235
+msgid "Direct insertion"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:562 b4d2308b6d4b43368814649afd940182
+msgid "**remove_node**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:563 039bdb66cefb4fc199c8c4483cea3b7c
+msgid "O(degree + E)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:564
+#: ../../source/api/graph/adjacency.rst:588
+#: ../../source/api/graph/adjacency.rst:605
+#: ../../source/api/graph/adjacency.rst:606
+#: ../../source/api/graph/adjacency.rst:608 1c3494a033eb4a2e84423bbfd6e18ba7
+#: 2babed401494448ba87bcb3e83cf682b 312be72f041a4c04b6f7448da2de0894
+#: 61ceddb7ef38418daac97f19fcfaa4d4 e83d8f6814824447a78782a1f722a9de
+msgid "O(V²)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:565 8a7103c77cce404f8a339e94b88b4680
+msgid "Matrix must compact"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:566 a9e4608eea294412bd2ba903a9c07b20
+msgid "**add_edge**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:569 4e3d173738d2448eac3e8a99984e2e48
+msgid "Both are constant"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:570 764076882c554029aa28e247975153b4
+msgid "**remove_edge**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:571
+#: ../../source/api/graph/adjacency.rst:579 90d81d4d000147f4be09b3ca88f70b64
+#: a5ec4948ed2a4cb5a0271e7b7407f49b
+msgid "O(degree)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:573 8a4ff03219f940d6bc2f23aebd25fce9
+msgid "Matrix is faster"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:574 450960d66a064ea2868de61889f423f6
+msgid "**has_edge**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:575
+#: ../../source/api/graph/adjacency.rst:583 7d8f97cdb32d431095817e1883e6faaa
+#: c7a4d677ac724ecba79a2a1b521815a8
+msgid "O(1) amortized"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:577 e30802db7fc64f1990ad7880c59bf8b5
+msgid "Matrix guaranteed O(1)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:578 bea8d0084a9b4e848d2bea03d9e8d7ef
+msgid "**get_neighbors**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:580 2dfc15ac6dbd48649f8bc7632d675773
+msgid "O(V)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:581 bba610d2c00142ca99d09f7e8855edd3
+msgid "Must scan matrix row"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:582 91e7afedf91d418488f29ba5c04080d8
+msgid "**degree**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:584 b76893a13f554b4d82666c6512ba1121
+msgid "O(V) or O(1)\\*"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:585 3cb04a83aecb4a38ade73abedbb7cff3
+msgid "\\*O(1) if count stored"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:586 db9ee4c62f094b679c53bb8097d957f4
+msgid "**space**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:587 f9dc76b005ca4f2886a5442dde21bc12
+msgid "O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:589 dac51ea11dc14c49b4c073e0e23e2d45
+msgid "Matrix uses more space"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:592 d044faa2054f478d9c1203f144202d83
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:598 260f8c69b0794cbca62833f6238ae83c
+msgid "Graph Type"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:601 957ee62a48c2459789a3a3aa02912367
+msgid "**Sparse (E << V²)**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:602 5d943f225c664f12bd86e553dacd5946
+msgid "O(V + E) - Efficient"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:603 04a37e19291b4e9c80c4c647961744c7
+msgid "O(V²) - Wasteful"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:604 3db0d0c6c2a346be81ade4e3d8574d52
+msgid "**Dense (E ≈ V²)**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:607 ece4f5991aef466ebc5bf6249442e9c3
+msgid "**Complete (E = V(V-1)/2)**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:609 0316a041e9004fb7b37c033697b62fe1
+msgid "O(V²) - Same"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:612 7c8ff661307d4cd2a5aaafee166b70f3
+msgid "When to Use Each"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:615 040de65fc0f642509d0a9665949d5e44
+msgid "Use Adjacency List When"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:617 65ca5fbb6742419eb04d4d38d7960cd5
+msgid "âœ… **Sparse graphs** (few edges relative to nodes)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:626 65389971a16448e88fabc0db6e21aa52
+msgid "âœ… **Need to iterate neighbors frequently**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:634 7b5e5750b5e64c6d87e384f5aae3589e
+msgid "âœ… **Unknown number of nodes**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:642 53d995b638004a0f8a27cae9a21caf13
+msgid "Use Adjacency Matrix When"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:644 99e2255fd6a2428bae79aced6c84ad54
+msgid "âœ… **Dense graphs** (many edges)"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:652 5b3ac518386445c2bb3180612cbd7079
+msgid "âœ… **Need O(1) edge lookup**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:660 ddc707dc13cc4f43b5d600c682494b9a
+msgid "âœ… **Fixed, small number of nodes**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:667 83ed8823ce674faf9885ea67ea6e701c
+msgid "âœ… **Graph algorithms needing matrix operations**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:676 4259108498c848af83204bdcea28e4dd
+msgid "Implementation Details"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:679 f1d86f7785714a1d87f83dba9007d3f6
+msgid "Adjacency List Internal Structure"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:704 a0794b588ac04533b3d1e6807d00c2f8
+msgid "Adjacency Matrix Internal Structure"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:731 c9a5111d2ab54a728440370d977e5bec
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:734 c284088f63164690b3ab4cb316f6b39d
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:736 098e0b18236c462187821d810d5e7ce4
+msgid "âœ… **Choose representation based on density**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:747 0bbe5e9314ad4d6db784d5454b678091
+msgid "âœ… **Use matrix for small, complete graphs**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:754 c60cbeec4c5b462bba2fbbc505992736
+msgid "âœ… **Leverage O(1) operations**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:767 695e4ff7eff5491fa8aa70f87d47ae5e
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:769 b6e125e4237b46c1816bdeadb5f83bc6
+msgid "âŒ **Don't use matrix for large sparse graphs**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:777 79d8b38745aa4c389a29ca8b8a1452ed
+msgid "âŒ **Don't use list if you need fast edge lookup**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:785 d57acba7f5d84c24b68c63d462ed1f1a
+msgid "âŒ **Don't exceed matrix capacity**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:793 989fb9628e724ad29e2004ba127b21f2
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:795 95eab1f3e8e0486eac2b31ca466c644f
+msgid "**Forgetting matrix capacity**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:806 e2261c8fc5a747009e4b62fdc181a630
+msgid "**Using matrix for dynamic graphs**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:816 b6c1b443e98e4180988394eb4c438058
+msgid "**Not considering space-time tradeoff**"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:825 51b883e09d2d414a90c65b432c863bdd
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:827 e5ae86f99fd2475d9d641a031fd0b6d0
+msgid ":doc:`graph` - Base graph implementation"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:828 12362dfc6ef04bb0b99a36ac13298099
+msgid ":doc:`directed` - Directed graphs"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:829 1b5e8f9cfaf7463d8ecf0808e825a3e4
+msgid ":doc:`weighted` - Weighted graphs"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:830 c281d48955f7474b9c5c12791c6c9360
+msgid ""
+":doc:`../../guide/graph_structures/adjacency` - Adjacency representations"
+" guide"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:833 68d45fd45e9344c681e4775c69664df9
+msgid "References"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:835 6e99655ed6c74e1fbb7b2356b5747112
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 22"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:836 dfa90b22c6e445aca90b50abb9a8c25b
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Chapter 4.1"
+msgstr ""
+
+#: ../../source/api/graph/adjacency.rst:837 a7691aa9e4dc4fc2a94dee6b97fab9c3
+msgid ""
+"Goodrich, M. T., Tamassia, R. \"Algorithm Design and Applications\", "
+"Chapter 13"
+msgstr ""
+

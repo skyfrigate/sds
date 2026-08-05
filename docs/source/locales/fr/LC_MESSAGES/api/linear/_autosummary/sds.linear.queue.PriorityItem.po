@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityItem.rst:2
+#: fab30977897b4e1cbe02c29143bd9f6b
+msgid "sds.linear.queue.PriorityItem"
+msgstr ""
+
+#: eb8b088644034655a2f54bfd6f1c0666 of sds.linear.queue.PriorityItem:1
+msgid "Helper class for creating items with explicit priorities."
+msgstr ""
+
+#: 6b066b9b321442708aaf1b67671de216 of sds.linear.queue.PriorityItem:3
+msgid "Examples"
+msgstr ""
+
+#: 4aab35a7ab274e1db3423f740fb653bf 888db2ba9ba94d448acc51450f1f849a
+#: ae1a9176836a46b5bb1edc6449845da0 of sds.linear.queue.PriorityItem.__init__:1
+#: sds.linear.queue.PriorityItem.__init__:1:<autosummary>:1
+msgid "Initialize a priority item."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityItem.rst
+#: 721adf362b364228ae3897b756c0f960 9cd97248e53f4502951b554c0cce58a0
+msgid "Parameters"
+msgstr ""
+
+#: 01d63f955d764b42b730f57debd0f66c fc88d092d280437587b0e5d0a6d65d76 of
+#: sds.linear.queue.PriorityItem.__init__:3
+msgid "The data to store."
+msgstr ""
+
+#: 00e1aca3306445a392f820eaa56a8d51 97072419c471413fbfa6aae6d586231f of
+#: sds.linear.queue.PriorityItem.__init__:5
+msgid "The priority value."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.PriorityItem.rst:13
+#: 206afa05912047a1882f4c1c2394390f
+msgid "Methods"
+msgstr ""
+
+#: 3027eff1436d4449afe543900002b9d6 of
+#: sds.linear.queue.PriorityItem.__init__:1:<autosummary>:1
+msgid ""
+":py:obj:`__init__ <sds.linear.queue.PriorityItem.__init__>`\\ \\(data\\, "
+"priority\\)"
+msgstr ""
+

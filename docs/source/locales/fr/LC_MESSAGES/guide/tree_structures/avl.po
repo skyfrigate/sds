@@ -1,0 +1,669 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/tree_structures/avl.rst:5
+#: 720dc90c10de4e339fce7c77362ad745
+msgid "AVL Tree Guide"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:10
+#: fa74f72fb0344190a29ae68b7eb73de6
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:12
+#: 6bfde97974464c43a1d8f9bcf1e0966d
+msgid ""
+"An **AVL tree** is a self-balancing binary search tree where the heights "
+"of the two child subtrees of any node differ by at most one. Named after "
+"inventors Adelson-Velsky and Landis, AVL trees guarantee O(log n) time "
+"for search, insertion, and deletion operations by automatically "
+"rebalancing through rotations."
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:40
+#: 281ec4ce4dd24c4fbcc5d809b8b98940
+msgid ""
+"AVL trees are ideal when searches greatly outnumber insertions/deletions,"
+" as they maintain the strictest balance among self-balancing trees."
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:44
+#: 756f2b5e68a447b8940f687f264942fd
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:47
+#: eba26ae7c5924d15b08dee5af65457a9
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:50
+#: c3a546c83605414492d0a6f6002813cb
+msgid "AVL Tree Property"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:52
+#: c9eac4f679b44a8d88ec578d987f7933
+msgid "An AVL tree is a BST that satisfies the **AVL balance property**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:54
+#: 6eb987db831a4784837b8eeb15b8572e
+msgid "\\forall node \\in T: |height(node.left) - height(node.right)| \\leq 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:58
+#: 6af5bc5f3ca94ac4aeb2895422a584ab
+msgid "where the **balance factor** is defined as:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:60
+#: b07f2c7632de4742b5587d649d92e775
+msgid "BF(node) = height(node.left) - height(node.right)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:64
+#: 16af76bb95f9419192b0556e9a05f55b
+#, python-brace-format
+msgid "Valid balance factors: :math:`BF \\in \\{-1, 0, +1\\}`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:67
+#: a74c27e4623f4f5288ef2d903fa6c099
+msgid "Height Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:69
+#: 90bf8fded31741848a118a789bbb32df
+msgid "**Height of a node**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:71
+#: a941cef9023549129fd2d3ff729ec77c
+#, python-brace-format
+msgid ""
+"h(node) = \\begin{cases}\n"
+"-1 & \\text{if } node = null \\\\\n"
+"1 + \\max(h(node.left), h(node.right)) & \\text{otherwise}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:78
+#: f3bf1ab9bf814bdd81adfa47677b15cd
+msgid "**Height stored at each node** for O(1) access."
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:81
+#: 3de47c6a8c934260a8ee605911184f75
+msgid "Tree Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:84
+#: abe71fb40e964ea39b158c90fdc42eea
+msgid "Height Bounds"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:86
+#: d737193869da4ca88821f9c09f4701a6
+msgid "For an AVL tree with :math:`n` nodes:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:88
+#: 718cd0a697434c5f8998414527de25e2
+msgid "**Minimum nodes for height** :math:`h`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:90
+#: baa2edfa01cb4ed28d422a6b410f84d2
+msgid "N(h) = N(h-1) + N(h-2) + 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:94
+#: f8d65c0e092147068c189d55f6fe3e20
+msgid ""
+"This is similar to Fibonacci: :math:`N(h) \\approx \\phi^{h+2}/\\sqrt{5}`"
+" where :math:`\\phi = \\frac{1+\\sqrt{5}}{2}`"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:96
+#: e2a633005e1c4af096964e4bb699b6b3
+msgid "**Maximum height for** :math:`n` **nodes**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:98
+#: 19f1ea3e2cbd427f94b36c7cb446fd2e
+#, python-brace-format
+msgid "h_{max} \\leq 1.44 \\log_2(n+2) - 0.328"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:102
+#: 19bbef8df6fd4b8792e3c5458967b00e
+msgid "**Practical bound**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:104
+#: 7d449cc80a0c4dae97ba1355bbf3c9b3
+msgid "h \\approx 1.44 \\log_2 n"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:108
+#: 1fa96d1539d541648072c90205f3f802
+msgid "This is only 44% taller than a perfect binary tree!"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:111
+#: 139cbe42f26d41d295d515b117811ebb
+msgid "Balance Factor Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:113
+#: 0a0222f1b7664801be9b8fef2754293c
+msgid "**After insertion**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:114
+#: 78621cc9bc8e4108ae142cd9b4466281
+msgid "Only ancestors of inserted node may become unbalanced"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:115
+#: a17db469933942ec867d0fd6c14d2dc7
+msgid "At most one rotation needed to restore balance"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:117
+#: c0cce6f740f941a28033de0cf1498e57
+msgid "**After deletion**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:118
+#: d5a184110ef9416e889d725e1537c780
+msgid "Multiple rotations may be needed (up to O(log n))"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:119
+#: 75e2fabe228c44758deeee39058a3960
+msgid "Rebalancing proceeds from deleted node to root"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:122
+#: 48618f018fc44288bcea8189527b6e02
+msgid "Rotation Mathematics"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:124
+#: 8b46b004f0c546cdb77903227dea181a
+msgid "**Right rotation** (LL case):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:126
+#: 464723a37d78471887398b86f12e12dd
+#, python-brace-format
+msgid ""
+"\\begin{array}{c}\n"
+"z \\\\\n"
+"\\downarrow \\\\\n"
+"y\n"
+"\\end{array}\n"
+"\\quad\n"
+"\\text{where } y = z.left"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:136
+#: 7a196b6309d94e0098fff75435c9f545
+msgid "**Left rotation** (RR case):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:138
+#: 45cbe19b024e4158947413b3239f447a
+#, python-brace-format
+msgid ""
+"\\begin{array}{c}\n"
+"z \\\\\n"
+"\\downarrow \\\\\n"
+"y\n"
+"\\end{array}\n"
+"\\quad\n"
+"\\text{where } y = z.right"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:148
+#: 4b05a0f84bf4448f9d1d5d0f1e9cc7fa
+msgid "**Height change after rotation**: At most decreases by 1"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:151
+#: 6fb2d12594da4b00817021dda86559c8
+msgid "Tree Invariants"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:153
+#: 410163ce14a547a8b3086d2eb38b5179
+msgid "**BST property**: Left < Parent < Right (all nodes)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:155
+#: 83bec7eb906b49978fe10840e1828a59
+msgid "**Balance property**: :math:`|BF(node)| \\leq 1` (all nodes)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:157
+#: 3165df2093514ad68f2b4d258f6e70c4
+msgid "**Height accuracy**: Stored height matches actual height"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:159
+#: 3733ae9939f648f79eadf2a6e930375c
+msgid "**Subtree property**: All subtrees are valid AVL trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:162
+#: 68535a78bd05409b9ca57c187129ac2c
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:165
+#: 52af1af70d434ddb84437b00f3a047ba
+msgid "Abstract Data Type"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:193
+#: bb8c9d565cc84cf8b11b4cc7e69d8eac
+msgid "Rotation Algorithms"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:196
+#: 35582f9615214cd6b61d5d4a582b1bd0
+msgid "Right Rotation (LL Case)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:217
+#: ../../source/guide/tree_structures/avl.rst:251
+#: ../../source/guide/tree_structures/avl.rst:273
+#: ../../source/guide/tree_structures/avl.rst:297
+#: 10a7c9f8cff240c3a033f94671766ad1 1da773e65e684334bafbdf7fca6cea98
+#: 73b3f099120c44659695b8e525cd4710 7bc5133103ab4317a663b4d631abc5b1
+msgid "**Visual**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:227
+#: 1288dc96a88c4565bff58c861a6ca05a
+msgid "**Time complexity**: O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:230
+#: f6dafc5a97ad4099a9322f048fdeb523
+msgid "Left Rotation (RR Case)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:262
+#: 66a03f2c59224d07996adcb3afcd6bcd
+msgid "Left-Right Rotation (LR Case)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:286
+#: 5307c74bbf8148409523527edced2248
+msgid "Right-Left Rotation (RL Case)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:310
+#: 628210c65cdf451294b4b1bef3d9cdc0
+msgid "Insertion Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:359
+#: 3f15c16235394e2ea43126e22a783b7d
+msgid "**Time complexity**: O(log n) **Rotations per insert**: At most 2"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:363
+#: 57c484cdd49542fd81b34bd64807cf2d
+msgid "Deletion Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:425
+#: 17345bc784fb4d2889f98f9c8dd6176d
+msgid "**Time complexity**: O(log n) **Rotations per delete**: Up to O(log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:429
+#: dd90cc98afb243909144a864e3478956
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:432
+#: 2d9736fba996427d91cc9e051a9c696a
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:438
+#: 7e624abe37ef4bfdac98e31ec4cbfd5b
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:439
+#: b68cc12b165346b5a9296056ce91b6e6
+msgid "Best"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:440
+#: 91776aea63b94b7397b5770ade4e7f71
+msgid "Average"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:441
+#: 52ecdb388ba340baaf767c7f2c11c2f6
+msgid "Worst"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:442
+#: e6d884255f844331a5b65ae4ae6a8b8d
+msgid "**Insert**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:443
+#: ../../source/guide/tree_structures/avl.rst:444
+#: ../../source/guide/tree_structures/avl.rst:445
+#: ../../source/guide/tree_structures/avl.rst:447
+#: ../../source/guide/tree_structures/avl.rst:448
+#: ../../source/guide/tree_structures/avl.rst:449
+#: ../../source/guide/tree_structures/avl.rst:452
+#: ../../source/guide/tree_structures/avl.rst:453
+#: ../../source/guide/tree_structures/avl.rst:455
+#: ../../source/guide/tree_structures/avl.rst:456
+#: ../../source/guide/tree_structures/avl.rst:457
+#: 29f89d9b731849f49e84d9da478a8a86 3461ccc4e13442adacb1f44596af1ec1
+#: 4ad21d6933444c76acb89415eee07617 5e1db050699b45f6bb8376e8e82e82b7
+#: 628ed160d08740a6a5edc8b611ea79fe 996fdb253dad400d937fff7d095dedef
+#: 9a6e489ffd0049acb42bbaa03fce59d7 d54b84d86c5943239b0166a30ae9dc65
+#: d6642bb184b7459db882412d63a497b3 ed1bd822755c47b0a4683555d5e904f4
+#: fdbdc8ef19ea4e288ef5880d54023f09
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:446
+#: 447f4b8751024b2d8d88793dc2892005
+msgid "**Delete**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:450
+#: e756e21fdad74ea384b910c504c0641b
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:451
+#: ../../source/guide/tree_structures/avl.rst:459
+#: ../../source/guide/tree_structures/avl.rst:460
+#: ../../source/guide/tree_structures/avl.rst:461
+#: 30b09bba7bad44069cb659d333fc00ef 5dcb289aeb314c7d8fcba25cd57cfd9d
+#: a21f5621d5c245d6a306954038f909e7 e3e21864716f4d41b89df8eb9a64f3c2
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:454
+#: 6102c89ea1864bbf8dc134fbacb1f5e2
+msgid "**Find Min/Max**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:458
+#: dc4c5735f4254c44b1d73c0b1c01d4b3
+msgid "**Height**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:462
+#: 8a06f7c25cb0442492bf9de74934a171
+msgid "**Traversal**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:463
+#: ../../source/guide/tree_structures/avl.rst:464
+#: ../../source/guide/tree_structures/avl.rst:465
+#: 28114c9eb75e40ab95fbd8ed860698e8 67b60af6b20549d380d1074e6d7e5c83
+#: eb2f832dc82f4587988e9ea2dba44347
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:467
+#: f67e54661b8845a7b4c6cba82c50103e
+msgid "**All operations are O(log n) guaranteed!**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:470
+#: d6f7286bc0f84badb610725d06a5caad
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:472
+#: 69a9420761d64164aa17474c1f169dce
+msgid "**Tree storage**: O(n) for n nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:473
+#: 6dbb8cb55adc45258f164d48a4e600fb
+msgid "**Height storage**: O(n) - one integer per node"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:474
+#: a9c502f35d914a03bab6cf0c22ac00a5
+msgid "**Recursion stack**: O(log n) - bounded by height"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:477
+#: b4f264cc2a744b259ea54b8e6ff21ae4
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:480
+#: 0b42da52d7b74475860c459e05808b1c
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:491
+#: 6da46ec0cc2e494c826c86fe2a7eae12
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:494
+#: cf3d7a8d875545b8a3d7fe23c1a37bb3
+msgid "Creating and Populating"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:513
+#: ed4ee3f325f445ce931631bd0a3c5135
+msgid "Guaranteed Balance"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:533
+#: 7db0e02ff05b4842969b5ddbb14ca279
+msgid "Searching"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:547
+#: ba0c98be16c8415390aa91a036d0b9fd
+msgid "Deletion"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:560
+#: 2bc1a09abd964f56a7c180f22f7a217b
+msgid "Traversals"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:581
+#: 47ed86d5ad2d4300b506c07e3ea995c2
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:584
+#: e8ed331510c149c7ae9fad8914cf843f
+msgid "Application 1: Database Index"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:586
+#: 5f50998fb5c241438e416892a771c842
+msgid "High-performance database indexing:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:653
+#: 4ec70f99a7a44f5aa15dbfa8a1f0d829
+msgid "Application 2: Memory Management"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:655
+#: 6ab2d4215f844edd9214bab1ea793ed0
+msgid "Tracking free memory blocks:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:723
+#: 6ec8789c859041bebbdd365476fc6ad7
+msgid "Application 3: Autocomplete System"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:725
+#: f38b39d0e93944809ba0d6fe87461be3
+msgid "Fast prefix-based word suggestions:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:791
+#: c561b7fe166c455188329b43e44bfcd7
+msgid "Application 4: Event Scheduler"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:793
+#: 764990a36e5c4f6eace244aed7bb46ef
+msgid "Time-based event management:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:875
+#: aa6c997ba0d9466b9c5fda0c82a09cae
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:878
+#: 3e3d5271ab8b446fa50a906bc13bc45e
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:880
+#: a29084d72ef2457a8e7ca101f9346ec3
+msgid "✅ **Use AVL for search-heavy workloads**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:892
+#: 224a27bb00d64e70b55b8c23f00f8b4d
+msgid "✅ **Trust the automatic balancing**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:902
+#: 8e1e4cfec0e24a3389749471f47b781b
+msgid "✅ **Leverage O(1) height access**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:911
+#: bc4c303a6fe746c3a6b6c778c34b4c64
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:913
+#: 85de549df55845aaae440c0d0fdfe67d
+msgid "❌ **Don't use for insert-heavy workloads**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:930
+#: ba24042fe6654754b0f41bc5ea15b1c0
+msgid "❌ **Don't manually try to balance**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:937
+#: 6d14a27aaf50475e80b2707e907f590f
+msgid "❌ **Don't forget memory overhead**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:946
+#: 70afd3a31273480d9032f8f39f5827ea
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:948
+#: 54b41dac184547149fc2373dbcbbc905
+msgid "**Not considering operation ratio**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:956
+#: fc112986570349f98403d61c1cd61305
+msgid "**Ignoring deletion cost**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:964
+#: 3d351a9da08b4a04b811fe69e6818da3
+msgid "**Forgetting traversal cost**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:972
+#: d316d1b462e64c1e810a80fa3969227c
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:974
+#: 23c3f4c8432441c8ac0730e22ccda6c1
+msgid ":doc:`/api/tree/balanced` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:975
+#: c2e4d05119e043d78bb07ddf4fc8e41d
+msgid ":doc:`red_black` - Alternative balanced tree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:976
+#: 9e0d91529be1437fb88b04ba2fd74d1e
+msgid ":doc:`binary` - Unbalanced BST comparison"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:979
+#: ccbd712ff8cc4fc8a4392f4618bdd2fe
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:981
+#: bc392ed7c90b4d4cbf9066cc6f07c3e1
+msgid ""
+"Adelson-Velsky, G., Landis, E. M. \"An algorithm for the organization of "
+"information\", 1962"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:982
+#: 431f600e77bd41e8b78cd3a8b9b698af
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 13"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:983
+#: 32c7f8b85e04482f987826dae7bf5ca2
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 3\", Section 6.2.3"
+msgstr ""
+
+#: ../../source/guide/tree_structures/avl.rst:984
+#: fdf56ae0ce3c43d7889b3ad299488128
+msgid "Weiss, M. A. \"Data Structures and Algorithm Analysis\", Chapter 4.4"
+msgstr ""
+

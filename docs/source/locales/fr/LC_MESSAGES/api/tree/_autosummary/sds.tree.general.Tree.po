@@ -1,0 +1,702 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:2
+#: 30c06e6ba57b466e8c2077bfbe7a408b
+msgid "sds.tree.general.Tree"
+msgstr ""
+
+#: 32e78b9c7ab64bf2a2e4fc1d3a2323f6 of sds.tree.general.Tree:1
+msgid "General tree (n-ary tree) implementation."
+msgstr ""
+
+#: adc9fc63a7934b99bc04044203f5b689 of sds.tree.general.Tree:3
+msgid ""
+"A general tree is a tree structure where each node can have any number of"
+" children (0 to n). This is the most flexible tree structure and is used "
+"for hierarchical data like file systems, organizational charts, and "
+"XML/HTML documents."
+msgstr ""
+
+#: 5d0b8a9d43ad430a957e0d52c0269652 of sds.tree.general.Tree:8
+msgid ""
+"The tree is implemented using TreeNode objects that maintain a list of "
+"children for each node."
+msgstr ""
+
+#: 98c4b61c4396487cb23774325dbfbeaf of sds.tree.general.Tree:13
+msgid "The root node of the tree (read-only property)."
+msgstr ""
+
+#: 8b44d745c95343bdbe2d6dbb79414150 f6d52306cf3d4829b0aa1a1a564ff65e of
+#: sds.tree.general.Tree
+msgid "type"
+msgstr ""
+
+#: a89a9635733847ee88f952ac769b682d of sds.tree.general.Tree:15
+msgid "TreeNode or None"
+msgstr ""
+
+#: 7f5d32c17e874479a5f46cbc2cc6b14d of sds.tree.general.Tree:19
+msgid "The number of nodes in the tree (read-only property)."
+msgstr ""
+
+#: 2dca773af54141e0a5fe498ee0c71914 of sds.tree.general.Tree:21
+msgid "int"
+msgstr ""
+
+#: 0eae1e5f92554299b02995a9b9031673 1af282a8c5214ab8ab0ec05af736e42f
+#: 2162c68ab9ce4bbeaab03a94864f1daa 29b84a1920f246748d47ad81d8af83b5
+#: 3122b22bacd846adb9b40206e1c7b1df 3adba25b38d541d6adf2a3f6002d9177
+#: 404ae5a768d940739868aa0bf538e30f 72e9f314e0b440dca2500b363a58a585
+#: 8c3ea153b7b5451981db5ff9866beb89 8cf3f0523b9c4c42806f166c17e4402d
+#: 9743926fd35d4c61a250da5997d421e5 a2e387df184549caa4e17c99ebfafbb6
+#: ac2db6ef53424f438c16f8aec7effc16 b2ac59f6022f44b5bffe780bd7b198d9
+#: bdb1e3bc6e6548928caeca0a7436d4ad c0be5163d78544d3ad3c35a971f8fa00
+#: c8ff18b34ad6489793a3ab52aaabadbd cf9f5021539f4171af8e7fc6a3b5ed6d
+#: d317ec8bb86a4a939eb91f549523faf4 d4d526aa73fe4356b0b985e69ff5ec6d
+#: d6399b8dd4da4c02ac9bfeed54d8d8f0 d69109d523464dc5b8bdeda16bba7c38
+#: ed935c5fa56946c88328db4fbf231680 fa65c45ba3774e9e8080912019fcbacf of
+#: sds.tree.general.Tree:23 sds.tree.general.Tree.__contains__:9
+#: sds.tree.general.Tree.__init__:6 sds.tree.general.Tree.__iter__:5
+#: sds.tree.general.Tree.__repr__:6 sds.tree.general.Tree.__str__:6
+#: sds.tree.general.Tree.add_child:14 sds.tree.general.Tree.add_child_to:15
+#: sds.tree.general.Tree.clear:3 sds.tree.general.Tree.degree:11
+#: sds.tree.general.Tree.find_node:11 sds.tree.general.Tree.get_children:11
+#: sds.tree.general.Tree.get_parent:9 sds.tree.general.Tree.height:9
+#: sds.tree.general.Tree.insert:8 sds.tree.general.Tree.is_leaf:11
+#: sds.tree.general.Tree.leaves:6 sds.tree.general.Tree.level_order_traversal:7
+#: sds.tree.general.Tree.postorder_traversal:7
+#: sds.tree.general.Tree.preorder_traversal:7
+#: sds.tree.general.Tree.remove_node:13 sds.tree.general.Tree.root:6
+#: sds.tree.general.Tree.search:9
+msgid "Examples"
+msgstr ""
+
+#: a2beb742140b45a6845694cebf11c6ae of sds.tree.general.Tree:25
+msgid "Create a simple tree:"
+msgstr ""
+
+#: d8b857b859184fa6904cef7eb6f886e4 of sds.tree.general.Tree:35
+msgid "Build a hierarchical structure:"
+msgstr ""
+
+#: 40bd05bc5768445c8e7e1773bb5b4d1e of sds.tree.general.Tree:47
+msgid "Traverse the tree:"
+msgstr ""
+
+#: 02c95565f7bf4138a9220ab76d23bdd1 097582f4ae1d492d9e197c76eccf5740
+#: 0cef17aedfe5427c87c1ef57c9f886fe 0d5042cd0de748548f19161c2e0883c0
+#: 1a2c347b34e94218a6b3a5c1a5016202 1b530c8b824544d5b77d1a5ec148ba3b
+#: 2b7f76f9f92c4f39add1094e488fe8c5 3bad4e7d7ad94fd49c969e49fd95e238
+#: 447d96adc3ef417caf9855869f3e86a4 587861f2b4654b60ac0c4dfb07bdd457
+#: 6a54754fc11d47b79ebdd0a7b9c0721c 6a71e9c5591d4181ba462082f1cf6086
+#: 6b36d6fd5cb340f2b9f162c12db822b1 76ebadd536be4fc790fbe76b7e4bc549
+#: 8289df7a1bb74d238b4a27459a258646 849f6fa7680b47dfa9c8c1db6ec4aaa7
+#: ba1364b320ea496bb248e1fa907dc130 c2750cadfe3d4bdd9a240b6a3c3b819e of
+#: sds.tree.general.Tree:57 sds.tree.general.Tree.add_child:23
+#: sds.tree.general.Tree.add_child_to:23 sds.tree.general.Tree.clear:12
+#: sds.tree.general.Tree.degree:21 sds.tree.general.Tree.find_node:20
+#: sds.tree.general.Tree.get_children:22 sds.tree.general.Tree.get_parent:18
+#: sds.tree.general.Tree.height:24 sds.tree.general.Tree.insert:16
+#: sds.tree.general.Tree.is_leaf:21 sds.tree.general.Tree.leaves:16
+#: sds.tree.general.Tree.level_order_traversal:17
+#: sds.tree.general.Tree.postorder_traversal:17
+#: sds.tree.general.Tree.preorder_traversal:17 sds.tree.general.Tree.remove:9
+#: sds.tree.general.Tree.remove_node:21 sds.tree.general.Tree.search:19
+msgid "Notes"
+msgstr ""
+
+#: f7a2760bd9ea4e139d6b3fb52f88a0c7 of sds.tree.general.Tree:59
+msgid ""
+"Time Complexity: - Insert child: O(1) at root, O(n) for search + O(1) for"
+" add - Remove: O(n) to find node - Search: O(n) - Height: O(n) - "
+"Traversals: O(n)"
+msgstr ""
+
+#: ced2a7ffdc6444cab6a6f2a799e6d9ec of sds.tree.general.Tree:66
+msgid "Space Complexity: O(n)"
+msgstr ""
+
+#: e9e101c95ad449edb960387f86d1c578 of sds.tree.general.Tree:70
+msgid ":obj:`BinaryTree`"
+msgstr ""
+
+#: 51b17420b70341b1ae8f7bf4dc21bbd4 of sds.tree.general.Tree:71
+msgid "Tree with at most 2 children per node."
+msgstr ""
+
+#: 5f250d6f72964668846a674b501eccf9 of sds.tree.general.Tree:73
+msgid ":obj:`TreeNode`"
+msgstr ""
+
+#: ffc5ad2652014f0d88c4f4259ccfbce1 of sds.tree.general.Tree:74
+msgid "Node class with variable children."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 57c4e5481b5841f9825eaadbae99d10c 644125663cc6438281a33df9021e9798
+#: aa56c3082fd848fcb7e9dbb47dcc39b8 of sds.tree.general.Tree.__init__:1
+msgid "Initialize a general tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst
+#: 06a4a76ff6c8439881c816c2f580c607 079d48d9d410461b9f0780dba216eb73
+#: 09223bfa797f4be9a0be837e812fdda0 32b600fa34d749f5a20d7beb6fa14c08
+#: 4ca31b65da454bc097f608c8d78e6576 51e02702521443cc9f299c8db6106fc9
+#: 6846daa1bc66431a85b5e17fa8d4e7a8 747e64152ca1487cbfe4ff3b164587cc
+#: 8fe544d0e7a74a2492fb5653fd8f0473 c19c654ccde947a6936052b70addc969
+#: c245e3ee14754ec6b32a56ca040a98ad ca00e822f5d14925a61587ead32a7f21
+#: cc7f9066b5684c178b69b65a8e228265 d7492acffb144f838560143a1077f86d
+msgid "Parameters"
+msgstr ""
+
+#: aa0d3c25f1634da19859b988e859af55 ee6d9502d2594d85a6f51de806550850 of
+#: sds.tree.general.Tree.__init__:3
+msgid "Data for the root node. If None, creates an empty tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:13
+#: 014f5616032045fbb08c3566156e7893
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 3f98f06d62584b289bac9cac138a4cd8
+msgid ""
+":py:obj:`__init__ <sds.tree.general.Tree.__init__>`\\ "
+"\\(\\[root\\_data\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: da5aa9285d88412499b5ff7f878225fa
+msgid ""
+":py:obj:`add_child <sds.tree.general.Tree.add_child>`\\ \\(data\\[\\, "
+"parent\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 1149a2a1a64749c48ac844b5cdeebd91 879fd3865f944da0add3ebfb115f1ab7 of
+#: sds.tree.general.Tree.add_child:1
+msgid "Add a child node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 6ac730c65ff249f8817030e55a2a0c4e
+msgid ""
+":py:obj:`add_child_to <sds.tree.general.Tree.add_child_to>`\\ "
+"\\(parent\\_data\\, child\\_data\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 00245d382a8a4d27a38e70aecb536c3a 4e3794000bf2413b98ec68a55f7b7711 of
+#: sds.tree.general.Tree.add_child_to:1
+msgid "Add a child to a node with specific data."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 31f455902f4643c8b2ccd5a0e0ede9e6
+msgid ":py:obj:`clear <sds.tree.general.Tree.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 3fdd8f83aa8746a0a3017e10d81b3370 b5c48c4d00984c8fbd050bb17fa4c55b of
+#: sds.tree.general.Tree.clear:1
+msgid "Remove all nodes from the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: ba114338488a46d88cc7c0bc89e6e0de
+msgid ":py:obj:`degree <sds.tree.general.Tree.degree>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 7d29491ef62c4999857b112759e2176a 9ded99042be341f08bd1704517ae4cd0 of
+#: sds.tree.general.Tree.degree:1
+msgid "Get the degree (number of children) of a node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 84cbd94a67be411b8f6411da97276da0
+msgid ":py:obj:`find_node <sds.tree.general.Tree.find_node>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: a6ac38def0b3480c812e6d606dbef525 beb61f79ad9f4306a24ab65f5542e85f of
+#: sds.tree.general.Tree.find_node:1
+msgid "Find a node by its data."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 754b7972daac414b9e9c439f5d314895
+msgid ":py:obj:`get_children <sds.tree.general.Tree.get_children>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 194c8a61ac7e4b15b8781bf870c20ef0 b604cce9b0b54ae0abb13e13d4e20b1d of
+#: sds.tree.general.Tree.get_children:1
+msgid "Get all children of a node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 91be51baf13f480089c689a895ca34af
+msgid ":py:obj:`get_parent <sds.tree.general.Tree.get_parent>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 29fcfc79f0d842b6a3d92ed42f88db74 3b423bfe4acf42508c868285135d0adf of
+#: sds.tree.general.Tree.get_parent:1
+msgid "Get the parent of a node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 1b2a0e4d5a574f2e81ca81fa2403810c
+msgid ":py:obj:`height <sds.tree.general.Tree.height>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 843ef9f9bc044da689dfb7729b8a3250 9acb27fc0ab64856aafd7500a4a2796f of
+#: sds.tree.general.Tree.height:1
+msgid "Return the height of the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: fdb32aee4eab45cdb189fe0cc4214e26
+msgid ":py:obj:`insert <sds.tree.general.Tree.insert>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 3311fb604d2b4c70a705a8a6a9b97d9b c9b962e7d7954c848cd4f0acef8b631a of
+#: sds.tree.general.Tree.insert:1
+msgid "Insert an item into the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 7eaa5a101f2b45729c2cb535172bc780
+msgid ":py:obj:`is_empty <sds.tree.general.Tree.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: cae40e990435494ab7a460580a3e4a76
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: f26c3911425d47ab970f2f605bb9f125
+msgid ":py:obj:`is_leaf <sds.tree.general.Tree.is_leaf>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: e2d6960f34b2436dbab6a115a96c59cd f63bab2b525445d3bd7c40c4f0340b2b of
+#: sds.tree.general.Tree.is_leaf:1
+msgid "Check if a node is a leaf."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 056a03f2fb2448a5acd5ac15e79fba2f
+msgid ":py:obj:`leaves <sds.tree.general.Tree.leaves>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 100f7884a29440528a4c809b426aea58 ab68d60270744b9a91c39bad45e7e187 of
+#: sds.tree.general.Tree.leaves:1
+msgid "Get all leaf nodes' data."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: ec2aee509f224b29bfe60a1b6073331c
+msgid ""
+":py:obj:`level_order_traversal "
+"<sds.tree.general.Tree.level_order_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 1aba064aade24c92a49f65969b103cda 65f6e9a85ef04e38af65bea30bff5d53 of
+#: sds.tree.general.Tree.level_order_traversal:1
+msgid "Return level-order traversal iterator (BFS)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 00accb63eb3d4caf8dfdea58be055f7a
+msgid ""
+":py:obj:`postorder_traversal "
+"<sds.tree.general.Tree.postorder_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 0f2ffc8e34c344c9b30107d547038436 37075e7b28d942e0b9164a7c6d1d293b of
+#: sds.tree.general.Tree.postorder_traversal:1
+msgid "Return postorder traversal iterator."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 8e60d17611e54fc6b57b0afadfa734ac
+msgid ""
+":py:obj:`preorder_traversal <sds.tree.general.Tree.preorder_traversal>`\\"
+" \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: c6928052140d4ce49f82799db8cee222 f5db64a9354543fa88dd55e85618721b of
+#: sds.tree.general.Tree.preorder_traversal:1
+msgid "Return preorder traversal iterator."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: ee89c43a6812479bb955aeefe984ba68
+msgid ":py:obj:`remove <sds.tree.general.Tree.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 01ebbf519e5a466793ef23e553aa3bdc ded407c688a449fda185b503088cd80e of
+#: sds.tree.general.Tree.remove:1
+msgid "Remove an item from the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: ee856e52fe0c4103b4c3211bfd808cf1
+msgid ":py:obj:`remove_node <sds.tree.general.Tree.remove_node>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 52dd410849f5492e8e698a721612d2f6 810bee1c901343ba88fa741fa907c9ff of
+#: sds.tree.general.Tree.remove_node:1
+msgid "Remove a node and all its descendants."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 3f3f953d117a47a9ae3b33a33a6778c8
+msgid ":py:obj:`search <sds.tree.general.Tree.search>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:39:<autosummary>:1
+#: 65f9d8ba75714843ab751174eff920ba 9f5c5e01dfb04aeb9af8e504309678a9 of
+#: sds.tree.general.Tree.search:1
+msgid "Search for an item in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst:41
+#: 4d01b2a3ebfb4687a53a8c607f595017
+msgid "Attributes"
+msgstr ""
+
+#: af10c1a616fe444dadb8a19c9fbf8322 of
+#: sds.tree.general.Tree.__init__:1:<autosummary>:1
+msgid ":py:obj:`root <sds.tree.general.Tree.root>`\\"
+msgstr ""
+
+#: 00f3d97ed3764623861004634279412f 1310ddd0ca6c45948c838076f8af8da0 of
+#: sds.tree.general.Tree.__init__:1:<autosummary>:1
+#: sds.tree.general.Tree.root:1
+msgid "Get the root node of the tree."
+msgstr ""
+
+#: 7865fbf1ae8f42ef9f7c14701462ad81 of
+#: sds.tree.general.Tree.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.general.Tree.size>`\\"
+msgstr ""
+
+#: 75b0e44669954788a11af192d3db3d63 of
+#: sds.tree.general.Tree.__init__:1:<autosummary>:1
+msgid "Get the number of nodes in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst
+#: 1af47e89657047109c1c00cb4f23fff4 26094a86a809437b9c9644910cc96476
+#: 27344cfb73784c788480ebb77d5b762c 30697965df0748ccbea75489756af3e1
+#: 37872f2a9eee493c9ff9ff79b10a4366 3c96c015e4ff47ce987e41572f1b61f4
+#: 61b4e5fbb3a7474f8d986e0ce6476f84 7e1b1cac09564fea888d7a5f54599022
+#: 86f9f7881d244142a6e7bf5a827d5c94 8fd98b73e2484663a62f845f8843b4e9
+#: ca7764e2cd2541078bc235e92f1eab92 d56afba3d2e74efd81a57bc2b6c99eb4
+#: e235b90a0fa944e492fa1c55c528d1c3 e4e7828b0ae04bd490abe08993d5dd59
+#: e763dbbf20164ccfa3edc08823c654b5 ff878d64ba69464eab077fe23d4cbf35
+msgid "Returns"
+msgstr ""
+
+#: 11a77494f2864c86bf39a0ee92061c0d of sds.tree.general.Tree.root:3
+msgid "The root node, or None if tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst
+#: 01ebe9ebe0d848e59c255267bee039ee 3720be5d93394a54a91e4ddc84bd0738
+#: 39f1705216e44a7bb6106b06029f0e7f 4cb78b4502874a1eb9a8fcc5eaa19cba
+#: 52e40cced6944bb587d3a87e1468f5d4 61d09e778e7e4d10b885af41e3e4c476
+#: 77e38a523d084347b3da553b75b0cddb 8a2ddbbb13c742e78a4782a1e6067cf5
+#: 986d46376c0b48ecb4929241a5a75435 a462c94141d5442f990c1a3b65923b19
+#: a9ff2815804644d0af0fc6adffd30ee2 aec4538588f74e7c9f76d1b02d658feb
+#: b2e17b80abcd4395b6ec5550353d766f ddd8a0b119be4d26b3861ef8c7128e28
+#: e1962d88b5c7416bbb1725c402a59d3f f21a867d80db4e5b9bce7b03e85286f4
+msgid "Return type"
+msgstr ""
+
+#: 499376313aa84f4ea3e1fdb7a84d959a of sds.tree.general.Tree.height:3
+msgid ""
+"The height is the length of the longest path from root to a leaf. An "
+"empty tree has height -1, a tree with only root has height 0."
+msgstr ""
+
+#: 68a531afc1484ccb8facb1b2b5d01fe1 of sds.tree.general.Tree.height:6
+msgid "The height of the tree."
+msgstr ""
+
+#: 133f28b7ac8b483586811edbddeb0927 284e407e765a442d8731faeb97b5af16
+#: 5861a54732964e6392fb2b0aa737fa79 5f24a0f5f4a840eb9cbe15fa03cbc326
+#: 991922a13f874c57ba0746e89de56be3 b51c1c28aa82409f9805250f16117be5
+#: db51a9f1912448b6b5f5822e2460693e e17d332dd1e24bd2850dd3054fda7eb2 of
+#: sds.tree.general.Tree.find_node:22 sds.tree.general.Tree.height:26
+#: sds.tree.general.Tree.leaves:18
+#: sds.tree.general.Tree.level_order_traversal:19
+#: sds.tree.general.Tree.postorder_traversal:19
+#: sds.tree.general.Tree.preorder_traversal:19 sds.tree.general.Tree.remove:11
+#: sds.tree.general.Tree.search:21
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: c5776218a480461cb88216b93346768b ee2419cf4086429eb4d9b65e669a0aa5 of
+#: sds.tree.general.Tree.add_child:3 sds.tree.general.Tree.add_child_to:7
+msgid "Data for the new child node."
+msgstr ""
+
+#: 68b333d0a1a342a796a2124a9259ea00 of sds.tree.general.Tree.add_child:5
+msgid ""
+"Parent node. If None, adds to root. If root doesn't exist, creates root "
+"with this data."
+msgstr ""
+
+#: 4160e8d0615047669e7624c77d6a2b7d affda445f86f49a78e3dc247956bdd62 of
+#: sds.tree.general.Tree.add_child:9 sds.tree.general.Tree.add_child_to:10
+msgid "The newly created child node."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.general.Tree.rst
+#: 0662d73884164bf39a4f6a10d447ca2f 75b9e260b0f44fe880d2958a7997a607
+#: 91bfd0785892434b8e6c41f7de10f6cb 94a5c59fc95140659cbc0512e9f959ae
+#: b9fa87a22ec241b4ac9a07f655a49b73 ceb4825af238488680817fb0cd8ce50c
+msgid "Raises"
+msgstr ""
+
+#: ea4d56b185594464b728cfcaca636bbc of sds.tree.general.Tree.add_child:12
+msgid "If parent is None and tree already has a root."
+msgstr ""
+
+#: efd6fc51e76e4c3995e7b4364c28d0fd of sds.tree.general.Tree.add_child:25
+msgid "Time complexity: O(1) when adding to a known parent."
+msgstr ""
+
+#: a7dc1d8f6cff47eca0906179d1d8a641 of sds.tree.general.Tree.add_child_to:3
+msgid "Searches for a node with parent_data and adds a child with child_data."
+msgstr ""
+
+#: c61cce111da04f5a9ec75bbb43f549db of sds.tree.general.Tree.add_child_to:5
+msgid "Data of the parent node to search for."
+msgstr ""
+
+#: 23aec52b78254a69b2722a88f24d8774 of sds.tree.general.Tree.add_child_to:13
+msgid "If parent node is not found."
+msgstr ""
+
+#: 0ac5986694b741d3ba9a8c1bf4e2cb78 of sds.tree.general.Tree.add_child_to:25
+msgid "Time complexity: O(n) - must search for parent."
+msgstr ""
+
+#: 93626f36299f467880ce636b99a9b61b of sds.tree.general.Tree.find_node:3
+msgid "Uses breadth-first search to find the first node with matching data."
+msgstr ""
+
+#: 3f9b465c507f4d338cdda293f4db0cb4 of sds.tree.general.Tree.find_node:5
+msgid "Data to search for."
+msgstr ""
+
+#: e980873e5aa14edab7b96dfd5e4ee064 of sds.tree.general.Tree.find_node:8
+msgid "The found node, or None if not found."
+msgstr ""
+
+#: cfb3b92b111e416f9a84e7e4ecb15645 of sds.tree.general.Tree.remove_node:3
+msgid "Data of the node to remove."
+msgstr ""
+
+#: d9f5144d4b804c62810431ba2c7f93be of sds.tree.general.Tree.remove_node:6
+msgid "The data of the removed node."
+msgstr ""
+
+#: b5c721891786496eaee88e3e9282fc10 of sds.tree.general.Tree.remove_node:9
+msgid "If tree is empty."
+msgstr ""
+
+#: 2840c23b1b194655b2bd028b64451a22 6d9d112e36f74d6a89d3d31e05edbc87
+#: c1c82640c7ba47d8a868488adb52f2d2 e791df30f9354b93b35e03a437c94d36 of
+#: sds.tree.general.Tree.degree:9 sds.tree.general.Tree.get_children:9
+#: sds.tree.general.Tree.is_leaf:9 sds.tree.general.Tree.remove_node:10
+msgid "If node is not found."
+msgstr ""
+
+#: 48a47b4f51e84f5194748605b589b737 of sds.tree.general.Tree.remove_node:11
+msgid "If attempting to remove root without replacement."
+msgstr ""
+
+#: feda67edcb8c454a937a87c22bba193a of sds.tree.general.Tree.remove_node:23
+msgid "Time complexity: O(n) Removing a node removes all its descendants."
+msgstr ""
+
+#: 71fa9fce23f24a378ee9fedca457fdff of sds.tree.general.Tree.insert:3
+msgid "If tree is empty, creates root. Otherwise adds as child of root."
+msgstr ""
+
+#: c12970d5a66e4030b90567f0406b836d of sds.tree.general.Tree.insert:5
+msgid "The item to insert."
+msgstr ""
+
+#: 0914063dcd11468c8c2e2134069dbdd3 327f620a6e26419cb0bc66d68310fb0f of
+#: sds.tree.general.Tree.clear:14 sds.tree.general.Tree.insert:18
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: e61d24b8c175455cb2676b8ec5696db7 of sds.tree.general.Tree.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: 780f4eebb7774add9807a67c34922e98 of sds.tree.general.Tree.remove:6
+msgid "The removed item."
+msgstr ""
+
+#: 857c665207d44fafac8b8fbcdad1f2b9 of sds.tree.general.Tree.search:3
+msgid "The item to search for."
+msgstr ""
+
+#: f392e6f048a849e0ba96ce66ab5bcf34 of sds.tree.general.Tree.search:6
+msgid "True if found, False otherwise."
+msgstr ""
+
+#: 3d14534804f54ce6a318b4b7c3d9e8f5 of
+#: sds.tree.general.Tree.preorder_traversal:3
+msgid "Preorder: parent -> children (left to right)."
+msgstr ""
+
+#: 01ff4b8c300a4d159aa0811cef383db0 3b0803476a5d48ca933ec11abd22baa2
+#: 51770a0c6f684dc987699b7e1c0008cf a1042b4129a342a082edd4b7747d1f4e of
+#: sds.tree.general.Tree.__iter__ sds.tree.general.Tree.level_order_traversal
+#: sds.tree.general.Tree.postorder_traversal
+#: sds.tree.general.Tree.preorder_traversal
+msgid "Yields"
+msgstr ""
+
+#: 1aa87aaf4f49449ea28ff7d3aa983131 of
+#: sds.tree.general.Tree.preorder_traversal:5
+msgid "*Any* -- Items in preorder."
+msgstr ""
+
+#: 92ed694167c846dd8bf949168bc555cb of
+#: sds.tree.general.Tree.postorder_traversal:3
+msgid "Postorder: children (left to right) -> parent."
+msgstr ""
+
+#: c1765dd0a7fe495f9cbba2e1c07fb548 of
+#: sds.tree.general.Tree.postorder_traversal:5
+msgid "*Any* -- Items in postorder."
+msgstr ""
+
+#: 73daca1ea94243c2947390163ecacba1 of
+#: sds.tree.general.Tree.level_order_traversal:3
+msgid "Visits nodes level by level, left to right."
+msgstr ""
+
+#: 8a216603b24342b0ae740a572df91c6f of
+#: sds.tree.general.Tree.level_order_traversal:5
+msgid "*Any* -- Items level by level."
+msgstr ""
+
+#: be2525493b46471bba4aa02479269489 of sds.tree.general.Tree.__iter__:1
+msgid "Iterate over tree elements (preorder by default)."
+msgstr ""
+
+#: c5a46754ac6b4f12b12cd196cc217a4b of sds.tree.general.Tree.__iter__:3
+msgid "*Any* -- Elements in preorder."
+msgstr ""
+
+#: dc848323985e409486034eaafd8f6209 of sds.tree.general.Tree.__contains__:1
+msgid "Check if item is in the tree."
+msgstr ""
+
+#: 41bac3ef359046c5ad39b7bedbbf49eb of sds.tree.general.Tree.__contains__:3
+msgid "Item to check."
+msgstr ""
+
+#: a7861934807c44c2ad7ab1e29d9f72d5 of sds.tree.general.Tree.__contains__:6
+msgid "True if item is in tree."
+msgstr ""
+
+#: e0f0d95234054371bd82c45a4539b601 of sds.tree.general.Tree.get_children:3
+msgid "Data of the parent node."
+msgstr ""
+
+#: 458261e8e38b420c8cfd8e56fdc143c0 of sds.tree.general.Tree.get_children:6
+msgid "List of child nodes."
+msgstr ""
+
+#: 3b386db22d7d4130ba30304e5de43a5f 7fedffe7dac643a49cd706185718d06a
+#: be4c3634d2554ab1b10420438d6f2923 of sds.tree.general.Tree.get_children:24
+#: sds.tree.general.Tree.get_parent:20 sds.tree.general.Tree.is_leaf:23
+msgid "Time complexity: O(n) for search."
+msgstr ""
+
+#: 34547baf04f94b5e850aa52ddd4439a2 of sds.tree.general.Tree.get_parent:3
+msgid "Data of the child node."
+msgstr ""
+
+#: 12afbc316ce6465493e3243c2ba328ad of sds.tree.general.Tree.get_parent:6
+msgid "The parent node, or None if node is root or not found."
+msgstr ""
+
+#: 001d44143a1c4e4e9447e3aa4f50173f 14dc3a96e6fa4764aa1a590d59222268 of
+#: sds.tree.general.Tree.degree:3 sds.tree.general.Tree.is_leaf:3
+msgid "Data of the node."
+msgstr ""
+
+#: 6e8c6c299e9a419faf2856abcc538f3f of sds.tree.general.Tree.degree:6
+msgid "Number of children."
+msgstr ""
+
+#: e0f83ae70e274d049c43e62892868178 of sds.tree.general.Tree.degree:23
+msgid "Time complexity: O(n) for search + O(1) for count."
+msgstr ""
+
+#: ac659bf37c1a4568ac88754a802e8fda of sds.tree.general.Tree.is_leaf:6
+msgid "True if node is a leaf (has no children)."
+msgstr ""
+
+#: 95882aaee9c04577861136059a92f79d of sds.tree.general.Tree.leaves:3
+msgid "List of data from all leaf nodes."
+msgstr ""
+
+#: b4a8be35184b42d3a280991901e3c46e of sds.tree.general.Tree.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: 5d85eb55a2b84070968cd93e65ab1477 8d31e2fafec7433cb802b53eb0861a2e of
+#: sds.tree.general.Tree.__repr__:3 sds.tree.general.Tree.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 317c53cb2607457e8645ff6c64d24eae of sds.tree.general.Tree.__str__:1
+msgid "Return string showing tree structure."
+msgstr ""
+

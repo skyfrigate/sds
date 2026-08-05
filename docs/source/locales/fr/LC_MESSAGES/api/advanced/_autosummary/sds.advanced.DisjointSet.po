@@ -1,0 +1,502 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:2
+#: 30cb5224767148a6bad1da8765289db6
+msgid "sds.advanced.DisjointSet"
+msgstr ""
+
+#: cdaaf67058be4937867aebe2fc23952b of sds.advanced.disjoint_set.DisjointSet:1
+msgid "Disjoint Set (Union-Find) with path compression and union by rank."
+msgstr ""
+
+#: 366b6162cabc4b879bd648b96ce9e7bf of sds.advanced.disjoint_set.DisjointSet:3
+msgid ""
+"This implementation maintains a forest of trees where each tree "
+"represents a disjoint set. Path compression flattens trees during find "
+"operations, and union by rank keeps trees balanced."
+msgstr ""
+
+#: a64a9d3f6f054d4aa9265aeeed46626d of sds.advanced.disjoint_set.DisjointSet:9
+msgid "Current number of disjoint sets (read-only property)."
+msgstr ""
+
+#: 6fb8ad41de514fb489b410446025f569 of sds.advanced.disjoint_set.DisjointSet
+msgid "type"
+msgstr ""
+
+#: ba9820ea43234bfeb117834340e1635d of sds.advanced.disjoint_set.DisjointSet:11
+msgid "int"
+msgstr ""
+
+#: 06faac30961d45bfbabcc6a1db5e3a41 1870bc42cb124d258c51b0103657452c
+#: 3b53382f954f47a293bdf26d61b6bd80 458e5569f09f438495550885419df82e
+#: 55031e808172405bbf30af7fb5891e91 6b5333a8d54f422da0e0750e85d4edec
+#: 87f6f1bfffb14c049fcd542769c0ca9e 8b2d7bb01d544ada9b7831af569eeb6b
+#: 8f4dda66cd0b468eb412b9d728394fb7 92a7e4a6e9ca418d8dea01d4cf73e8ef
+#: a4abe713708648349dadd0ea161bbd03 abd382bacb834d50bbc999c39807082f
+#: e570ff5a80ed4e138185d9213e8c480c f0fbe4ce105844e2ad7dfb939f4da992
+#: ffe82bda39924fd28b28eb020a9a5114 of sds.advanced.DisjointSet.num_sets:6
+#: sds.advanced.disjoint_set.DisjointSet:13
+#: sds.advanced.disjoint_set.DisjointSet.__contains__:9
+#: sds.advanced.disjoint_set.DisjointSet.__init__:3
+#: sds.advanced.disjoint_set.DisjointSet.__len__:6
+#: sds.advanced.disjoint_set.DisjointSet.__repr__:6
+#: sds.advanced.disjoint_set.DisjointSet.__str__:6
+#: sds.advanced.disjoint_set.DisjointSet.connected:13
+#: sds.advanced.disjoint_set.DisjointSet.count_sets:6
+#: sds.advanced.disjoint_set.DisjointSet.find:13
+#: sds.advanced.disjoint_set.DisjointSet.get_sets:6
+#: sds.advanced.disjoint_set.DisjointSet.make_set:9
+#: sds.advanced.disjoint_set.DisjointSet.size:11
+#: sds.advanced.disjoint_set.DisjointSet.union:15
+msgid "Examples"
+msgstr ""
+
+#: 4a73b383090f4907ae54e3f5d824d61b of sds.advanced.disjoint_set.DisjointSet:15
+msgid "Create and merge sets:"
+msgstr ""
+
+#: 27ac5833c4b8458b9d66b5f829bbdd22 of sds.advanced.disjoint_set.DisjointSet:29
+msgid "Check connectivity:"
+msgstr ""
+
+#: 0ed9e51aa1314a678f336c165b1e1ea8 of sds.advanced.disjoint_set.DisjointSet:40
+msgid "Get all sets:"
+msgstr ""
+
+#: 35c0c93643c34ccd81fed2bd44ed45ff 36eeb0edbbf24124b35bc1323074e465
+#: 3a207abdae9f4bd99775b649fcf69b4b 42e18e08abe244cbba4369f3fb655918
+#: 4d87b246a0e348e195be5839232f32d2 9020e621abcd4ab9bdb97fd27be83908
+#: aacc4378222c4a0aaf6c0f429c497225 b59977ade3394accb5ddb88dcfcc0d06
+#: b7eedc5aada0424d950653af2daf9c94 de65f54e5bf949deac2db4507af542b4
+#: e39ffcb096734c07af5b0ff1ae29b170 of sds.advanced.disjoint_set.DisjointSet:55
+#: sds.advanced.disjoint_set.DisjointSet.__iter__:5
+#: sds.advanced.disjoint_set.DisjointSet.clear:3
+#: sds.advanced.disjoint_set.DisjointSet.connected:28
+#: sds.advanced.disjoint_set.DisjointSet.count_sets:20
+#: sds.advanced.disjoint_set.DisjointSet.find:24
+#: sds.advanced.disjoint_set.DisjointSet.get_sets:23
+#: sds.advanced.disjoint_set.DisjointSet.is_empty:6
+#: sds.advanced.disjoint_set.DisjointSet.make_set:24
+#: sds.advanced.disjoint_set.DisjointSet.size:27
+#: sds.advanced.disjoint_set.DisjointSet.union:29
+msgid "Notes"
+msgstr ""
+
+#: 5ebf8c205f78425fa1d4a6b2c87bca5d of sds.advanced.disjoint_set.DisjointSet:57
+msgid "Elements must be hashable"
+msgstr ""
+
+#: 99b5d329c8614b009858b1502d09ae55 of sds.advanced.disjoint_set.DisjointSet:58
+msgid "Once created, elements cannot be removed"
+msgstr ""
+
+#: 09033432c08d41b6b869f1a07bc4f900 of sds.advanced.disjoint_set.DisjointSet:59
+msgid "Each element can only be in one set at a time"
+msgstr ""
+
+#: 97724c0bc0e048e88fce60957e792074 of sds.advanced.disjoint_set.DisjointSet:60
+msgid "Union operations are irreversible"
+msgstr ""
+
+#: d69d83cb51fa4e3096c07b0222d811e1 of sds.advanced.disjoint_set.DisjointSet:62
+msgid ""
+"Implementation Details: - parent[x] = parent of x in tree (x if root) - "
+"rank[x] = upper bound on height of subtree rooted at x - set_size[x] = "
+"size of set for root nodes"
+msgstr ""
+
+#: 8655566f5a8c442381cdf94dc9448a1a of sds.advanced.disjoint_set.DisjointSet:69
+msgid ":obj:`AbstractDisjointSet`"
+msgstr ""
+
+#: 1b694350d4544d028bc953b2b8f6ebdb of sds.advanced.disjoint_set.DisjointSet:70
+msgid "Abstract interface for disjoint sets."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 3dba09d7188543dcb2445f5b471f698d ae47c325e3754f68bf9087c94c37a6f6
+#: e3046b591dd048078d1449b9ab126388 of
+#: sds.advanced.disjoint_set.DisjointSet.__init__:1
+msgid "Initialize an empty disjoint set structure."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:13
+#: 87ff3eff496c4cff8cfc22c82df78d05
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 05d20c395e2f48e89132acdfd1637695
+msgid ":py:obj:`__init__ <sds.advanced.DisjointSet.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: ec2252adb5de40a1bcabe37bd9c192ac
+msgid ":py:obj:`connected <sds.advanced.DisjointSet.connected>`\\ \\(x\\, y\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 091cdb57eb724f3da4d2c53d8a1fb27f fac35eeff5f34f01a850c4b0b5684394 of
+#: sds.advanced.disjoint_set.DisjointSet.connected:1
+msgid "Check if x and y are in the same set."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 8f7eb6a31e214604a87aa51f54a1f7c7
+msgid ":py:obj:`count_sets <sds.advanced.DisjointSet.count_sets>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 186db919ee604abbb42967a660fe0afa 28e9d73915db4e1d976fb71706da89af
+#: 5aeb40d90d3f4b3cbe3aa53ddc6f5c6b 825c33ff45b6489992ffca187be48210 of
+#: sds.advanced.DisjointSet.num_sets:1
+#: sds.advanced.disjoint_set.DisjointSet.__init__:1:<autosummary>:1
+#: sds.advanced.disjoint_set.DisjointSet.count_sets:1
+msgid "Get the number of disjoint sets."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: d6180cea8b14410bbc4c905136ba797c
+msgid ":py:obj:`find <sds.advanced.DisjointSet.find>`\\ \\(element\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 98aa4583013a482980207916d025c14b fc32978b887841b8b1207d48e04b03a0 of
+#: sds.advanced.disjoint_set.DisjointSet.find:1
+msgid "Find the representative of the set containing element."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 56d4d0c219e943f28031ff3a99b8e9da
+msgid ":py:obj:`get_sets <sds.advanced.DisjointSet.get_sets>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 09da8255f0134e5ab92f222669135df6 5645af2b1b664297aed7ebaba044ff98 of
+#: sds.advanced.disjoint_set.DisjointSet.get_sets:1
+msgid "Get all disjoint sets."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 685e6d8870b84273b0232310f2ad2aef
+msgid ":py:obj:`make_set <sds.advanced.DisjointSet.make_set>`\\ \\(element\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: bafb8ce0390742d19d7b6a8ccfbe7fed f8030e41207243308104306f7508707a of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:1
+msgid "Create a new set containing only the given element."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: a5fff3c8340941f69827784a6b5116cf
+msgid ":py:obj:`size <sds.advanced.DisjointSet.size>`\\ \\(element\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 5cac7af7b6694106888bcd898df7bcc3 c200a7bf02854535ad11806ded66631a of
+#: sds.advanced.disjoint_set.DisjointSet.size:1
+msgid "Get the size of the set containing element."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: 15985c4bbb754b6da9ed0e5bb1cb2e53
+msgid ":py:obj:`union <sds.advanced.DisjointSet.union>`\\ \\(x\\, y\\)"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:28:<autosummary>:1
+#: ca4f3d227b914fd9ac404ca34e8cd585 eb241e418cfc43419d7e8ebb9584a16c of
+#: sds.advanced.disjoint_set.DisjointSet.union:1
+msgid "Unite the sets containing x and y."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst:30
+#: d42fc38351d24aa19097c57c224ec5ac
+msgid "Attributes"
+msgstr ""
+
+#: a110186a98b04b0c911a8255a114107e of
+#: sds.advanced.disjoint_set.DisjointSet.__init__:1:<autosummary>:1
+msgid ":py:obj:`num_sets <sds.advanced.DisjointSet.num_sets>`\\"
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst
+#: 2cfd6a82e53f488f8c966e83c19de94b 34c74aa3a00c439f98a34401ff0411a6
+#: 584ca5210c814cb6b86f0ad246942a9d 75892d320d1e4c8cbcf9c9d4f39f584c
+#: 7e6d81efd72747dda7b9a1d32ee33a25 88edc56f694645f181587bcbeaed1cd3
+#: 938983295ff445eda34f516cb0023b7e 9f5b0964fdf047de90caf57a05ecb51e
+#: b4a3682a759141409a868b88eef38901 bd0ce4082f104466bcec6b82600ebfbb
+#: cf990787331543f1be24b89a62284c1d e902aa0a16384690a17b075d5399dea6
+msgid "Returns"
+msgstr ""
+
+#: eeb90baea7cb43ea990e04aeaad5340a of sds.advanced.DisjointSet.num_sets:3
+msgid "Current number of disjoint sets."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst
+#: 249bd9195bc94c7395bc7d4cd77b36a2 37f7a4ef6d0a4ba08f3711d829acdc19
+#: 4ea0f05e292347ab8afcf59cb2dd5d85 666cba620d8647ad8095e29c4069e896
+#: 89322814b9924ffc8673f2ecfef5bae2 8c14f59f177e4bc6a6fc3de662bca26a
+#: 982a97545860401db5437a7bd89dd24f a69ec7587c9c4b0d9b468743b1c4305f
+#: ca84ec1a8c3e406cbfc882efb210ef34 d44bbae9704d47c18a722f8cae809357
+#: fc75171604724e578e3c9d2e9aad66ac feade5ec8196482aa3c02558b96e0eae
+msgid "Return type"
+msgstr ""
+
+#: 437636d4d63d454fade02aee65762e37 of
+#: sds.advanced.disjoint_set.DisjointSet.is_empty:1
+msgid "Return True if no elements have been added."
+msgstr ""
+
+#: 70355c476bf242a9822352d5c71a501d of
+#: sds.advanced.disjoint_set.DisjointSet.is_empty:3
+msgid "True if len(self) == 0."
+msgstr ""
+
+#: 38930bdc1a534ab295b5b1368eef60c7 82e2f34c92bf4bff9f7bda585519b029 of
+#: sds.advanced.disjoint_set.DisjointSet.clear:5
+#: sds.advanced.disjoint_set.DisjointSet.is_empty:8
+msgid "Time complexity: O(1)."
+msgstr ""
+
+#: ae87a3b00dba4bb49c841bb252ccde15 of
+#: sds.advanced.disjoint_set.DisjointSet.clear:1
+msgid "Remove all elements and sets."
+msgstr ""
+
+#: 1d6b34f56206453ba3c5895323546f18 of
+#: sds.advanced.disjoint_set.DisjointSet.__iter__:1
+msgid "Iterate over all elements in the structure."
+msgstr ""
+
+#: a8c743c0fa0d41a6a9a06dc34aad108a of
+#: sds.advanced.disjoint_set.DisjointSet.__iter__
+msgid "Yields"
+msgstr ""
+
+#: cafa1196263b4f1499f463d66c70fd1a of
+#: sds.advanced.disjoint_set.DisjointSet.__iter__:3
+msgid "*Any* -- Elements in unspecified order."
+msgstr ""
+
+#: b52695040fef4bdaba9b49195cd295b8 of
+#: sds.advanced.disjoint_set.DisjointSet.__iter__:7
+msgid "Time complexity: O(n)."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst
+#: 20425bf54bbc4a48b709fe32cd8c3433 2ec8b24214a54c02ae2f62c8803913de
+#: 564f5b08bb2d4d03990824c7dfcbf66a 9a0dd0cc88c344b69df85f9da357f1cd
+#: b370b41ecc1a49258722cd7427bc870f db33e56bc6444672abc91f07704824d1
+msgid "Parameters"
+msgstr ""
+
+#: 133058814e6b4f078a0b438bdab953e0 of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:3
+msgid "Element to create a set for (must be hashable)."
+msgstr ""
+
+#: ../../source/api/advanced/_autosummary/sds.advanced.DisjointSet.rst
+#: 0b4fb506ebb54a07b464379dd8868ef2 2b6bdb6be55b4eb5958407565a4c7f9c
+#: 3659b1aa5cfb4fbc94319cb9c5cf8cb5 3c971492cf974155b3707116e604836b
+#: d8bcf23484154957907aa79bea0f74db
+msgid "Raises"
+msgstr ""
+
+#: 777ab6f02eb04195831c062733694300 of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:6
+msgid "If element is not hashable."
+msgstr ""
+
+#: 858794748e884673b25705daafae172a of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:7
+msgid "If element already exists in a set."
+msgstr ""
+
+#: 41a47336495e41eaa25b04aff57ca1e8 of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:17
+msgid "Duplicate elements raise error:"
+msgstr ""
+
+#: ffea93a582734fb68af3c5a7b21e7394 of
+#: sds.advanced.disjoint_set.DisjointSet.make_set:26
+msgid "Time complexity: O(1) Space complexity: O(1)"
+msgstr ""
+
+#: 3ea59a79ef114570ba0906d65973c155 of
+#: sds.advanced.disjoint_set.DisjointSet.find:3
+msgid "Uses path compression: makes all nodes on path point directly to root."
+msgstr ""
+
+#: 2714b247004249938a9f99254376d2c6 of
+#: sds.advanced.disjoint_set.DisjointSet.find:5
+msgid "Element to find the representative for."
+msgstr ""
+
+#: 72fef512df77400895823ab30ef88c84 of
+#: sds.advanced.disjoint_set.DisjointSet.find:8
+msgid "Representative (root) of the set containing element."
+msgstr ""
+
+#: 420470fde3c14f6586dc59efa542ad41 74da352814294a4eb037afac8c31b343 of
+#: sds.advanced.disjoint_set.DisjointSet.find:11
+#: sds.advanced.disjoint_set.DisjointSet.size:9
+msgid "If element is not in any set."
+msgstr ""
+
+#: fa763f6c0c43451b8a6a63c2ff60810c of
+#: sds.advanced.disjoint_set.DisjointSet.find:26
+msgid ""
+"Time complexity: O(α(n)) amortized with path compression. Path "
+"compression flattens the tree structure on each find operation."
+msgstr ""
+
+#: 5ad40f0a14ed42bca4113f806e633d42 of
+#: sds.advanced.disjoint_set.DisjointSet.union:3
+msgid "Uses union by rank: attach smaller rank tree under root of higher rank."
+msgstr ""
+
+#: b7477c122c3c4a7fa0d5f3098b24229f of
+#: sds.advanced.disjoint_set.DisjointSet.union:5
+msgid "Element in first set."
+msgstr ""
+
+#: 14cb3cc10ad94cde959268268f0a9e61 of
+#: sds.advanced.disjoint_set.DisjointSet.union:7
+msgid "Element in second set."
+msgstr ""
+
+#: 3febc2a82bf24e67bf8f0be37475eade of
+#: sds.advanced.disjoint_set.DisjointSet.union:10
+msgid "True if sets were merged (were different), False if already same set."
+msgstr ""
+
+#: 7213f5c029c548bf9a6292d8a91fad56 d6c537d0ec12463c96c17421089e6a09 of
+#: sds.advanced.disjoint_set.DisjointSet.connected:11
+#: sds.advanced.disjoint_set.DisjointSet.union:13
+msgid "If x or y is not in any set."
+msgstr ""
+
+#: f715a7c6ab3c40f0bbf7432c7b42f8cc of
+#: sds.advanced.disjoint_set.DisjointSet.union:31
+msgid ""
+"Time complexity: O(α(n)) amortized. Union by rank keeps trees balanced "
+"for optimal performance."
+msgstr ""
+
+#: 3864c2a5cde04c65a864f86bd1f34efc of
+#: sds.advanced.disjoint_set.DisjointSet.connected:3
+msgid "First element."
+msgstr ""
+
+#: ef2de6f7fe0b4bc0bd66baef0315139d of
+#: sds.advanced.disjoint_set.DisjointSet.connected:5
+msgid "Second element."
+msgstr ""
+
+#: bb40239eba2f4a95878e3334f8431975 of
+#: sds.advanced.disjoint_set.DisjointSet.connected:8
+msgid "True if x and y are in the same set."
+msgstr ""
+
+#: c09910d4a09f4c6587ed23bad01ab0e6 daade96aced94ce2bc5eb6d08e3aa089 of
+#: sds.advanced.disjoint_set.DisjointSet.connected:30
+#: sds.advanced.disjoint_set.DisjointSet.size:29
+msgid "Time complexity: O(α(n)) amortized."
+msgstr ""
+
+#: 7f35b17498b24b4b822a45478769cd62 of
+#: sds.advanced.disjoint_set.DisjointSet.get_sets:3
+msgid "List of all disjoint sets."
+msgstr ""
+
+#: 000c9eae9ae244aaaa868692a76aee88 of
+#: sds.advanced.disjoint_set.DisjointSet.get_sets:25
+msgid ""
+"Time complexity: O(n) where n is number of elements. Creates new set "
+"objects, so modifications don't affect structure."
+msgstr ""
+
+#: e20ee89cae7a476ea935ca511f466a27 of
+#: sds.advanced.disjoint_set.DisjointSet.count_sets:3
+msgid "Number of disjoint sets."
+msgstr ""
+
+#: 25ec17ab93964c85a1f608881d353b4d of
+#: sds.advanced.disjoint_set.DisjointSet.count_sets:22
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 16abefade06f4a05acc23590f5623464 of
+#: sds.advanced.disjoint_set.DisjointSet.size:3
+msgid "Element in the set."
+msgstr ""
+
+#: b689577f51344929bc00e2ed7c52b4f0 of
+#: sds.advanced.disjoint_set.DisjointSet.size:6
+msgid "Number of elements in the set."
+msgstr ""
+
+#: 1a603653c4554837b80be05103cfb548 of
+#: sds.advanced.disjoint_set.DisjointSet.__len__:1
+msgid "Return the total number of elements across all sets."
+msgstr ""
+
+#: d74b41c7f5224ab09a81305720b43991 of
+#: sds.advanced.disjoint_set.DisjointSet.__len__:3
+msgid "Total number of elements."
+msgstr ""
+
+#: 1147e9733a4d44878c7358f89f0438f0 of
+#: sds.advanced.disjoint_set.DisjointSet.__contains__:1
+msgid "Check if element exists in any set."
+msgstr ""
+
+#: aaf3276d8af3433d89ffe18df54071ff of
+#: sds.advanced.disjoint_set.DisjointSet.__contains__:3
+msgid "Element to check."
+msgstr ""
+
+#: 208b3f4fcfa14902bdd6bd54216a6dde of
+#: sds.advanced.disjoint_set.DisjointSet.__contains__:6
+msgid "True if element is in any set."
+msgstr ""
+
+#: 468fda3d348441828df588a270966f2c of
+#: sds.advanced.disjoint_set.DisjointSet.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: b6daf753b726405b949d84cd3e96023d c2590f3a0f4c499989d993405bf70bed of
+#: sds.advanced.disjoint_set.DisjointSet.__repr__:3
+#: sds.advanced.disjoint_set.DisjointSet.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 08935082f96648b8b1fb5749ac201b80 of
+#: sds.advanced.disjoint_set.DisjointSet.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+

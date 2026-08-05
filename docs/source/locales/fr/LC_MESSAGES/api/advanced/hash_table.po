@@ -1,0 +1,891 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/advanced/hash_table.rst:5 02299c7dd2c74f0ea51f69f7beb6e229
+msgid "Hash Tables"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:9 10c6461aeffb458ea95064d48f074c10
+msgid ""
+"Two concrete hash table implementations share the "
+":class:`~sds.advanced.interfaces.AbstractHashTable` interface and differ "
+"only in their collision-resolution strategy."
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:13 f501cae28b284683a9adf061640ee894
+msgid "Strategy Comparison"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:17 faf18afa195e4ff991f47a7c71fbb5eb
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:18 70689cd0ef7f45e1a16f584b928eb26a
+msgid "``HashTableChaining``"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:19 ae4dcba7f5a746c4b9cc5199a7c981ce
+msgid "``HashTableOpenAddressing``"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:20 e17f5977002043ab94edd830c287fc16
+msgid "Collision handling"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:21 f15913e411594bf0b45e4a6b75065b96
+msgid "Per-slot linked list"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:22 fa5e010811684f8f86448af35adbf682
+msgid "Linear probing + tombstones"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:23 7090ab5928264beaa6339e3be960dce2
+msgid "Load factor constraint"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:24 01f79e12000448bf94a9b43f8095757d
+msgid "Any positive value"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:25 19526c8df1794cba9f90dc40d3a82c4f
+msgid "Must be < 1.0"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:26 be3f59292c14438bbcbdae8b4ae61314
+msgid "Deletion"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:27 8618fb97845e4fc292448ce8ee3131e6
+msgid "Direct list removal"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:28 7f9119fba6d44917b8b2b8f03e3048ba
+msgid "Tombstone (``_DELETED``)"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:29 06f7f815d72843458acde20fb48c8d0a
+msgid "Resize clears tombstones"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:30 f9b09503f6884232b2d24e9171e32319
+msgid "N/A"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:31 4c8ae04be35e4946b9ba0352c131dcc1
+msgid "Yes — full rehash"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:36 9ab7862743ec44e68db58ca542caa6b8
+msgid "HashTableChaining"
+msgstr ""
+
+#: 4541506d7b3948d7bcad534a9ff97054 eae730d2e2874bb6b587cf5a2fa2bff6 of
+#: sds.advanced.hash_table.HashTableChaining:1
+#: sds.advanced.hash_table.HashTableOpenAddressing:1
+msgid "Bases: :py:class:`~sds.advanced.interfaces.AbstractHashTable`"
+msgstr ""
+
+#: 4c6629392e1d4a24a9217da413ddc458 of
+#: sds.advanced.hash_table.HashTableChaining:1
+msgid "Hash table using separate chaining for collision resolution."
+msgstr ""
+
+#: 90def041f011435a89e0bafcecec2336 of
+#: sds.advanced.hash_table.HashTableChaining:3
+msgid ""
+"Each slot in the internal array holds a list of ``(key, value)`` pairs. "
+"When multiple keys hash to the same index, they are stored together in "
+"the same chain (list). This strategy handles load factors above 1 without"
+" structural failure, though performance degrades linearly."
+msgstr ""
+
+#: f9db313cd9444054b9f380989dead561 of
+#: sds.advanced.hash_table.HashTableChaining:8
+msgid ""
+"Automatic resizing doubles the capacity when the load factor exceeds "
+"``max_load_factor``."
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst 1bf044aa1b5f4471aa5b2484f260015a
+#: 2a43028a5fc94a69a2658e9e9e56547e 4e96cef1edfb4a2ba9da9ec99ef5154b
+#: 5b7c2e3a82264e95bb73e323c1807744 6c2039c843664b2e95285749ec077cad
+#: 883506fe244f46358cfe8019be02730d 8f53e39aa8d94feb82d1dd1113416e5b
+#: b55237920a994f48b838d671897a99fb b726703ad9af4a8bbc039b41125568a4
+#: b781650a44114af0a048131b949d3ba7 c51bc9ad83b9495eb0394ef7ba66f0ce
+#: d6b4d644a27345da84ce56601c0ff371 e1c961a0dee444f5b04d5a6741efd5a2
+#: e30e53d7ae9147b4aece177a2fe68fcf
+msgid "Parameters"
+msgstr ""
+
+#: e22dcf2073fb43cfacd624d8f329b07d of
+#: sds.advanced.hash_table.HashTableChaining:11
+msgid "Initial number of slots. Must be ≥ 1. Default is 16."
+msgstr ""
+
+#: 7d8bb397cdd64063a436aad390e6ba44 of
+#: sds.advanced.hash_table.HashTableChaining:13
+msgid ""
+"Threshold load factor that triggers a resize. Must be > 0. Default is "
+"0.75."
+msgstr ""
+
+#: 0e0f1b89f73b4e2984868e96009b354c 694b5706b95c42eaa8e1bd009dc89256 of
+#: sds.advanced.hash_table.HashTableChaining:19
+#: sds.advanced.hash_table.HashTableOpenAddressing:18
+msgid "Current number of slots (read-only)."
+msgstr ""
+
+#: 570dfd0af4e040b0b628e3491a6d05dc 93d5915fbac3469ba283f66be3b31da3
+#: 9d70369d64f548538282396048dc5e74 d76f0c34774a4819b44b3022f7044afe of
+#: sds.advanced.hash_table.HashTableChaining
+#: sds.advanced.hash_table.HashTableOpenAddressing
+msgid "type"
+msgstr ""
+
+#: 7982f1e177d64b3d8a0bb2848e23afe6 aa18ac5d128b41c7950071a4f3295e94 of
+#: sds.advanced.hash_table.HashTableChaining:21
+#: sds.advanced.hash_table.HashTableOpenAddressing:20
+msgid "int"
+msgstr ""
+
+#: d91adbd9fe5944f6a4523436549964d8 of
+#: sds.advanced.hash_table.HashTableChaining:25
+msgid "Current ratio of stored entries to slots (read-only)."
+msgstr ""
+
+#: 43aef4c0121749a1bb3f7fe7e2cf47d4 ce72e381318e4409b8639ca2a5ad280e of
+#: sds.advanced.hash_table.HashTableChaining:27
+#: sds.advanced.hash_table.HashTableOpenAddressing:26
+msgid "float"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst 35e58762389741cfb2be8a0913d32b04
+#: 4a41d11a2ee14168b0fb09d88bf62e0b 64bb438963d345c0bfda7ec060abec87
+#: 7cafa9d074ae4ffdaeba000bf6accb13 f51a2e4ac5794efba2d0fc321b486594
+#: f816f88f7d234951b2a93295b5bbd3e7
+msgid "Raises"
+msgstr ""
+
+#: 106253eb4b0f4425b0b3ac9b11d07290 63ce28b0b7734827bcd61f162ec5a5e0 of
+#: sds.advanced.hash_table.HashTableChaining:29
+#: sds.advanced.hash_table.HashTableChaining.__init__:8
+msgid "If ``capacity < 1`` or ``max_load_factor <= 0``."
+msgstr ""
+
+#: 06b700571d254e62b2ab8b9062a06982 09bb1c5db3284ab09a373201636ac970
+#: 15201c0a6bab48fbaa73faafb0bb81a5 16556c648b56492888fbef84af0584f4
+#: 355df17f3db64cc08167ba4518b87d2a 3b6126ff3d284bffadae0e25ba8391d4
+#: 3cfd1f0987754eb59ef061f6ef58cae1 3e5e77f9ab7a4af680c0570f41e71def
+#: 45a6de840f1b470bbeb82ac4c271b4e4 5eb9ff38ccf84a0780355058749ebd17
+#: 5ec54e3e476149298187acf2cb2bdee7 62cc5517ec4642ae8ea688e387a510d7
+#: 67671031ec9e467a9822254a45b3658d 77be534b690f44c39272e2866c3d71fb
+#: 90de23c06b5b48afa8ae903d697140f3 a2651bcd2a6d443db4140d3d2dd65105
+#: a6130a77ee4942f1a2473293af483a37 a91266646c3e4fa8bd4ee15fb01a41ea
+#: b12d354710f14107a5a6f35defe129df b3820a1b4c4c49f4bc799ac26005a2a1
+#: ce70cece2b6d4ebb974aac20232c63d4 d737f4ef606e4eb682e25ffa67d0c3e7
+#: db7a52bfbd5f4e16894a414b745bae39 df18c60adb114ecbafb96d2273512ce5
+#: fb08daea9bae487499404212865ed009 fba1596562a343e59a369bcb09a4b96f of
+#: sds.advanced.hash_table.HashTableChaining:31
+#: sds.advanced.hash_table.HashTableChaining.__contains__:9
+#: sds.advanced.hash_table.HashTableChaining.__getitem__:11
+#: sds.advanced.hash_table.HashTableChaining.__init__:10
+#: sds.advanced.hash_table.HashTableChaining.__iter__:5
+#: sds.advanced.hash_table.HashTableChaining.__len__:6
+#: sds.advanced.hash_table.HashTableChaining.__repr__:6
+#: sds.advanced.hash_table.HashTableChaining.__setitem__:3
+#: sds.advanced.hash_table.HashTableChaining.__str__:6
+#: sds.advanced.hash_table.HashTableChaining.delete:9
+#: sds.advanced.hash_table.HashTableChaining.get:9
+#: sds.advanced.hash_table.HashTableChaining.items:5
+#: sds.advanced.hash_table.HashTableChaining.put:12
+#: sds.advanced.hash_table.HashTableOpenAddressing:30
+#: sds.advanced.hash_table.HashTableOpenAddressing.__contains__:9
+#: sds.advanced.hash_table.HashTableOpenAddressing.__getitem__:11
+#: sds.advanced.hash_table.HashTableOpenAddressing.__init__:10
+#: sds.advanced.hash_table.HashTableOpenAddressing.__iter__:5
+#: sds.advanced.hash_table.HashTableOpenAddressing.__len__:6
+#: sds.advanced.hash_table.HashTableOpenAddressing.__repr__:6
+#: sds.advanced.hash_table.HashTableOpenAddressing.__setitem__:3
+#: sds.advanced.hash_table.HashTableOpenAddressing.__str__:6
+#: sds.advanced.hash_table.HashTableOpenAddressing.delete:12
+#: sds.advanced.hash_table.HashTableOpenAddressing.get:9
+#: sds.advanced.hash_table.HashTableOpenAddressing.items:5
+#: sds.advanced.hash_table.HashTableOpenAddressing.put:13
+msgid "Examples"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:52
+#: ../../source/api/advanced/hash_table.rst:94 126f31db30d3427ca49d656061c30905
+#: 1588546324ff41fc9dc3cbe04601d58f 177d875b494e41aab29db6520271fcef
+#: 18e309efbbfd4ff88b05e0adf447dc11 28aec092520c40ed961470a470fc43e8
+#: 2b7accabdcef4fc08ae8c47154d305cf 354be6a2c0e94cae8f4d63a07a5457eb
+#: 46316ab7bfdc46119c78c655b8d731dc 468c86bbab5141e6bf879c87343faa2f
+#: 585ae8c210524ae5851797082992fb5a 5ef4cefe9e3a48d48a5bdf0f4a3e397e
+#: 71ccb3c2892347a9b52b5ec53425f996 882fe43e9b3d48b19a0987f8e1b8a61c
+#: 936024378a9444d9b89b37f7bd44f5dd ae215332a68240af9130f0e94334ead5
+#: b7e2c3012d5e4db593483ac7954c30ae c6b7759d95f048a99f616a905f880b5f
+#: c6c60a833ce94f2aa90ea21b91ee15f2 d10efb94e23d47b7a9613f62b7809f2c
+#: e41f2404b1b54ff5830af5529de93555 e959ec5ab4644645a4373aa6cd0bdb57
+#: ee0b089126e24152a509aab3d3d691c5 of
+#: sds.advanced.hash_table.HashTableChaining:45
+#: sds.advanced.hash_table.HashTableChaining.__contains__:18
+#: sds.advanced.hash_table.HashTableChaining.__init__:16
+#: sds.advanced.hash_table.HashTableChaining.__iter__:13
+#: sds.advanced.hash_table.HashTableChaining.clear:5
+#: sds.advanced.hash_table.HashTableChaining.delete:18
+#: sds.advanced.hash_table.HashTableChaining.get:18
+#: sds.advanced.hash_table.HashTableChaining.is_empty:6
+#: sds.advanced.hash_table.HashTableChaining.items:12
+#: sds.advanced.hash_table.HashTableChaining.put:22
+#: sds.advanced.hash_table.HashTableOpenAddressing:44
+#: sds.advanced.hash_table.HashTableOpenAddressing.__contains__:18
+#: sds.advanced.hash_table.HashTableOpenAddressing.__init__:16
+#: sds.advanced.hash_table.HashTableOpenAddressing.__iter__:13
+#: sds.advanced.hash_table.HashTableOpenAddressing.clear:5
+#: sds.advanced.hash_table.HashTableOpenAddressing.delete:21
+#: sds.advanced.hash_table.HashTableOpenAddressing.get:18
+#: sds.advanced.hash_table.HashTableOpenAddressing.is_empty:6
+#: sds.advanced.hash_table.HashTableOpenAddressing.items:12
+#: sds.advanced.hash_table.HashTableOpenAddressing.put:23
+msgid "Notes"
+msgstr ""
+
+#: 9d8e35404422457590615f9f683c2506 of
+#: sds.advanced.hash_table.HashTableChaining:47
+msgid "Keys must be hashable (support Python's built-in ``hash()``)."
+msgstr ""
+
+#: 8b9ff11609fe4dc3b3e08285dcc3543f of
+#: sds.advanced.hash_table.HashTableChaining:48
+msgid "Stored values may be any Python object, including ``None``."
+msgstr ""
+
+#: f84fa85d8cee4b44949e35611d00f368 of
+#: sds.advanced.hash_table.HashTableChaining:49
+msgid "Updating an existing key replaces its value without changing ``len()``."
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:45
+#: ../../source/api/advanced/hash_table.rst:87 7c71533d51f04b4ba1b689e109de23b6
+#: a5199fc8e3994a3d801c56fd0514f975
+msgid "Complexity Summary"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:50
+#: ../../source/api/advanced/hash_table.rst:92 40576fa3629242e884cbd04d3d3dc134
+#: e4bdab17fec84bec84c9a615c9df605b
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:51
+#: ../../source/api/advanced/hash_table.rst:93 7a2ea964fffd402db6e52fe7c7d4b489
+#: fa80211a3e124170abc6962cb44670fb
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:53
+#: ../../source/api/advanced/hash_table.rst:95 4549445b6e204656bcce045bc444d73e
+#: da92c10b06d54b41b5c0d070c132a329
+msgid "``put(key, value)``"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:54
+#: ../../source/api/advanced/hash_table.rst:57
+#: ../../source/api/advanced/hash_table.rst:60
+#: ../../source/api/advanced/hash_table.rst:63
+#: ../../source/api/advanced/hash_table.rst:96
+#: ../../source/api/advanced/hash_table.rst:99
+#: ../../source/api/advanced/hash_table.rst:102
+#: ../../source/api/advanced/hash_table.rst:105
+#: 58f35a80adc249689f9a33185651aee6 5d6d98c9f7f444efa617247d9dbe7a5e
+#: 6732fed1a92b457fbe49324f5e11d9c8 82524a5b79644a64881890bfb73addfe
+#: 8efeb2c2c8ef4b4cb1e8724d1743e95d 8ff3ee28f1c34ebaa925ce3faa2d9b04
+#: caddb704d0ee40adbaf1c41e7cd6a242 ccd276257a8942a0a4b5c738807c66a5
+msgid "O(1)*"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:55
+#: ../../source/api/advanced/hash_table.rst:97 83b59313cbe847f7b528cf27f457a6a6
+#: d95dddd26a63483b825702ec0e8ac068
+msgid "O(n) on resize"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:56
+#: ../../source/api/advanced/hash_table.rst:98 6a68ddc13bd54b5c8cc2b41b90458b02
+#: dbd65b3c3d4c4bec95ab38edc7c81a53
+msgid "``get(key)``"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:58
+#: ../../source/api/advanced/hash_table.rst:100
+#: 86f95199280a4998b421893e58a256e0 9ad49287e11c4f9db579214516108e2b
+msgid "Returns None if absent"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:59
+#: ../../source/api/advanced/hash_table.rst:101
+#: 5b311d05a6a14a3dbfebe964c04913eb a17b4e8f2dd545a0b2ffdc540ab33791
+msgid "``delete(key)``"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:61 83d98bb401a5495cb120fcac9a805ad6
+msgid "Returns False if absent"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:62
+#: ../../source/api/advanced/hash_table.rst:104
+#: 486e46aa652b4576abf0d921671ba0b6 c6890e9455944839a51d13ac56db77bf
+msgid "``__contains__``"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:64
+#: ../../source/api/advanced/hash_table.rst:106
+#: cf2cb02420c14f0087b058d2d8da012b ed008fb18a574ee192a0b3b4d5d9243a
+msgid "\\* average case"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:65
+#: ../../source/api/advanced/hash_table.rst:107
+#: 0751e5d35c6540f7ad2e3c0b41424e15 106b917bc1964797abc179c7fede5070
+msgid "``__iter__``"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:66 cc5ef170f9cb43e68e52ff9282d7ff65
+msgid "O(capacity + n)"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:67 bc4f965f2260452fb741933ca6a563a4
+msgid "Unspecified order"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:68
+#: ../../source/api/advanced/hash_table.rst:110
+#: 7ee06399086545669c3f7699eed857a6 f278fc92612c477abec926f0ff04ce7e
+msgid "``clear()``"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:69
+#: ../../source/api/advanced/hash_table.rst:108
+#: ../../source/api/advanced/hash_table.rst:111
+#: 3e275820f1664735a5362a8995c969ee 7d76b5b82324496fae6eb8938d359f7a
+#: f16c4990a9d0418da224f58763205943
+msgid "O(capacity)"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:70 289f75169b4947b19013f6a774a4a98e
+msgid "Resets all buckets"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:71
+#: ../../source/api/advanced/hash_table.rst:113
+#: 43fc906b5a4f4ecdb8942806e9ee1fd0 51a6f2c5d5fa49b7acacf004a42cd52c
+msgid "Space"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:72
+#: ../../source/api/advanced/hash_table.rst:114
+#: 011388b8ad684030b32f57de54a47e36 dea418c22b0f4c9985cd9943de0706ea
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:73 54666823281b4e5fa9c64679e60cd50f
+msgid "Plus bucket overhead"
+msgstr ""
+
+#: aa6945422eb64b00b7dcf1cf02327722 of
+#: sds.advanced.hash_table.HashTableChaining.__init__:1
+msgid "Initialise an empty chaining hash table."
+msgstr ""
+
+#: f3693e935dcb4598bd3091deec36b2ab of
+#: sds.advanced.hash_table.HashTableChaining.__init__:3
+msgid "Initial number of slots (default 16)."
+msgstr ""
+
+#: 539d68224c064302bcd233e3471e2e89 of
+#: sds.advanced.hash_table.HashTableChaining.__init__:5
+msgid "Resize threshold (default 0.75)."
+msgstr ""
+
+#: 7185e4ed455949e5877739ff2dee1e80 7d4c01c761644c689fac8619b11f88bc
+#: b000f9f1ad3547c0a945c691caca7a22 ba8eb93318d0416f997227bf3c0547f7
+#: c4765e66d3f44e339077d845b7c5dc3f eba0ef759d5c47218e193d5acfa5b4c5 of
+#: sds.advanced.hash_table.HashTableChaining.__init__:18
+#: sds.advanced.hash_table.HashTableChaining.clear:7
+#: sds.advanced.hash_table.HashTableOpenAddressing.__init__:18
+#: sds.advanced.hash_table.HashTableOpenAddressing.__iter__:15
+#: sds.advanced.hash_table.HashTableOpenAddressing.clear:7
+#: sds.advanced.hash_table.HashTableOpenAddressing.items:14
+msgid "Time complexity: O(capacity)."
+msgstr ""
+
+#: a2d2a5ea3e964e47bbdcb573f60c2fcf bd2a3a92c56646a1847b867c53a8406c of
+#: sds.advanced.hash_table.HashTableChaining.capacity:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.capacity:1
+msgid "Current number of slots."
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst 0e49997428354753890f233fb809c0ad
+#: 1aefc8c3cdd94c4da00e83e90b81e6f9 1d28ca8f57ce42b3af6ea0742a534923
+#: 26cf2e0901f642f68d057b5b5d7c05fd 339e88d770cd46068c54ca3e4c798441
+#: 44b38586f0e64c8d8010637ff5d5b2b0 45b6a3e7d8df467cbe180a51750981df
+#: 51b625ecc72c468ca0062a2273cc9b1f 5f43a1fb4a22404d87366cb800f6a7aa
+#: 7b53446bf256430bb265b3dd3f086068 7bc44667e0df4b93ab3571a4753f018b
+#: 7d26040ff1c04b7199037eccc935e320 9b1868eba31842f0a8aba44cfba72e3d
+#: ab693e33432c465e9555d8b68b50275b b5ca1d03b47a4692b88ec6158d3c628e
+#: b6a2b46c00b04a68807637a699f01d66 b7ebabf499414d7dbfdf230e59e12e8d
+#: f29ab7baad2e4b52ad2957ebc203def8 f53da59205924acc9e5577879145ed87
+#: f78b59dd6d3a4545a8543bd3b396af86
+msgid "Returns"
+msgstr ""
+
+#: 14887e7873bd4eee8a1cd740ad609067 of
+#: sds.advanced.hash_table.HashTableChaining.capacity:3
+msgid "Number of buckets in the internal array."
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst 1e6c8a2d922a4b6ab6bdec825a610e71
+#: 364f9abb973c40a7830b780eab58eec8 37b0660dc686478f8cd2c2f9fdf429ae
+#: 415ea644223146aaa2bdf48f6591424d 4a65f68c5ff34ceba3bdf3bed03c13de
+#: 4abdb8c295c0439c94900eeb318739ad 5b4ac213513546b4b380864b78e9511f
+#: 6383ec80f99b40d29d943f26216e4055 7128557a55b2470d8feb7d2479c3d5bd
+#: 7a8dc3fb2d084819b0219474fb32335f 7ec3cb3424bc4c46862da325c0d795b5
+#: 846d2ccc0b3a47cfb2c0c4c4905033be 887684d259eb4bdd957d54b64cb08903
+#: 9545f0410f894d109c3aa625a83d56f8 a5a990250412484da59514dd5cedd4f6
+#: ad9b029908094a9e88b43eae556b3b40 be6a95e9bb954387ab84b8b61b78b8b1
+#: c02a47a6f97649b0923912b51b57390b dee7d934c01b4e54bb3814e16bdb5ce1
+#: e18a7c208fa849ee95aa40d4a540af4a
+msgid "Return type"
+msgstr ""
+
+#: 854885153c54459697cc5754f5b9b26e of
+#: sds.advanced.hash_table.HashTableChaining.load_factor:1
+msgid "Ratio of stored entries to available slots."
+msgstr ""
+
+#: 76dcc1f8f9b341e8bb83d37fd86aad96 of
+#: sds.advanced.hash_table.HashTableChaining.load_factor:3
+msgid "``len(self) / capacity``."
+msgstr ""
+
+#: 7c8078127fdc43b1b426b73dcfe9d350 of
+#: sds.advanced.hash_table.HashTableChaining.is_empty:1
+msgid "Return True if the table contains no entries."
+msgstr ""
+
+#: 50af7857ca9344cc8befc09e1cd22d89 916830ab087748a9aae55b5119589980 of
+#: sds.advanced.hash_table.HashTableChaining.is_empty:3
+#: sds.advanced.hash_table.HashTableOpenAddressing.is_empty:3
+msgid "True if size is 0."
+msgstr ""
+
+#: 0bbcf97e53cd4ad1a7385abc6c71ea1e 7d0cbd3219ff4fc78b69ae9bd04bbac4 of
+#: sds.advanced.hash_table.HashTableChaining.is_empty:8
+#: sds.advanced.hash_table.HashTableOpenAddressing.is_empty:8
+msgid "Time complexity: O(1)."
+msgstr ""
+
+#: 741af6451c954a13afccc8eb26824a05 of
+#: sds.advanced.hash_table.HashTableChaining.clear:1
+msgid "Remove all entries from the table."
+msgstr ""
+
+#: ea916e0025314a78afb851fc8b6aff4e of
+#: sds.advanced.hash_table.HashTableChaining.clear:3
+msgid "Resets all buckets without changing capacity."
+msgstr ""
+
+#: 21266e68c2b847949df2b99fc918108a 8096a0d609e6405297a713bac7cb40a2 of
+#: sds.advanced.hash_table.HashTableChaining.put:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.put:1
+msgid "Insert or update a key-value pair."
+msgstr ""
+
+#: 99531ff341964ef6a95fd5b2c864b25a of
+#: sds.advanced.hash_table.HashTableChaining.put:3
+msgid ""
+"If *key* already exists its value is updated in place. Otherwise a new "
+"entry is appended to the appropriate chain. Triggers a resize if the load"
+" factor exceeds ``max_load_factor`` after insertion."
+msgstr ""
+
+#: 41ea966258794a6d9eba836fccf93770 99523d021bd84d1a8ad53c4b0dce35d1 of
+#: sds.advanced.hash_table.HashTableChaining.put:7
+#: sds.advanced.hash_table.HashTableOpenAddressing.put:8
+msgid "Hashable key."
+msgstr ""
+
+#: 0eaf797ad3be48b8a1ad0811dda78b56 4a1b48e904a1479abdfec603732983ae of
+#: sds.advanced.hash_table.HashTableChaining.put:9
+#: sds.advanced.hash_table.HashTableOpenAddressing.put:10
+msgid "Value to store."
+msgstr ""
+
+#: 2386163ac6cf4020b921c3fc3d4bdf4b 29541aba1ace4ae3a93a3dc26ad416cf of
+#: sds.advanced.hash_table.HashTableChaining.put:24
+#: sds.advanced.hash_table.HashTableOpenAddressing.put:25
+msgid "Time complexity: O(1) average, O(n) on resize."
+msgstr ""
+
+#: 38cd2d6375e94cf9aaeeb8f22b80241e 5786c2c9f33a4321ac92e37f51c7959f of
+#: sds.advanced.hash_table.HashTableChaining.get:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.get:1
+msgid "Return the value for *key*, or None if absent."
+msgstr ""
+
+#: 90f95c419fb848348b4df6b6bdfb2e74 d0de12fd56264b379f0bd573190d44b5 of
+#: sds.advanced.hash_table.HashTableChaining.get:3
+#: sds.advanced.hash_table.HashTableOpenAddressing.get:3
+msgid "Key to look up."
+msgstr ""
+
+#: 8685a9ab2a3241888e46dc0f2dfb1e37 f2dd4232891b431aac3afb10b8798ce5 of
+#: sds.advanced.hash_table.HashTableChaining.get:6
+#: sds.advanced.hash_table.HashTableOpenAddressing.get:6
+msgid "Stored value, or None if the key is not present."
+msgstr ""
+
+#: 253475916e424de6b8a5deccc8d67301 5747e45bac874e3da03cfaf0e219d9ff
+#: 8499c6c1418e4c9c9a59b2b8e19104a8 943ade12121548ada7058c33ba5d9f03
+#: d4da0a16725f4b76a30f3b36e5d9fb77 d749d0c8c255484a88778edb08739c33 of
+#: sds.advanced.hash_table.HashTableChaining.__contains__:20
+#: sds.advanced.hash_table.HashTableChaining.delete:20
+#: sds.advanced.hash_table.HashTableChaining.get:20
+#: sds.advanced.hash_table.HashTableOpenAddressing.__contains__:20
+#: sds.advanced.hash_table.HashTableOpenAddressing.delete:23
+#: sds.advanced.hash_table.HashTableOpenAddressing.get:20
+msgid "Time complexity: O(1) average."
+msgstr ""
+
+#: 95d4d7b2b341451b897785853c139d2a ae2de2b02d55455db302af829468dd55 of
+#: sds.advanced.hash_table.HashTableChaining.delete:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.delete:1
+msgid "Remove the entry with the given key."
+msgstr ""
+
+#: 7254edf1bb2a408788f9f41899780e8a a5cf383a78ca4e8f8f9796da78830c56 of
+#: sds.advanced.hash_table.HashTableChaining.delete:3
+#: sds.advanced.hash_table.HashTableOpenAddressing.delete:6
+msgid "Key to remove."
+msgstr ""
+
+#: 553602dac6d64dae86976f0280c48a2f c7897f654f324fdab31609682ba6f82c of
+#: sds.advanced.hash_table.HashTableChaining.delete:6
+#: sds.advanced.hash_table.HashTableOpenAddressing.delete:9
+msgid "True if the key was found and removed, False otherwise."
+msgstr ""
+
+#: a92baf73364a4c8f8b192b43106dadbb adfa7f02195a4ec4b31950f71e682805 of
+#: sds.advanced.hash_table.HashTableChaining.__contains__:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.__contains__:1
+msgid "Test whether *key* is in the table."
+msgstr ""
+
+#: 3f4122e411d64f409963908b72af036f bea174aadedc4848be8f079058a33d30 of
+#: sds.advanced.hash_table.HashTableChaining.__contains__:3
+#: sds.advanced.hash_table.HashTableOpenAddressing.__contains__:3
+msgid "Key to test."
+msgstr ""
+
+#: 9541ddd9dc0b45e3b7b7d4c3398ac31d cd89519690094fa2946068fc1ae067d9 of
+#: sds.advanced.hash_table.HashTableChaining.__contains__:6
+#: sds.advanced.hash_table.HashTableOpenAddressing.__contains__:6
+msgid "True if present."
+msgstr ""
+
+#: 0ef9a244e4bf435da73a11d56e4a8bc8 e5273bcd609e4136b4c7ce4be6e6b6d3 of
+#: sds.advanced.hash_table.HashTableChaining.__len__:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.__len__:1
+msgid "Return the number of stored key-value pairs."
+msgstr ""
+
+#: 0d96faa7a68140cd8db4b234ae204d1c of
+#: sds.advanced.hash_table.HashTableChaining.__len__:3
+msgid "Number of entries."
+msgstr ""
+
+#: 0c916bca0c7b467c9378cc8df59ce18b 2a66d63db10347b1b106bc79a77acf70 of
+#: sds.advanced.hash_table.HashTableChaining.__iter__:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.__iter__:1
+msgid "Iterate over all keys in unspecified order."
+msgstr ""
+
+#: 888a36bd11cf479fb0d1b66800da281f 8fcdffe02d764ec3b08ba2fb9732d39c
+#: 99a43b2bce8a415382e2fc82f89cd079 e16ab950d00e4501ad0a863afaad851c of
+#: sds.advanced.hash_table.HashTableChaining.__iter__
+#: sds.advanced.hash_table.HashTableChaining.items
+#: sds.advanced.hash_table.HashTableOpenAddressing.__iter__
+#: sds.advanced.hash_table.HashTableOpenAddressing.items
+msgid "Yields"
+msgstr ""
+
+#: 1bba2e0e1108493f8940cdb07e834f02 of
+#: sds.advanced.hash_table.HashTableChaining.__iter__:3
+msgid "*Any* -- One key per stored entry."
+msgstr ""
+
+#: 281535a41d034701b9f88f2eb42c311d 36721f6fbe424a159083d41bd148e3ca of
+#: sds.advanced.hash_table.HashTableChaining.__iter__:15
+#: sds.advanced.hash_table.HashTableChaining.items:14
+msgid "Time complexity: O(capacity + n)."
+msgstr ""
+
+#: 7e6e991966f84850b42e019640784384 b2676676a307468a93323749a84ef46d of
+#: sds.advanced.hash_table.HashTableChaining.items:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.items:1
+msgid "Iterate over ``(key, value)`` pairs in unspecified order."
+msgstr ""
+
+#: 881a295e95cd4c53bc3d3b250bfa0a37 of
+#: sds.advanced.hash_table.HashTableChaining.items:3
+msgid "*tuple[Any, Any]* -- ``(key, value)`` pairs."
+msgstr ""
+
+#: 3082329c453d480aa588ac75bf293436 8cde4c56a4154af386531e9f26bddc35 of
+#: sds.advanced.hash_table.HashTableChaining.__getitem__:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.__getitem__:1
+msgid "Return value for *key*, raising KeyError if absent."
+msgstr ""
+
+#: 0cd4ce0c57294d35bbcde1b1cc8bab08 b84c785b90cf475789e6f9e5a0efef58 of
+#: sds.advanced.hash_table.HashTableChaining.__getitem__:3
+#: sds.advanced.hash_table.HashTableOpenAddressing.__getitem__:3
+msgid "Key to retrieve."
+msgstr ""
+
+#: 1e026f4e070b4961ac622d514d5448d8 b8748f93cd89480bbc74523238792221 of
+#: sds.advanced.hash_table.HashTableChaining.__getitem__:6
+#: sds.advanced.hash_table.HashTableOpenAddressing.__getitem__:6
+msgid "Associated value."
+msgstr ""
+
+#: 93fae2d6a47149859e8a32c3fbaea671 of
+#: sds.advanced.hash_table.HashTableChaining.__getitem__:9
+msgid "If *key* is not in the table."
+msgstr ""
+
+#: 26530b67c34d4e64aaab718c1862bf81 57818867f9ed46b99cc65fdb2fb1076b of
+#: sds.advanced.hash_table.HashTableChaining.__setitem__:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.__setitem__:1
+msgid "Syntactic sugar for put()."
+msgstr ""
+
+#: 5a18297d374a4d61ba6e7fe5d3f39798 9d8ad39a6307455eabb38d1031413874 of
+#: sds.advanced.hash_table.HashTableChaining.__repr__:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.__repr__:1
+msgid "Return a detailed string representation."
+msgstr ""
+
+#: 55fc7a8b546f46759b0883ab40674073 of
+#: sds.advanced.hash_table.HashTableChaining.__repr__:3
+msgid "``HashTableChaining(size=n, capacity=m, load_factor=x.xx)``."
+msgstr ""
+
+#: a6e4243e7b384787a24b4ab19a8c8deb c83234202670472aa1ae3e1128dfa8db of
+#: sds.advanced.hash_table.HashTableChaining.__str__:1
+#: sds.advanced.hash_table.HashTableOpenAddressing.__str__:1
+msgid "Return a concise string representation."
+msgstr ""
+
+#: 4d7ee787acf94578bf74486a7739736d c21ceb9d26fa4c79927c219d1512328e of
+#: sds.advanced.hash_table.HashTableChaining.__str__:3
+#: sds.advanced.hash_table.HashTableOpenAddressing.__str__:3
+msgid "Human-readable summary."
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:78 1429c7fbc87b427bb75d24235713a5fb
+msgid "HashTableOpenAddressing"
+msgstr ""
+
+#: 52f09c9a2ec4400f9fccea21504d0c1c of
+#: sds.advanced.hash_table.HashTableOpenAddressing:1
+msgid "Hash table using open addressing with linear probing."
+msgstr ""
+
+#: 20cb279e77de46718dd6f16948fa3a96 of
+#: sds.advanced.hash_table.HashTableOpenAddressing:3
+msgid ""
+"All entries are stored directly in the primary array. On collision, the "
+"algorithm probes subsequent slots (``index + 1``, ``index + 2``, …) until"
+" an empty slot is found. Deleted slots are marked with a sentinel "
+"(``_DELETED``) so that probing chains are not broken."
+msgstr ""
+
+#: 49767894538745afbc56d1c7a2f688c3 of
+#: sds.advanced.hash_table.HashTableOpenAddressing:8
+msgid ""
+"Automatic resizing doubles the capacity when the load factor (including "
+"tombstones) exceeds ``max_load_factor``."
+msgstr ""
+
+#: 47348f1b0fcd4fd6bdac9ad9d28f88ea of
+#: sds.advanced.hash_table.HashTableOpenAddressing:11
+msgid "Initial number of slots. Must be ≥ 2. Default is 16."
+msgstr ""
+
+#: c93c70fed0f34ebca5ba50566e6edb2c of
+#: sds.advanced.hash_table.HashTableOpenAddressing:13
+msgid "Resize threshold. Must be in (0.0, 1.0). Default is 0.6."
+msgstr ""
+
+#: be2197daa3e046a58c5b058899be8a76 of
+#: sds.advanced.hash_table.HashTableOpenAddressing:24
+msgid "Ratio of active entries to slots (read-only). Excludes tombstones."
+msgstr ""
+
+#: 35754c0ec67041ae97b735201c8fcf33 38aeb5a1f22b41ec822896accd54de1c of
+#: sds.advanced.hash_table.HashTableOpenAddressing:28
+#: sds.advanced.hash_table.HashTableOpenAddressing.__init__:8
+msgid "If ``capacity < 2`` or ``max_load_factor`` not in (0, 1)."
+msgstr ""
+
+#: a72544a3a3854a14844573e6e6a17e1b of
+#: sds.advanced.hash_table.HashTableOpenAddressing:46
+msgid "Keys must be hashable and support ``==``."
+msgstr ""
+
+#: eaede48bee4c498cbf14449fc1ea2a62 of
+#: sds.advanced.hash_table.HashTableOpenAddressing:47
+msgid "Load factor must remain below 1.0 (enforced by max_load_factor < 1.0)."
+msgstr ""
+
+#: 1fc26b07d1c74fa79c515d231c432681 of
+#: sds.advanced.hash_table.HashTableOpenAddressing:48
+msgid ""
+"Tombstones (``_DELETED``) accumulate after deletions; a resize clears "
+"them by rehashing all live entries."
+msgstr ""
+
+#: 3b6f39b366884c50b3ceb3e52c8cacce of
+#: sds.advanced.hash_table.HashTableOpenAddressing:50
+msgid ""
+"Linear probing suffers from *primary clustering*. For production use with"
+" adversarial input, consider quadratic probing or double hashing."
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:103
+#: 4ad8f03c187f40459339b4a0e2933c0b
+msgid "Leaves tombstone"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:109
+#: dacf1f4d886e436c9a9c184b9233b951
+msgid "Skips tombstones"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:112
+#: da2e62d820ed42028bbd535c0825656a
+msgid "Removes tombstones"
+msgstr ""
+
+#: ../../source/api/advanced/hash_table.rst:115
+#: 5dbe09b495d04fc9a5f52ec829a17d47
+msgid "Compact array"
+msgstr ""
+
+#: 9c16893afeae48298523fec4a3e47b22 of
+#: sds.advanced.hash_table.HashTableOpenAddressing.__init__:1
+msgid "Initialise an empty open-addressing hash table."
+msgstr ""
+
+#: 44b90035c8bd4bed9cd2d830dbba2148 of
+#: sds.advanced.hash_table.HashTableOpenAddressing.__init__:3
+msgid "Initial number of slots (default 16). Must be ≥ 2."
+msgstr ""
+
+#: 7a59cb1647a846a8b096a551ce6189e0 of
+#: sds.advanced.hash_table.HashTableOpenAddressing.__init__:5
+msgid "Resize threshold (default 0.6). Must be in (0.0, 1.0)."
+msgstr ""
+
+#: 2cb36349eeeb441a840ed0f70475c68a of
+#: sds.advanced.hash_table.HashTableOpenAddressing.capacity:3
+msgid "Size of the internal array."
+msgstr ""
+
+#: e4667fd6fb714c4f8c894cf8c3180991 of
+#: sds.advanced.hash_table.HashTableOpenAddressing.load_factor:1
+msgid "Ratio of live entries to total slots."
+msgstr ""
+
+#: b4c4ea104961435788e97e2ca4d86405 of
+#: sds.advanced.hash_table.HashTableOpenAddressing.load_factor:3
+msgid "``len(self) / capacity``. Tombstones are excluded."
+msgstr ""
+
+#: adbfb87d2e64419abb0324f965f0743c of
+#: sds.advanced.hash_table.HashTableOpenAddressing.is_empty:1
+msgid "Return True if the table contains no live entries."
+msgstr ""
+
+#: 333691b173b34476b84f5f1a27d08c7a of
+#: sds.advanced.hash_table.HashTableOpenAddressing.clear:1
+msgid "Remove all entries and tombstones from the table."
+msgstr ""
+
+#: d615010a591341eb8010cb59442d7f35 of
+#: sds.advanced.hash_table.HashTableOpenAddressing.clear:3
+msgid "Resets the slot array without changing capacity."
+msgstr ""
+
+#: e8f06e6088564773823debd71f4a5ce3 of
+#: sds.advanced.hash_table.HashTableOpenAddressing.put:3
+msgid ""
+"Probes linearly from the home slot. If *key* already exists its value is "
+"updated; otherwise the entry is placed in the first available slot (empty"
+" or tombstone). Triggers a resize when the live load factor exceeds "
+"``max_load_factor``."
+msgstr ""
+
+#: 4dbb1f441e92461f88e15fbbb60c7c0a of
+#: sds.advanced.hash_table.HashTableOpenAddressing.delete:3
+msgid ""
+"Marks the slot with a tombstone (``_DELETED``) so that probing chains "
+"remain intact. Tombstones are cleared on the next resize."
+msgstr ""
+
+#: aa710242c55545e1bd076c3d1b4c1b47 of
+#: sds.advanced.hash_table.HashTableOpenAddressing.__len__:3
+msgid "Number of live entries (tombstones excluded)."
+msgstr ""
+
+#: bbbcdf1b84de4f5397865bc0c24f6776 of
+#: sds.advanced.hash_table.HashTableOpenAddressing.__iter__:3
+msgid "*Any* -- One key per live entry."
+msgstr ""
+
+#: ad2cc5567b1c41bba5bdbdb74fc1015d of
+#: sds.advanced.hash_table.HashTableOpenAddressing.items:3
+msgid "*tuple[Any, Any]* -- ``(key, value)`` pairs for all live entries."
+msgstr ""
+
+#: db8daf230ea548369096fb15a915a897 of
+#: sds.advanced.hash_table.HashTableOpenAddressing.__getitem__:9
+msgid "If *key* is not present."
+msgstr ""
+
+#: c3704e265b3a4b1fac74207cc1d9b90a of
+#: sds.advanced.hash_table.HashTableOpenAddressing.__repr__:3
+msgid "``HashTableOpenAddressing(size=n, capacity=m, load_factor=x.xx)``."
+msgstr ""
+

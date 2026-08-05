@@ -1,0 +1,377 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:2
+#: 3211fb80635d49ec8166a80ccf374ae7
+msgid "sds.tree.RedBlackTree"
+msgstr ""
+
+#: 63bcbffc06704304a5d4fea46ae03e1c of sds.tree.balanced.RedBlackTree:1
+msgid "Red-Black Tree - Self-balancing binary search tree."
+msgstr ""
+
+#: ef8db26580c540cbb0da6f443c10354d of sds.tree.balanced.RedBlackTree:3
+msgid ""
+"A Red-Black tree is a BST with one extra bit per node: color (RED or "
+"BLACK). The tree maintains balance using the following properties:"
+msgstr ""
+
+#: 91de8d8db254403580f8b1cd043672e3 of sds.tree.balanced.RedBlackTree:6
+msgid "Every node is either RED or BLACK"
+msgstr ""
+
+#: d7528129bbdb4a56a4bd2c8355f0d9df of sds.tree.balanced.RedBlackTree:7
+msgid "The root is always BLACK"
+msgstr ""
+
+#: ddb59f34eea44690a7d4d760d8a81c66 of sds.tree.balanced.RedBlackTree:8
+msgid "All leaves (NIL) are BLACK"
+msgstr ""
+
+#: 9e240c37cbff4c47be14e0c2bea91f9d of sds.tree.balanced.RedBlackTree:9
+msgid "RED nodes cannot have RED children (no two RED nodes in a row)"
+msgstr ""
+
+#: bbdbd86a51a34f69871f2b32a60cdf4e of sds.tree.balanced.RedBlackTree:10
+msgid "Every path from root to leaf has the same number of BLACK nodes"
+msgstr ""
+
+#: b2f0bc76a08d4b24914f2780de0f63d8 of sds.tree.balanced.RedBlackTree:12
+msgid ""
+"These properties ensure the tree remains approximately balanced, "
+"guaranteeing O(log n) operations."
+msgstr ""
+
+#: 5b307e669be84cec9d7532d1e4dca3e8 of sds.tree.balanced.RedBlackTree:17
+msgid "The root node of the tree."
+msgstr ""
+
+#: 1d224dd4f93748b2aeb7b6d336095a9a 7fca183ca4c54bc19f4a1c658948e0bf of
+#: sds.tree.balanced.RedBlackTree
+msgid "type"
+msgstr ""
+
+#: b059830b2caa4a91a0df3b45d2cc8776 of sds.tree.balanced.RedBlackTree:19
+msgid "RedBlackNode or None"
+msgstr ""
+
+#: 01a0e467d181452d81690baed09d8c66 of sds.tree.balanced.RedBlackTree:23
+msgid "The number of nodes in the tree."
+msgstr ""
+
+#: dea53b3568a548c7863e543a04f6f157 of sds.tree.balanced.RedBlackTree:25
+msgid "int"
+msgstr ""
+
+#: 07e07aee842347b995e636243db1d89e 644277bd0624482f8c486326a2c117c0 of
+#: sds.tree.balanced.RedBlackTree:27 sds.tree.balanced.RedBlackTree.insert:6
+msgid "Examples"
+msgstr ""
+
+#: 0373bbb2441440ee8c73cec4d431e481 85424f165e444faeba7284e753c0319b
+#: 8ef0adb60b014325ae447b4ed106253a d7d0c4ca72114659b066e2a6ccf7d858
+#: f08053bf76f541fea9c19e95d2ec626e of sds.tree.balanced.RedBlackTree:37
+#: sds.tree.balanced.RedBlackTree.height:6
+#: sds.tree.balanced.RedBlackTree.insert:14
+#: sds.tree.balanced.RedBlackTree.remove:12
+#: sds.tree.balanced.RedBlackTree.search:9
+msgid "Notes"
+msgstr ""
+
+#: 26c8fcf8e47b4148810433db94596e0f of sds.tree.balanced.RedBlackTree:39
+msgid ""
+"Time Complexity (guaranteed): - Insert: O(log n) - Search: O(log n) - "
+"Remove: O(log n)"
+msgstr ""
+
+#: 394080d879124a118e06021feb3b6723 of sds.tree.balanced.RedBlackTree:44
+msgid ""
+"Red-Black trees have less strict balancing than AVL trees, leading to "
+"faster insertions/deletions but slightly slower lookups."
+msgstr ""
+
+#: 5521c2b49ba340fcbe2352a56f1d9c44 of sds.tree.balanced.RedBlackTree:49
+msgid ":obj:`AVLTree`"
+msgstr ""
+
+#: b5ebd35637294cac998577ed6ce045d8 of sds.tree.balanced.RedBlackTree:50
+msgid "More strictly balanced alternative."
+msgstr ""
+
+#: 5c62b2ca1e114a8a9b77f3e5d906d3ca of sds.tree.balanced.RedBlackTree:52
+msgid ":obj:`BinarySearchTree`"
+msgstr ""
+
+#: 8fce5ac75da24db29e59ae4734b3e43d of sds.tree.balanced.RedBlackTree:53
+msgid "Unbalanced BST."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 51aa7ef2298d4126b44891be1039e1bf 666fde8b41f0457db1f567ab778d0257
+#: e049a03a4cca423989ef7e729b149a05 of
+#: sds.tree.balanced.RedBlackTree.__init__:1
+msgid "Initialize an empty Red-Black tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:13
+#: 966faa95912e470aa4f114d78f1068ff
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: d6af5c9cf38b460daab53d817b7727d1
+msgid ":py:obj:`__init__ <sds.tree.RedBlackTree.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 26453bb3df38422f8c2182f8d237a843
+msgid ":py:obj:`clear <sds.tree.RedBlackTree.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: a749cc5ec0fa4c42bd974136e5b65549 f71d5bc0e5b94761b50e32b12bc75ab1 of
+#: sds.tree.balanced.RedBlackTree.clear:1
+msgid "Remove all nodes from the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: a3f4a19c210547a8b888390396029ce3
+msgid ":py:obj:`height <sds.tree.RedBlackTree.height>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 49adc7fa5a3d4316872a8936456f3b6a 7be040700df54d149e2f1a167209ee7c of
+#: sds.tree.balanced.RedBlackTree.height:1
+msgid "Return the height of the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 14146187eec1490dba26fe8924754bab
+msgid ""
+":py:obj:`inorder_traversal <sds.tree.RedBlackTree.inorder_traversal>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 743633d81bda458caa063052bb04d29c d395141b19c14d6fa625df70c955afd0 of
+#: sds.tree.balanced.RedBlackTree.inorder_traversal:1
+msgid "Inorder traversal."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 9a57cbcff39d4fd79575256bd51928ec
+msgid ":py:obj:`insert <sds.tree.RedBlackTree.insert>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 7f8c820e636b43a1826a9d2896a6abe1 b095f3572001448c87289a7f32d545fa of
+#: sds.tree.balanced.RedBlackTree.insert:1
+msgid "Insert an item maintaining Red-Black properties."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 440e35c313cf4054b48e7e4ab1dfa374
+msgid ":py:obj:`is_empty <sds.tree.RedBlackTree.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: d3939342a5c84917a6580b7332e28714
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 25ce02e855364d6f82cb25191f73d08d
+msgid ""
+":py:obj:`level_order_traversal "
+"<sds.tree.RedBlackTree.level_order_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 96b1f98e7d034c15aa36446467fc1fe5 e9469a89433f4df7b072cab30043bb7c of
+#: sds.tree.balanced.RedBlackTree.level_order_traversal:1
+msgid "Level order traversal."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: b7d6990a63064850a31ba3e2c76e0504
+msgid ""
+":py:obj:`postorder_traversal "
+"<sds.tree.RedBlackTree.postorder_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 5acedd6b5ada48ac875c597577f0c8a1 a308b931dd094ecc927ef85dde51ac01 of
+#: sds.tree.balanced.RedBlackTree.postorder_traversal:1
+msgid "Postorder traversal."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 07f6b20156bd403dac0dbeb5e674042c
+msgid ""
+":py:obj:`preorder_traversal <sds.tree.RedBlackTree.preorder_traversal>`\\"
+" \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 279c481f49c14bdf81319e907baa0426 7efd95d346bf4007bfc7a80275c7227b of
+#: sds.tree.balanced.RedBlackTree.preorder_traversal:1
+msgid "Preorder traversal."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 40d2d26d713b487695e3880c09e24889
+msgid ":py:obj:`remove <sds.tree.RedBlackTree.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: d17b8a5b498c4e03bcbed174792de1ee d9148a88124041bc873da9aca0f67203 of
+#: sds.tree.balanced.RedBlackTree.remove:1
+msgid "Remove an item maintaining Red-Black properties."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 21d4190c39564168adda224eb41e7070
+msgid ":py:obj:`search <sds.tree.RedBlackTree.search>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:31:<autosummary>:1
+#: 3492eaa563724a4fb76f9e7f8a187cd6 bfe676b12d0c407abcee34089904a077 of
+#: sds.tree.balanced.RedBlackTree.search:1
+msgid "Search for an item."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst:33
+#: 273f75da5caf49e5995cb0d1969aaafc
+msgid "Attributes"
+msgstr ""
+
+#: 2aff2a532b044512abc830b4d31599cb of
+#: sds.tree.balanced.RedBlackTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`root <sds.tree.RedBlackTree.root>`\\"
+msgstr ""
+
+#: 946c95adf6fe4a76a435d45d872b7b03 adf952b67e8a48aca9affe2faa120ea3 of
+#: sds.tree.RedBlackTree.root:1
+#: sds.tree.balanced.RedBlackTree.__init__:1:<autosummary>:1
+msgid "Get the root node."
+msgstr ""
+
+#: da064cb587394f60a9ba709e2867955e of
+#: sds.tree.balanced.RedBlackTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.RedBlackTree.size>`\\"
+msgstr ""
+
+#: 62e082feedf1432a95ef8e5cce0dd90c of
+#: sds.tree.balanced.RedBlackTree.__init__:1:<autosummary>:1
+msgid "Get the number of nodes in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst
+#: 3dbd3f0ad7de4559aa69dce2d34c6a01 5dcae911117c4b8bb8bb02d220c15cc4
+#: d1d65743f5ac4f92ae70a283b1b49577
+msgid "Returns"
+msgstr ""
+
+#: 4c036a11ccf14f9797763039ac18139f of sds.tree.balanced.RedBlackTree.height:3
+msgid "The height of the tree, or -1 if empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst
+#: 1999faedf33f49cb9f7f9d09c861d431 6cea009063024c1296b173ff0c67eea0
+#: 9207baf516774021857f04a05eef0fd6
+msgid "Return type"
+msgstr ""
+
+#: 090ec1b7be6d4eeea146ccc870fb821b of sds.tree.balanced.RedBlackTree.height:8
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst
+#: 4479e34cd78a4507bb348cd765d08d8c 8c049b6b69984a2a96d88d52f8d9651b
+#: 91bf2f48d9ba4976881262a6a326d638
+msgid "Parameters"
+msgstr ""
+
+#: 94f320d8785c4604a8612de6b9e40612 of sds.tree.balanced.RedBlackTree.insert:3
+msgid "The item to insert."
+msgstr ""
+
+#: 59b987d8e1d042e2b0372537b4407feb ba9eecf5d18d41aebc7793b35d0045ee of
+#: sds.tree.balanced.RedBlackTree.insert:16
+#: sds.tree.balanced.RedBlackTree.search:11
+msgid "Time complexity: O(log n) guaranteed."
+msgstr ""
+
+#: 5d67a556df104b4fb66b4e511e7b3be0 of sds.tree.balanced.RedBlackTree.search:3
+msgid "The item to search for."
+msgstr ""
+
+#: 782d5a59f7b64d04a2eddf1c0b00c125 of sds.tree.balanced.RedBlackTree.search:6
+msgid "True if found."
+msgstr ""
+
+#: 669853d3e483478c927e2043db416d3f of sds.tree.balanced.RedBlackTree.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: ad679421513c4b928ddf6eee21511c02 of sds.tree.balanced.RedBlackTree.remove:6
+msgid "The removed item."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.RedBlackTree.rst
+#: 5b9dee56aec74b3ba28dfad9ddf4857d
+msgid "Raises"
+msgstr ""
+
+#: 1f2b1ac413c1479c916210418b3ce463 of sds.tree.balanced.RedBlackTree.remove:9
+msgid "If tree is empty."
+msgstr ""
+
+#: 60a720b144f74c3e941a31fdc9c11c81 of sds.tree.balanced.RedBlackTree.remove:10
+msgid "If item not found."
+msgstr ""
+
+#: 3a442d370dd7431eae48c62ee53a61ab of sds.tree.balanced.RedBlackTree.remove:14
+msgid ""
+"Time complexity: O(log n) guaranteed. Red-Black tree deletion is complex "
+"and maintained for completeness."
+msgstr ""
+
+#: e7ea50f14b354667b4c6d183d4c898ca of
+#: sds.tree.balanced.RedBlackTree.__iter__:1
+msgid "Iterate inorder."
+msgstr ""
+
+#: 728faf03f42d4a578de9472276c9036a of
+#: sds.tree.balanced.RedBlackTree.__contains__:1
+msgid "Check membership."
+msgstr ""
+
+#: c57070a6b4514ecdab41214a3d27135a of
+#: sds.tree.balanced.RedBlackTree.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: f1f103b78428437287b59c50db2f2bf8 of sds.tree.balanced.RedBlackTree.__str__:1
+msgid "Return string showing inorder traversal."
+msgstr ""
+
