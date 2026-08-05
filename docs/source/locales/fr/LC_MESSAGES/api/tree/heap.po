@@ -1,0 +1,954 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/heap.rst:5 8ea6abe1bd4648a59883c73f64eed1c5
+msgid "Heap"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:10 942cf327d4864971915274639e853d31
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:12 9f496f9286594258a8e40782771d7ecb
+msgid ""
+"This module provides heap data structures for efficient priority queue "
+"operations. Heaps maintain a complete binary tree where each parent is "
+"less than (min-heap) or greater than (max-heap) its children, enabling "
+"O(1) access to the minimum or maximum element and O(log n) insertions and"
+" deletions."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:42 e830310080434432a1ca20b5f73dc1dc
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:51:<autosummary>:1
+#: 4bec7e3849cf4f15b613ba0c0f8f8b15
+msgid ":py:obj:`MinHeap <sds.tree.heap.MinHeap>`"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:51:<autosummary>:1
+#: ca7a8697c5fd43eaa5695e71c2e9856b e263566b5fed461ea9f01abc3df18161 of
+#: sds.tree.heap.MinHeap:1
+msgid "Min-heap implementation using array representation."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:51:<autosummary>:1
+#: 6eac3fbcb3e2472d93931bac74949b54
+msgid ":py:obj:`MaxHeap <sds.tree.heap.MaxHeap>`"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:51:<autosummary>:1
+#: 65660e862a444e5ba23450cf3159c996 bb397d7a6b104a75bf4b904d8b390b40 of
+#: sds.tree.heap.MaxHeap:1
+msgid "Max-heap implementation using array representation."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:51:<autosummary>:1
+#: 0e9018b244ae43c189be1b0ad294cffe
+msgid ":py:obj:`HeapPriorityQueue <sds.tree.heap.HeapPriorityQueue>`"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:51:<autosummary>:1
+#: 762f855f3ea94461af36dfdecf7f68ad 7b91af98d9ab46989f8a3bd00ccd9011 of
+#: sds.tree.heap.HeapPriorityQueue:1
+msgid "Optimized priority queue implementation using min-heap."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:53 d2446b1e11ed425e8c4d2ec952a3ceb5
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:56 2857410478a8451fa9039b6520395466
+msgid "MinHeap"
+msgstr ""
+
+#: 2d6087ab8d9e47d0b39e8421562b5b6a 8ffaa2dc9ed24e33abecead808806723
+#: c869fa08dd274848b4c5c343cf4344d2 of sds.tree.heap.HeapPriorityQueue:1
+#: sds.tree.heap.MaxHeap:1 sds.tree.heap.MinHeap:1
+msgid "Bases: :py:class:`~sds.core.interfaces.Collection`"
+msgstr ""
+
+#: 4c3a159c166c408887a0bf8a5c732f55 of sds.tree.heap.MinHeap:3
+msgid ""
+"A min-heap is a complete binary tree where each parent node is less than "
+"or equal to its children. The minimum element is always at the root."
+msgstr ""
+
+#: 54516904feb840a0b4021111ae39da10 80ad0df5b228461c986ed6e7c3526ce6 of
+#: sds.tree.heap.MaxHeap:9 sds.tree.heap.MinHeap:9
+msgid "The number of elements in the heap (read-only property)."
+msgstr ""
+
+#: 956241cb04924032950edfaa94165f38 a4562f1d025d4c099aa05efdee7653ec
+#: d1c7a9d4ccd249c28911bea2179bc2e5 of sds.tree.heap.HeapPriorityQueue
+#: sds.tree.heap.MaxHeap sds.tree.heap.MinHeap
+msgid "type"
+msgstr ""
+
+#: 002a545607ea49f7bd1d71c20ca145a8 0f8d3bbb0a7e4d26a3fa8e5ca7e07eb5
+#: 26f8212c8bb24f969db4b385a09db612 of sds.tree.heap.HeapPriorityQueue:25
+#: sds.tree.heap.MaxHeap:11 sds.tree.heap.MinHeap:11
+msgid "int"
+msgstr ""
+
+#: 0dbf7f8465c04107a17bbb56933303ab 0fd6db0245de472e90cb6ac592880962
+#: 17d95fd02634400b936e8d1c5f2cb268 1d24f742216e4b209683ce6f31747def
+#: 298e040cf9074dff99e42abb41b8b4e5 2dcb1f831d824720b272ba6589751437
+#: 41a6c634944c47929d959d88696e91b4 43697bf5f8b74dcc85aea93bf4207c61
+#: 455a5082fe554b5dbbcbd680f9ab6aa2 45a7cd458c5a475285631e2d19dcb267
+#: 49c344d8174542298ebd1d29e1d69a79 4a644baa0600479fb5f9cda9ad376b53
+#: 5a53fc366f5c41b89248b15f11a32650 5c9f17e7a26043c3921aead04dae8b0f
+#: 5cc2222d06e64ad8a3acc43a5363ac25 5ea497697050405caa18a89f5f9fabdd
+#: 5f78a4c0a28f489f9a81cd97515f0725 6812abe6a1b242afb2503c217701c753
+#: 6d798301cfd646b8abd6eb6c60d3d94a 76025fb488f64cbc9da26c8acfa959c6
+#: 7be07dbd729a4e628ab322dc0467ec85 82dc790ffe4c41d2900df708e0112f02
+#: 84f9ef835b9c400b9121492452b71334 865f4f23c84340cb8468f4ced06f03c8
+#: 8a851b1c877b4ea69d7c4bf2bdb98f28 8bf1184c19094c8eb6da1c65e0bba71e
+#: 96a0a8cc35ce4cf68ac7efb654bfa2a6 9ed6ac3143c0447d840efb01574d5a8c
+#: ac1c905e666444a291fd06d68d75e03f af96d05039b64bb685684958539ee245
+#: b1d863c1c2944b798f71ebbc3440959d b1e1e16bdbce419ebe5f8651d0553032
+#: b526f3f3582448c5844a279dbbd7eb9d b98ea88667ee450bb3238a3cbd54737e
+#: c129ab5b41294a1fbd114242e565bfed dca262a06d41453592b00779d3f2b0a5
+#: dcc19fdb496e4362bad531e08f6c2e1a e6c864e24ae5400582aa2b0e24bc7c0c
+#: eee52580eda44f64935bfcf241d2eaef f38dc51d003c4d16969b90a15efc085c
+#: f39ae2e7b7134bafb4ebe85add380e02 f573d31ebb5646e89c12b666a619d8ab
+#: f7a165de31ae426c8cdec6ba2462a843 of sds.tree.heap.HeapPriorityQueue:27
+#: sds.tree.heap.HeapPriorityQueue.__init__:3
+#: sds.tree.heap.HeapPriorityQueue.dequeue:8
+#: sds.tree.heap.HeapPriorityQueue.enqueue:8
+#: sds.tree.heap.HeapPriorityQueue.peek:8 sds.tree.heap.MaxHeap:13
+#: sds.tree.heap.MaxHeap.__init__:6 sds.tree.heap.MaxHeap.extract:8
+#: sds.tree.heap.MaxHeap.insert:6 sds.tree.heap.MaxHeap.peek:8
+#: sds.tree.heap.MinHeap:13 sds.tree.heap.MinHeap.__contains__:9
+#: sds.tree.heap.MinHeap.__init__:6 sds.tree.heap.MinHeap.__iter__:5
+#: sds.tree.heap.MinHeap.__len__:6 sds.tree.heap.MinHeap.__repr__:6
+#: sds.tree.heap.MinHeap.__str__:6 sds.tree.heap.MinHeap.clear:3
+#: sds.tree.heap.MinHeap.extract:8 sds.tree.heap.MinHeap.insert:6
+#: sds.tree.heap.MinHeap.is_empty:6 sds.tree.heap.MinHeap.peek:8
+#: sds.tree.heap.MinHeap.size:6
+msgid "Examples"
+msgstr ""
+
+#: 4d62749ee4de462b9cc706e2587aeaeb of sds.tree.heap.MinHeap:15
+msgid "Create and use a min-heap:"
+msgstr ""
+
+#: 225d97a0a9684669b0c7d0297be52ab4 75d8556699a14511bfe205f4e9e2fab9 of
+#: sds.tree.heap.MaxHeap:29 sds.tree.heap.MinHeap:29
+msgid "Build heap from list:"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:529 0f20a3e5695d4a3c840955a39a0590ef
+#: 15bca50cd7724fc6b7cffb8cf51d1f7f 231ff950b11e401f8d75212ff124d9df
+#: 2fa6ad2da2ff4979b8457677c0a5bc66 3e70895ee18040558272bb2befd9daeb
+#: 5181051e5f464d26b0e41f3a4d2fa9a4 5218ac4db6034fa9bd4454d694ccc861
+#: 566b222660014164b8bec54d2108e23e 61a24f9bd74343ee9854200eb0335520
+#: 63be97c46ce241c9aad95d4632411a5f 70c32a1d64a440729511ceef901d0db1
+#: 764472e25f5c451db45dc943da026de6 77cf051c239043cbac275428140a407c
+#: 7ab8e4436c9d43ca96e04fd75526a388 7cbab240939b41579eec1442abbb6f67
+#: 842d1f2e88fe4e30a93c8a8103ee834d 8605d0d54e5a4ceabe45d4ab029b25f8
+#: 8fd2b42f168247f59f74d148b60ada5f 93c1222e22254d39965701fee7c6a502
+#: 958bd5f30cba4b01880665b431922482 ac082e1ada744ce0ad58f71add6fcb81
+#: b1c0791af1e243018e1855b960c28573 b41abedc0f334ad1917effdca8f202d8
+#: c0c08325aa02478c9a34e218c45410c8 c2d1459a718f4ef6837a32cca16faa96
+#: ddeac459863d4eb4b4e11cf0e1e4eed6 f7a623e758604d57bad18b3adeb555d5
+#: fecdcc76e6bf4f2882956f0bc7122bed fef0836efb6a41c4bd724d1f54c47e20 of
+#: sds.tree.heap.HeapPriorityQueue:48
+#: sds.tree.heap.HeapPriorityQueue.__contains__:9
+#: sds.tree.heap.HeapPriorityQueue.dequeue:15
+#: sds.tree.heap.HeapPriorityQueue.enqueue:16
+#: sds.tree.heap.HeapPriorityQueue.peek:17 sds.tree.heap.MaxHeap:35
+#: sds.tree.heap.MaxHeap.extract:16 sds.tree.heap.MaxHeap.insert:14
+#: sds.tree.heap.MaxHeap.peek:14 sds.tree.heap.MinHeap:37
+#: sds.tree.heap.MinHeap.__contains__:17 sds.tree.heap.MinHeap.__iter__:11
+#: sds.tree.heap.MinHeap.clear:10 sds.tree.heap.MinHeap.extract:16
+#: sds.tree.heap.MinHeap.insert:14 sds.tree.heap.MinHeap.peek:16
+msgid "Notes"
+msgstr ""
+
+#: 3a3a99d127b34ba393c275f96502d1e1 a94a3ee8337741188299254e33f61776 of
+#: sds.tree.heap.MaxHeap:37 sds.tree.heap.MinHeap:39
+msgid ""
+"Time Complexity: - insert: O(log n) - extract: O(log n) - peek: O(1) - "
+"Building from list: O(n)"
+msgstr ""
+
+#: 017bc3b3abac4dffb6d9ceb86e288f2e of sds.tree.heap.MinHeap:45
+msgid "Space Complexity: O(n)"
+msgstr ""
+
+#: 2a22b34554ab481db7a15d12d6f14999 of sds.tree.heap.MinHeap:49
+msgid ":obj:`MaxHeap`"
+msgstr ""
+
+#: d774cf85876249e096d371e8ecddefbb of sds.tree.heap.MinHeap:50
+msgid "Max-heap implementation."
+msgstr ""
+
+#: 9f9b7e57ef314dfc87fe45462933e803 of sds.tree.heap.MinHeap:52
+msgid ":obj:`PriorityQueue`"
+msgstr ""
+
+#: 41cfabba448346f785a4f6929f54ac35 of sds.tree.heap.MinHeap:53
+msgid "Priority queue using min-heap."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:65 ../../source/api/tree/heap.rst:101
+#: ../../source/api/tree/heap.rst:137 2402f6d4dddb4d49aad825b3bb5c9ed5
+#: 667b5c78705b47e4b04c7cd9d65df650 c2606ff250744067ad90099ad42dc472
+msgid "Constructor"
+msgstr ""
+
+#: 2428e3221c0241bdb7211759d458a0cd 4f750c3050b34f3c8a4a0319cb4782e4 of
+#: sds.tree.heap.MinHeap.__init__:1
+msgid "Initialize a min-heap."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst 083e5f2c2cd44ad49765a9c8b33beedc
+#: 0f693d5bdb4146148525769aa2eb55d1 3531fadfa55c4266bbcdd5ea459ab184
+#: 37f62a79e5fd48859dc24a06fd3a7e89 7bac11178e314ffcac6cd79015fc597b
+#: 7cd921f24011433fba963645385e6e9c 80a9f2f966254e6e860ab35a11705b5e
+#: 85ff529c07a34c05a4a6819d391fbd80 a35ff08cc7584a36bc7167e66caea76b
+#: b5d3f1ade1a4488290929ff6b1659543 b997c3ff192d4b3d9b328483fd30a1bb
+#: cd3c323fd6734f82835547f6daefd784 f57e83a15f7d4a069f21aa71015b65e1
+msgid "Parameters"
+msgstr ""
+
+#: 79b536dda79a450e9a776885ab4cb818 8e759e0646484424b72e4d2693823fa4
+#: b319317c6c7240c59990d0040f571433 f1e3f02bec8242089187d2dbdc919ba7 of
+#: sds.tree.heap.MaxHeap.__init__:3 sds.tree.heap.MinHeap.__init__:3
+msgid "Initial items to heapify. Default is None (empty heap)."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:69 ../../source/api/tree/heap.rst:105
+#: ../../source/api/tree/heap.rst:141 b5e53aa71730458b9cfc9e0d0987f746
+#: c7c5d5bea2154710a66f095c716bab8c d6d632df82fe456aaf9022c1f599e980
+msgid "Properties"
+msgstr ""
+
+#: 0622172bd616420b83d611981e703ea1 20e2b89a68804e95867db651b7046723
+#: 5193f5d3948449eaa8a56b0bb204fb1a f727ccc40c48434baf9b0e0fbae67264 of
+#: sds.tree.heap.MaxHeap.size:1 sds.tree.heap.MinHeap.size:1
+msgid "Get the number of elements in the heap."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst 097de1835d5c492fbcdf60f23843284c
+#: 0a526f8fa81d46aabe5b3f0dfaafc182 0e756964fe8647e4978370e1c9955f16
+#: 169d9a6cdbcd48fdab6fb100088e8579 16cb6e4fd062437ba88b60563220ed45
+#: 1717df24339a4c24a37ee6577e266d1a 2a378f69c70e4320a622a67ec3028d00
+#: 3cc8f9889a414b34a8edf7048e1b289e 426160739d544853b4e24b3572517c4a
+#: 50a3e286dada444c97113a09b555ca9f 575499ab0d5943b1b58bca51b349494a
+#: 5bb3dabf14044528b685aa2b1cea6255 5d29228fcb0b4e1386e287cf03bf5e6c
+#: 6050b3aad231492e8244249bee7351b7 7b646c7a5feb46e9869148debd25e4f2
+#: 80efe6c2f8564c9fa78f26737c4c5a79 8754107d730345c0b6dda5f91ea3b89b
+#: 8a4c3bb873944de388519c1562f12248 a9c605d50b4c44e7b8f65064bf00a49d
+#: b383d286a9f54d54bf4b1cdc87d8a07e c357faae4aef4dad839fdc2737318f2d
+#: cbd6ee3a08994399a31a4aa7d36710bb d3151a6475794a09a3df59ab3ad6d42d
+#: dc6d87650fae4ecfa2e7fbc48c93f9cb e137b33c43884d41b90c4838895d8522
+#: fb08c4e867cd408793aa7b59ea935da8 fb612fec622140e2a72578ae9d949109
+msgid "Returns"
+msgstr ""
+
+#: 5ff636ac633f4a02aba78192cbf67e79 7eb3df806e724b02b67cdeec4b7cd388
+#: 92c3714c17de463fa41d8ce6c7bac8f1 96d80f3667ce44b3bbe273e3942035bb
+#: a50e3c2d9f634329a6e653937d3d7ff9 f0aceff411df4b158f953d141c66b814 of
+#: sds.tree.heap.MaxHeap.size:3 sds.tree.heap.MinHeap.__len__:3
+#: sds.tree.heap.MinHeap.size:3
+msgid "The number of elements."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst 0bda13b531d44dcc846771037f397b56
+#: 1da67f88c6b44de08ccc52ef4a3271d0 1efa04b3633242f282d01f8069c6e17d
+#: 22e55e08e92441bfbe8ad4b5d691581e 2644223f903745a7a12ddc643fac62bf
+#: 2d0a4f9eb746448da4a6cecb8aec1c43 3a1c12c669b04e0c858092cf362181f0
+#: 3ece4dc0c6d540a1b95ad2916051304e 42acdcb3d08a43fcba0d4d603ce125ca
+#: 4b7d39a21f7e4d31982dc07fdeb0b205 54b0383514a245dfaec1b3d639f8c985
+#: 583dc29db036496da6daf7f0fdfbcd8e 60b5549b75b04ac3aac6538e7743d181
+#: 6471f1e1250a4d7ea392997fbf691f24 658fb435033c44019bc6f538d261d7a3
+#: 679519a750014f80ac1429b84bd25930 8c595172ca284220879d46fc6cfb8043
+#: 8fcf9ccae9fc40f0a5c765d14e96c759 90f3439cee324b31ba0b32b696521280
+#: 9a1ce23e6ff14eea8fd90d3c9d83ce19 a2e6e4ce794f48488ed2c9caf586225a
+#: a43c73ae5b844d229c0f8e43b9ba0c7e ca7f87ea73d84b77a8ddbc476b7ca9f3
+#: dcf0287aab9a4287b393f6674f186ee4 e3579439cfbd4c71989c2a785dca0855
+#: ee3a131de3d04615853f5656e6e4cb79 fac6d45f48b24d6aa90f9be163784dac
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:73 ../../source/api/tree/heap.rst:109
+#: ../../source/api/tree/heap.rst:145 0686047b4a2940f287b9535339b8897c
+#: 4f5a544295094089ac22b1ed7e68942e 7b070d8ec2cb493d83fe1384d4facba2
+msgid "Core Operations"
+msgstr ""
+
+#: 699650d593ee4c81970f1a3a3fcf5b10 bb799cfc5fab491391619c4e136901f4
+#: c063b7aa475d4893a73c33dc689cb9a3 efffb89b16454f8fbe0df67f9fda5929 of
+#: sds.tree.heap.MaxHeap.insert:1 sds.tree.heap.MinHeap.insert:1
+msgid "Insert an item into the heap."
+msgstr ""
+
+#: 00a13ed65760436fb85418a67eab724c 648e6de13a544b65bd3750c833cda28b
+#: b647964c3bf248b6874373606cacdaaf da1f484d018c4ff88a6269c955992b4e of
+#: sds.tree.heap.MaxHeap.insert:3 sds.tree.heap.MinHeap.insert:3
+msgid "The item to insert. Must be comparable."
+msgstr ""
+
+#: 1eb1f4ba9e7247b6848c539a443cb412 20879b37f5764842ae4ebb7dad8ddc8c
+#: 259fd1dd32dd4e93a3fac44358abddcb 2ff36336db224bd4a7bae33ce1c92131
+#: 45f2b9f5a2c347d0bc4427e6a94b1d65 53054f9e62ed45c6911607aa677e359f
+#: 969ab3e2b9ea44bc92582dabfa7cdaec c5358dd2d11e4f9385027f37b710fe68 of
+#: sds.tree.heap.MaxHeap.extract:18 sds.tree.heap.MaxHeap.insert:16
+#: sds.tree.heap.MinHeap.extract:18 sds.tree.heap.MinHeap.insert:16
+msgid "Time complexity: O(log n)"
+msgstr ""
+
+#: 64597cd4db0b4d36afed184d691c0100 7c7bbeaaaa964ddfa605778576c12e86 of
+#: sds.tree.heap.MinHeap.extract:1
+msgid "Remove and return the minimum element."
+msgstr ""
+
+#: 2a329fdb86f944e7a4677b13d445e47e 82810c071d14412ea0d3342f5071b593
+#: a5f9d491083d4dce9edda0156646c1be c0623f05fe2e4c8bb7f38a05dba654b8 of
+#: sds.tree.heap.MinHeap.extract:3 sds.tree.heap.MinHeap.peek:3
+msgid "The minimum element."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst 13c2d131d3ae4b3a8b278983ced95ec2
+#: 17c429560212498b97dd90de47198893 18606407538a44989a19526e102cf9dc
+#: 2c57183915314f43bfa4b815369807be 2fc5cec05b1d4d6eb7c34eb7166d8f54
+#: 5da856f695aa48f9b7b74fc923bd3fa9 6de8fa9039ea482a9b22b61557c192bc
+#: 79c6305fb2224d248302a3d948be21f0 b636a78b556342a2aa1db6f3d1c201b3
+#: be3aa0bf4ec242438fa4725ceff4123e c7184f33fbe1411383c2f27e5959a9bc
+#: cb0d0c2dc8414246ba8e551c9343681b
+msgid "Raises"
+msgstr ""
+
+#: 055d3115d5254436a20c33eb781837da 2edc0b737cf34c95bfd7d091bf19fbc2
+#: 58c7ab86839649ea806964d652986231 81efd4fb0aa14f5a8ffe5f098cf8498c
+#: c58a9e1dfa7b4c4eb7c832febcd986d1 d116494ac52643d687adf53c76259d02
+#: e0b9601bcbc34b789d993e59e79104c7 f53bebe0abc34094a4e459e5e1a5b9ce of
+#: sds.tree.heap.MaxHeap.extract:6 sds.tree.heap.MaxHeap.peek:6
+#: sds.tree.heap.MinHeap.extract:6 sds.tree.heap.MinHeap.peek:6
+msgid "If the heap is empty."
+msgstr ""
+
+#: 1aea57fcf4884bd8bf2c8efcedc61815 afb5b5a7ca1345949a492fb7d678b1f6 of
+#: sds.tree.heap.MinHeap.peek:1
+msgid "Return the minimum element without removing it."
+msgstr ""
+
+#: a08c2df8cc1041a49b4fbf9c730570a4 c160d835de924ae0a7f1055b2ac9c4f0
+#: ca69146b5fde463fa516cd18c77c172c cd7446bf7f3c4e0f9bdf640bf6e97a74
+#: d6fe41c8d2f747ff9d38ebcd6cd449d6 fa19e0cb63de437d92f65123c6347f67 of
+#: sds.tree.heap.MaxHeap.peek:16 sds.tree.heap.MinHeap.clear:12
+#: sds.tree.heap.MinHeap.peek:18
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:79 ../../source/api/tree/heap.rst:115
+#: ../../source/api/tree/heap.rst:151 26ac506cef6847c7bec04f14a9036497
+#: 2fa2f28c38d34901bdacba43d4afbaad a2904f9aa56b4bbd93d8916ad6ce5abc
+msgid "Utility Methods"
+msgstr ""
+
+#: 4e69e924c1f7478abbe80fffdecd5a5e 9d50534575ec4a0b82fc011346a9e848
+#: d87621b3c28f4150b877aa8ffbc54bb0 e0d9877402ca491a89c03e9ca400adbd of
+#: sds.tree.heap.MaxHeap.is_empty:1 sds.tree.heap.MinHeap.is_empty:1
+msgid "Check if the heap is empty."
+msgstr ""
+
+#: a305e95f42024291a1c2b399a76d953d e8192edf1f6b468db4a764a58f819304 of
+#: sds.tree.heap.MinHeap.is_empty:3
+msgid "True if empty, False otherwise."
+msgstr ""
+
+#: 600eb58784ab4992ba1646d3d1c8ac19 83ff155274d944bfb3b249794fa2406c
+#: 89812330122d4cc79a2da7a93ca2b00d baf96fcda3144002a0c72410d4c3ef4c of
+#: sds.tree.heap.MaxHeap.clear:1 sds.tree.heap.MinHeap.clear:1
+msgid "Remove all elements from the heap."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:84 ../../source/api/tree/heap.rst:120
+#: ../../source/api/tree/heap.rst:156 11011ea9ed194e72ac05db7acc268344
+#: 407cc467a1804d83a3ee6c8c32369819 bfab801806674a0a8fe3fa465d715704
+msgid "Special Methods"
+msgstr ""
+
+#: 6056494a28f44242863bc52e33e8fe40 745986fee5fb4a909245facf1b808f24 of
+#: sds.tree.heap.MinHeap.__len__:1
+msgid "Return the number of elements in the heap."
+msgstr ""
+
+#: 85ee2ba15dd84eeb91b5b598d4f5cca0 a8c4d9d551d0460fb588d5512167cc02
+#: b3a0df116c01474f9c097c21287f3d10 de042adb51fb42eb952873a5ae669ad0 of
+#: sds.tree.heap.MaxHeap.__iter__:1 sds.tree.heap.MinHeap.__iter__:1
+msgid "Iterate over heap elements (not in sorted order)."
+msgstr ""
+
+#: 4508c7fdb4604f37bc65eb09b682bc0b e3d882bd1f4946ea8ac6cc1aea21bc2d of
+#: sds.tree.heap.MinHeap.__iter__
+msgid "Yields"
+msgstr ""
+
+#: 48ac290fb6ef4889b73b1d5c5f805d3e d57d70e11b3a41c2a350b86c90af0e3e of
+#: sds.tree.heap.MinHeap.__iter__:3
+msgid "*Any* -- Elements from the heap."
+msgstr ""
+
+#: 12355b5cb8b9435599b4b52ed264c7d1 ed397d1bc06b4d478fad40f7e313ccde of
+#: sds.tree.heap.MinHeap.__iter__:13
+msgid ""
+"This returns elements in heap order (array order), not sorted order. For "
+"sorted order, repeatedly call extract()."
+msgstr ""
+
+#: 053a415ece6842ceac4c78e8fae73097 66b184a5ce924deaa0f7cf954dfb562d
+#: 7813cf74745f4d638ddb2ecf0c8a8b37 9113452b411042f898f67ec1de76e562 of
+#: sds.tree.heap.MaxHeap.__contains__:1 sds.tree.heap.MinHeap.__contains__:1
+msgid "Check if item is in the heap."
+msgstr ""
+
+#: 0f1a850591e24bc1ae719ac01a91b73d 5765766b2d90423198914d507111c2a5
+#: c1e2e21f5fd447d9a43c4fca630ea0b6 of
+#: sds.tree.heap.HeapPriorityQueue.__contains__:3
+#: sds.tree.heap.MinHeap.__contains__:3
+msgid "The item to search for."
+msgstr ""
+
+#: 74ca526eaad84225b0ec5c5f2ade8b2f a14bd34856bb48a1b22048f2205ab6e0
+#: d5b1f5c35d714ba696de9eb44b52869a of
+#: sds.tree.heap.HeapPriorityQueue.__contains__:6
+#: sds.tree.heap.MinHeap.__contains__:6
+msgid "True if found, False otherwise."
+msgstr ""
+
+#: 1bbe3f891e4c41ee8dc5047670633547 9510b5754105439992985dadfb09a1e1
+#: bfa3a7c9ecdc4ed5b91640cabf2d8888 of
+#: sds.tree.heap.HeapPriorityQueue.__contains__:11
+#: sds.tree.heap.MinHeap.__contains__:19
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 0b9e70860a044399b2f78227533bac72 5d2100da2ab9444e8867245542927067
+#: 5db3cd55503d4983aa4aa3179cacbfd9 c1921afa687c49b696c9db603eeaf601
+#: e1071290427b465d824396666beff3a4 e32995d8ebf8406298fff62e8e94ec81 of
+#: sds.tree.heap.HeapPriorityQueue.__repr__:1 sds.tree.heap.MaxHeap.__repr__:1
+#: sds.tree.heap.MinHeap.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: 6b50a3e8a5e94c23bc05d503e7a9d5b1 892dbab871744926bbc67a3958fe67ca
+#: a2361edec8384d23a35c6efb1aa101db a9f28e2f6b1444f096205d4948be13ef of
+#: sds.tree.heap.MinHeap.__repr__:3 sds.tree.heap.MinHeap.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 280a1cee4daa45ad84aa8dbb1878e2e3 549953cad7b84cd3b397084c39655b2a
+#: b17ff609943d4bdcab88e5c5525a3d24 eef0c4707669447588ecd1eb5eff84fe of
+#: sds.tree.heap.MaxHeap.__str__:1 sds.tree.heap.MinHeap.__str__:1
+msgid "Return string showing heap contents."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:92 d0a5b407657c4c1a85b30a758083911d
+msgid "MaxHeap"
+msgstr ""
+
+#: 4a604b1d2b3d49d1a61bac4a502614ce of sds.tree.heap.MaxHeap:3
+msgid ""
+"A max-heap is a complete binary tree where each parent node is greater "
+"than or equal to its children. The maximum element is always at the root."
+msgstr ""
+
+#: f60afd1424ed40c082a81ffeba8e6bd7 of sds.tree.heap.MaxHeap:15
+msgid "Create and use a max-heap:"
+msgstr ""
+
+#: d915338bd8a54ab596b29d4043625260 f467694dd5c54ef386c739495aec0572 of
+#: sds.tree.heap.HeapPriorityQueue:60 sds.tree.heap.MaxHeap:45
+msgid ":obj:`MinHeap`"
+msgstr ""
+
+#: bb2d2764253548609be6cb3a699f5d87 of sds.tree.heap.MaxHeap:46
+msgid "Min-heap implementation."
+msgstr ""
+
+#: 780a10cdf7dc4cdcbc9065fba25cf951 b9d69df811a343a8bc98464d94b05f6d of
+#: sds.tree.heap.MaxHeap.__init__:1
+msgid "Initialize a max-heap."
+msgstr ""
+
+#: 736dfedc38ad45e9b088ca25e3b96ecf 93d200bea2554d3bbf35d797efebe718 of
+#: sds.tree.heap.MaxHeap.extract:1
+msgid "Remove and return the maximum element."
+msgstr ""
+
+#: 0a4cfd4a2c6d4f29aa5122d8587f1762 c822f20144fa4b2e97f1394b2a3cee08
+#: ea03ea037f2c4cfd9cdff55413a7cce1 f285e241d82d411b9d7d8c9ac56958a4 of
+#: sds.tree.heap.MaxHeap.extract:3 sds.tree.heap.MaxHeap.peek:3
+msgid "The maximum element."
+msgstr ""
+
+#: 6f7afb1296dc490b9f22eeac0b42ef98 df7d4899f9c148958f47723f0ec70c78 of
+#: sds.tree.heap.MaxHeap.peek:1
+msgid "Return the maximum element without removing it."
+msgstr ""
+
+#: 04aea6c5f6f24456aaf5fdfe74134675 6a442c930d3c40a091fe9b93ea9f520f
+#: 77620ae61b4b4d93b55c7cd250ec1a2a de9790d34c464541a1fa4a66061b5d8e of
+#: sds.tree.heap.HeapPriorityQueue.__len__:1 sds.tree.heap.MaxHeap.__len__:1
+msgid "Return the number of elements."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:128 48cc93aa26ab4fb397d1990b3997e71b
+msgid "HeapPriorityQueue"
+msgstr ""
+
+#: a18a575594ba47408d9ed101d25cb917 of sds.tree.heap.HeapPriorityQueue:3
+msgid ""
+"A heap-based priority queue where elements are dequeued based on priority"
+" (lower priority value = higher priority). This implementation uses a "
+"binary min-heap for efficient O(log n) operations, making it ideal for "
+"large datasets."
+msgstr ""
+
+#: e6e0453bbed24de58a8ba6dc63781303 of sds.tree.heap.HeapPriorityQueue:7
+msgid "**Performance Comparison:**"
+msgstr ""
+
+#: eb326b186be34c7a80195123b980b140 of sds.tree.heap.HeapPriorityQueue:9
+msgid ""
+"This implementation is significantly faster than the linked-list based "
+"PriorityQueue in sds.linear.queue for large datasets:"
+msgstr ""
+
+#: 093494f7b98543b894383c0b7e734b4f of sds.tree.heap.HeapPriorityQueue:12
+msgid "HeapPriorityQueue (this class): O(log n) enqueue and dequeue"
+msgstr ""
+
+#: 9b5916d75db94b70a251ff9896b99c8c of sds.tree.heap.HeapPriorityQueue:13
+msgid "Linear PriorityQueue: O(n) enqueue, O(1) dequeue"
+msgstr ""
+
+#: 8a5c33916add48cdb9e8d1dbc9d9179f of sds.tree.heap.HeapPriorityQueue:15
+msgid "**When to use:**"
+msgstr ""
+
+#: 05dd76606f9b47b293d540dedd9abb2f of sds.tree.heap.HeapPriorityQueue:17
+msgid "Use this HeapPriorityQueue for performance-critical applications"
+msgstr ""
+
+#: 995dbe08de61476c9d6861032cba4aa3 of sds.tree.heap.HeapPriorityQueue:18
+msgid ""
+"Use linear.queue.PriorityQueue for simple, small datasets where code "
+"simplicity is preferred over performance"
+msgstr ""
+
+#: 241f346498f44d37869d9af379095b14 of sds.tree.heap.HeapPriorityQueue:23
+msgid "The number of elements in the queue (read-only property)."
+msgstr ""
+
+#: f90c6bda93e84096b5c57eb6039917e4 of sds.tree.heap.HeapPriorityQueue:29
+msgid "Create and use a heap-based priority queue:"
+msgstr ""
+
+#: b273ce6c7f674575a742e4da05dfffd5 of sds.tree.heap.HeapPriorityQueue:40
+msgid "Efficient handling of large datasets:"
+msgstr ""
+
+#: 60bd215f20b943a09169db8fc1e3d6c2 of sds.tree.heap.HeapPriorityQueue:50
+msgid ""
+"Time Complexity: - enqueue: O(log n) - significantly better than O(n) for"
+" linked list - dequeue: O(log n) - slightly slower than O(1), but overall"
+" better - peek: O(1)"
+msgstr ""
+
+#: 55a8868bab5546c2a9b1cf52f6fdb5a6 of sds.tree.heap.HeapPriorityQueue:55
+msgid ""
+"The priority is used for comparison. Lower priority values have higher "
+"priority in the queue (min-heap property)."
+msgstr ""
+
+#: 9ef9ff91270a477cab62ddd76d143c1e of sds.tree.heap.HeapPriorityQueue:61
+msgid "Underlying min-heap implementation."
+msgstr ""
+
+#: 24f9399c384d4f8f99bcdc99305a7545 of sds.tree.heap.HeapPriorityQueue:63
+msgid ":obj:`sds.linear.queue.PriorityQueue`"
+msgstr ""
+
+#: 8faf6c0c965e437cbe2077002bf141cd of sds.tree.heap.HeapPriorityQueue:64
+msgid "Simpler O(n) enqueue alternative."
+msgstr ""
+
+#: 2839a39a28db465eb84f4fb5339a22cb d9e683ef0a8b46e7898d2a6cb70a5283 of
+#: sds.tree.heap.HeapPriorityQueue.__init__:1
+msgid "Initialize an empty heap-based priority queue."
+msgstr ""
+
+#: a3c3ac790e2340f58859b20c6014a2b3 cd0c7e6c4299476492e86777bce464c4 of
+#: sds.tree.heap.HeapPriorityQueue.size:1
+msgid "Get the number of elements in the queue."
+msgstr ""
+
+#: 461c3384416e447c9032dd594c4161e8 b88c09f930904e968538216eb39ead69 of
+#: sds.tree.heap.HeapPriorityQueue.enqueue:1
+msgid "Add an item with priority to the queue."
+msgstr ""
+
+#: 73a2fd3da4794bc4941ed3b92f9404f9 79244d9ad02844448a2a28447cf9719b of
+#: sds.tree.heap.HeapPriorityQueue.enqueue:3
+msgid "The item to add."
+msgstr ""
+
+#: 364886566c7d46bd9df9aadde879512b cf389e88b7a94afbbe9aa6e14e921d9c of
+#: sds.tree.heap.HeapPriorityQueue.enqueue:5
+msgid "The priority value. Must be comparable. Lower values = higher priority."
+msgstr ""
+
+#: 4c9951341e354ad5827f80d595979643 9eb780472fce497db9af658760d11cef of
+#: sds.tree.heap.HeapPriorityQueue.enqueue:18
+msgid "Time complexity: O(log n) - More efficient than O(n) for large datasets"
+msgstr ""
+
+#: 028b15185ac34900ba152bdd2f3c353a fb2e1f2df83f4252ba89b04eecb4a6b7 of
+#: sds.tree.heap.HeapPriorityQueue.dequeue:1
+msgid "Remove and return the highest priority item."
+msgstr ""
+
+#: 81510b92357146e9b39c9860f6d709e3 9886a92ce81b4f77abc08f98dde265aa
+#: a49a065c1c2f4b9c82ae21182c44a516 c6c89700055b4b28b2baf62cec71be74 of
+#: sds.tree.heap.HeapPriorityQueue.dequeue:3
+#: sds.tree.heap.HeapPriorityQueue.peek:3
+msgid "A tuple of (item, priority)."
+msgstr ""
+
+#: 1edc2708ca0f403a93991725271a2698 1f2a8d827f4845ac8308e0e693da7781
+#: 9041acf4e94f4bbc92821ef09719928d c20dcd60d3324709a465b2300e7aa3b9 of
+#: sds.tree.heap.HeapPriorityQueue.dequeue:6
+#: sds.tree.heap.HeapPriorityQueue.peek:6
+msgid "If the queue is empty."
+msgstr ""
+
+#: 6bc89083f6c2451c8876b9b53adad102 77786072aefd47efa5a22726b2d54209 of
+#: sds.tree.heap.HeapPriorityQueue.dequeue:17
+msgid "Time complexity: O(log n) - Balanced performance for all operations"
+msgstr ""
+
+#: 2ea10b2cdb7f4dfcbe1c89e78f958055 c9cb0785b46b4a6eacccffeef33bdfb7 of
+#: sds.tree.heap.HeapPriorityQueue.peek:1
+msgid "Return the highest priority item without removing it."
+msgstr ""
+
+#: c3bd8c8e15cf4495a9f8eddd9d82593a d5c795288c9b43079426278c8f073b00 of
+#: sds.tree.heap.HeapPriorityQueue.peek:19
+msgid "Time complexity: O(1) - Constant time access to highest priority"
+msgstr ""
+
+#: 2fd94753459a4a72bc454769c17bd8c8 5545e6c108ab4c0d9eeeff2670620100 of
+#: sds.tree.heap.HeapPriorityQueue.is_empty:1
+msgid "Check if the queue is empty."
+msgstr ""
+
+#: c7463f2aac664474a926e00652f9d9a0 f6819af04ada4d499916653e4e267239 of
+#: sds.tree.heap.HeapPriorityQueue.clear:1
+msgid "Remove all elements from the queue."
+msgstr ""
+
+#: 0f2e01823e5c4b53b020508e080554fe b87c1634228f46a89b1688c0b4eb3bf1 of
+#: sds.tree.heap.HeapPriorityQueue.__iter__:1
+msgid "Iterate over queue elements."
+msgstr ""
+
+#: 121cd38f57974ce4a67050f495a635b3 5db686ec37ac4413b88ae26d5c8ffbf4 of
+#: sds.tree.heap.HeapPriorityQueue.__str__:1
+msgid "Return string showing queue contents."
+msgstr ""
+
+#: d51c8bcfa96d46e0aa2a5084dffa272e of
+#: sds.tree.heap.HeapPriorityQueue.__contains__:1
+msgid "Check if item is in the queue (checks item, not priority)."
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:163 8a2b3fecbca34b4e84e4b89c1e510e5e
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:166 13449550a1cd4833b208db56c0a9a39f
+msgid "Min-Heap Operations"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:169 ../../source/api/tree/heap.rst:215
+#: ../../source/api/tree/heap.rst:240 3f4e25999e48437f9d742d98ba8507dd
+#: 9a281ab418144bfa8fc1712341885ada d824bcf175884e74893c4623e25733cd
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:193 e184d7964c824b9a98008774b67cff1b
+msgid "Build from Array"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:212 12bd1fca110040088ca801a417860a72
+msgid "Max-Heap Operations"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:237 5726b56c71b848a6a1369f1673a2558b
+msgid "Priority Queue"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:266 26ec077bc4e9488eac7704b5c229a15a
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:269 5027eb49e5f849b298e11b446bcd86c8
+msgid "Example 1: Task Scheduler"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:271 2cabc484cb454d1d8935745f7b90dbbd
+msgid "Real-time task scheduling with priorities:"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:345 f00a02c547cf4a34a9581c1d95b40aa2
+msgid "Example 2: Dijkstra's Algorithm"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:347 4093a7342f0a4c668bd3c5908d7cba37
+msgid "Shortest path using min-heap:"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:412 2482de349e1248d48566e04c9a46e029
+msgid "Example 3: Median Tracker"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:414 5e8c17cf82b94ee587a276a866f2b47f
+msgid "Track running median using two heaps:"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:464 0fa5b76e7c9d4f39b218d51a4540f3f2
+msgid "Example 4: Top-K Frequent Elements"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:466 4ac6b4b9cbf1460781e66b470d5bfbab
+msgid "Find most frequent elements efficiently:"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:518 c69740b6c52143499ad2290892fa57af
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:521 62eac590371645f8884ad6824646fbe4
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:527 7c98c013269e4916bf08aba1124d887d
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:528 9d8816d0a62a436899f45de65843914e
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:530 60bb6d5c4a6c4a7485c47e273d5e82ac
+msgid "**Insert**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:531 ../../source/api/tree/heap.rst:534
+#: ../../source/api/tree/heap.rst:543 ../../source/api/tree/heap.rst:546
+#: 6709f0ba92784e0fb7466050abfb5fed 724f483f3bb44451ac4577d6f3b9004c
+#: e460624edad04af8bd01ac376ce40f33 fad1839066bc42f28ba0fb77b87dac9b
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:532 20c371ff2beb4e90bdfd05b156c5c83d
+msgid "Sift up from bottom"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:533 7daca858955c4d2aa6e1626dbd4c1331
+msgid "**Extract Min/Max**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:535 51b01ad7e2aa4238a396b6de37c9d262
+msgid "Sift down from top"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:536 fa19b2c4e6c243aa94ac88a0fa765cfd
+msgid "**Peek Min/Max**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:537 a8df8f977a2e4d529f3788d9d642db5e
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:538 d540e88f5246462aaac7f7a47df4c9a5
+msgid "Just read root"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:539 a92e00709dd94942904404fc74db8f9a
+msgid "**Heapify (build)**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:540 ../../source/api/tree/heap.rst:549
+#: 9336a3821ce140ed9203bb935e40f627 ae5e7e13d50c4c9f96fcd72aa3498450
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:541 75b9afb2247b49fd98e89ba1703fd6a1
+msgid "Bottom-up construction"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:542 6d13cd849d0042d1b9cf9f5e9d43ac11
+msgid "**Delete arbitrary**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:544 4319db6875af4e87b686320ce62e95e3
+msgid "Find + extract"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:545 46eef96d339b4af49f5f7b3fe869e377
+msgid "**Increase/Decrease key**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:547 343678c0015f4333b7b5ec1d5c3a947a
+msgid "Sift up or down"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:548 b05cad563285422386570eb49550352c
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:550 5d7006beb1694c36972c3a9bae945cda
+msgid "No ordering within levels"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:553 0031ae6f334e436798808824be4b1c55
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:555 50408cb8435e4ae799ccf58a2583136b
+msgid "**Heap storage**: O(n)"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:556 34adf1f4bb614641a338c296653ad0d6
+msgid "**No pointers needed**: Array-based, just store values"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:557 753542c9fc5645b69010c67cfcee8573
+msgid "**Auxiliary space**: O(1) for all operations (iterative)"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:560 5566d09b0ac24efeb4f77867a1dc6d8f
+msgid "Heap Sort Algorithm"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:584 55081874660b46629d6b500dd60bd89e
+msgid "**Time complexity**: O(n log n) **Space complexity**: O(n)"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:588 773dd5a779924f1682de425b15a4a28b
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:591 251cd7ef13e94ded9b98a0f2e9de30d2
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:593 866f1eff000d49efae8d8106635947d7
+msgid "✅ **Use heaps for priority management**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:603 6ea292fecd384298bdfb5e8f2d3248ee
+msgid "✅ **Build heap from array when possible**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:610 65f10c755d3c45cdbdfb5945030ccc31
+msgid "✅ **Use for streaming algorithms**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:626 df70a1cc780249da8ae3773ea4617c15
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:628 31eac67b0246469891bf34883287344a
+msgid "❌ **Don't use for general searches**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:635 6ebcd3eb83bb4fdebcc608e8d66f320c
+msgid "❌ **Don't expect sorting within heap**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:642 226942b550164571b86a37d986893de4
+msgid "❌ **Don't use for range queries**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:650 db7a5d925d464c338b708c5af4951670
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:652 ad5bddcc5a1e4aeead3e2aea237be817
+msgid "**Confusing min and max heaps**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:660 8ee47adb45984501b3f3f7205e4e0ef1
+msgid "**Not using heapify for initialization**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:672 d584ffd91cf04cdbac62d17ef00a57b8
+msgid "**Using heap when BST is better**"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:680 485645ca703d4bd6b6e58c02f5b43c65
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:682 f4216a89abaa4a63b575cb6ba0bf6c3b
+msgid ":doc:`binary` - Binary tree fundamentals"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:683 e010ea17182e49e8bc7f44758f6fcbda
+msgid ":doc:`balanced` - Balanced search trees"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:684 4af3e94d549b4ca28301f906b941d39b
+msgid ":doc:`../../guide/tree_structures/heap` - Heap theory and guide"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:687 e56ae98d388a4059827d7291dec633f2
+msgid "References"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:689 783fcebfccc64e878b5ccbe97d83f3ca
+msgid "Williams, J. W. J. \"Algorithm 232: Heapsort\", 1964"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:690 2db004346eff41a2b13773d8fac9d701
+msgid "Floyd, R. W. \"Algorithm 245: Treesort 3\", 1964"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:691 84ccefa2da044ea19e3f98a7d9b47c10
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 6"
+msgstr ""
+
+#: ../../source/api/tree/heap.rst:692 33acbc04621e497b83d09949c1f5d6b3
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 3\""
+msgstr ""
+

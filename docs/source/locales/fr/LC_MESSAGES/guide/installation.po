@@ -1,0 +1,470 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/installation.rst:5 db34d09c40c74a01809cc8f619687032
+msgid "Installation"
+msgstr ""
+
+#: ../../source/guide/installation.rst:7 252f55f6ec1546f0bb83d1142877578d
+msgid ""
+"This guide covers different methods to install SDS-Tools and set up your "
+"development environment."
+msgstr ""
+
+#: ../../source/guide/installation.rst:11 1e41dc2409d74dba90f4b8851e9a7966
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/guide/installation.rst:13 4520ff54927942bfad30125947c28957
+msgid "**Python**: 3.10 or higher"
+msgstr ""
+
+#: ../../source/guide/installation.rst:14 4c6bd67a82624937bffeb7f22a6a1f9f
+msgid "**pip**: Latest version recommended"
+msgstr ""
+
+#: ../../source/guide/installation.rst:15 5b49ed12b4f74c9390a61d52005e6c55
+msgid "**Git**: For installing from source"
+msgstr ""
+
+#: ../../source/guide/installation.rst:18 921fc5b30b044538b585af821b00638e
+msgid "Quick Installation"
+msgstr ""
+
+#: ../../source/guide/installation.rst:20 131622af2da54a8b90841d00763b7363
+msgid "For most users, installing from PyPI is the simplest method:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:26 b18a61afb46843fa9ba8804f4d644e84
+msgid ""
+"This will install the latest stable release of SDS-Tools and its "
+"dependencies."
+msgstr ""
+
+#: ../../source/guide/installation.rst:29 316b0b6f8f7e4fdd89a812161a5d53a3
+msgid "Installing in a Virtual Environment"
+msgstr ""
+
+#: ../../source/guide/installation.rst:31 a5af19d15dac4ee6bf12a74e00b61467
+msgid ""
+"It's strongly recommended to install SDS-Tools in a virtual environment "
+"to avoid conflicts with other Python packages."
+msgstr ""
+
+#: ../../source/guide/installation.rst:35 9e3ea6ab44104e8eb6458e9d610ef063
+msgid "Using venv (Standard Library)"
+msgstr ""
+
+#: ../../source/guide/installation.rst:37 3d2d6fbd14d24d37a4531ea4f8f89462
+msgid ""
+"Python's built-in ``venv`` module provides a simple way to create virtual"
+" environments:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:39 4d38fdf2808347f9a230bff29c629577
+msgid "**Create a virtual environment:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:49 2064576407bf4c339151d574a592fcf8
+msgid "**Activate the environment:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:62
+#: ../../source/guide/installation.rst:98 6be72eb9cf56484896957cde91b83812
+#: 9fc05c49d5ab44229b94f893e0b2ffcd
+msgid "**Install SDS-Tools:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:68 e9dd6d5ffe7c441182332ccb314d6ab3
+msgid "**Deactivate when done:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:75 b9eb3c9114ae47bb91529b8de62cea32
+msgid "Using virtualenv"
+msgstr ""
+
+#: ../../source/guide/installation.rst:77 aa6cd2e9de9240f79d8ee22d7fd033e2
+msgid "``virtualenv`` is a third-party alternative with additional features:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:79 618ae3fadc4644739ce7c6760c7d7935
+msgid "**Install virtualenv:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:85 cae1bd61028e4cd69e6eeda81946e3f1
+msgid "**Create and activate environment:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:105 6f29836083de471889c14cf22c8d24b1
+msgid "Using uv (Recommended for Speed)"
+msgstr ""
+
+#: ../../source/guide/installation.rst:107 20ef125edb5549078042f9face7ba8bc
+msgid ""
+"``uv`` is a fast Python package installer and resolver written in Rust. "
+"It's significantly faster than pip."
+msgstr ""
+
+#: ../../source/guide/installation.rst:110 fbe2f51be0c347288b0cf873e6dd835e
+msgid "**Install uv:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:123 460da2bf8328458b878e1fbff7bcdb35
+msgid "**Create a virtual environment with uv:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:136 084400a8a4bf449ab0a4a9b62c6d4932
+msgid "**Install SDS-Tools with uv:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:146 bfc3917c23964fa3b7ddecc4f35d809c
+msgid "**Why use uv?**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:148 fe6a5a6029834e23bdf36f7aeda10bf3
+msgid "⚡ **10-100x faster** than pip"
+msgstr ""
+
+#: ../../source/guide/installation.rst:149 e0915bc80415446ba6e5f4f1e42eace6
+msgid "🔒 **Reliable dependency resolution**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:150 c5abbf548bc346938541f9d003dace93
+msgid "💾 **Smart caching**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:151 a8670c73c9c54740a58685c20665eccf
+msgid "🎯 **Compatible with pip**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:154 8884331626614d468ef58b2d89e87942
+msgid "Installing from Source"
+msgstr ""
+
+#: ../../source/guide/installation.rst:157 862b79177e284a9fa02265aad5b1f8d7
+msgid "For Development or Latest Features"
+msgstr ""
+
+#: ../../source/guide/installation.rst:159 a07006f31a2947ed868909aaf0dcba7b
+msgid "Clone the repository and install in editable mode:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:174 45249888813d4213a1cd6f2edb78d355
+msgid "**With uv (faster):**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:188 991e32f6755b4af7908e3006eefbce7a
+msgid "Installing Development Dependencies"
+msgstr ""
+
+#: ../../source/guide/installation.rst:190 c62b52e72bcd4b6ab3fc415ca1c019cb
+msgid "To contribute to SDS-Tools, install development dependencies:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:192
+#: ../../source/guide/installation.rst:224 8f8b20f92c094be68386f0ae655365d9
+#: a36741dae9254824b6bb026f75fcb323
+msgid "**Using pip:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:199 a74dc9f4ac9a426c86220565f3e59ffe
+msgid "**Using uv with dependency groups (PEP 735):**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:212 eb6aad162f954f36a64685616e648dd8
+msgid "This installs additional tools:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:214 1aae42171abf49dba13b57f4fde93ffb
+msgid "**Testing**: pytest, pytest-cov"
+msgstr ""
+
+#: ../../source/guide/installation.rst:215 de0266e0045242f1b806b038349c507d
+msgid "**Linting**: black, isort, ruff, mypy"
+msgstr ""
+
+#: ../../source/guide/installation.rst:216 032b767a70e445c09865e81625ece1af
+msgid "**Security**: bandit"
+msgstr ""
+
+#: ../../source/guide/installation.rst:217 aca9eadc71cd42b78656ff6439ff3cac
+msgid "**Build tools**: tox"
+msgstr ""
+
+#: ../../source/guide/installation.rst:220 9baa18066b1c4a94a06cdf6a6f6333d6
+msgid "Installing Documentation Dependencies"
+msgstr ""
+
+#: ../../source/guide/installation.rst:222 b7d4344bbd274231893453c8f0aef2af
+msgid "To build the documentation locally:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:230 2486c57864424971a52d0f2acc3f2dbf
+msgid "**Using uv:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:236 63766373d0884d1cb494ef2a7c25d408
+msgid "Then build the documentation:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:250 980770a5e1fc429ea3eb7caafe5f4f5b
+msgid "Verifying Installation"
+msgstr ""
+
+#: ../../source/guide/installation.rst:253 4c8e8655e5c949f89a3ad1fd8277bb0b
+msgid "Test Basic Import"
+msgstr ""
+
+#: ../../source/guide/installation.rst:255 b98a1cd9065649918c882f968b922302
+msgid "Verify that SDS-Tools is installed correctly:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:263 4041aa82ccaa45a180a38a483f94c7b5
+msgid "Test with Examples"
+msgstr ""
+
+#: ../../source/guide/installation.rst:265 dabacf047d7a408bbab2a17accf9e734
+msgid "Try a simple example:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:285 651521c7299545dcaca944739f2ae61b
+msgid "Run Tests"
+msgstr ""
+
+#: ../../source/guide/installation.rst:287 e697e96283764b15a3ac12053364a1ac
+msgid "If you installed from source, run the test suite:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:301 4728dee498754beda67db2f2a8da87f2
+msgid "Upgrading"
+msgstr ""
+
+#: ../../source/guide/installation.rst:304 8e75f44bd4204a228049f777ce8c7281
+msgid "Upgrade to the Latest Version"
+msgstr ""
+
+#: ../../source/guide/installation.rst:315 da44593c071d407293a4c59476d6cf6e
+msgid "Upgrade from Source"
+msgstr ""
+
+#: ../../source/guide/installation.rst:324 e3459fc9cd9e4fa39bc369931a09403c
+msgid "Uninstallation"
+msgstr ""
+
+#: ../../source/guide/installation.rst:327 634116beb865402b89a499ed7a32509d
+msgid "Remove SDS-Tools"
+msgstr ""
+
+#: ../../source/guide/installation.rst:338 385f90031f43432da6e832a5543b8fb0
+msgid "Remove Virtual Environment"
+msgstr ""
+
+#: ../../source/guide/installation.rst:340 0651a1be6e6a47cfb9bcc4576a87df1a
+msgid "Simply delete the environment directory:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:352 357e13dbd2784d368d51a286f40ba90e
+msgid "Platform-Specific Notes"
+msgstr ""
+
+#: ../../source/guide/installation.rst:355 087ebf6934ca482eaa8d18a33c5a1e23
+msgid "Windows"
+msgstr ""
+
+#: ../../source/guide/installation.rst:357 9e7a6b8c225f48adb716be514c8516a2
+msgid "**PowerShell Execution Policy:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:359 0e3eae6c235d44568eafee1b91d30ee8
+msgid "If you get an error activating the virtual environment in PowerShell:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:365 6d9c417044624e7f9c35c39dc2a596bb
+msgid "**Long Path Support:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:367 62349c65ea554b9a82b5953fd05eac8f
+msgid "Enable long path support in Windows if you encounter path length issues:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:369 3d607f7b0ea54dc68ee684b656bcc4f5
+msgid "Open Registry Editor (regedit)"
+msgstr ""
+
+#: ../../source/guide/installation.rst:370 cdc4ae4d886d4ab881bd80a8ce32778f
+msgid ""
+"Navigate to "
+"``HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem``"
+msgstr ""
+
+#: ../../source/guide/installation.rst:371 7e87502331234349b29a8060a426d4a3
+msgid "Set ``LongPathsEnabled`` to 1"
+msgstr ""
+
+#: ../../source/guide/installation.rst:374 8cccfc28b1df4b15ba0d00b57c53d51b
+msgid "macOS"
+msgstr ""
+
+#: ../../source/guide/installation.rst:376 8da86300cf5a406c9765b987b6039f97
+msgid "**Using Homebrew Python:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:378 3d17d7743e9146caa6f30e2b5f29e81b
+msgid "If using Python from Homebrew:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:386 c6bb7985bbf84c6eb3ec380794a329ee
+msgid "Linux"
+msgstr ""
+
+#: ../../source/guide/installation.rst:388 8d93265fb8d44fb88e70240e93fc0919
+msgid "**Install Python Development Headers:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:390 b2fe6701698043f690aa4134891d0b8d
+msgid "Some Linux distributions require development packages:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:404 70a20a701e524c5586352263399b3ccd
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/guide/installation.rst:407 2e6ed597500a40a2a9f9a947c0012d7d
+msgid "Import Errors"
+msgstr ""
+
+#: ../../source/guide/installation.rst:409 7d88a086c2aa471a925bc287739b60d2
+msgid "**Problem:** ``ModuleNotFoundError: No module named 'sds'``"
+msgstr ""
+
+#: ../../source/guide/installation.rst:411
+#: ../../source/guide/installation.rst:422
+#: ../../source/guide/installation.rst:432
+#: ../../source/guide/installation.rst:447 08c3e72849234ff88fca1c29d177f623
+#: 1463974e797c4cba97d9fdbd79b6c236 966411379104447a8cb71e4a1c893394
+#: f4534176c0f34c7d8e5fed92064faaa3
+msgid "**Solution:**"
+msgstr ""
+
+#: ../../source/guide/installation.rst:413 54667c9facbe4ba199f72dd852efb0a6
+msgid "Ensure you're in the correct virtual environment"
+msgstr ""
+
+#: ../../source/guide/installation.rst:414 cf64b20f0c66444884fa3c7b0a01b4f1
+msgid "Verify installation: ``pip list | grep sds-tools``"
+msgstr ""
+
+#: ../../source/guide/installation.rst:415 2f6e5006624e4037aaf2721a4583a925
+msgid "Reinstall: ``pip install --force-reinstall sds-tools``"
+msgstr ""
+
+#: ../../source/guide/installation.rst:418 036ce0c2e95f4e118f3b527a0140c459
+msgid "Permission Errors"
+msgstr ""
+
+#: ../../source/guide/installation.rst:420 ffcf87b6ca394b57a1e31dc216ccaab1
+msgid "**Problem:** Permission denied during installation"
+msgstr ""
+
+#: ../../source/guide/installation.rst:424 3fdb2e1964f4431f938cc55122f72871
+msgid "Use a virtual environment (recommended)"
+msgstr ""
+
+#: ../../source/guide/installation.rst:425 1d916b2bddac4b81b799f39aa1d76b5b
+msgid "Or install for user only: ``pip install --user sds-tools``"
+msgstr ""
+
+#: ../../source/guide/installation.rst:428 f4d7854454974302978e58f64c527e4c
+msgid "SSL Certificate Errors"
+msgstr ""
+
+#: ../../source/guide/installation.rst:430 be0e33353326445b85bf445cd2425940
+msgid "**Problem:** SSL errors when installing"
+msgstr ""
+
+#: ../../source/guide/installation.rst:443 b3ed9fc84dbe4691847354afafcdde6c
+msgid "Dependency Conflicts"
+msgstr ""
+
+#: ../../source/guide/installation.rst:445 e6824a589da14b89b575462f070738a5
+msgid "**Problem:** Conflicting dependencies"
+msgstr ""
+
+#: ../../source/guide/installation.rst:449 c98cd1b44ab64661ae419f1e07632aee
+msgid "Create a fresh virtual environment"
+msgstr ""
+
+#: ../../source/guide/installation.rst:450 6c6f53b882394c2a887e62ad88df5f48
+msgid "Use ``uv`` for better dependency resolution"
+msgstr ""
+
+#: ../../source/guide/installation.rst:451 1baa18401cec4da8b77c7afd8ed36da6
+msgid "Check for conflicting packages: ``pip check``"
+msgstr ""
+
+#: ../../source/guide/installation.rst:454 e17ea48558654e108c6465d8e670d2c5
+msgid "Getting Help"
+msgstr ""
+
+#: ../../source/guide/installation.rst:456 4df301919fd1405bbe381942bb17c4d7
+msgid "If you encounter issues:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:458 7c46c6ee737a43f89afc33fc8a50c24e
+msgid "**Documentation**: https://sds-tools.readthedocs.io"
+msgstr ""
+
+#: ../../source/guide/installation.rst:459 2b9f4d84f80f4f98936525467046407e
+msgid "**Issue Tracker**: https://github.com/skyfrigate/sds/issues"
+msgstr ""
+
+#: ../../source/guide/installation.rst:460 bf28c142f204436d86590e142223365d
+msgid "**Discussions**: https://github.com/skyfrigate/sds/discussions"
+msgstr ""
+
+#: ../../source/guide/installation.rst:463 a299dca2509b424e9a4fb5620b7af215
+msgid "Next Steps"
+msgstr ""
+
+#: ../../source/guide/installation.rst:465 0fa0784a87994293a87973335fbd8657
+msgid "Now that SDS-Tools is installed, continue with:"
+msgstr ""
+
+#: ../../source/guide/installation.rst:467 dc6681b5742c46b8b17de619398ea664
+msgid ":doc:`getting_started` - Learn the basics"
+msgstr ""
+
+#: ../../source/guide/installation.rst:468 4c0f8b19abde4cb089dba56cbe243ff5
+msgid ":doc:`linear_structures/index` - Explore linear data structures"
+msgstr ""
+
+#: ../../source/guide/installation.rst:469 f37188c0e679400cb09ec2ef670a59dc
+msgid ":ref:`api-reference` - Browse the API documentation"
+msgstr ""
+
+#: ../../source/guide/installation.rst:473 3875a54dce4c49308a5c3ba4b5be155a
+msgid ""
+"We recommend using ``uv`` for package management due to its speed and "
+"reliability. It's fully compatible with pip and significantly faster for "
+"large projects."
+msgstr ""
+

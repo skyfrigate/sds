@@ -1,0 +1,432 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/getting_started.rst:5 28e0e234ddc04e97a1dc16e40e27181e
+msgid "Getting Started"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:7 68fd05689d6041abb428961de4a755be
+msgid ""
+"Welcome to SDS-Tools! This guide will help you get started with the "
+"library and understand its fundamental concepts."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:11 843740f3405e4fc196deb438cb10225e
+msgid "Your First Program"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:13 b97cf202aff843b9804118d09b7fc22b
+msgid "Let's start with a simple example using a linked list:"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:39 89de1a4d129d47a8a51f0e6431815dd2
+msgid "Basic Concepts"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:42 e9125677e54f4e659341ecb5429ed2d8
+msgid "Collections"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:44 650c36aa19fc451db6f8148dc55997e0
+msgid ""
+"All data structures in SDS-Tools implement the "
+":class:`~sds.core.interfaces.Collection` interface, which provides common"
+" operations:"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:70 9bc655b5ee77420e9f1798d9a7484481
+msgid "Linear Collections"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:72 7b7ce3b558e44bf696b8a4c84d1fe2c7
+msgid ""
+"Linear structures extend :class:`~sds.core.interfaces.LinearCollection` "
+"with add and remove operations:"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:91 5d3df021c21047d38c8e5727ebdca3e5
+msgid "Working with Different Structures"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:94 8cfee7fd24b24e9191987641abc38f17
+msgid "Linked Lists"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:96 92c8fcaa68f646f1b8d51701d7328414
+msgid ""
+"**When to use:** Frequent insertions/deletions at the beginning, no "
+"random access needed."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:121 0920f5489b144628bd2135aa15702e28
+msgid "Doubly Linked Lists"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:123 0c1db6f320064d1890f65f559301f36f
+msgid ""
+"**When to use:** Need efficient operations at both ends and backward "
+"traversal."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:146 9c3bf74956d34cda91e1501f281c69d3
+msgid "Circular Linked Lists"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:148 fb9def5634734c918b292f0866297e71
+msgid ""
+"**When to use:** Round-robin scheduling, ring buffers, rotation "
+"operations."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:168 eb2e2b187858491f8e6870927ca3bf79
+msgid "Stacks"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:170 b51289ffdca0459faae0e2f9d5c20795
+msgid "**When to use:** LIFO behavior, recursion, undo/redo, expression parsing."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:194 26f36aef48c94c2bb0b1e21c2d9ef717
+msgid "**Example: Balanced Parentheses**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:219 d317071a304b45c0a5a88d71bbc6352b
+msgid "Queues"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:221 037747fe63984be19c38707f69c73b63
+msgid "**When to use:** FIFO behavior, task scheduling, BFS, producer-consumer."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:241 28ff41b0b70a4f309ab78e44c0b82d2d
+msgid "**Example: Task Processing**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:260 8e75005792cc40bdb418ed0da664ed90
+msgid "Deques (Double-Ended Queues)"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:262 b9dbad06c30c4af4ba9fdfc021033c35
+msgid "**When to use:** Need efficient operations at both ends, sliding windows."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:278 678e1bcfbf0b42f79ba8e50768da0b03
+msgid "**Example: Sliding Window Maximum**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:305 53af5887f72244ab95a35f01cbf60192
+msgid "Exception Handling"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:307 f862ff17b0eb43ce9bca3450347954b0
+msgid "All SDS-Tools structures use consistent exception handling:"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:322 d2c02b032b17459e93caeb66c55c98bd
+msgid "Common exceptions:"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:324 9e6ab7b7541246f3ac77da4c53945fc8
+msgid ""
+":class:`~sds.core.exceptions.EmptyStructureError` - Operation on empty "
+"structure"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:325 095471c47fc74ddd84180a40ffe16ce2
+msgid ":class:`~sds.core.exceptions.FullStructureError` - Structure at capacity"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:326 8e1cc90bd4874ca9b0fdc0e0f34ac50f
+msgid ":class:`~sds.core.exceptions.IndexStructureError` - Invalid index access"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:327 ec2322142e164e919d8e910fe0cf660c
+msgid ":class:`~sds.core.exceptions.InvalidOperationError` - Invalid operation"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:330 f0fdfbd465c344b6928a4876f0113100
+msgid "Performance Considerations"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:333 1b04541d22e641508a8e8e1a2e585e6a
+msgid "Understanding Complexity"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:335 4ed22591598f49b390d4448e8a63fafa
+msgid "Different structures have different performance characteristics:"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:352 fd0a241168e74239bec00e64ee8d69ef
+msgid "Choosing the Right Structure"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:354 29c70f30c8c3454699a4d46db1ddee93
+msgid "Quick Selection Guide"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:358 29eed135211a4b2299f28456c111d1bf
+msgid "Use Case"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:359 4f904e1f1c1a4f6280592cac4952779e
+msgid "Recommended Structure"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:360 c7785c2689e0491e8784a2b35304793f
+msgid "Why?"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:361 e02bf9dfec354e41b0df7ff9297565a4
+msgid "Frequent insertions at start"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:362 de33f2b766c54101a19d5176350d425a
+msgid "LinkedList"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:363 2a79e8cd87a74ba79149c82a242f9b38
+msgid "O(1) prepend"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:364 68a877583455446eafee00001ca87193
+msgid "Operations at both ends"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:365 5cd588a13f2343448411e09f0af70033
+msgid "DoublyLinkedList or Deque"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:366 a55703b88e80487d8577307c2b976e0a
+msgid "O(1) at both ends"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:367 6b3dcf3dbeda42a4b5417a726f9b403f
+msgid "LIFO ordering"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:368
+#: ../../source/guide/getting_started.rst:377 820cc8a863b74bcca2332a8b33e51c73
+#: ffb33d813a1041639495ba39622a56fe
+msgid "Stack"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:369
+#: ../../source/guide/getting_started.rst:372 0e5da585dcbe408187776ce9b14af98d
+#: d8ffb68f6236435fbdcf9909752d1613
+msgid "Semantic clarity"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:370 5e2d4fb78b5f41e4869f8b2561cc109b
+msgid "FIFO ordering"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:371
+#: ../../source/guide/getting_started.rst:380 5b11790fb01c407f99b1efcc3cec6202
+#: 73f517b0bc1a4dc1961438a953a863b6
+msgid "Queue"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:373 b0127fe2293747748b33dfd1f00a0b10
+msgid "Round-robin scheduling"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:374 e548e800c03f48f480fdc27cff32ea6b
+msgid "CircularLinkedList"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:375 eef9df7c4b644c15b75d90caffb9075c
+msgid "Efficient rotation"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:376 60eb546ce4b7405d8b216e66deaf6ccd
+msgid "Undo/Redo system"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:378 0a997b98639844178dbb228a629689f0
+msgid "Natural LIFO fit"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:379 1fc7b740320c42c79646af0e00e6d0e3
+msgid "Task queue"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:381 42980f9ac2db460ba0289af964c0da79
+msgid "Natural FIFO fit"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:384 771a4e0fb2764cbf9b2ff2ee11ce8350
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:387 2cc1f63885924063b199b7a38063c8f2
+msgid "Pattern 1: Processing All Elements"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:406 f2df25ea9c2344d7ae63e63baa0755fd
+msgid "Pattern 2: Filtering"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:427 9e3cc9dd7a6145049321eb135d78da8f
+msgid "Pattern 3: Stack-based Algorithms"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:456 a7bd8c6e228a464886f09c72c3305b49
+msgid "Pattern 4: Queue-based Processing"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:477 cfa302805d0348e78626a203ee70f1b9
+msgid "Type Hints and IDE Support"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:479 47865f9bfe264678876b8461d673ea67
+msgid "SDS-Tools provides comprehensive type hints:"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:499 a0e462dfc84f45508c01311fd681d87a
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:501 77ae39106a0e4be6843bbb91c5a82d69
+msgid "**Choose the Right Structure**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:503 e741f640d15c4a93872c5cffa5e662f7
+msgid ""
+"Don't use a LinkedList when you need O(1) access by index - use a Python "
+"list instead."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:505 e39c27aadd7c4d28a970940d330956f9
+msgid "**Check Before Operating**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:512 8bb7772751e74adea01ce4acac926659
+msgid "**Use Type Hints**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:519 3482bde13abf44a2a8b8a4f3657858c8
+msgid "**Handle Exceptions Appropriately**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:528 63b52dd55755459397eb01c6b1a8add5
+msgid "**Understand Time Complexity**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:530 39bdb20afd974089ada85bc05260d77b
+msgid "Know the O-notation for operations you use frequently."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:533 75648d4e52b040d0b43f67a2e9e8bec6
+msgid "Next Steps"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:535 00d1a69f3c524dfba4c7bb1c20646782
+msgid "Now that you understand the basics, explore:"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:537 5c8643a285224a59bb4e489beba1dd00
+msgid ":doc:`linear_structures/index` - Deep dive into linear structures"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:538 ea7ec19a92fe45c988661da55a273e10
+msgid ":doc:`tree_structures/index` - Learn about tree structures"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:539 c4783c134a78466f8d1bbc5522e21223
+msgid ":doc:`graph_structures/index` - Explore graph structures"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:540 41f1a09fecb94f3e8bc3568c11d9d136
+msgid ":ref:`api-reference` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:543 317c9e98c3eb414caa6354e6e9bf2875
+msgid "Practice Exercises"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:545 e6493b620f4747f68aa38ad418a8c830
+msgid "**Reverse a Stack**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:547 76bf00254458468893650246e8992157
+msgid "Write a function to reverse all elements in a stack."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:549 3451122b5f5b471fb00a14bc98da21fb
+msgid "**Queue with Stacks**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:551 a795af22acea4d5eaad2d4f3707d6f6d
+msgid "Implement a queue using two stacks."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:553 0f364486cb5b4e1d9a46663284bf7a03
+msgid "**Palindrome Checker**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:555 93725f0efcc1419daad9b8cb6ee5a5a6
+msgid "Use a deque to check if a string is a palindrome."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:557 bb612df249654d0fbfd9471d3f48d24a
+msgid "**Recent Counter**"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:559 7d7deffbdc7e4451af6bda5a91244958
+msgid ""
+"Implement a counter that returns the number of recent requests within a "
+"time window using a queue."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:564 80d4738b2d0c43e9962948abc312b293
+msgid ""
+"Solutions to these exercises can be found in the examples directory of "
+"the GitHub repository."
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:568 be2bde7d559747f0909a4fdc88d618a8
+msgid "Getting Help"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:570 077ff06dbf784469832f097af2074b77
+msgid "**Documentation**: https://sds-tools.readthedocs.io"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:571 54a625b9ec3d425fbe905e489eceecdc
+msgid "**API Reference**: :ref:`api-reference`"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:572 362975edff9e42acbb63e91e6b436cfa
+msgid "**Examples**: https://github.com/skyfrigate/sds/tree/main/examples"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:573 d501107be327449987e3ef993321e040
+msgid "**Issues**: https://github.com/skyfrigate/sds/issues"
+msgstr ""
+
+#: ../../source/guide/getting_started.rst:577 6b9481aa577d46489f7fec46274444fb
+msgid ""
+"All code examples in this guide are tested and guaranteed to work with "
+"the current version of SDS-Tools. You can copy and paste them directly "
+"into your Python environment."
+msgstr ""
+

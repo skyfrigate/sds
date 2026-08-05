@@ -30,4 +30,5 @@ The SDS library is organized into several module families:
    tree/index
    graph/index
    advanced/index
+   probabilistic/index
 

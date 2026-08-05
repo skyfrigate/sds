@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/index.rst:5 aaac3344ae6a46a3ba9b05b7fcfb4175
+msgid "User Guide"
+msgstr ""
+
+#: ../../source/guide/index.rst:7 93d8fd2b60ed418786e14d11c6f510a2
+msgid ""
+"Welcome to the SDS-Tools user guide! This guide provides comprehensive "
+"tutorials and explanations for using the library effectively."
+msgstr ""
+
+#: ../../source/guide/index.rst:11 7c8125504a3149fa8b3c4a09fe67ed5f
+msgid "About This Guide"
+msgstr ""
+
+#: ../../source/guide/index.rst:13 f582e9acafd341a18e2de43af0e7efe5
+msgid ""
+"This user guide is organized into several sections, each covering a "
+"family of data structures. Each section includes:"
+msgstr ""
+
+#: ../../source/guide/index.rst:16 f8d6fc8330884da2b3932d3bd6bfb510
+msgid "**Theoretical foundations** - Mathematical models and formal definitions"
+msgstr ""
+
+#: ../../source/guide/index.rst:17 5f1b399cb3df40eba07e0ec60891976c
+msgid ""
+"**Algorithmic analysis** - Implementation strategies and complexity "
+"analysis"
+msgstr ""
+
+#: ../../source/guide/index.rst:18 5354cfead0af43f4b8cfd187b1d7b1f2
+msgid "**Practical usage** - Code examples and real-world applications"
+msgstr ""
+
+#: ../../source/guide/index.rst:19 851fbfdbd2084778a72a31a9c5c6e157
+msgid "**Best practices** - Tips, patterns, and common pitfalls"
+msgstr ""
+
+#: ../../source/guide/index.rst:23 506600ed1be141b2bca78672a494014a
+msgid ""
+"This guide focuses on concepts and usage. For detailed API documentation,"
+" see the :doc:`../api/index`."
+msgstr ""
+
+#: ../../source/guide/index.rst:27 03ed117f297c41029c2d4f81ac4aa466
+msgid "Getting Started"
+msgstr ""
+
+#: ../../source/guide/index.rst:36 1dc6849946624e4c8e38fdaf841706bc
+msgid "Data Structures"
+msgstr ""
+
+#: ../../source/guide/index.rst:39 073fb7cf1ffa48048f684a7b3d3e61fb
+msgid "Linear Structures"
+msgstr ""
+
+#: ../../source/guide/index.rst:41 64375ac881ce4599b0bc8dd9be297b0f
+msgid "Sequential data structures with predecessor-successor relationships."
+msgstr ""
+
+#: ../../source/guide/index.rst:49 5ac60c5379224a01a148c412fa9ad4ba
+msgid "Tree Structures"
+msgstr ""
+
+#: ../../source/guide/index.rst:51 62d65458bb6f436f9ab968896febcffc
+msgid "Hierarchical data structures with parent-child relationships."
+msgstr ""
+
+#: ../../source/guide/index.rst:59 e908ed83b1604937a32555a58d2fb2c0
+msgid "Graph Structures"
+msgstr ""
+
+#: ../../source/guide/index.rst:61 16acec7f7faa4c80b9aac82574f357a8
+msgid "Network structures with arbitrary node connections."
+msgstr ""
+
+#: ../../source/guide/index.rst:69 f39b31a975194a2ca66566d98613a8ba
+msgid "Advanced Structures"
+msgstr ""
+
+#: ../../source/guide/index.rst:71 9094441264af4ddcb55cbeeb3be8c7ba
+msgid "Specialized structures for specific use cases."
+msgstr ""
+
+#: ../../source/guide/index.rst:79 078c2a5dc48a4085b1ede5cd5aa414b0
+msgid "Additional Resources"
+msgstr ""
+
+#: ../../source/guide/index.rst:81 b60d2653ba3e48839bd6daa92abc5a11
+msgid ":doc:`../api/index` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/index.rst:82 75df10c8cb414fc59cd57d71a5aab12d
+msgid ":doc:`../changelog/index` - Version history"
+msgstr ""
+
+#: ../../source/guide/index.rst:83 976d120374994908bae0bd9339ce5224
+msgid ":doc:`../contributing` - Contributing guide"
+msgstr ""
+
+#: ../../source/guide/index.rst:86 43e84dab51ac43f3bf37483163fe9d53
+msgid "Quick Navigation"
+msgstr ""
+
+#: ../../source/guide/index.rst:89 d8ff7e7cd30b4df0ac4b82ac53fbe673
+msgid "Popular Topics"
+msgstr ""
+
+#: ../../source/guide/index.rst:91 5cc2dd48768848f1bbcc8f138f3e6e05
+msgid ":doc:`linear_structures/stack` - Stack guide (LIFO)"
+msgstr ""
+
+#: ../../source/guide/index.rst:92 7e5d9d99ab32429ab0a3b58fe11dcd5a
+msgid ":doc:`linear_structures/queue` - Queue guide (FIFO)"
+msgstr ""
+
+#: ../../source/guide/index.rst:93 c98fa82856e0438a840b06b9ab0bd8d5
+msgid ":doc:`tree_structures/binary` - Binary tree guide"
+msgstr ""
+
+#: ../../source/guide/index.rst:94 2a48b7d31ec5414a98b5263b549987b4
+msgid ":doc:`graph_structures/general` - Graph basics"
+msgstr ""
+
+#~ msgid ":doc:`tree_structures/binary_tree` - Binary tree guide"
+#~ msgstr ""
+
+#~ msgid ":doc:`graph_structures/graph` - Graph basics"
+#~ msgstr ""
+

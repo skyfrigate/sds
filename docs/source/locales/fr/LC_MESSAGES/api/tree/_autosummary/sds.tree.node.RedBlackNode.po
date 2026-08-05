@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.RedBlackNode.rst:2
+#: 822bd75ac2324793ac1dc6b46aff0a85
+msgid "sds.tree.node.RedBlackNode"
+msgstr ""
+
+#: 1b1617c32f3041eb9d0d3261d739c2d1 of sds.tree.node.RedBlackNode:1
+msgid "A node for Red-Black trees with color attribute."
+msgstr ""
+
+#: f618eab62d464d9397809a18da36cc87 of sds.tree.node.RedBlackNode:3
+msgid ""
+"Red-Black trees use node coloring to maintain balance. Each node is "
+"either RED or BLACK, and the tree maintains specific color properties to "
+"ensure logarithmic height."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.RedBlackNode.rst
+#: 070987daaf444b71a56a595c7681e2ab 5981167fc40d4bd8ad6b29a901641382
+#: f862e9fa8ecc4b26ae35c8e0f19c92a5
+msgid "Parameters"
+msgstr ""
+
+#: 3b5bebbe0aea45ccb962dd94eae49e90 be48a34df08d4f75a3df5f8f724c0e8f
+#: edc78db75a5b49e6bc9fab448590c1f3 of sds.tree.node.RedBlackNode:7
+#: sds.tree.node.RedBlackNode.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: 53a9424a808f4591b83079ed8ae72c72 of sds.tree.node.RedBlackNode:9
+msgid "The color of the node (\"RED\" or \"BLACK\"). Default is \"RED\"."
+msgstr ""
+
+#: 7e9a816157a34b26bc99b87897dad803 of sds.tree.node.RedBlackNode:11
+msgid "Reference to the left child. Default is None."
+msgstr ""
+
+#: 4274a360c5e04d88803c35889c829ee5 of sds.tree.node.RedBlackNode:13
+msgid "Reference to the right child. Default is None."
+msgstr ""
+
+#: 2ec4d448fcb84c549920ad4e8e49915a of sds.tree.node.RedBlackNode:15
+msgid "Reference to the parent. Default is None."
+msgstr ""
+
+#: f87d87b4591b41c8b76f8de610a84bb5 of sds.tree.node.RedBlackNode:20
+msgid "The color of the node (\"RED\" or \"BLACK\")."
+msgstr ""
+
+#: 8aa7477a02cf4a9798c4610d9ebc08b4 of sds.tree.node.RedBlackNode
+msgid "type"
+msgstr ""
+
+#: 15790e47f28442889f54949e08f6c67b of sds.tree.node.RedBlackNode:22
+msgid "str"
+msgstr ""
+
+#: 5862f70be5ea4fe591ddf73ce52578d4 of sds.tree.node.RedBlackNode:24
+msgid "Examples"
+msgstr ""
+
+#: 65edf02c9cbb48e4bc3a6a8c00e35e07 of sds.tree.node.RedBlackNode:31
+msgid "Notes"
+msgstr ""
+
+#: e6f9b6150282470f9947e8d059af9557 of sds.tree.node.RedBlackNode:33
+msgid "Time complexity: O(1) for color access"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.RedBlackNode.rst:22:<autosummary>:1
+#: 28989e5842784a6a8aad07de6962b1a6 78b44a3d56b24194acac8c7ed49fba2e
+#: b72eb5230051476dbba38d25645134a0 of sds.tree.node.RedBlackNode.__init__:1
+msgid "Initialize a Red-Black node."
+msgstr ""
+
+#: 40b9d2877b58428aaee073c4e2aeb74c d39efb1396a847989d66f4b15ffea24d of
+#: sds.tree.node.RedBlackNode.__init__:5
+msgid "The color (\"RED\" or \"BLACK\"). Default is \"RED\"."
+msgstr ""
+
+#: 248accdc7e6545ae9e93b38dd0273c4c ca9ff8114b6442d6949a97cf2c865652 of
+#: sds.tree.node.RedBlackNode.__init__:7
+msgid "The left child. Default is None."
+msgstr ""
+
+#: 81f3eefe89514a1e8ac3456ed29a9431 a6256ada68bd42a0a2926be3f4053cc2 of
+#: sds.tree.node.RedBlackNode.__init__:9
+msgid "The right child. Default is None."
+msgstr ""
+
+#: 3f88e1fc0b8b48399b4600ebba515879 8080f26699b447bea79aaa095260ba23 of
+#: sds.tree.node.RedBlackNode.__init__:11
+msgid "The parent node. Default is None."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.RedBlackNode.rst:13
+#: 2a477cdca7a74363a8ffcb68e8202abf
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.RedBlackNode.rst:22:<autosummary>:1
+#: a8c44e5125ee4e119f824fad448565ed
+msgid ""
+":py:obj:`__init__ <sds.tree.node.RedBlackNode.__init__>`\\ \\(data\\[\\, "
+"color\\, left\\, right\\, parent\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.RedBlackNode.rst:22:<autosummary>:1
+#: 71e758b6ee57416e8f4644f5165e30d8
+msgid ":py:obj:`is_leaf <sds.tree.node.RedBlackNode.is_leaf>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.RedBlackNode.rst:22:<autosummary>:1
+#: 4491cbf9e5b047f9b90c9d38f4dca5e6
+msgid "Check if this node is a leaf (has no children)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.node.RedBlackNode.rst:24
+#: 94b53a608a3c4d42bbefc59696fa097e
+msgid "Attributes"
+msgstr ""
+
+#: fffa4c20e300489789e718db0bd6de61 of
+#: sds.tree.node.RedBlackNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`color <sds.tree.node.RedBlackNode.color>`\\"
+msgstr ""
+
+#: ee094807e9e64ec280a710ac9de8504e of
+#: sds.tree.node.RedBlackNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.tree.node.RedBlackNode.data>`\\"
+msgstr ""
+
+#: ef278ce4f97842669dd67ef23e69d1bb of
+#: sds.tree.node.RedBlackNode.__init__:1:<autosummary>:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: 67e2c7e8bbf24bf09bd5d1aaff72e09d of
+#: sds.tree.node.RedBlackNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`left <sds.tree.node.RedBlackNode.left>`\\"
+msgstr ""
+
+#: ea452dfba9a240869bf064eaf3d3ffce of
+#: sds.tree.node.RedBlackNode.__init__:1:<autosummary>:1
+msgid "Get or set the left child node."
+msgstr ""
+
+#: ed2483caa8ad4534b07412ea9cd7b63a of
+#: sds.tree.node.RedBlackNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`parent <sds.tree.node.RedBlackNode.parent>`\\"
+msgstr ""
+
+#: 575a8aad781641cda5f8caa81d971d2d of
+#: sds.tree.node.RedBlackNode.__init__:1:<autosummary>:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: 69fea314f23744b0aaca19ee8c5ee6b8 of
+#: sds.tree.node.RedBlackNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`right <sds.tree.node.RedBlackNode.right>`\\"
+msgstr ""
+
+#: 20556207bd45492499c5207754b07071 of
+#: sds.tree.node.RedBlackNode.__init__:1:<autosummary>:1
+msgid "Get or set the right child node."
+msgstr ""
+

@@ -1,0 +1,316 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:5
+#: adad7d489a9a466c86e4f61b6904b27b
+msgid "Fenwick Tree — User Guide"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:9
+#: 1b37ba58e4474ab9bf405ca2a93b3ea8
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:12
+#: 7139fa97af644df3bd34e5368034d5cf
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:14
+#: 1adfe47ed310401d8ec73b4c4926d827
+msgid ""
+"A **Fenwick Tree** (also called a *Binary Indexed Tree*, BIT) maintains a"
+" mutable sequence of numbers and supports two operations in O(log n):"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:17
+#: 181b9f16da2a4ca9947c3c1246943971
+msgid "**Point update**: ``update(i, delta)`` — add *delta* to position *i*"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:18
+#: 7421cce04e664f9c811fbd71c2ed1972
+msgid ""
+"**Prefix sum query**: ``prefix_sum(i)`` — sum of elements at positions "
+"1..i"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:21
+#: 3a2fd53926b348269913d536bb5c89fa
+msgid "Mathematical Foundations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:24
+#: e4d54df7e8974d41b56cea14c00bf745
+msgid "Low-Bit Operation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:26
+#: b7bef93130ab49899313a196df760f75
+msgid "The structure relies entirely on one bitwise operation:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:28
+#: 5c96544779be437c9a0c2fdf2ffa502d
+#, python-brace-format
+msgid "\\text{lowbit}(i) = i \\mathbin{\\&} (-i)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:32
+#: ab640eb05f484140aee4253b958856a1
+msgid "``lowbit(i)`` isolates the least significant set bit of :math:`i`."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:38
+#: 0ae74f30a55f4659a2dbb8bed7476a25
+msgid "i"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:39
+#: 7c8e9b5f91b74cc6bda40a3385134e26
+msgid "binary"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:40
+#: 300ab961734b410b8a950bc9bed639e9
+msgid "lowbit(i)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:41
+#: 8b18b28b3d064f17926b29dc1f14bf6e
+msgid "Coverage"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:42
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:44
+#: 71d9baa1e75d4aa5a41b85cddde5ff9d 93939ee1b0094a4e8bd9031a95f8e6bf
+msgid "1"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:43
+#: 0016b044db3e478389b7c5b72b701e28
+msgid "0001"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:45
+#: b6806a7be785498799cd3848cc7410f0
+msgid "Covers [1, 1]"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:46
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:48
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:56
+#: 6953545c63a84205972bcfdd3099b68e a7fe154c8b3d4b5ea6afd0943e9a111a
+#: b284638d45994499b78bdf7e14979c19
+msgid "2"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:47
+#: 4b12057da0e3445b900e654b2810dc31
+msgid "0010"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:49
+#: 30030cede074461da7067d4e8643971b
+msgid "Covers [1, 2]"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:50
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:52
+#: 90001e0dc79e45b08023911989334b09 a452066e854d40a5ad3362b19573d60e
+msgid "4"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:51
+#: c15343c4c85a42cba2ee96bd522e6d23
+msgid "0100"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:53
+#: 01cb2d9c164748969b3582ceb3ff8a5f
+msgid "Covers [1, 4]"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:54
+#: 71b94ff33f6d4fa891f981ba2b09e190
+msgid "6"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:55
+#: 26fb208a1f34442a97616489c99c59d1
+msgid "0110"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:57
+#: e8986e16102a47769e35685f6a185540
+msgid "Covers [5, 6]"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:59
+#: 9a6ef15b4258407c80eeeb3af5a7bbbf
+#, python-brace-format
+msgid ""
+"Each cell ``_tree[i]`` stores the sum of elements in :math:`[i - "
+"\\text{lowbit}(i) + 1,\\ i]`."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:63
+#: 3b784750582c476fabc6f33d8d53ad1a
+msgid "Update (Upward Propagation)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:72
+#: cd78d26b71a44032878e8abc3105820f
+msgid "Prefix Sum (Downward Accumulation)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:81
+#: b8a38c2a7ea5409b8f1ef550d02f1d5e
+msgid ""
+"Both algorithms execute at most :math:`\\lfloor \\log_2 n \\rfloor + 1` "
+"iterations."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:85
+#: fb9d29051a8e44ada406972fc314aeb2
+msgid "Range Query"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:87
+#: 0f855a2e4b6f41bc8cde00a6305143bb
+#, python-brace-format
+msgid ""
+"\\text{range\\_sum}(l, r) = \\text{prefix\\_sum}(r) - "
+"\\text{prefix\\_sum}(l-1)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:92
+#: fb0b467228f349458c04020a83c25d36
+msgid "Tree Structure (8 elements)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:114
+#: 91b320d06325486680eec7bc520539be
+msgid "Usage"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:154
+#: 3b0f3bc7d7e24289b38a56d943f6c302
+msgid ""
+"Indexing is **1-based**: valid indices are ``1 .. size``. An out-of-"
+"bounds index raises :exc:`~sds.core.exceptions.IndexStructureError`."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:159
+#: a76fc400080d4286b061b834b5545978
+msgid "Real-World Use Cases"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:162
+#: 3e9ee496c4b4474db0348a49fec30f45
+msgid "Frequency Table"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:179
+#: 4db3c76f0aa8453c86005295e28bc992
+msgid "Range Update via Difference Array"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:181
+#: 44592473453b4210930c563ede9fe651
+msgid "To add *delta* to all elements in ``[l, r]`` in O(log n):"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:201
+#: 968294922b594a5dace6907b6cf12232
+msgid "Order Statistics"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:214
+#: a3cba431d966436d98f8130f56e81634
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:216
+#: 0bec3bf0ea704dac88bfea36a7f24403
+msgid "✅ Use ``from_list()`` to initialise from an existing array."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:218
+#: 7a7b74b8747e466ead4836d85d176d6d
+msgid ""
+"✅ Use ``range_sum(l, r)`` directly — more readable than manual "
+"subtraction."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:220
+#: 2af086d754a143c89e3569c75a8aeedd
+msgid "✅ Use the difference array trick for bulk range updates."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:222
+#: f4d534ee437f4334aa84514012450008
+msgid ""
+"❌ Do not confuse 1-based indexing (FenwickTree) with 0-based (Python "
+"lists)."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:224
+#: d08b71c1f56d42be8b153e705771dc8c
+msgid "❌ Do not call ``prefix_sum(0)`` — raises ``IndexStructureError``."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:227
+#: 88d97439dbc645c09cd80a6bb28e0e6f
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:229
+#: efff2cad756e449baac0e8cf098005f6
+msgid ""
+"Fenwick, P. M. (1994). \"A new data structure for cumulative frequency "
+"tables\". *Software: Practice and Experience*, 24(3), 327-336. DOI: "
+"`10.1002/spe.4380240306 <https://doi.org/10.1002/spe.4380240306>`_"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:233
+#: 8b2fa6e74cb94c658f240053617326d9
+msgid ""
+"OpenDSA — Binary Indexed Tree. https://opendsa-"
+"server.cs.vt.edu/ODSA/Books/Everything/html/BinaryIndexedTree.html"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:237
+#: 2d8d2d7af6a8481ba86f42a78a8a346a
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:239
+#: ddfa45b564cd451a810ff7b306159958
+msgid ":ref:`api_advanced_fenwick_tree` — API Reference"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/fenwick_tree.rst:240
+#: 47285d3ff291443c95fb1afadad7a7a1
+msgid ":ref:`guide_advanced_count_min_sketch` — Frequency estimation over streams"
+msgstr ""
+

@@ -1,0 +1,389 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:2
+#: c4b36421b24e4206867f5d266e54af71
+msgid "sds.graph.weighted.WeightedGraph"
+msgstr ""
+
+#: d3524820a6ec4dd59b4604c2c600aaf5 of sds.graph.weighted.WeightedGraph:1
+msgid "Weighted undirected graph implementation."
+msgstr ""
+
+#: 4f1fc51fd9fe49b78085a228ef17cd68 of sds.graph.weighted.WeightedGraph:3
+msgid ""
+"A weighted graph where each edge has a numeric weight. The graph "
+"maintains both the graph structure and edge weights efficiently."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst
+#: e48b07277b4f45fd8499d9e343f0f97c
+msgid "Parameters"
+msgstr ""
+
+#: 497955f7875040c9af846ef2f40b8de4 of sds.graph.weighted.WeightedGraph:6
+msgid ""
+"If True, allows multiple weighted edges between same nodes. Default is "
+"False."
+msgstr ""
+
+#: e8b664a3efd94e379b5b9f45cd3094bb of sds.graph.weighted.WeightedGraph:12
+msgid "Whether multiple edges are allowed (read-only property)."
+msgstr ""
+
+#: 86dd91d84d9f4554b5ab874bf911aaf7 of sds.graph.weighted.WeightedGraph
+msgid "type"
+msgstr ""
+
+#: 735862d4e36d43739834fa0391a7a06c of sds.graph.weighted.WeightedGraph:14
+msgid "bool"
+msgstr ""
+
+#: ec095e2316bd426682521b6b21fb1cb1 of sds.graph.weighted.WeightedGraph:18
+msgid ":obj:`WeightedDirectedGraph`"
+msgstr ""
+
+#: f825f864783342c5807b9e7df753ca63 of sds.graph.weighted.WeightedGraph:19
+msgid "For directed weighted graphs."
+msgstr ""
+
+#: 29df440e9a0647c39350a48760fd2fa8 of sds.graph.weighted.WeightedGraph:21
+msgid ":obj:`Graph`"
+msgstr ""
+
+#: 1fa13b6ba5224a2c8f31b6988a5836eb of sds.graph.weighted.WeightedGraph:22
+msgid "For unweighted graphs."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 2688460d4a4743d9a1850a2f15997fc7 3791f922cf394f0ea8fa35f41f25fa9e
+#: 74955785e2a348e2bd830e6ab3ce369b of
+#: sds.graph.weighted.WeightedGraph.__init__:1
+msgid "Initialize an empty weighted graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:13
+#: 2c1d41a3c753419a8924f0b61565fc76
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 3a40549cb62c4e2e88317f365a56f79f
+msgid ""
+":py:obj:`__init__ <sds.graph.weighted.WeightedGraph.__init__>`\\ "
+"\\(\\[allow\\_multi\\_edges\\]\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 13bb9218aa2040aebafacf476444f7d5
+msgid ""
+":py:obj:`add_edge <sds.graph.weighted.WeightedGraph.add_edge>`\\ "
+"\\(edge\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 43d9af332e46422c9bd2315607e20b45 a85827ad9ce343d5a9c9a4cc9f462f09 of
+#: sds.graph.weighted.WeightedGraph.add_edge:1
+msgid "Add a weighted edge to the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 9f6e0b6916e546ef997c928d4ff1e39c
+msgid ""
+":py:obj:`add_node <sds.graph.weighted.WeightedGraph.add_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 5b87085e86c14dd7b6bb0f38f1431052 a9efb082088f451abff02e745befbf40 of
+#: sds.graph.weighted.WeightedGraph.add_node:1
+msgid "Add a node to the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: bb88c6606683460b80b52c56e60fc3bc
+msgid ":py:obj:`clear <sds.graph.weighted.WeightedGraph.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 163013ac45e34c77ad73c7cb1adcc661 d8088904f73a46bbb95e714dc59a4cc9 of
+#: sds.graph.weighted.WeightedGraph.clear:1
+msgid "Remove all nodes and edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 4e93a3ea384e4f9fa64ef37b0762a1b0
+msgid ":py:obj:`degree <sds.graph.weighted.WeightedGraph.degree>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 4ca95f9af077467b84c4696f761c7730 c609a85378e740c488158eb70592f979 of
+#: sds.graph.weighted.WeightedGraph.degree:1
+msgid "Get the degree of a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 654e50ed293240cfb556c2af06a40a53
+msgid ""
+":py:obj:`edge_count <sds.graph.weighted.WeightedGraph.edge_count>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 5392d952ed8e4960983844cdaa2fc6e9 a8b691da17f74bf9a71f426c8613afa7 of
+#: sds.graph.weighted.WeightedGraph.edge_count:1
+msgid "Get the number of edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 2ac29b4eac2440048d5102119eebb958
+msgid ":py:obj:`edges <sds.graph.weighted.WeightedGraph.edges>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 933c9c35a04b41c19ff8b85c1e009b9f d9f1b42ef0c7486f9d2a014f2dd1531c of
+#: sds.graph.weighted.WeightedGraph.edges:1
+msgid "Get all weighted edges in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: b49130c229e04102a51e098b2736c82f
+msgid ""
+":py:obj:`get_edge <sds.graph.weighted.WeightedGraph.get_edge>`\\ "
+"\\(node1\\, node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 0b79c78ddb154363886fc956465792a3 77cac1fd21c84c3986f61a699b331fb6 of
+#: sds.graph.weighted.WeightedGraph.get_edge:1
+msgid "Get the weighted edge between two nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 4945d84c731d469387765a5427139382
+msgid ""
+":py:obj:`get_edge_weight "
+"<sds.graph.weighted.WeightedGraph.get_edge_weight>`\\ \\(node1\\, "
+"node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 1a2edab80ee0473eb3edbded1b6d1d3c a2d3ca7ca4534af6935fd8b63d729c89 of
+#: sds.graph.weighted.WeightedGraph.get_edge_weight:1
+msgid "Get the weight of the edge between two nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: f0c937e415a1472faf699315a9c0bef2
+msgid ""
+":py:obj:`get_node_by_id "
+"<sds.graph.weighted.WeightedGraph.get_node_by_id>`\\ \\(node\\_id\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 70569f24a6d6462d9ad1391ff33bafe0 9b4c8cba4fdd45888c81e1d40a2d70db of
+#: sds.graph.weighted.WeightedGraph.get_node_by_id:1
+msgid "Get a node by its ID."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 5eb344e0b4e04102a61105bb02c6bbb3
+msgid ""
+":py:obj:`has_edge <sds.graph.weighted.WeightedGraph.has_edge>`\\ "
+"\\(node1\\, node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 6e1bf7df770e48b38374d9ade905de61 f823409fe5fe4c82837fc081b4db4508 of
+#: sds.graph.weighted.WeightedGraph.has_edge:1
+msgid "Check if an edge exists between two nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: dcf39a6112b0479b821badda64efa70a
+msgid ""
+":py:obj:`has_node <sds.graph.weighted.WeightedGraph.has_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: d6ff00bb94694ab7b39987da618dcf4f ef59571b7a5b4de1ac2f0319ed1c5773 of
+#: sds.graph.weighted.WeightedGraph.has_node:1
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 09cdb9a9b35e435cb22a4113df93bf9d
+msgid ""
+":py:obj:`incident_edges "
+"<sds.graph.weighted.WeightedGraph.incident_edges>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 64447c92878748aeb01e8f434c8c6d54 dd42078d3b0c404da5bc07dceb32252b of
+#: sds.graph.weighted.WeightedGraph.incident_edges:1
+msgid "Get all weighted edges incident to a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 0f5743bc8dcc44479709df43e3c7f5c8
+msgid ""
+":py:obj:`is_connected <sds.graph.weighted.WeightedGraph.is_connected>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 78d5d22858434feda91f1e25bffda2fb 7ef0af0f07e843e28eb13e74a48c3730 of
+#: sds.graph.weighted.WeightedGraph.is_connected:1
+msgid "Check if the graph is connected."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: f517b77960af489a858de589de8663d7
+msgid ":py:obj:`is_empty <sds.graph.weighted.WeightedGraph.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 5879085aa3ba40eb8845bcca5a1825f1 667d722e1f3d4680b9113ec24ba2c547 of
+#: sds.graph.weighted.WeightedGraph.is_empty:1
+msgid "Check if the graph is empty."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 668cc8caee0f4edd9d767b94d15866e0
+msgid ""
+":py:obj:`neighbors <sds.graph.weighted.WeightedGraph.neighbors>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 3126d5654224490fbfe341f2f415c791 6703f842c1e941c1a951857c991c358a of
+#: sds.graph.weighted.WeightedGraph.neighbors:1
+msgid "Get all neighbors of a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 91fcf1d1e3f549b8b4ad90b8eb0276ee
+msgid ""
+":py:obj:`node_count <sds.graph.weighted.WeightedGraph.node_count>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 81cb4f558c2d453895bdf15cc757cff2 c071231d9ac24273a088550ceb3a039c of
+#: sds.graph.weighted.WeightedGraph.node_count:1
+msgid "Get the number of nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: e9d40a0c7dfe465292c504a827696e07
+msgid ":py:obj:`nodes <sds.graph.weighted.WeightedGraph.nodes>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 271e9f286abd47cd9e37331a25e6dbf3 f160a6ccd72f4a5ead4a0d0e4e7574b4 of
+#: sds.graph.weighted.WeightedGraph.nodes:1
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 0890a9cf9d8f426aa7b808fe5aa66113
+msgid ""
+":py:obj:`remove_edge <sds.graph.weighted.WeightedGraph.remove_edge>`\\ "
+"\\(edge\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 14c1d487675e41749267307571b50c8c 769da9e0cd384fb087da0e8ff56d7bd0 of
+#: sds.graph.weighted.WeightedGraph.remove_edge:1
+msgid "Remove a weighted edge from the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: cdf7aa3d8bc3463c9ab001db5769539c
+msgid ""
+":py:obj:`remove_node <sds.graph.weighted.WeightedGraph.remove_node>`\\ "
+"\\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 4db84e8408364c9499662e93ee0611f8 969bf24158534c19a326ce1f5ee48713 of
+#: sds.graph.weighted.WeightedGraph.remove_node:1
+msgid "Remove a node and all its incident edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 3d95e624f4a2478cbaf87a8e15b555a9
+msgid ""
+":py:obj:`total_weight <sds.graph.weighted.WeightedGraph.total_weight>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:41:<autosummary>:1
+#: 5228dcdb6c074880b148f7cfff34d1c2 88f6ae5b74ec4eaeaf98557691992cda of
+#: sds.graph.weighted.WeightedGraph.total_weight:1
+msgid "Calculate the total weight of all edges."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.weighted.WeightedGraph.rst:43
+#: 3b65411e3abd43eba24e063b8d24085d
+msgid "Attributes"
+msgstr ""
+
+#: 9ac10dff9d6e42059889f3263300996b of
+#: sds.graph.weighted.WeightedGraph.__init__:1:<autosummary>:1
+msgid ""
+":py:obj:`allow_multi_edges "
+"<sds.graph.weighted.WeightedGraph.allow_multi_edges>`\\"
+msgstr ""
+
+#: 256618c439ee410bb4b7b27e8291be55 63e83b1841164d96bcf18fae52380c67 of
+#: sds.graph.weighted.WeightedGraph.__init__:1:<autosummary>:1
+#: sds.graph.weighted.WeightedGraph.allow_multi_edges:1
+msgid "Check if multi-graph mode is enabled."
+msgstr ""
+
+#: 7131301e76cd454887cb1ebfd8a039a6 of
+#: sds.graph.weighted.WeightedGraph.__len__:1
+msgid "Return the number of nodes."
+msgstr ""
+
+#: 230a1e2b1c9b433ea987e521bb2920a0 of
+#: sds.graph.weighted.WeightedGraph.__contains__:1
+msgid "Check if node is in the graph."
+msgstr ""
+
+#: e4eb3a625d574b58a7a785f27703f789 of
+#: sds.graph.weighted.WeightedGraph.__iter__:1
+msgid "Iterate over nodes."
+msgstr ""
+
+#: 57890a66bd404b1fa53a2672b98bdcf6 of
+#: sds.graph.weighted.WeightedGraph.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: f654308f41d240ef8f076db0cb5947bf of
+#: sds.graph.weighted.WeightedGraph.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+

@@ -1,0 +1,329 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:2
+#: 6b9111876ff64bc79c99d66d846d98ac
+msgid "sds.tree.heap.HeapPriorityQueue"
+msgstr ""
+
+#: b9f4df3206074b1ba9f810dab31be798 of sds.tree.heap.HeapPriorityQueue:1
+msgid "Optimized priority queue implementation using min-heap."
+msgstr ""
+
+#: 2d1cc034bfe14586b4be8cf95a7818b4 of sds.tree.heap.HeapPriorityQueue:3
+msgid ""
+"A heap-based priority queue where elements are dequeued based on priority"
+" (lower priority value = higher priority). This implementation uses a "
+"binary min-heap for efficient O(log n) operations, making it ideal for "
+"large datasets."
+msgstr ""
+
+#: 3dccff31eb3d408f9013130db41a44cd of sds.tree.heap.HeapPriorityQueue:7
+msgid "**Performance Comparison:**"
+msgstr ""
+
+#: 116e0e90871f45bca894ceb4c22d4efa of sds.tree.heap.HeapPriorityQueue:9
+msgid ""
+"This implementation is significantly faster than the linked-list based "
+"PriorityQueue in sds.linear.queue for large datasets:"
+msgstr ""
+
+#: 951b9db512a64c3aaca6bbc4301bf87c of sds.tree.heap.HeapPriorityQueue:12
+msgid "HeapPriorityQueue (this class): O(log n) enqueue and dequeue"
+msgstr ""
+
+#: 6b42ea607fa44d6ea8f9b9417a45164f of sds.tree.heap.HeapPriorityQueue:13
+msgid "Linear PriorityQueue: O(n) enqueue, O(1) dequeue"
+msgstr ""
+
+#: 734ff8156b8a48f7ba82728ce2707e32 of sds.tree.heap.HeapPriorityQueue:15
+msgid "**When to use:**"
+msgstr ""
+
+#: 605be549f7444bdba5e732c35a0bc498 of sds.tree.heap.HeapPriorityQueue:17
+msgid "Use this HeapPriorityQueue for performance-critical applications"
+msgstr ""
+
+#: 83efd6083ad44fb5b91622612ff28cde of sds.tree.heap.HeapPriorityQueue:18
+msgid ""
+"Use linear.queue.PriorityQueue for simple, small datasets where code "
+"simplicity is preferred over performance"
+msgstr ""
+
+#: c0a8ed8c256b4e56962e5892e145bb88 of sds.tree.heap.HeapPriorityQueue:23
+msgid "The number of elements in the queue (read-only property)."
+msgstr ""
+
+#: 14f64284d42f489282f7717ef864ad84 of sds.tree.heap.HeapPriorityQueue
+msgid "type"
+msgstr ""
+
+#: 8a073b9159bf412dad5b3cfc95001ee4 of sds.tree.heap.HeapPriorityQueue:25
+msgid "int"
+msgstr ""
+
+#: 2a0bcd28c8334e0392be28a5e6c440f4 3a761dbf0bac4220b40668dfb6584cf8
+#: 5dbdfef4b1d2451297cf46d691c85984 64d0d52615984c1ea5a6bde4fce26238
+#: a3c346d74d544d15a2ef0ec995762cb0 c10544af79c2414bbbe26b41d8eeb54e of
+#: sds.tree.heap.HeapPriorityQueue:27
+#: sds.tree.heap.HeapPriorityQueue.__init__:3
+#: sds.tree.heap.HeapPriorityQueue.dequeue:8
+#: sds.tree.heap.HeapPriorityQueue.enqueue:8
+#: sds.tree.heap.HeapPriorityQueue.peek:8
+msgid "Examples"
+msgstr ""
+
+#: fd5795c743c743239df850ba563fecdf of sds.tree.heap.HeapPriorityQueue:29
+msgid "Create and use a heap-based priority queue:"
+msgstr ""
+
+#: 757ee6a8286d435bb23568f8e3c48801 of sds.tree.heap.HeapPriorityQueue:40
+msgid "Efficient handling of large datasets:"
+msgstr ""
+
+#: 1e9f94e5f4af464ba1edf3bca2648e97 7dfef171cefc445c9ee97ec3119b1699
+#: c75be4fed4db471daf66efea24c5bb6e cbda5126dc544ff8979d86d29985823c
+#: f9c45f27045a440a879895644127e3c5 of sds.tree.heap.HeapPriorityQueue:48
+#: sds.tree.heap.HeapPriorityQueue.__contains__:9
+#: sds.tree.heap.HeapPriorityQueue.dequeue:15
+#: sds.tree.heap.HeapPriorityQueue.enqueue:16
+#: sds.tree.heap.HeapPriorityQueue.peek:17
+msgid "Notes"
+msgstr ""
+
+#: 404d21bbb1fb4083a3a386493530f930 of sds.tree.heap.HeapPriorityQueue:50
+msgid ""
+"Time Complexity: - enqueue: O(log n) - significantly better than O(n) for"
+" linked list - dequeue: O(log n) - slightly slower than O(1), but overall"
+" better - peek: O(1)"
+msgstr ""
+
+#: d8d5856e42904acc8a1d0add5e56809c of sds.tree.heap.HeapPriorityQueue:55
+msgid ""
+"The priority is used for comparison. Lower priority values have higher "
+"priority in the queue (min-heap property)."
+msgstr ""
+
+#: bbf91ff582344525989365ccd9f754a6 of sds.tree.heap.HeapPriorityQueue:60
+msgid ":obj:`MinHeap`"
+msgstr ""
+
+#: 50adde5f814f4bfb9ecbf4d945d4eef2 of sds.tree.heap.HeapPriorityQueue:61
+msgid "Underlying min-heap implementation."
+msgstr ""
+
+#: 15499b508fd044098a06fb299983c87f of sds.tree.heap.HeapPriorityQueue:63
+msgid ":obj:`sds.linear.queue.PriorityQueue`"
+msgstr ""
+
+#: dc62180abd32425d9d614a1002f936d1 of sds.tree.heap.HeapPriorityQueue:64
+msgid "Simpler O(n) enqueue alternative."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: 1ef7affe140d43ab9f0a5b3f006248d2 92d5e3d488c74ec79063a2ee650454a1
+#: 9e892c14479c4d368b1e76c305e2e4fe of
+#: sds.tree.heap.HeapPriorityQueue.__init__:1
+msgid "Initialize an empty heap-based priority queue."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:13
+#: a2b1ad2e23224552808b14dc05b6c813
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: 8fe136e67adf478cbedb8ed99131feb7
+msgid ":py:obj:`__init__ <sds.tree.heap.HeapPriorityQueue.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: 454443f10f61479196f181016075c0c9
+msgid ":py:obj:`clear <sds.tree.heap.HeapPriorityQueue.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: 170438fa5a9b4152a66a09e300c4b3d6 4e10610da0804eedaf8165821f4174a7 of
+#: sds.tree.heap.HeapPriorityQueue.clear:1
+msgid "Remove all elements from the queue."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: 10c4f7590e8c433b9820a9056c13e437
+msgid ":py:obj:`dequeue <sds.tree.heap.HeapPriorityQueue.dequeue>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: 0c6202d65876435ca3a68028ed6c46cf 6efe1d4f0cf142989cc96f3ebc9dfa19 of
+#: sds.tree.heap.HeapPriorityQueue.dequeue:1
+msgid "Remove and return the highest priority item."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: e4830e57c071450b9c0492e9f8ba6e49
+msgid ""
+":py:obj:`enqueue <sds.tree.heap.HeapPriorityQueue.enqueue>`\\ \\(item\\, "
+"priority\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: f86ae11d7e9f414c9151aef8dfbd25f6 fae30a47bf1842bfbbe09c2423e70244 of
+#: sds.tree.heap.HeapPriorityQueue.enqueue:1
+msgid "Add an item with priority to the queue."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: 25b1d3f249af441d8738e5e96ab3b4ce
+msgid ":py:obj:`is_empty <sds.tree.heap.HeapPriorityQueue.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: 4e96f7d7fe93421b9deb5e1036463143 e09100e2bff541769fa93d33964f1c28 of
+#: sds.tree.heap.HeapPriorityQueue.is_empty:1
+msgid "Check if the queue is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: 1f1176437cc94500b91cb700424fc27a
+msgid ":py:obj:`peek <sds.tree.heap.HeapPriorityQueue.peek>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:26:<autosummary>:1
+#: 1285b13095c245fa8fff30d98b779765 7fc36009b3fc40919632d32a3bb86807 of
+#: sds.tree.heap.HeapPriorityQueue.peek:1
+msgid "Return the highest priority item without removing it."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst:28
+#: 2eac1e57923044f280a65c835fa5f6b9
+msgid "Attributes"
+msgstr ""
+
+#: 53410e207833472d9d4813eb664f1816 of
+#: sds.tree.heap.HeapPriorityQueue.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.heap.HeapPriorityQueue.size>`\\"
+msgstr ""
+
+#: 6ba7464ceba04b68a2eaa130c362c3c1 b5cc8a051eff4f91a03755ffb665865c of
+#: sds.tree.heap.HeapPriorityQueue.__init__:1:<autosummary>:1
+#: sds.tree.heap.HeapPriorityQueue.size:1
+msgid "Get the number of elements in the queue."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst
+#: 61e976b074294f02b35d91d76caa3114 b5ea202a92124f0caf800e06857966c0
+msgid "Parameters"
+msgstr ""
+
+#: 61b105de38d448f8be0124accfc90234 of
+#: sds.tree.heap.HeapPriorityQueue.enqueue:3
+msgid "The item to add."
+msgstr ""
+
+#: 75bc76c66cb34c93b9f8eeb7e54e5c29 of
+#: sds.tree.heap.HeapPriorityQueue.enqueue:5
+msgid "The priority value. Must be comparable. Lower values = higher priority."
+msgstr ""
+
+#: deddad8283e740a2b53fef910e7b8f16 of
+#: sds.tree.heap.HeapPriorityQueue.enqueue:18
+msgid "Time complexity: O(log n) - More efficient than O(n) for large datasets"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst
+#: 1ccc0b94baa4414c87f091f6869786fe b8f998d825ba4ce288e34966214f1cf9
+#: d9149908446c46939f0d4bd57f0430e0
+msgid "Returns"
+msgstr ""
+
+#: 22b2df6045634923ac69ec96b494e9a6 6ffdb87c921b4620ba52250d7afd71e2 of
+#: sds.tree.heap.HeapPriorityQueue.dequeue:3
+#: sds.tree.heap.HeapPriorityQueue.peek:3
+msgid "A tuple of (item, priority)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst
+#: 32347dfa0dd742319edb6bb08a9446b6 91e807163f33438c906014ce74dcf9e4
+#: ad94e752e5c34e9eb8f6f753a8c44244
+msgid "Return type"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.HeapPriorityQueue.rst
+#: 4971a36678ed4e869841ec2f8abf9f0f 735c1597c5a847e4960b8d91198c6b3e
+msgid "Raises"
+msgstr ""
+
+#: 8ea71f444b0a4a509557e484ade88c77 98859e8c3348460280ff94a0275cb18d of
+#: sds.tree.heap.HeapPriorityQueue.dequeue:6
+#: sds.tree.heap.HeapPriorityQueue.peek:6
+msgid "If the queue is empty."
+msgstr ""
+
+#: 8dd03b3327314d538680cbcbb02578d7 of
+#: sds.tree.heap.HeapPriorityQueue.dequeue:17
+msgid "Time complexity: O(log n) - Balanced performance for all operations"
+msgstr ""
+
+#: 732cd6bc5ffc42dda0d9074d3a01b759 of sds.tree.heap.HeapPriorityQueue.peek:19
+msgid "Time complexity: O(1) - Constant time access to highest priority"
+msgstr ""
+
+#: e4b797dc931d46a9845ac936b3e7f853 of
+#: sds.tree.heap.HeapPriorityQueue.__len__:1
+msgid "Return the number of elements."
+msgstr ""
+
+#: 4f3ecd5e16eb431d8a9612c28c72880c of
+#: sds.tree.heap.HeapPriorityQueue.__iter__:1
+msgid "Iterate over queue elements."
+msgstr ""
+
+#: 42a78033e9de4dbabbe0c40c839cbca5 of
+#: sds.tree.heap.HeapPriorityQueue.__contains__:1
+msgid "Check if item is in the queue (checks item, not priority)."
+msgstr ""
+
+#: 62ce0c5986404de6995881d53c12f91f of
+#: sds.tree.heap.HeapPriorityQueue.__contains__:3
+msgid "The item to search for."
+msgstr ""
+
+#: 3318e07848124242909a73fc633ad85d of
+#: sds.tree.heap.HeapPriorityQueue.__contains__:6
+msgid "True if found, False otherwise."
+msgstr ""
+
+#: 4c1aec46de2a436198b83b0260294d83 of
+#: sds.tree.heap.HeapPriorityQueue.__contains__:11
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 19b72baf4db5477583fd8484728e1ebc of
+#: sds.tree.heap.HeapPriorityQueue.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: 6c664823005a40eeb546c031c41f7f9b of
+#: sds.tree.heap.HeapPriorityQueue.__str__:1
+msgid "Return string showing queue contents."
+msgstr ""
+

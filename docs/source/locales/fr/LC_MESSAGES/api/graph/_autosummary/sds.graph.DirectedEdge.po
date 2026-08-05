@@ -1,0 +1,304 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:2
+#: 8e2933e15e0a4fe49fee491442c9f54f
+msgid "sds.graph.DirectedEdge"
+msgstr ""
+
+#: 4bc9dbdcaba644efaeaddeb44e75cbbd of sds.graph.edge.DirectedEdge:1
+msgid "Edge with a direction from source to target."
+msgstr ""
+
+#: 264365f6e8d34140b82c79024148649e of sds.graph.edge.DirectedEdge:3
+msgid ""
+"A directed edge has an explicit direction from a source node to a target "
+"node. The edge (u, v) is different from (v, u)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst
+#: 23255faffdea47929c1805aa62c60ec1 267b360820724879b72625fb050a8a13
+#: 7a6d4df10ce14e92adcbb72a24555020 9fb92064854d4f5195a76caef0095e67
+#: bd90b4a45f9c4e64bc03b47bc2cca856
+msgid "Parameters"
+msgstr ""
+
+#: 0104d255df184303bd81f31b896f2f68 of sds.graph.edge.DirectedEdge:6
+msgid "Source node (tail of the edge)."
+msgstr ""
+
+#: 9be0ce05d8b64cb0af1a5cf74a013149 of sds.graph.edge.DirectedEdge:8
+msgid "Target node (head of the edge)."
+msgstr ""
+
+#: 66f81ef867aa4927bdf014594a2b4474 d703b10ef0f84bea9ece7f58c7aaad3a
+#: def5d002c7fc4dd08dd3120097248990 of sds.graph.edge.DirectedEdge:10
+#: sds.graph.edge.DirectedEdge.__init__:7
+msgid "Additional data. Default is None."
+msgstr ""
+
+#: cab44a8534494e8088adf99539e772f9 of sds.graph.edge.DirectedEdge:15
+msgid "Source node (read-only property)."
+msgstr ""
+
+#: 049f1c39df224402b033bc3f77c8a04a 30f5535efd194d21bfbc2ae84ce3d44d
+#: 695eceb2cef340e7abdbcf990791adc2 eb089fef2ec840afb80c101ea263044a of
+#: sds.graph.edge.DirectedEdge
+msgid "type"
+msgstr ""
+
+#: 6d2fbd617cc94fa68454bb9c5dad5b51 8c1465d68392498692c175e4423ca174
+#: cb9e1543a6fd4a1c98d0cf55d88c7475 d80683f9a5604135b681a4e615066fa7 of
+#: sds.graph.edge.DirectedEdge:17 sds.graph.edge.DirectedEdge:23
+#: sds.graph.edge.DirectedEdge:29 sds.graph.edge.DirectedEdge:35
+msgid "GraphNode"
+msgstr ""
+
+#: 0b203688aec141bbb17371b206a5eefe of sds.graph.edge.DirectedEdge:21
+msgid "Target node (read-only property)."
+msgstr ""
+
+#: 529a302951944e20b7716deea3edcf58 of sds.graph.edge.DirectedEdge:27
+msgid "Alias for source (inherited property)."
+msgstr ""
+
+#: a7d6eb5697904dde89adaed8e8dfcd61 of sds.graph.edge.DirectedEdge:33
+msgid "Alias for target (inherited property)."
+msgstr ""
+
+#: 3ff84e3b59944b2aa021c6b2caa35f84 7f102863c1374701a77b427f4246a7fb of
+#: sds.graph.edge.DirectedEdge:37 sds.graph.edge.DirectedEdge.connects:13
+msgid "Examples"
+msgstr ""
+
+#: e8989b1e16584d2380135e4a51238742 of sds.graph.edge.DirectedEdge:51
+msgid "Notes"
+msgstr ""
+
+#: 58e97a79cdb647a2a0db7fdb48d215c2 of sds.graph.edge.DirectedEdge:53
+msgid "DirectedEdge overrides connects() to respect direction."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:25:<autosummary>:1
+#: 2ac1fa4531994d1795d0ece62c1b9ce4 64695c9285964422b187d7fcfd245e68
+#: aa74c54b0d71414d807e1f85f9630831 of sds.graph.edge.DirectedEdge.__init__:1
+msgid "Initialize a directed edge."
+msgstr ""
+
+#: 11ddb936a561492fbc5e2e09d1f071d3 1cb8e68c0c3041c48f2e02b790a0538a of
+#: sds.graph.edge.DirectedEdge.__init__:3
+msgid "Source node."
+msgstr ""
+
+#: 1ad721673ad245a6a27f4fe5bc363430 97b42de9eb3846efa06186ca54f1cebb of
+#: sds.graph.edge.DirectedEdge.__init__:5
+msgid "Target node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:13
+#: 12a7b8b277e5436fb5afdddb50f2e6ca
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:25:<autosummary>:1
+#: 37f9f36ed1c64b03a9d0ee20ff7be422
+msgid ""
+":py:obj:`__init__ <sds.graph.DirectedEdge.__init__>`\\ \\(source\\, "
+"target\\[\\, data\\]\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:25:<autosummary>:1
+#: 171c5f78f0cf45ff906a2f98a350bafb
+msgid ""
+":py:obj:`connects <sds.graph.DirectedEdge.connects>`\\ \\(node\\_a\\, "
+"node\\_b\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:25:<autosummary>:1
+#: 37cce60ef0f34df986068d253f364624 8f0b46aa4e7240df84418c14f19be3ce of
+#: sds.graph.edge.DirectedEdge.connects:1
+msgid "Check if edge goes from node_a to node_b."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:25:<autosummary>:1
+#: 5e0c9329ff3f46228e8290aacb15a759
+msgid ":py:obj:`incident_to <sds.graph.DirectedEdge.incident_to>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:25:<autosummary>:1
+#: e1fb1e09ac924b9682cf46014d2eda47
+msgid "Check if edge is incident to a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:25:<autosummary>:1
+#: f611566e530e49bc89b7ff4eb854ba4f
+msgid ":py:obj:`is_self_loop <sds.graph.DirectedEdge.is_self_loop>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:25:<autosummary>:1
+#: 0f5462af00be4a76a5f9ff9c438f611e
+msgid "Check if this edge is a self-loop."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:25:<autosummary>:1
+#: 673d0f79af124a24841007204c55db40
+msgid ":py:obj:`other_node <sds.graph.DirectedEdge.other_node>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:25:<autosummary>:1
+#: c9e59a626bce4b6e8ee80f149ac89d8c
+msgid "Get the other node connected by this edge."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst:27
+#: f61d4b3756d647d3aea055b7cb0eb0ef
+msgid "Attributes"
+msgstr ""
+
+#: a87bfd38abed4c4fab227d2adb32cf19 of
+#: sds.graph.edge.DirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.graph.DirectedEdge.data>`\\"
+msgstr ""
+
+#: 9c1980c887cd459c9f3fb8913848c4ad of
+#: sds.graph.edge.DirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the edge data."
+msgstr ""
+
+#: 4a3bef2e6bf6407787e74ac768e49298 of
+#: sds.graph.edge.DirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`node1 <sds.graph.DirectedEdge.node1>`\\"
+msgstr ""
+
+#: fdb8fb05a6b2450c8d8d367b61193d08 of
+#: sds.graph.edge.DirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the first node."
+msgstr ""
+
+#: cd2c9cb0bcf742deb039ad1d05f40a78 of
+#: sds.graph.edge.DirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`node2 <sds.graph.DirectedEdge.node2>`\\"
+msgstr ""
+
+#: 58aab929265841a394982beeb4eefffd of
+#: sds.graph.edge.DirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the second node."
+msgstr ""
+
+#: c9c51c91fd52445a95bf491a3ff3394e of
+#: sds.graph.edge.DirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`source <sds.graph.DirectedEdge.source>`\\"
+msgstr ""
+
+#: 8ddfaa0478504d3b85522aba3c62e20e b114b08d56ff46e8ad0816c4613fc1dd of
+#: sds.graph.DirectedEdge.source:1
+#: sds.graph.edge.DirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the source node."
+msgstr ""
+
+#: 8018591c1ff94ed691341965573fa750 of
+#: sds.graph.edge.DirectedEdge.__init__:1:<autosummary>:1
+msgid ":py:obj:`target <sds.graph.DirectedEdge.target>`\\"
+msgstr ""
+
+#: 32750d834ca04ec69ea600d4cbcfe529 3277374255eb446aae971d779f08a022 of
+#: sds.graph.DirectedEdge.target:1
+#: sds.graph.edge.DirectedEdge.__init__:1:<autosummary>:1
+msgid "Get the target node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst
+#: 164a7d5414f94439845236bf4b7edeaf 3186ec207ef74f3f87d69a80767de074
+#: 691e068dd11e42e5b364e2f332fa265d 99fb6f1fc01a4d4fa2ba3b57db5162a8
+#: 9cbb15facc264779a25c0c7992ab7c7f c98261ba75f44c97b27ccf47d8c0cc49
+#: e78dbb76d29f4ad4b1d9537832565e77
+msgid "Returns"
+msgstr ""
+
+#: 9a67bdaef5bc425bba09bcf37ad821e8 of sds.graph.DirectedEdge.source:3
+msgid "The source node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.DirectedEdge.rst
+#: 342c60cfcb974b1883b5e93318b5129c 4813e786095a4963bd40b6cff83f3cb5
+#: 53a278923e924c40b36bd6bba60c61b6 9036e3e54990470499908f720cd2a975
+#: b4da8797d3474e618f7cca6641c45205 dcffcf73f6294462ae1be5d88cd55a59
+#: df9fa6d2344347fea914185078d2acb0
+msgid "Return type"
+msgstr ""
+
+#: 0285d53b3d4f4a09ab947ff0b6d18612 of sds.graph.DirectedEdge.target:3
+msgid "The target node."
+msgstr ""
+
+#: 532f2406022c4f8ead17a29a4126ba11 of sds.graph.edge.DirectedEdge.connects:3
+msgid "For directed edges, order matters: edge must go from node_a to node_b."
+msgstr ""
+
+#: 3856a7e3c6064ce18c3c2f1d1a3f4dc5 of sds.graph.edge.DirectedEdge.connects:5
+msgid "Expected source node."
+msgstr ""
+
+#: 72df74e654ca49a680e0751a5fb4d4f8 of sds.graph.edge.DirectedEdge.connects:7
+msgid "Expected target node."
+msgstr ""
+
+#: 1952271a00ab424b88bf49941aae8b54 of sds.graph.edge.DirectedEdge.connects:10
+msgid "True if edge goes from node_a to node_b."
+msgstr ""
+
+#: 5867f505769a483e8d04e76abaedc282 of sds.graph.edge.DirectedEdge.__eq__:1
+msgid "Check equality respecting direction."
+msgstr ""
+
+#: 6cd1d0ae4cff4ffd95818bfba86228dc of sds.graph.edge.DirectedEdge.__eq__:3
+msgid "Object to compare with."
+msgstr ""
+
+#: d348e6e375df4a08a9accce03c44bdb8 of sds.graph.edge.DirectedEdge.__eq__:6
+msgid "True if edges have same source and target."
+msgstr ""
+
+#: b099a0aa1f9f41a489b5c6b003dcb3a2 of sds.graph.edge.DirectedEdge.__hash__:1
+msgid "Return hash respecting direction."
+msgstr ""
+
+#: b68bbaf2cd7a4e46b5998f9e638c0b01 of sds.graph.edge.DirectedEdge.__hash__:3
+msgid "Hash value (order-dependent for directed edges)."
+msgstr ""
+
+#: 1ea7a87e96e842d2b62fe915b31d59e0 of sds.graph.edge.DirectedEdge.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 0bc2a8453eaa4838880aec62ee7c3a93 of sds.graph.edge.DirectedEdge.__repr__:3
+msgid "String representation with arrow."
+msgstr ""
+
+#: e7dd61d991ce47f2abf556f4c4783e03 of sds.graph.edge.DirectedEdge.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+
+#: 762323ff2da34429960a81656e33bf2b of sds.graph.edge.DirectedEdge.__str__:3
+msgid "String with arrow showing direction."
+msgstr ""
+

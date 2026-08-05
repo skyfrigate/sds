@@ -1,0 +1,412 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/advanced/index.rst:5 707a12b550434c0abe7f61077908d0da
+msgid "Advanced Structures (sds.advanced)"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:9 f22c496cb91d4251a51063b48fcb44b2
+msgid ""
+"Advanced data structures provide specialised solutions for complex "
+"computational problems: dynamic connectivity tracking, space-efficient "
+"membership testing, probabilistic frequency estimation, ordered "
+"probabilistic access, bounded caching, and prefix-sum queries."
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:27 f5b2ed434384416a8d36b08cdf763a85
+msgid "Module Contents"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:30 8ffca68e60114428bdbd67747f6d7b1b
+msgid "Structure Type Comparison"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:36 62427c93f3a64cf0835ecd61d301eb8c
+msgid "Structure"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:37 036c2fbb5b634c5db8286e87b623f99c
+msgid "Add / Update"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:38 41f04022903c4663a0aff2ef5ac78111
+msgid "Query"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:39 cdfb2a4536964970aee36f81f4876478
+msgid "Space"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:40 65dbe200feb3447580ddf025f7a3db32
+msgid "Best Use Case"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:41 f07f96c124354263bdb7fb225a885702
+msgid "``DisjointSet``"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:42
+#: ../../source/api/advanced/index.rst:43 3f1a4fd40fd74a90a39164ce061ed818
+#: 978f7a6a7b264800a0a4cbb970cc0449
+msgid "O(α(n))"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:44
+#: ../../source/api/advanced/index.rst:59
+#: ../../source/api/advanced/index.rst:64
+#: ../../source/api/advanced/index.rst:74 364f5dc8f879467b97c8b69d872c2170
+#: 3ad150ccc4014be0bdc5742f5dadac3a 9883fa5d139343cf8fe645102bd8c91b
+#: ba16c763caa34092bf99461cd9dc330d
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:45 4f0cf1228d784302865eb67e88c3cf20
+msgid "Dynamic connectivity"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:46 9b8767935c274415b70e5b9ecf5b643d
+msgid "``BloomFilter``"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:47
+#: ../../source/api/advanced/index.rst:48 2e6b9248332f44ef8ac3c1d7961c4715
+#: f153b08779a14d2daf6d56f4353b5db0
+msgid "O(k)"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:49 289bd75d7ba54f1bbfacc67800533cd5
+msgid "O(m) bits"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:50 3375cfacf48142e2b222dc5999a80777
+msgid "Approximate membership"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:51 9cde11fc181646feb532452904ece34c
+msgid "``SkipList``"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:52
+#: ../../source/api/advanced/index.rst:53 8725dd010eb84dd5bb96be5739d1dd07
+#: 9303ed39c87448a8bb1cd80b4ac7af3f
+msgid "O(log n)\\*"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:54 953bfb87d782456691a1240d2c7cb9a1
+msgid "O(n log n)\\*"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:55 90e912b4fe3f4c709834421d69f20fbf
+msgid "Ordered key-value store"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:56 6d7586715128406bbaf19d7bd5ec2241
+msgid "``HashTableChaining``"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:57
+#: ../../source/api/advanced/index.rst:58
+#: ../../source/api/advanced/index.rst:62
+#: ../../source/api/advanced/index.rst:63 1f2af622738d4c02b5b8c65944ccb03b
+#: 7388232462f6498fb228dbd07bbba01d 8e8e79d598b444cfad5ef77624bd515a
+#: aefeffc022d247309d829c8a475fd831
+msgid "O(1)\\*"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:60 efdb731c31d84184befd16b4a3bb59e3
+msgid "Key-value lookup (chaining)"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:61 2d71305df4cd4d6682e5fff35257d2d5
+msgid "``HashTableOpenAddressing``"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:65 37cd1476b8f549759388047395e2ba51
+msgid "Key-value lookup (probing)"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:66 312c5a09c1d14125853941812344440a
+msgid "``LRUCache``"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:67
+#: ../../source/api/advanced/index.rst:68 1017b0e1e27d46f19c3a7e4942f9672b
+#: 2654e6e55dc24c72bcd193752f453c9f
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:69 e84732c55c6a4898919f94ab6136c714
+msgid "O(capacity)"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:70 5170c54a75ef4b459ea37f908539f456
+msgid "Bounded cache with eviction"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:71 5973a6f2814e4fd0aad44220cc0e9bb1
+msgid "``FenwickTree``"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:72
+#: ../../source/api/advanced/index.rst:73 77da77e1810945018c12e5df4dd0003d
+#: d6948d0e2c3f43a59c7fe1f6d9fc9ea7
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:75 727c1257f7b54a0e99f63d2d6cfad3e9
+msgid "Prefix-sum queries"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:76 de1421f23fe04b4f97f1d57e6d395e2d
+msgid "``CountMinSketch``"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:77
+#: ../../source/api/advanced/index.rst:78 915c8215fe40461d882e6da94ba4fd36
+#: cf1c3d01f1994c97b5fb59239be6fe4a
+msgid "O(d)"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:79 94c4f1511291476eb1511e3f602eaf5c
+msgid "O(d × w)"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:80 0808cb46e22d47c48c1c8068fb633997
+msgid "Frequency estimation"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:82 acd0ab73c1f24e9b8623967c460ad26e
+msgid ""
+"\\* Expected / amortised — k = hash functions, m = bits, d = depth, w = "
+"width"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:85 957535451d2d419f8426042de9898d41
+msgid "Operation Support Matrix"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:91 200a1a16f5af4c799f42de4e8fb1ca11
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:92 edb8314ff26f49d785b961447e1aafcd
+msgid "DisjointSet"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:93 31a8906196284849b0732324a468bee9
+msgid "BloomFilter"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:94 110594f82cd9425a8524da357a833e1f
+msgid "SkipList"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:95 e27a8970842242388326780889c15bc5
+msgid "HT Chaining"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:96 45b5e54475a24ec2ab999389ad6a17db
+msgid "HT Open"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:97 9bccc869bf2d4cc1918410e2fba3036a
+msgid "LRUCache"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:98 000800da1b3f4a0bb1c16f08ff85b582
+msgid "FenwickTree"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:99 98cf778513b8403bb4073d7fbb3adb55
+msgid "CMS"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:100 3330cd8d43b3490195be9fc711300e07
+msgid "**Add**"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:101 c321256966fb4ee886ec14186a7aee5a
+msgid "make_set"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:102
+#: ../../source/api/advanced/index.rst:108 a1e5285991c74695b468072801937c2e
+#: d842bc1ba4174277ab7291e38fe4ec50
+msgid "add"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:103 6e5beb54d3024f6bb8b1ee5c91b65c2a
+msgid "insert"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:104
+#: ../../source/api/advanced/index.rst:105
+#: ../../source/api/advanced/index.rst:106 4f875dabcc21435e885175b5acdabb05
+#: 6c0f7784ffe64c86a76a4d3aa7e3cdc1 922e1d6b13ba489bad086bb48c9da781
+msgid "put"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:107 8f926efa294f478d8fb73709b509f03f
+msgid "update"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:109 dc13eae67a684ca9997a842c2f476cd6
+msgid "**Query**"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:110 0c286570aa334f6595b13cfba5c0dc0e
+msgid "find/connected"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:111 55c3303c0abb4dd4a676f35114906d36
+msgid "__contains__"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:112 074dfbadd9444a35b626a253ecf88818
+msgid "search"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:113
+#: ../../source/api/advanced/index.rst:114
+#: ../../source/api/advanced/index.rst:115 a53a250d390c4515ab6d173a0927b5d9
+#: ae97c7bf8f984ed7a5ce213954ddac0c e181956682c440769da7f87e6911dabe
+msgid "get"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:116 7ed8021259f145f5ab403e9c81f6435c
+msgid "prefix_sum"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:117 3a57556c850d493b856ee11db215f91a
+msgid "frequency"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:118 95859009d3b54981a80cda56a1e29ae2
+msgid "**Delete**"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:119
+#: ../../source/api/advanced/index.rst:120
+#: ../../source/api/advanced/index.rst:125
+#: ../../source/api/advanced/index.rst:126
+#: ../../source/api/advanced/index.rst:128
+#: ../../source/api/advanced/index.rst:129
+#: ../../source/api/advanced/index.rst:131
+#: ../../source/api/advanced/index.rst:132
+#: ../../source/api/advanced/index.rst:133
+#: ../../source/api/advanced/index.rst:134
+#: ../../source/api/advanced/index.rst:135
+#: ../../source/api/advanced/index.rst:139
+#: ../../source/api/advanced/index.rst:140
+#: ../../source/api/advanced/index.rst:141
+#: ../../source/api/advanced/index.rst:142
+#: ../../source/api/advanced/index.rst:143 0c6729bf2fe2464e8dac429e424a9906
+#: 0dc204362e1c407f93b420b0a38d9538 19adf787635441f1abdbe6b7943a5a1c
+#: 387285455ebd4888ac74c2115c3e33e6 3a099034948c48199b3d548d6f88f75d
+#: 5f24ffde77f145c595b3e075b499ebab 7a831d8ed89647fcaceef35586a14c4a
+#: 81dfbac9237c43bc8368ef8db7292725 83feabf74c6a42f7aa420d27e9d579bf
+#: b01b461480a44fadb5509402856e8d65 c38b0c44147e47c08803e0cdc5d65a5e
+#: cbb3c86568c5497d8c5c3bfcd22d6c55 edc5f7626ea84ea2bccb6089627336b5
+#: ee70df3e94fd44ee8ee0dae29e3c7ea9 f86cd329fe5543a2976f11817c07f3cb
+#: fb2ee151a5b643f7a472883276832d3e
+msgid "❌"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:121
+#: ../../source/api/advanced/index.rst:122
+#: ../../source/api/advanced/index.rst:123
+#: ../../source/api/advanced/index.rst:124
+#: ../../source/api/advanced/index.rst:130
+#: ../../source/api/advanced/index.rst:146
+#: ../../source/api/advanced/index.rst:148
+#: ../../source/api/advanced/index.rst:149
+#: ../../source/api/advanced/index.rst:150
+#: ../../source/api/advanced/index.rst:151
+#: ../../source/api/advanced/index.rst:152 0972092c3ab04d2fb4dc5d9035a516bf
+#: 28b4a263e5744ed09f0089e98b1fa32e 30fe47c19df442ee89437478d4c500ef
+#: 3db9167d643d458e92fa3c24aae40122 50fe52bcefb6400e81fb45a6074e204e
+#: 5f196fdaff664824b8d72cb76a6c45ca 7796daab8cd741b6a8a13064d62ea63c
+#: 7bc0e59e0898438ab25ce8715d2ebd88 93a884760fff4a468090f4962728ba8d
+#: 999c2775c7e94424b7c33069fb5289eb dbda1f6862db43d4938a756de91eaafa
+msgid "✅"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:127 90faa2d5abf642e99df90ddbe991d883
+msgid "**Ordered**"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:136 39578fd6fc2044d0ad67032ecdd034ea
+msgid "**Merge**"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:137 ac29d7b5820c40e6ae102b034d25ba4e
+msgid "union"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:138 f51b0fbbe89c49cc8c9c2dea6f52bee7
+msgid "union()"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:144 7e1af6cc59794faa973288c848086fad
+msgid "merge()"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:145 72371a306df04253975a49dbeb197cab
+msgid "**Iterable**"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:147
+#: ../../source/api/advanced/index.rst:153 448eef368b5747ffb5871dfc8d7df015
+#: b76d0b25d1564d949161eed6135f7768
+msgid "❌\\*"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:155 93383a5449b14a89bd0b1a23a3509672
+msgid ""
+"\\* ``__iter__`` raises ``TypeError`` — items cannot be recovered from "
+"probabilistic structures."
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:159 c9027bd64fe44fd19308a81200c12d4a
+msgid "Class Hierarchy"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:235 7cddb12d9e3a49f0bfd51c71d888e6d6
+msgid "Related Modules"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:237 b59519d7d2e24d188eb4fb4e73db937e
+msgid ":doc:`../core/index` — Core abstractions and exception hierarchy"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:238 f5cd2e4a765447349546be5ec8564a12
+msgid ":doc:`../linear/index` — Linear data structures"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:239 68f099f543b2417099c4051c14c404d9
+msgid ":doc:`../tree/index` — Tree structures"
+msgstr ""
+
+#: ../../source/api/advanced/index.rst:240 cb7bce7dc5aa4d4990c7895612f05af9
+msgid ":doc:`../graph/index` — Graph structures (uses DisjointSet)"
+msgstr ""
+

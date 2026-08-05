@@ -37,7 +37,7 @@ Installation
 
 .. code-block:: bash
 
-    pip install sds-tools
+    pip install pysds-tools
 
 Basic usage example:
 
@@ -106,6 +106,7 @@ This documentation is organized into several sections:
    guide/tree_structures/index
    guide/graph_structures/index
    guide/advanced_structures/index
+   guide/probabilistic_structures/index
 
 .. toctree::
    :maxdepth: 3
@@ -118,6 +119,7 @@ This documentation is organized into several sections:
    api/tree/index
    api/graph/index
    api/advanced/index
+   api/probabilistic/index
    api/algorithms/index
    api/utils/index
 
@@ -155,7 +157,7 @@ and as a practical library for production use.
 Support
 =======
 
-* **Documentation**: https://sds-tools.readthedocs.io
+* **Documentation**: https://pysds-tools.readthedocs.io
 * **Source Code**: https://github.com/skyfrigate/sds
 * **Issue Tracker**: https://github.com/skyfrigate/sds/issues
 * **Discussions**: https://github.com/skyfrigate/sds/discussions

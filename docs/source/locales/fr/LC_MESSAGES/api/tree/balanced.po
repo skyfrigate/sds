@@ -1,0 +1,1175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/balanced.rst:5 b2767479d78c4fdb99d5ec1ad01f4874
+msgid "Balanced Trees"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:10 20e8c8a13b3a4dc7967c72f01c461e49
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:12 f424dd551b794aa384063e663b6c3a01
+msgid ""
+"This module provides self-balancing binary search tree implementations "
+"that guarantee O(log n) operations by automatically maintaining balance "
+"through rotations. These trees ensure efficient performance even with "
+"arbitrary insertion and deletion patterns."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:43 158a76c4e1dd407dad7c3f61dc82dfa1
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:51:<autosummary>:1
+#: 34ecfba06b7345e5884cad5d70d5b8f2
+msgid ":py:obj:`AVLTree <sds.tree.balanced.AVLTree>`"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:51:<autosummary>:1
+#: 2bf80cfb5dd7481883dc5c6f8a376f42 c3a8388d12634ab080342730971da610 of
+#: sds.tree.balanced.AVLTree:1
+msgid "AVL Tree - Self-balancing binary search tree."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:51:<autosummary>:1
+#: b1d69559851f48c9b7a07eded4b9e343
+msgid ":py:obj:`RedBlackTree <sds.tree.balanced.RedBlackTree>`"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:51:<autosummary>:1
+#: 980e469f5135418887054fe575489e73 bb846b50cad946e8acbf2a806df8c84a of
+#: sds.tree.balanced.RedBlackTree:1
+msgid "Red-Black Tree - Self-balancing binary search tree."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:53 d5b4ec5d0a2a4c80bf4958ee293a40a2
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:56 132dd7b43bb0452f9a9703b9360bee8a
+msgid "AVLTree"
+msgstr ""
+
+#: afa1552f4c0747b391eddb096653d019 e9238469a444493b813c468cfefc7c64 of
+#: sds.tree.balanced.AVLTree:1 sds.tree.balanced.RedBlackTree:1
+msgid "Bases: :py:class:`~sds.tree.interfaces.AbstractBinaryTree`"
+msgstr ""
+
+#: 2497451208e047d8be08a05b7adc246e of sds.tree.balanced.AVLTree:3
+msgid ""
+"An AVL tree is a BST where the heights of the two child subtrees of any "
+"node differ by at most one. If at any time they differ by more than one, "
+"rebalancing is done through rotations to restore this property."
+msgstr ""
+
+#: 31a8bdd2e21e42eb9073dc10207b7586 of sds.tree.balanced.AVLTree:8
+msgid ""
+"Balance factor = height(left subtree) - height(right subtree) Valid "
+"balance factors: -1, 0, 1"
+msgstr ""
+
+#: 099f64f60a964f8f89132d2e3649889b of sds.tree.balanced.AVLTree:13
+msgid "The root node of the tree (read-only property)."
+msgstr ""
+
+#: 23a08cb67f4747b6a040f066d8ce1513 b538532c910a46689175c600661eacc5
+#: df86edb4bde64e2382e54846e6a32cd7 ecb3667888654255af9fb3b125efd567 of
+#: sds.tree.balanced.AVLTree sds.tree.balanced.RedBlackTree
+msgid "type"
+msgstr ""
+
+#: ac360842bfba4dc3820330e224c1eccd of sds.tree.balanced.AVLTree:15
+msgid "sds.tree.AVLNode or None"
+msgstr ""
+
+#: bb8ea1590b674312bee682d92373f1a7 of sds.tree.balanced.AVLTree:19
+msgid "The number of nodes in the tree (read-only property)."
+msgstr ""
+
+#: 924ae748a82841b3a35b5656d7599757 96681089e44e45cfa7f341ee9012b900 of
+#: sds.tree.balanced.AVLTree:21 sds.tree.balanced.RedBlackTree:25
+msgid "int"
+msgstr ""
+
+#: 04c8f2e9127544a2b32f5374f89b551e 1dcca89636ce44e48ca7a80e94f91d99
+#: 2d19427ef639454d8456673dc6fb1c94 30f3e362b3ff48f49cfb8f80b8d6d79f
+#: 4807d65750bf465783c6737a6c02d750 4ee0f5c1ba544d6aa5ab395e42c77278
+#: 647befc1ce424c3292f7c30e21f9bd98 7dd1526bdb7f45928a328fbbe29a913a
+#: 82c02d7a49f745c3a49e07f1586d7875 916120da62d64adb99ca84c5f90a5aa7
+#: ad1619baf22948ed81ac524a41eee5b5 b36179af41754b65a8caca7e289e24ad
+#: cd1fb08f98534753b0abb151b2fc49bd ce768e74c32a4538a8a50aa5e329ad06
+#: cfb6446c592b43859871590719bd5011 e11d04dfe77b4c2fbb16953623757c1d
+#: e240a51a29c34c99892dce7db38c75ea e3a1e814c56c40e3b05d3ef0bc693ea0
+#: fd32deea1bf84d1eb8b3a5eab59e8b65 of sds.tree.balanced.AVLTree:23
+#: sds.tree.balanced.AVLTree.height:6 sds.tree.balanced.AVLTree.insert:6
+#: sds.tree.balanced.AVLTree.remove:12 sds.tree.balanced.AVLTree.root:6
+#: sds.tree.balanced.AVLTree.search:9 sds.tree.balanced.AVLTree.size:6
+#: sds.tree.balanced.RedBlackTree:27 sds.tree.balanced.RedBlackTree.insert:6
+#: sds.tree.balanced.RedBlackTree.size:6
+#: sds.tree.interfaces.AbstractTree.__len__:6
+#: sds.tree.interfaces.AbstractTree.is_empty:6
+msgid "Examples"
+msgstr ""
+
+#: 5ccd99f0507141d1b86a6b270c8b8f60 of sds.tree.balanced.AVLTree:25
+msgid "Create and populate an AVL tree:"
+msgstr ""
+
+#: 55fdc556b3d8486f8751f3e3858d96c1 of sds.tree.balanced.AVLTree:35
+msgid "Tree remains balanced after insertions:"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:589 360b91dba2784cdd923c6d36799def7f
+#: 41ac32aeee3d44418e6925c7b844153f 44af87983e8540b8b381c5b7dc484a39
+#: 4ba8e3f7056046a6a0befb54b274f16a 4d8c7503ed2040a7b7196dd8ea98605f
+#: 4ded6135b10644c9bc8401707f23b608 6a4d0f7faf3f4029b6f0e21fff751a16
+#: 7108bc2f44cb4c6eabe8f0c841ff3577 8042ebbb8dbb4c7f9ce353748d0d7774
+#: 871415ee2809449794edfe7ab92db29a 8918a71918c241399dc2d321efd551c0
+#: 89dd747eaef14b47b087cf0f8c9b8cdd 91961b7675ff4a3a870827fbf2baa271
+#: 9e95ba4119c14381a995674564ffd43a ac1ccd9be1054b32a98e982d10ae8759
+#: acd4a13dcbca413bbe193a0721139094 b17642523e144cae93bd188abce308cd
+#: b7ce7f6854124b40a58a40edb4f7fade ba3557ebf13e45139975f361689c3a0f
+#: bd7c4bdbefa9451998f753e46c1043f2 c275efcd3e8c40d3a074f00527f98963
+#: c655c285d563440f80f918630ca28712 c81201de9f3a4ba5b1f6964516318c03
+#: e8c2f3fbb43046e3822ece884e1a9240 ef2ea8f5a39a453fba59b4c04b2c360e of
+#: sds.tree.balanced.AVLTree:43 sds.tree.balanced.AVLTree.height:15
+#: sds.tree.balanced.AVLTree.insert:15 sds.tree.balanced.AVLTree.remove:20
+#: sds.tree.balanced.AVLTree.root:15 sds.tree.balanced.AVLTree.search:16
+#: sds.tree.balanced.AVLTree.size:15 sds.tree.balanced.RedBlackTree:37
+#: sds.tree.balanced.RedBlackTree.height:6
+#: sds.tree.balanced.RedBlackTree.insert:14
+#: sds.tree.balanced.RedBlackTree.remove:12
+#: sds.tree.balanced.RedBlackTree.search:9
+#: sds.tree.balanced.RedBlackTree.size:15
+#: sds.tree.interfaces.AbstractTree.__len__:15
+#: sds.tree.interfaces.AbstractTree.is_empty:15
+msgid "Notes"
+msgstr ""
+
+#: 1d7c20d1f15c46d7af7e0c0b370756de of sds.tree.balanced.AVLTree:45
+msgid ""
+"Time Complexity (guaranteed): - Insert: O(log n) - Search: O(log n) - "
+"Remove: O(log n) - All operations: O(log n) worst case"
+msgstr ""
+
+#: 107677a68f994d94834a535b1e243116 of sds.tree.balanced.AVLTree:51
+msgid ""
+"AVL trees are more rigidly balanced than Red-Black trees, leading to "
+"faster lookups but slightly slower insertions/deletions."
+msgstr ""
+
+#: 4c29e90044ba49f586f21dff6aa5464c c7f325ab24824e1e83a2b51481f36de8 of
+#: sds.tree.balanced.AVLTree:56 sds.tree.balanced.RedBlackTree:52
+msgid ":obj:`BinarySearchTree`"
+msgstr ""
+
+#: c1e2f2a65d4c4803931e2be474b881cb fef9f7ddc17f4978bd852304834755a6 of
+#: sds.tree.balanced.AVLTree:57 sds.tree.balanced.RedBlackTree:53
+msgid "Unbalanced BST."
+msgstr ""
+
+#: e9ec520561b240c1afc17b55c807a32b of sds.tree.balanced.AVLTree:59
+msgid ":obj:`RedBlackTree`"
+msgstr ""
+
+#: 65dbb2a275454143833784aa51a6f356 of sds.tree.balanced.AVLTree:60
+msgid "Alternative self-balancing tree."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:65 ../../source/api/tree/balanced.rst:110
+#: 594d493c28f048868a90b7e87ea9d8ec cb1e41ebe380437ea1c2a4a36e3ebaee
+msgid "Constructor"
+msgstr ""
+
+#: 1182cbb6dc754ca7b8c57cc2998938cb 62faef1c2bbe4bdebf02e7c818ad3059 of
+#: sds.tree.balanced.AVLTree.__init__:1
+msgid "Initialize an empty AVL tree."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:69 ../../source/api/tree/balanced.rst:114
+#: 52d6c4057b6445479e0dbc0af9dd2be7 9ce77b4684ae40c0959666223e95436f
+msgid "Properties"
+msgstr ""
+
+#: 6329c1045a504b2b9f08a2255f8039cd of sds.tree.balanced.AVLTree.root:1
+msgid "Get the root node of the tree."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst 1584589e1da9450e8a5692d8dd77230b
+#: 3c16d571318b4eb0ad672acd65d2d0c5 47526e4baaec406a894f0364079663e7
+#: 4d2b19a2d4d8471fac499879419ff36b 69f7d4856d6148b591ce5169daa7ed04
+#: 6d408e9c364f48c491cbde9fce0865ec 6e191e8ceae942648e0668bd73589378
+#: 9630619f9a484ba4bf80413d792c9a8a a5c3d9fee17744bd9010cc3f1bd13879
+#: b10fd291218f42c8a6447d83e67faa6c b7f82e70e5144b3ab334bdb072483d9e
+#: b96d717e39724e9eac87bef7ef7d09c2 c6ba8d7d7ae74403aa5a9fd715bcae3d
+#: cc20d428061340238c252cbdedfb7878 e6a60cd8d8b04acc9524d7d0236ca1a9
+#: eca095b246f24a6e8d957df3d7fbd28a ee5d8744928a4bd2af666e490a80fb2c
+#: fb37bd97c1d945b79e061ddbd8122c08
+msgid "Returns"
+msgstr ""
+
+#: 3aad6e5531ac449f88c71f6604a8f391 of sds.tree.balanced.AVLTree.root:3
+msgid "The root node, or None if the tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst 1543f5646f1d428ba26598f53a0c2b80
+#: 19716905e24c4844bc60617e4f842735 3a5c39716dfb4901a7d63898761e6fa1
+#: 74f89a9581cb4423a3078c8ffbf283b8 7990a7a563334545b74564d9c5ec7682
+#: 7b88cc08a52542a6b107de9d92511c46 88189c002c574bb29df2780f6c774d12
+#: 925b6307a0604bf5abac1d70d12c1b03 b1e65b5fa2d74a70badf0b293a2bab8f
+#: b5cafd60d2ff43deba6155e7b0928329 b6d357c5e2c3498cb89f8294bc80577b
+#: c8e71a45de7b4da38770cbebc6a220a7 cec361a5da094d72b6eb6510d242b7bb
+#: d05bd60936e4450fb68156bbadf13ce6 d639fca61ed64c6da3922606ea54e367
+#: db82dbd4912a44ff89dcef43558b59d6 e75430c743ae48be8399cc71bac41726
+#: f69913de41a546cca4539e96c251c792
+msgid "Return type"
+msgstr ""
+
+#: 6797e27aa4884538bbea6bb17fa12861 of sds.tree.balanced.AVLTree.root:17
+msgid ""
+"This property is read-only. To modify the tree, use insert() and remove()"
+" methods."
+msgstr ""
+
+#: 252c879c78ec49fe947a65233a77ae8d ce00ef6c6ad54b47ad305c9ec549f4a5 of
+#: sds.tree.balanced.AVLTree.size:1 sds.tree.balanced.RedBlackTree.size:1
+msgid "Get the number of nodes in the tree."
+msgstr ""
+
+#: 6b221f8f2f954250b0a846d6b5de107e f77b64634c344f9e80dc8b9ab1a39b97 of
+#: sds.tree.balanced.AVLTree.size:3 sds.tree.balanced.RedBlackTree.size:3
+msgid "The number of nodes currently in the tree."
+msgstr ""
+
+#: 06d5d6f508a0431f8fc3e275521c4ab8 151f2c712e624cd69fd84aa1bfbac4ea
+#: 31b08fdc86b3421e9be46438094a8146 bddb490b2a714eda9b8acecfc5a1bcb2
+#: ec9fb11958fa46e9a255c46a7560deda f73504be40324c8e9c5661ac1d10f45c of
+#: sds.tree.balanced.AVLTree.size:17 sds.tree.balanced.RedBlackTree.size:17
+#: sds.tree.interfaces.AbstractTree.__len__:17
+#: sds.tree.interfaces.AbstractTree.is_empty:17
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 43e83e090f3543ceab4bc5a193776c6d 57e268cb93644965a5fe178614f26710 of
+#: sds.tree.balanced.AVLTree.size:21 sds.tree.balanced.RedBlackTree.size:21
+msgid ":obj:`__len__`"
+msgstr ""
+
+#: 28cb9cd4a2e749d991ccfdf12022c80c 85d2b45ed9524faa9745abc85f514143 of
+#: sds.tree.balanced.AVLTree.size:22 sds.tree.balanced.RedBlackTree.size:22
+msgid "Returns the same value."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:74 ../../source/api/tree/balanced.rst:119
+#: 19db30fc360b4d88a6fe4d1e21dcf891 b4804ce407574f91a934d0473ab70cfe
+msgid "Core Operations"
+msgstr ""
+
+#: 042f234612f140dc841c486c05e0fe52 13eb42cc147947fe894ce1e66840d174 of
+#: sds.tree.balanced.AVLTree.insert:1
+msgid "Insert an item into the AVL tree with automatic balancing."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst 061c4389fcab4471a9f17a95e5025992
+#: 106ef823f6e1454591954919d475ab12 19248e78dc39491a8169993890f36928
+#: 44606837fe9e4308a386a7f46e3ab0c6 4b0e21e76c0647098d08bdbd7e5eab3b
+#: 9e58bdb9e3cb4c6cb23f1e1b44cc42b0 a08bd4512a8e4feab9e43b8e02ffb1b4
+#: a50ce44192af4ab0bf48090372f7bc23 b38c115e470e47889566f2ed49635799
+#: cb604236861f422e85c8bd2548e04535 e4d57fbd499546a993abccf745eb9d04
+#: f8aaba1156694f93820a8e1f1b16678f
+msgid "Parameters"
+msgstr ""
+
+#: 8a0e376f03ac4964a5028e1ff18b46bf dbe16a939a5f457098e5d49c5b8d6303 of
+#: sds.tree.balanced.AVLTree.insert:3
+msgid "The item to insert. Must be comparable."
+msgstr ""
+
+#: 193992c989cd43b7a016e099a23312f1 1eb06772aaee4d36b2ff4737f77b807b
+#: 1efbab9c8b844bb1b8bc45b6400be165 5cd52e4bef5246a5a2050cecf5843e62
+#: 9227f2bf978b44649dc03f05cd044a8d 97751b6e73d649dc9f405c3942abc921
+#: a7278877f197429ea75ef1d49182ce82 d5c9456d9631480d9436078e4aa06988
+#: ddcb838be24148ee94a1bcf64764b569 e405e57961e24ffabd374e31b4f1f661 of
+#: sds.tree.balanced.AVLTree.insert:17 sds.tree.balanced.AVLTree.remove:22
+#: sds.tree.balanced.AVLTree.search:18 sds.tree.balanced.RedBlackTree.insert:16
+#: sds.tree.balanced.RedBlackTree.search:11
+msgid "Time complexity: O(log n) guaranteed."
+msgstr ""
+
+#: 3fad4a0c20064d248669dae15b8eb3f0 a32715e685d54eda84de6fd1bb158f7c of
+#: sds.tree.balanced.AVLTree.remove:1
+msgid "Remove an item from the AVL tree with automatic balancing."
+msgstr ""
+
+#: 15ef35297a86456298c5aecacda851e9 5c725b3d1c594903b156f60ca83b0c3d
+#: 9fe19200f7244b7286ce46aa11ec2690 c725163763bc4c6a9baa061deaf7041b of
+#: sds.tree.balanced.AVLTree.remove:3 sds.tree.balanced.RedBlackTree.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: 506b617fc3224322b6f4995063337c55 71a7aea3660a4412ab09474b2ac3d695
+#: e2e0093d731742938423a37c5e7e96f5 e42375f78bf34c33b29168bc263d0234 of
+#: sds.tree.balanced.AVLTree.remove:6 sds.tree.balanced.RedBlackTree.remove:6
+msgid "The removed item."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst 27215328c6734fe0a5fade96a12dd12c
+#: 2f9667ce49d64982bd12635c90eb3e37 7f0a5298f5eb438fa163c0a57e4b856c
+#: ce5d15c7dfc44c82b668a63c88ba16f2
+msgid "Raises"
+msgstr ""
+
+#: 31b481284cd64a29988fc9dfdd9c7a1a 64a99453dec143b583d84f7d908527fe of
+#: sds.tree.balanced.AVLTree.remove:9
+msgid "If the tree is empty."
+msgstr ""
+
+#: 69ebae18f02347e899eb5491bd374c34 f5ca0c8c1741482aa1847368078965c2 of
+#: sds.tree.balanced.AVLTree.remove:10
+msgid "If the item is not found."
+msgstr ""
+
+#: 45c854ae58464d739c8c462fcb39f11d ed644e9e7e9f4d91a004bc5267097e22 of
+#: sds.tree.balanced.AVLTree.search:1
+msgid "Search for an item in the tree."
+msgstr ""
+
+#: 7ca2b1474b29431ab7c906bcf9910dd7 ba1b9cb71bc5457ca1ae9f9575747fac
+#: f5ab9c181f48498f8a2bb68eed37fdbd fca5ee10f401458ab0d9ad65562f33c2 of
+#: sds.tree.balanced.AVLTree.search:3 sds.tree.balanced.RedBlackTree.search:3
+msgid "The item to search for."
+msgstr ""
+
+#: 3bdb4ee3f0384475b7fd20cdf1d08233 8496bc3d7dc0428998bb61fba86d8730 of
+#: sds.tree.balanced.AVLTree.search:6
+msgid "True if found, False otherwise."
+msgstr ""
+
+#: 2a862779993648689c70f32341ace777 791c72e32ac2450fa26674c8493df28c
+#: 88389f324ebb44bc82b2fe9603286ab7 of sds.tree.balanced.AVLTree.height:1
+#: sds.tree.balanced.RedBlackTree.height:1
+msgid "Return the height of the tree."
+msgstr ""
+
+#: 24a203e6aabf4d0788e57f74bc6ccf26 4ac148af4b444ebeae8c77f1ea7375fd
+#: f7248c862bec4d058b0d7f924125718f of sds.tree.balanced.AVLTree.height:3
+#: sds.tree.balanced.RedBlackTree.height:3
+msgid "The height of the tree, or -1 if empty."
+msgstr ""
+
+#: 4e34b0c744e54a888de557ba758395aa 84fcc5ebb50140dba65f7456293215d1 of
+#: sds.tree.balanced.AVLTree.height:17
+msgid "Time complexity: O(1) - height is stored in root node."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:81 ../../source/api/tree/balanced.rst:125
+#: 43b5c170633d445183309ccbbed32ffd 83b76615b7324d4080dfae30fe23e27b
+msgid "Traversal Methods"
+msgstr ""
+
+#: b9473e3ae4fa4eb4af65c068c6905188 dbb86b7d0c5544788163c9a38127aadb of
+#: sds.tree.balanced.AVLTree.inorder_traversal:1
+msgid "Return inorder traversal iterator."
+msgstr ""
+
+#: 1db1e3cf21db437587a4bcaf23881e5c 8327aeb27c654de8ac54aff2d3f776bb of
+#: sds.tree.balanced.AVLTree.preorder_traversal:1
+msgid "Return preorder traversal iterator."
+msgstr ""
+
+#: 77a93373a9014d76991f39f95d6a1d3c a370185585484f3389f88cafd3c7b88b of
+#: sds.tree.balanced.AVLTree.postorder_traversal:1
+msgid "Return postorder traversal iterator."
+msgstr ""
+
+#: 5d71d6c68b40483492043f302e23854c f3c530a2ca0e4e70a6179d72cb70dddd of
+#: sds.tree.balanced.AVLTree.level_order_traversal:1
+msgid "Return level-order traversal iterator."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:88 ../../source/api/tree/balanced.rst:132
+#: 528bccbc742c476cbb271eb2217b6213 bffca90241bc48aabda09fd518b2ed77
+msgid "Utility Methods"
+msgstr ""
+
+#: 7f44e99a5e5547faad3a1c278d6e959b afbd4bf083ec4ebfb9d9bb8a98b832a2 of
+#: sds.tree.interfaces.AbstractTree.is_empty:1
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: 1652213cf68f40a49e0f365ade7968ef 1b3a9c7cdd0d45298ec7d5b7ff0890a1 of
+#: sds.tree.interfaces.AbstractTree.is_empty:3
+msgid "True if the tree contains no nodes, False otherwise."
+msgstr ""
+
+#: 2209262a27c74583b4069cc14b6b1928 88ff6b030ec0400eb14882155dd12139
+#: aad335c5b5d045aa81fd4e1ab6e6c946 cc0f5e2cb13b404495878b4c94995725 of
+#: sds.tree.balanced.AVLTree.clear:1 sds.tree.balanced.RedBlackTree.clear:1
+msgid "Remove all nodes from the tree."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:93 ../../source/api/tree/balanced.rst:137
+#: 3541ed4ab06749779da6d8fc66fdae8c abca1cc5dda14ed3937e9bcfdece1e4c
+msgid "Special Methods"
+msgstr ""
+
+#: 646ca1a3ef93476dbe53215b980c752f b009fb94b369452da523bfbb725362e7 of
+#: sds.tree.interfaces.AbstractTree.__len__:1
+msgid "Return the number of nodes in the tree."
+msgstr ""
+
+#: aa601c8a0b1540beb2250b5dbec6e279 c92f54e4444646c496f56510f36f7fa2 of
+#: sds.tree.interfaces.AbstractTree.__len__:3
+msgid "The number of nodes."
+msgstr ""
+
+#: 0903846018a64bf7ab000b708dad7766 ffa056dab01c4d5d92fc918d603ae0ba of
+#: sds.tree.balanced.AVLTree.__iter__:1
+msgid "Iterate over tree elements (inorder)."
+msgstr ""
+
+#: 53641ec75a1a40d0aa7f3d3b9a4701c0 772414ad9f3e43af93a8dc1fe01334c3 of
+#: sds.tree.balanced.AVLTree.__contains__:1
+msgid "Check if item is in the tree."
+msgstr ""
+
+#: 75965b54f3af4a15835f3d3f7cb288aa b867a40a61514998bfc48156f3759d65
+#: d761d23c3aad4f90bd1da7ec2819ffac f75674a16c61448a82b78b9f06e783de of
+#: sds.tree.balanced.AVLTree.__repr__:1
+#: sds.tree.balanced.RedBlackTree.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: 0ea53af7a1a147fa8b5e54a519f70cdf 141824894bd942ec887cf48723619a8d
+#: 74e59f0796764680bf2549c0ffac051c 773975b1c8b844799e8d4c4e81ea4388 of
+#: sds.tree.balanced.AVLTree.__str__:1 sds.tree.balanced.RedBlackTree.__str__:1
+msgid "Return string showing inorder traversal."
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:101 85754602d8f3440395b8bf3c614e106f
+msgid "RedBlackTree"
+msgstr ""
+
+#: ed96b32350124c0e9f5d41381cc9780e of sds.tree.balanced.RedBlackTree:3
+msgid ""
+"A Red-Black tree is a BST with one extra bit per node: color (RED or "
+"BLACK). The tree maintains balance using the following properties:"
+msgstr ""
+
+#: 4775558aa15341598b0abed4c87a1c7f of sds.tree.balanced.RedBlackTree:6
+msgid "Every node is either RED or BLACK"
+msgstr ""
+
+#: 223c91c111804282b01a820c29c270c6 of sds.tree.balanced.RedBlackTree:7
+msgid "The root is always BLACK"
+msgstr ""
+
+#: 469a1fa20f79486898795039b00995c8 of sds.tree.balanced.RedBlackTree:8
+msgid "All leaves (NIL) are BLACK"
+msgstr ""
+
+#: d36af77cc6bd46b2966e552ae41f9147 of sds.tree.balanced.RedBlackTree:9
+msgid "RED nodes cannot have RED children (no two RED nodes in a row)"
+msgstr ""
+
+#: f26192b271c34de2a4e422c9c9183d29 of sds.tree.balanced.RedBlackTree:10
+msgid "Every path from root to leaf has the same number of BLACK nodes"
+msgstr ""
+
+#: 33fd987ad0bb4e6e93ad8acab4c115c7 of sds.tree.balanced.RedBlackTree:12
+msgid ""
+"These properties ensure the tree remains approximately balanced, "
+"guaranteeing O(log n) operations."
+msgstr ""
+
+#: 69bd99367c8140229d31af89c53ba2ce of sds.tree.balanced.RedBlackTree:17
+msgid "The root node of the tree."
+msgstr ""
+
+#: b9891dca1379431396cfe0a21eab6d36 of sds.tree.balanced.RedBlackTree:19
+msgid "RedBlackNode or None"
+msgstr ""
+
+#: 25749fb82e174f6ca453787a38343db0 of sds.tree.balanced.RedBlackTree:23
+msgid "The number of nodes in the tree."
+msgstr ""
+
+#: ffaffb459922420c9f8bff812f40becc of sds.tree.balanced.RedBlackTree:39
+msgid ""
+"Time Complexity (guaranteed): - Insert: O(log n) - Search: O(log n) - "
+"Remove: O(log n)"
+msgstr ""
+
+#: dd6d924938774215a803477ba3f24b56 of sds.tree.balanced.RedBlackTree:44
+msgid ""
+"Red-Black trees have less strict balancing than AVL trees, leading to "
+"faster insertions/deletions but slightly slower lookups."
+msgstr ""
+
+#: 3e9f398a159d4c6c801ed51307684f95 of sds.tree.balanced.RedBlackTree:49
+msgid ":obj:`AVLTree`"
+msgstr ""
+
+#: fd34019a4ab745a6afc6837370f25721 of sds.tree.balanced.RedBlackTree:50
+msgid "More strictly balanced alternative."
+msgstr ""
+
+#: 9060db7fac23464aa0ab7296d35e5705 da66a05401fa4bdf9c236fbbc0501aa1 of
+#: sds.tree.balanced.RedBlackTree.__init__:1
+msgid "Initialize an empty Red-Black tree."
+msgstr ""
+
+#: 196f6aeafdac49a3b9d97ba5ca4cc003 28d6903cc80d4a9ab78ae3418c99f6e4 of
+#: sds.tree.balanced.RedBlackTree.root:1
+msgid "Get the root node."
+msgstr ""
+
+#: 7134bb1b29b54680a9735ef7ec12e9f0 d010b8eee3744b00bde133e3bab04bd4 of
+#: sds.tree.balanced.RedBlackTree.insert:1
+msgid "Insert an item maintaining Red-Black properties."
+msgstr ""
+
+#: 3987d648280f495ea3b3d41a0800f9d5 567d05d4206e4d95a647fbb729cf56ad of
+#: sds.tree.balanced.RedBlackTree.insert:3
+msgid "The item to insert."
+msgstr ""
+
+#: 56ad728fd80d414c8b612fcbef80e0c3 9367f939db0c436e90441e12d347bef9 of
+#: sds.tree.balanced.RedBlackTree.remove:1
+msgid "Remove an item maintaining Red-Black properties."
+msgstr ""
+
+#: 19a8382b6f4d47b99be6e028fbb45083 b78d0d888b1b46fa816194b8338c9ca6 of
+#: sds.tree.balanced.RedBlackTree.remove:9
+msgid "If tree is empty."
+msgstr ""
+
+#: a7b8d80e93fb4260a40c2825f3357d6d cbffdeb1ab5d41aba4f6acc76fef389a of
+#: sds.tree.balanced.RedBlackTree.remove:10
+msgid "If item not found."
+msgstr ""
+
+#: 6a95fff2bc44413ca229f1906631d134 7d900d9cecb94044a65772a13749fd1e of
+#: sds.tree.balanced.RedBlackTree.remove:14
+msgid ""
+"Time complexity: O(log n) guaranteed. Red-Black tree deletion is complex "
+"and maintained for completeness."
+msgstr ""
+
+#: 5bcef64de5a4471f85baa98661d5ec41 7d27a79caaff453089d5c05d69b06b67 of
+#: sds.tree.balanced.RedBlackTree.search:1
+msgid "Search for an item."
+msgstr ""
+
+#: 81f7ee131bbd4b2eb623b6fe144a5a98 84c712577dc04b7c97e2e13ee50ec33e of
+#: sds.tree.balanced.RedBlackTree.search:6
+msgid "True if found."
+msgstr ""
+
+#: 01099de3784c4eef90d2cc721b480856 e65589aeb58d4e7da99936bbad492e01 of
+#: sds.tree.balanced.RedBlackTree.inorder_traversal:1
+msgid "Inorder traversal."
+msgstr ""
+
+#: 160178830007406bb96b0ca9739201f8 3fa7818776294ac18e3df1d4fb77997d of
+#: sds.tree.balanced.RedBlackTree.preorder_traversal:1
+msgid "Preorder traversal."
+msgstr ""
+
+#: 33438240e69048d9982be6bdb56aafb6 5be826cd6aee4285885753bd1181ba79 of
+#: sds.tree.balanced.RedBlackTree.postorder_traversal:1
+msgid "Postorder traversal."
+msgstr ""
+
+#: 5e6a6bf2e3784634af090f385902ee62 8c90bd59007d471c9537190676cd76a3 of
+#: sds.tree.balanced.RedBlackTree.level_order_traversal:1
+msgid "Level order traversal."
+msgstr ""
+
+#: 12886b583b0d4fe58fe249142b5a97ae 8b92c8c1330a484b832dfae4a328e0e7 of
+#: sds.tree.balanced.RedBlackTree.__iter__:1
+msgid "Iterate inorder."
+msgstr ""
+
+#: 66295b545099412e9a7783a036c7fa2a 77729b01751144a5a6cf9719cde36578 of
+#: sds.tree.balanced.RedBlackTree.__contains__:1
+msgid "Check membership."
+msgstr ""
+
+#: 111f55c7620749a5863e1e58db38a7b0 of sds.tree.balanced.RedBlackTree.height:8
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:145 840b4f15b13f40a5aa05fad8a59c1165
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:148 4355f56e5ee342c185568d7c066ef653
+msgid "AVL Tree Examples"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:151
+#: ../../source/api/tree/balanced.rst:237 abb7424ba2c142439515c8c8a6ea035c
+#: bb040e5056224bd6b8174786d952ad75
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:173 8a14e68025d545b9bef4591ba3a203f2
+msgid "Guaranteed Balance"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:193
+#: ../../source/api/tree/balanced.rst:279 1c4ba59d271b44b79b7f66f8b6d28939
+#: da01aae421f242f887812ae1d53245ab
+msgid "Search and Removal"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:213 0b3a15edbb2b4b16afab2a46b52b55c7
+msgid "Traversals"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:234 0fde854e2bae4303b469e4c7fd3228cb
+msgid "Red-Black Tree Examples"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:256 9e03170155364a2a97235608b6e916d7
+msgid "Fast Insertions"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:296 9a3f869a396e40dbabcd7629ba38949b
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:299 9188776f7c7d4afd9839f83dc66dde18
+msgid "Example 1: Database Index with AVL"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:301 07fa0e0819a947a5b294e53787d036bf
+msgid "Using AVL tree for fast lookups:"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:365 afdb0ca077d14735aded3b71ec45a6f6
+msgid "Example 2: Real-Time Leaderboard"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:367 6c5a5a77564b47458d0c48b867777db8
+msgid "Maintaining sorted rankings with frequent updates:"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:442 379760fbc95649a9957d79f79633533d
+msgid "Example 3: Event Scheduler"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:444 b157444a4dd549af9171fc2cd26be774
+msgid "Managing time-based events:"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:512 b54a6a3d7f3141a4936beb47869292fb
+msgid "Example 4: Auto-Complete Dictionary"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:514 5d29fc7b4ae447ff9e6843f13eb09943
+msgid "Fast word lookup with prefix search:"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:577 db8d58f6540f4c99ae0a34ce0c738755
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:580 beb024de07734adeb7e9a99ef1ae3fda
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:586 6a36c0e2e1a146de958eee5c8afdfb99
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:587
+#: ../../source/api/tree/balanced.rst:642 3d2dbb43ea974a8896f8da2fac4e44cc
+#: 85dc483fa5bd4b7fbe71c034ec040bc0
+msgid "AVL Tree"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:588
+#: ../../source/api/tree/balanced.rst:643 0881861ae80b4bf4b398d4ec863df024
+#: 18ef0952670e4aa1ab8183a50cbbd283
+msgid "Red-Black Tree"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:590 d622e4baa96a453c999a1a01d3f8ef04
+msgid "**Insert**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:591
+#: ../../source/api/tree/balanced.rst:592
+#: ../../source/api/tree/balanced.rst:595
+#: ../../source/api/tree/balanced.rst:596
+#: ../../source/api/tree/balanced.rst:599
+#: ../../source/api/tree/balanced.rst:600
+#: ../../source/api/tree/balanced.rst:603
+#: ../../source/api/tree/balanced.rst:604 09bdfcac8bb94f46bc25bc78ba5bb2f8
+#: 0b5ab651ab704436a4c0c45b1bc8bd32 64bd02f82c3e42c093d5c4e54e247bfa
+#: 9ee02d2665d94dad9bbb98e7a6c571f5 a0a0fbfb6b9248608cf18f8e2ba7f822
+#: b837a63133794c469c43f5092ca1d1f3 d848ba37e8a04a4897e96fc03cdd8ea3
+#: f7a665b0aa964d5aa1152a37b2a34084
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:593
+#: ../../source/api/tree/balanced.rst:597
+#: ../../source/api/tree/balanced.rst:601 00a557874a1c44bb848bb5f836e15a00
+#: 2337bdada7f84b5a8a2adc7b50d40a45 ecbe6437b16e4766acdef3926a4a454f
+msgid "Guaranteed"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:594 03db9c1754664fd68a0fa3b1a86bf4a7
+msgid "**Delete**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:598 0eaae080c26d41e9a979f8d7db3c3754
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:602 dc469d2087104d0f8acac9f636cc62c0
+msgid "**Find Min/Max**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:605 73dd662566b34e0ab914d7fda6e7a1e6
+msgid "BST property"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:606
+#: ../../source/api/tree/balanced.rst:647 ba947407408e4afcae390c2a1181bcf9
+#: e8818e15a14d40a09c1cae91fc5e46b7
+msgid "**Height**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:607 1cf1250e584a4ab69ad18ec2c7e59132
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:608
+#: ../../source/api/tree/balanced.rst:611
+#: ../../source/api/tree/balanced.rst:612
+#: ../../source/api/tree/balanced.rst:615
+#: ../../source/api/tree/balanced.rst:616
+#: ../../source/api/tree/balanced.rst:619
+#: ../../source/api/tree/balanced.rst:620
+#: ../../source/api/tree/balanced.rst:623
+#: ../../source/api/tree/balanced.rst:624 192226a7827643bdbcbba3efe233ac25
+#: 1b309726598b40198fe65c07fbc9fa49 1fdcc86045ca43b1a2d69cf1f9e1da47
+#: 39213c2563f847b48a7b85a656a513d3 5d2bdfd1b23f42778811268aaa87af9b
+#: 7218bff3eaf34b73b20385691c11d991 7b863bca2e8c4c3aa4f2d9bd3c515296
+#: ac5c2905b0e54bd7bbab5ee2cd7bcc05 ca9a3dcb80a04fb2b95a9fedca826148
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:609 7d25d42fe61d4de8b4250a789fbafc10
+msgid "Cached in AVL"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:610 347d48b84ed643d8a4e8d1adc3d5b8a8
+msgid "**Inorder**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:613
+#: ../../source/api/tree/balanced.rst:617
+#: ../../source/api/tree/balanced.rst:621 63650bde344245fb9d951b9758b5337d
+#: 90ff3d836bc4482ab112a075e1852361 f57c3c4c21154866a513eb2cb5f3b478
+msgid "All nodes"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:614 594a4a40859b4fd9b014139660e2607e
+msgid "**Preorder**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:618 f2db356b973e4624ab2ecd5cb6e22645
+msgid "**Postorder**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:622 347cdbee7c024f8f916ef68c00798434
+msgid "**Level-order**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:625 78f617a33b24470ca6e91d5e0314807b
+msgid "BFS"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:628 88d0a8fedcb04785a9ec323fd3db112d
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:630 12b0c31ac7fd4ca88622f9d0e75a9bc6
+msgid "**AVL Tree**: O(n) + O(n) for height storage"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:631 a1d5023fb07445acb2634d4637a4fe76
+msgid "**Red-Black Tree**: O(n) + O(n) for color bits"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:632 fb14afc9ddf7401e83388cfcaa7830d7
+msgid "**Recursion Stack**: O(log n) guaranteed (balanced height)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:635 d030ce8176894b79bf98a7e4c8178bc2
+msgid "Comparison: AVL vs Red-Black"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:641 b14f4389fbb2420a9918195f39f12708
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:644 8bb0b4b0b2a34bdd88fa2f855298a787
+msgid "**Balance**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:645 e569a1121a6046d4b4ab144c0ae131fa
+msgid "More strictly balanced"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:646 f99055f990fc4ca6b2533d1108013346
+msgid "Less strictly balanced"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:648 0eb6c1916746499c91cd42f86e714422
+msgid "h ≤ 1.44 log(n+2)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:649 4ac187e9969141b88c1a0e8f66d6bb09
+msgid "h ≤ 2 log(n+1)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:650 ccdc06c774eb4cf3947c1c814b9b74ea
+msgid "**Rotations (Insert)**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:651 c818f723d7e4420f8525691e76cd80b4
+msgid "Max 2, more retracing"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:652 e850ec88532c4190a0e2817ce64ebd77
+msgid "Max 2, less retracing"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:653 583a45b8e77a423ca34d9578c0e11700
+msgid "**Rotations (Delete)**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:654 ab5b283179124fc88bbec8056adbe161
+msgid "Up to O(log n)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:655 feb87a9177494f629d14bb56aea7f3e0
+msgid "Max 3"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:656 dfd00b62f55148edb15def0555d42587
+msgid "**Lookup Speed**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:657 c7ef7ad3dbd642338db25e7d3bcab5cb
+msgid "Faster (shorter)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:658 23a87b98a4a447a68302ef644f1791c2
+msgid "Slightly slower"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:659 cf763e830eff4a21bbc32f92f462447c
+msgid "**Insert/Delete**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:660 501162386be54b12b8351c17e33ce31c
+msgid "Slower (more rotations)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:661 1421466723d443359e5f8a34148c6833
+msgid "Faster (fewer rotations)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:662 9eab71a04c2245ed883fe18dcc32cde1
+msgid "**Memory**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:663 87673c452ada4a418f14fed275b927c2
+msgid "Height per node"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:664 6c84563d1ee54f28b5e45fd83067fd24
+msgid "Color bit per node"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:665 6772e15505254597ab7178c65a41d25d
+msgid "**Best For**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:666 02ac2ef3038640f28b32d2beb9da8d98
+msgid "Frequent searches"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:667 37446cb4d3da4311af5fbd068df5361d
+msgid "Frequent insertions/deletions"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:668 d7db138eeecd4c03930ce2ab66c7ebe9
+msgid "**Used In**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:669 2bcfef0dfac94812b970201afa9be9f8
+msgid "Databases, memory management"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:670 fd9f33577f244e309c8f53f44cbd7d86
+msgid "Java TreeMap, C++ map"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:673 ebb0bacbaf644a97b7c8ecf1942174e8
+msgid "When to Use Each"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:675 e9ce83be5278411498d7353d399568e6
+msgid "**Use AVL Tree when:**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:676 675cb59f57fb4963ad2ebf6a0f279fe1
+msgid "Searches vastly outnumber insertions/deletions"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:677 4b06bbec9c814032a36d4e37d97d6b16
+msgid "Need absolute minimum height"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:678 b33ee6e0ad024e138d9412a13bc653e0
+msgid "Memory for height storage is acceptable"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:679 547e990848af4b5eb58e179693797704
+msgid "Example: Static or mostly-read databases"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:681 0bbef92e8d6b48e6ab39a0886a23b2f5
+msgid "**Use Red-Black Tree when:**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:682 7c7cb507de5a44658ee92486fb7dbd95
+msgid "Insertions and deletions are frequent"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:683 067196b43fdb44818e3ea521edab4e5e
+msgid "Need good all-around performance"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:684 8d3c22ff96cb4e97aa0283e152fe1f9d
+msgid "Prefer less balancing overhead"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:685 ed85c63f9b2d45238c6641e8066a078b
+msgid "Example: Dynamic ordered maps, system libraries"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:687 c48b4c9c77ab4ed8875a7c7c69132d59
+msgid "**Use Regular BST when:**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:688 7e73553609ff4045a9751ccd7d964859
+msgid "Data arrives in random order"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:689 b6af8b8a80204547a0fab4737220f379
+msgid "Simplicity is more important than guaranteed performance"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:690 e0ba1dccf9314b24847796d4b678c90e
+msgid "Working with small datasets"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:693 78367093eb0f48d0b088809b253cdd9c
+msgid "Performance Metrics"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:696 e277efddda5c43d6bd4291bc169264c9
+msgid "Rotation Counts"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:698 d57cac4008624a279a3afb75e7f32375
+msgid "For n insertions in random order:"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:700
+#: ../../source/api/tree/balanced.rst:715 40734f578f5b42ab989074ad526ef93b
+#: db39207b3c63487aa5a174b12606d8c0
+msgid "**AVL Tree:**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:701 53f8371f46d5479bac2e9d75712bb9a6
+msgid "Average rotations per insert: 0.5"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:702
+#: ../../source/api/tree/balanced.rst:707 6d7c7ebeced447429bc07c41cccf22fa
+#: 75af6fd8ae914dadac88fc98876aa1ba
+msgid "Maximum rotations per insert: 2"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:703 1fb991e3d0f144639c4af5a9ccd3e4b6
+msgid "Total: ~0.5n rotations"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:705
+#: ../../source/api/tree/balanced.rst:721 2ea80e61dc1a4e85afe2d54569e4365d
+#: c0a7e1babeb14b1ea2fc7559eecf40b9
+msgid "**Red-Black Tree:**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:706 fee7c3517d7d4bd287d7d34cda62cae8
+msgid "Average rotations per insert: 0.24"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:708 abd9693786974ee48b09674c8415bd45
+msgid "Total: ~0.24n rotations"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:711 527d593b85dd4b9cba172aafb328aa9b
+msgid "Height Guarantees"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:713 af59710161fd49a69a2c08f1b2d6f7c2
+msgid "For n nodes:"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:717 cb4ad49a07914df09cb941682e7b5bd4
+#, python-brace-format
+msgid "h_{AVL} \\leq 1.44 \\log_2(n+2) - 0.328"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:723 9c65248c26dc444fb94981b1632d61ab
+#, python-brace-format
+msgid "h_{RBT} \\leq 2 \\log_2(n+1)"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:727 b17c53fdccab4ca6a0b426b39a274944
+msgid "**Example**: For n = 1,000,000:"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:728 5b72d3fe5d7c40a580a91c78b28d5e3a
+msgid "AVL height: ≤ 28"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:729 f0b8f74a1ca34a9fb324b3c066b4182c
+msgid "Red-Black height: ≤ 40"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:732 3840f56856344f27baad2a671a08ceb9
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:735 0ba875b51a924908ba7b7f49a1a97415
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:737 5e8165815afc4f98a13b0d92342b35ad
+msgid "✅ **Use balanced trees for unpredictable data**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:746 0c934481175448ce888f3a1427de3b4c
+msgid "✅ **Choose based on operation frequency**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:758 e7332ce0c8d942618bedc43e74a5a7f3
+msgid "✅ **Trust the automatic balancing**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:770 96bd07f6c2bb4742b69a2ffc417e5b95
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:772 cb8d272f177442bcaa39c30fbb1e5de2
+msgid "❌ **Don't try to manually balance**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:779 f7f6738a3fc44817980372e1062b33f8
+msgid "❌ **Don't assume equal performance**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:787 ef7cf9d152a247d4b580f9507f8e70a4
+msgid "❌ **Don't forget about memory**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:796 a5639bfa76ce492c8ea60587dc07dd19
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:798 6dde6ef0ec884cf89b86535e02f7a6df
+msgid "**Not considering operation patterns**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:806 475df528fc8448cfbe69d2dcc14bb169
+msgid "**Ignoring constant factors**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:814 221a8ef5269b49bf9489b1ed65129f08
+msgid "**Unnecessary conversions**"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:822 3f807eb5bee8453781043326ea0d956a
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:824 259578ef3aff460bb270c7a3c6bec5f6
+msgid ":doc:`binary` - Unbalanced binary search trees"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:825 430d66dc7c084da08cbee6bd6a5bba15
+msgid ":doc:`../../guide/tree_structures/avl` - AVL tree theory and guide"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:826 d89bcd5abed445998a478710a24fc63b
+msgid ":doc:`../../guide/tree_structures/red_black` - Red-Black tree guide"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:829 a3b96cd155b444aeb079088523124b8e
+msgid "References"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:831 8ef38ec8f1524492817908f762b85de1
+msgid ""
+"Adelson-Velsky, G., Landis, E. M. \"An algorithm for the organization of "
+"information\", 1962"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:832 feae4540a84f4e409d32821fba4a835d
+msgid ""
+"Guibas, L. J., Sedgewick, R. \"A Dichromatic Framework for Balanced "
+"Trees\", 1978"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:833 2988ec1599534602a0f5cc828514a542
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 13"
+msgstr ""
+
+#: ../../source/api/tree/balanced.rst:834 1af64e61ddc445828fd3e8af7bb4590e
+msgid "Pfaff, B. \"Performance Analysis of BSTs in System Software\", 2004"
+msgstr ""
+

@@ -1,0 +1,570 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/advanced/count_min_sketch.rst:5
+#: b4562d5ce7344362b00152e31adc1145
+msgid "Count-Min Sketch"
+msgstr ""
+
+#: 301731c952bb44cbbaf8cb1d74e360dc of
+#: sds.advanced.count_min_sketch.CountMinSketch:1
+msgid "Bases: :py:class:`~sds.core.interfaces.Collection`"
+msgstr ""
+
+#: 8b9a1a53ecc84b96a031d8d6b5337f3e of
+#: sds.advanced.count_min_sketch.CountMinSketch:1
+msgid "Probabilistic frequency estimator over data streams."
+msgstr ""
+
+#: b33e70b62a6d4fa4b79ca610689b6366 of
+#: sds.advanced.count_min_sketch.CountMinSketch:3
+msgid ""
+"Maintains a ``depth × width`` matrix of integer counters. Each item is "
+"hashed by *depth* independent hash functions; ``add(item)`` increments "
+"one counter per row, and ``frequency(item)`` returns the minimum across "
+"all *depth* counters — an upper bound on the true count."
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst
+#: 2877ca43f84340eb8adac059311ee848 3dfc535d70d145f382fd57939d5f797a
+#: 4aab3d7264b9460988246fe505940067 763727eee262432c97efd8e159f2a87e
+#: 8541143667dd49e0a0bf56dc182f5957 9d4d0013c01e43e58b7b061918343949
+#: e97782de630840b8ba32deba5495c809
+msgid "Parameters"
+msgstr ""
+
+#: bf06dd415e8d49518661e29bce25390c of
+#: sds.advanced.count_min_sketch.CountMinSketch:8
+msgid ""
+"Maximum additive error as a fraction of the total stream size. Must be in"
+" (0.0, 1.0). Smaller values require a wider matrix."
+msgstr ""
+
+#: 5f65d3531aa4466386f3aa604324d1e5 of
+#: sds.advanced.count_min_sketch.CountMinSketch:11
+msgid ""
+"Failure probability — the probability that the error bound is exceeded. "
+"Must be in (0.0, 1.0). Smaller values require more rows."
+msgstr ""
+
+#: 86ce8dc96b154286927f9c4f3da490fb of
+#: sds.advanced.count_min_sketch.CountMinSketch:17
+msgid "Number of columns (read-only). Derived from *epsilon*."
+msgstr ""
+
+#: 643367b384494314b8e3cd724ebabb91 ab23d50c9a314cc78a6bc0df4c970b4b
+#: f8e947cdef4c4b16903d2c1b45a9d792 of
+#: sds.advanced.count_min_sketch.CountMinSketch
+msgid "type"
+msgstr ""
+
+#: 7352ab41fd814c56adae09a17bfacc11 8450dbfcb4df4c7e87dd917efd52b413
+#: aeac88135543470ebbabb149814caaf9 of
+#: sds.advanced.count_min_sketch.CountMinSketch:19
+#: sds.advanced.count_min_sketch.CountMinSketch:25
+#: sds.advanced.count_min_sketch.CountMinSketch:31
+msgid "int"
+msgstr ""
+
+#: 5c7b556c8b3a4d03ae83da191664b27b of
+#: sds.advanced.count_min_sketch.CountMinSketch:23
+msgid "Number of rows / hash functions (read-only). Derived from *delta*."
+msgstr ""
+
+#: f0723fcb596244b781c8c35e7d108f70 of
+#: sds.advanced.count_min_sketch.CountMinSketch:29
+msgid "Total number of items added (read-only). Not deduplicated."
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst
+#: 2849dd84cce54ad3935821229a208898 7b54a92776604a668bcc493016ad5fcc
+#: 80a1acba3b0a419fbb979668b6206fa8 8720a26a87684b21ad54b61df2396179
+#: 9fa5fd7a039f418cb8cdde1afa78c02b fd9accdcedb942be940d270a7aad76f2
+msgid "Raises"
+msgstr ""
+
+#: 9cfb4966d4d1474db95c956783b0860b bed9b620f6f245c4889813bf08084da9 of
+#: sds.advanced.count_min_sketch.CountMinSketch:33
+#: sds.advanced.count_min_sketch.CountMinSketch.__init__:8
+msgid "If *epsilon* or *delta* is not in (0.0, 1.0)."
+msgstr ""
+
+#: 16147161e81a4dd2b1961f669134bb04 2dff83df561044b28edbd57f6a7b2ba2
+#: 56ec900e677e4e42bfaa069317f5f3bc 5fa65b4a0cb14e8c8c44368829a76bce
+#: 646447225ed644399b7838dfd9938c54 706a74123018478bb1668dafee723ca6
+#: 7c61e2b77cad42ccb22a827f1380194a 8a171b422ac94c2e82cbdd5c295f129b
+#: b0df410bdcff43a892df640b8c6c7d5a b329a1c1195a4849b76160490dac7492
+#: e4dd87f9734f4b3fad86a45d7e950642 f056af591a674729aebb4cdaee03a13a of
+#: sds.advanced.count_min_sketch.CountMinSketch:35
+#: sds.advanced.count_min_sketch.CountMinSketch.__contains__:9
+#: sds.advanced.count_min_sketch.CountMinSketch.__init__:10
+#: sds.advanced.count_min_sketch.CountMinSketch.__len__:6
+#: sds.advanced.count_min_sketch.CountMinSketch.__repr__:6
+#: sds.advanced.count_min_sketch.CountMinSketch.__str__:6
+#: sds.advanced.count_min_sketch.CountMinSketch.add:13
+#: sds.advanced.count_min_sketch.CountMinSketch.clear:3
+#: sds.advanced.count_min_sketch.CountMinSketch.frequency:14
+#: sds.advanced.count_min_sketch.CountMinSketch.from_dimensions:16
+#: sds.advanced.count_min_sketch.CountMinSketch.is_empty:6
+#: sds.advanced.count_min_sketch.CountMinSketch.merge:14
+msgid "Examples"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:23
+#: 036c79b686174e7e8a06d2c7b6cef7fe 0c4f46fac0394ebb8841b2d9d429bf79
+#: 42f33bbd86064be2ad364f03020e95ad 4a52362a927d44828330ffb7074fe4c4
+#: 61533f5a8e44412aaf7d4b32e6893c2e 7a3e02895a4f4f4294f71916664b5612
+#: 84143dfcdfc4415888c0e96d19ca8129 d0050818f0074064a883b8270980d8f5
+#: df214e6f08e7468b98069bee14165a6b of
+#: sds.advanced.count_min_sketch.CountMinSketch:50
+#: sds.advanced.count_min_sketch.CountMinSketch.__contains__:18
+#: sds.advanced.count_min_sketch.CountMinSketch.__init__:16
+#: sds.advanced.count_min_sketch.CountMinSketch.add:20
+#: sds.advanced.count_min_sketch.CountMinSketch.clear:13
+#: sds.advanced.count_min_sketch.CountMinSketch.frequency:24
+#: sds.advanced.count_min_sketch.CountMinSketch.from_dimensions:22
+#: sds.advanced.count_min_sketch.CountMinSketch.merge:24
+msgid "Notes"
+msgstr ""
+
+#: 88ffc8c44c0f4d988b5fb984c19d9eb7 of
+#: sds.advanced.count_min_sketch.CountMinSketch:52
+msgid "``frequency(x)`` ≥ true count of *x* (no underestimates)."
+msgstr ""
+
+#: 7ddd600572a3400e954f832089062795 of
+#: sds.advanced.count_min_sketch.CountMinSketch:53
+msgid "``frequency(x)`` ≤ true count of *x* + ε × N with probability ≥ 1 − δ."
+msgstr ""
+
+#: adc0fb9d2e7443eb935066a52e80dc3c of
+#: sds.advanced.count_min_sketch.CountMinSketch:54
+msgid "Elements must be convertible to a string for hashing."
+msgstr ""
+
+#: daf1809674614b4e836d9a9f184784a8 of
+#: sds.advanced.count_min_sketch.CountMinSketch:55
+msgid ""
+"Counts are non-negative integers; ``add`` with ``count > 1`` is "
+"equivalent to calling ``add`` *count* times."
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:16
+#: 1dc25be2d9d7455baf68a362dd4bdf3c
+msgid "Complexity Summary"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:21
+#: 4a6367bc4a7344c9ab25f00112b88829
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:22
+#: de9ca890135a4e9988698d3886f0a18c
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:24
+#: aaa9944d937c4d40a6bdd5d14f1b23a7
+msgid "``add(item, count)``"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:25
+#: ../../source/api/advanced/count_min_sketch.rst:28
+#: ../../source/api/advanced/count_min_sketch.rst:31
+#: 4fe16831091540d784ad84d18dc096d9 ac9fb59935d6436b835d9f490b3e14b5
+#: c7477a8497f6435598c51cfdbf8877cb
+msgid "O(d)"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:26
+#: 7d89d03b2f0542d89a050cc214618677
+msgid "d = depth (number of rows)"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:27
+#: 2a73e508503f4199b03751bdc09a097b
+msgid "``frequency(item)``"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:29
+#: 354b3a3c4e4944efb0029ac10f4f9d6b
+msgid "Upper bound on true count"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:30
+#: 6d0f29ae42684a45bfc2a616b2e7f7a2
+msgid "``__contains__(item)``"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:32
+#: ac3b49e8496648ecbf8225e92cc833c2
+msgid "True iff frequency > 0"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:33
+#: 69cf760964fa490bb437b0e43f6a391b
+msgid "``merge(other)``"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:34
+#: ../../source/api/advanced/count_min_sketch.rst:37
+#: ../../source/api/advanced/count_min_sketch.rst:40
+#: ../../source/api/advanced/count_min_sketch.rst:43
+#: 1a563ea19662435db6a6d54ec90ce6ed 2fc6e00e2a7a4a289c770936d652904b
+#: 5e6baa087eeb440c96d3365e2bb355d7 96ca5b82406845178b275b22945f3f27
+msgid "O(d × w)"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:35
+#: 8e0dc39959d4476b9159184516147d65
+msgid "Element-wise sum"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:36
+#: dd794ac781c647ba92b0f1ade44fad04
+msgid "``clear()``"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:38
+#: 66e7a3651aeb4d52a4a77d6a6a5ff89f
+msgid "Resets all counters"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:39
+#: b220fc00952547d19d4a2b9b436cc59d
+msgid "``from_dimensions(w, d)``"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:41
+#: 1dcf12b166ad4daf82066b8daeebd7fe
+msgid "Class method constructor"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:42
+#: a15927c8e5d5468da21c2f40c7a51929
+msgid "Space"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:44
+#: 82792c79cdf34926bf8b34734e9fe28c
+msgid "d rows × w columns of integers"
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:48
+#: 323a20f34c5847c8bd0e1bdaef7b1193
+msgid ""
+"``frequency(x)`` is always ≥ the true count of *x* (no false negatives). "
+"The additive error is bounded by :math:`\\varepsilon \\cdot N` with "
+"probability :math:`\\geq 1 - \\delta`, where *N* is the total number of "
+"items added."
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst:53
+#: 6a0e25ea10364160a8ec79511fcbdefa
+msgid ""
+"``__iter__`` raises :exc:`TypeError` — individual items cannot be "
+"recovered from the counter matrix."
+msgstr ""
+
+#: 2edf8a8e54774215aae0ccff42d80899 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__init__:1
+msgid "Initialise a Count-Min Sketch from error parameters."
+msgstr ""
+
+#: b2c2aa7e46e943bb9f0e80ba08ced4de of
+#: sds.advanced.count_min_sketch.CountMinSketch.__init__:3
+msgid "Additive error fraction. Must be in (0.0, 1.0)."
+msgstr ""
+
+#: a1d1a0d1faa146d4b73f2cde92eedb7c of
+#: sds.advanced.count_min_sketch.CountMinSketch.__init__:5
+msgid "Failure probability. Must be in (0.0, 1.0)."
+msgstr ""
+
+#: bff3f09032c94fd0a9d25c5a34c7169a of
+#: sds.advanced.count_min_sketch.CountMinSketch.__init__:18
+msgid "Derived dimensions:"
+msgstr ""
+
+#: 9dff9a38947b4980a24a5da983abf51a of
+#: sds.advanced.count_min_sketch.CountMinSketch.__init__:20
+msgid ""
+"w = \\lceil e / \\varepsilon \\rceil, \\quad\n"
+"d = \\lceil \\ln(1/\\delta) \\rceil"
+msgstr ""
+
+#: 1f8af09b8bbb4ff185337ea1cc1e0e47 7125f4f4dd01456a9ab3befa72d75582
+#: 9ee7548497184fef8b0c07d63a758813 f9611c40ad15466eb95cdb4fa7fc9906 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__init__:25
+#: sds.advanced.count_min_sketch.CountMinSketch.clear:15
+#: sds.advanced.count_min_sketch.CountMinSketch.from_dimensions:24
+#: sds.advanced.count_min_sketch.CountMinSketch.merge:26
+msgid "Time complexity: O(d × w)."
+msgstr ""
+
+#: dce8e4ebe09b476387e4498da205ebad of
+#: sds.advanced.count_min_sketch.CountMinSketch.from_dimensions:1
+msgid "Build a Count-Min Sketch with explicit matrix dimensions."
+msgstr ""
+
+#: d1ff521661eb44079df17cf1d61112d0 of
+#: sds.advanced.count_min_sketch.CountMinSketch.from_dimensions:3
+msgid ""
+"Use this when you prefer to specify the matrix size directly rather than "
+"derive it from error parameters."
+msgstr ""
+
+#: 4f3c8ba04a6346c5a5c85c79e1fb226e of
+#: sds.advanced.count_min_sketch.CountMinSketch.from_dimensions:6
+msgid "Number of columns. Must be ≥ 1."
+msgstr ""
+
+#: 1c5b45665caf4530af79a2cab43874d5 of
+#: sds.advanced.count_min_sketch.CountMinSketch.from_dimensions:8
+msgid "Number of rows / hash functions. Must be ≥ 1."
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst
+#: 0c5511d43ebc40218ee8572727ac700f 34f97836aa9046c88e69ec70b08ccdb7
+#: 71c89fc9ed684bc1acaac639897d9adc 71cd45621eae4045995dd30f867df9ae
+#: 71d42b72c5104a4e970fc193035553e8 9647331341ef42f2965f47b564f35b2a
+#: a4bb37f5083d4225b836241ca86e72a9 c855b6b84f1147e1b5b8b7c5820d3174
+#: d2c5b47ba2cf44e69d4bddf8515255b9 e2658ac47f9e4da3991ee1d6acfc6913
+#: fb0ba45fccfa4a71b6597d4a9ef6bee1
+msgid "Returns"
+msgstr ""
+
+#: 59216eec1eef4c0aa2b3d4c1e2bc63de of
+#: sds.advanced.count_min_sketch.CountMinSketch.from_dimensions:11
+msgid "A sketch with the given dimensions."
+msgstr ""
+
+#: ../../source/api/advanced/count_min_sketch.rst
+#: 186fd7e47783429c8740f01f07ef06f8 1e35a62cdc9144ab98ef0cf1e0caf9f8
+#: 33631b6269194dcc888719ffb890ad5a 41f862008b2d4bc39b3248805330b221
+#: 4de574e7453746c3934f5be9022ae9d3 6f02fd5de47e45048f113a42c62dd639
+#: 72d657eca9714cfc9d6def6c240a830b 921a95a7ad2a48e7a07f6390393fb1c5
+#: c80cc67369a44a3d9b63a8b15e0ae1b0 c91848b6d0614f91b1b2c8f92921a855
+#: d6d10a63ba4949adafe060086739145b
+msgid "Return type"
+msgstr ""
+
+#: 2f5307e25a964fdca5ca05bb488d5c7a of
+#: sds.advanced.count_min_sketch.CountMinSketch.from_dimensions:14
+msgid "If *width* or *depth* is less than 1."
+msgstr ""
+
+#: e2617c35e40b4dbb9e139789d5f9f9d1 of
+#: sds.advanced.count_min_sketch.CountMinSketch.width:1
+msgid "Number of columns in the counter matrix."
+msgstr ""
+
+#: a84efa1744a14f0487be82908b803761 of
+#: sds.advanced.count_min_sketch.CountMinSketch.width:3
+msgid "Derived from *epsilon* at construction."
+msgstr ""
+
+#: 284de9d757054cd5a5836f7df296be16 of
+#: sds.advanced.count_min_sketch.CountMinSketch.depth:1
+msgid "Number of rows (hash functions) in the counter matrix."
+msgstr ""
+
+#: 015339fdee684c499cb2bb9c9754fb47 of
+#: sds.advanced.count_min_sketch.CountMinSketch.depth:3
+msgid "Derived from *delta* at construction."
+msgstr ""
+
+#: 6bef624c52da41708fbdc8e760f94a4c of
+#: sds.advanced.count_min_sketch.CountMinSketch.total:1
+msgid "Total number of items added (stream size N)."
+msgstr ""
+
+#: 1a8447267e6040f1b5786be47b05df8b of
+#: sds.advanced.count_min_sketch.CountMinSketch.total:3
+msgid "Monotonically increasing; not deduplicated."
+msgstr ""
+
+#: f71004cbe3224d1b929d4c987ea37469 of
+#: sds.advanced.count_min_sketch.CountMinSketch.add:1
+msgid "Record one or more occurrences of *item* in the stream."
+msgstr ""
+
+#: 151994a313ff4460bd67ee3c6e2b7faa of
+#: sds.advanced.count_min_sketch.CountMinSketch.add:3
+msgid ""
+"Increments the counter at position ``_hash(item, row)`` in each row by "
+"*count*."
+msgstr ""
+
+#: 2a2befcdb4e84345bb0b1f8fdaf628dc of
+#: sds.advanced.count_min_sketch.CountMinSketch.add:6
+msgid "Item to record. Must be convertible to a string."
+msgstr ""
+
+#: 59e7529edff64bb2b102201754b59894 of
+#: sds.advanced.count_min_sketch.CountMinSketch.add:8
+msgid "Number of occurrences to add. Must be ≥ 1."
+msgstr ""
+
+#: 523fc7356cd444689b62c15698287104 of
+#: sds.advanced.count_min_sketch.CountMinSketch.add:11
+msgid "If *count* < 1."
+msgstr ""
+
+#: 4218f467a47b4c5b99c8cb0e0f9f7986 4f8b8739c084484bbbe12119298690d8 of
+#: sds.advanced.count_min_sketch.CountMinSketch.add:22
+#: sds.advanced.count_min_sketch.CountMinSketch.frequency:26
+msgid "Time complexity: O(d)."
+msgstr ""
+
+#: 2419d558d6ed4ef08e7766c2fd9df01b of
+#: sds.advanced.count_min_sketch.CountMinSketch.frequency:1
+msgid "Return the estimated frequency of *item*."
+msgstr ""
+
+#: 87b48d052410491b994d990e14e8943c of
+#: sds.advanced.count_min_sketch.CountMinSketch.frequency:3
+msgid ""
+"Takes the minimum counter value across all *depth* rows — an upper bound "
+"on the true count with the probabilistic guarantee described in the class"
+" docstring."
+msgstr ""
+
+#: 7a46c5fc8a3541ec86b4de8cfaf9740b of
+#: sds.advanced.count_min_sketch.CountMinSketch.frequency:7
+msgid "Item to query. Must be convertible to a string."
+msgstr ""
+
+#: fde68a8438b141428896797e44dd308f of
+#: sds.advanced.count_min_sketch.CountMinSketch.frequency:10
+msgid ""
+"Estimated frequency (≥ true count, ≤ true + ε × N w.h.p.). Returns 0 for "
+"items never added."
+msgstr ""
+
+#: 14e23e4e81144b4bb8ca3a08119f3c21 of
+#: sds.advanced.count_min_sketch.CountMinSketch.merge:1
+msgid "Return a new sketch representing the union of two streams."
+msgstr ""
+
+#: 10da9732bb2849c69cbf274485bba59c of
+#: sds.advanced.count_min_sketch.CountMinSketch.merge:3
+msgid ""
+"The result estimates frequencies as if both sketches had seen the "
+"combined stream. Both sketches must have identical dimensions."
+msgstr ""
+
+#: 859e3ecbb45541dcb9bb59f635fc77f7 of
+#: sds.advanced.count_min_sketch.CountMinSketch.merge:6
+msgid "Another sketch with the same *width* and *depth*."
+msgstr ""
+
+#: 66b00248a2ab40efacddf8a011db2d0c of
+#: sds.advanced.count_min_sketch.CountMinSketch.merge:9
+msgid "A new sketch whose counters are the element-wise sums."
+msgstr ""
+
+#: c6f8a83254db42d18e6fbbea5dd76f27 of
+#: sds.advanced.count_min_sketch.CountMinSketch.merge:12
+msgid "If the two sketches have different *width* or *depth*."
+msgstr ""
+
+#: c3eec05636c24e2ba98528eaae1d95ed of
+#: sds.advanced.count_min_sketch.CountMinSketch.__len__:1
+msgid "Return the total number of items added (stream size)."
+msgstr ""
+
+#: 0f9ae850ab534fc49e7b07c8f7c28862 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__len__:3
+msgid "Equivalent to :attr:`total`."
+msgstr ""
+
+#: 64eac2adcce849cebb3f6ab7b0c71267 of
+#: sds.advanced.count_min_sketch.CountMinSketch.is_empty:1
+msgid "Return True if no items have been added."
+msgstr ""
+
+#: c4805310119a46c1aa49b31a745d176e of
+#: sds.advanced.count_min_sketch.CountMinSketch.is_empty:3
+msgid "True if total == 0."
+msgstr ""
+
+#: da40e6464bbe4267b5ab87ea4fb1682f of
+#: sds.advanced.count_min_sketch.CountMinSketch.clear:1
+msgid "Reset all counters and the total to zero."
+msgstr ""
+
+#: 3aaf80056e9545a198c2b26e1b23ad78 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__iter__:1
+msgid "Not supported — CountMinSketch does not store individual items."
+msgstr ""
+
+#: 9c4242a31dcc41d3804644a76456338a of
+#: sds.advanced.count_min_sketch.CountMinSketch.__iter__:3
+msgid ""
+"Always, because individual items cannot be recovered from a     Count-Min"
+" Sketch."
+msgstr ""
+
+#: f98d8ad0023341efbccc80092d490582 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__contains__:1
+msgid "Return True if *item* has a non-zero estimated frequency."
+msgstr ""
+
+#: 1c46efbffb1d4ecc9c1e3969c767ea3a of
+#: sds.advanced.count_min_sketch.CountMinSketch.__contains__:3
+msgid "Item to check."
+msgstr ""
+
+#: 88e92ea6d904439d86c04263539f7944 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__contains__:6
+msgid "True if ``frequency(item) > 0``."
+msgstr ""
+
+#: 666b7b3dde3d4552a51ebf1f2f218c83 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__contains__:20
+msgid ""
+"Time complexity: O(d). False positives are possible (consistent with the "
+"sketch guarantee). False negatives are not possible."
+msgstr ""
+
+#: 6c16a4f1196046bf8ddf804261e091c1 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__repr__:1
+msgid "Return a detailed string representation."
+msgstr ""
+
+#: 6f2f475f3d0349aab69f450bc1ad89d7 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__repr__:3
+msgid "``CountMinSketch(width=w, depth=d, total=n)``."
+msgstr ""
+
+#: 311f94dd988c4918bf8e9b4855bfec85 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__str__:1
+msgid "Return a concise human-readable representation."
+msgstr ""
+
+#: a9fba7107f8d47449f8bf36d7851d9a4 of
+#: sds.advanced.count_min_sketch.CountMinSketch.__str__:3
+msgid "Summary including dimensions and total count."
+msgstr ""
+

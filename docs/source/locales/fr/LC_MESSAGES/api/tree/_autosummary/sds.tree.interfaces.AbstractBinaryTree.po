@@ -1,0 +1,421 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:2
+#: 23b64e59451f4842979f780ceb6c2953
+msgid "sds.tree.interfaces.AbstractBinaryTree"
+msgstr ""
+
+#: 85dad9497c3e4d12a004fc76c50e1b1a of sds.tree.interfaces.AbstractBinaryTree:1
+msgid "Abstract base class for binary tree structures."
+msgstr ""
+
+#: 521017eaf3924eb4ab11ece4f9a49349 of sds.tree.interfaces.AbstractBinaryTree:3
+msgid ""
+"Extends AbstractTree with operations specific to binary trees, where each"
+" node has at most two children (left and right)."
+msgstr ""
+
+#: 43995984918646c7a04f262cb1a16f48 of sds.tree.interfaces.AbstractBinaryTree:8
+msgid "The root node of the tree (read-only property)."
+msgstr ""
+
+#: d26ae753e3a942859314cfcc14454404 of sds.tree.interfaces.AbstractBinaryTree
+msgid "type"
+msgstr ""
+
+#: b2dac7430e29486fa3876772b8ad62f8 of
+#: sds.tree.interfaces.AbstractBinaryTree:10
+msgid "BinaryNode or None"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 0e7b84242f1441e89e5faa3598f9a8a5 895f02fbe6d046fdab9ffc81978a3199
+#: d494b330d4394651b8e4172bca9caf12 of
+#: sds.tree.interfaces.AbstractBinaryTree:14
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:1
+msgid "Return an iterator for inorder traversal (left-root-right)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 1cbec354f44e4186b3dae851262b2733 8ca3e6d4f40a490887ef163809a4864e
+#: 99d16f7ae7924019a792de173331fa56 of
+#: sds.tree.interfaces.AbstractBinaryTree:18
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:1
+msgid "Return an iterator for preorder traversal (root-left-right)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 64ab5cbae342403ab998d6f2d2b05f59 7692b04ef2034463a704df129ad0b419
+#: f3cbd133b07a40f8b0202054772e1b49 of
+#: sds.tree.interfaces.AbstractBinaryTree:22
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:1
+msgid "Return an iterator for postorder traversal (left-right-root)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 1fd073cc7e53405bbc2c4263a7538972 41a794a0f4e2412f948922a9b3c652f6
+#: 8fd1c15eaeb8472ca2eccbbbda3b1e20 of
+#: sds.tree.interfaces.AbstractBinaryTree:26
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:1
+msgid "Return an iterator for level-order traversal (BFS)."
+msgstr ""
+
+#: 12afe46a5417426da373f8fcc55ff63d 374470bb5fd245868c0e1707f5520df5
+#: 45e6101248534a379906db9030ec510d 7b2452607dc44641bf87abc166727c2d
+#: b0d989948faf4e97b0ac63c1ecab612b d0942c77de194f9cba1bb98a83fd0d84 of
+#: sds.tree.interfaces.AbstractBinaryTree:29
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:12
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:8
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:12
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:12
+#: sds.tree.interfaces.AbstractBinaryTree.root:6
+msgid "Examples"
+msgstr ""
+
+#: 0cc5913bcdc24090be584ee34851755d 13ac9570389a4c96bcf2636b1f70834e
+#: 9468586d8f0c4b809cf40fd5266d6f72 b564f628966d4012b33953bb44a5f955
+#: d95357a246b74b08a4bbb94bef63fb0b e1ec185b4b724873bb949fcb927b8920 of
+#: sds.tree.interfaces.AbstractBinaryTree:38
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:21
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:17
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:21
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:21
+#: sds.tree.interfaces.AbstractBinaryTree.root:15
+msgid "Notes"
+msgstr ""
+
+#: 420835d3ec8548c5845d3e85c2f8f602 of
+#: sds.tree.interfaces.AbstractBinaryTree:40
+msgid ""
+"Binary trees have specific traversal methods that are not applicable to "
+"general trees."
+msgstr ""
+
+#: 41c3d3adbf654e1082d3d97be9db3e78 of
+#: sds.tree.interfaces.AbstractBinaryTree:45
+msgid ":obj:`AbstractTree`"
+msgstr ""
+
+#: eb84acb987784a38873eacfd2404318c of
+#: sds.tree.interfaces.AbstractBinaryTree:46
+msgid "Base interface for all trees."
+msgstr ""
+
+#: 02f1b9b93c64432eb92bf377ea4e5722 of
+#: sds.tree.interfaces.AbstractBinaryTree:48
+msgid ":obj:`BinaryTree`"
+msgstr ""
+
+#: 5f2d201799324f38bce50e0156e81472 of
+#: sds.tree.interfaces.AbstractBinaryTree:49
+msgid "Simple binary tree implementation."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 8c8b6ed926f447608eaa4ae1618c9e89 c119bd1f95c646f5915421fe3775d786
+#: d09877da9a4b428ea5ea855a6cbcf478 of
+#: sds.tree.interfaces.AbstractBinaryTree.__init__:1
+msgid "Initialize the abstract binary tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:13
+#: ac27a56d6ec646a18878e4a82c84ac11
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: b8ea180507d247619c4f38c132f38c0c
+msgid ""
+":py:obj:`__init__ <sds.tree.interfaces.AbstractBinaryTree.__init__>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 972e32cd22dd4f80b3878d24e7676371
+msgid ":py:obj:`clear <sds.tree.interfaces.AbstractBinaryTree.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: a8827f51ff4d44d783a9b5345795059a
+msgid "Remove all elements from the collection."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 88830a28b1494c1b80b51d0edc51d483
+msgid ":py:obj:`height <sds.tree.interfaces.AbstractBinaryTree.height>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 8c4eeb793fc04713bb9af1c52c9fe064
+msgid "Return the height of the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: a0cce46c84244b47b774021f8f45610a
+msgid ""
+":py:obj:`inorder_traversal "
+"<sds.tree.interfaces.AbstractBinaryTree.inorder_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: f766d28988f0477db0afdfc48a4a78f7
+msgid ""
+":py:obj:`insert <sds.tree.interfaces.AbstractBinaryTree.insert>`\\ "
+"\\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 3f1a3fcedb354e1ab911c3afc9df2b4e
+msgid "Insert an item into the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 0ca51556b8a7496faad1b9b7e90fd9e5
+msgid ""
+":py:obj:`is_empty <sds.tree.interfaces.AbstractBinaryTree.is_empty>`\\ "
+"\\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 5f720886ca284a539efa84ded370826c
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 2357a54e4b7e4d75a3d3c4fcfbb61369
+msgid ""
+":py:obj:`level_order_traversal "
+"<sds.tree.interfaces.AbstractBinaryTree.level_order_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: da2bfb99be894fdcb01d62094e0328eb
+msgid ""
+":py:obj:`postorder_traversal "
+"<sds.tree.interfaces.AbstractBinaryTree.postorder_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 238ba030a9f2416eadf5d87fec5d91e1
+msgid ""
+":py:obj:`preorder_traversal "
+"<sds.tree.interfaces.AbstractBinaryTree.preorder_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 59de09bdf052472db72773737df9d50e
+msgid ""
+":py:obj:`remove <sds.tree.interfaces.AbstractBinaryTree.remove>`\\ "
+"\\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 25fa95e457834b1091bd7e43834a01f1
+msgid "Remove and return an item from the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: cb558fd64b7f42dab57db718f3ab20ff
+msgid ""
+":py:obj:`search <sds.tree.interfaces.AbstractBinaryTree.search>`\\ "
+"\\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:31:<autosummary>:1
+#: 921ecb5d5424446da3ea5832f15a3dc1
+msgid "Search for an item in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst:33
+#: 4e73ec87af7e43849fd2cc4bc6d993ec
+msgid "Attributes"
+msgstr ""
+
+#: cf78bba9723e47e0a76812b5ba48b410 of
+#: sds.tree.interfaces.AbstractBinaryTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`root <sds.tree.interfaces.AbstractBinaryTree.root>`\\"
+msgstr ""
+
+#: d805d4a9e96f4508a9e05d76f082516d f1b366c0a3624651901c943c07edfd74 of
+#: sds.tree.interfaces.AbstractBinaryTree.__init__:1:<autosummary>:1
+#: sds.tree.interfaces.AbstractBinaryTree.root:1
+msgid "Get the root node of the tree."
+msgstr ""
+
+#: 1f5448e827754aeab77030d71d99e429 of
+#: sds.tree.interfaces.AbstractBinaryTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.interfaces.AbstractBinaryTree.size>`\\"
+msgstr ""
+
+#: b4b50cf41f784c3fbe2eb60f7c32f29f of
+#: sds.tree.interfaces.AbstractBinaryTree.__init__:1:<autosummary>:1
+msgid "Get the number of nodes in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst
+#: f6eb93a37fcc4e68bc2ae6e65a7a2117
+msgid "Returns"
+msgstr ""
+
+#: a93e2a86e5ca468dace235826d2f9139 of
+#: sds.tree.interfaces.AbstractBinaryTree.root:3
+msgid "The root node, or None if the tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.interfaces.AbstractBinaryTree.rst
+#: a22e6146e42941948d8660aa2b8aa726
+msgid "Return type"
+msgstr ""
+
+#: 88b858298fbe42ff85e0ea19ac1c1815 of
+#: sds.tree.interfaces.AbstractBinaryTree.root:17
+msgid ""
+"This property is read-only. To modify the tree, use insert() and remove()"
+" methods."
+msgstr ""
+
+#: 7ea9d84a3e4f4e94b47061d7cdd4dcdf of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:3
+msgid "In inorder traversal, we visit: 1. Left subtree 2. Root 3. Right subtree"
+msgstr ""
+
+#: e6c179ce34774218979baf93bbbdd8c6 of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:8
+msgid "For BST, this yields elements in sorted order."
+msgstr ""
+
+#: 192c762f71294fa584d5663e7fe07466 1dbe4857692140c4aa75556a25b10e5b
+#: 2bcacfba60de472d951be0843f7c1829 c434bfec12d84b7a86ae74278edb5564 of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal
+msgid "Yields"
+msgstr ""
+
+#: f3897e4415594117b524fea5825a4daa of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:10
+msgid "*Any* -- Items from the tree in inorder."
+msgstr ""
+
+#: 59b9499da1fd4eceab68f377db5076d4 of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:23
+msgid ""
+"Time complexity: O(n) Space complexity: O(h) where h is height (recursion"
+" stack)"
+msgstr ""
+
+#: a8756610e0c1465fb838647feac117c7 of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:28
+msgid ":obj:`preorder_traversal`"
+msgstr ""
+
+#: 2787c699946d4219a1c188e8603aac70 of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:29
+msgid "Root-left-right traversal."
+msgstr ""
+
+#: fb77b3d4ddb6463891066a9f622a240b of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:31
+msgid ":obj:`postorder_traversal`"
+msgstr ""
+
+#: f9a029e4aa774d21b942ae016532c3be of
+#: sds.tree.interfaces.AbstractBinaryTree.inorder_traversal:32
+msgid "Left-right-root traversal."
+msgstr ""
+
+#: d6836025ffb54545bd0c2c873def3929 of
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:3
+msgid "In preorder traversal, we visit: 1. Root 2. Left subtree 3. Right subtree"
+msgstr ""
+
+#: 72eda0f625944fb2b7f9023f7869c67a of
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:8
+msgid "Useful for creating a copy of the tree."
+msgstr ""
+
+#: 97ca193d41e34b128bf3d3369f1ff9ca of
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:10
+msgid "*Any* -- Items from the tree in preorder."
+msgstr ""
+
+#: 4257f8487c394886a5b71422d7767037 585cbbfa32e64ff3b943e3cea8f0f977 of
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:23
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:23
+msgid "Time complexity: O(n) Space complexity: O(h) where h is height"
+msgstr ""
+
+#: 0219ec3500ca44e28b3e4ea08544810f 8577560859fb44fc9246dad600c48acd
+#: a6e0b8cec47f43309f380a52a66ac5ab of
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:24
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:28
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:28
+msgid ":obj:`inorder_traversal`"
+msgstr ""
+
+#: ac23427bbe6547ce971e00746d496d2a ee6e9155ce85427c88dd58481f268d55 of
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:29
+#: sds.tree.interfaces.AbstractBinaryTree.preorder_traversal:29
+msgid "Left-root-right traversal."
+msgstr ""
+
+#: 9b6a36c5b928428981a17192010ccb68 of
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:3
+msgid "In postorder traversal, we visit: 1. Left subtree 2. Right subtree 3. Root"
+msgstr ""
+
+#: 4d8616c34c8846dc9516899f779871a9 of
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:8
+msgid "Useful for deleting the tree (delete children before parent)."
+msgstr ""
+
+#: a1bd6556aa9b4ade80e5f4ac262c6478 of
+#: sds.tree.interfaces.AbstractBinaryTree.postorder_traversal:10
+msgid "*Any* -- Items from the tree in postorder."
+msgstr ""
+
+#: 3e116e2d24be40dabba63b7104c17b53 of
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:3
+msgid ""
+"Level-order traversal visits nodes level by level, from left to right at "
+"each level. Also known as breadth-first search."
+msgstr ""
+
+#: 08c54300f758445d8e9cbfc07f0ba62b of
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:6
+msgid "*Any* -- Items from the tree level by level."
+msgstr ""
+
+#: fb424446e07f4156b7238c9a4839786f of
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:19
+msgid ""
+"Time complexity: O(n) Space complexity: O(w) where w is maximum width of "
+"tree"
+msgstr ""
+
+#: 1baa707efc3c4cb687c83d25b8cff79d of
+#: sds.tree.interfaces.AbstractBinaryTree.level_order_traversal:25
+msgid "Depth-first inorder traversal."
+msgstr ""
+

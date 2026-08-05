@@ -1,0 +1,1221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/graph_structures/weighted.rst:5
+#: 4648772cfad54f9c9fdec9163d9b721c
+msgid "Weighted Graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:10
+#: f01cf45ba89b4635abebb480070c4dd6
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:12
+#: c483b089d24947fe9cd7cc449b530598
+msgid ""
+"A **weighted graph** is a graph where each edge has an associated numeric"
+" value called a **weight**. Weights typically represent costs, distances,"
+" capacities, or other quantitative relationships between nodes. Weighted "
+"graphs are fundamental for modeling real-world networks where connections"
+" have varying strengths or costs."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:38
+#: 876cff1434de41baac8f9b4d22809614
+msgid ""
+"Weighted graphs enable sophisticated analysis like shortest path "
+"algorithms (Dijkstra, Bellman-Ford), minimum spanning trees (Kruskal, "
+"Prim), and network flow optimization that are impossible with unweighted "
+"graphs."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:43
+#: a6bc254f52724f25aef7f550b3aab5ae
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:46
+#: 4f3db3e588354106be1daf61f18e50a1
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:49
+#: ../../source/guide/graph_structures/weighted.rst:1287
+#: 7407989199744c1095994a7b8f7793f9 f4a47722f3894244b7a28c0f8405b0c1
+msgid "Weighted Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:51
+#: 8b04db9ab0fc4cdf987f0fa082b5b8da
+msgid "A weighted graph :math:`G = (V, E, w)` consists of:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:53
+#: fa473e53935d46d5a0df90ada1ffe1e2
+msgid "**Vertex set** :math:`V`: finite set of nodes"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:55
+#: fed2eb25833546d88283b5aaf0e122a5
+#, python-brace-format
+msgid "V = \\{v_1, v_2, \\ldots, v_n\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:59
+#: 8d68946e4f994b4ea4e221ebcd7953c6
+msgid "**Edge set** :math:`E`: set of connections"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:61
+#: 763f05c934d1496b99019b95f061697c
+msgid "E \\subseteq \\{\\{u, v\\} : u, v \\in V, u \\neq v\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:65
+#: 3f436df69c23452fabc754b09ab6b678
+msgid "for undirected graphs, or"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:67
+#: cd47dd2242ab4b2ab8d6b920607b1543
+#, python-brace-format
+msgid "E \\subseteq \\{(u, v) : u, v \\in V, u \\neq v\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:71
+#: bf6598bcea9b4d6d862a045f6932bce7
+msgid "for directed graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:73
+#: 423dd1281c804ca4a633a473c2b2809a
+msgid "**Weight function** :math:`w`: maps edges to real numbers"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:75
+#: b733b634a38242fdafa47c21c97a14ba
+#, python-brace-format
+msgid "w: E \\rightarrow \\mathbb{R}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:79
+#: e11a93b8e6b24da1b9696ee667ebba38
+msgid "where :math:`w(e)` represents the weight of edge :math:`e`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:82
+#: e3564478fa4d446b84c5c05f58c14438
+msgid "Edge Weight Properties"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:84
+#: 3e0433132e104c9e9f42b567775012f4
+#, python-brace-format
+msgid "For an edge :math:`e = \\{u, v\\}` (or :math:`(u, v)` for directed):"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:86
+#: d4bf73bd4cbf47d6afb9256cd7e5f779
+#, python-brace-format
+msgid "w(e) \\in \\mathbb{R}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:90
+#: abd29ba3d01b47a99e628ec0ec4ae7c9
+msgid "**Common weight interpretations:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:92
+#: 2bdc462594c54fcb87b1b73ad3fb3639
+msgid "**Distance**: :math:`w(e) \\geq 0` (non-negative)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:93
+#: 22b46db9d5e04a60b5a735cb54e48aa4
+msgid "**Cost**: :math:`w(e) \\geq 0` typically"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:94
+#: c2d11b5835e7456a817278216d0b6184
+msgid "**Capacity**: :math:`w(e) > 0` (positive)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:95
+#: 349e895183834406b8c01a6da5fdc59b
+msgid "**Profit**: :math:`w(e)` can be negative"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:96
+#: 09add34744464450aae445d68867a060
+msgid "**Time**: :math:`w(e) \\geq 0` usually"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:99
+#: c63916fef7024226b264b2cf2504e948
+msgid "Graph Properties"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:102
+#: 58edbe08836a464690d27e0840fb2aa9
+msgid "Total Weight"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:104
+#: ddc9d171e5284f3a99331fdfdeaf3ba4
+msgid "The **total weight** of a graph is the sum of all edge weights:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:106
+#: 1b47a3351cef4aada44f54d0aca915cc
+#, python-brace-format
+msgid "W(G) = \\sum_{e \\in E} w(e)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:111
+#: 0c2455c627a94e2b94fa7182ddc57b81
+msgid "Path Weight"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:113
+#: 50874c5e174246958bab5e9fce782bdc
+msgid "For a path :math:`P = (v_1, v_2, \\ldots, v_k)`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:115
+#: aede5bde3bcc433ebb47a5ca009dfc51
+msgid "w(P) = \\sum_{i=1}^{k-1} w(\\{v_i, v_{i+1}\\})"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:119
+#: 1f9d021b36c0446aacd63c8aa025d3cb
+msgid "or for directed paths:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:121
+#: ade59974baa748f8a358859f2d65d491
+#, python-brace-format
+msgid "w(P) = \\sum_{i=1}^{k-1} w((v_i, v_{i+1}))"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:126
+#: 6c26015c86ca41409dabdbc171fe948e
+msgid "Shortest Path"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:128
+#: 444b9d0b78d244b2bcd9957890f8f0f2
+msgid "The **shortest path** from :math:`u` to :math:`v` is:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:130
+#: a6f1550ab85647479aaca984984d8f0d
+#, python-brace-format
+msgid ""
+"\\delta(u, v) = \\min\\{w(P) : P \\text{ is a path from } u \\text{ to } "
+"v\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:134
+#: 9e1277be94484c92985632f8cf4a9a1b
+msgid "If no path exists:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:136
+#: 622cf956ee464ff19597353f817f4537
+msgid "\\delta(u, v) = \\infty"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:141
+#: 7fb8eb1d54224d36ab070f858640ba3e
+msgid "Distance Matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:143
+#: 053c5d78dd8c4243a9ad2c7d939a2de7
+msgid "For a graph with :math:`n` vertices, the **distance matrix** :math:`D` is:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:145
+#: 29d4a0ac3ad94aae8fa651d418f2245c
+#, python-brace-format
+msgid ""
+"D_{ij} = \\begin{cases}\n"
+"0 & \\text{if } i = j \\\\\n"
+"w(\\{v_i, v_j\\}) & \\text{if } \\{v_i, v_j\\} \\in E \\\\\n"
+"\\infty & \\text{otherwise}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:154
+#: ../../source/guide/graph_structures/weighted.rst:402
+#: ../../source/guide/graph_structures/weighted.rst:1354
+#: 0ab1847c6e7e4f41bc561783cf5f09a7 0bcab6561f6348c69b88fb6efdbc6988
+#: 6d1312bf4378489c9790f1b8873881af
+msgid "Minimum Spanning Tree"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:156
+#: d379e4dc5c1e47b59af47f4ce776a797
+msgid ""
+"For a connected weighted undirected graph, a **minimum spanning tree "
+"(MST)** :math:`T` is a spanning tree such that:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:158
+#: d9cd131f0275452492b8d508a2a28e74
+#, python-brace-format
+msgid "w(T) = \\sum_{e \\in T} w(e)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:162
+#: 87e533032ffc4168ba0e080818b363f4
+msgid "is minimized among all spanning trees."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:164
+#: 519eef478d9c4b37ba8b6063e926dc16
+msgid "**Properties of MST:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:166
+#: e7a0bca070b04ea1bb40b86163c0b5c4
+msgid "**Uniqueness**: MST is unique if all edge weights are distinct"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:167
+#: 467f44dade2941229021ab340df56e0f
+msgid "**Cut property**: Minimum weight edge crossing a cut is in some MST"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:168
+#: 8553860083f34a6b8230663e93eee0ff
+msgid "**Cycle property**: Maximum weight edge in any cycle is not in any MST"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:171
+#: e5ca687a988a4ca399e96e2d1baa468f
+msgid "Weighted Degree"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:173
+#: 2cb842c82494403a9870f0606efbf59a
+msgid "The **weighted degree** of a vertex :math:`v`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:175
+#: 273dba15db864448ba60366a301272dc
+msgid "deg_w(v) = \\sum_{\\{v,u\\} \\in E} w(\\{v, u\\})"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:179
+#: a38aba8a003e44b0b4c019c0868fda8f
+msgid "For directed graphs:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:181
+#: 7ec98fb6e65c49bcbf9c7cbe1c1ce11b
+#, python-brace-format
+msgid ""
+"\\begin{aligned}\n"
+"deg_w^{in}(v) &= \\sum_{(u,v) \\in E} w((u, v)) \\\\\n"
+"deg_w^{out}(v) &= \\sum_{(v,u) \\in E} w((v, u))\n"
+"\\end{aligned}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:189
+#: 2d14bfa690134359882763c95f578d3b
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:192
+#: 146f3104d45f4cd8b7a27dc15c70b01d
+msgid "Abstract Data Type"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:226
+#: b831343da63046dfbb427a432283208f
+msgid "Core Operations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:229
+#: 171bc686990b41679830b93ab5347099
+msgid "Get Edge Weight"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:243
+#: ff6b68f0ad0d499fbfb73fc9f2ab7f30
+msgid "**Time complexity**: O(1) with adjacency structure"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:246
+#: 5461f935636841cdba4714002ff11d39
+msgid "Total Weight Calculation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:260
+#: ../../source/guide/graph_structures/weighted.rst:279
+#: 1c2535d440304412b6832170a5cc0fa9 52100df4d4514b7ab7ca11949edf377f
+msgid "**Time complexity**: O(E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:263
+#: ab95cea6ea7c4866989327348fa7c69b
+msgid "Incident Edges"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:281
+#: 6e079d37c383404fad40d2a05f66d682
+msgid "**Optimized with adjacency**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:296
+#: 39804cbc49e74ea7aef32a9daae0612c
+msgid "**Time complexity**: O(degree(node))"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:299
+#: ../../source/guide/graph_structures/weighted.rst:1340
+#: 970ba30089e547af93a5280da11974b7 f1461e15c1e149fba29753c94819643f
+msgid "Shortest Path Algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:302
+#: 7f532cab7873458d8bec9aa694992a16
+msgid "Dijkstra's Algorithm"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:304
+#: bd0e3a58023f44daaba415695239833e
+msgid "For graphs with **non-negative weights**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:339
+#: 41389570bf9e406f8db76c57fa44de1d
+msgid ""
+"**Time complexity**: - With binary heap: O((V + E) log V) - With "
+"Fibonacci heap: O(E + V log V)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:343
+#: 97b1a9bd9c424d3a8185127b14cbb911
+msgid "**Space complexity**: O(V)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:345
+#: 7ea841e30ac645bab499c39891efba47
+msgid "**Visualization**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:362
+#: 940ac6942f954ec9b13948f92a0e2bfc
+msgid "Bellman-Ford Algorithm"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:364
+#: 3d076ab369bd46e3a7a082864b19170c
+msgid "For graphs that may have **negative weights**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:395
+#: 3a57fe1e0e43466abafeed9d1b23717b
+msgid "**Time complexity**: O(VE) **Space complexity**: O(V)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:398
+#: 83c42b009a484a67a915d54a96a17bd5
+msgid ""
+"**Handles negative weights**: Unlike Dijkstra **Detects negative "
+"cycles**: Returns False if one exists"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:405
+#: 1facc332343547f3876349925171f4e7
+msgid "Kruskal's Algorithm"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:434
+#: 2230271e8457409f956bb8f037349a78
+msgid "**Time complexity**: O(E log E) = O(E log V) **Space complexity**: O(V)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:438
+#: b0dfff82cf2443688db31150df907eaa
+msgid "Prim's Algorithm"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:466
+#: 509da64e269340269d8eae68d3a64532
+msgid ""
+"**Time complexity**: O(E log V) with binary heap **Space complexity**: "
+"O(V)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:470
+#: f095e6805dc545b689dfd6f921acbd66
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:473
+#: d0bc1bdcd5154f4882f1da2a3eaa39bf
+msgid "Operation Complexity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:479
+#: e1cc2ad630464b55bf8061f9088464b5
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:480
+#: e221ceb6f20747f4bb14574118aff621
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:481
+#: ../../source/guide/graph_structures/weighted.rst:1288
+#: aab1ee3911cf42d3bd7fa977c5ec67d2 ce9faa600c44481c9e061dbf9d64dbbf
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:482
+#: e2cce9f1f5a8432fa5fcbd4e0778e426
+msgid "**add_node**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:483
+#: ../../source/guide/graph_structures/weighted.rst:486
+#: ../../source/guide/graph_structures/weighted.rst:489
+#: 3c0bd96de3164ac9b536db3e8f352274 466be3bd2fdb46d8b9a12254ab8376d3
+#: c3debe1d071942bc985d8447aea6473f
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:484
+#: c3eb91a98e274cd9ac6d2a583351145e
+msgid "Add vertex"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:485
+#: 00e37976fe0c4f24aa64e25e427a8dcd
+msgid "**add_edge**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:487
+#: f8bef927e95e46daa2067031d4f5e2e9
+msgid "Add weighted edge"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:488
+#: 0c71e62b70fe4071ad921ab8580219fa
+msgid "**get_edge_weight**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:490
+#: 5604029f603e47edb7f82cd6482926bc
+msgid "With adjacency structure"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:491
+#: 0f7c3ff0c51442ccb6b8e4ea223f30a3
+msgid "**total_weight**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:492
+#: 8c9e41b924d74e469926144fa12f4be1
+msgid "O(E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:493
+#: 429597af6dc148d6ae510a60940eea2d
+msgid "Sum all edges"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:494
+#: af74b8696add4e8ea76904af43ad15d7
+msgid "**incident_edges**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:495
+#: 2df681e91002473584425d911f3897d9
+msgid "O(degree)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:496
+#: 3f3e9ae1591f424dba5df5041e82f214
+msgid "Optimized lookup"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:497
+#: 1d1c5c7df4d74e3398b7b8f925e9d3d0
+msgid "**shortest_path (Dijkstra)**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:498
+#: 5ee630a731754f648588fe3e3cd2987d
+msgid "O((V+E) log V)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:499
+#: 04975e0019af4b94a8c8be5322a4e7ee
+msgid "Non-negative weights"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:500
+#: 3fdd488adbbf462997a32b85f69032cf
+msgid "**shortest_path (Bellman-Ford)**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:501
+#: 1b6332a96aaa4866a5d20491f666e650
+msgid "O(VE)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:502
+#: e3f05959b12d4054b7e7bbce526ffb49
+msgid "Handles negative weights"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:503
+#: 7459c50b10fc4bf08d5af4b6aa7664eb
+msgid "**MST (Kruskal)**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:504
+#: ../../source/guide/graph_structures/weighted.rst:507
+#: 9d1691cd907a4f59aecb191ec370197b e57948b409a946a991550f92bc9e95b0
+msgid "O(E log V)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:505
+#: 2b9f04b9c575488f9823c1a2e735256f
+msgid "Sort edges"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:506
+#: 49558a17dc5e4873943bd895fdccd0d3
+msgid "**MST (Prim)**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:508
+#: 05b83d9591eb43f3ae79f193fae68e50
+msgid "Priority queue"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:511
+#: a9dd71d8795f4feab960b7bd8caf5726
+msgid "Algorithm Selection"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:513
+#: 1bd2266cd2b048fc9a128d324f3a5bfb
+msgid "**Shortest Path:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:515
+#: 402f81837f1f4472a6faa2f34c13c7e9
+msgid "**Non-negative weights only**: Use Dijkstra (faster)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:516
+#: f1b2596055e84150835cf7547eec8985
+msgid "**May have negative weights**: Use Bellman-Ford"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:517
+#: 7a5a847b2e5e4924987cfe8c951bb17c
+msgid "**All pairs**: Use Floyd-Warshall O(V³)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:519
+#: 78c061cf39f845ec86be29d31c29bc39
+msgid "**Minimum Spanning Tree:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:521
+#: 178dcf3893744cdb81dd6e17e2da0540
+msgid "**Sparse graph**: Use Kruskal"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:522
+#: 0bc915ac35084e96885f5855502ec8d5
+msgid "**Dense graph**: Use Prim"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:523
+#: 90f88c9c930445e99e259c376b61c763
+msgid "**Both work well** in most cases"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:526
+#: d145bad6bd954a4a9f4883cb0970add2
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:529
+#: 993ea46509394cbe8b360d9ad92f03a6
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:541
+#: 61687e57e7b746eaa48e8f5d1125bde9
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:544
+#: ddc11d99da7647af9bc5fc4f60fb7efe
+msgid "Creating Weighted Undirected Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:575
+#: 073d6251c41b4d22a499e8bc28a67be0
+msgid "Querying Edge Weights"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:593
+#: b1cc75e05e3d4036988c440596eac956
+msgid "Working with Incident Edges"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:612
+#: 4b8a6764e73a47df8d8e846fdd3649f8
+msgid "Creating Weighted Directed Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:647
+#: 58c0e0c95b774dfa94e8d052c52de6c4
+msgid "Updating Edge Weights"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:663
+#: e1a7a1f089664ea9b24d58e8afb89244
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:666
+#: 54e93737005f48cba191211a13c162e0
+msgid "Application 1: Route Planning System"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:668
+#: a7670b90330b4e238971326f51c48a12
+msgid "GPS navigation with real-time traffic:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:818
+#: c8bf3bcce29d41b39b9fa536834326d6
+msgid "Application 2: Network Optimization"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:820
+#: d98eb7e006b749f78ba3c29be5c12ace
+msgid "Minimum spanning tree for network design:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:941
+#: 0ac89d34e7f34804b6aa6f368b88352d
+msgid "Application 3: Project Scheduling"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:943
+#: 094c377fd7ec404f8bea4fc1e6a0e7fc
+msgid "Critical path analysis with weighted directed graph:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1064
+#: 8da44e48654745c5a6e0974406dd3e71
+msgid "Application 4: Currency Exchange"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1066
+#: fb37f88587724389847d1ba3339cea81
+msgid "Find best exchange rates using weighted directed graph:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1169
+#: e2f602d09fcd4c73a7e26dc4cc13c945
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1172
+#: 2530235d4dff4c02b8d8b5ca36548e0a
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1174
+#: 020a0f87fe414b8485b1fc2bc58fdba3
+msgid "✅ **Choose appropriate weight representation**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1187
+#: bf0ebac2e79747b493e60c5a81e7844d
+msgid "✅ **Use Dijkstra for non-negative weights**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1199
+#: 25b5fb1384944332b4ba0136df479b94
+msgid "✅ **Cache total weight for static graphs**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1217
+#: f24357bcde36481c9298d30da8c4f001
+msgid "✅ **Validate weights in critical applications**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1233
+#: e00ccf589bb046f09c7b21e367b56f58
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1235
+#: f8f37b069b8040a3b4b51908179c0153
+msgid "❌ **Don't use Dijkstra with negative weights**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1247
+#: bac84b826acd498fb126b552350212b2
+msgid "❌ **Don't ignore weight updates**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1264
+#: 41ae43b8f825462c91262d8c13068353
+msgid "❌ **Don't confuse directed/undirected weights**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1279
+#: 491f946622884a048ebc97755b0edbc1
+msgid "Comparison with Other Structures"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1285
+#: a6017c37d6ff4f5dab1647609c671cfb
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1286
+#: 8c96f579406f40deb810110d97fe141a
+msgid "Unweighted Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1289
+#: 72eceb8bff504259a1dc765229733db1
+msgid "**Edge Information**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1290
+#: f20d6bddd6de4a96afe019c6ea3424f2
+msgid "Binary (exists/not)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1291
+#: 2042dbe5a896461daa505a8c80f59a40
+msgid "Numeric weight"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1292
+#: a1ebed110cdf48899c8e655978f7507e
+msgid "More expressive"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1293
+#: a4dffdf275944691983825da91ddaff5
+msgid "**Shortest Path**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1294
+#: 4f7f050bd7ee478fbbe0b34843c98653
+msgid "BFS (O(V+E))"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1295
+#: 64419a35671245e0b7952695179c23ab
+msgid "Dijkstra/Bellman-Ford"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1296
+#: 2cff062f170d4b01b303bd2bf8e25517
+msgid "More complex"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1297
+#: 80a548dce6a24f2d820eac842ffd1156
+msgid "**MST**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1298
+#: 0aa9b0b4b9d9429594fc46c61076576f
+msgid "N/A"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1299
+#: 81ba4800c275434593879953a5afe8c9
+msgid "Kruskal/Prim"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1300
+#: 8f59be94393c4869b753dbe9a43251a5
+msgid "Unique to weighted"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1301
+#: ca0b267fe3534cdc95ae1ee6b5c991f6
+msgid "**Memory**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1302
+#: 4a60266b2d0f4367a776ee5aa9d5b2e8
+msgid "O(V+E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1303
+#: 00b5e7155ce34042bf979f2463ab6343
+msgid "O(V+E) + weights"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1304
+#: dd8604b6bb14419e83169e8864039439
+msgid "Small overhead"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1305
+#: aa92c718611d42a7b7959651b0d7637f
+msgid "**Algorithms**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1306
+#: 8d14c2fd1b6446a19e483c3d7c5925b1
+msgid "Simpler"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1307
+#: c032d984b0494eb7b4e887de943fa8bb
+msgid "More sophisticated"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1308
+#: 3c3d391dbe404e2fa882ed06f52c7d89
+msgid "More powerful"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1311
+#: 61ddd242be1247b8bcdf91ab415fd75a
+msgid "When to Use Weighted Graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1313
+#: 26c0844a266e444a8d1d46243b52c750
+msgid "**Use weighted graphs when:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1315
+#: 0f577f575b45471a947308813d02f132
+msgid "Connections have varying costs, distances, or capacities"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1316
+#: 1eca22870ed74e599d7f81c4c5afd244
+msgid "Need to find optimal paths (minimum cost/distance)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1317
+#: e04647328e4b430bbebf57d3f8253c5a
+msgid "Building network infrastructure (minimum spanning tree)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1318
+#: e47c954006744c64badd24d5d8b09f78
+msgid "Modeling flow networks"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1319
+#: 13657d4998c14dd4a92fb787c6b017ba
+msgid "Comparing multiple routes or solutions"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1321
+#: fead6c361eb34b08a5ceda57a7800477
+msgid "**Use unweighted graphs when:**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1323
+#: 8955617f3c9645b2a42cae6462cba105
+msgid "Only connectivity matters (not strength/cost)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1324
+#: 75e05d77de874bbeaa7c12b53af16ba1
+msgid "All edges are equivalent"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1325
+#: fffa7838e6f9438bbc7d07f4dccfeaa2
+msgid "Simpler algorithms sufficient"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1326
+#: 44ccdd6cea3a4e9599be6a3dd64aacfc
+msgid "Memory is very constrained"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1329
+#: 782496bac45a412ea1f768e5f790a799
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1331
+#: 49e2b736a2004258a95604349ebfbb8d
+msgid ":doc:`/api/graph/weighted` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1332
+#: 13fefa998d0d4adcb569db661379926e
+msgid ":doc:`general` - Basic graph structures"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1333
+#: de3fd92c58d249738c9e3872617a1d9e
+msgid ":doc:`directed` - Directed graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1334
+#: 033e77498bd4451c936f0e2db04cfd21
+msgid ":doc:`adjacency` - Graph representations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1337
+#: f37e52412d034addb679a276fecf8797
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1342
+#: 24cf21a827a34658a37885923664f7f7
+msgid ""
+"Dijkstra, E. W. \"A note on two problems in connexion with graphs\", "
+"1959. Numerische Mathematik 1, 269-271. "
+"https://doi.org/10.1007/BF01386390"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1346
+#: 5c806d41283c4c769e71e6f6023ac7f9
+msgid "Original paper introducing Dijkstra's algorithm for shortest paths."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1348
+#: f7f9f08b318042f5869078e2aef91fa0
+msgid ""
+"Bellman, R. \"On a routing problem\", 1958. Quarterly of Applied "
+"Mathematics. Ford, L. R. \"Network Flow Theory\", 1956. RAND Corporation."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1351
+#: 0a3665004e884adc9344853ab4d8dfb3
+msgid "Foundations of the Bellman-Ford algorithm for negative weights."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1356
+#: f873c57a84f44f3c8ac9a83424d644dc
+msgid ""
+"Kruskal, J. B. \"On the shortest spanning subtree of a graph\", 1956. "
+"Proceedings of the American Mathematical Society 7(1), 48-50."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1359
+#: 5fc4543e47b34b49a563ca8e4c1f4a41
+msgid "Kruskal's algorithm for minimum spanning trees."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1361
+#: 4b10823ca2714d9d81bfdfd51c0da526
+msgid ""
+"Prim, R. C. \"Shortest connection networks\", 1957. Bell System Technical"
+" Journal 36(6), 1389-1401."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1364
+#: fb6f5920ed2745f4b2094e0da5764115
+msgid "Prim's algorithm for MST construction."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1366
+#: 30609180c2df475aae8b3478f67fae64
+msgid ""
+"Borůvka, O. \"O jistém problému minimálním\", 1926. Práce Moravské "
+"Přírodovědecké Společnosti 3, 37-58."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1369
+#: 8ea86cb70b4c4dd8881820f52e871cc5
+msgid "First MST algorithm (Borůvka's algorithm), predates Kruskal and Prim."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1372
+#: 3ca9d8d1573544bcb3edb9edde35391d
+msgid "Textbooks and Online Resources"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1374
+#: 5a740eaf37484f3aaad1b944aa82778e
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, 2009. "
+"Chapters 22-25: Graph Algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1377
+#: d1f07fc9844e4f8cbdaede617e2178f5
+msgid "Single-source shortest paths"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1378
+#: 1be3c0ec0d22431ead8063c56b92ac41
+msgid "All-pairs shortest paths"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1379
+#: 7fa0181563c841c69153a91d183f9437
+msgid "Maximum flow"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1380
+#: ../../source/guide/graph_structures/weighted.rst:1388
+#: 16a6fe7b1dc243bbb2084aa11067e08e 996b5f1972c5488cab88a062f05592d3
+msgid "Minimum spanning trees"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1382
+#: 83ab8b85d3bb42fcabe9a395e9094a12
+msgid ""
+"OpenDSA Project. \"Graph Algorithms\". https://opendsa-"
+"server.cs.vt.edu/ODSA/Books/Everything/html/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1385
+#: 6badcd0f104d469f9468af80b890438f
+msgid "Interactive modules on:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1387
+#: 32e8edab6a9a407799f492c9d849bed8
+msgid "Dijkstra's algorithm"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1389
+#: a16e73b212924073aa20d720bbfcb787
+msgid "Network flow"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1391
+#: 84272f30fea843eaa8667c0e92b2457d
+msgid ""
+"MIT OCW. \"6.006 Introduction to Algorithms\". "
+"https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1394
+#: 4022f89f38d84056b81997465b8f2677
+msgid "Lecture notes and videos on graph algorithms."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1396
+#: 81dc2f93af294d078b8e56adfb19e00e
+#, python-format
+msgid ""
+"Wikipedia. \"Dijkstra's algorithm\". "
+"https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1399
+#: cef417678d03496b9d1efe153ddfad79
+msgid "Comprehensive overview with visualizations and pseudocode."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1401
+#: 5a11846291e84e5c80380885e7442d6d
+msgid ""
+"Wikipedia. \"Minimum spanning tree\". "
+"https://en.wikipedia.org/wiki/Minimum_spanning_tree"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1404
+#: cd404f9f59974998829016ec60bacfa6
+msgid "Overview of MST algorithms and applications."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1406
+#: 261dbd9e9eb944efa32b87c03bf00761
+msgid "VisuAlgo. \"Single-Source Shortest Paths\". https://visualgo.net/en/sssp"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1409
+#: 9c6f9a4d714345979d1a7ea350c46be4
+msgid "Interactive visualizations of Dijkstra and Bellman-Ford."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1411
+#: b4370622e98c4d29800e8201f53cc2ab
+msgid "VisuAlgo. \"Minimum Spanning Tree\". https://visualgo.net/en/mst"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1414
+#: 7a7253476f8f458f8ed0797dc09d83cc
+msgid "Interactive visualizations of Kruskal and Prim algorithms."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1417
+#: 5e2724417a4c46c2b95d8c6426108f71
+msgid "Applications and Advanced Topics"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1419
+#: a6af8315825d4f5787a4ceb5a6d2fc17
+msgid ""
+"NetworkX Documentation. \"Shortest Paths\". "
+"https://networkx.org/documentation/stable/reference/algorithms/shortest_paths.html"
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1422
+#: 449fa7b9bcf54433aae0fe49558afbe6
+msgid "Python library with weighted graph algorithms."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1424
+#: 050cadeb1b774d0e98dd0586b2f75cc5
+msgid ""
+"Floyd, R. W. \"Algorithm 97: Shortest Path\", 1962. Communications of the"
+" ACM 5(6), 345."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1427
+#: 85a32090c4a04a279ae2e831d6ec21a8
+msgid "All-pairs shortest path algorithm (O(V³))."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1429
+#: 85da2bf3cbf644089ddb3e54c49dfee0
+msgid ""
+"Johnson, D. B. \"Efficient algorithms for shortest paths\", 1977. Journal"
+" of the ACM 24(1), 1-13."
+msgstr ""
+
+#: ../../source/guide/graph_structures/weighted.rst:1432
+#: 0eb423fda39649d58cdd19ca82a34876
+msgid "All-pairs shortest paths with negative weights."
+msgstr ""
+

@@ -1,0 +1,890 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/advanced/interfaces.rst:5 f1aa70f245964c87ae962500f0beca62
+msgid "Abstract Interfaces"
+msgstr ""
+
+#: ../../source/api/advanced/interfaces.rst:9 d515f9e2b30a4a4a80503194c97cecec
+msgid ""
+"All abstract classes in ``sds.advanced`` inherit from "
+":class:`~sds.core.interfaces.Collection`, enforcing a shared base "
+"contract (``__len__``, ``is_empty``, ``clear``, ``__iter__``, "
+"``__contains__``, ``__bool__``) across every advanced structure."
+msgstr ""
+
+#: ../../source/api/advanced/interfaces.rst:15 25ee1dd4e103421298215685f9adc76c
+msgid "Class Hierarchy"
+msgstr ""
+
+#: 292e80a8eeeb4b2f9679ab8a144ebb56 320401a113394330bbc76da2c7b058de
+#: 586e88e1d1bd479598f26b448e5a9bac af82fef9ebf64f99a871e871adc6f181
+#: b05a5d89094b43e29dc36d6d436357d9 c240357382e049289d24a016ebef57de of
+#: sds.advanced.interfaces.AbstractDisjointSet:1
+#: sds.advanced.interfaces.AbstractFenwickTree:1
+#: sds.advanced.interfaces.AbstractHashTable:1
+#: sds.advanced.interfaces.AbstractLRUCache:1
+#: sds.advanced.interfaces.AbstractProbabilisticSet:1
+#: sds.advanced.interfaces.AbstractSkipList:1
+msgid "Bases: :py:class:`~sds.core.interfaces.Collection`"
+msgstr ""
+
+#: 4a7c4f15d65a4d5cb39454059ff6e574 of
+#: sds.advanced.interfaces.AbstractDisjointSet:1
+msgid "Abstract base class for Disjoint Set (Union-Find) data structure."
+msgstr ""
+
+#: 1300ea97f0734e2686c144b4e13f3021 of
+#: sds.advanced.interfaces.AbstractDisjointSet:3
+msgid ""
+"A disjoint-set data structure maintains a collection of disjoint sets and"
+" supports efficient union and find operations. This is fundamental for "
+"algorithms like Kruskal's MST and cycle detection."
+msgstr ""
+
+#: 1395c014e41249099139ef50ef211da3 19ba428d922344e7a85664b26f96aa6b
+#: 1effdfbf1a0f4fc3814e33f892dc7712 1f9431c5a2ed46f4bb948dd256a91b49
+#: 2135620fbf9742bebff7c2521431d439 2c48052d174b4a19a440a908032db2fe
+#: 37e2928b71814f4cbe725d266fb9e1fc 38c75075528c4603a82054949347d16f
+#: 40c0f8dbb66e47c5820421995f133ea3 49871d525e4d45ac8b8683b45615e94c
+#: 53c33cacb2ec4c0c8e46983b740afab2 5dfd5da99684416bb6b7126ee70cf7d9
+#: 61714d6ffe7a4bd48a7226435ee72ae7 62a498b2061244849d423bd08d4cc39e
+#: 64605d3d62c541909f60c9b0ce24f7d0 68862d869fd648ecae5d62235dea78d4
+#: 7470670a0b60425c83c918d0af91e9f5 9197ba3c31464876934dfcdb34166bd3
+#: 956064b18ea04dfa9fe8014ded756120 afa639bb30d844a9866be2217ec59a64
+#: b9fdb04db04243c7b483865b1ac41da7 c26820b5a2aa40648c531611228d1394
+#: c824e22afbf24b87b3e69db63fd8a408 d45cbfce64534008ba6ad3df44ad8d96
+#: d933d9a8008e444f9074cbc8906d018b e0bdc079e7eb42a1953657daea0ccd88
+#: eddbe9e193ea4f108eaa7a82066004a6 f8289ea838b8462d88b30b0c1f47b98b of
+#: sds.advanced.interfaces.AbstractDisjointSet:7
+#: sds.advanced.interfaces.AbstractDisjointSet.connected:13
+#: sds.advanced.interfaces.AbstractDisjointSet.count_sets:6
+#: sds.advanced.interfaces.AbstractDisjointSet.find:11
+#: sds.advanced.interfaces.AbstractDisjointSet.get_sets:6
+#: sds.advanced.interfaces.AbstractDisjointSet.make_set:8
+#: sds.advanced.interfaces.AbstractDisjointSet.size:11
+#: sds.advanced.interfaces.AbstractDisjointSet.union:13
+#: sds.advanced.interfaces.AbstractFenwickTree:10
+#: sds.advanced.interfaces.AbstractFenwickTree.prefix_sum:11
+#: sds.advanced.interfaces.AbstractFenwickTree.range_sum:14
+#: sds.advanced.interfaces.AbstractFenwickTree.update:10
+#: sds.advanced.interfaces.AbstractHashTable:7
+#: sds.advanced.interfaces.AbstractHashTable.delete:9
+#: sds.advanced.interfaces.AbstractHashTable.get:9
+#: sds.advanced.interfaces.AbstractHashTable.put:8
+#: sds.advanced.interfaces.AbstractLRUCache:10
+#: sds.advanced.interfaces.AbstractLRUCache.get:9
+#: sds.advanced.interfaces.AbstractLRUCache.put:12
+#: sds.advanced.interfaces.AbstractProbabilisticSet:6
+#: sds.advanced.interfaces.AbstractProbabilisticSet.__contains__:10
+#: sds.advanced.interfaces.AbstractProbabilisticSet.add:6
+#: sds.advanced.interfaces.AbstractProbabilisticSet.estimated_fill_ratio:6
+#: sds.advanced.interfaces.AbstractSkipList:7
+#: sds.advanced.interfaces.AbstractSkipList.__contains__:9
+#: sds.advanced.interfaces.AbstractSkipList.delete:9
+#: sds.advanced.interfaces.AbstractSkipList.insert:8
+#: sds.advanced.interfaces.AbstractSkipList.search:9
+msgid "Notes"
+msgstr ""
+
+#: 34d11c3c79214ff49b4c741ba4a98bb5 of
+#: sds.advanced.interfaces.AbstractDisjointSet:9
+msgid ""
+"Implementations should use: - Path compression in find() for O(α(n)) "
+"amortized complexity - Union by rank or size for balanced trees - α(n) is"
+" the inverse Ackermann function, effectively constant"
+msgstr ""
+
+#: fc64c8abd0f84bf493abfc62de7dd99d of
+#: sds.advanced.interfaces.AbstractDisjointSet:16
+msgid ":obj:`DisjointSet`"
+msgstr ""
+
+#: fb0d17eb2acd47f18d0d95aa1c55d836 of
+#: sds.advanced.interfaces.AbstractDisjointSet:17
+msgid "Concrete implementation with optimizations."
+msgstr ""
+
+#: f17dd7d8471745b991b1da44f6255d08 of
+#: sds.advanced.interfaces.AbstractDisjointSet.make_set:1
+msgid "Create a new set containing only the given element."
+msgstr ""
+
+#: ../../source/api/advanced/interfaces.rst 052caf9704f248b3a9fb32c85da02ee5
+#: 2f8b2df7d9d14dd38b0d4c1d3527d517 4bb5b34f777f44728ce33a76e7983e80
+#: 4c466092bbd648a0887b2c984b666bd6 52a9be3380b445d2ab06eb977d78ea76
+#: 536902ac4b0747d18ee675dd36c5b0e8 8281c99ae9c04ff6beea57db815f9eda
+#: 828572945a454f7b9795df9a9a89a208 82d0b488a6594b88b3dfb7a7ca230081
+#: 8620e817d63349e1a0e4174ef899b2fe 913c36315c4c4dbf9a5d2ea0d653249a
+#: 9622a60a8cb94942aee71564602d364d 96272a3629b84e2b8505820d8fa3803e
+#: 994d8ac2f6d64463a27a619fa0ce7417 acbce135eb854887b1638ee5d83dec4c
+#: b1d82268b0e44daf8767b2603881110d b2dca1057b0e44ac87d692d24cfb6e1b
+#: b640b81c2f694fd088aad8fb4753ae3a dc40db685fb64fb681cf5935887ccc28
+#: eed69c3aae574f56bb82d4d0284f544f fb14cc31d1b24f268e6bc7f0a1b36ef9
+msgid "Parameters"
+msgstr ""
+
+#: 7281514b61a74e42a44957091deda899 of
+#: sds.advanced.interfaces.AbstractDisjointSet.make_set:3
+msgid "Element to create a set for (must be hashable)."
+msgstr ""
+
+#: ../../source/api/advanced/interfaces.rst 11a021701016408da08edf20623366cb
+#: 45d6718f5ea6476aa6c840fc82a48500 48f8abcbf18948a78b66f4f5131cbf93
+#: 643b97a982f34e7bb33d6860b1f5abb8 6dcfbdb6e8754c959d2b47b0338e6c50
+#: 77280f63c92b406e8bfcf98f11cd5689 b094054a85f3455bb452e89d7bac1265
+#: c14c051d19a64c1a8eb95882553317f0
+msgid "Raises"
+msgstr ""
+
+#: a2b1927d0b4a4330838bbe91b09971e3 of
+#: sds.advanced.interfaces.AbstractDisjointSet.make_set:6
+msgid "If element already exists in a set."
+msgstr ""
+
+#: 1516886140b141558eac008814814631 7381d7338ce74d72b80c3de2a2447d71 of
+#: sds.advanced.interfaces.AbstractDisjointSet.count_sets:8
+#: sds.advanced.interfaces.AbstractDisjointSet.make_set:10
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 440b267016ab44db8883b188662a1800 of
+#: sds.advanced.interfaces.AbstractDisjointSet.find:1
+msgid "Find the representative of the set containing element."
+msgstr ""
+
+#: a04fe62bdc18429483609079a742367f of
+#: sds.advanced.interfaces.AbstractDisjointSet.find:3
+msgid "Element to find the representative for."
+msgstr ""
+
+#: ../../source/api/advanced/interfaces.rst 002822d3824c4b79839741f8ca3e829b
+#: 00927dbbcf474517a7ffdeaac0f16232 03cfb8020bdc4ff2b33ec03bd3912493
+#: 154e238a180b4691a397891926c05a7a 2e40878f68664141963f8267832a18b7
+#: 31cfb64ff767429b972dc7a0aba619c1 45ebc282f969444e94f8e486e3dfdfeb
+#: 4d5ac2b57b184b7b872a93d130fa1d34 4e02014d88ff46d39a9f909402c8bcf4
+#: 4eab14667ad347b8b67c8564e00c6003 51802ce664c44b71a32b8114d648fd92
+#: 624f7d2905d0490289ee07dcc00cfab1 6c73493059f242ed8194cb96470305c0
+#: 8b463f773a304956adbc457ca4bf2b83 aa129f17771d49a8b39dbc85a4ceb47f
+#: b880de098f5741d9b1f82a5d898ec0d3 ccb493e0bd064fb8a048bb745beca7d4
+#: d60fea52456344989b90ee051f57a24b d730246c1cff4960a0adc9fe83116541
+#: e3ad6da3b0a449d8ba969170f287e0cc f5fb446db2734317992f4ba374e6a1c5
+#: f98e372303914a12b5f051c593e1b6b2
+msgid "Returns"
+msgstr ""
+
+#: d169b421b2014f899cd40d13fc01f811 of
+#: sds.advanced.interfaces.AbstractDisjointSet.find:6
+msgid "Representative (root) of the set containing element."
+msgstr ""
+
+#: ../../source/api/advanced/interfaces.rst 0b7afb01cdc64f5ca7653380fccfc8b9
+#: 1c1b8e49c203451eb3308a6b16818af0 2c8a44f024674b1fbaf634b8d5e69f45
+#: 2f0843d7c5c3458f90789dc10344a237 37f1d151452c4002b844b977816596fb
+#: 48789ac2c4124074841e968745fa36d2 5ce4502a53a94d678e48eba3e802c63d
+#: 5d3067c9a2ed4b028edc4df6a7b1edb1 622141819ccf49f390a72d722f7c9e1c
+#: 638dcbfbcca440fe9b268f454c738cd3 6fde3824b75c4a2e985dd133cb67664b
+#: 77b4db03171c4d3e976f19e1b6df31e2 7813bc5e7e0a4f828b32dcb74700d0f1
+#: 909ba1387b554b299a7c7642d45509cc 9663207ebb884762ab8e7bbe0b2f5656
+#: 9c6ada5c1d6c418f9570189f9fd641f6 ad44fb92272f4b3bb0efe33ec8138810
+#: b6089a6848674482a1cb2152df694a2c bd0c79bcfb6848c29f2fac1cfe853164
+#: c30fa2a63d2e4f47a86b767f09617690 fe685443c4d248c59da32086e20ac9b0
+#: ffcd991abb6d4c5086f51147d8097e34
+msgid "Return type"
+msgstr ""
+
+#: 4ba7375e3e38428e86ee0c74cb134da5 f99ce350521b45f186a10d023098c55c of
+#: sds.advanced.interfaces.AbstractDisjointSet.find:9
+#: sds.advanced.interfaces.AbstractDisjointSet.size:9
+msgid "If element is not in any set."
+msgstr ""
+
+#: 39724139af4c4fa2b082c1e385f0f07a of
+#: sds.advanced.interfaces.AbstractDisjointSet.find:13
+msgid "Time complexity: O(α(n)) amortized with path compression."
+msgstr ""
+
+#: bae948022a0f4780b406cee6b1d4fd32 of
+#: sds.advanced.interfaces.AbstractDisjointSet.union:1
+msgid "Unite the sets containing x and y."
+msgstr ""
+
+#: 1fbceb3e1ded4ccc82c0622996b6eb15 of
+#: sds.advanced.interfaces.AbstractDisjointSet.union:3
+msgid "Element in first set."
+msgstr ""
+
+#: a94c0fbd91b14586a6cdf3df6138575f of
+#: sds.advanced.interfaces.AbstractDisjointSet.union:5
+msgid "Element in second set."
+msgstr ""
+
+#: df65dcfa99b94f1caf3ad298a704b024 of
+#: sds.advanced.interfaces.AbstractDisjointSet.union:8
+msgid "True if sets were merged (were different), False otherwise."
+msgstr ""
+
+#: 626e1fea0f8d463ba4bd07332562474c f820db2550e44f73b0c2f1f488dffd70 of
+#: sds.advanced.interfaces.AbstractDisjointSet.connected:11
+#: sds.advanced.interfaces.AbstractDisjointSet.union:11
+msgid "If x or y is not in any set."
+msgstr ""
+
+#: 7d5414bfceae4a6eb08f8ab51f5b6e70 of
+#: sds.advanced.interfaces.AbstractDisjointSet.union:15
+msgid "Time complexity: O(α(n)) amortized with union by rank."
+msgstr ""
+
+#: 74255b3662c04cada6fad584b02f21d8 of
+#: sds.advanced.interfaces.AbstractDisjointSet.connected:1
+msgid "Check if x and y are in the same set."
+msgstr ""
+
+#: 1a4fd4f43be14ae7b5506c93bfafa130 of
+#: sds.advanced.interfaces.AbstractDisjointSet.connected:3
+msgid "First element."
+msgstr ""
+
+#: cd3899d62d8f42e1a644080da9e583b1 of
+#: sds.advanced.interfaces.AbstractDisjointSet.connected:5
+msgid "Second element."
+msgstr ""
+
+#: 5356d5a2bf2142068c87e07b8990c3d6 of
+#: sds.advanced.interfaces.AbstractDisjointSet.connected:8
+msgid "True if x and y are in the same set."
+msgstr ""
+
+#: 576d3f104ddb4e8fb9eeabf436f3a52c 955a1722b47b4f0593fd4e27c872f4df of
+#: sds.advanced.interfaces.AbstractDisjointSet.connected:15
+#: sds.advanced.interfaces.AbstractDisjointSet.size:13
+msgid "Time complexity: O(α(n)) amortized."
+msgstr ""
+
+#: 7a737f8327d14a1caba94839ffcfab3e of
+#: sds.advanced.interfaces.AbstractDisjointSet.get_sets:1
+msgid "Get all disjoint sets."
+msgstr ""
+
+#: 44f3107c994744a58f782095cf401422 of
+#: sds.advanced.interfaces.AbstractDisjointSet.get_sets:3
+msgid "List of all disjoint sets."
+msgstr ""
+
+#: 7461cce080b34afcaa0dbcb2603f42ce of
+#: sds.advanced.interfaces.AbstractDisjointSet.get_sets:8
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 9dc0e781ca1a429aabc08d5131008610 of
+#: sds.advanced.interfaces.AbstractDisjointSet.count_sets:1
+msgid "Get the number of disjoint sets."
+msgstr ""
+
+#: dcd75a2eebe449088e8f5c6e0b4b83da of
+#: sds.advanced.interfaces.AbstractDisjointSet.count_sets:3
+msgid "Number of disjoint sets."
+msgstr ""
+
+#: 71ae0d22f2d7470fa4a30bf408fdaf78 of
+#: sds.advanced.interfaces.AbstractDisjointSet.size:1
+msgid "Get the size of the set containing element."
+msgstr ""
+
+#: faf2746240994d94871f2b950e5bc771 of
+#: sds.advanced.interfaces.AbstractDisjointSet.size:3
+msgid "Element in the set."
+msgstr ""
+
+#: 7cb47fecfc7b4f4eb687000f9f66def4 of
+#: sds.advanced.interfaces.AbstractDisjointSet.size:6
+msgid "Number of elements in the set."
+msgstr ""
+
+#: c61d9d56e72844c4a43f39da75384c40 of
+#: sds.advanced.interfaces.AbstractProbabilisticSet:1
+msgid "Abstract base class for probabilistic set membership structures."
+msgstr ""
+
+#: 3ed58c5ef850467eadfae78d6663bd7d of
+#: sds.advanced.interfaces.AbstractProbabilisticSet:3
+msgid ""
+"Probabilistic structures like Bloom Filters trade perfect accuracy for "
+"space efficiency, allowing false positives but no false negatives."
+msgstr ""
+
+#: ae337ef87bad4df99a506319df56e193 of
+#: sds.advanced.interfaces.AbstractProbabilisticSet:8
+msgid ""
+"These structures are useful when: - Space is limited - Approximate "
+"answers are acceptable - False positives can be handled - False negatives"
+" are unacceptable"
+msgstr ""
+
+#: adb0558a8479429eae6bcaee347f9c90 of
+#: sds.advanced.interfaces.AbstractProbabilisticSet:16
+msgid ":obj:`BloomFilter`"
+msgstr ""
+
+#: 7f95782b941941bebfa7fce691575ce4 of
+#: sds.advanced.interfaces.AbstractProbabilisticSet:17
+msgid "Space-efficient probabilistic set."
+msgstr ""
+
+#: 9c3e4eff5e2c4ac7b936e565a85acfca of
+#: sds.advanced.interfaces.AbstractProbabilisticSet.add:1
+msgid "Add an item to the set."
+msgstr ""
+
+#: 827cf9e4b59b4738a38f3af735db20bd of
+#: sds.advanced.interfaces.AbstractProbabilisticSet.add:3
+msgid "Item to add (must be hashable)."
+msgstr ""
+
+#: c8f1c5032e7b48ca9af5be7b1290c6b4 of
+#: sds.advanced.interfaces.AbstractProbabilisticSet.add:8
+msgid "After adding, contains(item) will always return True."
+msgstr ""
+
+#: 8f448b2a09944c57b866fe1900eedda7 of
+#: sds.advanced.interfaces.AbstractProbabilisticSet.__contains__:1
+msgid "Test if item might be in the set."
+msgstr ""
+
+#: b0697f736ae04b27975793cbbb5ac677 of
+#: sds.advanced.interfaces.AbstractProbabilisticSet.__contains__:3
+msgid "Item to test."
+msgstr ""
+
+#: 60600298139840b4936aee0c0dc2bc97 of
+#: sds.advanced.interfaces.AbstractProbabilisticSet.__contains__:6
+msgid ""
+"True if item might be in set (possible false positive). False if item is "
+"definitely not in set (no false negatives)."
+msgstr ""
+
+#: 119581651e7a494f9aaeb1f618cb12dd of
+#: sds.advanced.interfaces.AbstractProbabilisticSet.__contains__:12
+msgid "False positives are possible, false negatives are not."
+msgstr ""
+
+#: 5b63a5b65dd3440b875e69253421fa59 of
+#: sds.advanced.interfaces.AbstractProbabilisticSet.estimated_fill_ratio:1
+msgid "Get the estimated fill ratio of the structure."
+msgstr ""
+
+#: 3f7257469fb6459594f34a816fb51016 of
+#: sds.advanced.interfaces.AbstractProbabilisticSet.estimated_fill_ratio:3
+msgid "Ratio of filled slots (0.0 to 1.0)."
+msgstr ""
+
+#: 5c7c9571887c47ddbf4b9e2dcd4cb8fc of
+#: sds.advanced.interfaces.AbstractProbabilisticSet.estimated_fill_ratio:8
+msgid "Higher fill ratios increase false positive probability."
+msgstr ""
+
+#: 25c0906eed2543e4a8cdcca258ca732c of
+#: sds.advanced.interfaces.AbstractSkipList:1
+msgid "Abstract base class for the Skip List probabilistic data structure."
+msgstr ""
+
+#: 9d9e8b24dd254023836d7988b6fe149c of
+#: sds.advanced.interfaces.AbstractSkipList:3
+msgid ""
+"A skip list is a probabilistic sorted data structure that allows O(log n)"
+" average-case search, insertion, and deletion by maintaining multiple "
+"levels of linked lists, each a subset of the level below."
+msgstr ""
+
+#: 87922d250b1b4600994a41cf814f1640 of
+#: sds.advanced.interfaces.AbstractSkipList:9
+msgid ""
+"Implementations should: - Use a geometric distribution (probability p) to"
+" select node height. - Maintain a sentinel head node of maximum height. -"
+" Support forward iteration in sorted order."
+msgstr ""
+
+#: d88165f90566467793dcb71c5701eb8b of
+#: sds.advanced.interfaces.AbstractSkipList:14
+msgid ""
+"Time complexity (average, with p=0.5): - search: O(log n) - insert: O(log"
+" n) - delete: O(log n) - __contains__: O(log n)"
+msgstr ""
+
+#: 8c2e804b394848509af9d8e1a6ba9e9a of
+#: sds.advanced.interfaces.AbstractSkipList:20
+msgid "Space complexity: O(n log n) expected."
+msgstr ""
+
+#: 58073a7fcc8a4818b615312323cf7847 of
+#: sds.advanced.interfaces.AbstractSkipList:24
+msgid ":obj:`SkipList`"
+msgstr ""
+
+#: 474fbe6bd0db4c778eabf2a35ce77c74 9a11654e70984b8cb4eae3e785c22fac
+#: b399137831d3447c88088cf7e05bb283 of
+#: sds.advanced.interfaces.AbstractFenwickTree:17
+#: sds.advanced.interfaces.AbstractLRUCache:19
+#: sds.advanced.interfaces.AbstractSkipList:25
+msgid "Concrete implementation."
+msgstr ""
+
+#: 4445a87490194ac9ba561b133f1498b8 of
+#: sds.advanced.interfaces.AbstractSkipList.insert:1
+msgid "Insert a key-value pair into the skip list."
+msgstr ""
+
+#: d6b8b7cd894846e09afed4284f907be5 of
+#: sds.advanced.interfaces.AbstractSkipList.insert:3
+msgid "Comparable key to insert. Must support ``<`` and ``==``."
+msgstr ""
+
+#: d7f72c6c38654ecaa58447c35cea5627 of
+#: sds.advanced.interfaces.AbstractSkipList.insert:5
+msgid "Associated value. Defaults to None."
+msgstr ""
+
+#: 03dfbcb868e8448cae8be284e4430d5d 2bd2e4ded3a3435eb088d15bd9f1fae8
+#: c697f955f8a8462fb02e20938fc7eda6 ccd174eced7e432dabb49ccb88643189 of
+#: sds.advanced.interfaces.AbstractSkipList.__contains__:11
+#: sds.advanced.interfaces.AbstractSkipList.delete:11
+#: sds.advanced.interfaces.AbstractSkipList.insert:10
+#: sds.advanced.interfaces.AbstractSkipList.search:11
+msgid "Time complexity: O(log n) average."
+msgstr ""
+
+#: 8802247edbd04ceda6e0d2232be7723f of
+#: sds.advanced.interfaces.AbstractSkipList.delete:1
+msgid "Remove the node with the given key."
+msgstr ""
+
+#: 94daf6e4c43f4b87ba9580e93ea5d0f6 a27e49575a2a44b6be19045cc7bffc41 of
+#: sds.advanced.interfaces.AbstractHashTable.delete:3
+#: sds.advanced.interfaces.AbstractSkipList.delete:3
+msgid "Key to remove."
+msgstr ""
+
+#: c30bedcd35664f1097b708651e6c3061 d3ca7475076f4604a3683c81f35cedb7 of
+#: sds.advanced.interfaces.AbstractHashTable.delete:6
+#: sds.advanced.interfaces.AbstractSkipList.delete:6
+msgid "True if the key was found and removed, False otherwise."
+msgstr ""
+
+#: 17b2ce768189409a9bf1fb420a1ceee5 of
+#: sds.advanced.interfaces.AbstractSkipList.search:1
+msgid "Return the value associated with the given key."
+msgstr ""
+
+#: 02d8121dabc54f178342939114f09f76 of
+#: sds.advanced.interfaces.AbstractSkipList.search:3
+msgid "Key to search for."
+msgstr ""
+
+#: 1aa00b6a2e8140e38bfe10a49b481c3f of
+#: sds.advanced.interfaces.AbstractSkipList.search:6
+msgid "The associated value if found, None otherwise."
+msgstr ""
+
+#: 79de2ac5e42d452ca09bd85b77233c04 of
+#: sds.advanced.interfaces.AbstractSkipList.__contains__:1
+msgid "Test whether the given key exists in the skip list."
+msgstr ""
+
+#: 6de08578485e434d952373f2f58f763c 7b22527720c4443ca9d23bcf67d77ecf
+#: 95e8dc3efac8475a9dd5ff1dfe6e4bb9 of
+#: sds.advanced.interfaces.AbstractHashTable.__contains__:3
+#: sds.advanced.interfaces.AbstractLRUCache.__contains__:3
+#: sds.advanced.interfaces.AbstractSkipList.__contains__:3
+msgid "Key to test."
+msgstr ""
+
+#: b0e26322ae294fef821736f9e223cbe3 of
+#: sds.advanced.interfaces.AbstractSkipList.__contains__:6
+msgid "True if the key is present."
+msgstr ""
+
+#: 99cb3aa36ed441f2a3999eb3e63a7120 of
+#: sds.advanced.interfaces.AbstractSkipList.__len__:1
+msgid "Return the number of key-value pairs in the skip list."
+msgstr ""
+
+#: 2a3889efe4244d5f8b463752dd8902b5 of
+#: sds.advanced.interfaces.AbstractSkipList.__len__:3
+msgid "Number of elements."
+msgstr ""
+
+#: 2634119d310a420d91790f57ebfcd579 of
+#: sds.advanced.interfaces.AbstractSkipList.__iter__:1
+msgid "Iterate over keys in sorted ascending order."
+msgstr ""
+
+#: 34ee07905d2a475f93e89096ffe3d739 bd5fac1bc29044e496117220792ae000 of
+#: sds.advanced.interfaces.AbstractHashTable.__iter__
+#: sds.advanced.interfaces.AbstractSkipList.__iter__
+msgid "Yields"
+msgstr ""
+
+#: 43648779a5cd4dd482c0771e8a079095 of
+#: sds.advanced.interfaces.AbstractSkipList.__iter__:3
+msgid "*Any* -- Keys in sorted order."
+msgstr ""
+
+#: cb535f6688114cb6818888aecb2452f7 of
+#: sds.advanced.interfaces.AbstractHashTable:1
+msgid "Abstract base class for hash table data structures."
+msgstr ""
+
+#: 8121596b3cc841b6bcf4856f8aee5e64 of
+#: sds.advanced.interfaces.AbstractHashTable:3
+msgid ""
+"A hash table maps keys to values using a hash function to compute an "
+"index into an array of buckets or slots. Concrete subclasses implement "
+"different collision-resolution strategies."
+msgstr ""
+
+#: c7dad8c780b54cba8a132df3b03ef064 of
+#: sds.advanced.interfaces.AbstractHashTable:9
+msgid "Two classical collision-resolution strategies are supported:"
+msgstr ""
+
+#: 26ea7cd7fc5c4866872c9086916e8330 of
+#: sds.advanced.interfaces.AbstractHashTable:11
+msgid ""
+"**Separate chaining**: each slot holds a list of (key, value) pairs. "
+"Worst-case O(n) per operation, O(1) average with a good hash function and"
+" load factor ≤ 1."
+msgstr ""
+
+#: 6682d78646d84690965736a6dec79b9c of
+#: sds.advanced.interfaces.AbstractHashTable:14
+msgid ""
+"**Open addressing** (linear probing): all entries live in the array; "
+"collisions are resolved by probing subsequent slots. Worst-case O(n), "
+"O(1) average for load factor < 0.7."
+msgstr ""
+
+#: 4fd720b9405543cb93eba306e2aea3a2 of
+#: sds.advanced.interfaces.AbstractHashTable:18
+msgid ""
+"Both implementations resize automatically when the load factor exceeds a "
+"configurable threshold."
+msgstr ""
+
+#: 8962b41a66834a0bad376cd9109d8903 of
+#: sds.advanced.interfaces.AbstractHashTable:23
+msgid ":obj:`HashTableChaining`"
+msgstr ""
+
+#: 341a8f7d2e7a4e3cb870d3263152c330 of
+#: sds.advanced.interfaces.AbstractHashTable:24
+msgid "Separate-chaining implementation."
+msgstr ""
+
+#: 2b2a6e8b138e434db664c5e5002e9182 of
+#: sds.advanced.interfaces.AbstractHashTable:26
+msgid ":obj:`HashTableOpenAddressing`"
+msgstr ""
+
+#: 095717fe46a946df98c81cfc19390b0c of
+#: sds.advanced.interfaces.AbstractHashTable:27
+msgid "Open-addressing (linear probing) implementation."
+msgstr ""
+
+#: 05e049b7ad5f4c82971e7a68c89c5391 2461e43a02c14fbc8b3a6b33c9af9b09 of
+#: sds.advanced.interfaces.AbstractHashTable.put:1
+#: sds.advanced.interfaces.AbstractLRUCache.put:1
+msgid "Insert or update a key-value pair."
+msgstr ""
+
+#: 23731251a94f4beb85f9be8a6114f66e ba30932052b7431b80e6da53ecf5a226 of
+#: sds.advanced.interfaces.AbstractHashTable.put:3
+#: sds.advanced.interfaces.AbstractLRUCache.put:7
+msgid "Hashable key."
+msgstr ""
+
+#: 749a0dc0eaa247c9a8860f54da3c3ff7 of
+#: sds.advanced.interfaces.AbstractHashTable.put:5
+msgid "Value to associate with *key*."
+msgstr ""
+
+#: 22184ca5d513436687a92c0c3618179a 2b584a56710f4833b814053138cb39c8
+#: a2d126d380f44ee1b6c4c4da5c6c5ca4 of
+#: sds.advanced.interfaces.AbstractHashTable.delete:11
+#: sds.advanced.interfaces.AbstractHashTable.get:11
+#: sds.advanced.interfaces.AbstractHashTable.put:10
+msgid "Time complexity: O(1) average, O(n) worst case."
+msgstr ""
+
+#: 5ccf460754aa4ee49982cbf8732d71d4 of
+#: sds.advanced.interfaces.AbstractHashTable.get:1
+msgid "Return the value associated with *key*, or None if absent."
+msgstr ""
+
+#: 20c53f7d875d4dfb834d6c8ea318f1d2 73d9e418ab344799b35b0ab889877277 of
+#: sds.advanced.interfaces.AbstractHashTable.get:3
+#: sds.advanced.interfaces.AbstractLRUCache.get:3
+msgid "Key to look up."
+msgstr ""
+
+#: dfe549bc804d4aad954fb86a4b6350ea of
+#: sds.advanced.interfaces.AbstractHashTable.get:6
+msgid "Associated value, or None if the key is not present."
+msgstr ""
+
+#: 6d77764d002743f39edf2bfc39349133 of
+#: sds.advanced.interfaces.AbstractHashTable.delete:1
+msgid "Remove the entry with the given key."
+msgstr ""
+
+#: eb83be17afb7479091ab523d2ecc5be4 of
+#: sds.advanced.interfaces.AbstractHashTable.__contains__:1
+msgid "Test whether *key* exists in the table."
+msgstr ""
+
+#: 595ee620ef99435fad75e94144515d01 of
+#: sds.advanced.interfaces.AbstractHashTable.__contains__:6
+msgid "True if present."
+msgstr ""
+
+#: a8a759710de845b0b807fca53362b6a1 of
+#: sds.advanced.interfaces.AbstractHashTable.__len__:1
+msgid "Return the number of key-value pairs stored."
+msgstr ""
+
+#: 277a84f9efce4b70a3281cace2734d44 of
+#: sds.advanced.interfaces.AbstractHashTable.__len__:3
+msgid "Number of entries."
+msgstr ""
+
+#: 0f54d22cda8546b6af9465361854b998 of
+#: sds.advanced.interfaces.AbstractHashTable.__iter__:1
+msgid "Iterate over all keys."
+msgstr ""
+
+#: db51914a11ef4feea622e3fdd9d36e48 of
+#: sds.advanced.interfaces.AbstractHashTable.__iter__:3
+msgid "*Any* -- Keys in unspecified order."
+msgstr ""
+
+#: 3a52475433a5479a82797a27d76dab58 of
+#: sds.advanced.interfaces.AbstractLRUCache:1
+msgid "Abstract base class for a Least Recently Used (LRU) cache."
+msgstr ""
+
+#: 72d47b891a974efbb48b924c99a9c76d of
+#: sds.advanced.interfaces.AbstractLRUCache:3
+msgid ""
+"An LRU cache stores a bounded number of key-value pairs. When the cache "
+"is full and a new key must be inserted, the least recently used entry "
+"(the one not accessed for the longest time) is evicted."
+msgstr ""
+
+#: 787f019501e3486fb04b0cac0d946cc1 of
+#: sds.advanced.interfaces.AbstractLRUCache:7
+msgid ""
+"Every ``get`` and ``put`` operation counts as a \"use\" and moves the "
+"accessed entry to the most-recently-used position."
+msgstr ""
+
+#: ff05e3ee79f84be9a00ee6bf6e495695 of
+#: sds.advanced.interfaces.AbstractLRUCache:12
+msgid ""
+"The canonical implementation combines a doubly-linked list (for O(1) "
+"eviction) with a hash map (for O(1) lookup), giving O(1) amortised time "
+"for both ``get`` and ``put``."
+msgstr ""
+
+#: ed4d3e11edba40c882ef65795e37e625 of
+#: sds.advanced.interfaces.AbstractLRUCache:18
+msgid ":obj:`LRUCache`"
+msgstr ""
+
+#: 22a52a748dc749c48ef3ec2240e2d12e of
+#: sds.advanced.interfaces.AbstractLRUCache.get:1
+msgid "Return the value for *key* and mark it as most recently used."
+msgstr ""
+
+#: 7a5a5308a43a4219a26c73432d57769b of
+#: sds.advanced.interfaces.AbstractLRUCache.get:6
+msgid "Stored value, or None if the key is not in the cache."
+msgstr ""
+
+#: 75be5f91b5534ba6bd673e973d2eabf9 c22ee3fdc6db4b0aa43e9c72db1cd748 of
+#: sds.advanced.interfaces.AbstractLRUCache.get:11
+#: sds.advanced.interfaces.AbstractLRUCache.put:14
+msgid "Time complexity: O(1)."
+msgstr ""
+
+#: d3a43375ee9e42bf8a55d1e7468de606 of
+#: sds.advanced.interfaces.AbstractLRUCache.put:3
+msgid ""
+"If *key* already exists its value is updated and it is marked as most "
+"recently used. If the cache is at capacity, the least recently used entry"
+" is evicted before insertion."
+msgstr ""
+
+#: 01b3700c591d45b2937eb1d0953f0472 of
+#: sds.advanced.interfaces.AbstractLRUCache.put:9
+msgid "Value to store."
+msgstr ""
+
+#: f5ddc22063784bf1b6feced1c9989f2c of
+#: sds.advanced.interfaces.AbstractLRUCache.__contains__:1
+msgid "Test whether *key* is currently in the cache."
+msgstr ""
+
+#: 5ae5907aeb294edf8b839a3784ba0145 of
+#: sds.advanced.interfaces.AbstractLRUCache.__contains__:6
+msgid "True if present (does **not** update recency)."
+msgstr ""
+
+#: 040d07cda5514ceca15da401de47e614 of
+#: sds.advanced.interfaces.AbstractLRUCache.__len__:1
+msgid "Return the number of entries currently in the cache."
+msgstr ""
+
+#: b38f6f89058943258a37e7859fa25e40 of
+#: sds.advanced.interfaces.AbstractLRUCache.__len__:3
+msgid "Number of live entries (≤ capacity)."
+msgstr ""
+
+#: 94f90e3c73bb405d99804bb482d78d3c of
+#: sds.advanced.interfaces.AbstractFenwickTree:1
+msgid "Abstract base class for the Fenwick Tree (Binary Indexed Tree)."
+msgstr ""
+
+#: d0b3643c750843928cc2a04017b06d8c of
+#: sds.advanced.interfaces.AbstractFenwickTree:3
+msgid "A Fenwick Tree supports two operations on a mutable sequence of numbers:"
+msgstr ""
+
+#: 023b793a46a944c9bd830f9dafaf1640 of
+#: sds.advanced.interfaces.AbstractFenwickTree:5
+msgid "**Point update**: add a delta to a single element."
+msgstr ""
+
+#: 1137eb3fb6544d50a3807511c6aef442 of
+#: sds.advanced.interfaces.AbstractFenwickTree:6
+msgid "**Prefix sum query**: compute the sum of elements from index 1 to i."
+msgstr ""
+
+#: 03ae063d49e0436ab5b737cd339f63f7 of
+#: sds.advanced.interfaces.AbstractFenwickTree:8
+msgid ""
+"Both operations run in O(log n) time using bitwise manipulation of "
+"indices."
+msgstr ""
+
+#: 153cd68136204a24bf9011b2747af308 of
+#: sds.advanced.interfaces.AbstractFenwickTree:12
+msgid "Indexing is **1-based** by convention: valid indices are ``1 .. size``."
+msgstr ""
+
+#: 6565f91a49774e34a57339d41858bbae of
+#: sds.advanced.interfaces.AbstractFenwickTree:16
+msgid ":obj:`FenwickTree`"
+msgstr ""
+
+#: 7f110d3a5c94443a9fe4f16ec4e73017 of
+#: sds.advanced.interfaces.AbstractFenwickTree.update:1
+msgid "Add *delta* to the element at index *i*."
+msgstr ""
+
+#: c75f8176c8e940889251f8c39ad53d55 of
+#: sds.advanced.interfaces.AbstractFenwickTree.update:3
+msgid "1-based index (1 ≤ i ≤ size)."
+msgstr ""
+
+#: 7f1c66de40764a168b5f77d7cc53e81f of
+#: sds.advanced.interfaces.AbstractFenwickTree.update:5
+msgid "Value to add (may be negative)."
+msgstr ""
+
+#: 37028c04e5a241aca531b02e3c8d32ea dc7912754cb34c248fe096c94c80d374 of
+#: sds.advanced.interfaces.AbstractFenwickTree.prefix_sum:9
+#: sds.advanced.interfaces.AbstractFenwickTree.update:8
+msgid "If *i* is out of range."
+msgstr ""
+
+#: a4c023d95a854fd092191ad8c9c8699f a999ef422487484e86f19cf565e79b82
+#: c44a3862041144f6b5ff5ee6a8019415 of
+#: sds.advanced.interfaces.AbstractFenwickTree.prefix_sum:13
+#: sds.advanced.interfaces.AbstractFenwickTree.range_sum:16
+#: sds.advanced.interfaces.AbstractFenwickTree.update:12
+msgid "Time complexity: O(log n)."
+msgstr ""
+
+#: 0090d27f1b284161addfefefc5ad09eb of
+#: sds.advanced.interfaces.AbstractFenwickTree.prefix_sum:1
+msgid "Return the sum of elements from index 1 to *i* (inclusive)."
+msgstr ""
+
+#: ff2a17e146f4477b9c3f73b96954db1a of
+#: sds.advanced.interfaces.AbstractFenwickTree.prefix_sum:3
+msgid "1-based upper bound (1 ≤ i ≤ size)."
+msgstr ""
+
+#: c4c819a280034be78cb0a99bc917e82a of
+#: sds.advanced.interfaces.AbstractFenwickTree.prefix_sum:6
+msgid "Sum of elements at positions 1, 2, …, i."
+msgstr ""
+
+#: ff04d9309d3c43f89b80d2f1a0648f84 of
+#: sds.advanced.interfaces.AbstractFenwickTree.range_sum:1
+msgid "Return the sum of elements from index *left* to *right* (inclusive)."
+msgstr ""
+
+#: ba7cd79b7ed1429a8ad3d9c353058d4f of
+#: sds.advanced.interfaces.AbstractFenwickTree.range_sum:3
+msgid "1-based lower bound."
+msgstr ""
+
+#: 37612c514bf04e38b74f7d56556615f3 of
+#: sds.advanced.interfaces.AbstractFenwickTree.range_sum:5
+msgid "1-based upper bound."
+msgstr ""
+
+#: 7bb91e2527f249bea6deecf3179111c7 of
+#: sds.advanced.interfaces.AbstractFenwickTree.range_sum:8
+msgid "Sum of elements at positions left, left+1, …, right."
+msgstr ""
+
+#: d45b88d757bc474081085ff6711ab63f of
+#: sds.advanced.interfaces.AbstractFenwickTree.range_sum:11
+msgid "If either index is out of range."
+msgstr ""
+
+#: 5b61848596e34aa28976bfd4ff193673 of
+#: sds.advanced.interfaces.AbstractFenwickTree.range_sum:12
+msgid "If left > right."
+msgstr ""
+
+#: 94b8984328194fd4b476e5c470e8b70e of
+#: sds.advanced.interfaces.AbstractFenwickTree.__len__:1
+msgid "Return the size of the underlying sequence."
+msgstr ""
+
+#: 86722895c94743bdad2c1cb0d107cf09 of
+#: sds.advanced.interfaces.AbstractFenwickTree.__len__:3
+msgid "Number of elements (1-based indexing: valid range is 1..n)."
+msgstr ""
+

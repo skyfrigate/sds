@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:2
+#: 197ac854afb14c3884dfdbd7e00367e6
+msgid "sds.linear.queue.Queue"
+msgstr ""
+
+#: 159f234eed3f4fb9b8fea147be3155ef of sds.linear.queue.Queue:1
+msgid "A Queue (FIFO - First In First Out) implementation."
+msgstr ""
+
+#: a7aab420d48e4929b098c93de3062546 of sds.linear.queue.Queue:3
+msgid ""
+"A queue is a linear data structure that follows the FIFO principle: the "
+"first element added is the first one to be removed."
+msgstr ""
+
+#: 5c7d32b4ea3c40dc91a04866142646b8 of sds.linear.queue.Queue:6
+msgid "This implementation uses a LinkedList internally."
+msgstr ""
+
+#: fb399d299b9448cfa3f95b39b7e65645 of sds.linear.queue.Queue:10
+msgid "The number of elements in the queue (read-only property)."
+msgstr ""
+
+#: 1a3b7e950013433189c1779aedae53c3 26a9b455210445dab890b80413d8fe43
+#: 83844b544d7a4f59913d7dde55b44952 921552e8d0af4803b411399880b14ed6
+#: b7f87deede80441ea1b19cf06b9cc664 of sds.linear.queue.Queue
+msgid "type"
+msgstr ""
+
+#: 9bc19c14362e40f69a652a11756c5456 of sds.linear.queue.Queue:12
+msgid "int"
+msgstr ""
+
+#: ed5d354574224bfb906674ea86a4952d of sds.linear.queue.Queue:26
+msgid "O(n) with basic LinkedList"
+msgstr ""
+
+#: 4e6c2722d46f4cfebbdd415f1623a0ea a2cb729908114a36ab4336ef324eb289 of
+#: sds.linear.queue.Queue:32 sds.linear.queue.Queue:38
+msgid "O(1)"
+msgstr ""
+
+#: 6aa9ee2d84a14aa88bda6ad9106968a4 of sds.linear.queue.Queue:44
+msgid "O(n)"
+msgstr ""
+
+#: 53c42713fae647b286d0bcbb46fd2548 5bf7cfd02d594937950458b40c903e50
+#: d10a8222eb9f43c2a39206d0fd3efe00 f51e43678c5c4d1d8fe16cd4b0825856 of
+#: sds.linear.queue.Queue:46 sds.linear.queue.Queue.dequeue:8
+#: sds.linear.queue.Queue.enqueue:6 sds.linear.queue.Queue.size:6
+msgid "Examples"
+msgstr ""
+
+#: 40ffc22d13af40a48b1a74201521080a of sds.linear.queue.Queue:48
+msgid "Create and use a queue:"
+msgstr ""
+
+#: 01ccaddf280c4d849788382033c3dd03 65b804a7f7604c8d9de793127a1d7db7
+#: 88042a7e7899489dbabe269c2c2df38e ce0b963db9fd46e88315552ae42b653d
+#: f26935f5122347a8a8bd813cfe9e34b8 of sds.linear.queue.Queue:59
+#: sds.linear.queue.Queue.dequeue:16 sds.linear.queue.Queue.enqueue:14
+#: sds.linear.queue.Queue.front:8 sds.linear.queue.Queue.rear:8
+msgid "Notes"
+msgstr ""
+
+#: e44bf2598783498aa63f70f7184e9be4 of sds.linear.queue.Queue:61
+msgid ""
+"All operations at the front are O(1), but enqueue is O(n) due to the "
+"basic LinkedList implementation. For better performance, consider using a"
+" circular buffer or DoublyLinkedList with tail pointer."
+msgstr ""
+
+#: 483ef4bf82cc49f6ae976780748fb28c of sds.linear.queue.Queue:67
+msgid ":obj:`Deque`"
+msgstr ""
+
+#: 750ef189a2604712b184d6b7ab69fa2f of sds.linear.queue.Queue:68
+msgid "Double-ended queue with O(1) operations at both ends."
+msgstr ""
+
+#: ac878a70bf50460886c58daceb4da371 of sds.linear.queue.Queue:70
+msgid ":obj:`Stack`"
+msgstr ""
+
+#: f3a84f7e536a42fba23fe07eb4342e62 of sds.linear.queue.Queue:71
+msgid "LIFO data structure."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 43da51cd9f7849309c3dcb28c82dfafa 7164386e73fe4752967225d6c42034f8
+#: b094bfca507c4b168ad82a8d8e2da7f9 of sds.linear.queue.Queue.__init__:1
+msgid "Initialize an empty queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:13
+#: f7f41a5d5f4e4e00ac46c76b94715095
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: d7a3fafa3543496180121b9b7684d074
+msgid ":py:obj:`__init__ <sds.linear.queue.Queue.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 59b7658bf0d14e72aefc2d5b8b30bbee
+msgid ":py:obj:`add <sds.linear.queue.Queue.add>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 484cf7242df746e9a1d723311b234a5b 94a19b7dafbb40e0906c7546004f0b1b of
+#: sds.linear.queue.Queue.add:1
+msgid "Add an item to the queue (enqueues by default)."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 10498855d56c4ba6b36d697aef779bfd
+msgid ":py:obj:`clear <sds.linear.queue.Queue.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 9322407dc2aa42da9fc299aaa5a8f5a1 fe99768b74984f5bb794725ae7315137 of
+#: sds.linear.queue.Queue.clear:1
+msgid "Remove all elements from the queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: afa5d5fa191d4a00b1f07432592de269
+msgid ":py:obj:`dequeue <sds.linear.queue.Queue.dequeue>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 66341d5a5a38435d9ed62c80ebb9fa63 6f416d9e7d674459b4d4a3c30db6660d of
+#: sds.linear.queue.Queue.dequeue:1
+msgid "Remove and return the front item from the queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 09edd587e9204d0793949c0d2bc96444
+msgid ":py:obj:`enqueue <sds.linear.queue.Queue.enqueue>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 2e0101c923cc443a9dbe2b0535154fe4 6a0347a87e89446d8f1046a1eff8e72a of
+#: sds.linear.queue.Queue.enqueue:1
+msgid "Add an item to the rear of the queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 232ec943ba7e4d97982de9765d5ea4e3
+msgid ":py:obj:`front <sds.linear.queue.Queue.front>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 0c2f9c98d61e4d70a1a77e9d09d13f2b 9d16ead7a89c4962a81440a14a456acf of
+#: sds.linear.queue.Queue.front:1
+msgid "Return the front item without removing it."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: c2688b54ad3d4b669253bb5e977a620b
+msgid ":py:obj:`is_empty <sds.linear.queue.Queue.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 90fe2f9a01fa4d3d90653fb549780859 91bd519a0350466bb5db698b26dbc441 of
+#: sds.linear.queue.Queue.is_empty:1
+msgid "Return True if the queue is empty."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 6908a26ac1624a889dc1d4dc9f136b49
+msgid ":py:obj:`rear <sds.linear.queue.Queue.rear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 90931f75083c454d99c6295bfffd0876 d91c493113e3479eb8f26516c4def69d of
+#: sds.linear.queue.Queue.rear:1
+msgid "Return the rear item without removing it."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 73054f42973c4acf82ce3bb8bfd4b846
+msgid ":py:obj:`remove <sds.linear.queue.Queue.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:29:<autosummary>:1
+#: 2b6980d0b479495fadef12f2211d9e62 b0f43e8afbe144d3919d9334cb535786 of
+#: sds.linear.queue.Queue.remove:1
+msgid "Remove an item from the queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst:31
+#: 66b4d1c7c9b54179be5528ef41f8fec0
+msgid "Attributes"
+msgstr ""
+
+#: 811d62ef6ed645f0b62143d0a4540feb of
+#: sds.linear.queue.Queue.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.linear.queue.Queue.size>`\\"
+msgstr ""
+
+#: 52c0c580dc5d431b84fd59ecde3debc6 8fc542b5427e432283fc3a6724acda6a of
+#: sds.linear.queue.Queue.__init__:1:<autosummary>:1
+#: sds.linear.queue.Queue.size:1
+msgid "Get the number of elements in the queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst
+#: 33a1bd95fbe540e8b9840f0a8abc0d5a 39518710a71442d7b43eac87e6ec5ac9
+#: c31944d914744d1cab3e15c4be713ca6 cdfe517123ab4e9fb0d49c8fd7761bd0
+msgid "Returns"
+msgstr ""
+
+#: 752bfe68454e4bb8aee789d3dc468dd8 of sds.linear.queue.Queue.size:3
+msgid "The number of elements currently in the queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst
+#: 324950794b35411ebebdd85db0339410 7cd241db72bd415ba54317c9541cf230
+#: a54d079bbdba4ccb9d58953575415985 ce55fd7c9e4e4282b90d6389ca6e57a4
+msgid "Return type"
+msgstr ""
+
+#: 4f62b895cdcf4827b903d2935fda6fe8 of sds.linear.queue.Queue.size:17
+msgid ":obj:`__len__`"
+msgstr ""
+
+#: 10b22e3205ae4850998b3ebd38c11a92 of sds.linear.queue.Queue.size:18
+msgid "Returns the same value."
+msgstr ""
+
+#: 924b48d7c4334cb8a7cf3424acf34d14 of sds.linear.queue.Queue.__len__:1
+msgid "Return the number of elements in the queue."
+msgstr ""
+
+#: 215fcb517ea2431ca6a444c9465f0c4f of sds.linear.queue.Queue.__iter__:1
+msgid "Iterate over elements from front to rear."
+msgstr ""
+
+#: fda71384c5534a1a9eeb1fd5cc8c6383 of sds.linear.queue.Queue.__contains__:1
+msgid "Return True if item is in the queue."
+msgstr ""
+
+#: 1edee61579284efbbee9364516664253 of sds.linear.queue.Queue.__repr__:1
+msgid "Return a detailed string representation."
+msgstr ""
+
+#: 1a4b246d952d4f9fbfeccbbcc827bdbf of sds.linear.queue.Queue.__str__:1
+msgid "Return a simple string representation."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst
+#: 988076c8c0a640208fa0b5201be37e56
+msgid "Parameters"
+msgstr ""
+
+#: e7883cfbb83b40dc808ac5f40c89a57e of sds.linear.queue.Queue.enqueue:3
+msgid "The item to enqueue."
+msgstr ""
+
+#: 029cb42f9e334a1e8cf4e98ff55aefba a8936f767f2043258bb8a73bb1bf7771 of
+#: sds.linear.queue.Queue.enqueue:16 sds.linear.queue.Queue.rear:10
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 05bec425845a482888145cdda3f9e7aa 6466f5dfae4e48dbb0347515eb7c87f1 of
+#: sds.linear.queue.Queue.dequeue:3 sds.linear.queue.Queue.front:3
+msgid "The item at the front of the queue."
+msgstr ""
+
+#: ../../source/api/linear/_autosummary/sds.linear.queue.Queue.rst
+#: 3977d138b17c44f0b070696dd9b830cf 40b38bb5e9d34444845e94580e7bc6a4
+#: a145c85d28534afd94ca19b99e387e23
+msgid "Raises"
+msgstr ""
+
+#: 04cd8264b15a4d62a4b880fb72df8939 5fed11381eee42319b7a9f8e560b9443
+#: 8d4540889c9d4644a1eab1da494676c9 of sds.linear.queue.Queue.dequeue:6
+#: sds.linear.queue.Queue.front:6 sds.linear.queue.Queue.rear:6
+msgid "If the queue is empty."
+msgstr ""
+
+#: 7b98add275854004829d0d038c7f84b1 f9c2a6bfe64e4f12ba8415042252c3c3 of
+#: sds.linear.queue.Queue.dequeue:18 sds.linear.queue.Queue.front:10
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 7c18e49dcbe14707a1296a5404bbe68c of sds.linear.queue.Queue.rear:3
+msgid "The item at the rear of the queue."
+msgstr ""
+
+#: ba6aeedb05534a95848bd3ffe0a5313c of sds.linear.queue.Queue.remove:3
+msgid "Note: This violates the FIFO principle."
+msgstr ""
+

@@ -172,7 +172,7 @@ these formats:
 .. code-block:: text
 
    SDS-Tools Documentation. (2025). Tree Structures Guide.
-   Retrieved from https://sds-tools.readthedocs.io/
+   Retrieved from https://pysds-tools.readthedocs.io/
    Licensed under CC BY-NC 4.0.
 
 **Inline Attribution**:
@@ -180,14 +180,14 @@ these formats:
 .. code-block:: text
 
    This material is adapted from the SDS-Tools Documentation
-   (https://sds-tools.readthedocs.io/), licensed under CC BY-NC 4.0.
+   (https://pysds-tools.readthedocs.io/), licensed under CC BY-NC 4.0.
 
 **Code Comment Attribution**:
 
 .. code-block:: python
 
    # Mathematical model adapted from SDS-Tools Documentation
-   # Source: https://sds-tools.readthedocs.io/
+   # Source: https://pysds-tools.readthedocs.io/
    # License: CC BY-NC 4.0
 
 **Markdown Attribution**:
@@ -195,7 +195,7 @@ these formats:
 .. code-block:: markdown
 
    > Mathematical definitions and algorithms adapted from
-   > [SDS-Tools Documentation](https://sds-tools.readthedocs.io/),
+   > [SDS-Tools Documentation](https://pysds-tools.readthedocs.io/),
    > licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
 
 Full License Text

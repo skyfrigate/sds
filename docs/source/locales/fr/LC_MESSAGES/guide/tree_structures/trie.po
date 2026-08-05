@@ -1,0 +1,894 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/tree_structures/trie.rst:5
+#: 34dd0c72d029400ab22cc1b33619dc6c
+msgid "Trie Guide"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:10
+#: c04e0b8dae234bc1981d00b965f6f840
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:12
+#: 6c83c77763ee4cffb4822107b66bf5e3
+msgid ""
+"A **Trie** (pronounced \"try\"), also called a **prefix tree** or "
+"**digital tree**, is a specialized tree structure for storing strings "
+"where nodes represent prefixes. Each path from root to a node represents "
+"a string, and common prefixes are shared. Tries enable extremely "
+"efficient prefix-based operations, making them ideal for autocomplete, "
+"spell checking, and dictionary implementations."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:45
+#: b188c494d2a64e43861516b03d22bd57
+msgid ""
+"Tries are ideal when you need fast prefix operations. Unlike hash tables "
+"that provide O(1) exact lookups, Tries offer O(m) prefix searches where m"
+" is the prefix length, making them perfect for autocomplete systems."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:50
+#: cb91f083c3a344a08dd9ba408509d84c
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:53
+#: e7d47c501cfa4711a75490a60c983e01
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:56
+#: 74ce26f6de9e469986b4181a5fb24448
+msgid "Trie Structure"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:58
+#: 3001c1d4a348455f8925023e3c9b520e
+msgid "A Trie :math:`T` is a rooted tree where:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:60
+#: 683e052c62574683bbb9b56a38d33c84
+msgid "**Each edge is labeled with a character**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:62
+#: c12fac69b1e940769b2ca0f011339d98
+msgid "\\forall edge \\in T: label(edge) \\in \\Sigma"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:66
+#: 7a410efbaca94fae9bec0606db659f69
+msgid ""
+"where :math:`\\Sigma` is the alphabet (e.g., lowercase letters, ASCII, "
+"Unicode)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:68
+#: 44bdbab0f4d54fb6a3aacfb140201a30
+msgid "**Each node represents a prefix**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:70
+#: 8ee343f2c51b47539cf785e1496970eb
+#, python-brace-format
+msgid "prefix(node) = \\text{concatenation of edge labels from root to node}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:74
+#: efa84bc496444785a2c6b6ed330b9f91
+msgid "**Words are marked at terminal nodes**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:76
+#: 667e4461337444f2bc2dfa7f467a4cc3
+msgid ""
+"\\forall word \\in T: \\exists node : prefix(node) = word \\land "
+"isEndOfWord(node) = true"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:80
+#: 0a5a1c18749a4be7a376026871091e2f
+msgid "**No two edges from same node have same label**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:82
+#: 182a7e638a4448dea59222f18ac2f6a4
+msgid ""
+"\\forall node, \\forall e_1, e_2 \\in children(node): label(e_1) \\neq "
+"label(e_2)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:87
+#: 2ab0ed5e1d4045ec8a12f1b1e260e3b5
+msgid "Node Definition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:89
+#: 9f6752805e4148b8bb4270e59340e660
+msgid "A TrieNode contains:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:101
+#: 4dbb297da9494f20a866ce0f82f9d3b0
+msgid "The **children map** provides O(1) access to child nodes by character."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:104
+#: df7ba0749e4944129a112b011817b2b4
+msgid "Tree Properties"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:107
+#: ../../source/guide/tree_structures/trie.rst:442
+#: 2b50bbfa84ff4f36a7a854f6ccb45c26 a48b733c63d94db6a86d54ae3346845e
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:109
+#: 61f15397a8a9489cab244acb6061b715
+msgid "**Best case** (no shared prefixes):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:111
+#: a6f5873a21cb41528a8d5a6bf11a118f
+#, python-brace-format
+msgid "Space = \\sum_{i=1}^{n} len(word_i) = O(nm)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:115
+#: 75f08643b8394fd69d684e345e37b25a
+msgid ""
+"where :math:`n` is the number of words and :math:`m` is average word "
+"length."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:117
+#: 3a5febb4e02c4e8fa34a6d589b0b6a03
+msgid "**Worst case** (all words share prefixes):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:119
+#: 9f66a1109cd3412a92c3351decb87ecb
+#, python-brace-format
+msgid "Space = len(\\text{longest word}) = O(m)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:123
+#: cf77a7d82b304fb18cb587027525c331
+msgid "**Average case** (typical dictionary):"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:125
+#: 2729e44c251245d78a4c045f74ad9401
+msgid "Space \\approx O(nm \\cdot \\alpha)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:129
+#: caec92a656914b0381531f752baf54e4
+msgid ""
+"where :math:`\\alpha` is the **sharing factor** (typically 0.3-0.7 for "
+"natural languages)."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:132
+#: 5ebcbab423b84ee1bb482e14c24fe443
+msgid "Height and Depth"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:134
+#: 2a14a2a236d043e295eca1e6a36d2535
+msgid "**Maximum height**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:136
+#: 3bfcc7cbf282477c8d19d04a11c11a1d
+#, python-brace-format
+msgid "h_{max} = \\max_i len(word_i)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:140
+#: 0bc2393c741b462c95d986b9f0acdc10
+msgid "**Average depth** for random words:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:142
+#: 96d903e4cce14d92b3d65bd3478f68d6
+#, python-brace-format
+msgid "d_{avg} \\approx \\log_{|\\Sigma|} n"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:146
+#: 028e6a1d5869441f83997bd1214e242d
+msgid "But for natural language with common prefixes, depth is much smaller."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:149
+#: ff43d868a2ca4ea08ce2874e05f03e8d
+msgid "Prefix Sharing"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:151
+#: b540adb423bd48f381d64c1d70fe5268
+msgid "For :math:`n` words from alphabet :math:`\\Sigma`:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:153
+#: cd138c8eaf1443ebbcdd2e57203c2fcd
+msgid "**Number of nodes**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:155
+#: 23ec16c3a1d84aa7a4010b14da77c7a9
+msgid "nodes \\leq n \\cdot m"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:159
+#: 01efa2d8304e45aca9ef9d24d7734f80
+msgid "**Shared prefix savings**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:161
+#: d17d0ef3514b4c25ac0740d9c5904691
+#, python-brace-format
+msgid "\\text{savings} = \\frac{\\sum len(word_i) - nodes}{sum len(word_i)}"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:165
+#: de008c3e5dd148f0a6ead2e5cd8bf580
+msgid "For English words, savings typically reach 40-60%."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:168
+#: a1ed238b028242508fbe7813bc4b4931
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:171
+#: f53f9dec8973479a898f91434876cd6a
+msgid "Abstract Data Type"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:201
+#: d8a6da4028fa42fcbe2923bcb50a2826
+msgid "Search Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:204
+#: 5cfb1a8271ad426183fdae6d5e58f034
+msgid "Exact Word Search"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:225
+#: 33d6112daab74f42a34bd5c2f6f86d5c
+msgid "**Time complexity**: O(m) where m = len(word) **Space complexity**: O(1)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:228
+#: e4cc17e848524597be8d57840ed6407c
+msgid "**Key insight**: Time is independent of number of words in trie!"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:231
+#: cef0ebe239ed40a6a67df56b2ad6ae5b
+msgid "Prefix Search"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:250
+#: 2d854be1ee6d4bdc9157df77b5af3fac
+msgid "**Time complexity**: O(p) where p = len(prefix)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:253
+#: ba97de95983e49dda1084868b9398a8f
+msgid "Insertion Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:277
+#: 42434e0c731c433f8546c311d2bbe14f
+msgid ""
+"**Time complexity**: O(m) where m = len(word) **Space complexity**: O(m) "
+"worst case (new word with no shared prefix)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:280
+#: 77974bba889a46229ace91ac3a550956
+msgid "**Visualization**:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:293
+#: c02f0c1e7b3a475bbd8e7488b29ec2a8
+msgid "Deletion Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:295
+#: 38dbb4cadcc345bd9de72cac6f009305
+msgid "Deletion is more complex as we must remove unnecessary nodes:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:350
+#: 02f19b38b5b14c4086da605e0788533a
+msgid "**Time complexity**: O(m) **Space complexity**: O(m) for recursion stack"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:354
+#: f89a50cc22004d82b24ba03ad8a6d0b2
+msgid "Autocomplete Algorithm"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:397
+#: a8a79db3cf134c02ab33d495f3648ede
+msgid ""
+"**Time complexity**: O(p + n·k) where: - p = len(prefix) - n = number of "
+"matching words - k = average word length"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:402
+#: bc1296c25913499988b728c145c64fe2
+msgid "**Space complexity**: O(n·k) for results"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:405
+#: 876886da70c547a29723b48f7d9aa0e7
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:408
+#: 2e67b40ed2c9401ea708faa9fb719d89
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:414
+#: 81253f76396242b89e6e559d6a25406c
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:415
+#: 4ac11dcca96f42bca7f80df25fdd58f9
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:416
+#: 13af37b2518a40008436b8f72c349d8f
+msgid "Notes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:417
+#: 1f0e57e8f6a8491aa9860ef7bd82dcf6
+msgid "**Insert**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:418
+#: ../../source/guide/tree_structures/trie.rst:421
+#: ../../source/guide/tree_structures/trie.rst:424
+#: ../../source/guide/tree_structures/trie.rst:436
+#: ../../source/guide/tree_structures/trie.rst:963
+#: 7059976f9bc14fe69465ebb4811865ae 7b6c70cd0fd84c0b8f73e0f07fd60e3d
+#: 929253c50ef04cb6a1012974b9d3c7fb 9c04d78e73df45fb981ed8dd73a0f3f0
+#: e36c0afcc9b340568965db6c938f05d4
+msgid "O(m)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:419
+#: 9e1170dad2d4425294dc6d17b12421c5
+msgid "m = word length"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:420
+#: 31ab5ebaf62d4095a6a5df574db8d19c
+msgid "**Search**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:422
+#: b71b083de7b149b6a3994a652c6db47b
+msgid "Independent of # words!"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:423
+#: b97e4f3d1cd741caa825ac234dda36e6
+msgid "**Delete**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:425
+#: 2ef0983101d643c7b6ea4864cf6ec74f
+msgid "May need to remove nodes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:426
+#: 70efbc3a3c1e40d68a10a017473785bd
+msgid "**Prefix check**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:427
+#: ../../source/guide/tree_structures/trie.rst:966
+#: 786c7b38e0a04b35b9ea384f35739df5 d4762a92829f448ca1aee38b94e81f8f
+msgid "O(p)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:428
+#: 72c64c5d74964236bbfbb9c0ebd1f395
+msgid "p = prefix length"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:429
+#: ../../source/guide/tree_structures/trie.rst:974
+#: 3055543254da459aa777f8aec30c7251 f82e0822827a4d2f9715b6268b977aa8
+msgid "**Autocomplete**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:430
+#: 5d790532547d471c97f54b56ea19a43c
+msgid "O(p + nk)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:431
+#: 44c8373ab1c8455cb210219b8a7e0df4
+msgid "n results, length k"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:432
+#: 970855b54a5648599e613bbdaea3eb36
+msgid "**Count prefix**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:433
+#: 5e97a9f66aed4c0cb6d6eb2234a25843
+msgid "O(p + nodes)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:434
+#: 306c05e5de9543e788542e7c99a6c502
+msgid "Traverse subtree"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:435
+#: ed561072b1a54360a820081c5caad66d
+msgid "**Longest common prefix**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:437
+#: 1c2d17481dbc46caad4f1d7161f02609
+msgid "m = shortest word"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:439
+#: ae8f245bff34433c81346ac5a361bfbb
+msgid "**Key advantage**: Search time independent of number of words!"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:444
+#: d68303ff823d40afb763d2c6811daf71
+msgid "**Best case**: O(m) - all words identical"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:445
+#: 2cf7f02a39cc40a0bbc3b7e092b43ced
+msgid "**Worst case**: O(nm) - no shared prefixes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:446
+#: dd9b0173643747e1bb86546d6c9fb03f
+msgid "**Average case**: O(nm·α) where α ∈ [0.3, 0.7]"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:448
+#: 40883afc11a64552a79564d849275d42
+msgid ""
+"**Memory per node**: - HashMap/Array for children: 26-256 pointers - "
+"Boolean flag: 1 bit - Total: typically 200-2000 bytes per node"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:453
+#: 7789dd983ef444f3a9a65c78b277ade7
+msgid ""
+"**Space optimization techniques**: 1. **Compressed Tries (Radix Trees)**:"
+" Merge chains of single-child nodes 2. **Alphabet reduction**: Use "
+"smaller character sets 3. **Lazy deletion**: Mark nodes as deleted "
+"without removing"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:459
+#: c46f838bacac456fbcd57c0df256479e
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:462
+#: ae26771aa7f149afa7aed00d3d99735f
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:473
+#: 620143cb80d042319cfa7ebc516aa745
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:476
+#: 59be7c5d60b84d98ac8fae24163e9c28
+msgid "Creating and Populating"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:495
+#: a716faf226ca413fbcc3b93ec86df82c
+msgid "Building from Word List"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:512
+#: 477a4aa3ae444459a114c8ada24f7f01
+msgid "Searching"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:527
+#: 3e4fff274ba849a9a8523eac2165df17
+msgid "Autocomplete"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:542
+#: d50e6073532b499fa23e072d687672e3
+msgid "Word Operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:561
+#: 1d67f061235d4d68b4f01718def58d7d
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:564
+#: 151e2998f1bd4e5cb2ed7dca750062c5
+msgid "Application 1: Autocomplete System"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:566
+#: 12bb4d65d58c4845849ab173841eac2b
+msgid "Production-ready autocomplete with ranking:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:633
+#: 73bd9a141a7c41fb9b579371075c583e
+msgid "Application 2: Spell Checker"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:635
+#: 601f75caa28a408ca72eb39c35a0600f
+msgid "Spell checking with suggestions:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:725
+#: cd3ed7b4f2db487c88e4b728e784baa7
+msgid "Application 3: IP Router"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:727
+#: e2746d755d8c4d2f9cabb17f50624c57
+msgid "Longest prefix matching for routing:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:791
+#: 1d9f404403f6445eaae925d5370db37e
+msgid "Application 4: Search Engine Index"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:793
+#: c223342bb42e41aa97f821666409ae2d
+msgid "Inverted index with prefix search:"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:889
+#: 347c54c703c745a9a4c05564902d7e60
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:892
+#: 2fdd6b31de12483fa3543c0b85d8caf3
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:894
+#: 22207dce93c24c34a4dce48a23b96fea
+msgid "✅ **Use Tries for prefix operations**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:904
+#: 4b0bb8c5008344f1b4023652f3110d8e
+msgid "✅ **Normalize input**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:912
+#: cf0cc9a594464564b6c85422a280e90c
+msgid "✅ **Consider memory trade-offs**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:920
+#: ec12e0b35b024befb3cfa909e73335a9
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:922
+#: 9f9b5a50bb664691a23b3a9b684f9085
+msgid "❌ **Don't use for exact-match-only lookups**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:932
+#: eab39c6e48bf4daebb0eb7c285c9fa00
+msgid "❌ **Don't forget about radix trees**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:939
+#: 861e94e881224f41adbeff1a58878646
+msgid "❌ **Don't store huge words**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:953
+#: 0e40b462ca844f3d96c23c82df727512
+msgid "Comparison: Trie vs Hash Table"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:959
+#: 343d23be99584ac1935bdd3a8044ce90
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:960
+#: 9b12429778204a8f9224750f4bc2b6a0
+msgid "Trie"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:961
+#: 51188f35bfa14560a45e203f3074164c
+msgid "Hash Table"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:962
+#: 9c5025dbeaf74ebeaa70839c9dd7ff5a
+msgid "**Exact lookup**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:964
+#: ebb1e6922763488aaa600951d37f2717
+msgid "O(1) average"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:965
+#: 21fdb59591f54a2a96e28f4bce8405e0
+msgid "**Prefix search**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:967
+#: e51d17668f39476d81759557ea753802
+msgid "O(n) - must check all"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:968
+#: 41e38a2f96084cff8587aecb51396281
+msgid "**Sorted iteration**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:969
+#: 3a7dd95c5d884d9898dd0e34363d8b60
+msgid "O(n) - natural order"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:970
+#: b2b2cb30e21342b7b402221a64321867
+msgid "O(n log n) - must sort"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:971
+#: 83a4a09d127d4148bc9e80c38689c0f3
+msgid "**Space**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:972
+#: 1603f81a643e4b66b156d7d14e4eefef
+msgid "O(nm·α) - shared prefixes"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:973
+#: 9feb52e3d1af411db9c18f2c61eddf07
+msgid "O(n) - exact size"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:975
+#: e23384bafbcd4e23b31e47fe65bccbf9
+msgid "O(p + results)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:976
+#: efe840919fd04463968d2d61345c37d8
+msgid "Impossible efficiently"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:977
+#: 314f1225d4f64ad1b26171b134a4389c
+msgid "**Collisions**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:978
+#: 13964cb262bf4761bf64aa69e8d3b48e
+msgid "None"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:979
+#: 60ecb46178f14fefb0f7203be3252b56
+msgid "Possible"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:982
+#: d24c5ec53644473bbfedd1b05e01690c
+msgid "When to Use Each"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:984
+#: cf62f9f6be364607b027310ddd6061d5
+msgid "**Use Trie when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:985
+#: ca05925fdac14089a7f0321c25d33caf
+msgid "Need prefix operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:986
+#: 7079fbc4481b4593849de4fac719f976
+msgid "Autocomplete required"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:987
+#: bfba4986310a450a97d05e57a1fd6ae0
+msgid "Sorted iteration needed"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:988
+#: b2bb007d3e744f0ba8e23a050f3ac820
+msgid "Natural language processing"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:989
+#: c1ed250cce1540a48946415dbb97513b
+msgid "Memory available"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:991
+#: f9fb6c8c55014ee380db7230386b78f6
+msgid "**Use Hash Table when:**"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:992
+#: 21e6bc2f73954a8da7dd9b104851d881
+msgid "Only exact matches needed"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:993
+#: 837c5f9d0a5248c3a2b4d7efc4cfc1d9
+msgid "Memory constrained"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:994
+#: 2a8feed0ad6f4aaba867d601aa48ae57
+msgid "No prefix operations"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:995
+#: 9757e9a0e26949a796f182e598c47d4c
+msgid "Very large keys"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:996
+#: 1293526e5d04409daf9f91cf6817cdec
+msgid "Need O(1) lookups"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:999
+#: 83b3c013315b4827bfe94122ddb58c78
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1001
+#: 5360f587ae7b45a1adf9ea2a956c3f7c
+msgid ":doc:`/api/tree/trie` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1002
+#: 01b174f3ca5844f9bdf5c384a0dc1406
+msgid ":doc:`general` - General tree structures"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1003
+#: 1d779f17d58445c18543a00920d2af01
+msgid ":doc:`binary` - Binary search trees"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1006
+#: 566fdc3700f74b23b22b52b6a8a7072f
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1008
+#: 55bd4b3e960b4b94a9624ce8fa275f77
+msgid ""
+"Wikipedia contributors. \"Trie\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Trie"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1011
+#: c46e85622223466aa0025bb366af3d2f
+msgid "Comprehensive overview of Trie structure and applications."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1013
+#: d1df73cad4054a8aac157321f69737b3
+msgid "Fredkin, E. \"Trie Memory\", 1960"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1015
+#: bd9d635e7cc34c798f1dc58527af84e9
+msgid "Original paper introducing the Trie data structure."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1017
+#: f408e03e1cf945719d1eb17475da76cc
+msgid "Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1019
+#: 6eb207973d9c40b38300bf7f4dd32fb0
+msgid "String matching algorithms including Tries."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1021
+#: 778e2d67c5d54457b270f9e19984a788
+msgid ""
+"Halim, S. \"Trie Visualization\". VisuAlgo. https://visualgo.net/en/trie "
+"(if available)"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1024
+#: 07d4fc435da541aea0ba1083f204b8c3
+msgid "Interactive Trie visualization."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1026
+#: 108a52eaf9144a2992c3b99831cd2edf
+msgid ""
+"Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition "
+"https://algs4.cs.princeton.edu/52trie/"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1029
+#: 9eea9a481f08462bb6ed02c5701759a1
+msgid "Chapter on string searching with Tries and TSTs."
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1031
+#: 95827298c7da413fbd663c929a06ae79
+msgid ""
+"OpenDSA Project. \"Trie\". https://opendsa-"
+"server.cs.vt.edu/ODSA/Books/Everything/html/Trie.html"
+msgstr ""
+
+#: ../../source/guide/tree_structures/trie.rst:1034
+#: e4a9e74651794ff089efd6b3d861832e
+msgid "Interactive Trie tutorial with exercises."
+msgstr ""
+

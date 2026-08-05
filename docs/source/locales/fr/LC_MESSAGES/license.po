@@ -1,0 +1,661 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/license.rst:3 30603f6912224d88bee0054ec11f5efc
+msgid "License"
+msgstr ""
+
+#: ../../source/license.rst:8 169ee0cd884b4a15a6f90673ec54ffa4
+msgid "Overview"
+msgstr ""
+
+#: ../../source/license.rst:10 e18109655fb74e8590223094c473c35c
+msgid ""
+"The SDS-Tools project uses a **dual licensing model** to distinguish "
+"between the code implementation and its documentation:"
+msgstr ""
+
+#: ../../source/license.rst:13 e74174c6938a405cbe8e0c12f51b3019
+msgid "**Code**: Apache License 2.0"
+msgstr ""
+
+#: ../../source/license.rst:14 c248252eddef4faba3243d749ce51d9c
+msgid ""
+"**Documentation**: Creative Commons Attribution-NonCommercial 4.0 "
+"International (CC BY-NC 4.0)"
+msgstr ""
+
+#: ../../source/license.rst:16 fc4c0bb89b7e456a8ca7815b9ea26a41
+msgid "This dual approach allows us to:"
+msgstr ""
+
+#: ../../source/license.rst:18 50e08494de124183b023962d1f83e603
+msgid "Keep the code permissive and reusable for all purposes"
+msgstr ""
+
+#: ../../source/license.rst:19 71e44633a12f4247900bff10423b4e99
+msgid ""
+"Acknowledge the academic and open-access sources that inspired our "
+"documentation"
+msgstr ""
+
+#: ../../source/license.rst:20 260487a15d0245908888551f6ccab520
+msgid ""
+"Ensure educational materials remain freely available while respecting "
+"attribution"
+msgstr ""
+
+#: ../../source/license.rst:38 89a1689c608f448f8be63c6ce10e4c45
+msgid "Source Code License (Apache 2.0)"
+msgstr ""
+
+#: ../../source/license.rst:40 b7101ee6d38146a0821164e1ec22004b
+msgid ""
+"The **source code** of SDS-Tools is licensed under the **Apache License, "
+"Version 2.0**."
+msgstr ""
+
+#: ../../source/license.rst:43 ../../source/license.rst:106
+#: b1815e4cc0bb4a78a5716d87ac4c13d6 cb39fd37cfde4168b1a93923e99afbce
+msgid "Quick Summary"
+msgstr ""
+
+#: ../../source/license.rst:49 ../../source/license.rst:112
+#: 865a311509be4967a69590e3c61943b3 96de59044d6843ca8e4485ff584a44b1
+msgid "Permission"
+msgstr ""
+
+#: ../../source/license.rst:50 ../../source/license.rst:113
+#: 09874d6bdb58465fb9ecb48a7dfd941c c7464046480246c08d211ae9d62d9fb8
+msgid "Description"
+msgstr ""
+
+#: ../../source/license.rst:51 b75bb0770bd443a59254a6274cce7428
+msgid "✓ **Commercial use**"
+msgstr ""
+
+#: ../../source/license.rst:52 bd0e8abfb9184a8ca3618b45481b05a3
+msgid "You can use this software for commercial purposes"
+msgstr ""
+
+#: ../../source/license.rst:53 041ec3a51d7e476cb8f41032e29a28fb
+msgid "✓ **Modification**"
+msgstr ""
+
+#: ../../source/license.rst:54 12f341cff331459d99c893bb839ae627
+msgid "You can modify the source code"
+msgstr ""
+
+#: ../../source/license.rst:55 180bab15131d4caa91d74e15929c304f
+msgid "✓ **Distribution**"
+msgstr ""
+
+#: ../../source/license.rst:56 ce78bfc534c9403cac687d4172bb63df
+msgid "You can distribute the original or modified code"
+msgstr ""
+
+#: ../../source/license.rst:57 c5d746476da54ab491d95471957da933
+msgid "✓ **Patent use**"
+msgstr ""
+
+#: ../../source/license.rst:58 2c8c844ee790410690deedcf8b456dea
+msgid "Express grant of patent rights from contributors"
+msgstr ""
+
+#: ../../source/license.rst:59 285a17d1aeeb4d28bf0ccab84a5dbe3b
+msgid "✓ **Private use**"
+msgstr ""
+
+#: ../../source/license.rst:60 8ef56d8d84ee4345abee1c053d043366
+msgid "You can use and modify privately"
+msgstr ""
+
+#: ../../source/license.rst:61 8b48426ee91c4d5084e2ae1573f15323
+msgid "⚠ **Trademark**"
+msgstr ""
+
+#: ../../source/license.rst:62 1137a45be31c4c60978c5d9f6cea1192
+msgid "Does not grant rights to use trademarks"
+msgstr ""
+
+#: ../../source/license.rst:63 4634de831aeb44b2885965c93cf89f33
+msgid "⚠ **Liability**"
+msgstr ""
+
+#: ../../source/license.rst:64 32066861bb834087813beedf18573564
+msgid "Includes limitation of liability"
+msgstr ""
+
+#: ../../source/license.rst:65 c45a81d70c094b0eb7c0886307535c3e
+msgid "⚠ **Warranty**"
+msgstr ""
+
+#: ../../source/license.rst:66 35ffe1125ed24c138e53f9ae0f78625a
+msgid "Software is provided \"as is\""
+msgstr ""
+
+#: ../../source/license.rst:69 a4c91f8bb63c4617b9301b0a0621a815
+msgid "Copyright Notice"
+msgstr ""
+
+#: ../../source/license.rst:88 ../../source/license.rst:202
+#: 2dad4bb78fee437a96dc91e2978acb23 acb86123bda940d08524716248ac9b15
+msgid "Full License Text"
+msgstr ""
+
+#: ../../source/license.rst:90 73c8bdb0749447e9be7fbc917ce5d067
+msgid "The complete Apache 2.0 license is available at:"
+msgstr ""
+
+#: ../../source/license.rst:92 ba308ee5ec094e4fa05712534bd11c83
+msgid "Online: https://www.apache.org/licenses/LICENSE-2.0"
+msgstr ""
+
+#: ../../source/license.rst:93 519219d73407493cb5b8dd8ab2c24e9c
+msgid ""
+"Repository: `LICENSE.md <https://github.com/skyfrigate/sds-"
+"tools/blob/master/LICENSE.md>`_"
+msgstr ""
+
+#: ../../source/license.rst:96 750663f7fb64429e94991508d182ee0d
+msgid "Documentation License (CC BY-NC 4.0)"
+msgstr ""
+
+#: ../../source/license.rst:98 68efd547e67b46e5852a09d8d29fe90e
+msgid ""
+"The **documentation** (including guides, tutorials, examples, and "
+"mathematical descriptions) is licensed under the **Creative Commons "
+"Attribution-NonCommercial 4.0 International License**."
+msgstr ""
+
+#: ../../source/license.rst:101 3586a0f92f0f4f37925eea5fc419af59
+msgid "CC BY-NC 4.0"
+msgstr ""
+
+#: ../../source/license.rst:114 1f225f7decd04522825fad86f53b7734
+msgid "✓ **Share**"
+msgstr ""
+
+#: ../../source/license.rst:115 92d9eaf901224d28be4883a344a46092
+msgid "Copy and redistribute the material in any medium or format"
+msgstr ""
+
+#: ../../source/license.rst:116 001b9d120e844f959e12b35c11359316
+msgid "✓ **Adapt**"
+msgstr ""
+
+#: ../../source/license.rst:117 692fed62d7d542df8e559d0a7f2c92ca
+msgid "Remix, transform, and build upon the material"
+msgstr ""
+
+#: ../../source/license.rst:118 53342ee0a52647449d435d347121466a
+msgid "✓ **Attribution**"
+msgstr ""
+
+#: ../../source/license.rst:119 dbda9c72283742da9592c4b725f486da
+msgid "You must give appropriate credit"
+msgstr ""
+
+#: ../../source/license.rst:120 643bbabcf3f1405793e2b5be903ab6c2
+msgid "✗ **Commercial use**"
+msgstr ""
+
+#: ../../source/license.rst:121 c927de5c82014112a9a527bacd615138
+msgid "You may not use the material for commercial purposes"
+msgstr ""
+
+#: ../../source/license.rst:122 8e7caf402997403bb54f728d44137cd2
+msgid "✓ **Educational use**"
+msgstr ""
+
+#: ../../source/license.rst:123 6de5873739c943168dd4f160344af293
+msgid "Free to use in educational and research contexts"
+msgstr ""
+
+#: ../../source/license.rst:127 0383e2c4be1f472f9681974a3a8af11f
+msgid ""
+"This license applies to the **documentation content only**, not the "
+"source code. You are free to use the code (Apache 2.0) in commercial "
+"projects, but the documentation materials require attribution and cannot "
+"be used commercially."
+msgstr ""
+
+#: ../../source/license.rst:132 9f0e479b0aff462c93fae8fcc0c5d5ab
+msgid "You Are Free To"
+msgstr ""
+
+#: ../../source/license.rst:134 28b89338995c45248dd168026995e8ba
+msgid ""
+"✓ **Share** — copy and redistribute the documentation in any medium or "
+"format"
+msgstr ""
+
+#: ../../source/license.rst:136 377cbbc6afc043759642fc774fa47fe4
+msgid "✓ **Adapt** — remix, transform, and build upon the documentation"
+msgstr ""
+
+#: ../../source/license.rst:138 69d8b3dccf4c4a489aa5ef5246cfaae6
+msgid "✓ **Use for teaching** — use the documentation in educational settings"
+msgstr ""
+
+#: ../../source/license.rst:140 869dbf8585ba4b94a6fb6dc0af79abc2
+msgid ""
+"✓ **Use for research** — cite and reference the documentation in academic"
+" work"
+msgstr ""
+
+#: ../../source/license.rst:143 de6df9e945344aabb6259068f49934bc
+msgid "Under the Following Terms"
+msgstr ""
+
+#: ../../source/license.rst:145 1ed07bbadbdb4192ade2c223c1c254ca
+msgid ""
+"**Attribution (BY)** — You must give appropriate credit, provide a link "
+"to the license, and indicate if changes were made. You may do so in any "
+"reasonable manner, but not in any way that suggests the licensor endorses"
+" you or your use."
+msgstr ""
+
+#: ../../source/license.rst:149 54a25f88e0944e929a8ecc032116603d
+msgid ""
+"**NonCommercial (NC)** — You may not use the documentation for commercial"
+" purposes. This means you cannot:"
+msgstr ""
+
+#: ../../source/license.rst:152 0035473007a147f4903d3a5450027597
+msgid "Sell the documentation or access to it"
+msgstr ""
+
+#: ../../source/license.rst:153 b6891ca78493459287836e7ab0ee24fe
+msgid "Use it in paid training or courses"
+msgstr ""
+
+#: ../../source/license.rst:154 0682b82e9fe243de978d4d2d97d555d0
+msgid "Include it in commercial publications"
+msgstr ""
+
+#: ../../source/license.rst:155 513fb36e9e8f4ac482278ffcd4d8e797
+msgid "Use it for commercial consulting services"
+msgstr ""
+
+#: ../../source/license.rst:157 43c9e69f121f4723bc7cb2e95b9a0233
+msgid "However, you CAN:"
+msgstr ""
+
+#: ../../source/license.rst:159 9a095b8e893e4e449aa98ec48e728720
+msgid "Use it in free educational courses"
+msgstr ""
+
+#: ../../source/license.rst:160 b7cdfc6cb80647239e39f0cf0ea8d844
+msgid "Reference it in academic papers"
+msgstr ""
+
+#: ../../source/license.rst:161 3fe12d561b0a474c82d7f529ab168f1c
+msgid "Use it for personal learning"
+msgstr ""
+
+#: ../../source/license.rst:162 ed5911deeae74a358109e8c5e005b218
+msgid "Share it with students and colleagues"
+msgstr ""
+
+#: ../../source/license.rst:165 938c181dd9e34274967d11c1de8bc4eb
+msgid "How to Attribute"
+msgstr ""
+
+#: ../../source/license.rst:167 727068d4f54149f08a7c040ebab87547
+msgid ""
+"When using or adapting this documentation, please provide attribution "
+"using one of these formats:"
+msgstr ""
+
+#: ../../source/license.rst:170 634904128d5d4a29ae8c24197686299f
+msgid "**Academic Citation (APA Style)**:"
+msgstr ""
+
+#: ../../source/license.rst:178 781d9604fe0643f2ad4cc2e2b1826d58
+msgid "**Inline Attribution**:"
+msgstr ""
+
+#: ../../source/license.rst:185 363fdd28ebd84056a0a8e81961a23db3
+msgid "**Code Comment Attribution**:"
+msgstr ""
+
+#: ../../source/license.rst:193 ed0a9f880c2e4b7e8b88be51cb67198f
+msgid "**Markdown Attribution**:"
+msgstr ""
+
+#: ../../source/license.rst:204 cbb753f2197044a6b07d90462e84ccca
+msgid "The complete CC BY-NC 4.0 license is available at:"
+msgstr ""
+
+#: ../../source/license.rst:206 21e91b3155ab4e4eb5b8906746bb44c9
+msgid "Online: https://creativecommons.org/licenses/by-nc/4.0/legalcode"
+msgstr ""
+
+#: ../../source/license.rst:207 e11a698c6db849748a8ee3d388422e39
+msgid "Summary: https://creativecommons.org/licenses/by-nc/4.0/"
+msgstr ""
+
+#: ../../source/license.rst:210 5c993017553b4ad2880d04213cee5cce
+msgid "Rationale for Dual Licensing"
+msgstr ""
+
+#: ../../source/license.rst:213 180891bc882645e18fb0c3756fdae798
+msgid "Why Apache 2.0 for Code?"
+msgstr ""
+
+#: ../../source/license.rst:215 3e04d82c445e4f199d4e5905f7548b1f
+msgid "We chose the Apache License 2.0 for the source code because:"
+msgstr ""
+
+#: ../../source/license.rst:217 9dc5490b5e4d44b8b98a531f9fafdf6e
+msgid "**Permissive**: Allows commercial and private use"
+msgstr ""
+
+#: ../../source/license.rst:218 fd84ce5fd1564a48a6d474650cdad152
+msgid "**Patent protection**: Explicit grant of patent rights"
+msgstr ""
+
+#: ../../source/license.rst:219 84434c5c69d3483aae06e869de0c632a
+msgid "**Compatibility**: Compatible with many other licenses (GPL, MIT, BSD)"
+msgstr ""
+
+#: ../../source/license.rst:220 9e5030ebaadd4a19a881f5e92df62920
+msgid "**Industry standard**: Widely used and understood in the software industry"
+msgstr ""
+
+#: ../../source/license.rst:221 3c9454424a924b6aa6f766b1df2b33b3
+msgid "**Professional use**: Suitable for enterprise and commercial adoption"
+msgstr ""
+
+#: ../../source/license.rst:224 f6f681906d594ab6aa068132f333f808
+msgid "Why CC BY-NC 4.0 for Documentation?"
+msgstr ""
+
+#: ../../source/license.rst:226 606e1dcc6c80407f865b6bbc07af271b
+msgid "We chose CC BY-NC 4.0 for the documentation because:"
+msgstr ""
+
+#: ../../source/license.rst:228 5466e74d3f7b41888aa6cc3aea352024
+msgid ""
+"**Academic respect**: Many of our sources are open-access academic "
+"materials"
+msgstr ""
+
+#: ../../source/license.rst:229 d82783b5959e46df800f5a833ce74d6e
+msgid "**Attribution requirement**: Ensures proper credit to original sources"
+msgstr ""
+
+#: ../../source/license.rst:230 9ed19233c82b4b4a831e4ed69ef98a0b
+msgid "**Educational focus**: Keeps educational materials freely available"
+msgstr ""
+
+#: ../../source/license.rst:231 571e7d55c0b84020b62ca1f0a6fe488b
+msgid ""
+"**Non-commercial protection**: Prevents commercial exploitation of "
+"educational content"
+msgstr ""
+
+#: ../../source/license.rst:232 39f447bea92a4e6994ae0ae8ca41edd0
+msgid ""
+"**Adaptation allowed**: Permits translation and adaptation for "
+"educational purposes"
+msgstr ""
+
+#: ../../source/license.rst:235 45cc609c50394861927dfd5f3d2a9a13
+msgid "Acknowledgments"
+msgstr ""
+
+#: ../../source/license.rst:237 969ccf58996c4398a81b468a8dfb5975
+msgid ""
+"This documentation draws inspiration from several open-access academic "
+"sources:"
+msgstr ""
+
+#: ../../source/license.rst:240 8d861275cb28491e913a544676f36d07
+msgid "Educational Resources"
+msgstr ""
+
+#: ../../source/license.rst:242 61cea31a04034bf3a2ccf669ea652e86
+msgid "**MIT OpenCourseWare** - Introduction to Algorithms (6.006)"
+msgstr ""
+
+#: ../../source/license.rst:244 d65ab353825a4dec8391230d104e200f
+msgid "https://ocw.mit.edu/"
+msgstr ""
+
+#: ../../source/license.rst:246 1e30c81e0ce8476e8a2eca762aaaee0a
+msgid "**OpenDSA** - Data Structures and Algorithms Modules"
+msgstr ""
+
+#: ../../source/license.rst:248 e1638b51cf634ed88a653985e44d02cb
+msgid "https://opendsa-server.cs.vt.edu/"
+msgstr ""
+
+#: ../../source/license.rst:250 780363b9658247bb8bc601027243f788
+msgid "**VisuAlgo** - Visualizing Data Structures and Algorithms"
+msgstr ""
+
+#: ../../source/license.rst:252 06ef4e97ede84f469086af8208cd0150
+msgid "https://visualgo.net/"
+msgstr ""
+
+#: ../../source/license.rst:254 0112ba3154c441db9543aeff99543ee6
+msgid "**Stanford CS Education Library** - Binary Trees and other structures"
+msgstr ""
+
+#: ../../source/license.rst:256 7ef05ed929d842b5ab3a2d34838d9434
+msgid "http://cslibrary.stanford.edu/"
+msgstr ""
+
+#: ../../source/license.rst:258 feabbf5048ec401dafa8786509b69667
+msgid "**USFCA Visualization** - David Galles' Algorithm Visualizations"
+msgstr ""
+
+#: ../../source/license.rst:260 14cbe9be1763402f8c1fc5010066a8c8
+msgid "https://www.cs.usfca.edu/~galles/visualization/"
+msgstr ""
+
+#: ../../source/license.rst:263 6ea3fa18a9154fb1811e252a7dec7781
+msgid "Academic Papers (Open Access)"
+msgstr ""
+
+#: ../../source/license.rst:265 2f45c2d0878a46238c0d284b70742ec0
+msgid "Adelson-Velsky & Landis (1962) - AVL Trees"
+msgstr ""
+
+#: ../../source/license.rst:266 fc7dec4fde4442b990c949c0a3ed264d
+msgid "Bayer & McCreight (1972) - B-Trees"
+msgstr ""
+
+#: ../../source/license.rst:267 e32be63cae0a4f91bbfa348c42643bdb
+msgid "Guibas & Sedgewick (1978) - Red-Black Trees"
+msgstr ""
+
+#: ../../source/license.rst:269 145c6a0a00834845a81ad4bd27dd7e0d
+msgid "See individual guide pages for complete citations and references."
+msgstr ""
+
+#: ../../source/license.rst:272 308a2ea69ee04849886d3be6b2c11113
+msgid "Textbook References"
+msgstr ""
+
+#: ../../source/license.rst:274 857cf486c5104d5480517c2fb205a4f7
+msgid ""
+"While we reference classic textbooks for completeness, our documentation "
+"is based primarily on open-access materials. Cited textbooks include:"
+msgstr ""
+
+#: ../../source/license.rst:277 b07288ba82924c19b0ca905b92e880be
+msgid "Cormen et al., \"Introduction to Algorithms\" (CLRS)"
+msgstr ""
+
+#: ../../source/license.rst:278 28b8f3266d1e4b8e970454e022afecf4
+msgid "Knuth, \"The Art of Computer Programming\""
+msgstr ""
+
+#: ../../source/license.rst:279 e51e0428c68b4a85b8ca40f96daa6da7
+msgid "Sedgewick & Wayne, \"Algorithms\""
+msgstr ""
+
+#: ../../source/license.rst:281 bcd204808212428881af38e054b12b6e
+msgid ""
+"These references are for completeness and further reading; they are not "
+"required to understand or use this documentation."
+msgstr ""
+
+#: ../../source/license.rst:285 30cf768770e04fcfb88db82f9dbc7b71
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../source/license.rst:288 a33a8be1b339491c8265051ea6cd5b1b
+msgid "Can I use the code in my commercial product?"
+msgstr ""
+
+#: ../../source/license.rst:290 76378c2fd6254dae8b25ac102bffd32b
+msgid ""
+"**Yes!** The source code is licensed under Apache 2.0, which explicitly "
+"allows commercial use. You can:"
+msgstr ""
+
+#: ../../source/license.rst:293 518ec05513d64269a0afc76988e1b54c
+msgid "Use it in commercial software"
+msgstr ""
+
+#: ../../source/license.rst:294 678570dd22dd487fbfe1ff5832667a56
+msgid "Modify it for your needs"
+msgstr ""
+
+#: ../../source/license.rst:295 72117cfe45ad45e7a48505e4d42ee09c
+msgid "Distribute it as part of your product"
+msgstr ""
+
+#: ../../source/license.rst:297 428c5e27eaf54865a8e35f271c3b1da0
+msgid ""
+"You must include the Apache 2.0 license notice, but you don't need to "
+"open-source your modifications."
+msgstr ""
+
+#: ../../source/license.rst:301 fa5b0d3c6231451c9417fa3c3724e44e
+msgid "Can I use the documentation in my paid course?"
+msgstr ""
+
+#: ../../source/license.rst:303 d6875f18227c4ea3a33555ccf06107b7
+msgid ""
+"**No.** The documentation is licensed under CC BY-NC 4.0, which prohibits"
+" commercial use. However, you can:"
+msgstr ""
+
+#: ../../source/license.rst:306 13e337371067454483c6ecc1b36a768f
+msgid "Reference and cite the documentation"
+msgstr ""
+
+#: ../../source/license.rst:307 3c35b740a7c949d787b38ca084881a05
+msgid "Use it as a recommended resource"
+msgstr ""
+
+#: ../../source/license.rst:308 3a1b50e307d7435991631fd4727fd005
+msgid "Adapt concepts for your own original materials (with attribution)"
+msgstr ""
+
+#: ../../source/license.rst:310 7bbf237ab7b440f095be20d3719614cd
+msgid ""
+"You cannot directly use or redistribute the documentation in a commercial"
+" context."
+msgstr ""
+
+#: ../../source/license.rst:313 eb199a464d624d11ab48ddef93a2f02a
+msgid "Can I translate the documentation?"
+msgstr ""
+
+#: ../../source/license.rst:315 5068bd40eb10486ebfff96738e2d6063
+msgid ""
+"**Yes!** Translation is considered an adaptation, which is allowed under "
+"CC BY-NC 4.0. You must:"
+msgstr ""
+
+#: ../../source/license.rst:318 2cdfc3e53dc04c26bb3d88c710af290c
+msgid "Provide attribution to the original"
+msgstr ""
+
+#: ../../source/license.rst:319 4a7aedcbf57f45fea400975df73caf45
+msgid "Indicate that you made changes (translation)"
+msgstr ""
+
+#: ../../source/license.rst:320 6020a26c34db43ddb7c3ba019a4644d9
+msgid "Share your translation under the same CC BY-NC 4.0 license"
+msgstr ""
+
+#: ../../source/license.rst:321 8905794f7236418d9e157df992276c83
+msgid "Not use the translation commercially"
+msgstr ""
+
+#: ../../source/license.rst:323 3fd748b2145f4c918299e8e0e7ad1be1
+msgid "We welcome community translations and can help coordinate them."
+msgstr ""
+
+#: ../../source/license.rst:326 342b9823aa5845a3b8d966439cab0641
+msgid "Can I use code examples in my blog post?"
+msgstr ""
+
+#: ../../source/license.rst:328 29948d3a0a954eb79801629c794a673b
+msgid ""
+"**Yes!** Code examples are part of the documentation, but since they "
+"demonstrate the code (which is Apache 2.0), you can freely use them. Just"
+" provide appropriate attribution and a link back to the documentation."
+msgstr ""
+
+#: ../../source/license.rst:333 4d90792e193b4eabaf4e4fad02bfadd5
+msgid "Can I fork the documentation on GitHub?"
+msgstr ""
+
+#: ../../source/license.rst:335 6164305c6c7a4238a28cb965034c2ff5
+msgid ""
+"**Yes!** You can fork the documentation repository. GitHub forks are not "
+"considered distribution, and they facilitate collaboration. However, any "
+"use of your fork must still comply with CC BY-NC 4.0 terms."
+msgstr ""
+
+#: ../../source/license.rst:340 57a766c5a37e406599ca4cbdd1ad1822
+msgid "Can I use the mathematical definitions in my research paper?"
+msgstr ""
+
+#: ../../source/license.rst:342 1fa4778b3d32485f8da90b3519f23f89
+msgid "**Yes!** Academic research is not commercial use. You can:"
+msgstr ""
+
+#: ../../source/license.rst:344 f2dcced00e6249d58296068e81a2b599
+msgid "Cite the documentation as a reference"
+msgstr ""
+
+#: ../../source/license.rst:345 09fa98fc9e794868be9bb579bd001312
+msgid "Use the mathematical models (with citation)"
+msgstr ""
+
+#: ../../source/license.rst:346 1ceb3338e9f2470088fe7637d165b558
+msgid "Adapt algorithms for your research (with attribution)"
+msgstr ""
+
+#: ../../source/license.rst:348 2da62e2ed2404d3ebc304b8552f001b7
+msgid "This is exactly the kind of use CC BY-NC 4.0 is designed to support."
+msgstr ""
+

@@ -1,0 +1,551 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/core/node.rst:5 85c5aa8e0d334f29b9dd106c05331748
+msgid "Node"
+msgstr ""
+
+#: ../../source/api/core/node.rst:9 98c13d748e0046aaa56fbaad5eeeb919
+msgid "Abstract base class for all node types in SDS-Tools."
+msgstr ""
+
+#: ../../source/api/core/node.rst:12 99a717f1fc4d45478dd5723c9713520c
+msgid "Class Definition"
+msgstr ""
+
+#: 80b705caf2fc48239841beacaea786c4 of sds.core.node.Node:1
+msgid "Abstract base class for all node types."
+msgstr ""
+
+#: 407ac0425ea84159a807f15e5a5d8efb of sds.core.node.Node:3
+msgid ""
+"This class provides the foundational structure for all nodes in the sds "
+"library. It uses a generic `_refs` list to store references to other "
+"nodes, with concrete subclasses providing specific access patterns via "
+"properties."
+msgstr ""
+
+#: 6e0c6a5170be475780abdb115370b884 of sds.core.node.Node:7
+msgid ""
+"All node types share three core attributes: - _data: The value stored in "
+"the node - _refs: List of references to other nodes - _parent: Optional "
+"reference to a parent node"
+msgstr ""
+
+#: 960668476df94b12b700c1bd4f35ef81 of sds.core.node.Node:12
+msgid ""
+"Concrete subclasses define how `_refs` is interpreted: - SimpleNode: "
+"_refs[0] = next - DoublyNode: _refs[0] = next, _refs[1] = prev - "
+"BinaryNode: _refs[0] = left, _refs[1] = right - TreeNode: _refs = "
+"children list - GraphNode: _refs unused (connections via Edge objects)"
+msgstr ""
+
+#: ../../source/api/core/node.rst 0be63eba55454ccaab78b2f9348e2a62
+#: 6ef063f89baa4ab68b6de4a23fb57ff3
+msgid "Parameters"
+msgstr ""
+
+#: 1c5e62492e3542b6847c87c25c0da185 830fe2c7031b439d894f00f012255e5f of
+#: sds.core.node.Node:19 sds.core.node.Node.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: ada5111578184456af350ad7971c958a of sds.core.node.Node:24
+msgid "The data stored in the node (read/write via property)."
+msgstr ""
+
+#: 4629a2f9c8d443448378e7a2987e0356 95b12ba9cc4f4f5cb7fa603bc23e4d47
+#: be1acb1d4ca047cea57dd9187f0c05e5 of sds.core.node.Node
+msgid "type"
+msgstr ""
+
+#: 7a6e539d48744205a53554c67ce18826 of sds.core.node.Node:26
+msgid "Any"
+msgstr ""
+
+#: 7dc56692068b42af9e11799ff13835ff of sds.core.node.Node:30
+msgid "List of references to other nodes."
+msgstr ""
+
+#: 0e385e7880e64e07a4a74515d1ed14c0 of sds.core.node.Node:32
+msgid "List[Node]"
+msgstr ""
+
+#: 16198e4cedb0444eb2c865a624d4eddf of sds.core.node.Node:36
+msgid "Reference to the parent node (read/write via property)."
+msgstr ""
+
+#: 9de6b9e42cf147249e76cd1141446d3d of sds.core.node.Node:38
+msgid "Node or None"
+msgstr ""
+
+#: 20941b694f4f49fcb66007ec29d28971 4291babdadc248bcb7a9a6a6522d0dd6
+#: 9bdc9b9db30e4afba9ff348c9b556952 of sds.core.node.Node:40
+#: sds.core.node.Node.data:6 sds.core.node.Node.parent:6
+msgid "Examples"
+msgstr ""
+
+#: b25e8601461f468b8a2c2c9b7d560645 of sds.core.node.Node:42
+msgid "Cannot instantiate Node directly (it's abstract):"
+msgstr ""
+
+#: 00ce14390c1248f39b7e4e5334b2144d of sds.core.node.Node:49
+msgid "Use concrete implementations:"
+msgstr ""
+
+#: 0f76c119cd0b4b89880f54751eea1bc1 2016f2b36e764c5382c1bd91f74fcb31
+#: 33faadb13f25431097893cbf764bac6c 3bc7bc1c834f4af3b8b0c06d0873ce9e
+#: ae219fd0449346409b52bd9e0fc675c2 e996fd16767b4406ab33c95abe52d5c7 of
+#: sds.core.node.Node:56 sds.core.node.Node.__init__:6
+#: sds.core.node.Node.__repr__:6 sds.core.node.Node.__str__:6
+#: sds.core.node.Node.data:16 sds.core.node.Node.parent:15
+msgid "Notes"
+msgstr ""
+
+#: 9de980d68f71483184091d40c402f440 of sds.core.node.Node:58
+msgid ""
+"This class uses __slots__ for memory efficiency. The `_refs` list "
+"provides a unified way to store node connections, with subclasses "
+"defining specific access patterns through properties."
+msgstr ""
+
+#: 89a3c34e9c35417bbf5ad400909bcf5a of sds.core.node.Node:62
+msgid ""
+"Subclasses should: 1. Call super().__init__(data) in their __init__ 2. "
+"Define properties for accessing _refs elements 3. Optionally override "
+"setters to maintain parent-child consistency"
+msgstr ""
+
+#: ae3e25c967394ff2a9d5e7e9862d9b3f of sds.core.node.Node:69
+msgid ":obj:`sds.linear.node.SimpleNode`"
+msgstr ""
+
+#: bfeb227090544ceb9e53e5b833a90dd5 of sds.core.node.Node:70
+msgid "Node for singly linked lists."
+msgstr ""
+
+#: d333b757696a4ff488d1104588ccb994 of sds.core.node.Node:72
+msgid ":obj:`sds.linear.node.DoublyNode`"
+msgstr ""
+
+#: 43ebc90ef9c6493f9191c30e67bd95bc of sds.core.node.Node:73
+msgid "Node for doubly linked lists."
+msgstr ""
+
+#: ad29466d92bd4b039cd5835b733b56c4 of sds.core.node.Node:75
+msgid ":obj:`sds.trees.node.BinaryNode`"
+msgstr ""
+
+#: b6714bc127924653811597de07d14571 of sds.core.node.Node:76
+msgid "Node for binary trees."
+msgstr ""
+
+#: ed823a5d3d7b43c9974146b6d840b8ae of sds.core.node.Node:78
+msgid ":obj:`sds.trees.node.TreeNode`"
+msgstr ""
+
+#: 6d5d0f07398b471b867245bc4880c8fe of sds.core.node.Node:79
+msgid "Node for general trees."
+msgstr ""
+
+#: 1e604872061f4edc80b43a39c8163052 of sds.core.node.Node:81
+msgid ":obj:`sds.graphs.node.GraphNode`"
+msgstr ""
+
+#: 774c8e178427434fa58808f34442953d of sds.core.node.Node:82
+msgid "Node for graphs."
+msgstr ""
+
+#: aecdb7651c5a4afc8bf3cde3e365e302 of sds.core.node.Node.__init__:1
+msgid "Initialize a new node with data."
+msgstr ""
+
+#: 4f492400929743c5898e34dd13b525e5 of sds.core.node.Node.__init__:8
+msgid ""
+"Subclasses should call super().__init__(data) and then initialize their "
+"_refs list according to their specific needs."
+msgstr ""
+
+#: ../../source/api/core/node.rst:88 2fddc37375344a3eb682bc21c4215dbb
+#: 913fbed46f564c9bb0296758663f03ce of sds.core.node.Node.data:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: ../../source/api/core/node.rst 22b02e725a5a497785e4bfac04f4a921
+#: 2e10dcaf3ae845b38da95cdf59731826 528dda7c110c4f938800501c3068dc4b
+#: d6c767d69b5b4696bafbacc8a2c5c99c
+msgid "Returns"
+msgstr ""
+
+#: 84237cbddfe04f44996c1ab62705744a of sds.core.node.Node.data:3
+msgid "The data stored in the node."
+msgstr ""
+
+#: ../../source/api/core/node.rst 444437c25a984cf3995cc9d18e36927d
+#: 5bfe7fdf63c140bfb834e1af1b92d46b 60cc05fbff7c4507a2049630f5b02159
+#: 9c51fe3056f54b429fdcd1b53b6ed7d4
+msgid "Return type"
+msgstr ""
+
+#: dcb5496384964c889752f2b35eca9dfc of sds.core.node.Node.data:18
+msgid ""
+"This property is defined in the abstract base class and inherited by all "
+"concrete node types."
+msgstr ""
+
+#: 832d47b102ec4facae15b93597d1f38b of sds.core.node.Node.parent:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: 90a1714052cd4180a201798197fc9dae of sds.core.node.Node.parent:3
+msgid "The parent node, or None if this is a root node."
+msgstr ""
+
+#: 6a100cb7b30b428c856e575662221149 of sds.core.node.Node.parent:17
+msgid ""
+"The parent reference is maintained automatically when using setters in "
+"concrete node classes (for trees and lists)."
+msgstr ""
+
+#: ../../source/api/core/node.rst:132 9d56867f24f24af0a939c7856274c845
+#: d3b53af94838404094761252adb8dad9 of sds.core.node.Node.__repr__:1
+msgid "Return a detailed string representation of the node."
+msgstr ""
+
+#: 789cccebfcf24098b0d0a4f851b827b9 of sds.core.node.Node.__repr__:3
+msgid "String representation of the node."
+msgstr ""
+
+#: 21d2acc9c3a74bc5919363931eef126d of sds.core.node.Node.__repr__:8
+msgid ""
+"Concrete subclasses must implement this method to provide appropriate "
+"string representation."
+msgstr ""
+
+#: ../../source/api/core/node.rst:146 47274a4744c8431697355282e099e23d
+#: 89fd3da82e494a3b97ce735a748c69f9 of sds.core.node.Node.__str__:1
+msgid "Return a simple string representation of the node's data."
+msgstr ""
+
+#: b1733a60a38a441e9763ac6f126132c9 of sds.core.node.Node.__str__:3
+msgid "String representation of the data."
+msgstr ""
+
+#: f86aaa972f6b47ba842dd4cca71d0135 of sds.core.node.Node.__str__:8
+msgid "Concrete subclasses must implement this method."
+msgstr ""
+
+#: ../../source/api/core/node.rst:21 ed81067a1e274723bb1fd31ddd43d3b8
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/core/node.rst:23 2e931e8d1da64980bf0f24d08111cac4
+msgid ""
+"The ``Node`` class serves as the foundation for all node types used "
+"throughout the library. It provides a unified interface and uses a "
+"flexible ``_refs`` list to store references to other nodes."
+msgstr ""
+
+#: ../../source/api/core/node.rst:28 c618a95e219a4a53a185b1376db03239
+msgid "Key Concepts"
+msgstr ""
+
+#: ../../source/api/core/node.rst:31 e3d1217ddc98407d85a1eb3471f32717
+msgid "Generic Reference Storage"
+msgstr ""
+
+#: ../../source/api/core/node.rst:33 cc06c8ab7c0344d8b1bc9e330f62d878
+msgid ""
+"The ``_refs`` list allows different node types to store varying numbers "
+"of references while maintaining a consistent interface:"
+msgstr ""
+
+#: ../../source/api/core/node.rst:48 a237841848cd4286bfbfe629ea640110
+msgid "Memory Efficiency"
+msgstr ""
+
+#: ../../source/api/core/node.rst:50 c75952226a564eabbdc04d21258b611c
+msgid "The class uses ``__slots__`` to minimize memory overhead:"
+msgstr ""
+
+#: ../../source/api/core/node.rst:57 3c49ded267fb4c8fa49ccd71726ee257
+msgid ""
+"This restricts the attributes that can be dynamically added to instances,"
+" reducing memory usage per node."
+msgstr ""
+
+#: ../../source/api/core/node.rst:61 abf9422e460d4ee7971b267ee89b1e15
+msgid "Attributes"
+msgstr ""
+
+#: ../../source/api/core/node.rst:66 103aedd4bd3f40ad86a52538313ae9d2
+msgid "The value stored in the node. Accessible via the :attr:`data` property."
+msgstr ""
+
+#: ../../source/api/core/node.rst:71 02f16c96e4284650a43a15bdd4b4bd09
+msgid ""
+"List of references to other nodes. The interpretation depends on the "
+"concrete subclass."
+msgstr ""
+
+#: ../../source/api/core/node.rst:77 280bb58ef372448dad10935fcf9c96b0
+msgid "Reference to the parent node. Accessible via the :attr:`parent` property."
+msgstr ""
+
+#: ../../source/api/core/node.rst:80 3e4fe3e823f0438f84299a4be4fa16e6
+msgid "Properties"
+msgstr ""
+
+#: ../../source/api/core/node.rst:83 dff2f0c65a574aa1a84f13f6739372b5
+msgid "data"
+msgstr ""
+
+#: ../../source/api/core/node.rst:90 ../../source/api/core/node.rst:110
+#: 94af4873ea6e4a6ab280a448812e4c62 ecb3a7a971454e15a56f69efa2f51061
+msgid "**Example:**"
+msgstr ""
+
+#: ../../source/api/core/node.rst:103 89624a59e2204faabc6616864644672a
+msgid "parent"
+msgstr ""
+
+#: ../../source/api/core/node.rst:108 6105d1d2531d4dcba17851f57d4b55b0
+msgid "Get or set the parent node reference."
+msgstr ""
+
+#: ../../source/api/core/node.rst:123 9f966443392641f2b5209159a2198088
+msgid "Abstract Methods"
+msgstr ""
+
+#: ../../source/api/core/node.rst:125 e365d61889c94c0bb4f4c5ecfe7d95d4
+msgid "Concrete subclasses must implement these methods:"
+msgstr ""
+
+#: ../../source/api/core/node.rst:128 e53d1978a62e489ebc9ae0fd97aba235
+msgid "__repr__()"
+msgstr ""
+
+#: ../../source/api/core/node.rst:134 ../../source/api/core/node.rst:148
+#: 2a2d78312f444240a0aecaab5cda05b9 89efad3002ea40d7b647506ba33c1b4c
+msgid "**Implementation example:**"
+msgstr ""
+
+#: ../../source/api/core/node.rst:142 546c9549f07f40c4b15c59037aef546d
+msgid "__str__()"
+msgstr ""
+
+#: ../../source/api/core/node.rst:156 a101328c0e9b49f29d9a9b8576b00dec
+msgid "Subclass Implementation Guide"
+msgstr ""
+
+#: ../../source/api/core/node.rst:159 672591a47f4d4e8cb9fdb3ee05574472
+msgid "Creating a Custom Node Type"
+msgstr ""
+
+#: ../../source/api/core/node.rst:161 00df4e58d97645db85d1c676d9995a26
+msgid "To create a new node type, inherit from ``Node`` and:"
+msgstr ""
+
+#: ../../source/api/core/node.rst:163 8ff21ba5a2ab4bc494a5aa45b4f4b880
+msgid "Call ``super().__init__(data)`` in your ``__init__``"
+msgstr ""
+
+#: ../../source/api/core/node.rst:164 d9659e92246d48ea8e9a07ea373d11ee
+msgid "Initialize ``_refs`` according to your needs"
+msgstr ""
+
+#: ../../source/api/core/node.rst:165 be780c3aa22443ecb49dd83569dbad43
+msgid "Implement ``__repr__`` and ``__str__``"
+msgstr ""
+
+#: ../../source/api/core/node.rst:166 987bd530ad4842dcacbe2bfaa21ecd5b
+msgid "Optionally create properties for accessing ``_refs`` elements"
+msgstr ""
+
+#: ../../source/api/core/node.rst:168 52aa0397dbf24644ba23ba5f4e4a156f
+msgid "**Example - Binary Node:**"
+msgstr ""
+
+#: ../../source/api/core/node.rst:209 d1d990544a96427a91ec3e7638ec3435
+msgid "Usage Patterns"
+msgstr ""
+
+#: ../../source/api/core/node.rst:212 a8341cce45cd44488ac8677d303ad0d3
+msgid "Basic Node Creation"
+msgstr ""
+
+#: ../../source/api/core/node.rst:214 b63d4e0c0a484b0ea7cff89704a218f4
+msgid "Nodes cannot be instantiated directly (abstract class):"
+msgstr ""
+
+#: ../../source/api/core/node.rst:226 2aef94a6c81f41a39f6d131b27025d3e
+msgid "Use concrete implementations instead:"
+msgstr ""
+
+#: ../../source/api/core/node.rst:237 acb394efcce5437a8829e36901b256d0
+msgid "Traversing Node Chains"
+msgstr ""
+
+#: ../../source/api/core/node.rst:239 3f9e2a232d1c4ee491ac62418b8ce55a
+msgid "Example with singly linked nodes:"
+msgstr ""
+
+#: ../../source/api/core/node.rst:257 1171f704207a4f05b03f01e279ab44a6
+msgid "Working with Parent References"
+msgstr ""
+
+#: ../../source/api/core/node.rst:259 e05a583efb894cab99a4ee7326ed4e15
+msgid "Example with tree nodes:"
+msgstr ""
+
+#: ../../source/api/core/node.rst:276 8f13d08d18664dac861b75eede56249d
+msgid "Design Rationale"
+msgstr ""
+
+#: ../../source/api/core/node.rst:279 8263a755bb604471a77bbefe2b802c4d
+msgid "Why Abstract?"
+msgstr ""
+
+#: ../../source/api/core/node.rst:281 942c7b512c22489a8e1f59d84911bf67
+msgid "The ``Node`` class is abstract because:"
+msgstr ""
+
+#: ../../source/api/core/node.rst:283 d65f00ba23d2498380a35c9c6430da1d
+msgid ""
+"**Interface Definition** - Ensures all node types provide ``__repr__`` "
+"and ``__str__``"
+msgstr ""
+
+#: ../../source/api/core/node.rst:284 5cc955b6ec59497c8e598bb0b9ca724d
+msgid "**Flexibility** - Different structures need different reference patterns"
+msgstr ""
+
+#: ../../source/api/core/node.rst:285 330f692df91643ab8afab93b4e9affea
+msgid "**Type Safety** - Abstract methods enforce implementation in subclasses"
+msgstr ""
+
+#: ../../source/api/core/node.rst:288 d90501c1639c4c1e83b9d63f39a3234f
+msgid "Why _refs List?"
+msgstr ""
+
+#: ../../source/api/core/node.rst:290 3114997357024c4f983556f3a760a2d2
+msgid "Using a list for references provides:"
+msgstr ""
+
+#: ../../source/api/core/node.rst:292 4c5105b88836473494f99b6123916be9
+msgid "**Uniformity** - All nodes use the same storage mechanism"
+msgstr ""
+
+#: ../../source/api/core/node.rst:293 40bfe59eb19d443682a0dfdff98a3146
+msgid "**Flexibility** - Easy to extend to any number of references"
+msgstr ""
+
+#: ../../source/api/core/node.rst:294 632121170a014ef7a11e930bf8fa0048
+msgid "**Memory Efficiency** - Single allocation for all references"
+msgstr ""
+
+#: ../../source/api/core/node.rst:295 1f0d838ccf214d8eafed301b47cc0d15
+msgid "**Simplicity** - Subclasses just define property accessors"
+msgstr ""
+
+#: ../../source/api/core/node.rst:298 48decc25e61c4fce9b2ca820ee6195f2
+msgid "Why __slots__?"
+msgstr ""
+
+#: ../../source/api/core/node.rst:300 47346f82711d42dfab9fd7ba438c7118
+msgid "Memory optimization is crucial for data structures:"
+msgstr ""
+
+#: ../../source/api/core/node.rst:310 232286b3f5e2416fa1b71a06ed9d0dae
+msgid "Performance Considerations"
+msgstr ""
+
+#: ../../source/api/core/node.rst:312 83851592939e422c8f3d4f9208e0e0b4
+msgid "Node Operations Complexity"
+msgstr ""
+
+#: ../../source/api/core/node.rst:316 699e5a186e5e4fac93c6678b1df992d6
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/core/node.rst:317 b5d95cb75ced409c86603b554f5c15d1
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/core/node.rst:318 f9de4f246aa14464aceb5dee7517ad28
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/core/node.rst:319 2e55fa01e6d146e49993c4b9029a3175
+msgid "Create node"
+msgstr ""
+
+#: ../../source/api/core/node.rst:320 ../../source/api/core/node.rst:321
+#: ../../source/api/core/node.rst:323 ../../source/api/core/node.rst:324
+#: ../../source/api/core/node.rst:326 ../../source/api/core/node.rst:327
+#: ../../source/api/core/node.rst:329 ../../source/api/core/node.rst:330
+#: 0e82d7f5a2cd49e48aea579011dc0ce7 a341ccd0e95a44b58556ad3dbd406aa8
+#: a4a40316f8ff4c8bbc1172d32e374105 cfc18171601d43ca8321a5c82931790d
+#: e972bc0a19504956b60d88b0a7af1a7a f1446e5b5f92477e82107fb9c2410f9f
+#: fb0862b4e2f94acc97cbfc1558efdae0 fd9022c74674467fb447187bbd7a2c5f
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/core/node.rst:322 eb4bfb7ca98c42508140509734f36e09
+msgid "Access data"
+msgstr ""
+
+#: ../../source/api/core/node.rst:325 ffa63197c1f94cc58e6b080a9c31093d
+msgid "Access reference"
+msgstr ""
+
+#: ../../source/api/core/node.rst:328 cb170947293e4e73bfd718b5e012e7c1
+msgid "Set reference"
+msgstr ""
+
+#: ../../source/api/core/node.rst:333 948efdbdcd2a49838c1905109657f7fd
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/core/node.rst:335 5ad96c1eafa046c58d701bae40cc2d11
+msgid ":doc:`interfaces` - Abstract collection interfaces"
+msgstr ""
+
+#: ../../source/api/core/node.rst:336 b61291aa93cd4e27b4e7a40ba464e9c5
+msgid ":doc:`../linear/node` - Concrete linear node implementations"
+msgstr ""
+
+#: ../../source/api/core/node.rst:337 de56db9fbfa8490cbc2f02951ff13abe
+msgid ":doc:`../tree/node` - Concrete tree node implementations"
+msgstr ""
+
+#: ../../source/api/core/node.rst:338 5c0200231d6b423ca1b64966657c8e90
+msgid ":doc:`../graphs/node` - Concrete graph node implementations"
+msgstr ""
+
+#: ../../source/api/core/node.rst:342 476f0ddd0deb4129836c65eb76424d2b
+msgid ""
+"The ``Node`` class is designed to be extended, not used directly. Always "
+"use concrete implementations like ``SimpleNode``, ``DoublyNode``, or "
+"create your own subclass."
+msgstr ""
+

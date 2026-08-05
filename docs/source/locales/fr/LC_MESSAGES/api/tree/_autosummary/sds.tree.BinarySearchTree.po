@@ -1,0 +1,526 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:2
+#: bb63bab02889498d9c3302a773f33402
+msgid "sds.tree.BinarySearchTree"
+msgstr ""
+
+#: b137106afa4e450b8c1326d2589a04bb of sds.tree.binary.BinarySearchTree:1
+msgid "Binary Search Tree implementation."
+msgstr ""
+
+#: 903bcaf769ce4d328bac5cce76ec0885 of sds.tree.binary.BinarySearchTree:3
+msgid ""
+"A binary search tree where for each node: - All values in left subtree "
+"are less than the node's value - All values in right subtree are greater "
+"than the node's value - Both left and right subtrees are also BSTs"
+msgstr ""
+
+#: 2a3f6405e3434026a4600b7e4fad4a94 of sds.tree.binary.BinarySearchTree:8
+msgid ""
+"This property enables efficient O(log n) average case operations for "
+"search, insert, and delete in balanced trees."
+msgstr ""
+
+#: 143a936e21a842bba18dc9a37d5a9e25 of sds.tree.binary.BinarySearchTree:13
+msgid "The root node of the tree (read-only property)."
+msgstr ""
+
+#: 0f3c37efda4b426a83fcd717fe14aef2 637da1c134aa4b85bd0b9984295426ad of
+#: sds.tree.binary.BinarySearchTree
+msgid "type"
+msgstr ""
+
+#: adcf5cf7bf1f468082f8a558b4032c2b of sds.tree.binary.BinarySearchTree:15
+msgid "BinaryNode or None"
+msgstr ""
+
+#: 172022f0af9a4ec69471af2dbfca6ffe of sds.tree.binary.BinarySearchTree:19
+msgid "The number of nodes in the tree (read-only property)."
+msgstr ""
+
+#: 0e0273eac8f847358bffbafc2abbe297 of sds.tree.binary.BinarySearchTree:21
+msgid "int"
+msgstr ""
+
+#: 0e3f46401882420e9fd98cc991774d69 16ebc908f0a647c08f3dd248ce928ab3
+#: 19f9cada993f44af971121b5266676d8 20259ace8c6f4a7b876396f38234b3df
+#: 22fdcaac9b3146e38b4cc7ba73155256 298165e7eb8f4dbea386252d0433c964
+#: 3b067b995bac427987f41a3ae862fd2c 4c10151954584a4e9e425112d3889758
+#: 503262c408854150bdd31605c2a1acc6 77173a29e7224a7fad5cdf2676e10199
+#: 939228c5ca0d4214b8dfb1dfea6a9560 9f23f544254d4cc4ab6eefed9be7a51b
+#: bae7be3be5dd48cd80f9e0de631ce88e cb5c3273c83f4f809db108b62f836940
+#: cd05cdc74b5245b2978f76e468ab03fb fa98144a71c04ee993c398e72534d7bd of
+#: sds.tree.binary.BinarySearchTree:23
+#: sds.tree.binary.BinarySearchTree.__contains__:9
+#: sds.tree.binary.BinarySearchTree.__iter__:5
+#: sds.tree.binary.BinarySearchTree.__repr__:6
+#: sds.tree.binary.BinarySearchTree.__str__:6
+#: sds.tree.binary.BinarySearchTree.clear:3
+#: sds.tree.binary.BinarySearchTree.find_max:8
+#: sds.tree.binary.BinarySearchTree.find_min:8
+#: sds.tree.binary.BinarySearchTree.height:6
+#: sds.tree.binary.BinarySearchTree.inorder_traversal:5
+#: sds.tree.binary.BinarySearchTree.insert:6
+#: sds.tree.binary.BinarySearchTree.level_order_traversal:5
+#: sds.tree.binary.BinarySearchTree.postorder_traversal:5
+#: sds.tree.binary.BinarySearchTree.preorder_traversal:5
+#: sds.tree.binary.BinarySearchTree.remove:12
+#: sds.tree.binary.BinarySearchTree.search:9
+msgid "Examples"
+msgstr ""
+
+#: fb06e4d740ba4ef782b03aee9f08a45b of sds.tree.binary.BinarySearchTree:25
+msgid "Create and populate a BST:"
+msgstr ""
+
+#: d47fefb8a4034483949e3d44bf4f16bd of sds.tree.binary.BinarySearchTree:33
+msgid "Inorder traversal yields sorted values:"
+msgstr ""
+
+#: 50ad07069b31402a94104b1a44d0e8c2 of sds.tree.binary.BinarySearchTree:38
+msgid "Search operations:"
+msgstr ""
+
+#: 3ff81231c5ee4704a078effa83594cc2 of sds.tree.binary.BinarySearchTree:47
+msgid "Find minimum and maximum:"
+msgstr ""
+
+#: 03b14699d4054f498f829c55433992c0 of sds.tree.binary.BinarySearchTree:54
+msgid "Remove elements:"
+msgstr ""
+
+#: 0da41ce9bf1840be815e82f3524c6ac6 0e776e06f93040d28015e0bc2090510b
+#: 14d1453caeb349c0b072df0251d410ff 736f2c5ac2434edc87de6aa9bfe8c9c5
+#: 8278d2c8e51449198aaa3d55540a40c4 9365725dd2124c94b10aac93f1e9db7f
+#: 947a86ebf9d444cfad9aab32c3090906 98d7df6adeea4801bed14a8bf409cbac
+#: 99dbbc9672df485fab8bf514d801fa60 99fb675dc152457b88b725828b1c4094
+#: ca2be386c2114fadb190939b09dfd783 f992cccafa0f403facb99bc73d48a13b of
+#: sds.tree.binary.BinarySearchTree:61
+#: sds.tree.binary.BinarySearchTree.clear:12
+#: sds.tree.binary.BinarySearchTree.find_max:17
+#: sds.tree.binary.BinarySearchTree.find_min:17
+#: sds.tree.binary.BinarySearchTree.height:19
+#: sds.tree.binary.BinarySearchTree.inorder_traversal:13
+#: sds.tree.binary.BinarySearchTree.insert:15
+#: sds.tree.binary.BinarySearchTree.level_order_traversal:13
+#: sds.tree.binary.BinarySearchTree.postorder_traversal:13
+#: sds.tree.binary.BinarySearchTree.preorder_traversal:13
+#: sds.tree.binary.BinarySearchTree.remove:23
+#: sds.tree.binary.BinarySearchTree.search:18
+msgid "Notes"
+msgstr ""
+
+#: 94963921ed9e44da9f55ff194418fb54 of sds.tree.binary.BinarySearchTree:63
+msgid ""
+"Time Complexity (average case for balanced tree): - Insert: O(log n) - "
+"Search: O(log n) - Remove: O(log n) - Find min/max: O(log n) - "
+"Traversals: O(n)"
+msgstr ""
+
+#: a816e981515447ed84e40d469315273d of sds.tree.binary.BinarySearchTree:70
+msgid "Worst case (degenerate tree): O(n) for all operations."
+msgstr ""
+
+#: 3120ed46466a40b3b6a16d6c064a5ab3 of sds.tree.binary.BinarySearchTree:74
+msgid ":obj:`BinaryTree`"
+msgstr ""
+
+#: 639f7ef49bf64a7ebcb4f7df4297dc02 of sds.tree.binary.BinarySearchTree:75
+msgid "Unordered binary tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 5c2ec5ac3bf84a50a057ba7f58f9e7eb 711457d275a24544afa48a0d630dad95
+#: c00d9741752d4705b3dfdc333a96152f of
+#: sds.tree.binary.BinarySearchTree.__init__:1
+msgid "Initialize an empty binary search tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:13
+#: c0b9aa286f404be99bd3f60aa1c99715
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 19e6153923b740bcbbb3ac58a8aa549d
+msgid ":py:obj:`__init__ <sds.tree.BinarySearchTree.__init__>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: b2996456ab7f4b3c95879fa4a34f5c15
+msgid ":py:obj:`clear <sds.tree.BinarySearchTree.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 73b7b58449e245b98772615733b1618a 941229a3e2124b68b25f9bbba0be9cd2 of
+#: sds.tree.binary.BinarySearchTree.clear:1
+msgid "Remove all nodes from the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 6788c3cebcdb430c87ca2d70c1309874
+msgid ":py:obj:`find_max <sds.tree.BinarySearchTree.find_max>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 0590901c0a3d4f3b8ca54de5f815e1eb 8aed25ced5544fdbbbbc0d2a1d2759ce of
+#: sds.tree.binary.BinarySearchTree.find_max:1
+msgid "Find and return the maximum value in the BST."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: ed30de89e16c4773b0dae32215413f67
+msgid ":py:obj:`find_min <sds.tree.BinarySearchTree.find_min>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: acedf09b9b284965835f51ddbbabc4f7 e0c78dbb6baa46f984014f64164adc35 of
+#: sds.tree.binary.BinarySearchTree.find_min:1
+msgid "Find and return the minimum value in the BST."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: edb6114f8b3c4966babf56b6acb50439
+msgid ":py:obj:`height <sds.tree.BinarySearchTree.height>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 40cb94631ab54ec68ca218a9c281a15c e027e6e85c3945b3998638ae7907799f of
+#: sds.tree.binary.BinarySearchTree.height:1
+msgid "Return the height of the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: cc66e43464c2445c84c38199711f1b37
+msgid ""
+":py:obj:`inorder_traversal "
+"<sds.tree.BinarySearchTree.inorder_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 72834c03677f4494a648295088221bde 7ab3ebaffe3b4d8ba153ef3eeec4faed of
+#: sds.tree.binary.BinarySearchTree.inorder_traversal:1
+msgid "Return inorder traversal iterator (sorted order for BST)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 998c2b9b6362456e9936c83ac8f4ba8f
+msgid ":py:obj:`insert <sds.tree.BinarySearchTree.insert>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 18a29b772ea74ffa9f4c817c57e75686 f70377ec57344f90ba78a5ff19da2c49 of
+#: sds.tree.binary.BinarySearchTree.insert:1
+msgid "Insert an item into the BST maintaining BST property."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: eaa019fd94d44276a8fc6a682f9a30c2
+msgid ":py:obj:`is_empty <sds.tree.BinarySearchTree.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: ca29c17305e84b53abf2801101216c2f
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 2dab22a334584cb8aba5cecd9561204b
+msgid ""
+":py:obj:`level_order_traversal "
+"<sds.tree.BinarySearchTree.level_order_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 27698fa4324b4bc5b6f295137aa52061 a24a6dc55d8c4caa882dddc0eaf50992 of
+#: sds.tree.binary.BinarySearchTree.level_order_traversal:1
+msgid "Return level-order traversal iterator (BFS)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: f8c6cc6d7714428ebe8e1967ab6f1097
+msgid ""
+":py:obj:`postorder_traversal "
+"<sds.tree.BinarySearchTree.postorder_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 167597d1302543efa604fc031119329f c40db7acb2cf49c8b1ce0ec93df9a571 of
+#: sds.tree.binary.BinarySearchTree.postorder_traversal:1
+msgid "Return postorder traversal iterator (left-right-root)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 81c1a5524c9b42b19d1c1eb2427a3121
+msgid ""
+":py:obj:`preorder_traversal "
+"<sds.tree.BinarySearchTree.preorder_traversal>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 08b892c2f6c645f483679d5ead2992f8 716797d85cf1463984b86b4c14d62051 of
+#: sds.tree.binary.BinarySearchTree.preorder_traversal:1
+msgid "Return preorder traversal iterator (root-left-right)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: fa13e9023a9644f78569003fe62fed0a
+msgid ":py:obj:`remove <sds.tree.BinarySearchTree.remove>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 74d0038dba24472c922666dac5b3adea 8f0ee558360c4510a9c483032f3bfc06 of
+#: sds.tree.binary.BinarySearchTree.remove:1
+msgid "Remove and return an item from the BST."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 42abff636dfc415cabbae2cd1b35e7f3
+msgid ":py:obj:`search <sds.tree.BinarySearchTree.search>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:33:<autosummary>:1
+#: 7b443979208043409ba06e46dd7de629 c5b7b908b84c4d5aa2b5559794533f6d of
+#: sds.tree.binary.BinarySearchTree.search:1
+msgid "Search for an item in the BST."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst:35
+#: 13dd4b715fe7439388d135941b956736
+msgid "Attributes"
+msgstr ""
+
+#: 487dbf66b74b4aa39c96dd6e46000f68 of
+#: sds.tree.binary.BinarySearchTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`root <sds.tree.BinarySearchTree.root>`\\"
+msgstr ""
+
+#: 71a7892210ac4efeb8820a0130aa2019 of
+#: sds.tree.binary.BinarySearchTree.__init__:1:<autosummary>:1
+msgid "Get the root node of the tree."
+msgstr ""
+
+#: 289075821d90459fae00f1c5c00888c0 of
+#: sds.tree.binary.BinarySearchTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.BinarySearchTree.size>`\\"
+msgstr ""
+
+#: 0205d6ad61ac4d2fbb2436e68370cdce of
+#: sds.tree.binary.BinarySearchTree.__init__:1:<autosummary>:1
+msgid "Get the number of nodes in the tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst
+#: 1f2e4458df714203b01f2ac73d8189e4 2c2712fd9ffd410c997ce2619928ac92
+#: 4e3cc7cbc71a4410ac649e6aa0d55eb8 bd7112c305bc4d2e84bab2ecd33780c0
+#: c21952d7d7f84c0bb6cb01f8ed4973f8 d6662ad046c04019880744bad4dfe704
+#: dd14cd4e9fe3400abf66b0132b3ed0d4 e1f8ec919b9a45eea45318ca59198880
+msgid "Returns"
+msgstr ""
+
+#: f1f281dc1ff745868579bb54d8f0c19d of
+#: sds.tree.binary.BinarySearchTree.height:3
+msgid "The height of the tree, or -1 if empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst
+#: 0a5e6d7a2d434271817c4b790697829b 5bde4e9ed8fb4e37a928ba582b9fe482
+#: 74c82d1442b6442cafa1fdf4b2248bfe 8db8c25ecd5c42f5b8504b3d69d33c06
+#: a2f9cc16d64649ffa74e12b0bccc9cbf e4c91cd84ab146f18cfabfeb373d40f4
+#: eae193ea2692411689673a7d3c3a6cf3 ee797755f0824dc683a7fa8c46232cba
+msgid "Return type"
+msgstr ""
+
+#: 3cfa81223a6246eca85bf479559011f5 448518af127e401184d6d52287af6f06
+#: 459b5a3cc51b4ec79a469c354694b0af f1535f379cfe41489c99f5ca81f4ffb6 of
+#: sds.tree.binary.BinarySearchTree.height:21
+#: sds.tree.binary.BinarySearchTree.level_order_traversal:15
+#: sds.tree.binary.BinarySearchTree.postorder_traversal:15
+#: sds.tree.binary.BinarySearchTree.preorder_traversal:15
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst
+#: 55eed7ade9144c0faf4bef14b7225561 b1c3aab54f2a45b893bad5af3187f572
+#: daa2f8dee944414eb580348c691ff713 dc83ccc6690f4f44bb39b24069b3fd68
+msgid "Parameters"
+msgstr ""
+
+#: 87cbb2c8cb4f4dc28def33ef4360ea55 of
+#: sds.tree.binary.BinarySearchTree.insert:3
+msgid "The item to insert. Must be comparable."
+msgstr ""
+
+#: dcd7c31991cd4daea3722be75cfd1abb of
+#: sds.tree.binary.BinarySearchTree.insert:17
+msgid ""
+"Duplicate values are allowed and placed in the right subtree. Time "
+"complexity: O(log n) average, O(n) worst case."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.BinarySearchTree.rst
+#: 2043122771be4f7aac698255115aca0d 272e84e7e06244c185e28fe07320bf63
+#: 70a1a2e0f2464b35a68618bf1eae9cd2 d5f0bd2baf7c4beb91e114e18c4ca21f
+msgid "Raises"
+msgstr ""
+
+#: 361535ad97d34a72b1ddc433c60d9017 of
+#: sds.tree.binary.BinarySearchTree.insert:20
+msgid "If item is not comparable with existing items."
+msgstr ""
+
+#: c3f7934d94e043dbbc111b47f1ab6b67 of
+#: sds.tree.binary.BinarySearchTree.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: b7bf64870367419fa11338007368c90f of
+#: sds.tree.binary.BinarySearchTree.remove:6
+msgid "The removed item."
+msgstr ""
+
+#: 39d34e837616482387fc0fd784b4e6f7 b593a4b894434e5bb54c53141da36f8c
+#: ccb7d3157a05454aa8931f6896dfc29d of
+#: sds.tree.binary.BinarySearchTree.find_max:6
+#: sds.tree.binary.BinarySearchTree.find_min:6
+#: sds.tree.binary.BinarySearchTree.remove:9
+msgid "If the tree is empty."
+msgstr ""
+
+#: 7f13d25b216f41bca3d071eecee736c6 of
+#: sds.tree.binary.BinarySearchTree.remove:10
+msgid "If the item is not found."
+msgstr ""
+
+#: 6082aa515ffd4d4e8c38bdac2cec2086 9efa2b4c20b84f13bb00492464d3e2a7
+#: bda10fff183142b89344f857e626e3c9 d8accb8d942a4fd2ae1805c47fe937fd of
+#: sds.tree.binary.BinarySearchTree.find_max:19
+#: sds.tree.binary.BinarySearchTree.find_min:19
+#: sds.tree.binary.BinarySearchTree.remove:25
+#: sds.tree.binary.BinarySearchTree.search:20
+msgid "Time complexity: O(log n) average, O(n) worst case."
+msgstr ""
+
+#: 45ef335c3b244af2ac2f925c45dd6e81 of
+#: sds.tree.binary.BinarySearchTree.search:3
+msgid "The item to search for."
+msgstr ""
+
+#: bab1b084621e4262ae1039fce3acc59a of
+#: sds.tree.binary.BinarySearchTree.search:6
+msgid "True if found, False otherwise."
+msgstr ""
+
+#: 1e708d9a44cb41eaac618f0d3fba5b10 of
+#: sds.tree.binary.BinarySearchTree.find_min:3
+msgid "The minimum value."
+msgstr ""
+
+#: 6423dcdc050d44a381d66f1b4ae37b24 of
+#: sds.tree.binary.BinarySearchTree.find_max:3
+msgid "The maximum value."
+msgstr ""
+
+#: bca6a45098ea440eb68af13a3f1635ee of
+#: sds.tree.binary.BinarySearchTree.clear:14
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: bfe6732cb891401e8c38e049bbd0fb4e of
+#: sds.tree.binary.BinarySearchTree.__iter__:1
+msgid "Iterate over tree elements (inorder - sorted order)."
+msgstr ""
+
+#: 0bfa72600ba748d691cfa1ca3b636990 27b68ef937324ec8a7abe35997ba72f9
+#: 43fb06d64bce4ba69b0ff91cceddbc93 68366d3ad4fc440abe1fe3ebdc599b1c
+#: d036f9e57e0c4b83a23a72e0954fcca7 of
+#: sds.tree.binary.BinarySearchTree.__iter__
+#: sds.tree.binary.BinarySearchTree.inorder_traversal
+#: sds.tree.binary.BinarySearchTree.level_order_traversal
+#: sds.tree.binary.BinarySearchTree.postorder_traversal
+#: sds.tree.binary.BinarySearchTree.preorder_traversal
+msgid "Yields"
+msgstr ""
+
+#: 24a02a0960af4d7c99bd2ae75ce42d33 of
+#: sds.tree.binary.BinarySearchTree.__iter__:3
+msgid "*Any* -- Elements in sorted order."
+msgstr ""
+
+#: 472be0d2c2244981845e18e32e86a10f of
+#: sds.tree.binary.BinarySearchTree.__contains__:1
+msgid "Check if item is in the tree."
+msgstr ""
+
+#: edd1b11b4b5e49a6bcd692bf1fda962d of
+#: sds.tree.binary.BinarySearchTree.__contains__:3
+msgid "Item to check."
+msgstr ""
+
+#: 8f77c10015094af9a11581a8cf3acd9d of
+#: sds.tree.binary.BinarySearchTree.__contains__:6
+msgid "True if item is in tree."
+msgstr ""
+
+#: 5f9afd3b8b144774a308af1a65b54346 of
+#: sds.tree.binary.BinarySearchTree.inorder_traversal:3
+msgid "*Any* -- Items in sorted order."
+msgstr ""
+
+#: 8772a94afa51448cbc7bd7d563e78e5f of
+#: sds.tree.binary.BinarySearchTree.inorder_traversal:15
+msgid "Time complexity: O(n) Space complexity: O(h) for recursion stack"
+msgstr ""
+
+#: 639d048a35e941359284ebfd0083222d of
+#: sds.tree.binary.BinarySearchTree.preorder_traversal:3
+msgid "*Any* -- Items in preorder."
+msgstr ""
+
+#: fe6578e6509b44eb9d5cf61f97080a2d of
+#: sds.tree.binary.BinarySearchTree.postorder_traversal:3
+msgid "*Any* -- Items in postorder."
+msgstr ""
+
+#: da132b11aff84c49af5c01a854167469 of
+#: sds.tree.binary.BinarySearchTree.level_order_traversal:3
+msgid "*Any* -- Items level by level."
+msgstr ""
+
+#: 45d20d47661749d79e82aca75e1aa231 of
+#: sds.tree.binary.BinarySearchTree.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: 3fc95c3b749744758909fc7b5a37b5cd 8f1528f2074a417ba2974d7a938cdec9 of
+#: sds.tree.binary.BinarySearchTree.__repr__:3
+#: sds.tree.binary.BinarySearchTree.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: a9a87c4b24db4c9389795d1f4e9d3346 of
+#: sds.tree.binary.BinarySearchTree.__str__:1
+msgid "Return string showing inorder traversal (sorted)."
+msgstr ""
+

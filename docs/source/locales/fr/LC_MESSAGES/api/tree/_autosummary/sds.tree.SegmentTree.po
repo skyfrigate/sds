@@ -1,0 +1,467 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:2
+#: 96bb7b0cf64a467da4e58cfff9336789
+msgid "sds.tree.SegmentTree"
+msgstr ""
+
+#: c3f78a60106a4634a017f43d6a01dd7b of sds.tree.segment_tree.SegmentTree:1
+msgid "Segment Tree for efficient range queries."
+msgstr ""
+
+#: 25d875df2a65483e8a0ed48dd8b75634 of sds.tree.segment_tree.SegmentTree:3
+msgid ""
+"A segment tree is a binary tree used for storing intervals (segments). It"
+" allows querying which segments contain a given point efficiently. Most "
+"commonly used for range queries like sum, min, max on arrays."
+msgstr ""
+
+#: 47238d1614284daa93c9d8077433cbc8 of sds.tree.segment_tree.SegmentTree:7
+msgid ""
+"The tree is stored as an array where: - Node at index i has children at "
+"2*i+1 and 2*i+2 - Leaf nodes represent individual array elements - "
+"Internal nodes represent merged results of their children"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst
+#: 05bf74b419cc498ea294de8824117b1d 0bdc525daba7410d93563c6daeaf9c67
+#: 2260e587e4444689a45a3cc5758a21a5 61e8ae0a2b86419ca49f2db203d2df72
+#: a4213bd2d0a145bf89751e3b8a9ca715 b8d84728a233479e867a836972099923
+#: c1219285ea114f25b0261ba7df2be168
+msgid "Parameters"
+msgstr ""
+
+#: 29f3527d5d4e4e35b0dd4dffb20ab461 6ca9c28473064a6fbcd41e7768dc6d7b
+#: c8934b870b46408d8919fdaefffdd616 of sds.tree.segment_tree.SegmentTree:12
+#: sds.tree.segment_tree.SegmentTree.__init__:3
+msgid "The underlying array for range queries."
+msgstr ""
+
+#: b7f2216dd37a4c4faf34c13755e9f72b of sds.tree.segment_tree.SegmentTree:14
+msgid ""
+"The operation to perform. Can be: - 'sum': Range sum queries - 'min': "
+"Range minimum queries - 'max': Range maximum queries - callable: Custom "
+"binary operation Default is 'sum'."
+msgstr ""
+
+#: ff087b1fb1134964a29faac6df3d3574 of sds.tree.segment_tree.SegmentTree:21
+msgid ""
+"Identity element for the operation. - For sum: 0 - For min: float('inf') "
+"- For max: float('-inf') - For custom: must be provided"
+msgstr ""
+
+#: 939831d9843d4495a3281ca44c1a82ac of sds.tree.segment_tree.SegmentTree:30
+msgid "The size of the underlying array (read-only property)."
+msgstr ""
+
+#: 577f17dfd5ba4f8984a26a09e40298cc of sds.tree.segment_tree.SegmentTree
+msgid "type"
+msgstr ""
+
+#: d3de32a653894101b8bd58b359b937e8 of sds.tree.segment_tree.SegmentTree:32
+msgid "int"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst
+#: 2eaa1d8906c84dd7a72579c2e3f03b9d 4193d78261b84b0ea1fa6dfae3413714
+#: 4982e660570f4eb695dce8f452f75acf cfc19eee7054453f83c7966f916a15f0
+#: df19b00f89984c51972ea095a352d197 f3a52075384a449495d12cf339f7f6d5
+msgid "Raises"
+msgstr ""
+
+#: 49288cea7fab4cb2bb537fdba1e5c611 82ce6eb023ed4b049f3af575ab2cbb03
+#: d64098fdc7c7401ea850742fa5700676 of sds.tree.segment_tree.SegmentTree:34
+#: sds.tree.segment_tree.SegmentTree.__init__:10
+msgid "If array is empty or operation is invalid."
+msgstr ""
+
+#: 001737189a88438e97dee08771342005 052300bc6b874d18a309ca8caec6dc0d
+#: 6148593a28904b93886ef08849116456 8262ace9f55b47cd981cd33bd20758bf
+#: 8c08f481999e43378bb706c423e5b58d 90d21463de9b446794f3d919871f5d3a
+#: a24f905a660f464ab19d69c19342f798 bb6403e1de614e14b1c868e4e180831c
+#: cb4170d63fe947febd1dd8ab5b545aa9 e40b1eb260c04d1cab05b914696538f4
+#: e76b31871f3643db8a334983c1613a82 f6b61e1968114a38ae601c105d4663d1
+#: ffe42ad22258495d8f99bceeeab21884 of sds.tree.SegmentTree.size:6
+#: sds.tree.segment_tree.SegmentTree:36
+#: sds.tree.segment_tree.SegmentTree.__contains__:9
+#: sds.tree.segment_tree.SegmentTree.__iter__:5
+#: sds.tree.segment_tree.SegmentTree.__len__:6
+#: sds.tree.segment_tree.SegmentTree.__repr__:6
+#: sds.tree.segment_tree.SegmentTree.__str__:6
+#: sds.tree.segment_tree.SegmentTree.clear:5
+#: sds.tree.segment_tree.SegmentTree.get:11
+#: sds.tree.segment_tree.SegmentTree.is_empty:6
+#: sds.tree.segment_tree.SegmentTree.query:13
+#: sds.tree.segment_tree.SegmentTree.to_array:6
+#: sds.tree.segment_tree.SegmentTree.update:10
+msgid "Examples"
+msgstr ""
+
+#: cce450ca651b4caca6b4d3f1897c6183 of sds.tree.segment_tree.SegmentTree:38
+msgid "Create a segment tree for range sums:"
+msgstr ""
+
+#: 8d09734aa2324fe59d8a56b2e432b620 of sds.tree.segment_tree.SegmentTree:47
+msgid "Range minimum queries:"
+msgstr ""
+
+#: 5c48b7f9d2fb461ea8210c82e5e78096 of sds.tree.segment_tree.SegmentTree:56
+msgid "Update values:"
+msgstr ""
+
+#: f51b37f365c444f697e5f4f94c058112 of sds.tree.segment_tree.SegmentTree:64
+msgid "Custom operations:"
+msgstr ""
+
+#: 829652b98137488c9c30d33c4096f96b of sds.tree.segment_tree.SegmentTree:74
+msgid "Array-like access:"
+msgstr ""
+
+#: 0741a3cca7f1402c9d66f86658932d93 13094c68e5144059bb1513acf2314a06
+#: 13956f50be9640dc9f401871300809ea 20e2477ea3a7427881f1d0e8fec0ddbd
+#: 5d7aa35ac2b749648cb667369994f221 8af95dd7da084508b136f24e97078480
+#: 9980110ad9ae4fca9d9e3afb9840e56d 9ee6eb19c84646acad1888cf37ef3e76
+#: b2894fb857eb40caabb2726d995f6949 ccf282214c2f4d1baa5459f250794bf9
+#: d0f53776b66f459a89df1085d9b10fc9 daafc47ed487438d98345a068f4baef1
+#: f04b036255184ff5b08e2e3a021e0475 of sds.tree.SegmentTree.size:12
+#: sds.tree.segment_tree.SegmentTree:83
+#: sds.tree.segment_tree.SegmentTree.__contains__:17
+#: sds.tree.segment_tree.SegmentTree.__iter__:16
+#: sds.tree.segment_tree.SegmentTree.__len__:12
+#: sds.tree.segment_tree.SegmentTree.__repr__:12
+#: sds.tree.segment_tree.SegmentTree.__str__:12
+#: sds.tree.segment_tree.SegmentTree.clear:16
+#: sds.tree.segment_tree.SegmentTree.get:17
+#: sds.tree.segment_tree.SegmentTree.is_empty:15
+#: sds.tree.segment_tree.SegmentTree.query:21
+#: sds.tree.segment_tree.SegmentTree.to_array:13
+#: sds.tree.segment_tree.SegmentTree.update:19
+msgid "Notes"
+msgstr ""
+
+#: 0516eac27fc5463094adc329757c9b15 of sds.tree.segment_tree.SegmentTree:85
+msgid ""
+"The segment tree is built on an array and supports: - Range queries in "
+"O(log n) - Point updates in O(log n) - Space complexity O(4n)"
+msgstr ""
+
+#: ce96b773b760403ab4a61b31d91cd0b6 of sds.tree.segment_tree.SegmentTree:90
+msgid "Operations must be associative: op(a, op(b, c)) = op(op(a, b), c)"
+msgstr ""
+
+#: 6d718c4d94db494cb77354f4c99f100a of sds.tree.segment_tree.SegmentTree:94
+msgid ":obj:`AbstractSegmentTree`"
+msgstr ""
+
+#: cbf451d4252c4de39daa7fffec71fff9 of sds.tree.segment_tree.SegmentTree:95
+msgid "Abstract base class defining the interface."
+msgstr ""
+
+#: 2644b9b7c48a4b34bc60715ab183a997 of sds.tree.segment_tree.SegmentTree:97
+msgid ":obj:`sds.tree.binary`"
+msgstr ""
+
+#: d78134d296ad4cfd827a1697245ad68f of sds.tree.segment_tree.SegmentTree:98
+msgid "Binary tree structures."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 4a28c13358944383a80822b9ca65444c a1a6ffa4c17746d985585de5bf61a456
+#: ac96233112bc43a6986518947b4eca82 of
+#: sds.tree.segment_tree.SegmentTree.__init__:1
+msgid "Initialize a segment tree."
+msgstr ""
+
+#: 3a3cf9521c3e459a91b1a2b7da07fb80 aa077796bea84e9d9979ddd90bcd1d77 of
+#: sds.tree.segment_tree.SegmentTree.__init__:5
+msgid "The operation to perform. Default is 'sum'."
+msgstr ""
+
+#: 63ecde3434e94cb5a9c39a918fd2ebc3 a6f0d633dc8a410e92412a4f5b6606e6 of
+#: sds.tree.segment_tree.SegmentTree.__init__:7
+msgid "Identity element for the operation."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:13
+#: 714995278fcc44c282e8b45c07c52d20
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 02181dbe0b38477e92a6214fe21280ec
+msgid ""
+":py:obj:`__init__ <sds.tree.SegmentTree.__init__>`\\ \\(arr\\[\\, "
+"operation\\, identity\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: eff10278e37047c2aa262fb411cbe4a3
+msgid ":py:obj:`clear <sds.tree.SegmentTree.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 2bad2ab09cc249548dfc03f6c6afa7ce f729cac46d3d47aeb52a390d7171d853 of
+#: sds.tree.segment_tree.SegmentTree.clear:1
+msgid "Remove all elements from the segment tree."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 54eabcda8ef24b2896d7241a4853e5d9
+msgid ":py:obj:`get <sds.tree.SegmentTree.get>`\\ \\(index\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 075c9624b0274cdab0abae20e0d857f9 c15578336a5e452d9a4bed4540b4fd08 of
+#: sds.tree.segment_tree.SegmentTree.get:1
+msgid "Get the value at a specific index."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 27a6d16eb63c4965932278aea2c503fa
+msgid ":py:obj:`is_empty <sds.tree.SegmentTree.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 93406a6b35304052ba10bf4d9d696c91 f43780a60fda473288d432f4c7f667d9 of
+#: sds.tree.segment_tree.SegmentTree.is_empty:1
+msgid "Return True if the tree is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 411f28479f76403a822e085e61767399
+msgid ":py:obj:`query <sds.tree.SegmentTree.query>`\\ \\(left\\, right\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 714f9165570c4fd5ae70e8a20057aa26 f9c4d9f8da9b4eb1b32a17072f78ca7b of
+#: sds.tree.segment_tree.SegmentTree.query:1
+msgid "Query the result for a range [left, right]."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 0296c0c8afac42c28e0a86bad7710161
+msgid ":py:obj:`to_array <sds.tree.SegmentTree.to_array>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: ab1d7b6d8eea43b99657edd2f9cfd2db e2e54b26ef324534adbd5ac980285604 of
+#: sds.tree.segment_tree.SegmentTree.to_array:1
+msgid "Get the current array representation."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 607d070c3d864be5abfad4fbfac4eaa1
+msgid ":py:obj:`update <sds.tree.SegmentTree.update>`\\ \\(index\\, value\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:27:<autosummary>:1
+#: 971313d14ccf4817b2831dc99c1aedd3 e794a984222947f4be04457f5fceafdf of
+#: sds.tree.segment_tree.SegmentTree.update:1
+msgid "Update a single element in the array."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst:29
+#: 697187d93b8b4121a17e77c99de4ad9e
+msgid "Attributes"
+msgstr ""
+
+#: 461f95ce9c2946e7a6243f3e7ddff2db of
+#: sds.tree.segment_tree.SegmentTree.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.SegmentTree.size>`\\"
+msgstr ""
+
+#: 18e52f769fec4067addffe3fd078be16 6fe3ec841f7c4b48b66550368bab60df of
+#: sds.tree.SegmentTree.size:1
+#: sds.tree.segment_tree.SegmentTree.__init__:1:<autosummary>:1
+msgid "Get the size of the underlying array."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst
+#: 110ad43f1380475b9fd7f0d0b914c0b2 391c03256749493494cc05ea1f424002
+#: 5a3229af0df641e79ee0b1e1618d430a 737cb09b17a34eeaad00436888b5a406
+#: 7e7b6985a10f4529a889f762b4dc5372 ac51c50075c64785a11aae020d4ae125
+#: b7cea402ba7646a397656678ccb07f8a bc9ae77b763643bfb26482be71e969ba
+#: f2d939b257fb4023958567bb8a5f7287
+msgid "Returns"
+msgstr ""
+
+#: 7a9d1fdcda9d408b94cae668703e70ca 98700e76fa3b4e4e91f3b7352cdfce28 of
+#: sds.tree.SegmentTree.size:3 sds.tree.segment_tree.SegmentTree.__len__:3
+msgid "Size of the array."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.SegmentTree.rst
+#: 076037c0dfcb499cad2d588752724a51 147889853ed9446f9b2ebf2aca10d33a
+#: 329595c415544633bb271f89aa35b6f0 3f7b406ae6ed44c0ae929a8a748bac05
+#: 640054174c144d9db6f487cefc10181e 7060c59039ee4c46ab7134b00744417a
+#: a9adabe61dca4f16a722b010dff9b006 ae4aff0af3d84e03bee40b3631276291
+#: bf4b84c37fe443b893fcd9d1c4b1ab9f
+msgid "Return type"
+msgstr ""
+
+#: 396a2c643179458b864d6741e549c5dc 3b59b6a80bb34867afe77616089dd10e
+#: 5c936521bf424b32968c42673bb4a55e e106a5369fe3475e8e59a6faa5da57db
+#: e9e4c9868a784308a597d75560b27edd of sds.tree.SegmentTree.size:14
+#: sds.tree.segment_tree.SegmentTree.__len__:14
+#: sds.tree.segment_tree.SegmentTree.__repr__:14
+#: sds.tree.segment_tree.SegmentTree.get:19
+#: sds.tree.segment_tree.SegmentTree.is_empty:17
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: f6b988cc7eeb498f81184fb71efb8ff2 of
+#: sds.tree.segment_tree.SegmentTree.query:3
+msgid "Start index of the range (inclusive)."
+msgstr ""
+
+#: e3966e7db0e04379802a74fe520f024a of
+#: sds.tree.segment_tree.SegmentTree.query:5
+msgid "End index of the range (inclusive)."
+msgstr ""
+
+#: c10eaa6426bf4d0e867e64a7831a5c4f of
+#: sds.tree.segment_tree.SegmentTree.query:8
+msgid "Result of the operation on the range."
+msgstr ""
+
+#: 6d6d51a0d44a4c788e085cd8dcc226ba of
+#: sds.tree.segment_tree.SegmentTree.query:11
+msgid "If range is invalid."
+msgstr ""
+
+#: 9f58209abb774ef5b802f2bc8323f327 d806649a4e514c5c9412a660bd66dcd1 of
+#: sds.tree.segment_tree.SegmentTree.query:23
+#: sds.tree.segment_tree.SegmentTree.update:21
+msgid "Time complexity: O(log n)"
+msgstr ""
+
+#: 699fb1c4575d48fb97d203d3a582b365 of
+#: sds.tree.segment_tree.SegmentTree.update:3
+msgid "Index of the element to update."
+msgstr ""
+
+#: 7642383ecd3348fb9308e8c7a3b0a379 of
+#: sds.tree.segment_tree.SegmentTree.update:5
+msgid "New value."
+msgstr ""
+
+#: 14325bcda1ed43dca2ed826c1d78cc75 d3dd467ed8fb485eb6a7642b4ce50e01 of
+#: sds.tree.segment_tree.SegmentTree.get:9
+#: sds.tree.segment_tree.SegmentTree.update:8
+msgid "If index is out of bounds."
+msgstr ""
+
+#: eb7c555abcbe433a9e12b8808616d8f1 of sds.tree.segment_tree.SegmentTree.get:3
+msgid "Index to query."
+msgstr ""
+
+#: c106bdb5d7e04a5d9c753f0b8bbe0c57 of sds.tree.segment_tree.SegmentTree.get:6
+msgid "Value at the index."
+msgstr ""
+
+#: 5e9d28c999484b778b5ee6f47579dc84 of
+#: sds.tree.segment_tree.SegmentTree.to_array:3
+msgid "Copy of the underlying array."
+msgstr ""
+
+#: 8f587e856b7b4edcae95b715b5f3ab99 ae33e1442ca641aab90edde5ec37d046
+#: c61463d345e44661925907b2e3ebfd7f of
+#: sds.tree.segment_tree.SegmentTree.__contains__:19
+#: sds.tree.segment_tree.SegmentTree.__str__:14
+#: sds.tree.segment_tree.SegmentTree.to_array:15
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: 41db49bbbb654d0183462eb491948c66 of
+#: sds.tree.segment_tree.SegmentTree.is_empty:3
+msgid "True if the tree contains no elements, False otherwise."
+msgstr ""
+
+#: 271742236df34aefb4e13bff96933be3 of
+#: sds.tree.segment_tree.SegmentTree.clear:3
+msgid "After this operation, the tree will be empty and size will be 0."
+msgstr ""
+
+#: 9c6d402b47a1494fa184b3ef2c763522 of
+#: sds.tree.segment_tree.SegmentTree.clear:18
+msgid ""
+"Time complexity: O(1) After clearing, the tree cannot be used for queries"
+" or updates until reconstructed."
+msgstr ""
+
+#: b8162f1c1f3047d08745ae9144f2ef06 of
+#: sds.tree.segment_tree.SegmentTree.__len__:1
+msgid "Return the size of the array."
+msgstr ""
+
+#: 81189d267520470d86fca3c0b1cb3291 of
+#: sds.tree.segment_tree.SegmentTree.__iter__:1
+msgid "Return an iterator over the array elements."
+msgstr ""
+
+#: 486b9709e4934fd784ae7c95a7245d6a of
+#: sds.tree.segment_tree.SegmentTree.__iter__
+msgid "Yields"
+msgstr ""
+
+#: 4562a2f2d70040f59c4eec401b0f1bb8 of
+#: sds.tree.segment_tree.SegmentTree.__iter__:3
+msgid "*Any* -- Elements from the underlying array in order."
+msgstr ""
+
+#: 98e43b4de59a43eebc1f4798ec6855a9 of
+#: sds.tree.segment_tree.SegmentTree.__iter__:18
+msgid "Time complexity: O(n) for complete iteration"
+msgstr ""
+
+#: 97eba9e4f6284185b8cad068b71f0d16 of
+#: sds.tree.segment_tree.SegmentTree.__contains__:1
+msgid "Check if item is in the array."
+msgstr ""
+
+#: 551815e5611f41f59eee0c3bc577cfe8 of
+#: sds.tree.segment_tree.SegmentTree.__contains__:3
+msgid "Item to search for."
+msgstr ""
+
+#: 9069b44779d14668918b5055679c49fb of
+#: sds.tree.segment_tree.SegmentTree.__contains__:6
+msgid "True if item is found, False otherwise."
+msgstr ""
+
+#: e2bbf1863df243b7a707cbecc494eb58 of
+#: sds.tree.segment_tree.SegmentTree.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 21680308b61f4cc8bc904914f03da802 9a16f523621441c49fd1462d01a7366d of
+#: sds.tree.segment_tree.SegmentTree.__repr__:3
+#: sds.tree.segment_tree.SegmentTree.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 27546c688e354601a8123827f29faac6 of
+#: sds.tree.segment_tree.SegmentTree.__str__:1
+msgid "Return string showing current array."
+msgstr ""
+

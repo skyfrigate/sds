@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:2
+#: c79c32a5569e4ac5a5d2b9ffead978d9
+msgid "sds.graph.Edge"
+msgstr ""
+
+#: 31acea2af27f4849b79682a6aff424ed of sds.graph.edge.Edge:1
+msgid "Base class for undirected, unweighted edges."
+msgstr ""
+
+#: 376002d4c87a46f3823de2c079b4e994 of sds.graph.edge.Edge:3
+msgid ""
+"An edge connects two nodes in an undirected graph. The edge has no "
+"inherent direction, so (u, v) is equivalent to (v, u)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst
+#: 353f6ae591e6484688ed328c6e89f36f 791f9ec27e584b52962e4042615f5c03
+#: 7a04ddcfdaad48238b90ced4515c5e8f b867ac7cdf394fba86b9e4510cf1c4f9
+#: c942361a079f4a59a6e70e73b197a05f d3ca4cfa8cc94bdebe8fa9a7f6f3156c
+#: e56277f2bcae40e686f7e4d70c18ce1a
+msgid "Parameters"
+msgstr ""
+
+#: 52f923bf0b594749aa301e06094f6089 of sds.graph.edge.Edge:6
+msgid "First node connected by the edge."
+msgstr ""
+
+#: ff0be85e8100469bb5b5077b88bfee05 of sds.graph.edge.Edge:8
+msgid "Second node connected by the edge."
+msgstr ""
+
+#: 1fd436b375cb474c99aa8a3de288176a of sds.graph.edge.Edge:10
+msgid "Additional data associated with the edge. Default is None."
+msgstr ""
+
+#: ab8537947d2f43ec9d7c14ae033badd4 of sds.graph.edge.Edge:15
+msgid "First node (read-only property)."
+msgstr ""
+
+#: 10924084d2a941a790b0b99de9e685b1 77a20a0a3fa0463bab806a5cca318779
+#: 9d22de7da96e460dab885f0ac77eb551 of sds.graph.edge.Edge
+msgid "type"
+msgstr ""
+
+#: 4f2bdfb9fb004211ba92b333d4a485c7 cd8e9db4f85d489abf55074eb1100658 of
+#: sds.graph.edge.Edge:17 sds.graph.edge.Edge:23
+msgid "GraphNode"
+msgstr ""
+
+#: b5635bbeffd644e5b8bb45fde0b5ed0e of sds.graph.edge.Edge:21
+msgid "Second node (read-only property)."
+msgstr ""
+
+#: 2df1adb865e5473b91a42ac5cdb9232d of sds.graph.edge.Edge:27
+msgid "Additional edge data (read-only property)."
+msgstr ""
+
+#: 7fbd63a70e224414bf30a2d39c6404f6 of sds.graph.edge.Edge:29
+msgid "Any"
+msgstr ""
+
+#: 28a28a4a0b6e44c1a24874af0ab68506 733dc732ccc346ff992d2049ca31401b
+#: a96a3f31214d444c8ed3d009f3d783fe b1c3c46c379041148559b668cd1e5704
+#: bb58c7d1f399448bacb369b897bf9c52 bd474c02456841b4a7f2361697aad8fb
+#: f473b6dad9524adf91a14cded2ad2245 fa98cf5aaaff496a928a3a9d9e61dec9 of
+#: sds.graph.edge.Edge:31 sds.graph.edge.Edge.__eq__:9
+#: sds.graph.edge.Edge.__repr__:6 sds.graph.edge.Edge.__str__:6
+#: sds.graph.edge.Edge.connects:13 sds.graph.edge.Edge.incident_to:9
+#: sds.graph.edge.Edge.is_self_loop:6 sds.graph.edge.Edge.other_node:11
+msgid "Examples"
+msgstr ""
+
+#: 0be6a3f461c14efa9c850d3a5885548c of sds.graph.edge.Edge:42
+msgid "Store additional data:"
+msgstr ""
+
+#: 12ad4a81010748f2ae1601549e2eaa6e of sds.graph.edge.Edge:48
+msgid "Notes"
+msgstr ""
+
+#: f88a6b6e5f654abf9de85fcebd3d9fc4 of sds.graph.edge.Edge:50
+msgid "Edges are immutable after creation. Use __slots__ for memory efficiency."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:25:<autosummary>:1
+#: 22056051d18f4645bfe45c391ae83877 2b4ece81099540dfb50eccb861669339
+#: 371a2487d3714c3d8b66f5301c7076f6 of sds.graph.edge.Edge.__init__:1
+msgid "Initialize an undirected edge."
+msgstr ""
+
+#: 43093966d47d4613bd1a0043c7755d56 7653edda16494b3b917f0903d87bf8a9 of
+#: sds.graph.edge.Edge.__init__:3
+msgid "First node."
+msgstr ""
+
+#: a4c05525d62e400db6a9fa997fd0c2e7 a64b083b71ca4be0a4e5e73114688088 of
+#: sds.graph.edge.Edge.__init__:5
+msgid "Second node."
+msgstr ""
+
+#: 1ac1fa1953f746a784e6aee641b9db63 f990bf578dc4491a84a12649f8a03c6e of
+#: sds.graph.edge.Edge.__init__:7
+msgid "Additional data. Default is None."
+msgstr ""
+
+#: 65be463297794932a511745dbbd962b3 aa1f168abd124435bdede6929e436c05 of
+#: sds.graph.edge.Edge.__init__:9
+msgid "Allow self-loops. Default is False."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst
+#: 241015b4297b4448b284ce5be1b9535d 964b82cd852c48a0abcf97ae8573e90c
+#: daad6b30662d4223aba7b706d352a039
+msgid "Raises"
+msgstr ""
+
+#: 15c442f6fde1454cb24f47504ec8a234 ba3abc501d394796b3f51c5706a44868 of
+#: sds.graph.edge.Edge.__init__:12
+msgid "If node1 or node2 is not a GraphNode."
+msgstr ""
+
+#: 398e44041f8e4225b1916f4c3326e44d c6c9c973d0ac4a8cbfac2b4b49f33653 of
+#: sds.graph.edge.Edge.__init__:13
+msgid "If node1 and node2 are the same and allow_self_loop is False."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:13
+#: 4fa15dd0b0744831b78092e4fd61e066
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:25:<autosummary>:1
+#: 88c5144f615d4b4e85414968d3cdeb72
+msgid ""
+":py:obj:`__init__ <sds.graph.Edge.__init__>`\\ \\(node1\\, node2\\[\\, "
+"data\\, allow\\_self\\_loop\\]\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:25:<autosummary>:1
+#: 9ac7caf6592843c6b13f677c60063d74
+msgid ":py:obj:`connects <sds.graph.Edge.connects>`\\ \\(node\\_a\\, node\\_b\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:25:<autosummary>:1
+#: 38e8438247d641009c0a1beeda132c02 e29291fad5f2424bac581601084c0fcd of
+#: sds.graph.edge.Edge.connects:1
+msgid "Check if edge connects two specific nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:25:<autosummary>:1
+#: 87a2e83755c944f9ae2ba702ca26f63c
+msgid ":py:obj:`incident_to <sds.graph.Edge.incident_to>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:25:<autosummary>:1
+#: b3ae934073a542c8b5dee6ca4f15dcd5 d1cb329f22d04a8aa56d7fd08ab9f722 of
+#: sds.graph.edge.Edge.incident_to:1
+msgid "Check if edge is incident to a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:25:<autosummary>:1
+#: 5e988661682d4bc1b9899c00beee232e
+msgid ":py:obj:`is_self_loop <sds.graph.Edge.is_self_loop>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:25:<autosummary>:1
+#: 18cc357260e64dc6a258cebd7ef20826 86975def4cd4406d9189b2f4f360a216 of
+#: sds.graph.edge.Edge.is_self_loop:1
+msgid "Check if this edge is a self-loop."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:25:<autosummary>:1
+#: 83a2a99d0d584e0e97adc1a660f0397b
+msgid ":py:obj:`other_node <sds.graph.Edge.other_node>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:25:<autosummary>:1
+#: a0085d5ea1194474a507a007e98fc377 b53fc131f63e4666a689afaf9ad71c2c of
+#: sds.graph.edge.Edge.other_node:1
+msgid "Get the other node connected by this edge."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst:27
+#: 80fa46a3ba9a41549ce17606cb2a6fd1
+msgid "Attributes"
+msgstr ""
+
+#: e6bc40e978a647f1a81257be79f3893d of
+#: sds.graph.edge.Edge.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.graph.Edge.data>`\\"
+msgstr ""
+
+#: 92f6ec8d5248477c9b7cfd87db5894c5 99bdb137169842aeb435c4adbf99f5a0 of
+#: sds.graph.Edge.data:1 sds.graph.edge.Edge.__init__:1:<autosummary>:1
+msgid "Get the edge data."
+msgstr ""
+
+#: 29e58e813bd2440eab58137f63841412 of
+#: sds.graph.edge.Edge.__init__:1:<autosummary>:1
+msgid ":py:obj:`node1 <sds.graph.Edge.node1>`\\"
+msgstr ""
+
+#: cd705cc42fa94ee1819807f0c4e67f6a e0524673760e470caed7161b56f113cc of
+#: sds.graph.Edge.node1:1 sds.graph.edge.Edge.__init__:1:<autosummary>:1
+msgid "Get the first node."
+msgstr ""
+
+#: e60b38f2da4b4104b6a21a51db280c80 of
+#: sds.graph.edge.Edge.__init__:1:<autosummary>:1
+msgid ":py:obj:`node2 <sds.graph.Edge.node2>`\\"
+msgstr ""
+
+#: 87de372e77b84eafba7f8d1067fb8d5f b75694bc126f4db5b2fc009a366985cf of
+#: sds.graph.Edge.node2:1 sds.graph.edge.Edge.__init__:1:<autosummary>:1
+msgid "Get the second node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst
+#: 116897ff01dc47e68b16822fb7172c2b 1fcb936f11d64799b6e447a3743d4d03
+#: 31557713e99f47608bff635c4849ec42 343c09ce66cc47aa859af7199d78e8ee
+#: 677dd1b4ff314f18b1261021f8cbe086 6d0e2491a51f4a21bcea38591bf0ccea
+#: 9ff4f2e1889448f9b9b463645c912362 c49a7a32604c4eaa85f1e9cfb917d019
+#: d382540e382648229d605f5e79c81110 e3b93a07c0524a0cbb22213a1cc4539b
+#: f40edc91a61242d09b0a1cef9bfbd6dc
+msgid "Returns"
+msgstr ""
+
+#: 975fc748c73a4485912d8a52965c770a of sds.graph.Edge.node1:3
+msgid "The first node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.Edge.rst
+#: 16c0f765dab44bb993280353bb0ea9e1 1792bc3d26774c0d824fefc4b147241e
+#: 2a5a0272f2a34ae2b860c76ac40308d8 45b9a49d2d524b508a0f46cafacf75ab
+#: 549ab9d0065e4677a595e3f518e4f297 5e1785b937154ea3acc3fcb6dbdf0031
+#: 893aaabebe42414fa03f6cd55890e7a2 a66f9c0fe5a845cd82e238ec0d678bb4
+#: e76f5feeea9e48a59287159afd050065 e796058edeee4192b558c842425e219f
+#: f71967421419409ea4a040a2f75a5e40
+msgid "Return type"
+msgstr ""
+
+#: 8eb74701907643a38fd46e0ee70832d5 of sds.graph.Edge.node2:3
+msgid "The second node."
+msgstr ""
+
+#: cdb8fd3585674ebead1ed38315d9ebb0 of sds.graph.Edge.data:3
+msgid "The edge data."
+msgstr ""
+
+#: 6e6c7c86575242d1912d94ef4fce0791 of sds.graph.edge.Edge.connects:3
+msgid "For undirected edges, order doesn't matter."
+msgstr ""
+
+#: a07b3bb7706240a78691b3ee8429fef0 of sds.graph.edge.Edge.connects:5
+msgid "First node to check."
+msgstr ""
+
+#: 919a00cd00054183a1c47f83958c25b2 of sds.graph.edge.Edge.connects:7
+msgid "Second node to check."
+msgstr ""
+
+#: 67ba4133e9b04a8e9912256b64221a8a of sds.graph.edge.Edge.connects:10
+msgid "True if edge connects node_a and node_b."
+msgstr ""
+
+#: 3c038d82364e4cfe807378e2c26dc95a of sds.graph.edge.Edge.incident_to:3
+msgid "Node to check."
+msgstr ""
+
+#: 8a64801508054bdc82fcad9d20f1ab7f of sds.graph.edge.Edge.incident_to:6
+msgid "True if edge touches the node."
+msgstr ""
+
+#: 58b03fe8e5cb42c6a563cb6f1b274c7d of sds.graph.edge.Edge.other_node:3
+msgid "One of the nodes in the edge."
+msgstr ""
+
+#: 3712c2fe3f5d419596fd39f76b11ec78 of sds.graph.edge.Edge.other_node:6
+msgid "The other node."
+msgstr ""
+
+#: 144ae8f5ef96424992c0fd1aebad607f of sds.graph.edge.Edge.other_node:9
+msgid "If node is not part of this edge."
+msgstr ""
+
+#: dc2165c68d4b473da843dac490b368e7 of sds.graph.edge.Edge.is_self_loop:3
+msgid "True if the edge connects a node to itself."
+msgstr ""
+
+#: d7cf5fe9039e4b488af18404b8e80f78 of sds.graph.edge.Edge.__eq__:1
+msgid "Check equality based on connected nodes."
+msgstr ""
+
+#: d68c3aaf58c8464fad1743efa1cbc3f4 of sds.graph.edge.Edge.__eq__:3
+msgid "Object to compare with."
+msgstr ""
+
+#: 3c4160372f014be08bba29bfd40fabe5 of sds.graph.edge.Edge.__eq__:6
+msgid "True if edges connect the same nodes (order-independent)."
+msgstr ""
+
+#: 559ebfff077646c88d4e0ada5f82a9a8 of sds.graph.edge.Edge.__hash__:1
+msgid "Return hash based on connected nodes."
+msgstr ""
+
+#: 33f18ab79d7244da84053f93b233c83c of sds.graph.edge.Edge.__hash__:3
+msgid "Hash value (order-independent for undirected edges)."
+msgstr ""
+
+#: 645be5748cf84813b4deae16a96c8e8f of sds.graph.edge.Edge.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: 38384802021e4d31bb5292b70e96cf11 c48c23740c4146ad85e5b12e5c0dbbdf of
+#: sds.graph.edge.Edge.__repr__:3 sds.graph.edge.Edge.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: 1067b15bd3e64bc3afd5795e2bb81cb3 of sds.graph.edge.Edge.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+

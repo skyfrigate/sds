@@ -1,0 +1,922 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/graph_structures/general.rst:5
+#: e34f8d81b4d441829ffcbad806f9c6de
+msgid "General Graph Guide"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:10
+#: 8eb0c817bbe64104852621f79eef21c2
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:12
+#: 7e37166980a64470854ca77040818ed0
+msgid ""
+"A **graph** is a fundamental mathematical structure consisting of "
+"vertices (or nodes) connected by edges. Graphs model relationships and "
+"connections in countless real-world systems, from social networks to "
+"transportation systems, making them one of the most versatile data "
+"structures in computer science."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:39
+#: d29425eca37f4305adb7ff8dea24c680
+msgid ""
+"Graphs are ubiquitous in computer science and beyond. Understanding graph"
+" theory is essential for solving problems in networking, optimization, "
+"data analysis, and artificial intelligence."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:44
+#: 636c0262087f4e8db877df40288296f2
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:47
+#: 1425f9a78b474e219ad6d64a82ab8e85
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:50
+#: 5ee6c1d7d0b84aa6a58e4d1809e11541
+msgid "Graph Definition"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:52
+#: f674659bd01d4a48b2ab1ba85c70d471
+msgid "A graph :math:`G` is defined as an ordered pair:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:54
+#: 208c8573553d42e29479def3570608f1
+msgid "G = (V, E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:58
+#: 56b2acaba71a4cf49d75ec6ca2c947f1
+msgid "where:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:59
+#: ffcac37bdbeb4e30936b5fb63b489506
+msgid ":math:`V` is a **set of vertices** (or nodes)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:60
+#: c03abe5be59e4ce8b45dfbdb63100aa1
+msgid ":math:`E` is a **set of edges** connecting pairs of vertices"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:62
+#: 4611cef6bf624d6a98170b5ab31345ab
+msgid "For undirected graphs:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:64
+#: 5879b4bd7dd2421cb625edf3fc39e8a8
+msgid "E \\subseteq \\{\\{u, v\\} : u, v \\in V, u \\neq v\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:68
+#: ../../source/guide/graph_structures/general.rst:117
+#: d388b71159d54b5fac274f967f95b2e9 d70a35205cf4466e9169ab711d845d65
+msgid "For directed graphs:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:70
+#: 934821201d034858976a145eddb47e0c
+#, python-brace-format
+msgid "E \\subseteq \\{(u, v) : u, v \\in V, u \\neq v\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:74
+#: 7f13913ca8bb46d1b8f296420cb3509d
+msgid ""
+"**Example**: :math:`G = (\\{A, B, C\\}, \\{\\{A,B\\}, \\{B,C\\}, "
+"\\{A,C\\}\\})`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:77
+#: c04920e537254fbf9b0f6ac6ab6b06f9
+msgid "Special Graph Types"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:79
+#: 23daf9841e4647e2bbda1795e4136109
+msgid "**Simple Graph**: No self-loops, no multiple edges"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:81
+#: 8c4c1fcf35194d1ba64af0950efb160f
+#, python-brace-format
+msgid "\\forall e \\in E: e = \\{u, v\\} \\text{ where } u \\neq v"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:85
+#: 126ad7b48c6a4784854903e872b31792
+msgid "**Multigraph**: Allows multiple edges between same vertices"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:87
+#: db05427a2d14483eafc605bc88f380a9
+#, python-brace-format
+msgid "E \\text{ is a multiset}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:91
+#: 83cc8113c598401b9c5261bb7cb45a9d
+msgid "**Complete Graph** :math:`K_n`: All vertices connected"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:93
+#: 711196090ee54fc1814dac975d85a8e4
+#, python-brace-format
+msgid "|E| = \\binom{n}{2} = \\frac{n(n-1)}{2}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:98
+#: 6eac4930da86456a91900dd4a58c053e
+msgid "Graph Properties"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:101
+#: bfdcd8d068034b18b43550e681c722f7
+msgid "Degree"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:103
+#: c28ec3e1bba4400582a3d96e3e4e5c43
+msgid ""
+"The **degree** of a vertex :math:`v` is the number of edges incident to "
+"it:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:105
+#: 280fdd288fd244bba3bcb5a05fb34683
+#, python-brace-format
+msgid "deg(v) = |\\{e \\in E : v \\in e\\}|"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:109
+#: cac9ae66efad4dd98e3b023156c09432
+msgid "**Handshaking Lemma**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:111
+#: 5a40dffe2aad4ac9b0a48acf29a3921b
+#, python-brace-format
+msgid "\\sum_{v \\in V} deg(v) = 2|E|"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:115
+#: 53586333f43642898d552f2b7d1a0bcf
+msgid "This states that the sum of all degrees equals twice the number of edges."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:119
+#: 5a32450ab300427eafd157e5e24b5a79
+#, python-brace-format
+msgid ""
+"\\begin{aligned}\n"
+"deg^{in}(v) &= |\\{(u, v) \\in E\\}| \\quad \\text{(in-degree)} \\\\\n"
+"deg^{out}(v) &= |\\{(v, u) \\in E\\}| \\quad \\text{(out-degree)} \\\\\n"
+"deg(v) &= deg^{in}(v) + deg^{out}(v)\n"
+"\\end{aligned}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:128
+#: b2ae6d601a0b4cfca96efc44c8a303b0
+msgid "Paths and Connectivity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:130
+#: 360214993efa4190bfa94911dbba2ce6
+msgid "A **path** from :math:`u` to :math:`v` is a sequence of vertices:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:132
+#: 66c15e64db5d475eaa4f8e76a51149da
+msgid ""
+"P = (v_0, v_1, \\ldots, v_k) \\text{ where } v_0 = u, v_k = v, \\text{ "
+"and } \\{v_i, v_{i+1}\\} \\in E"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:136
+#: a844b8d25d0c445a996f9ee64fc9f262
+msgid "**Path length**: Number of edges in the path (:math:`k`)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:138
+#: af1bb2adb58f4d2999f940da7ecf56db
+msgid ""
+"A graph is **connected** if there exists a path between every pair of "
+"vertices:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:140
+#: 0d48349854214af1ac1fa2f9984df8a6
+#, python-brace-format
+msgid "\\forall u, v \\in V: \\exists \\text{ path from } u \\text{ to } v"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:144
+#: bc5a41cf8ed24b82a0a4d31535a9f4dc
+msgid "**Distance** between vertices :math:`u` and :math:`v`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:146
+#: 6c6413faf69a46948ad6eebf0df1ca3e
+#, python-brace-format
+msgid "d(u, v) = \\min\\{|P| : P \\text{ is a path from } u \\text{ to } v\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:151
+#: 3d4cbf6ec6b24b28a58d59c6aff6a7df
+msgid "Cycles"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:153
+#: fe389d34f5bb48ad9c0e82db3f6ce6df
+msgid "A **cycle** is a path where :math:`v_0 = v_k` and :math:`k \\geq 3`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:155
+#: f0cb922ab74446dcb5169d35d39b6afd
+#, python-brace-format
+msgid "C = (v_0, v_1, \\ldots, v_k) \\text{ where } v_0 = v_k"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:159
+#: 468ce5d8f97d40be8d442cf97bd5f6c0
+msgid "A graph is **acyclic** if it contains no cycles."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:161
+#: 073d8ed3cecc40699fe6b89f17bef543
+msgid ""
+"For directed graphs, a **Directed Acyclic Graph (DAG)** has no directed "
+"cycles."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:164
+#: a5227fb553ec477588edcede80c40715
+msgid "Subgraphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:166
+#: c50a339341a84d5da09ae09b8442d5d8
+msgid ":math:`G' = (V', E')` is a **subgraph** of :math:`G = (V, E)` if:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:168
+#: b7665525fb204a09a3067194d5deed59
+#, python-brace-format
+msgid "V' \\subseteq V \\text{ and } E' \\subseteq E"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:172
+#: 368bebd1c6ae4912b788645eb639fbac
+msgid "**Induced subgraph** on :math:`V' \\subseteq V`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:174
+#: 1e542a3fecb642f287368bf27ab03ed0
+#, python-brace-format
+msgid "G[V'] = (V', E') \\text{ where } E' = \\{e \\in E : e \\subseteq V'\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:179
+#: df7d046c08404ad090707ab1e12efe41
+msgid "Graph Representations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:182
+#: ../../source/guide/graph_structures/general.rst:434
+#: 58336473ba3c4ab9a2762a1170c94fff a782c163e33a4476ab275e4779ecad0a
+msgid "Adjacency Matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:184
+#: 3a36059eb6834e24981831ccc8ca8f59
+msgid ""
+"For graph :math:`G = (V, E)` with :math:`|V| = n`, the adjacency matrix "
+":math:`A` is :math:`n \\times n`:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:186
+#: 6e1d7c730ac54939a4e8a38a2df212a1
+#, python-brace-format
+msgid ""
+"A[i][j] = \\begin{cases}\n"
+"1 & \\text{if } \\{v_i, v_j\\} \\in E \\\\\n"
+"0 & \\text{otherwise}\n"
+"\\end{cases}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:193
+#: ../../source/guide/graph_structures/general.rst:207
+#: ../../source/guide/graph_structures/general.rst:221
+#: 8094c0edeaa047489811dcac7cbecb59 aab2374dde3f4554bd04b3ea7f1ee9e2
+#: be75d5b99b82428493fb0f572daaecc2
+msgid "**Properties**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:194
+#: 5e58447be97b4372b50f395b9ccfd282
+msgid "Symmetric for undirected graphs: :math:`A[i][j] = A[j][i]`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:195
+#: 35e6f371d7f64938b87dbd6e781e8bee
+msgid "Space: :math:`\\Theta(n^2)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:196
+#: b681e2034fff4f48a02abe81cc974c4f
+msgid "Edge query: :math:`O(1)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:199
+#: ../../source/guide/graph_structures/general.rst:433
+#: 60ef0ecede1848aaab9a4d2f2b5c4149 87b6545f64404610a07bd54b967fc6f3
+msgid "Adjacency List"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:201
+#: becb7f54f5514ab2802df13fbd9da86c
+msgid "For each vertex :math:`v`, store list of adjacent vertices:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:203
+#: f5ca1804e55c452bb1748fc383e98028
+#, python-brace-format
+msgid "Adj[v] = \\{u \\in V : \\{v, u\\} \\in E\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:208
+#: dd0955e10f3141269448aa9b01cb42a2
+msgid "Space: :math:`\\Theta(|V| + |E|)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:209
+#: 771cba45cb484702814c387d319c2c8f
+msgid "Edge query: :math:`O(deg(v))`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:210
+#: 2af3822787c849408e9db496d91a3a72
+msgid "Optimal for sparse graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:213
+#: aa4b03fdf97c43e281a362241a180188
+msgid "Edge List"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:215
+#: e8b6bcbb8cea4e058bb64983a212c7b6
+msgid "Simply store all edges:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:217
+#: ce60be80ac3142088fed26dbdacc0fb3
+#, python-brace-format
+msgid "E = \\{e_1, e_2, \\ldots, e_m\\}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:222
+#: 6083d8bb6f2446abb52b85ab3c1666c7
+msgid "Space: :math:`\\Theta(|E|)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:223
+#: f836364398df48509e9002dabdc91089
+msgid "Edge query: :math:`O(|E|)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:226
+#: be7049e8d5b4449791189d4470bc90cf
+msgid "Graph Invariants"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:228
+#: 3cb8d2d4ced949bfa3e701495f2c7b28
+msgid "**Handshaking Lemma**: :math:`\\sum deg(v) = 2|E|`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:230
+#: 12ea8bf7d3b04ff3ba3aab42ef558d5b
+msgid "**Euler's Formula** (planar graphs):"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:232
+#: e9589234b2ad4b7e8fdf386e1b851a6b
+msgid "|V| - |E| + |F| = 2"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:236
+#: c668fb3e6edb4320a45684f41c8be402
+msgid "where :math:`F` is the number of faces"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:238
+#: 24301ac7b1664903be35a0f84eeb8744
+msgid "**Edge bound for simple graphs**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:240
+#: 4286110125ea49739d20d7de5ba3b126
+#, python-brace-format
+msgid "|E| \\leq \\binom{|V|}{2}"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:244
+#: f25be0445e0b4ca9ac3a28975a383a37
+msgid "**Connected graph minimum edges**:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:246
+#: f5d00104c597480c87d9a5c7a8455f24
+msgid "|E| \\geq |V| - 1"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:251
+#: 256fd788b571490488800934003a2255
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:254
+#: ce8b422e5a0f422bb378b34de16d8d0c
+msgid "Abstract Data Type"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:290
+#: 929173de464d465dbbcbffe37b8e67e5
+msgid "Core Algorithms"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:293
+#: be56a4b6ad2a4f65aa4431c2d617d317
+msgid "Graph Traversal: BFS"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:295
+#: 603d322aa9fa4092834d35152177a369
+msgid "**Breadth-First Search** explores graph level by level:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:322
+#: 3c0f8ec0805a4d7394eebd4861593ec1
+msgid ""
+"**Time Complexity**: :math:`O(|V| + |E|)` **Space Complexity**: "
+":math:`O(|V|)` for visited set and queue"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:325
+#: fdf8e63b954b4525baa4cc1dab3831fb
+msgid ""
+"**Applications**: - Shortest path in unweighted graphs - Connected "
+"components - Level-order traversal"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:331
+#: 6e4ee54c18684944aeab9c305ab07b40
+msgid "Graph Traversal: DFS"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:333
+#: f5677e97cff544058a72a88be8117514
+msgid "**Depth-First Search** explores as far as possible before backtracking:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:357
+#: 5e705f9cf79c43f4ad0a89ec33783b5b
+msgid ""
+"**Time Complexity**: :math:`O(|V| + |E|)` **Space Complexity**: "
+":math:`O(|V|)` for recursion stack"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:360
+#: dfff8f39d89f4774a75bf950db76fee2
+msgid ""
+"**Applications**: - Cycle detection - Topological sorting - Connected "
+"components - Path finding"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:367
+#: 727a326b0c3d40cca50de872eefc0259
+msgid "Connectivity Check"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:384
+#: ../../source/guide/graph_structures/general.rst:420
+#: 2b52b35a4df54dcb8568f943062210c3 fe08775145784b55abe3b64fc6e50bd4
+msgid "**Time Complexity**: :math:`O(|V| + |E|)`"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:387
+#: 15a357d5f54e405485548eccf8d18986
+msgid "Cycle Detection (Undirected)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:423
+#: dd570dd1a2fc4d3292faf4d631172d7a
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:426
+#: 7810e7ac0cb24803a29a7efe1fce8f07
+msgid "Time Complexity Summary"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:432
+#: 3cab8be4e2304970b84e5c86c880e014
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:435
+#: 3700257bc3ee426b8af7931d2e953c82
+msgid "**Add vertex**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:436
+#: ../../source/guide/graph_structures/general.rst:442
+#: ../../source/guide/graph_structures/general.rst:443
+#: ../../source/guide/graph_structures/general.rst:446
+#: ../../source/guide/graph_structures/general.rst:449
+#: 08e4e540c4f2489aaade8f18e9a03796 44539fc80d01493e955e9c521bf4d36f
+#: 53f428a3ccf94820b1d0ac204d464e75 5bf4030d4e5749b2b3101b2e47d2b462
+#: d951ac1d24a24c5a868ff1e04ae60e37
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:437
+#: e079b096f387435bb23fc1111182cdb7
+msgid "O(V²) - resize matrix"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:438
+#: 3225dc56720049629abc3bce5e1dd687
+msgid "**Remove vertex**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:439
+#: ffccad6fddd44a72939341ee2a9d8e89
+msgid "O(E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:440
+#: ../../source/guide/graph_structures/general.rst:455
+#: ../../source/guide/graph_structures/general.rst:458
+#: 3d19ead1efdb48558d148b23228b5314 64cea97a24fe4c3baffe3436c7aeabd1
+#: cc94c2e178d947c7a808dd67e8f74527
+msgid "O(V²)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:441
+#: 51b1e2dc49d349b38559cd750e15499f
+msgid "**Add edge**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:444
+#: 54292bc3caf5480584e0b35c667fc912
+msgid "**Remove edge**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:445
+#: ../../source/guide/graph_structures/general.rst:448
+#: ../../source/guide/graph_structures/general.rst:452
+#: 79bcb935933b413a84676ae79242b3d5 c6533129116c4d209d91570c14f43991
+#: dbd28922a2384c92846b9361e9736407
+msgid "O(V)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:447
+#: 0c76d65d51db4b1b8ead89cee39f4b95
+msgid "**Has edge**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:450
+#: c8bb4c2e86db47bdbf97a2972e8e8832
+msgid "**Get neighbors**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:451
+#: ac9667da51e141e9bdcfb1db8c10befd
+msgid "O(degree)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:453
+#: 39b37240590f4961b19008b53c301b49
+msgid "**BFS/DFS**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:454
+#: ../../source/guide/graph_structures/general.rst:457
+#: 27a012c0b5ee4743b43e79e5a4c5a96a 9d64243ed17f4fa89b4838db3fcd704c
+msgid "O(V + E)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:456
+#: 12a735f948e148f1bbb5f532531d5c6d
+msgid "**Is connected**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:461
+#: 3b72b18f4da94abc95b097df872398d0
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:467
+#: e58adc0ca64c4b258fae3f99425cd9a7
+msgid "Representation"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:468
+#: 8b4bd98eda2d4b02890ab6f99f4e12de
+msgid "Space"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:469
+#: bd5ca4655dc54b00806403d8f559ae25
+msgid "**Adjacency List**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:470
+#: 10f51f362346429bb392082489f69307
+msgid "O(V + E) - optimal for sparse graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:471
+#: f731399d44e74b8b978713faf397a1fe
+msgid "**Adjacency Matrix**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:472
+#: 42c7ae5e180e4051b84bdb15474f461d
+msgid "O(V²) - optimal for dense graphs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:473
+#: e64ac2995e5e41a78adb0e4fa184f786
+msgid "**Edge List**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:474
+#: 553ff5c387524a68b043843e6132b132
+msgid "O(E) - minimal, but slow queries"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:476
+#: 495471070ab54d78a6351bf2788b05c1
+msgid ""
+"When :math:`E = O(V^2)` (dense), matrix is better. When :math:`E = O(V)` "
+"(sparse), list is better."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:480
+#: 00488dfd017a4868b16257de5d103c0f
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:483
+#: 1f0a5a1230304403b408c146624f085c
+msgid "Installation and Import"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:494
+#: 1b245a8c23a248ca94e76498d1f7509c
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:497
+#: 02e2134be51f49a981eaa508904579af
+msgid "Creating a Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:512
+#: 30645b9d4e99437f98bc31e92f9244ce
+msgid "Building a Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:539
+#: 93a929a0759e424f806f89e27960e619
+msgid "Querying the Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:557
+#: 2fb7d795a521400ab57e0fb7e30ad726
+msgid "Traversing the Graph"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:570
+#: 7c9a02c6bf08479d92d524fb2676fd59
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:573
+#: 1fe8b8f5ea31424b959734bac3051279
+msgid "Application 1: Social Network"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:575
+#: 6e9ad1bdfb9d4c5a876c9bbaaf7cc9c8
+msgid "Complete social network implementation:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:698
+#: c895e0d4a99d4bdea8af00bcab328cd8
+msgid "Application 2: Network Topology"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:700
+#: b82805fbe18b4413bd352a4f9ef025e2
+msgid "Computer network modeling:"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:819
+#: 5c2fbb1637b847639f5330427f6f6fc2
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:822
+#: f67cc81fd71e48128e972daa39f20494
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:824
+#: 0b34abccbe3e4234b7cec15a3a959686
+msgid "✅ **Choose appropriate representation**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:835
+#: e304b7a2accd4677810447fa3808c46c
+msgid "✅ **Use BFS for shortest paths**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:856
+#: 076a5a6e7c7c4557bebafeca630bc2fe
+msgid "✅ **Cache expensive computations**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:865
+#: 1af4974f26724cf698c2d36aa37d5227
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:867
+#: e506c6407d474970b5a16816373f6f84
+msgid "❌ **Don't modify during traversal**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:881
+#: 392a673640354b0eb523a73b17e00303
+msgid "❌ **Don't use wrong representation**"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:893
+#: 8abcdd5506d54085b2b01a5b5caeb561
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:895
+#: e87de7c704b940768afe650a23276404
+msgid ":doc:`directed` - Directed graphs and DAGs"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:896
+#: 2e4b35173dbf486c84b6d3fe1afbb063
+msgid ":doc:`weighted` - Weighted graphs and shortest paths"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:897
+#: 80ebe011aaca42798aaab8c8ddcc3a00
+msgid ":doc:`/api/graph/index` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:900
+#: 38c6ee087b00471381dd2e07fc1bbdfb
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:902
+#: c0c0baa3b6674425b54896f251b1f1ae
+msgid ""
+"Wikipedia contributors. \"Graph (discrete mathematics)\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:905
+#: 7eb6239192fa40e5bfd7163718d6ce87
+msgid "Comprehensive overview of graph theory fundamentals."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:907
+#: c030efc5ff584a8886ecaa5355303341
+msgid ""
+"Wikipedia contributors. \"Graph theory\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Graph_theory"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:910
+#: 3e3c252fe561407e9d60011916b8b861
+msgid "History and applications of graph theory."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:912
+#: 8f55d6f51f2d4562a9bb2f0bfcae55ca
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 22. https://mitpress.mit.edu/9780262046305/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:915
+#: c57341691caf474fa55d7023e0130004
+msgid ""
+"Standard algorithms textbook with graph algorithms. Many university "
+"libraries provide access."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:917
+#: 0add77866c7d4e4d93c81a738205ccfa
+msgid ""
+"Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Part 4. "
+"https://algs4.cs.princeton.edu/"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:920
+#: e61dfad4f1034579867dc1801e0f8162
+msgid ""
+"Free online content accompanying the textbook. Excellent graph algorithms"
+" coverage."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:922
+#: 241150d79eff46b1ada863e12df77085
+msgid "West, D. B. \"Introduction to Graph Theory\", 2nd Edition, Pearson, 2001."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:924
+#: 656c9495e8dc4b1ab3340b45c9786bff
+msgid ""
+"Classic graph theory textbook. Available through many academic "
+"institutions."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:926
+#: 963b74fb07c246c480c863cd76329afd
+msgid ""
+"Wikipedia contributors. \"Handshaking lemma\". Wikipedia. "
+"https://en.wikipedia.org/wiki/Handshaking_lemma"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:929
+#: 2fd1050602e844f8b1fb812101eed529
+msgid "Proof and applications of the handshaking lemma."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:931
+#: e91ff07f78194d5a8d4582497a5fda2b
+msgid ""
+"OpenDSA Project. \"Graph Implementations\". https://opendsa-"
+"server.cs.vt.edu/ODSA/Books/Everything/html/GraphImpl.html"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:934
+#: ffa4e44671fc4f66923e98e764f33c5a
+msgid "Interactive tutorials on graph data structures."
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:936
+#: 7156f1db0b914e2bbdce8bf914e2a45c
+msgid ""
+"Halim, S. \"Graph Data Structures\". VisuAlgo. "
+"https://visualgo.net/en/graphds"
+msgstr ""
+
+#: ../../source/guide/graph_structures/general.rst:939
+#: 17d1647c4f524947971e0df85e0355fa
+msgid "Interactive visualizations of graph algorithms."
+msgstr ""
+

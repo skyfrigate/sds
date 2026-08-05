@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:5
+#: ad3a7ddd108d493ab15657f5e7874d87
+msgid "LRU Cache — User Guide"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:9
+#: 04482bd4b18f4a58b8fc801a80351c62
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:12
+#: 276b04f9a0014f2e82ffdc758001d2de
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:14
+#: 53c6d8ee4e6741e9b00891c06295ec2e
+msgid ""
+"An **LRU Cache** (Least Recently Used) is a bounded-capacity key-value "
+"store that evicts the least recently used entry when full. Every call to "
+"``get`` or ``put`` moves the accessed entry to the most-recently-used "
+"(MRU) position."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:19
+#: 34d7640226ad4294b3aa97ba6fe8bf7a
+msgid "Foundations"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:22
+#: 9ec4099ef4dc40139d882f2e03566ac6
+msgid "LRU Eviction Policy"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:24
+#: 8e845c118a184e6b9945113e4f5dea94
+msgid ""
+"Entries are ordered from least recently used (LRU) to most recently used "
+"(MRU). When capacity is reached, the head of the list (LRU) is evicted."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:38
+#: 1b25eb6051254b4ead0de7e4c67a901e
+msgid "O(1) Implementation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:40
+#: 9b4452f027514e208c513c6e80339d2e
+msgid ""
+"The combination of a **doubly-linked list** and a **hash map** achieves "
+"O(1) for both ``get`` and ``put``:"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:43
+#: 476a2d0b8d834baf939739cc407a6d77
+msgid "The linked list maintains LRU → MRU order"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:44
+#: 5a02581aa56341eaaafd3ff7db1643fb
+msgid "The hash map maps each key to its node in the list"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:45
+#: 1cdfc136e4044db6bcc50d4b36e9aead
+msgid "O(1) node access via hash map + O(1) move to head/tail"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:65
+#: dae67ec0b2d64528a484d996fe7468e9
+msgid "Sentinel Nodes"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:67
+#: 1ea3903af5fe49f5aa8a1e166186d1ef
+msgid ""
+"The implementation uses two fixed sentinel nodes ``_head`` and ``_tail``,"
+" eliminating edge cases when inserting or removing at the list "
+"boundaries."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:71
+#: 598c7b5d86694b58be8a144c92564bb6
+msgid "Usage"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:112
+#: fea645263e554f2f8dc94dbd770e5de2
+msgid "``get`` vs ``peek`` vs ``__contains__``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:118
+#: 5a90474a4b514c27958c5b21cd05131b
+msgid "Method"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:119
+#: be2f0fed70e2401eb07697498053c1a1
+msgid "Returns value"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:120
+#: d7a076bda26b47d49b27d39d804e3d8d
+msgid "Updates recency"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:121
+#: 190cd0baf13141178e211190586d428a
+msgid "``get(key)``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:122
+#: ../../source/guide/advanced_structures/lru_cache.rst:125
+#: 875f86967d214b1abc37e611e60eb778 9d14e0b68a3c4e2792f1d381129a93d1
+msgid "✅"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:123
+#: 87d78d425d6a40b1b0a9aceadb528032
+msgid "✅ (moves to MRU)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:124
+#: fb2acbcb46484bc080ad7f9ff64a3288
+msgid "``peek(key)``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:126
+#: 51cbecf5ee674df79dfbb43794d6df75
+msgid "❌ (order unchanged)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:127
+#: 6670c745d5d64ad8ab0211d32837dfa1
+msgid "``key in cache``"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:128
+#: db42415fb8fb415db6dc8b749dc83c6a
+msgid "❌ (bool only)"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:129
+#: f96e06bf3eda4d2b92f0de9e0acd5b38
+msgid "❌"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:132
+#: 6ca41b3e792d48d49dca10e51e02fc7d
+msgid "Real-World Use Cases"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:135
+#: 917869aa08914a61aa754927d92b0c2b
+msgid "Database Query Cache"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:151
+#: 83fb20fa0f2b4d18828d8957a133d2b2
+msgid "Memoisation"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:168
+#: ae157dcc29f246e5bc7da74e6162ad3f
+msgid "Browser Page Cache"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:182
+#: 65c7ed6ffc194af983b981de61232920
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:184
+#: 8a8bcf0126fd48b79e49475f7332374c
+msgid "✅ Use ``peek()`` to inspect a value without disturbing the eviction order."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:186
+#: 632bc520703e427c976f4027761e1ff9
+msgid "✅ Monitor ``evictions_count`` to detect an under-sized cache."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:188
+#: 6a99ae7e105b40e49cc21bb4cdb65081
+msgid ""
+"✅ Use ``key in cache`` to distinguish a stored ``None`` value from a "
+"cache miss before calling ``get()``."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:191
+#: ad77fbd536ec42de90feb518cb3b9090
+msgid ""
+"❌ Do not use ``__contains__`` as a substitute for ``get()`` — it does not"
+" promote the entry, and ``get()`` can return ``None`` for two distinct "
+"reasons (absent key vs stored ``None`` value)."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:196
+#: 3b5d868d90184158a5c9408a6861ce2f
+msgid "References"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:198
+#: 9f8dc4fcd55c4b428e2a0c915020bd60
+msgid ""
+"LeetCode problem 146 — LRU Cache (canonical interview problem). "
+"https://leetcode.com/problems/lru-cache/"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:201
+#: a06aa2b2445241aaabfb014763f4af14
+msgid ""
+"Cormen, T. H., et al. (2009). *Introduction to Algorithms* (3rd ed.), "
+"Chapter 11. MIT Press."
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:205
+#: 5a60a8eb32a54b5bbb47ae4a8e17daf4
+msgid "See Also"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:207
+#: 4ed290265e194f49a1a36dfc808c8a2d
+msgid ":ref:`api_advanced_lru_cache` — API Reference"
+msgstr ""
+
+#: ../../source/guide/advanced_structures/lru_cache.rst:208
+#: 75d24b91d54943ebb40530c8f9973e3b
+msgid ":ref:`guide_advanced_hash_table` — Underlying hash tables"
+msgstr ""
+

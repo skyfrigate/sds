@@ -1,0 +1,652 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/index.rst:5 258bd55bfa5c4145ab7b76145cec9fcf
+msgid "Tree Structures (sds.tree)"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:9 df89150afb3c4670b25c8d26fdb8972f
+msgid ""
+"Tree data structures organize elements in a hierarchical manner, where "
+"each element (except the root) has exactly one parent and zero or more "
+"children."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:13 27eeb2ee33c549489a931235afeb566e
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:15 b47285e8ec4e407092a796218167bd18
+msgid ""
+"The tree module provides implementations of fundamental hierarchical data"
+" structures:"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:17 d11f30509b034a4e9983449b4b00411f
+msgid "**Binary Trees** - Trees with at most two children per node"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:18 a3f5e476c4ec4717977b7d184edf21c4
+msgid "**Binary Search Trees** - Ordered binary trees for efficient searching"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:19 55c2fa6daf3b4485a599cd2cce466cbe
+msgid "**Balanced Trees** - Self-balancing trees (AVL, Red-Black)"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:20 bcd18db6b07046619f0169fcafc3ea2d
+msgid "**General Trees** - Trees with arbitrary number of children"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:21 284fe62efb4849c98ad3a7a52e910775
+msgid "**B-Trees** - Multi-way search trees for disk-based storage"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:22 5be544645e49418ea8e9a00e5dbd2fa9
+msgid "**Tries** - Prefix trees for string operations"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:23 bb85e88e4ae149cd9f5e0a32651b1598
+msgid "**Heaps** - Priority queue implementations"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:24 98271dfe24b44d1e90d71ca2f454baa4
+msgid "**Segment Trees** - Efficient range query structures"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:27 67db76b4ac8147449806241e858751c5
+msgid "Key Features"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:29 72d2be026c23410e89d473029a0d5c63
+msgid ""
+"✓ **Hierarchical organization** - Natural representation of nested data ✓"
+" **Efficient operations** - O(log n) search in balanced trees ✓ "
+"**Multiple traversals** - Inorder, preorder, postorder, level-order ✓ "
+"**Self-balancing** - AVL and Red-Black trees maintain balance ✓ "
+"**Consistent API** - Uniform interface across all tree types"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:36 1e4ad2203a754e2a836c4f2fd3362b15
+msgid "Module Contents"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:39 27c69db8322a4ce2918a3b3bcd2f5a3b
+msgid "Node Classes"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: 18eb72a036494c50b9b366f2f8baf18c
+msgid ":py:obj:`BinaryNode <sds.tree.BinaryNode>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: 7f5c4fb8c14e4d0ab4b7c46e17924f53
+msgid "A node for binary trees."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: 3071962ad2984bb8bc1e60b04b76818c
+msgid ":py:obj:`TreeNode <sds.tree.TreeNode>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: 5a82a944188841bbb86cec5cb9ee41a7
+msgid "A node for general trees."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: 02330b6798bb4deea6f21c492f184d8e
+msgid ":py:obj:`BTreeNode <sds.tree.BTreeNode>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: e0972f72dc854b1f83ab9c0901e51490
+msgid "Node for B-Tree structures."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: a5cc2d8db41849298c7d3381d120fe5d
+msgid ":py:obj:`TrieNode <sds.tree.TrieNode>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: 262516fb500446cc929758112d5781df
+msgid "Node for Trie (prefix tree) structure."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: 0ad0207d42bc424d80085cc12c3c5525
+msgid ":py:obj:`AVLNode <sds.tree.AVLNode>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: 170e01ca1f3643c1bab214406ba62a93
+msgid "A node for AVL trees with height tracking."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: 839b1ac436494a8e8eb4648ed9cd4da3
+msgid ":py:obj:`RedBlackNode <sds.tree.RedBlackNode>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:51:<autosummary>:1
+#: c40a6c488d5f41be94a0b3cbad0716f0
+msgid "A node for Red-Black trees with color attribute."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:53 c3e88a5cc98c4a36b865fb890360dc7b
+msgid "Binary Tree Structures"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:61:<autosummary>:1
+#: 5fa136816cda4251bc15619400da16e6
+msgid ":py:obj:`BinaryTree <sds.tree.BinaryTree>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:61:<autosummary>:1
+#: 2565a5369bcf491184e2ae9951b6203e
+msgid "A simple binary tree implementation."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:61:<autosummary>:1
+#: ec35019733a74265bed4b4ad130aecaa
+msgid ":py:obj:`BinarySearchTree <sds.tree.BinarySearchTree>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:61:<autosummary>:1
+#: ab3c91e0eb454a28a804e1946334db28
+msgid "Binary Search Tree implementation."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:63 a8e774255fd54ed0a4fb8eb350b96c2b
+msgid "Balanced Trees"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:71:<autosummary>:1
+#: 0661ccd5dbbf4432a42ccdba33355d8a
+msgid ":py:obj:`AVLTree <sds.tree.AVLTree>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:71:<autosummary>:1
+#: 6c428767811e44a6a51dd9e4f8336f6e
+msgid "AVL Tree - Self-balancing binary search tree."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:71:<autosummary>:1
+#: 3248260f8880494f93ced846deef6760
+msgid ":py:obj:`RedBlackTree <sds.tree.RedBlackTree>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:71:<autosummary>:1
+#: c0bc284d5fdc4933a51aea532bc566a6
+msgid "Red-Black Tree - Self-balancing binary search tree."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:73 ../../source/api/tree/index.rst:321
+#: 133eff5abed7453990dc5982a2e06faf 6c413ce6cc584944a69e20be42399df5
+msgid "General Trees"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:80:<autosummary>:1
+#: 6022cd79576b4eea8cf057d061d2df19
+msgid ":py:obj:`Tree <sds.tree.Tree>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:80:<autosummary>:1
+#: 1a2b3f0f6db04def971df36ce5e4d9ae
+msgid "General tree (n-ary tree) implementation."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:82 6b4e173f9fcb4845b340bfccd29b879b
+msgid "Advanced Trees"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: 1ecd58f407164a72b94b2a26c6d0af82
+msgid ":py:obj:`BTree <sds.tree.BTree>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: 62584a7f548a42d886a0a80c134cf584
+msgid "B-Tree implementation."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: 30bb13d8ed9b4e1a86b13a676fb353b3
+msgid ":py:obj:`Trie <sds.tree.Trie>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: f9052fc1ac2b411aaf6468e5f76a30a4
+msgid "Trie (Prefix Tree) implementation for efficient string operations."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: 048cd1710ec54a32821db20a561437ad
+msgid ":py:obj:`MinHeap <sds.tree.MinHeap>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: 37abb4093459448996ec2170ff58b95d
+msgid "Min-heap implementation using array representation."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: 1bc391a91c744a53973f05aba614b7f9
+msgid ":py:obj:`MaxHeap <sds.tree.MaxHeap>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: fc72921659c54c1da741269e69fbdd0c
+msgid "Max-heap implementation using array representation."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: d9ed3737cf6d45b58d06e4a3a6e7b362
+msgid ":py:obj:`HeapPriorityQueue <sds.tree.HeapPriorityQueue>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: f18f2cbde49343aa9d926fe3a7e09ddd
+msgid "Optimized priority queue implementation using min-heap."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: 029cf9f9bceb4d58aaf538267a1eae39
+msgid ":py:obj:`SegmentTree <sds.tree.SegmentTree>`"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:94:<autosummary>:1
+#: 34ff723a0a9d46fb8b9765dffcae73f5
+msgid "Segment Tree for efficient range queries."
+msgstr ""
+
+#: ../../source/api/tree/index.rst:96 1b42686bb4224bd2a6e6937bb44c7f3b
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:112 b46017f9909640c6940c37338551e7e5
+msgid "Tree Type Comparison"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:114 f433079b0fbc42eead2fc884033b2d5e
+msgid "Tree Structure Comparison"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:118 8e05423510cc49b3ad85528ff0bf8306
+msgid "Structure"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:119 ../../source/api/tree/index.rst:387
+#: 483d5998efd34db3a05754393cf6f863 75e6b947951f445485b02f0564eb66ec
+msgid "Insert"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:120 ../../source/api/tree/index.rst:392
+#: 380db0a000424d4bb5d9c6ad95728e95 5135addce8c64976b4b797205fd9b83d
+msgid "Search"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:121 ../../source/api/tree/index.rst:402
+#: 13ac7f15b4e24d818c0fb9f77e20189a 782db9b960e44793aa77195c1f2e8ff8
+msgid "Height"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:122 3bc41293bdac40f5b0cd0a47bc6b57b9
+msgid "Best Use Case"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:123 ../../source/api/tree/index.rst:383
+#: 13df0d12eb75471aa6758f194c4956f2 be92e258f9bf435ba76c8b0a06e43ed9
+msgid "Binary Tree"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:124 ../../source/api/tree/index.rst:125
+#: ../../source/api/tree/index.rst:126 ../../source/api/tree/index.rst:145
+#: ../../source/api/tree/index.rst:146 ../../source/api/tree/index.rst:160
+#: ../../source/api/tree/index.rst:164 ../../source/api/tree/index.rst:388
+#: ../../source/api/tree/index.rst:393 ../../source/api/tree/index.rst:395
+#: ../../source/api/tree/index.rst:398 ../../source/api/tree/index.rst:400
+#: ../../source/api/tree/index.rst:403 ../../source/api/tree/index.rst:405
+#: ../../source/api/tree/index.rst:408 ../../source/api/tree/index.rst:410
+#: ../../source/api/tree/index.rst:413 ../../source/api/tree/index.rst:414
+#: ../../source/api/tree/index.rst:415 0290b8a914294ed3b44d1b64e31a644c
+#: 0b79bc0f38e747b5b80775ad7c62c9e9 23b87fe7282547e3a75ba4f3fd14a9ff
+#: 2e2d16b7ed44445a8b51e018f7fb4864 38cfb9c6ac73466e89386cc1971dbef0
+#: 40e3cabb05c04eb3b519b6750ca284f1 4a6bb6e130dc4b378d6d73dc0beaede2
+#: 4f90e2008e8c4e52849d562ce6530f17 9c6a1e3c0e334040bc4263a9cfb62101
+#: a021f4dad8a64b5b9472cb878a9bca2a a4885888ab954fd4a0345ef7ff1a64a4
+#: a9ae04a40eca4b8b92b5b9dbec2ef11c aab1b583f45f4f9c9f50a81a06fb77c4
+#: ac76c199aaa243a8a6e66cc1700b7ca3 d94738ef089344c68ef6c97e1c5a018c
+#: e156693c1a39431488ff9b9840e787a6 e830d02ff3794be0897bc5178372d765
+#: f174c69cc2a144a7a013a3b7c5b79580 fe571b51371c487f96952b6a851753f3
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:127 07b264dee2c44d39be0a19b6ed9d49d2
+msgid "Simple hierarchies"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:128 e1b006b5c915479395dd10c4adf8cd4d
+msgid "BST"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:129 ../../source/api/tree/index.rst:130
+#: a7d5046ab28244b99a75d64517a6cd79 f558b3939efa45aba3b8886285f431ca
+msgid "O(log n)*"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:131 6e98260761ae41f5a2baec2892766aa3
+msgid "O(n)*"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:132 9632c97fc0074f8c93795e2c0dbc92a9
+msgid "Ordered data, searching"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:133 f32ccc286d9a42cb9ecc802aa75ea44e
+msgid "AVL Tree"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:134 ../../source/api/tree/index.rst:135
+#: ../../source/api/tree/index.rst:136 ../../source/api/tree/index.rst:139
+#: ../../source/api/tree/index.rst:140 ../../source/api/tree/index.rst:141
+#: ../../source/api/tree/index.rst:149 ../../source/api/tree/index.rst:150
+#: ../../source/api/tree/index.rst:151 ../../source/api/tree/index.rst:159
+#: ../../source/api/tree/index.rst:161 ../../source/api/tree/index.rst:165
+#: ../../source/api/tree/index.rst:166 ../../source/api/tree/index.rst:389
+#: ../../source/api/tree/index.rst:394 ../../source/api/tree/index.rst:399
+#: ../../source/api/tree/index.rst:409 02306f8a3fb94e358a706a09499c9fe2
+#: 1615d2b7d8ad4bc898396c947b4f3bef 17fd1f07b5294d0da34ad53304be6d18
+#: 2766f20b443745729593e83a7cc07647 293b3065c940442e8277910c16926417
+#: 406dfc9e0d374ede9652c6f5f93398be 5cc11919fd5146d8af863306dd30e2d5
+#: 74673855436345f582f8a923361c4c9c 7d5b14a4a4824bfabef337963620044a
+#: 7fceb7a2e19a4e54b0ed27b6398c86b9 83de6d79f36a4566bf48baecdfec76ef
+#: 9168590b96c14791a06c4445be1bbb32 a0b8bbf287ea4cad95f34a3409cccd97
+#: af5aed6b39a84f8f87e3dd66d8f6c501 cd3a2d53b8a84deeaf7f44677959acac
+#: e6c92a32edd9438d9efaf83d5abacc6f f9714a75aa4a489e896f4cba76690a9d
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:137 95e50a4fef5f445c84111938b1a5e4de
+msgid "Frequent searches"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:138 5d74c42263df4dc39d0300638fc8938f
+msgid "Red-Black Tree"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:142 aa35dba63eff42dbbf7c8804fc13c26f
+msgid "Frequent insertions"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:143 ../../source/api/tree/index.rst:385
+#: 166a24035e9440a5b7bcc3200dd65f17 4879279f51fb4a9aa00a3a54bbc2e77e
+msgid "General Tree"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:144 ../../source/api/tree/index.rst:390
+#: 8b996477362e4546b066d235ab9d0900 a5ea510eae5e444aa83c328ce75e3d1f
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:147 50cec1b268b1402f944a2aceae34cd19
+msgid "File systems, DOM"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:148 a22531a698964e3295cecf100df69e6f
+msgid "B-Tree"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:152 589d1e2682b140ebb4650d4def7bce0b
+msgid "Databases, file systems"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:153 4ff17271e6b34240b1c8cee0f11e78fb
+msgid "Trie"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:154 ../../source/api/tree/index.rst:155
+#: ../../source/api/tree/index.rst:156 a045049318fc4bba839a4fad9ab8381b
+#: e2cc7c671b0143c79756b62f04a24396 f56080fa121847479fcfee26a1688dfa
+msgid "O(m)"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:157 487d85a0110546cf9346b9d6426621e8
+msgid "Autocomplete, dictionaries"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:158 c18d0563ad144259a309eb2f78e9a99d
+msgid "Heap"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:162 c2c682d96ebd4cc19bc1cf0c9e7213ec
+msgid "Priority queues"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:163 186318ea2df746ba8bc09222667ee428
+msgid "Segment Tree"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:167 bf9e726a3f0647a9bb5794fa86d0e0d4
+msgid "Range queries"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:169 055d13ffb3d54ea8b198b9b1ff61ba8c
+msgid ""
+"\\* Average case; O(n) worst case for unbalanced BST m = length of key "
+"for Trie operations"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:173 2a9a9d93b3754604978cfc87c2885c94
+msgid "Binary vs General Trees"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:196 6c23dbce6bfa4f1286d00d89ddbbeb74
+msgid "Traversal Methods"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:198 768f780845a04d32b5859e6e3b03bde1
+msgid "All tree structures support multiple traversal methods:"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:225 8b8266f716694b3086e0b21226ee4708
+msgid "Balanced vs Unbalanced Trees"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:228 d4a0c5b8d370423dae955c02e500474e
+msgid "Impact of Tree Balance"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:248 371c457bb6ce438f9c81020a31b8ff92
+msgid "When to Use Each Tree Type"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:251 9488b96d4cac492a9449820a12a46c2a
+msgid "Decision Guide"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:279 9835a150318f4f208201380536c3af15
+msgid "Common Use Cases"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:282 587cc498dee84f9c9a0cfc31805be585
+msgid "Binary Search Trees"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:304 59358a4d407d41899abf3e84ab9b470a
+msgid "AVL Trees"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:338 2c14dbb71bc4442286a4068f66e87ed8
+msgid "Tries"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:355 c74475227dd94ad89e7d65affc2ec820
+msgid "Heaps"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:373 e73619b6a7c243b5982953b0afdd9a73
+msgid "Performance Guidelines"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:376 dbf5cb178cb94443a6785b647dadac52
+msgid "Time Complexity Summary"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:382 9fc2ba144b2449a0b4ee054cd2de4f6a
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:384 d127c7e0502b417c9d681afca12cfebe
+msgid "Balanced Tree"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:386 9ecca2abce95476ea83d0856742cacae
+msgid "Notes"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:391 aaa684fd30764308a4c649530bbb4fde
+msgid "At known position"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:396 9d8bee72179e4a2fa9018ea3ff26a27d
+msgid "BST property helps"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:397 6f69bda615764f1cb963022d93c47795
+msgid "Delete"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:401 d0f45547e42b4031b2cdb83ebe709e69
+msgid "Must find node"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:404 c3d04b229c48459d9472c131cd941e9b
+msgid "O(1) or O(n)"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:406 04c80eab8b6145699dda195fc5a6db92
+msgid "Cached in AVL"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:407 af9547aabcea40e3a9368bade1e48d01
+msgid "Min/Max"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:411 8cfd5ed7ebcb4cb1aeea6ee3b72ecc8b
+msgid "BST only"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:412 d1646660bac54f35b87d05538c72c0f8
+msgid "Traversal"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:416 1b746018a0e14aeca76ced8d023b7076
+msgid "Visit all nodes"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:419 e77af372189c4f649af921aa12e69809
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:421 3fcd6c65574e402e8dbdbd018dd4ce83
+msgid "All tree structures have:"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:423 aa2e636103d3426bb3a4d0f6b6f22d6c
+msgid "**Storage**: O(n) for n nodes"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:424 ccbe1b6b5f264d59936e299098990eec
+msgid ""
+"**Recursion**: O(h) where h is height * Balanced: O(log n) * Unbalanced: "
+"O(n)"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:429 1178a069002d4d3ea4c6c3ac27f1e33d
+msgid "Related Guides"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:431 7627a9a78386450c9099976999e25d23
+msgid ":doc:`../../guide/tree_structures/index` - User guide for tree structures"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:432 9b235061ba854516966f0a600872e64f
+msgid ":doc:`../core/index` - Core abstractions"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:433 b62fbd85a9234e10acbd9f54a2cabe5a
+msgid ":doc:`../linear/index` - Linear structures"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:436 179a7f0537a54171aa525ecd74ecf430
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:439 16ceaf08feba4d56b5dac849d346f705
+msgid "External Resources"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:441 a7c7227bb4ec4c0f8e07118c3ee25892
+msgid ""
+"`Wikipedia: Tree (data structure) "
+"<https://en.wikipedia.org/wiki/Tree_(data_structure)>`_"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:442 0eea52de15fa4edbaa60bf299022ebff
+msgid "`VisuAlgo: Binary Search Tree <https://visualgo.net/en/bst>`_"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:443 4c2ac96fbe00470da72cf8a9d258ae2e
+msgid ""
+"`CLRS Introduction to Algorithms <https://mitpress.mit.edu/9780262046305"
+"/introduction-to-algorithms/>`_"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:446 89f17f0b0cee47c788d2f8cbd27d2b1a
+msgid "Academic References"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:448 fa3f03707d2b48e59caabf06287de302
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapters 10, 12-13"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:449 454f4320bb5e446cae90b924a7a5acd2
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 1\", Section 2.3"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:450 58381ef6e39e4c51b03c269bf6171255
+msgid ""
+"Adelson-Velsky, G., Landis, E. M. \"An algorithm for the organization of "
+"information\", 1962"
+msgstr ""
+
+#: ../../source/api/tree/index.rst:451 e1d403141ff449bf9265a2dfcfc0de78
+msgid ""
+"Bayer, R., McCreight, E. \"Organization and Maintenance of Large Ordered "
+"Indices\", 1972"
+msgstr ""
+

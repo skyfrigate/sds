@@ -1,0 +1,589 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/advanced/fenwick_tree.rst:5
+#: 9e3242b683fd4383adae93a3f48ebde9
+msgid "Fenwick Tree"
+msgstr ""
+
+#: 5ed2fc05a65f42b5a5b65950fdcee8a9 of sds.advanced.fenwick_tree.FenwickTree:1
+msgid "Bases: :py:class:`~sds.advanced.interfaces.AbstractFenwickTree`"
+msgstr ""
+
+#: e8e19057dbfd4fb5b5097f75dc041bd7 of sds.advanced.fenwick_tree.FenwickTree:1
+msgid "Binary Indexed Tree for O(log n) point updates and prefix sums."
+msgstr ""
+
+#: 0a0bc735205f48cea35ad6ee0c832109 of sds.advanced.fenwick_tree.FenwickTree:3
+msgid ""
+"Stores a sequence of *n* numeric values (initially zero) and supports "
+"efficient cumulative sum queries and element updates."
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst 05b559d6e897409fb956de77ab100849
+#: 16c0acdf063940b582fc2a122c13a384 269e9416fb1940cb8742c101c473a13c
+#: 65de37f1c4514c5abd7a9efb038d44a6 7ee051830db14cc4aaa11224d3f3ad73
+#: 8af6ff7ad22f4075956b093ac7d891d3 981fe2dec03f4bad84c4e9313e456cad
+#: c5049c8d4b564592a31e43ae483dc096
+msgid "Parameters"
+msgstr ""
+
+#: c2244c113704451b9c30601c3b2f7901 of sds.advanced.fenwick_tree.FenwickTree:6
+msgid "Number of elements. Must be ≥ 1. Valid indices are ``1 .. size``."
+msgstr ""
+
+#: bfd03d9f592e43e7a6eb16dec6745f56 of sds.advanced.fenwick_tree.FenwickTree:11
+msgid "Length of the underlying sequence (read-only)."
+msgstr ""
+
+#: 961a2257942844b79ccd8109d89402b9 of sds.advanced.fenwick_tree.FenwickTree
+msgid "type"
+msgstr ""
+
+#: 7c09417c2bc24f169f40c84e649b69fc of sds.advanced.fenwick_tree.FenwickTree:13
+msgid "int"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst 39ca8ed68177403aa980e8b7f8d28fbb
+#: 46e726e0391b40e582e4a465eb659cd1 55e159355ce34250b96ddb63654b696d
+#: e53f4fe65c0e446b99209f4ef4a5c263 f4758d2376724901bf71c0b6101dc24f
+#: fef2074737ae4a31939d394f4b81a80c ff0a4bf563c34f759412109c4aa16985
+msgid "Raises"
+msgstr ""
+
+#: 2daf4dd2ee44420a9a64c23bbb8a0543 aa388a183d854aa488751aac7b7e4209 of
+#: sds.advanced.fenwick_tree.FenwickTree:15
+#: sds.advanced.fenwick_tree.FenwickTree.__init__:6
+msgid "If ``size < 1``."
+msgstr ""
+
+#: 0af45a3af4a24bf988cd26f0d1866b55 0c2c2b7ce7ad4192b1363287b8642847
+#: 2fea5a2859894b8dbd3710fb346085d8 34187504cc374238bfeab493378872c9
+#: 38838ad150a14301b19ad86f24403923 555df7b4332443e18ea70affe8211b88
+#: 6b7298e5d97b4ea187339a536f36f7cb adb10761f7bf4250a41ae50a770b5357
+#: b00afbef09754476b68a99d5374f5193 bb33a8bd007e40b8a7c3bccfb47ab196
+#: e1ed1c8b7e5f494088aa15c89fafb698 ea4f974931d740d791b13c44a8cb9c81 of
+#: sds.advanced.fenwick_tree.FenwickTree:17
+#: sds.advanced.fenwick_tree.FenwickTree.__init__:8
+#: sds.advanced.fenwick_tree.FenwickTree.__len__:6
+#: sds.advanced.fenwick_tree.FenwickTree.__repr__:6
+#: sds.advanced.fenwick_tree.FenwickTree.__str__:6
+#: sds.advanced.fenwick_tree.FenwickTree.from_list:12
+#: sds.advanced.fenwick_tree.FenwickTree.point_query:13
+#: sds.advanced.fenwick_tree.FenwickTree.prefix_sum:13
+#: sds.advanced.fenwick_tree.FenwickTree.range_sum:16
+#: sds.advanced.fenwick_tree.FenwickTree.to_list:6
+#: sds.advanced.fenwick_tree.FenwickTree.total:8
+#: sds.advanced.fenwick_tree.FenwickTree.update:13
+msgid "Examples"
+msgstr ""
+
+#: 364a1c15c56a4aa7bf5c3240c82a5e49 of sds.advanced.fenwick_tree.FenwickTree:19
+msgid "Manual construction:"
+msgstr ""
+
+#: a3dc70553c60462da646d43fac2ab93a of sds.advanced.fenwick_tree.FenwickTree:34
+msgid "From a list:"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:23
+#: 0044fc4b4f354ecdbd62a2b2c01cd207 0383151219a347628ed4599b61d95177
+#: 079f0a00ce534a5fb1bdf1bc4f5e0992 2093a180a9a6417da7e27e85a6a627d0
+#: 3d62e24e871b4e4f8f764ce7d759bdd4 567998868fbc4f83a02a524dd0982166
+#: 697492c168814ce6b9ed15170c2e608f 7a556df61a6b48b5b3cbdc66c9226268
+#: a18502b7034b4f18a285f743df8d1557 a1aae270382a4a6ab581cec9329408ab
+#: a8b8d8e8344e4271a05c20bc8fdc40fb b25cd106709c46c49662ef95dcf2a6d8
+#: b846ee3190e1476699197e6a5d0b66fe df7fe4e68a504310a567b774518abe04 of
+#: sds.advanced.fenwick_tree.FenwickTree:40
+#: sds.advanced.fenwick_tree.FenwickTree.__contains__:9
+#: sds.advanced.fenwick_tree.FenwickTree.__init__:14
+#: sds.advanced.fenwick_tree.FenwickTree.__iter__:5
+#: sds.advanced.fenwick_tree.FenwickTree.clear:3
+#: sds.advanced.fenwick_tree.FenwickTree.from_list:20
+#: sds.advanced.fenwick_tree.FenwickTree.is_empty:6
+#: sds.advanced.fenwick_tree.FenwickTree.point_query:22
+#: sds.advanced.fenwick_tree.FenwickTree.prefix_sum:23
+#: sds.advanced.fenwick_tree.FenwickTree.range_sum:26
+#: sds.advanced.fenwick_tree.FenwickTree.to_list:12
+#: sds.advanced.fenwick_tree.FenwickTree.total:14
+#: sds.advanced.fenwick_tree.FenwickTree.update:23
+msgid "Notes"
+msgstr ""
+
+#: 525e406326b24b3685952594389af9dc of sds.advanced.fenwick_tree.FenwickTree:42
+msgid "All values are stored as ``float`` internally for consistency."
+msgstr ""
+
+#: ec462a0dbbc843d2ad0c2fc810faeb41 of sds.advanced.fenwick_tree.FenwickTree:43
+msgid "Negative deltas are supported by ``update()``."
+msgstr ""
+
+#: b2153b794b7744d98732e6e6a66c6ac8 of sds.advanced.fenwick_tree.FenwickTree:44
+msgid ""
+"``point_query(i)`` returns the current value at position *i* using "
+"``prefix_sum(i) - prefix_sum(i-1)``."
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:16
+#: 212e9bc97060499b8849738224945cb1
+msgid "Complexity Summary"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:21
+#: 9c06d4f3c21645e1bba4bcf3d8e6ea66
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:22
+#: 71ad7275c062420dbbad7bface1e153b
+msgid "Complexity"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:24
+#: 18f6debdd5b24b3d89bb40de82c9f42e
+msgid "``update(i, delta)``"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:25
+#: ../../source/api/advanced/fenwick_tree.rst:28
+#: ../../source/api/advanced/fenwick_tree.rst:31
+#: ../../source/api/advanced/fenwick_tree.rst:34
+#: ../../source/api/advanced/fenwick_tree.rst:37
+#: 51366e7cde1642a4bffe2dbfdf531315 74607249d5134d94885d87d5d1806257
+#: 877ef829903b429b84a793c05bc2d5da e3b3341e83ea4b8cab4ce2a6ffcb04a7
+#: f02d81051ab04bb6987523bfb192b916
+msgid "O(log n)"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:26
+#: cedc6ba0f614420187071643e58dd976
+msgid "1-based index; may be negative"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:27
+#: 08bf2f05d696461397a91743933b7b3e
+msgid "``prefix_sum(i)``"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:29
+#: 13a13b20b0c94597a9d03e14f8f89ff6
+msgid "Sum of positions 1..i"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:30
+#: aad927296924454db331d1b2b17a8e30
+msgid "``range_sum(l, r)``"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:32
+#: e07d77d836504ed09ab80a9f2e6444c9
+msgid "prefix_sum(r) − prefix_sum(l−1)"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:33
+#: 11060b1f68904e2381b37909a59e1658
+msgid "``point_query(i)``"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:35
+#: 807dac7e3a91470291b45fc88cd0ac39
+msgid "prefix_sum(i) − prefix_sum(i−1)"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:36
+#: 8cfe3c674d6a499cb31fbcf92e1827df
+msgid "``total()``"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:38
+#: 8ceb124f2aaa402e953e85da2eacdf80
+msgid "Equivalent to prefix_sum(size)"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:39
+#: 1f87f7d977ea42b28004950644def8c3
+msgid "``to_list()``"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:40
+#: ../../source/api/advanced/fenwick_tree.rst:43
+#: 76d3c3c7114b49d4b6de1256ae497c0f aba4a45b2cb140efaf81483ebe3d695c
+msgid "O(n log n)"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:41
+#: 350a931993034a78958ad6a00c24de44
+msgid "Reconstructs all values"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:42
+#: 00846328c9c94a32b74fa5b84953a828
+msgid "``from_list(values)``"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:44
+#: e3d772d1120141508b66cac273bff771
+msgid "Class method constructor"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:45
+#: 5f98d829c438481aa6afde71192b6120
+msgid "``clear()``"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:46
+#: ../../source/api/advanced/fenwick_tree.rst:49
+#: 475a8ccd4c3944f3994f171290d30eae 6d5baf290fe64a6f9b10ac8f8d2d5b98
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:47
+#: b80e49d557334d05bfa7fed61b7401f0
+msgid "Resets all counters to 0"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:48
+#: 49f6ed63f4134ed3a2c56fd122e18fb1
+msgid "Space"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:50
+#: ddfcc44ca069412a8dffb450e13bf104
+msgid "One array of size n+1"
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst:54
+#: 71ae9a5a4fd54735867923aa7e56cfd2
+msgid ""
+"Indexing is **1-based**: valid indices are ``1 .. size``. "
+":exc:`~sds.core.exceptions.IndexStructureError` is raised for out-of-"
+"bounds access."
+msgstr ""
+
+#: 576c6ca3555349a98eee2277d604c79f of
+#: sds.advanced.fenwick_tree.FenwickTree.__init__:1
+msgid "Initialise a Fenwick Tree of *size* elements, all zero."
+msgstr ""
+
+#: 4b0643270fa3481ea36384299c5c33b0 of
+#: sds.advanced.fenwick_tree.FenwickTree.__init__:3
+msgid "Number of elements (1-based). Must be ≥ 1."
+msgstr ""
+
+#: 23a4dab5dfa843b59d8c694386064f28 of
+#: sds.advanced.fenwick_tree.FenwickTree.__init__:16
+msgid "Time complexity: O(n) — zeroes the internal array."
+msgstr ""
+
+#: b74cc008824241fb843a9cdb62eba006 of
+#: sds.advanced.fenwick_tree.FenwickTree.from_list:1
+msgid "Build a FenwickTree from an existing list of values."
+msgstr ""
+
+#: 20a0b71d0b2d44c5bd7d80a4a96c6822 of
+#: sds.advanced.fenwick_tree.FenwickTree.from_list:3
+msgid "Initial values. ``values[0]`` maps to index 1, etc. Must be non-empty."
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst 09f8f16e45374bdaa4544ce6d261eeba
+#: 20cd9dc1d9f949bfba7aae5ea91173e5 7fd1343679cf471692fde9fdf486f9d6
+#: 954688afd542438e9cdec3727c41f271 9a5f9bcb328446cfb3c9c8419bdf11a2
+#: 9fded8798d4a42819fb219704155c6c2 a612da1e5c2c49be91ceeba48dcad4db
+#: b1ca1084a9544b2f8007d704ec10d66f b48eef57936344b487e6107e6561d97a
+#: b64933c551a144feb478b4b52d8ae2cd d7a4524777474d20b8942fae9f750a09
+#: f8fa91a68c004ad389150c55af572eb4
+msgid "Returns"
+msgstr ""
+
+#: 1d273421c497411c83c7735857139af6 of
+#: sds.advanced.fenwick_tree.FenwickTree.from_list:7
+msgid "A tree initialised with the given values."
+msgstr ""
+
+#: ../../source/api/advanced/fenwick_tree.rst 09e6b09ec6294c478562f33f48b7e594
+#: 1d2ef57763494fdca3dc415b2f51efc8 1e99bb44da654aabb28b54de4c83cf13
+#: 2c5e5820edeb40e9a1a42772341e4df9 4854c97cb6cb4a9ea376c41c0b8abcfb
+#: 7648e30bfbfc481abc07c55701fb7901 8440884a6b25443291d5361bd3d37f2f
+#: 921831a567f9444babb7e1353910bd98 991133e0884d415a8780c93492b8e4ad
+#: b95a99916f0b46af8b64698b013ea8cc c5bb5b2559aa4328be3ecd29c2fe0346
+#: f1df2d5318ac4afebaddb7d7a52365ed
+msgid "Return type"
+msgstr ""
+
+#: 59df94d874b74848875d3ce47c0d698e of
+#: sds.advanced.fenwick_tree.FenwickTree.from_list:10
+msgid "If *values* is empty."
+msgstr ""
+
+#: 3c82ff8b9b9d4e5ca4d42ef9c8ca7346 88427e31256147f7a7abb52bb4423f4d
+#: abfcbf6ca6044cec9f1ac8318a8fb6bc of
+#: sds.advanced.fenwick_tree.FenwickTree.__iter__:7
+#: sds.advanced.fenwick_tree.FenwickTree.from_list:22
+#: sds.advanced.fenwick_tree.FenwickTree.to_list:14
+msgid "Time complexity: O(n log n)."
+msgstr ""
+
+#: 757a4df428b24266996cb431457e874f of
+#: sds.advanced.fenwick_tree.FenwickTree.size:1
+msgid "Number of elements in the tree (1-based range 1..size)."
+msgstr ""
+
+#: 41d1955863a54dcb8e00022946f89c02 of
+#: sds.advanced.fenwick_tree.FenwickTree.size:3
+msgid "The *size* passed at construction."
+msgstr ""
+
+#: 798a4a949b634a5d8967e102248b5362 of
+#: sds.advanced.fenwick_tree.FenwickTree.update:1
+msgid "Add *delta* to the element at 1-based index *i*."
+msgstr ""
+
+#: 73caecc2eee24ee298f1ee237204e9dc of
+#: sds.advanced.fenwick_tree.FenwickTree.update:3
+msgid ""
+"Propagates the change upward through all ancestor cells using the "
+"relation ``i += lowbit(i)``."
+msgstr ""
+
+#: 1879a2b59eb4438ca89427d878de8521 bfe46796d13b41eba9ac57518aa470b1 of
+#: sds.advanced.fenwick_tree.FenwickTree.point_query:5
+#: sds.advanced.fenwick_tree.FenwickTree.update:6
+msgid "1-based index (1 ≤ i ≤ size)."
+msgstr ""
+
+#: a78d79614e7c498a8e43722416669ab1 of
+#: sds.advanced.fenwick_tree.FenwickTree.update:8
+msgid "Value to add. May be negative to decrease."
+msgstr ""
+
+#: 95ad642e5c8241b5a23b66bd5ae93c2e f312c05bf4cd4ee88f1125ffe956cf30 of
+#: sds.advanced.fenwick_tree.FenwickTree.prefix_sum:11
+#: sds.advanced.fenwick_tree.FenwickTree.update:11
+msgid "If *i* < 1 or *i* > size."
+msgstr ""
+
+#: 004fb100d13c4e469b12b61a1ba24e3a 326d4e0398ae4686bd4548c39a0bb394
+#: 66d2bc28bd4d4bd980bdb2e7917f7add c5bdf746c9074a578150712fa9e891ce
+#: d4af765f36714eac873ba98cdb69073d of
+#: sds.advanced.fenwick_tree.FenwickTree.point_query:24
+#: sds.advanced.fenwick_tree.FenwickTree.prefix_sum:25
+#: sds.advanced.fenwick_tree.FenwickTree.range_sum:28
+#: sds.advanced.fenwick_tree.FenwickTree.total:16
+#: sds.advanced.fenwick_tree.FenwickTree.update:25
+msgid "Time complexity: O(log n)."
+msgstr ""
+
+#: f6c74618e57b4709b291e8cfa49646f8 of
+#: sds.advanced.fenwick_tree.FenwickTree.prefix_sum:1
+msgid "Return the cumulative sum of elements at positions 1..i."
+msgstr ""
+
+#: 520290fcf6f34a479b7ac57f29b9ee1b of
+#: sds.advanced.fenwick_tree.FenwickTree.prefix_sum:3
+msgid "Accumulates partial sums downward using ``i -= lowbit(i)``."
+msgstr ""
+
+#: 34c03f315fa547b79a20392df5331ed6 of
+#: sds.advanced.fenwick_tree.FenwickTree.prefix_sum:5
+msgid "1-based upper bound (1 ≤ i ≤ size)."
+msgstr ""
+
+#: 8a1cc1b7aa3e411289b33730d7ae0dd2 of
+#: sds.advanced.fenwick_tree.FenwickTree.prefix_sum:8
+msgid "Sum of elements at positions 1, 2, …, i."
+msgstr ""
+
+#: a5f9cc645d89442a9825799c95afdbe6 of
+#: sds.advanced.fenwick_tree.FenwickTree.range_sum:1
+msgid "Return the sum of elements at positions left..right (inclusive)."
+msgstr ""
+
+#: 13c5abdbf24d4fb18082726b9b522c30 of
+#: sds.advanced.fenwick_tree.FenwickTree.range_sum:3
+msgid "Computed as ``prefix_sum(right) - prefix_sum(left - 1)``."
+msgstr ""
+
+#: 6194b664a50742bab21c3c7821670e86 of
+#: sds.advanced.fenwick_tree.FenwickTree.range_sum:5
+msgid "1-based lower bound (1 ≤ left ≤ size)."
+msgstr ""
+
+#: cf82bb4fabbd447791dc491caf9d900a of
+#: sds.advanced.fenwick_tree.FenwickTree.range_sum:7
+msgid "1-based upper bound (left ≤ right ≤ size)."
+msgstr ""
+
+#: a8b001d022e84a7ba93f919d7169c060 of
+#: sds.advanced.fenwick_tree.FenwickTree.range_sum:10
+msgid "Sum of elements at positions left, left+1, …, right."
+msgstr ""
+
+#: d8932e4eadc24aea9efa50ea01e58222 of
+#: sds.advanced.fenwick_tree.FenwickTree.range_sum:13
+msgid "If *left* or *right* is out of ``[1, size]``."
+msgstr ""
+
+#: 661f1e1ebc3a4c0d8e90fbf3aefb4862 of
+#: sds.advanced.fenwick_tree.FenwickTree.range_sum:14
+msgid "If *left* > *right*."
+msgstr ""
+
+#: d0c40ff2608c4ea78350dab8ba838118 of
+#: sds.advanced.fenwick_tree.FenwickTree.is_empty:1
+msgid "Return True if all elements are zero."
+msgstr ""
+
+#: 7f0152761efb48a789f0e34fc2c602f5 of
+#: sds.advanced.fenwick_tree.FenwickTree.is_empty:3
+msgid "True if total() == 0."
+msgstr ""
+
+#: 5e694e2003b74dfe9116b11f6cdffb6c of
+#: sds.advanced.fenwick_tree.FenwickTree.is_empty:8
+msgid ""
+"Time complexity: O(log n). A FenwickTree is considered empty when all "
+"stored values are zero (equivalent to the initial state after "
+"construction or clear())."
+msgstr ""
+
+#: 3a0404a070d74f8680d540b695dfe7be of
+#: sds.advanced.fenwick_tree.FenwickTree.clear:1
+msgid "Reset all elements to zero."
+msgstr ""
+
+#: ed2efa628a77489bb7e6e60fbbc92bb2 of
+#: sds.advanced.fenwick_tree.FenwickTree.clear:5
+msgid "Time complexity: O(n)."
+msgstr ""
+
+#: a017f87d9f22460183ee215fe53ed093 of
+#: sds.advanced.fenwick_tree.FenwickTree.__iter__:1
+msgid "Iterate over element values at positions 1..size."
+msgstr ""
+
+#: d023a599b196475b8de991a5a3992cd0 of
+#: sds.advanced.fenwick_tree.FenwickTree.__iter__
+msgid "Yields"
+msgstr ""
+
+#: b8cab7bb65224c03869d8ab9143e1480 of
+#: sds.advanced.fenwick_tree.FenwickTree.__iter__:3
+msgid "*float* -- Current value at each position in order."
+msgstr ""
+
+#: 19bdb39af35d48d6bac0cd18aa2521c2 of
+#: sds.advanced.fenwick_tree.FenwickTree.__contains__:1
+msgid "Return True if *value* equals any element in the tree."
+msgstr ""
+
+#: 28937ba3a33e461eb218104d06a086c7 of
+#: sds.advanced.fenwick_tree.FenwickTree.__contains__:3
+msgid "Value to search for."
+msgstr ""
+
+#: 87fbffef46a6492e8abe1864a7f07453 of
+#: sds.advanced.fenwick_tree.FenwickTree.__contains__:6
+msgid "True if any position holds *value*."
+msgstr ""
+
+#: 3a36186206da4f1ca100de87d0f2116f of
+#: sds.advanced.fenwick_tree.FenwickTree.__contains__:11
+msgid ""
+"Time complexity: O(n log n) — scans all positions. For index-based "
+"lookup, use point_query() instead."
+msgstr ""
+
+#: 3dc80d7949844b60b6753516793a8df2 of
+#: sds.advanced.fenwick_tree.FenwickTree.__len__:1
+msgid "Return the size of the underlying sequence."
+msgstr ""
+
+#: 9f6a87cecb52434b9e202aff59fee366 of
+#: sds.advanced.fenwick_tree.FenwickTree.__len__:3
+msgid "Equivalent to ``self.size``."
+msgstr ""
+
+#: 5d54b843b78c4dbb9cb7be95f8d74467 of
+#: sds.advanced.fenwick_tree.FenwickTree.point_query:1
+msgid "Return the current value at 1-based index *i*."
+msgstr ""
+
+#: 1e485c91794443a79503c262d422adfe of
+#: sds.advanced.fenwick_tree.FenwickTree.point_query:3
+msgid "Computed as ``prefix_sum(i) - prefix_sum(i-1)``."
+msgstr ""
+
+#: 512a29e7ee414722909b55c2291188b9 of
+#: sds.advanced.fenwick_tree.FenwickTree.point_query:8
+msgid "Current value stored at position *i*."
+msgstr ""
+
+#: d2e0842c1e8447b888536adb7d41edcc of
+#: sds.advanced.fenwick_tree.FenwickTree.point_query:11
+msgid "If *i* is out of range."
+msgstr ""
+
+#: fff06b5a82fc46248066da6a5253b390 of
+#: sds.advanced.fenwick_tree.FenwickTree.total:1
+msgid "Return the sum of all elements."
+msgstr ""
+
+#: 02af1fa129cc4b01bfc28ddb311d4f67 of
+#: sds.advanced.fenwick_tree.FenwickTree.total:3
+msgid "Equivalent to ``prefix_sum(size)``."
+msgstr ""
+
+#: c96fb851046241a1a97a1b52d5f14cc4 of
+#: sds.advanced.fenwick_tree.FenwickTree.total:5
+msgid "Sum of all elements."
+msgstr ""
+
+#: 79c584f4144345c69b263f931c3dfa85 of
+#: sds.advanced.fenwick_tree.FenwickTree.to_list:1
+msgid "Return the current values as a plain list (1-indexed → 0-indexed)."
+msgstr ""
+
+#: d139e7514f004c6a986db0a4e9721c2d of
+#: sds.advanced.fenwick_tree.FenwickTree.to_list:3
+msgid "Values at positions 1..size, with ``result[0]`` = value at index 1."
+msgstr ""
+
+#: 77324a958e1c4bcdb92c9f411d94c08e of
+#: sds.advanced.fenwick_tree.FenwickTree.__repr__:1
+msgid "Return a detailed string representation."
+msgstr ""
+
+#: 40022e86f2a447b68a987c2e50f59b43 of
+#: sds.advanced.fenwick_tree.FenwickTree.__repr__:3
+msgid "``FenwickTree(size=n, total=x)``."
+msgstr ""
+
+#: 8ffe3ca9e4404d77bd4081fb86fb0b61 of
+#: sds.advanced.fenwick_tree.FenwickTree.__str__:1
+msgid "Return a concise human-readable representation."
+msgstr ""
+
+#: 526d5c77963b40f4a8b381aa003c8772 of
+#: sds.advanced.fenwick_tree.FenwickTree.__str__:3
+msgid "Summary including size and total."
+msgstr ""
+

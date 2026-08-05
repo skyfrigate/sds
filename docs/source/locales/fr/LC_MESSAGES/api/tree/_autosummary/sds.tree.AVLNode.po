@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLNode.rst:2
+#: 38ac57b9f46c4217b68c87c25508376c
+msgid "sds.tree.AVLNode"
+msgstr ""
+
+#: 4fce350fd12746b690503f279c11b528 of sds.tree.node.AVLNode:1
+msgid "A node for AVL trees with height tracking."
+msgstr ""
+
+#: c66877dbe19e45f18ba5639ae44f4a19 of sds.tree.node.AVLNode:3
+msgid ""
+"Extends BinaryNode to include a height attribute for efficient balance "
+"factor calculation."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLNode.rst
+#: 1b0d7e0d309743578199899fb8e951de 8939f05d67fd42a0bb608c173bd6dbbb
+#: 9d0a2370a5034de08125b2e091bff073
+msgid "Parameters"
+msgstr ""
+
+#: 3d23d0a62c984e11aa904e51d16bebe1 7a0b9e9cb668415fbc54049eaf82d6b5
+#: f262e8a8aff44a09ac3c8e3211ff1448 of sds.tree.node.AVLNode:6
+#: sds.tree.node.AVLNode.__init__:3
+msgid "The data to store in the node."
+msgstr ""
+
+#: 097ac2c626cd4fefafdde0dfc2f448b0 of sds.tree.node.AVLNode:8
+msgid "Reference to the left child node. Default is None."
+msgstr ""
+
+#: dee6c13f7c794458911a6b2ede3f8d64 of sds.tree.node.AVLNode:10
+msgid "Reference to the right child node. Default is None."
+msgstr ""
+
+#: 3dbfe5869147484aa6a8dfde101f2360 of sds.tree.node.AVLNode:12
+msgid "Reference to the parent node. Default is None."
+msgstr ""
+
+#: dd06cd6a2b0c472891d2c9fb33e3e264 of sds.tree.node.AVLNode:17
+msgid "The height of the subtree rooted at this node."
+msgstr ""
+
+#: b22cba9dd1ec4a2293b983330eea1134 of sds.tree.node.AVLNode
+msgid "type"
+msgstr ""
+
+#: e2785a2af09a4a2db6102745f116d5f0 of sds.tree.node.AVLNode:19
+msgid "int"
+msgstr ""
+
+#: 65edc13ca5334161abe324b71516f681 of sds.tree.node.AVLNode:21
+msgid "Examples"
+msgstr ""
+
+#: 72c733c104e64880bff32b6b88c20c8c of sds.tree.node.AVLNode:29
+msgid "Notes"
+msgstr ""
+
+#: 379e5bb4c1914a5798f84114b63d536f of sds.tree.node.AVLNode:31
+msgid "Time complexity: O(1) for height access"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLNode.rst:22:<autosummary>:1
+#: 0a38bd36975843399f13d0e75eab913b c68a8f03d00d497885b315db157a9fb9
+#: d847dd43e3ba4cd8b89ec0424ac13fce of sds.tree.node.AVLNode.__init__:1
+msgid "Initialize an AVL node with height tracking."
+msgstr ""
+
+#: 0add3daa81514f86b0eb76d42eeb7caa 53c8bef2bce14616938a811a2a68f80e of
+#: sds.tree.node.AVLNode.__init__:5
+msgid "The left child. Default is None."
+msgstr ""
+
+#: 40c390eba28741d487eac660c5634da2 d9870405ad7d478eb1d379814408c967 of
+#: sds.tree.node.AVLNode.__init__:7
+msgid "The right child. Default is None."
+msgstr ""
+
+#: 7ca205585d7549a48ffc0186cbd53d34 f29e4cfeb38241428c7cf2c1cb703b20 of
+#: sds.tree.node.AVLNode.__init__:9
+msgid "The parent node. Default is None."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLNode.rst:13
+#: 1633264f936d461d97316ff44afcaec8
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLNode.rst:22:<autosummary>:1
+#: 6499d3ab661f44f3a4d6940805f3a1f4
+msgid ""
+":py:obj:`__init__ <sds.tree.AVLNode.__init__>`\\ \\(data\\[\\, left\\, "
+"right\\, parent\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLNode.rst:22:<autosummary>:1
+#: 86624de2f4264d499e89d383fdc9a8cd
+msgid ":py:obj:`is_leaf <sds.tree.AVLNode.is_leaf>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLNode.rst:22:<autosummary>:1
+#: 4c4bbfb26a5b48efbc338aa4795d5978
+msgid "Check if this node is a leaf (has no children)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.AVLNode.rst:24
+#: 303b619366e94cf4823a9527b27f7f8e
+msgid "Attributes"
+msgstr ""
+
+#: 226ea2f42d3a491cbb15e31549880319 of
+#: sds.tree.node.AVLNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`height <sds.tree.AVLNode.height>`\\"
+msgstr ""
+
+#: 0dfd46928ac841b8820cb8e594fd63db of
+#: sds.tree.node.AVLNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`data <sds.tree.AVLNode.data>`\\"
+msgstr ""
+
+#: 1dfd977eca2c4d86bf4ea8f14314e528 of
+#: sds.tree.node.AVLNode.__init__:1:<autosummary>:1
+msgid "Get or set the data stored in the node."
+msgstr ""
+
+#: 8bd79c87773840abb94cb13a9b6fe0e6 of
+#: sds.tree.node.AVLNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`left <sds.tree.AVLNode.left>`\\"
+msgstr ""
+
+#: 7cc69bf14c1f4888842c4649bb20632b of
+#: sds.tree.node.AVLNode.__init__:1:<autosummary>:1
+msgid "Get or set the left child node."
+msgstr ""
+
+#: ec6e25be06bb4878a48655b44ff155e8 of
+#: sds.tree.node.AVLNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`parent <sds.tree.AVLNode.parent>`\\"
+msgstr ""
+
+#: 143e688cd5c345768abb0ddf0673ed54 of
+#: sds.tree.node.AVLNode.__init__:1:<autosummary>:1
+msgid "Get or set the parent node."
+msgstr ""
+
+#: 332b86da41d54bcd825f94227f0fda13 of
+#: sds.tree.node.AVLNode.__init__:1:<autosummary>:1
+msgid ":py:obj:`right <sds.tree.AVLNode.right>`\\"
+msgstr ""
+
+#: 26bb9a64e2064f719c0261fd79947f0f of
+#: sds.tree.node.AVLNode.__init__:1:<autosummary>:1
+msgid "Get or set the right child node."
+msgstr ""
+

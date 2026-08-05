@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:2
+#: 17fc3827ee194475a1566c69ab58758a
+msgid "sds.tree.heap.MaxHeap"
+msgstr ""
+
+#: 5685d19996a6487ea4c6585c0d3dcb37 of sds.tree.heap.MaxHeap:1
+msgid "Max-heap implementation using array representation."
+msgstr ""
+
+#: 479808644ed54743af97734bd8209674 of sds.tree.heap.MaxHeap:3
+msgid ""
+"A max-heap is a complete binary tree where each parent node is greater "
+"than or equal to its children. The maximum element is always at the root."
+msgstr ""
+
+#: d1f89aca2523462c8e42ec9aeb722b46 of sds.tree.heap.MaxHeap:9
+msgid "The number of elements in the heap (read-only property)."
+msgstr ""
+
+#: 27244c89a9564fbd89a748581dcba139 of sds.tree.heap.MaxHeap
+msgid "type"
+msgstr ""
+
+#: fcbf91e4e48c4ec8908bb92f1900cbea of sds.tree.heap.MaxHeap:11
+msgid "int"
+msgstr ""
+
+#: 009a406aa8884221ac165bea03dd3bb8 064307039ccc407fb419b244c757266a
+#: 15df828ae85d40478a3657bbf874d261 1f8ea2b63093472595ccc0fb49fd6fb6
+#: 9b1c1cf247a64907a886f4486200fb47 dc2d586524ce40dfa411582ed296e514 of
+#: sds.tree.heap.MaxHeap:13 sds.tree.heap.MaxHeap.__init__:6
+#: sds.tree.heap.MaxHeap.extract:8 sds.tree.heap.MaxHeap.insert:6
+#: sds.tree.heap.MaxHeap.peek:8
+msgid "Examples"
+msgstr ""
+
+#: 364e953cc88d4367a67cacdfa82764f1 of sds.tree.heap.MaxHeap:15
+msgid "Create and use a max-heap:"
+msgstr ""
+
+#: a0b9df4e1f654d65867adedb60ce5674 of sds.tree.heap.MaxHeap:29
+msgid "Build heap from list:"
+msgstr ""
+
+#: 3f5d0b56d6f34e329e1123f5d92f03dc 976105314cd44f1e93dfb72eb59691df
+#: c164f53376234505ba293740699b0708 ec68608df8854743b4f3b01ad79ea57c of
+#: sds.tree.heap.MaxHeap:35 sds.tree.heap.MaxHeap.extract:16
+#: sds.tree.heap.MaxHeap.insert:14 sds.tree.heap.MaxHeap.peek:14
+msgid "Notes"
+msgstr ""
+
+#: 7af237c33db5408c903cceac31d39f44 of sds.tree.heap.MaxHeap:37
+msgid ""
+"Time Complexity: - insert: O(log n) - extract: O(log n) - peek: O(1) - "
+"Building from list: O(n)"
+msgstr ""
+
+#: 27b31eff142042999d4e16495750f502 of sds.tree.heap.MaxHeap:45
+msgid ":obj:`MinHeap`"
+msgstr ""
+
+#: d9653140c4b54b3a9100f6554e124614 of sds.tree.heap.MaxHeap:46
+msgid "Min-heap implementation."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: 4de47bfeb72745a6b8cf433e5d68e827 aa64bc18740242c8974677ac6368a6f9
+#: f99df9cccde140529426bd5dbcfbfecb of sds.tree.heap.MaxHeap.__init__:1
+msgid "Initialize a max-heap."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst
+#: 2ed0bf4b8e734ca3a7c613576f544ddf 7d22910734074c45a82a29765a2a7e74
+#: 916599b5163b4b1ea12821bdff88cbb0
+msgid "Parameters"
+msgstr ""
+
+#: 10fef59fb4f3422caa7d684054d98369 3bac272302f2422a930bd8917b4685c5 of
+#: sds.tree.heap.MaxHeap.__init__:3
+msgid "Initial items to heapify. Default is None (empty heap)."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:13
+#: b696f76b687140648b2ac106efd96e92
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: 5da62af35d2b451baae68ba1d8272ea7
+msgid ":py:obj:`__init__ <sds.tree.heap.MaxHeap.__init__>`\\ \\(\\[items\\]\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: dea22fcea5af4faaa2179399423ba7d4
+msgid ":py:obj:`clear <sds.tree.heap.MaxHeap.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: 6ce2549fc5dc4946b7c5dc6d02e83c39 9a4a06dbd4fb432f9ef05af2d434bef9 of
+#: sds.tree.heap.MaxHeap.clear:1
+msgid "Remove all elements from the heap."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: e00dbc18b3ad4403b2b5ed0973dde0c3
+msgid ":py:obj:`extract <sds.tree.heap.MaxHeap.extract>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: 7704e8796c0546249391f39cce66f8f9 d167b7c9af2f4386976518c1735858f6 of
+#: sds.tree.heap.MaxHeap.extract:1
+msgid "Remove and return the maximum element."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: b7b74bdb7c814b46b66734fc780e35a9
+msgid ":py:obj:`insert <sds.tree.heap.MaxHeap.insert>`\\ \\(item\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: 01c1dd28e6d64ec18589a3b903510a63 8d7f62b7a1a541b787d4afaf7f2b356b of
+#: sds.tree.heap.MaxHeap.insert:1
+msgid "Insert an item into the heap."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: 0c06b637e74d49c496932382e2f9068d
+msgid ":py:obj:`is_empty <sds.tree.heap.MaxHeap.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: 3374c118aee2408a9203f316ab7530be a189b4c8a9434e4cb52c2f22892faec0 of
+#: sds.tree.heap.MaxHeap.is_empty:1
+msgid "Check if the heap is empty."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: af7cd5ce19e0473d9e2ce74556749a40
+msgid ":py:obj:`peek <sds.tree.heap.MaxHeap.peek>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:26:<autosummary>:1
+#: 1e6cf5fd425b46359f951c772ecf171f a7b9350b0731400193fdf6a178ed84e0 of
+#: sds.tree.heap.MaxHeap.peek:1
+msgid "Return the maximum element without removing it."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst:28
+#: fc8093ba6a0141e2b98f33f4af535fa8
+msgid "Attributes"
+msgstr ""
+
+#: 3e86079e9d8543c1b5522adf51839eda of
+#: sds.tree.heap.MaxHeap.__init__:1:<autosummary>:1
+msgid ":py:obj:`size <sds.tree.heap.MaxHeap.size>`\\"
+msgstr ""
+
+#: 225c176f23da48d399a998c04ff3375f 8845a7d2890c4e3ebba2259f881b6d0c of
+#: sds.tree.heap.MaxHeap.__init__:1:<autosummary>:1
+#: sds.tree.heap.MaxHeap.size:1
+msgid "Get the number of elements in the heap."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst
+#: 5265215324014c5e9dd865669ccd48fc 5b21d443522e44038cf1d0786a90c45a
+#: f88d3e7a01bf42a6bbb5f760b4bf0927
+msgid "Returns"
+msgstr ""
+
+#: bb5c038bec86491ebaf2e9155062a4d0 of sds.tree.heap.MaxHeap.size:3
+msgid "The number of elements."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst
+#: 07bb73effee84edeb1a35c0e133be176 510da387f9c747898ee3f202b30235ba
+#: d59f67414eeb43ceb0400b14501cf72d
+msgid "Return type"
+msgstr ""
+
+#: 912123b4570049b682626073b5228a1c of sds.tree.heap.MaxHeap.insert:3
+msgid "The item to insert. Must be comparable."
+msgstr ""
+
+#: b2e4e8baad2942c7889e40852265acbf d70f6b7b05b24d2ea7b83e07a4dfcf2c of
+#: sds.tree.heap.MaxHeap.extract:18 sds.tree.heap.MaxHeap.insert:16
+msgid "Time complexity: O(log n)"
+msgstr ""
+
+#: 0314fdde04c64585a1bf6035208efd4d c34826cb432d415180c27736035e106e of
+#: sds.tree.heap.MaxHeap.extract:3 sds.tree.heap.MaxHeap.peek:3
+msgid "The maximum element."
+msgstr ""
+
+#: ../../source/api/tree/_autosummary/sds.tree.heap.MaxHeap.rst
+#: 1961b5c4e71f4b04baaf8c79032f3026 8846906ea515461a82cceb71e02c4103
+msgid "Raises"
+msgstr ""
+
+#: 541e34ee17ad425692143832483bb26a aa078f9df97448ad888c54e67d0e2abc of
+#: sds.tree.heap.MaxHeap.extract:6 sds.tree.heap.MaxHeap.peek:6
+msgid "If the heap is empty."
+msgstr ""
+
+#: 113a3a0d79fd418084500b5cac8d45dc of sds.tree.heap.MaxHeap.peek:16
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 5ee73016b1fc477a99608d4d80c8faa3 of sds.tree.heap.MaxHeap.__len__:1
+msgid "Return the number of elements."
+msgstr ""
+
+#: 726310d5605f42bcbf28ed4222255959 of sds.tree.heap.MaxHeap.__iter__:1
+msgid "Iterate over heap elements (not in sorted order)."
+msgstr ""
+
+#: 7e927b03e9c54e56bb304a1094556c3d of sds.tree.heap.MaxHeap.__contains__:1
+msgid "Check if item is in the heap."
+msgstr ""
+
+#: 20d6872262c541afa4e3b0eed42162ac of sds.tree.heap.MaxHeap.__repr__:1
+msgid "Return string representation."
+msgstr ""
+
+#: d7bd7c26ad7a441d8d165dc7448c1d9e of sds.tree.heap.MaxHeap.__str__:1
+msgid "Return string showing heap contents."
+msgstr ""
+

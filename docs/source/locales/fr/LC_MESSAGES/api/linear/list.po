@@ -1,0 +1,1995 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/list.rst:5 21ffc0ebabac4046909ef47aef97375f
+msgid "Linked Lists"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:10 da8df926ce61441780fdbf793a42e118
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:12 f98cde99e7cf45feb696ef4318583418
+msgid ""
+"This module provides concrete implementations of linked list variants. "
+"Linked lists are fundamental linear data structures where elements are "
+"connected via references rather than being stored contiguously in memory."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:41 f3ad311d0e2a45f49b4e2e4fd8d532c6
+msgid "Classes"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:50:<autosummary>:1
+#: 8073aa90df8649fbac97bcbfbb921ba0
+msgid ":py:obj:`LinkedList <sds.linear.list.LinkedList>`"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:50:<autosummary>:1
+#: 04b6100b2cbc4d16ac00f4c4a1f5c840 edd0808d5e584e4c8d7e75ee5f379cc3 of
+#: sds.linear.list.LinkedList:1
+msgid "A singly linked list implementation."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:50:<autosummary>:1
+#: 87ee362edf1b48cfa3a811f2cf6d6587
+msgid ":py:obj:`DoublyLinkedList <sds.linear.list.DoublyLinkedList>`"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:50:<autosummary>:1
+#: 4abcf1189b03414790c0e1c97f383ccb cdb04609ab0748bca0c158f546b8667c of
+#: sds.linear.list.DoublyLinkedList:1
+msgid "A doubly linked list implementation."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:50:<autosummary>:1
+#: 2df25b3248fc474f86e6307b56c92009
+msgid ":py:obj:`CircularLinkedList <sds.linear.list.CircularLinkedList>`"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:50:<autosummary>:1
+#: 0e94b955a4fa41f2be6d2c70ba1b6236 f7c77b9436944bc79e9512f14c8f0f3e of
+#: sds.linear.list.CircularLinkedList:1
+msgid "A circular singly linked list implementation."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:52 bed2cc386bcb4e20b8cb262f1a64ea71
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:55 ../../source/api/linear/list.rst:642
+#: ../../source/api/linear/list.rst:709 1adb27941aa14ae397a2a87fa1d038ec
+#: 2ec46e9bd14a4f9c9fac171ef4323d62 e4797a11f1c2483889bec2aeb220a962
+msgid "LinkedList"
+msgstr ""
+
+#: 75ea4e1163c2456e98429afd65e1de5c 816303f1efd1436ab02e6ce166671d51
+#: fb276afb56ce42be9bb5cb2bf2a9cab3 of sds.linear.list.CircularLinkedList:1
+#: sds.linear.list.DoublyLinkedList:1 sds.linear.list.LinkedList:1
+msgid "Bases: :py:class:`~sds.linear.interfaces.AbstractLinkedList`"
+msgstr ""
+
+#: 011bfd305f404224b846cb1db0e61616 of sds.linear.list.LinkedList:3
+msgid ""
+"A linked list is a linear collection where each element (node) contains "
+"data and a reference to the next node in the sequence. This "
+"implementation uses a head pointer to track the beginning of the list."
+msgstr ""
+
+#: d28b2693e6c7470d82b6830c9a609302 ef265c189ff943bfa386c04d66a56f16 of
+#: sds.linear.list.DoublyLinkedList:10 sds.linear.list.LinkedList:9
+msgid "The first node in the list (read-only property)."
+msgstr ""
+
+#: 089215441abf43849acecf7e70895a82 118a9a6651ee4c5d89baa2c227163258
+#: 303f21ddb0044433a7ad4c9f235129ac 362baa5f41084c979462bde3d46a96d6
+#: 38997c04fb5e4b99b5416b77cdb2619f 3a15fc081b4949139150f643b341b380
+#: 3e69a0f31ac84d6ab109d3d912d86b71 3fe03a2d1fda4022b44ffd1bc6a1261c
+#: 4cd51d2153544619acbb8a415aa67621 6396c6c8f84648fea9ecdae3a4d6caec
+#: 6ecfa01f70714ea2a2d28738e5519fda 73e10735c68542868e2017c62bb33fa3
+#: 772074a716914a52895307a246186d28 79b5b06eaceb4f0ca0fe42ff881f93a4
+#: 82333d82c93e4506923e0f4aca034d71 958281d8b08640d1a2e3d11ba53ac95f
+#: a44ad2e6d93c462c9000e20ceb4f8417 abaeac29746243f4a9fd1a8d12bfa9a8
+#: b73e022a695d4a3cb2c3ce9013672dc5 c3f6657c947549409c260bccebbad16d
+#: c70f790bb22e453785519c75e0be933b ce3bf6392fcf45fa925d3d4199fa69c8
+#: d294e7bf52934fca81c58b3ec6bf4899 e91abf5f57fb46f1bcb45b9a444a12c0
+#: ed794737e29149ddbb0967a08e82d3f2 f0b6374d996b42ff8f4c7fbec6ef2f49
+#: f7e7420ca06d482ba292b75892351ce6 of sds.linear.list.CircularLinkedList
+#: sds.linear.list.DoublyLinkedList sds.linear.list.LinkedList
+msgid "type"
+msgstr ""
+
+#: 45ddefb1e6454dd5bf899e424c41e796 597e52cbe8ea459493147835cd2b45e7
+#: a336cea34a5f4e269c170fd4611f5c83 of sds.linear.list.CircularLinkedList:11
+#: sds.linear.list.CircularLinkedList:17 sds.linear.list.LinkedList:11
+msgid "Node or None"
+msgstr ""
+
+#: 3347ed799ffe417999c4eb0ebf9ba6aa d002f98aee7a441aa36404dbde756ed3
+#: e3641b985e2f41808fead2705bdcd9dc of sds.linear.list.CircularLinkedList:21
+#: sds.linear.list.DoublyLinkedList:22 sds.linear.list.LinkedList:15
+msgid "The number of elements in the list (read-only property)."
+msgstr ""
+
+#: 778f04b8d4e543599e1b39fa8c8bfb8e a58b1d0c602e4490a47b7c4dafed4d65
+#: dce13a9d3c394c9fb2edabb949cfa524 of sds.linear.list.CircularLinkedList:23
+#: sds.linear.list.DoublyLinkedList:24 sds.linear.list.LinkedList:17
+msgid "int"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:650 ../../source/api/linear/list.rst:654
+#: ../../source/api/linear/list.rst:655 ../../source/api/linear/list.rst:656
+#: ../../source/api/linear/list.rst:662 ../../source/api/linear/list.rst:664
+#: ../../source/api/linear/list.rst:666 ../../source/api/linear/list.rst:667
+#: ../../source/api/linear/list.rst:668 ../../source/api/linear/list.rst:670
+#: ../../source/api/linear/list.rst:671 ../../source/api/linear/list.rst:672
+#: ../../source/api/linear/list.rst:674 ../../source/api/linear/list.rst:675
+#: ../../source/api/linear/list.rst:676 ../../source/api/linear/list.rst:678
+#: ../../source/api/linear/list.rst:679 ../../source/api/linear/list.rst:680
+#: ../../source/api/linear/list.rst:686 ../../source/api/linear/list.rst:688
+#: ../../source/api/linear/list.rst:690 ../../source/api/linear/list.rst:692
+#: ../../source/api/linear/list.rst:717 ../../source/api/linear/list.rst:721
+#: ../../source/api/linear/list.rst:723 0e99ded4fe4c4930aef24417b923de69
+#: 16cb7c99ce0a4c3c98e745a801c9a8ef 1b3a15c6f7cc4526b0458efcc7a82342
+#: 1dc3530afd344cacac7b322657f34312 1dca24c3dfa04e478bd151af713cae0f
+#: 2581215aaf534f37929fb3a4186ce5b1 2ca1cddd9917491598a1240e846635b8
+#: 30acadccebf2416287997888c09d90fb 366633a48f2949c191066ca9787fb593
+#: 397cae36e86142b0bf1dece14a9780ea 3b057d98351841adae2544777eb8e33d
+#: 4ab02dec5b8c4823a7bf5b2cdaf325e4 5bf5918318f640929efc40d5eaeb75c0
+#: 5eddf161cc5844a3b94d6c745b96d700 6641e9af374642989010a46dba31c095
+#: 686716029a5647ec8ab21e528a231ae7 7576e37071a747c4ab000ab0b4f10c52
+#: 8b12f7edc56246a586087e724088fe98 927699f2e57a4cb3b76ca4450ac38e61
+#: b330d20d6c6d4ad7bd7b45c3faabc628 b6c8219e8bc449f18452263a8aeb174a
+#: b8b3769cebd34ffa83696dfad8bf49e5 bc8b9f9a35bc4584bcaf7522151e96ed
+#: bf40d3ee00b440ae85d38e606fae8b87 c4a71634b7a14387b9b506a355968f43
+#: d12fc50b446049baa5c71d017eba1b8f d3949a2030754a18a75efb533d17d90c
+#: d55add3bbd10486e996133de3c1aa418 ddedea5462e74e3a9c78adbac6831e96
+#: e423b49ab5814bb49d66f32c5abc0bf9 e4652908f0ed43949a89027577038f07
+#: f1347c5d08674d1ba4e5e16db14e57ee f526ef28fc934f7ea7ae420dcb5dc5dc of
+#: sds.linear.list.CircularLinkedList:37 sds.linear.list.CircularLinkedList:43
+#: sds.linear.list.CircularLinkedList:67 sds.linear.list.DoublyLinkedList:44
+#: sds.linear.list.LinkedList:31 sds.linear.list.LinkedList:37
+#: sds.linear.list.LinkedList:49 sds.linear.list.LinkedList:61
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:646 ../../source/api/linear/list.rst:647
+#: ../../source/api/linear/list.rst:648 ../../source/api/linear/list.rst:651
+#: ../../source/api/linear/list.rst:652 ../../source/api/linear/list.rst:658
+#: ../../source/api/linear/list.rst:659 ../../source/api/linear/list.rst:660
+#: ../../source/api/linear/list.rst:663 ../../source/api/linear/list.rst:718
+#: ../../source/api/linear/list.rst:719 ../../source/api/linear/list.rst:722
+#: 0b6658e5488c45c2b3ac84573b063eaa 18182c3ed44d45ce90e5b74bd8ccf177
+#: 1c0b1ad08e8848d4a73861b50d527e37 561297ce0d7e4431a4051461bb3dd395
+#: 624199ad5d9d4a2b8717780960221742 628d3e0f7a9549dda91c818a5c57f359
+#: 671fe6f7e1f74707b71d5e79a7ae9dbd 6ac31211764441e38e90b68812243a3d
+#: 783be371f47542a3a3e1f6bea5ea9e26 79449d56eadf45f6bb1100a87c5ad3f7
+#: a1c16d1a950244559d8eb9026010aa72 a83a7a17e1a64e2b9a0beae5fe932034
+#: af2ee5c7aa1e4d66a6baf786de9c68e2 b9c3a0cfcc454f53909b9d5a026759fe
+#: c0835939b1844327a35d71de15ec6648 ca7507c2a5244a818abdc2bb2c8583fb
+#: d00477ffc6094d7f8749a691aed7d6a0 d302046e0c6d4cbcb767c550d66ee8bb
+#: e4a9511e359242fd9812eb08468557c4 eb394f080afa4d9dbd8ea61a181451b1
+#: ed8570503ddb46cf90dd3e58e9d0ee67 f703e8da0db242478f6d0069c60a544b of
+#: sds.linear.list.CircularLinkedList:49 sds.linear.list.CircularLinkedList:55
+#: sds.linear.list.CircularLinkedList:61 sds.linear.list.CircularLinkedList:73
+#: sds.linear.list.DoublyLinkedList:50 sds.linear.list.DoublyLinkedList:56
+#: sds.linear.list.DoublyLinkedList:62 sds.linear.list.DoublyLinkedList:68
+#: sds.linear.list.LinkedList:43 sds.linear.list.LinkedList:55
+msgid "O(1)"
+msgstr ""
+
+#: 025cd233d9c24821a077038ccc548e65 053d0660e8a541129eca78ff985ff450
+#: 071b1762f7a944578ef8858dc971acff 07b20c627431404189b590c38f5b40fa
+#: 0ac14082c65847c49b5175f09bea9fee 0bc954d86a8b40698b8898a7cf902b60
+#: 1076c83663f34b018dd1b7a1339ef75a 1128008167ba420287534b76034ba941
+#: 145d971e4bff4365b160aa3b83ea17df 1b659b44977d466b9974a40be212fab6
+#: 1cc96b2134614e71bb525418c6386c25 1ccdc776c12448e1adf4c4b31521bc77
+#: 1d2417a7c4a2475680b505f141a842c5 1eaa8f55d2fb4099ba2795edef158e5d
+#: 20893ac9e1f041da8e744484298a6a6a 20d1c3fbacbc4367b99d3dfae9c065cc
+#: 210f288df7034715a0563851880b22ce 2790b48592b542eb986ad750899c290d
+#: 2842e04483174ff98c6a32778396e52d 29d9f9f6fca348d4ac54f343a92567e2
+#: 2f179fd2021e4eddbf4690baf4dd8908 3014b66a534249aba1b6510ccd2731ab
+#: 3502f7eef6434097bebab7f00aba94e0 3667457bd59d482db6034e125ea0657f
+#: 3935668849ec4084b2669cd7afc5a70e 3a13f3646bb749c5b0fc219ba15c8b6b
+#: 3ea9decd2f7f40aa9654145b4e308303 425da448322845e9b61ddda6a68239d7
+#: 4290721691a2458091873ef5e7d685e9 49017db6ae8f4f538b2722cc00b00304
+#: 49e45aa330e241bf9189a22c68dd4101 4b183d2a1b614891b855dc495092902d
+#: 4d68f23c5ee74cb5a0520b7c62c7ff9b 4e4168561b504bfdacf35275dadca56e
+#: 5276109a0a6b45f4bb8fa75cd03d5411 54b2c8654de04ba580f452b458fb0fe9
+#: 577779f6d54347f7b537481cb72e85c7 5802618fc23b47be8bb0d15d235605de
+#: 5ac32391b2fb48abae255ac5d3e63e72 5cb5e67e683e4bdf9d53f47143b14a13
+#: 62c701a59e8a4415bdb5f0a0589cc63c 66adf93dc6f64ab4b9878642e8d98076
+#: 6746c91d29b04bbaa2c01f10e72a04d3 6ba5f547629b49999deb6957f8441f8b
+#: 723ae741fd4e4c3dbdd44d9cfcfc344a 73f4b37ce71b475483857236bfd20d72
+#: 749010b016b94b0a93d2e5e34890bf8c 7b9b496cf8de47d2a882241bf24f2cd9
+#: 7f28570a2441490286bfbfa91c8915fc 7faf9fc5157446db9481597693f1a167
+#: 8069807f07d1440e9322ae616cf2fde8 80e6f7eedebb4c87afd84b8f24447122
+#: 82652bdb2d574c299346fe2d6c7c5c30 853fbcf3053a4a11b7f0f5879e8268f6
+#: 85d53c0c3c3e4f35bc3b2d187ecee957 887c10b31d0c4de6965a056e05a09ae5
+#: 88d2369923ab46879c0d417733e0c62f 89e46b8724cc4410a93967e6dcaecc3e
+#: 8bc1857458144ac5997d6e3d2519bb7d 8e83bdb438834d1982ed3eb63d2e42f8
+#: 92147ab781284cc79084d3305736e732 950f9d1b4eb94987a3fec1865f95ffb3
+#: 987cc69b4aef4fce9434445f3bae2e57 9b2d9d47785a47e3816ed3165065c8c8
+#: 9cfe30ff193241449f0bbd88c4935e1f a196248c801847798f1f47113cc18674
+#: a1fe4e6bff6548148eab162ba9b1c031 a45ce0bad00e49e995c82a6166ac3933
+#: ac74813eec854d3d97ac7655fe6a94b8 ad21efef0cd54e2190e62fd63a446d41
+#: add10309ed594699a8029f73b3067a93 ae0381dca042423d96c1b0f3c9f108e3
+#: b088434d2165472184fbdde98ab828d4 b1378640256e49f3a054aa8a03025e78
+#: b3639fc36a9c4deba74106784c8b445a b496f750b43a4d39b62ce99849592f97
+#: b4e586cbae0540b2b467d52d6498b150 b853d6a944ef4e29bfe4bdbcd09e4918
+#: bc53ee08267a4cd08cf76c6e16086f15 bd224ea053ba4b7fba21ec35b8167475
+#: bd3c098d986d4223be9b655f26754b43 bfc72613722d4c539a037341f2764681
+#: c134d65602b1459a88eb3091fa7f6af9 c2ee74acbec4456a8b46067fa56fdc06
+#: c399b9b7bbfb4bbc8b775476b9f50ef9 c3c083edebce4fb49f390c38e2bc1d49
+#: c6566bb518ca4bae80bef6ea35b5aede c76cbc7ac9d44fa5bb885a0d51b8ff06
+#: c8e8b7bf2b0347db9ced68f22764ff4d c8fc313d90fc45c5a95a9aa12591a38f
+#: cbc400b4a25a471fb7cb0f9772d1baef cd0f63b3d9604a959629d85be0da9f20
+#: ce4a648ae17145b78e574271a7e80bd4 ce633be598a94cbd8585c19dd5ccbff8
+#: cf7318d51d344675bc0c05a0c0def4e7 cfe80451f287420b98879a22e17358e6
+#: d09304c7555e4eb09c9abe5c19fdead7 d20ce22980f54edf92283583de4f0cc3
+#: d317bac3860f4041883843188b96a728 d7878004fd4148b6b8919975719d420f
+#: d837091c1fb24a78b26e0749deb32762 d99bec42f4b14660bfff5959cfb0620e
+#: de5c2a405a9647048e3bc9d9572166b9 e0dd84d565a64d4b8e90d2af352cbdac
+#: e20e3c4074094088b879fbe95d4cd804 e21debaac03241ccba0a6d9f3dc9cfcd
+#: e2aece9bd4b540c89c419eadeaef0d13 e3087ef46e6f48a09e58ad31bc86422d
+#: e49a8c8474494259ad34d6d99578c5c6 e4d2f076fb2b4fb88b5c94d66c878811
+#: e7cd55ba8e824e6a9f69ddcbc8661e83 ea1192e856ec418cb99bcfb4fcb3d185
+#: ec87a283e5fa489ba5b4d90fa8567ede eed19fc776504f7bb670f08a45124ea7
+#: f307add23a384daea22ca684d74fa462 f96dee295fda4f80a8fa06e2b1d22e03
+#: fa37cc7ca84c4691af030600532b9cd8 fcbee492cf4f4f149a37d55573487879
+#: fd1b80fcccf64056916469849387e9b4 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:8
+#: sds.linear.list.CircularLinkedList:75
+#: sds.linear.list.CircularLinkedList.__contains__:9
+#: sds.linear.list.CircularLinkedList.__getitem__:11
+#: sds.linear.list.CircularLinkedList.__iter__:5
+#: sds.linear.list.CircularLinkedList.__repr__:6
+#: sds.linear.list.CircularLinkedList.__setitem__:10
+#: sds.linear.list.CircularLinkedList.__str__:6
+#: sds.linear.list.CircularLinkedList.append:6
+#: sds.linear.list.CircularLinkedList.clear:3
+#: sds.linear.list.CircularLinkedList.find:9
+#: sds.linear.list.CircularLinkedList.head:6
+#: sds.linear.list.CircularLinkedList.insert_at:10
+#: sds.linear.list.CircularLinkedList.prepend:6
+#: sds.linear.list.CircularLinkedList.remove:12
+#: sds.linear.list.CircularLinkedList.remove_at:12
+#: sds.linear.list.CircularLinkedList.remove_first:8
+#: sds.linear.list.CircularLinkedList.remove_last:8
+#: sds.linear.list.CircularLinkedList.reverse:3
+#: sds.linear.list.CircularLinkedList.rotate:10
+#: sds.linear.list.CircularLinkedList.size:9
+#: sds.linear.list.CircularLinkedList.tail:6
+#: sds.linear.list.DoublyLinkedList:70
+#: sds.linear.list.DoublyLinkedList.__contains__:9
+#: sds.linear.list.DoublyLinkedList.__getitem__:11
+#: sds.linear.list.DoublyLinkedList.__iter__:5
+#: sds.linear.list.DoublyLinkedList.__repr__:6
+#: sds.linear.list.DoublyLinkedList.__reversed__:5
+#: sds.linear.list.DoublyLinkedList.__setitem__:10
+#: sds.linear.list.DoublyLinkedList.__str__:6
+#: sds.linear.list.DoublyLinkedList.append:6
+#: sds.linear.list.DoublyLinkedList.clear:3
+#: sds.linear.list.DoublyLinkedList.find:9
+#: sds.linear.list.DoublyLinkedList.head:6
+#: sds.linear.list.DoublyLinkedList.insert_at:10
+#: sds.linear.list.DoublyLinkedList.prepend:6
+#: sds.linear.list.DoublyLinkedList.remove:12
+#: sds.linear.list.DoublyLinkedList.remove_at:12
+#: sds.linear.list.DoublyLinkedList.remove_first:8
+#: sds.linear.list.DoublyLinkedList.remove_last:8
+#: sds.linear.list.DoublyLinkedList.reverse:3
+#: sds.linear.list.DoublyLinkedList.size:9
+#: sds.linear.list.DoublyLinkedList.tail:6 sds.linear.list.LinkedList:63
+#: sds.linear.list.LinkedList.__contains__:9
+#: sds.linear.list.LinkedList.__getitem__:11
+#: sds.linear.list.LinkedList.__iter__:5 sds.linear.list.LinkedList.__repr__:6
+#: sds.linear.list.LinkedList.__setitem__:10
+#: sds.linear.list.LinkedList.__str__:6 sds.linear.list.LinkedList.append:6
+#: sds.linear.list.LinkedList.clear:3 sds.linear.list.LinkedList.find:9
+#: sds.linear.list.LinkedList.head:6 sds.linear.list.LinkedList.insert_at:10
+#: sds.linear.list.LinkedList.prepend:6 sds.linear.list.LinkedList.remove:12
+#: sds.linear.list.LinkedList.remove_at:12
+#: sds.linear.list.LinkedList.remove_first:8
+#: sds.linear.list.LinkedList.remove_last:8
+#: sds.linear.list.LinkedList.reverse:3 sds.linear.list.LinkedList.size:9
+msgid "Examples"
+msgstr ""
+
+#: ba8f2076d577414fb6abefb0989cf577 f3d56e647b9545fd87bdcc85cbb319ed of
+#: sds.linear.list.DoublyLinkedList:72 sds.linear.list.LinkedList:65
+msgid "Create and populate a list:"
+msgstr ""
+
+#: ef00efc28504474baad4a275c24374e2 of sds.linear.list.LinkedList:74
+msgid "Access elements:"
+msgstr ""
+
+#: fd524d4829834c07981dccd3992389da of sds.linear.list.LinkedList:81
+msgid "Iterate over elements:"
+msgstr ""
+
+#: 07dd42a488354c6ea09b66bb659300be of sds.linear.list.LinkedList:89
+msgid "Modify the list:"
+msgstr ""
+
+#: 060981f249674f55b656e2b2e26018cd 074e3a340ccc45b0b6b6c54dc9d9ef8a
+#: 0930ed85b7c04542aa0c90074da1c376 0bba4eaebca040f68c5998a527d4ef42
+#: 0bda5c1305d144ce95c26cee1350cd03 0f23e0cb3d684eb28f23a4d5a6919f3d
+#: 10a8a05f088e4a69aff51f16880db750 117ecd794fe142eda5661e48043045df
+#: 16eb007144c44f939a0217c7aa7da40d 1e7b8033a1104a3bac25d0083255e67d
+#: 258ce32239b441eca550d7df22acfde9 2d77d765b9df4b92b05ed9face9c7e28
+#: 30836144895e40f2a910b1abc3ad159a 30a69b0eba5a409c81566091f6339cad
+#: 31984d7f92c34112825ad91663ab8e0b 349e9746741041b28a1d4405018cd7e8
+#: 3593ad8dc8604f0ebcfde223e640763f 35fadfa1ba8c437baf9edfa16ba9fa3f
+#: 37e173d4fe214115883b39dd2571280c 38b8f749e4e944bf97564e6f6405f098
+#: 3e3fb7cb4d324c959e54d77b3f1d83d4 3e6197dae99f4bf0878e624d9b434342
+#: 411d4d5a6b8c4430b22f483d0fd7b18c 421c9cee8b314e54b7c229fe1bdf066f
+#: 48a91fd389a84ce08d4205b401990dac 4c1398557ca748979ba64dc37f62d603
+#: 4cd6d6e5a3ac4db4a01de6a4543cfd61 52ee33ae449246299f716506c2e8c4a4
+#: 574f8c4366f14681b4bb171b60748375 5eede3e0505b4e0f93bcdee92503a2b1
+#: 6037e17c6fa44bcd984ecc3e489a4599 632bdd2fed1244c69402424da7b1849c
+#: 645390ed75fb4a16ab2e1dd20896c276 647aae41e98c4c4eb1865e97e9fa9512
+#: 66d17587dd0749feaedf89cf183e2779 6f4a44ab12ce4d898d5a405b11c90084
+#: 72dba0a6ecac41aaadb0feb517106426 72e44e73c5394c109448e7b6aba89510
+#: 7655fa9ddda849b195dd7c7fb2029b9c 7776cac7281d4ba2ac17b872dd9b66bc
+#: 778785fe9e3743e3aea7deb31453475a 779275adf47f45b4bcd448d99137a2ec
+#: 77963941df964147b8dbfb36975939fe 7939181431e343e592000ca68568b279
+#: 7b226c5f4a1d4a99ab165718bf8af1ad 7e3a12d5c186491fa0073c17b83e01f7
+#: 7e67f6e6a5914284a8e129aba2fc8171 7faee461bbff4d05b05bb0edfe6a1504
+#: 7fc29b5e80c64bd490b0566330cf5a89 818bdd4ead29464ea14c1d4c116e0d85
+#: 84fe5120e2a64539b932fa72a2ef9aa4 8591fcbe9c6e4bf6bfc38284744b9676
+#: 894595a28dd64548a4894bcc35c139ab 895ba2126c604ecea66f8c1d353f2370
+#: 8b6e3d38d8b1449fa37f68474ca4a703 8d019d5767b741d7b9b20ee3cf041d57
+#: 8d43c2ef1feb487cb47c4dec05f13c02 8f24619c8b0b413288579765135652b3
+#: 8fb3b6c8627f4538b3e4f8736914e7b2 920575dae8b545d8abefa0beddce9656
+#: 94bbfb0866ee4c3aa67b82aba5a4a4ba 9ba088ce39fe4f3f8e458f4a1d1883e8
+#: 9bcc48666616489882053e0b69c981e2 9f9d3adc337549d3be45c42f85b557fa
+#: a045245adb1849a09f219e53a9ae689c a2d43090c3404ee89bde81e9941932bf
+#: a542d849b7d14b2aaa5d226d6ec43bd8 ade7df900fe74485b2412f37bf561485
+#: b0c92e5e12434563b26587660f84c684 b3d23d9919654512bf0172f0a1e58f74
+#: b46ceddeee144aa2a180c3abe396cf53 b56f16535ca7446abb293533aa2befbf
+#: b7a203167c444d969da3fc58a8998cda bba7e28dd6844fdbb3c9f135e77f964b
+#: bd4c8f0542a643868985189d2444eae1 be7d7d47c07e45d289b34242bcf75d04
+#: bf523637931648e8a93b3d646b0e1d52 c0defba052de415ead0369df26a66000
+#: c1096749100c48aea507bfb9f05ccd90 c7268b7758d14b238962e7761a90829e
+#: c73f7ef046cd42438db28a554bc8f10d c784941526f04485ae0db33ec89424b5
+#: cd192ee624e1445ba270b4a073d5e5e0 d30a652e3e0e4132a56d5d6fb007f917
+#: d37bcd228bae48ffa05e412fa990caf3 d7cd667d1ea84e2aa280b78d851b9d0f
+#: d845642c7ca54f629f50f31bc338f5f6 d943115c4f9f4db78d7f1f80e7201a28
+#: dc8ff740fc1b488fb0ac1d5baa12b7c8 de07d3bb65834ed2b4d938c550c569ef
+#: dec4a0d5556049e3b320285d8ab51042 e03f863cd894448c8dbaa35ad6e26ef2
+#: e28f81e4f7ef45239e312a3578cde7d4 e3789a302aa946f99323aaa8ff61f448
+#: e3a792eedf50400596895dae7d33d334 e44995d6331a4b0fb7254dcb72688d8a
+#: e9a1f94d75fd4fb98f61e60096bb9f5a eb56644dac984152a2720fc72eaf8f76
+#: ee148d68965d454e802cd84199a9aef8 ef9dc7106d014ddd8000e258b0d2b3ab
+#: f16b471fae7a4fe785083b2198bd9f25 f2e101c147d74c659491e38c719f13d6
+#: f67f5c14d1da439bb14d3c05e5a770c8 f7cfac782c4c4966a7f4440b6f37a536
+#: f8a23b003a814d90935abaa7f8f09f9b fa0ed79289f14cea8709b0bc0de0adc7
+#: fe5b2631289d42df9912bb3f65a293eb of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:17
+#: sds.linear.list.CircularLinkedList:100
+#: sds.linear.list.CircularLinkedList.__contains__:19
+#: sds.linear.list.CircularLinkedList.__getitem__:22
+#: sds.linear.list.CircularLinkedList.__iter__:14
+#: sds.linear.list.CircularLinkedList.__setitem__:19
+#: sds.linear.list.CircularLinkedList.append:15
+#: sds.linear.list.CircularLinkedList.clear:12
+#: sds.linear.list.CircularLinkedList.find:20
+#: sds.linear.list.CircularLinkedList.head:15
+#: sds.linear.list.CircularLinkedList.insert_at:19
+#: sds.linear.list.CircularLinkedList.prepend:15
+#: sds.linear.list.CircularLinkedList.remove:23
+#: sds.linear.list.CircularLinkedList.remove_at:23
+#: sds.linear.list.CircularLinkedList.remove_first:18
+#: sds.linear.list.CircularLinkedList.remove_last:18
+#: sds.linear.list.CircularLinkedList.reverse:15
+#: sds.linear.list.CircularLinkedList.rotate:31
+#: sds.linear.list.CircularLinkedList.size:18
+#: sds.linear.list.CircularLinkedList.tail:18
+#: sds.linear.list.DoublyLinkedList:99
+#: sds.linear.list.DoublyLinkedList.__contains__:18
+#: sds.linear.list.DoublyLinkedList.__getitem__:21
+#: sds.linear.list.DoublyLinkedList.__iter__:14
+#: sds.linear.list.DoublyLinkedList.__reversed__:14
+#: sds.linear.list.DoublyLinkedList.__setitem__:18
+#: sds.linear.list.DoublyLinkedList.append:15
+#: sds.linear.list.DoublyLinkedList.clear:12
+#: sds.linear.list.DoublyLinkedList.find:20
+#: sds.linear.list.DoublyLinkedList.head:15
+#: sds.linear.list.DoublyLinkedList.insert_at:19
+#: sds.linear.list.DoublyLinkedList.prepend:15
+#: sds.linear.list.DoublyLinkedList.remove:23
+#: sds.linear.list.DoublyLinkedList.remove_at:23
+#: sds.linear.list.DoublyLinkedList.remove_first:18
+#: sds.linear.list.DoublyLinkedList.remove_last:18
+#: sds.linear.list.DoublyLinkedList.reverse:15
+#: sds.linear.list.DoublyLinkedList.size:18
+#: sds.linear.list.DoublyLinkedList.tail:16 sds.linear.list.LinkedList:96
+#: sds.linear.list.LinkedList.__contains__:19
+#: sds.linear.list.LinkedList.__getitem__:24
+#: sds.linear.list.LinkedList.__iter__:19
+#: sds.linear.list.LinkedList.__setitem__:19
+#: sds.linear.list.LinkedList.append:15 sds.linear.list.LinkedList.clear:16
+#: sds.linear.list.LinkedList.find:20 sds.linear.list.LinkedList.head:15
+#: sds.linear.list.LinkedList.insert_at:19
+#: sds.linear.list.LinkedList.prepend:15 sds.linear.list.LinkedList.remove:23
+#: sds.linear.list.LinkedList.remove_at:23
+#: sds.linear.list.LinkedList.remove_first:18
+#: sds.linear.list.LinkedList.remove_last:18
+#: sds.linear.list.LinkedList.reverse:15 sds.linear.list.LinkedList.size:18
+msgid "Notes"
+msgstr ""
+
+#: 8c17d63037af42a39194c105f32137b9 of sds.linear.list.LinkedList:98
+msgid ""
+"This implementation maintains only a head pointer, which means append "
+"operations are O(n). For better performance with frequent appends, "
+"consider using DoublyLinkedList which maintains both head and tail "
+"pointers."
+msgstr ""
+
+#: 2313b4f08af6474399106966d2947cb8 50af87cef1d546d0b5f30969ed85d64a of
+#: sds.linear.list.CircularLinkedList:111 sds.linear.list.LinkedList:104
+msgid ":obj:`DoublyLinkedList`"
+msgstr ""
+
+#: 6f70a1b2ccbb4945a9bdbf28ab1d5b3f of sds.linear.list.LinkedList:105
+msgid "Linked list with bidirectional traversal and O(1) append."
+msgstr ""
+
+#: 83a7f461f9374bbcba3f5a508cfdb521 of sds.linear.list.LinkedList:107
+msgid ":obj:`CircularLinkedList`"
+msgstr ""
+
+#: 2d30ce97bded4829ac4af71c120f9747 of sds.linear.list.LinkedList:108
+msgid "Variant where the last node points back to the first."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:64 ../../source/api/linear/list.rst:114
+#: ../../source/api/linear/list.rst:166 2426b1b6853c414681cc10e69f32d8e8
+#: 3871b34a10c740f4801b769f4096c443 956b9d9a08bb4150b184484ebcc90491
+msgid "Constructor"
+msgstr ""
+
+#: 2bd7af837b604fe0b0e3abb47bb2b698 5ff1fd3ef7114cb2943cbb32dac04677 of
+#: sds.linear.list.LinkedList.__init__:1
+msgid "Initialize an empty singly linked list."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:68 ../../source/api/linear/list.rst:118
+#: ../../source/api/linear/list.rst:170 4c7a47db752d4215a6c04a16dc9326cb
+#: a190fd723a7b4332bc0c5f1395b7d5f6 acb07267d866410bafbbd91026853699
+msgid "Properties"
+msgstr ""
+
+#: 01e7be0ff3684759a6abae10e06e5f42 3c96253b9914438b97d9a3a6e0bcf711
+#: 594404fe9d2a482d96f1bb26f409ccda 5c0e4a429aa7434b94aeda75bb9a1735
+#: 6ae2f1e4947842168df9ad65a77862ee c548de1d402440b7859e0a1effc3f896 of
+#: sds.linear.list.CircularLinkedList.head:1
+#: sds.linear.list.DoublyLinkedList.head:1 sds.linear.list.LinkedList.head:1
+msgid "Get the first node in the list."
+msgstr ""
+
+#: ../../source/api/linear/list.rst 00f0aacf394042bbbaea585f770409a7
+#: 0c308cb91b95465a8659422a08a6e9d8 0f76c4c3710645a381eab0ca428db4c3
+#: 108ea3cfc25348aea5c153e687eb0a6d 139066a99fc74f5788f8673eb108b240
+#: 15b72c830e7b45ca9ffebb10dc29ba84 18ddb2a451b548d2bfb0b683ac1bacbb
+#: 20512e4e4ce34244af7d74ce0bbd8bbf 21569d328f1b4697a4dc49bd49358c64
+#: 230c3066f0e84aa6a46668fc9d188050 266ba01f7ef24f838a701b66008a1e06
+#: 267a5b2a4e3644a283c200fa99cb57e9 29f09f497b4e456ab9dbcaced3559bdf
+#: 2a80298296404a5b9858b4bf29166df1 2b2827b3aa9f4855970a944cbdc4bb13
+#: 2fe7606cc1964571958fe7b6e204aa17 39acab8d1d3149718324d7f11857488d
+#: 3b4ddb2085c949f8b393f92ba2bc9a15 46a628b8ce5c4d34a7f16b1be88abb7b
+#: 47fa3856b2bd431bad6c1a72c4f8dccf 4bc23dca697e4ca6ad0081cd48db3fb3
+#: 51768814f8834ec8ac8b464170a76a8e 55cf617bfc424d2c893870b8c05998dd
+#: 56f0736b68124de8a4642e536f31e87a 57d910cb6cc74d7189928b9473628bb7
+#: 5b46e0dee9674f918c6019d0fc696b23 5c8105453aaa48c7a116de37d73dc8de
+#: 5f863fa8aab44c3dac668486824ed9f6 6185567aab694c61ae0ee808d656d59e
+#: 63215ab78c544a878c8bfa437f02abdd 688d7ef34aa9488badc660306fe8cec9
+#: 68fe61645494417ebf9c128a0163223a 6c813d4fdeb64e89a2fa1a5f9e216fa9
+#: 740b0f2e28ef471caf7adcd1485d8d5d 7429ac76c38c45cf95861d590c78997f
+#: 7bd718d4b2ca4073ba5a52487644f289 81dad4d000e9408c9117678d98b10112
+#: 8805c67a5e5046c5857c430083b5f4a6 8b845c0028c34d9ab9625875924a3ece
+#: 8c3ab906dea34d29a1891c8687b0458f 8c477d555e204997a947e9aefa6ccf81
+#: 8d4c2494f7034e8ebf8c1d2b955c83be 8fc2424ab085452893c2902aa4ed77b1
+#: 8fe3b2c91a444984a23c92f5b4a184fc 9480fea346fd4c5cb1af0fa7bdc65df9
+#: 97df2876a62d4ed69db9969e5aa65e7c 9ee0ae52e9c64e418d1c4608467a696f
+#: a317278d13074f8d94c87d13a9f6f661 a3a90536a86748c2b4fd6868959b8582
+#: a8d74ea58a8c436399a9f8aeccef40ed abe370c76b394a5caf7bf1d6f4c72b01
+#: b0bfd53f4b4e420da50a13864cee8364 b33f5126f0874149821ba6eb24b6a9da
+#: b43bae36732144e19ef387cfc267ca3a be29376d144a4812850647ea3dd6f636
+#: c43ffa973a7e4a7da706856df89c2634 c45ac18172c74f8d89369bc6247bba2a
+#: c873d09a563f430aafc40595ba39aac9 c9ff634cd2a0487aa55ac21137c5cfc3
+#: cca8410af18341f89cd5000450fa39b1 cef7f1b3195d492bb8ecea1a5f53bb91
+#: cf4cf73c893e459897d02d0ec1cac5e5 d25c18d5812e483d8d9af1a9a0fa30f6
+#: d25dad347f684065a79d0e917fb9e780 d29b8dacd7174398bb69d542b0e91b9a
+#: d2f90d42fec646ed868f6a57ff57b568 d7d16af559c945e2b42244b716f43383
+#: db829a1c9b244ac595b8dcf10e0803b3 e1355cc8f8dd40bc911b588d5015988d
+#: ecfd751bd2084380bf64a2ed8dfa7b2d
+msgid "Returns"
+msgstr ""
+
+#: 22afef21b05c46fa8ea11ba94602e72d 3c6b7c41437a4e94b35c7092204f2823
+#: 47dd1d36fb2c410e837bee44184368bb bd3a6500d64b4dd293f7f1f2ca09f582 of
+#: sds.linear.list.DoublyLinkedList.head:3 sds.linear.list.LinkedList.head:3
+msgid "The first node, or None if the list is empty."
+msgstr ""
+
+#: ../../source/api/linear/list.rst 0020774254ed4adcbe14619d2453b80e
+#: 027f1b745d1b4df0bd0ab1ae5d417bae 0cb5fa26a27a4ebda492d0a87133c3f4
+#: 0fc1995d2a0a4d4ea15020e526d2dd3d 17c1603d4b8b4e8e8db00a045dcd1369
+#: 186e01e8eb6343cf81457a45568c7b23 19d077ee5c8740408a091dd09d393c8f
+#: 1dd36596491f42b3a9426d3405aad8f0 1e87660b847c423abd71ac45a5a9055c
+#: 20131cfef4214cc5a068cf70d8390ee4 22808a231577420491fd725efafbfe9e
+#: 22de5d50422d47d887d07c5eabad1588 2ac895c359f14737b7a7839ad028cdf5
+#: 2b24e6d0fd234cba82107e0008b2cd6e 2e63cf8fb02c4960b673cf0d498a5eaa
+#: 2f992535b70140ddbb7d74685bc18d43 326c570ff35044569e86ec172cd178b3
+#: 3674a2f7ac2841baa20aeea563dad0e5 39fbc58ebfe14f5ea7534379d5a55f9c
+#: 3cb9e677623c4e1c916d311903f67d80 41df00df6532446db2ac6ef1429a4ea2
+#: 45311f78a5014e9a8a596a4cdf499ab5 4763d1757b97404796ce2e9ccb5f1d13
+#: 48d930322a7f4448b4970b65d0a3f9b9 4dead25b442c4cd38f58b1ffba01eb7f
+#: 4e6913f62f08486491dc3684d9dd6361 5ba03ee6e0154a1aab311c9d602520ca
+#: 5da4736b22b447cea2675cc5e1266976 5f4a035433bb49a0816c69a7a71842b3
+#: 5f8607e5808b4da5b3147a5c30447636 681dee7c40ad4bd183b5fb4c6c8ac6be
+#: 6bd1a86e3a61494cbe8cd24e803128b6 6f5f001a0a784c4c8289791e0790f9c4
+#: 707129a066c443d8bdcaa639e0a945d9 736b7e964295409bbd3a0bff9ff7f4f4
+#: 80ecac9d4c4b4733b8c0db3253a26219 84fd214c4d344370890d8333943821b2
+#: 878d77d2ce8742a19b53ab66e9ab00b3 90f3670be02e49609ab0b23e84a79cb9
+#: a0c7855fa0f34f6dbc90d4512a72521d a52d55694b674ea5a8bbc1194a4cacd2
+#: a9d6dd0f6fca476496a2d4a611a05f97 aa450c4113874f2ba367db2a8286386c
+#: ae1250e8a66d45c3b00d7a155cb924aa af095513652c478c9191e7a83b338b1b
+#: b5400a2563d24dbab772b9cde465ac6a b6cee53ed9a9440f852d4ab244620a10
+#: bb8e45f4c77b4f739c71ffd39899c51f c7244e8c29ab4b378079f903348c5a5d
+#: c8048d292222491bb30179594bc77c7e ce14e525e2ee489ea8e01af7ae84e2bf
+#: cf291606c59e4af192df29f764a72afc d55211863c9147ef9b348530e8c6b5f4
+#: d7ac639fc65a424a99e1c773c3c99ecf d81db4daac9e4746836bf2a6eebe0f34
+#: dca3d3c9db374a7db0c021f0b02a4d56 df90da39523f46e3be52f53add59a1fe
+#: e0cd034ea630436c84212ff417546205 e2e526ea894a44b4a29f2698fd7c0406
+#: e302a87a8c064bcd8ac002c5f3cbee02 eccbed42fac740bd9c1baf7328ec757f
+#: f0aa789ddbb446efbf03ef43351ac4ec f125629cd0604d1a9e376539abc2dba6
+#: f26f8e8c4d214f6aa26c010022f43b6e f7572ec21c984bce995a23e29cb49307
+#: f83f024f907d4aa9bab07e1d49fa6c66 f8574ef599f84c66806740b342520dc2
+#: face0d146a5f4687855dd48c0cfd0981 fb9a4f8120a540e9ba96a88c48bc4c20
+#: fde5166263eb471890c9b70c8ce68005
+msgid "Return type"
+msgstr ""
+
+#: 08afb7d44ab1438fbbed18bdb26a620c 501d645cf84a45b89d586c2cba83956b of
+#: sds.linear.list.LinkedList.head:17
+msgid ""
+"This property is read-only. To modify the list, use methods like "
+"prepend(), append(), or insert_at()."
+msgstr ""
+
+#: 441298b99af1473297852e8d6a1ec087 a19225bb081b487ea4814e01ced42eea
+#: dc472a76d97c4edc829aa2b59bddb4a3 of
+#: sds.linear.list.CircularLinkedList.size:1
+#: sds.linear.list.DoublyLinkedList.size:1 sds.linear.list.LinkedList.size:1
+msgid "Get the number of elements in the list."
+msgstr ""
+
+#: b6d27c5453834a488d8fa8476d0c24ac be3b390f257c45c5bf35f989f6c9ae36
+#: cc877936056a4e3ba4027f8514f80622 of
+#: sds.linear.list.CircularLinkedList.size:3
+#: sds.linear.list.DoublyLinkedList.size:3 sds.linear.list.LinkedList.size:3
+msgid ""
+"This is a read-only property. The size is maintained internally and "
+"updated automatically by add/remove operations."
+msgstr ""
+
+#: 09afee96d1a64df68f387f380c0adae4 9e8adcbbfab24358abae6bb97db07ec2
+#: d93c855337e74cbfa21698df79a2b00d of
+#: sds.linear.list.CircularLinkedList.size:6
+#: sds.linear.list.DoublyLinkedList.size:6 sds.linear.list.LinkedList.size:6
+msgid "The number of elements currently in the list."
+msgstr ""
+
+#: 1d5ced93bd5843cc93cc2e4eb74bfb60 281c5af2e0564e0b8d36d4c306f541eb
+#: 4b82a89eed8348bbb140fe97f3d34841 of
+#: sds.linear.list.CircularLinkedList.size:20
+#: sds.linear.list.DoublyLinkedList.size:20 sds.linear.list.LinkedList.size:20
+msgid ""
+"This property provides O(1) access to the list size without needing to "
+"traverse the entire list."
+msgstr ""
+
+#: 3fe0f4c1a521438d8738855cf833ff29 5c9a7491bf974daaac1065013a0e1c8a
+#: 9c224286947047fa859d7815409e7d07 of
+#: sds.linear.list.CircularLinkedList.size:25
+#: sds.linear.list.DoublyLinkedList.size:25 sds.linear.list.LinkedList.size:25
+msgid ":obj:`__len__`"
+msgstr ""
+
+#: 075ab5a26bf3465f8124a58d13a58213 86168475799144f8b85d39a41b7c5b2d
+#: fd3842f04ab44ccc8dad91e149c0b2b0 of
+#: sds.linear.list.CircularLinkedList.size:26
+#: sds.linear.list.DoublyLinkedList.size:26 sds.linear.list.LinkedList.size:26
+msgid "Returns the same value, allowing use of len(list)."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:73 ../../source/api/linear/list.rst:124
+#: ../../source/api/linear/list.rst:176 07a3dde4ec4a465299afe598febd2c03
+#: 84eb9f6143b84e668174d2002b5c0693 ded52962b3cf4de18a9429d88139e207
+msgid "Core Operations"
+msgstr ""
+
+#: 109887f184d846f99612ddcc0433d4bf 147adba2b6e1452bac7987a1c28d1cd1
+#: 1be9641576b740448c17e04611d4193a 58afef1b02e34e3796f17fd84a3a0c1f
+#: 8a0abaef4e4e4b32b98ac80801e2e0a2 ac083982b33b429c9de5252610a537b1 of
+#: sds.linear.list.CircularLinkedList.prepend:1
+#: sds.linear.list.DoublyLinkedList.prepend:1
+#: sds.linear.list.LinkedList.prepend:1
+msgid "Add an item to the beginning of the list."
+msgstr ""
+
+#: ../../source/api/linear/list.rst 004a54b093034d14b017b36821a7fc0f
+#: 075fe0d5ddf8490cb552136eea3cfaa5 0d5348f9b05243a9b3485af9dcda1d13
+#: 0e953250a8584fe8a4aecb39af010193 0f52a1dc00cf4e0592e3255700c21462
+#: 1377ed9629bc48ca82c4ccf6b933bb6b 1a36b87f6054459fa3fefdd8adf61bd2
+#: 1fc06eaf430f4a2a9d4f73f32a1504ba 30aea7951aba4fd0a31adb36a98af26c
+#: 34ffbe8afd2b41e5af6216b797df9808 3dfececcd5ad437e9c2966e6a9ca99af
+#: 41aa2ca97306447c9c74eefd6f0b32c9 44b7a584d516420abcd4497819806484
+#: 454ae89abff74172baa05bfd6ce7683f 46c5b2efb54a43449b16845be6d53200
+#: 4fac4def77614a5096681b1877ce9aeb 4ff537d5c6e94fdb82454c89931f1f13
+#: 547605fe5ec44785a5b988fed9ea50e9 5484f494460a4c5ea9a88bc16b0faf83
+#: 557f1ce96c6d442ba0015c0b66fcef9c 57c357e0c1a34945a2c107068530f86b
+#: 5846ab46af8d4a02abd4ff360df639b7 5851487cacf5478a9184dec014b781b3
+#: 5e74c5c3c8b242a899c6d9af71c33382 694ccc20b74f43298bdda1ef27249c58
+#: 6f36db22455444acadb29ca8f0055d45 6f546b926125444f8d70057dbaf9fc79
+#: 7613b4f4b4ea4c01a78b647134456b8d 7874fc115e9740f28989dbdeed3b1933
+#: 80fb743824a74c689788a97d8011d239 812b2fe30c3546ef95aaed0bfa547bb0
+#: 81b3659f3f1642e6baea72dbfce3a425 894941edcc29493ea7b15ab213c7e8a7
+#: 9070ee919545403eb48b34d3f820e583 94c798ed24204b648879a4c8e4753be6
+#: 9edc3455947048ffba35090bfa1eb539 a675b54ee5504253bcc3d32999a7d9dd
+#: b1d201ff33a14108adeb6fd52ef32cc0 b4e8078cecef49e5867da2019b5109a9
+#: c004aba6850843948992eb34192e3e29 c6e9743221a94aeeada0946dfc7a4784
+#: c7eef77ad7db456dbc74f942f1881c7c c9499920f5dd44ebb20b248508a3fb5a
+#: caacf8f74b1d4539ad5412a7057598d5 d2c0f3383766445384917dc4a5a5c37e
+#: d4c356af6ffb4053ad6df71d5a824fa9 d5000cbd0caa469fbeefd4c63ffe0bf6
+#: da9591322514467293489d93b0f96243 dc35a3252be8492895de6ca58bf4f29f
+#: de2ba1638a2b4bd798277bd52a8110bc eae28449021a4430a019c972b77c93c2
+#: effb546a09614949b0e51b283dd1c1b1 f08dd9cb6ebb4c50885662069d89dceb
+#: f27167c1d5a6489a8bb1766ec5cdd149 f948f3748d64452c9e0aa115ab2118e5
+#: fb2d8e44394843179e94d982226d85fe
+msgid "Parameters"
+msgstr ""
+
+#: 00a6930e093f4f1693a623c9b7dc3c2c 0576ef9f692a433897f1d61736ef8e88
+#: 288f94bcfd3b41f0adf9bd545713075a 2efe2423b9884a90a0b8de6b311fcdce
+#: 364ef87fb0184628b58505254869185f 5df8f3027b34430cbd7f8b531d6086c3
+#: 6a2ec43640204c86980428edbd284f1b 893b1b0c8af74772871f092abae3ad8e
+#: 952a972997c94f5fbe542115e5a1ecfa d93c867b74ae48b4a7fdc25c556b57cb
+#: df8df991f0ce4999aaa6280f308e498e df9b10752c574e069db9749219984e0e of
+#: sds.linear.list.CircularLinkedList.append:3
+#: sds.linear.list.CircularLinkedList.prepend:3
+#: sds.linear.list.DoublyLinkedList.append:3
+#: sds.linear.list.DoublyLinkedList.prepend:3
+#: sds.linear.list.LinkedList.append:3 sds.linear.list.LinkedList.prepend:3
+msgid "The item to add."
+msgstr ""
+
+#: 0b38b913c5114263812e5a9ab45529e4 1edf5b7606784bcda11afc753f9a4fe2
+#: 30b50edbfeee44df85847e6ecfff35f0 35b9006e021a4601822fbf689e69982c
+#: 38a9d2a40f12430f87ac7dfdbc071af4 5283a4d3f6cf49599efb0dd423ab4735
+#: 64aa98b8b6ce4b04a03783fb0a4e78be 77a4674a694f459ea2e9f3f4d45d2cc5
+#: 79b1f4a74b6b452fa3a30d6146b2641b 7a51272320494a4fa8204b2cdb9077f7
+#: 7f6d9586c80f4242a4914364c9e8ecc6 a13ed8dea2e645919f3dd18abf31a927
+#: b4f08987a2384809bcd4a1b17ed20f2b c0e4ebf372dd43c5a486433c76f08420
+#: d2048f18e3cc485ca801f9a386435dd0 d55d3b72a3db4e4b95db5feeeb361b33
+#: dc60bc0b44a443659e58765b6d0dc96b e2ca953b7a0b44ea8cbc4c60d7835db5
+#: e61a8a7ba8fe47c09494d64b67803d47 f3282a87a71d4e4ea57c4d7401cce78e
+#: f65dc9984cc043e3aa927fad4d86be6e f9dc68c81f6142cc94c497275ad46ef7 of
+#: sds.linear.list.CircularLinkedList.append:17
+#: sds.linear.list.CircularLinkedList.clear:14
+#: sds.linear.list.CircularLinkedList.prepend:17
+#: sds.linear.list.CircularLinkedList.remove_first:20
+#: sds.linear.list.DoublyLinkedList.append:17
+#: sds.linear.list.DoublyLinkedList.clear:14
+#: sds.linear.list.DoublyLinkedList.prepend:17
+#: sds.linear.list.DoublyLinkedList.remove_first:20
+#: sds.linear.list.DoublyLinkedList.remove_last:20
+#: sds.linear.list.LinkedList.prepend:17
+#: sds.linear.list.LinkedList.remove_first:20
+msgid "Time complexity: O(1)"
+msgstr ""
+
+#: 76d4ae9dd3af425c984c6c16e32efc28 942898a1feee4c7c85a532bda9621912
+#: a3db3a32e6384690bd88916246dbc196 c174ba1aafd84802aa9d7cc01b26c2d1
+#: e66f720b31324531be364a12b29c4458 eadfa8c2aef64f258ff8835cbec5a781 of
+#: sds.linear.list.CircularLinkedList.append:1
+#: sds.linear.list.DoublyLinkedList.append:1
+#: sds.linear.list.LinkedList.append:1
+msgid "Add an item to the end of the list."
+msgstr ""
+
+#: 2321619ccfcb4b06824731959e0bf5c1 ed29079e57d94531b33dc3984c0b4d41 of
+#: sds.linear.list.LinkedList.append:17
+msgid ""
+"Time complexity: O(n) This implementation must traverse the entire list "
+"to find the end."
+msgstr ""
+
+#: 3a09f89191cf4059ba1c3c04713eb581 596c228645bd4dd0b687b0a88b19c09a
+#: 906b0b11ac57482bacf4cd1e30acab8a 9737fb6bfe3147e6a7430464bafcf5f4
+#: b0d92ef521ec4577a4a37d002ac62fc1 ff96528561c644078114cbcd9a5b9ee8 of
+#: sds.linear.list.CircularLinkedList.insert_at:1
+#: sds.linear.list.DoublyLinkedList.insert_at:1
+#: sds.linear.list.LinkedList.insert_at:1
+msgid "Insert an item at the specified index."
+msgstr ""
+
+#: c80c488d816d40cd98a5901c1fecf593 cde7b113bcab45999c04192d6cbc05ea
+#: f08fe62859e94cf4941ecfb87fc619dc fb35d285cafa44bdbaf650ac0c6cfca8 of
+#: sds.linear.list.CircularLinkedList.insert_at:3
+#: sds.linear.list.LinkedList.insert_at:3
+msgid "The index where to insert (0 <= index <= size)."
+msgstr ""
+
+#: 259c9291587746d2880457d512008857 41662a4d4ebc4677938455e4dd65ed3b
+#: 64a0b89750124e8cb368bcacbca65f3b 6d46d0a6c0f344d8a0195f5e10699d6d
+#: c18fc8a71ec449b6b94535ceafba7749 e5e9bd9d1f9d4d04a846ed0cc7915bd3 of
+#: sds.linear.list.CircularLinkedList.insert_at:5
+#: sds.linear.list.DoublyLinkedList.insert_at:5
+#: sds.linear.list.LinkedList.insert_at:5
+msgid "The item to insert."
+msgstr ""
+
+#: ../../source/api/linear/list.rst 0fad37dc99c84300a43120383398aeb7
+#: 13570329a0d144359252e4e7ace126e9 17f38d111c4444f380996fd69e037634
+#: 27b5c0cdc3cc4fad896d0d68fcdf5a5b 2c3a43ffc7f443cc9267c04755f21009
+#: 3479797beba6431abd67462e5363434d 3611a4448c6048e7b4c0006e33d5c0cf
+#: 3e1ddcccd1ff4e07ae55d15e2455ef0a 45b7789a4e9c48668badb00c5b6f11e0
+#: 4795641a3aef4d0c9b8cc035201b0150 48e09f58cf5b4d77a345e7590c74a06f
+#: 589ebd0503cc4a849f32f8821f07c035 665c3695f3a1459cbaad6518b21110b3
+#: 6c7da960f7c9454284fd29f9ad8d6fbc 81e2d796060541a69f9608b49a8477b3
+#: 8261d1d34bdc48528a5004b4d83aaebc 88b0a2fa6e994500a87c8434476421e6
+#: 99da3187d8d342a3b3381a16877fb367 a746160463454fb18ef36a04485f61cc
+#: a74e569e3c574bb0bf8267d6bf0616dc ae24cafec48846e4ba57c303b48431f3
+#: b33b85741cc9427d90784fe674fc1fbb b6ff6c6ebbc849d99493b665abf4f21b
+#: b8b76efd4a9e473caf18d7f9c2b3f86c b962e8834d3c402687030a0689d89c85
+#: cb877c41951944ec898d7556d2257748 cca38e1e6908432cb22b62792327fdc7
+#: cd2d3ff4fabf42c28341c35ad151298a d0e12bcc72c540698a79618fe1d84b01
+#: d40449f271e94edab9aa23a463b3688e d6b8bf0a1f734ffc9ae5aee517af53db
+#: e0cbb9c7ae244cde9af71840331c3ee0 e59528f5ef25436b9ffd9701c5dff1e5
+#: e717a2556239476487166525aa44d60f ec414107ee76409bbfcc7b059fe21594
+#: f2c548c0582b47998232cd5793a95bb7 f5d4873744d14386b526797955e5c8ac
+#: f6c7cf00c85a40149e45cdfc6c0e2881 f8b6bceab08d465889d48ea20c5bb294
+#: fdd72ca8628f492c8c8ea91681810c82 fef30d291bb24d508079d368d8651208
+#: ff1dacb357a84b4a85c9540bed2d3bf0
+msgid "Raises"
+msgstr ""
+
+#: 0310b2be95ce41b9b5218dda69ab97d7 0ac32693baa84af1bdeb551a17012e78
+#: 1b88b48013fa4837b51f8d376c167092 20ce41ef5249445e91f317540eb6bf92
+#: 21225763041b43d9a8e4c19f11748ca0 25d61515b5cd4482ae6edb75dab9395a
+#: 25e75213e90f47c2aed068e823d09716 29a4a03ce3d34ab3aebf220856fbea50
+#: 2b6e4b6cfe92419ea09ea7b294b69a45 2eceb1202562448bba9c1fa8477a0a73
+#: 41a642dcc0b6470bb4fad7eba085f477 583b0fe845664e03b6544e48b786eb7b
+#: 59ad2949137240bb84d9f788a559caa3 64ef5c8aa8d24f97bf1d314de119c98a
+#: 8475efce01fc456dbf65bb194afcd442 8c7e51d69948476f9481b24e67f4dd1d
+#: 9c0b6ac9ca514332bab797ffa40910a1 aa9b695036e0457a895785ab67baff13
+#: addff41077654830a693b6348e979885 bbd736458e774ba59c588aea2d39767b
+#: c8253e41d4904f9398691914858530d4 e89517cdb073452fb1b8ff2f1da8ba41
+#: f132ec3973d54d0daab96c4ca25e7617 fb15d43a48c646b3ad426150952f4876 of
+#: sds.linear.list.CircularLinkedList.__getitem__:9
+#: sds.linear.list.CircularLinkedList.__setitem__:8
+#: sds.linear.list.CircularLinkedList.insert_at:8
+#: sds.linear.list.CircularLinkedList.remove_at:10
+#: sds.linear.list.DoublyLinkedList.__getitem__:9
+#: sds.linear.list.DoublyLinkedList.__setitem__:8
+#: sds.linear.list.DoublyLinkedList.insert_at:8
+#: sds.linear.list.DoublyLinkedList.remove_at:10
+#: sds.linear.list.LinkedList.__getitem__:9
+#: sds.linear.list.LinkedList.__setitem__:8
+#: sds.linear.list.LinkedList.insert_at:8
+#: sds.linear.list.LinkedList.remove_at:10
+msgid "If the index is out of range."
+msgstr ""
+
+#: 01f23ec051f44eca802da55c3dbd7d45 0250447a2cc84ba09d3c516a9163e2cc
+#: 02f9df80564c45c1a60986dc5687a9c6 1a0e2a726480400c9e04401f5b17001a
+#: 311e99937b5a444f81c5973d05c55f06 3376903a90f8471386b0b7b17fdaea5c
+#: 34b2ff6dcff046408f1133fac9d4dc31 42d59decf2894c0f95a13b01971e0a51
+#: 4f09c3d44df54c5996f217bed4ee38c7 5a5681d9b2e94e5780d214604080fa6f
+#: 678ff2cd0f5e4c06960d2c69919ef2d6 71b050eb8ae544b68fa21d6c887efb54
+#: 747442d51faf43188b74e6ef117c7974 7816ca27e1eb4cb980ac6b1d69a5781b
+#: 790cd8f02f3a42e281d1e3374594ae41 7c5c77b79bd1493aaeb618c94daea0f5
+#: 7e650cf361de40b2b692108d55abe2e3 7f4bae53495e46de9923eb79778cb7d1
+#: 86291668bec34cf0bd1abb1dc697903b 898f3c80b4e14f47ab3a60b294f20098
+#: 8f5dea17ff534200972321fcde471bf0 911f76f655544074ab59a7a41d07aa66
+#: 99d37ac2772e4424804e0cdf2af640cd 9dc254a6b6a444938791dcfad3234d03
+#: a12523cf0e114a1da82cc365930ed210 b4fffdd8b5dd467cb167ecaedc8aa54f
+#: b6adaa759fb944d8b9195bcae676c355 ba67090716b64ed2a78654863f0226a9
+#: c4538e9a1add42cda651b54b53aa9bf6 ca5d4c154612472bbd3d1a2e8557cb77
+#: d458275e411f46e19f3d767069755504 d823100b8ac740f78fa756259cfc59f1
+#: dcb122d51db743198a4019a4dbc91a3c eb97f47e8a394cd09555630a737a19f6
+#: ee2b8864a09f4c0f9330a2d2bca4b3eb f8d10c14f6124fdbb6385073bacfb9e2 of
+#: sds.linear.list.CircularLinkedList.__contains__:21
+#: sds.linear.list.CircularLinkedList.__getitem__:24
+#: sds.linear.list.CircularLinkedList.__setitem__:21
+#: sds.linear.list.CircularLinkedList.find:22
+#: sds.linear.list.CircularLinkedList.insert_at:21
+#: sds.linear.list.CircularLinkedList.remove:25
+#: sds.linear.list.CircularLinkedList.remove_at:25
+#: sds.linear.list.DoublyLinkedList.__contains__:20
+#: sds.linear.list.DoublyLinkedList.find:22
+#: sds.linear.list.DoublyLinkedList.insert_at:21
+#: sds.linear.list.DoublyLinkedList.remove:25
+#: sds.linear.list.DoublyLinkedList.remove_at:25
+#: sds.linear.list.LinkedList.__getitem__:26
+#: sds.linear.list.LinkedList.__setitem__:21 sds.linear.list.LinkedList.find:22
+#: sds.linear.list.LinkedList.insert_at:21 sds.linear.list.LinkedList.remove:25
+#: sds.linear.list.LinkedList.remove_at:25
+msgid "Time complexity: O(n)"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:79 ../../source/api/linear/list.rst:130
+#: ../../source/api/linear/list.rst:182 10aa466be6d549f6822d096998c94e4e
+#: 2ffed37ebb3944f383cbc7771250c954 4abfa25ac3a04e28927f1244523cb59d
+msgid "Removal Operations"
+msgstr ""
+
+#: 25acd5ca40ab49e480cd39cd413881c5 3d7988aaf4b048e1ad2252b080c7b16b
+#: 4d6a9a7f37c049baafa36b1835ee0114 779c8a1673834ff08ebec1e076bb9419
+#: b280a4e0ad284ea899a48f1def3799a9 c7896f9bc1174c8f90c1780556d21cba of
+#: sds.linear.list.CircularLinkedList.remove_first:1
+#: sds.linear.list.DoublyLinkedList.remove_first:1
+#: sds.linear.list.LinkedList.remove_first:1
+msgid "Remove and return the first item from the list."
+msgstr ""
+
+#: 0a14a560ac3d468883b366231ff1c1a1 187120c77b514c54bb594af17f783a8f
+#: 2c56aed52dc3432e94cfd7de18276e74 330cff1e536a47e985d127bac132c0cf
+#: 426b8276c77d4dc98167921676ac424d 464c874ab6c54412bdec03dbe7de0b3c
+#: 48e8692e2c1e412b843568b7291e6870 4be0efa18c764e3bb32e4182866894c5
+#: 5b9f83ca4bca404da15025f1725818b1 5bb99da585194efd97eea6e47155e481
+#: 63aac8af176c4b4391fe7426b40fa279 63c8fdc60409461db7f6505ae4928599
+#: 6ced00d069234f3b8f9adf7aa01a9362 70eb62c7e7da447188946e5b2184e75e
+#: 7709783cf8a445da9678fcabd1ed0ea9 7efd1c5294a94fddb8ff3c45cf201278
+#: 816be235260a4a808775816c9ad2cdc6 83a0955dd577489d86a054e5533b76e4
+#: bf45951ba0514608a34cbbd148ab3a5c cb0e7405aba94d33ae078228e08d896b
+#: d7df1e2d291640d89cc03216671db7cb d8b8b2f4aa304365b4ed742144fbe2e3
+#: ddd3c134c67244b2b172523f24e94c93 e2b0666e5e5c4b4cb13c167bc2e208cb of
+#: sds.linear.list.CircularLinkedList.remove:6
+#: sds.linear.list.CircularLinkedList.remove_at:6
+#: sds.linear.list.CircularLinkedList.remove_first:3
+#: sds.linear.list.CircularLinkedList.remove_last:3
+#: sds.linear.list.DoublyLinkedList.remove:6
+#: sds.linear.list.DoublyLinkedList.remove_at:6
+#: sds.linear.list.DoublyLinkedList.remove_first:3
+#: sds.linear.list.DoublyLinkedList.remove_last:3
+#: sds.linear.list.LinkedList.remove:6 sds.linear.list.LinkedList.remove_at:6
+#: sds.linear.list.LinkedList.remove_first:3
+#: sds.linear.list.LinkedList.remove_last:3
+msgid "The removed item."
+msgstr ""
+
+#: 024d6ab17c124912a30d2e5c4426fa2a 08d891c1543a4a89847013fe4dee77b1
+#: 0d79832e8f1349888f83ac91833deb83 1c5348a85c25408498386d44f0ad3d24
+#: 259ed6362bec46b581600250df5f6f52 27b66f5b25264dba9299b6ae022d360d
+#: 28b9eb319a4b4bfc81e5094f4e11f1ce 3348a86645c2488888c60bd567302aef
+#: 36145f6c822546b19f2c4cf475af940c 430c00d4133b431ba5c55771711ff3e8
+#: 4344164771f54da79662481c41ace713 46b42e461b0b4b4ba5eb02631be633e9
+#: 5c03ceae309f4e938088f866421e2def 7e5b559a41364f3a8374a07ffe1bf4d2
+#: 9b13812acdab4ce1923c7a82d2d24b01 9c33743fbe8b4907b0558c4f5ebe5d37
+#: a3d1d603880c43f780627223be973867 a40e57a18bee4d958f3b634fdd465561
+#: a9ecaeeca3fe40e9ba52512b6b101836 b2f0f59de7e944a997b040d489cab80a
+#: d4128654755d4b2581cb6a596597b2c2 e1e7da7ca9174e36aa99ae53bee97f82
+#: e7222fdca7e14c1db9930c175a87ffa9 f010e7db0ae04d729f6e40a5d56fb803 of
+#: sds.linear.list.CircularLinkedList.remove:9
+#: sds.linear.list.CircularLinkedList.remove_at:9
+#: sds.linear.list.CircularLinkedList.remove_first:6
+#: sds.linear.list.CircularLinkedList.remove_last:6
+#: sds.linear.list.DoublyLinkedList.remove:9
+#: sds.linear.list.DoublyLinkedList.remove_at:9
+#: sds.linear.list.DoublyLinkedList.remove_first:6
+#: sds.linear.list.DoublyLinkedList.remove_last:6
+#: sds.linear.list.LinkedList.remove:9 sds.linear.list.LinkedList.remove_at:9
+#: sds.linear.list.LinkedList.remove_first:6
+#: sds.linear.list.LinkedList.remove_last:6
+msgid "If the list is empty."
+msgstr ""
+
+#: 0bc1607768934705a2d262eed68f7807 228625a6e78447cbac3e1bac50f20210
+#: 3fbc9f4495da44bebedb6146c78b0653 918d5498892c411b8839b4c88af9937a
+#: da1ef10b4fb94993a3b4621d739325d8 e1f36e18af484eda8657cf30e16140f8 of
+#: sds.linear.list.CircularLinkedList.remove_last:1
+#: sds.linear.list.DoublyLinkedList.remove_last:1
+#: sds.linear.list.LinkedList.remove_last:1
+msgid "Remove and return the last item from the list."
+msgstr ""
+
+#: 1b47237141cb47e8b638330d0a2b9070 3427d2c0e8df44eba90154076eef15d9
+#: e3bc809e15e7414fb4399daffcfb00c2 ed21b243f3194cd2a05d60243668d723 of
+#: sds.linear.list.CircularLinkedList.remove_last:20
+#: sds.linear.list.LinkedList.remove_last:20
+msgid "Time complexity: O(n) Must traverse to find the second-to-last node."
+msgstr ""
+
+#: 23cd60e91fbf43069128eff080fbfac2 4cbf72fbec0940fcadc8ea464a4557be
+#: 68f80cf2434244eba734def65b70e19b 76518819240c4b31ab36bd53e9df8a4f
+#: 9798741fcaa142c285ef8cbeeaf43f7e a00e1390f7dc441899d01371707ebdc7 of
+#: sds.linear.list.CircularLinkedList.remove:1
+#: sds.linear.list.DoublyLinkedList.remove:1
+#: sds.linear.list.LinkedList.remove:1
+msgid "Remove the first occurrence of an item from the list."
+msgstr ""
+
+#: 271b4eadaff942d49d544d4748741516 3f19af744b59444399adfa86457bd84c
+#: abe43f5f2ef3415aaab210a04a0215d5 ba973f5fb813490498688167ccb90df3
+#: e06bc1ee57334daa9f9fe9e4bfd51b83 e086acfe446d44d093e8194ed3e6382b of
+#: sds.linear.list.CircularLinkedList.remove:3
+#: sds.linear.list.DoublyLinkedList.remove:3
+#: sds.linear.list.LinkedList.remove:3
+msgid "The item to remove."
+msgstr ""
+
+#: 3277e369802c44f8bb70fdf563aca289 70460d0dd1a34b59b694f4d9060f22a2
+#: 8c6b7c1e2b9f4d8d9163245b112a2499 a9208b0ee357495d909ced37cb88a21e
+#: d57db9c77604402e9f35cb46b4aa205d f00dcf8e54c643a5bcb450840e87d267 of
+#: sds.linear.list.CircularLinkedList.remove:10
+#: sds.linear.list.DoublyLinkedList.remove:10
+#: sds.linear.list.LinkedList.remove:10
+msgid "If the item is not found."
+msgstr ""
+
+#: 18639aeb74a04c9fa1e7bbc2242a722f 2c93c5dd991a4e81a99f2a06ba828358
+#: 8e1eef738f4a489b845852499855c59f ceb5f59cbf6146889fb7bbea72de672a
+#: d358220a498045728e9ef9abaa97a979 f1344b0a8c2b4eb492db9a19c1206ac1 of
+#: sds.linear.list.CircularLinkedList.remove_at:1
+#: sds.linear.list.DoublyLinkedList.remove_at:1
+#: sds.linear.list.LinkedList.remove_at:1
+msgid "Remove and return the item at the specified index."
+msgstr ""
+
+#: 28f4de2c62704d3aad3c02728089e6eb 50be3495e4f1477890187b8856d01f88
+#: 61496c77b068468493ab9d978a61072d 7dfc4f537413488faddfd4232e0d162d
+#: a3a0032abbbe48c2bc44ce2fd1b4ae34 d4ce1a1940894d0a88989bf9a5495773 of
+#: sds.linear.list.CircularLinkedList.remove_at:3
+#: sds.linear.list.DoublyLinkedList.remove_at:3
+#: sds.linear.list.LinkedList.remove_at:3
+msgid "The index of the item to remove."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:86 ../../source/api/linear/list.rst:137
+#: ../../source/api/linear/list.rst:189 ad2c85ef82cf497cad7ab5bb272a4879
+#: b1874de18be9490888f23e165ee6ae1d b6f1fe2cf70d4a91977cfc36070b1b74
+msgid "Query Methods"
+msgstr ""
+
+#: 228625b906974014b2e59d45f3f40917 91c5e83edf72486298824a92e6720953
+#: 96bb683d76294baea90c285dc7e5b861 c911dd01de0e41b0983e860847515c98
+#: c94bb62a7c5d4b32aa3441fb9ce15953 fbf3cdbeabf24c4cb853211479d8e109 of
+#: sds.linear.list.CircularLinkedList.find:1
+#: sds.linear.list.DoublyLinkedList.find:1 sds.linear.list.LinkedList.find:1
+msgid "Find the index of the first occurrence of an item."
+msgstr ""
+
+#: 30d6938a5e2b481c9c715b5c154f997c 65825089256c456d859a411782b3597b
+#: 770a1bc1ee72464c95c9419477621493 95f4f2ff8764426ca4f606a4fe7548a1
+#: cdc1cf60197a46d982fd89f8d5a4dc24 db727376ff534486b48a6a1494cf86b1 of
+#: sds.linear.list.CircularLinkedList.find:3
+#: sds.linear.list.DoublyLinkedList.find:3 sds.linear.list.LinkedList.find:3
+msgid "The item to find."
+msgstr ""
+
+#: 0f96e77e1adf4d6192e0fbae9237b57b 1b1b332546e54a3cb51825780bacb47f
+#: 342702c90e924d2da9264f0ab7bbb43e 548dc85365b34fdebc153731ac4b3188
+#: 8d44659e18cc40b6a13328b983147fdf a73ff37aef2c4b4e947e0cf016d1e72e of
+#: sds.linear.list.CircularLinkedList.find:6
+#: sds.linear.list.DoublyLinkedList.find:6 sds.linear.list.LinkedList.find:6
+msgid "The index of the item, or -1 if not found."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:90 ../../source/api/linear/list.rst:141
+#: ../../source/api/linear/list.rst:193 53596258f0e944ff9f88a02d5a8ac6b9
+#: bb5ace1fcae04c978e66ce38ca3434ae ca0fcd2e4a124c7fa6ccaa494bf82d06
+msgid "Utility Methods"
+msgstr ""
+
+#: 1be979413bc84932a8b4fd6e89338393 2da1ef5fc3284afea2e00af7af24e52c
+#: 9ab294171ace48cda3ba3ff1fcf7f12d bdcae69efb7246d6b1886e64e2c558c0
+#: c58d67df61fa4ca090502d7f5e4f6193 d5c6a8887eaf4268b618d4b80d400345 of
+#: sds.linear.list.CircularLinkedList.reverse:1
+#: sds.linear.list.DoublyLinkedList.reverse:1
+#: sds.linear.list.LinkedList.reverse:1
+msgid "Reverse the list in place."
+msgstr ""
+
+#: 48ee53b5c1ad40e98728266c2dd04336 8d2d2a7339964bcaa9bb1a9bacfb8e24
+#: 8f7ec72df68a4f0da3e67b8a04a8f214 9546dbe162a64385aa906602c99a3061 of
+#: sds.linear.list.DoublyLinkedList.reverse:17
+#: sds.linear.list.LinkedList.reverse:17
+msgid "Time complexity: O(n) Space complexity: O(1)"
+msgstr ""
+
+#: 0196836474494acaa53cc94870590ac8 4eaceca651864f0699b4892d9200cbb6
+#: 5cf5aca052884388a89c5e3132539bf7 8d432c0905934d2aa94451c93085b288
+#: a2c59b517937442dab517b5104459413 e9834c6969774eb8963f7bb6165ad352 of
+#: sds.linear.list.CircularLinkedList.clear:1
+#: sds.linear.list.DoublyLinkedList.clear:1 sds.linear.list.LinkedList.clear:1
+msgid "Remove all elements from the list."
+msgstr ""
+
+#: 155d282526714e0fb1ee5c17c039fe62 8dcd190e0cac411499c6828b467064f8 of
+#: sds.linear.list.LinkedList.clear:18
+msgid ""
+"Time complexity: O(1) This operation simply resets the head pointer, "
+"allowing garbage collection to clean up the nodes."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:95 ../../source/api/linear/list.rst:146
+#: ../../source/api/linear/list.rst:199 31415f4362bd43d4bcfa198453f42949
+#: 7ef519c4e21443fea7c9a990d9c92c69 f63a832c8ef141d3bcb6dd33285f9f41
+msgid "Special Methods"
+msgstr ""
+
+#: 132b1c43e6a041cfa59291c88dd14ce7 5a02e2851b3e4bf4a95612a44a4c09d7
+#: 874b6739c1364a16a4ee407b82bdd732 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:1
+msgid "Return the number of elements in the list."
+msgstr ""
+
+#: 4b528506246c48a7bd2e3caea0d036de 98295df86291452f9d76701b52fa2c53
+#: c0c0b36922fa468c8da252246bd54be2 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:3
+msgid "This method enables the use of Python's built-in len() function."
+msgstr ""
+
+#: 56c1dfb976714f7f915eabf87bc61abd 5f6db18128214dc4aaa2ddecfe73e8d9
+#: be3312a8037e440b8f0fddaf7f79f285 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:5
+msgid "The number of elements in the list."
+msgstr ""
+
+#: 0bdbe9d368a6421388c324794a354a63 c77ba65ba54742d59388f28c861242db
+#: f386a5fd55c2435e80cea5a674f06ecc of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:19
+msgid ""
+"This is a concrete implementation that delegates to the size property. "
+"Subclasses don't need to override this method."
+msgstr ""
+
+#: 4d313899b72149e9baa09acb5f22edc8 b2f2049d873a44d6ad1e3c13a087c4de
+#: b5db0f0d9b7941e3b534cc3d7f6ec9f8 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:22
+msgid "Time complexity is O(1)."
+msgstr ""
+
+#: 03e06abbcd9c4b0993d94235fc738ebe 2c40da1993f04b75bddfa992b4ea6b93
+#: 91fd8a08c791414cbc8a2e308bd8084b of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:26
+msgid ":obj:`size`"
+msgstr ""
+
+#: 53e6af26ca654861a81d0b5431c02f91 868715ba089845209fde5ceea30b811c
+#: e281fb2d24d549d69848a82f141cd4d5 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:27
+msgid "Property that returns the same value."
+msgstr ""
+
+#: 5553cee0627f4b978a789620528bf7b9 abc8f56aa5d14a8cab28594bc3023b7a
+#: c2eb512d93ef43538b2b238c87dfcee8 of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:29
+msgid ":obj:`is_empty`"
+msgstr ""
+
+#: 1a49290b64354e1f906238cffd929db4 6ab07d8d7a3a475bb49a53bcfa7ab601
+#: d2197c2f80ce47ad82dc504942f6c94b of
+#: sds.linear.interfaces.AbstractLinkedList.__len__:30
+msgid "Check if the list is empty."
+msgstr ""
+
+#: 3d0b817f67e34bba95cc29254daf67a9 577b3f79c4474f2084b2265ee262da94
+#: 6018f22116924d8d8b537ca99d7b8ac8 d009aa2e8ce840d3aa69a571cec2cf4c of
+#: sds.linear.list.CircularLinkedList.__iter__:1
+#: sds.linear.list.LinkedList.__iter__:1
+msgid "Iterate over the elements in the list."
+msgstr ""
+
+#: 03d737cb619d4d9a816274fcbe144742 08b38d5c302141e39df2cfd543a7e35a
+#: 0c1257ae30084ab2b31eec2e3f81aa68 405921c020024c41886f93294e182264
+#: 4d4dc94933db4e68aa6f8ee024ef0570 69d89688d2114a91abf7a02d0b41bd7c
+#: b823cf818928486ab40ae80eea4f2713 beeb79d8e9e84ecd964c726d03774e0b of
+#: sds.linear.list.CircularLinkedList.__iter__
+#: sds.linear.list.DoublyLinkedList.__iter__
+#: sds.linear.list.DoublyLinkedList.__reversed__
+#: sds.linear.list.LinkedList.__iter__
+msgid "Yields"
+msgstr ""
+
+#: 475e6998ee184b3c9abbbf8cdeda8ad0 cd6843856ea242bfb35e2a6f22f6e325 of
+#: sds.linear.list.LinkedList.__iter__:3
+msgid "*Any* -- Elements from the list in order from head to tail."
+msgstr ""
+
+#: 3c6e14b3ff1043ef8b8128d6491bf57f a0716bf0cd204b4e8fb988e9af4e9857 of
+#: sds.linear.list.LinkedList.__iter__:21
+msgid "Time complexity: O(n) for complete iteration Space complexity: O(1)"
+msgstr ""
+
+#: 0a716f8b2f864e468d4b83efb1390550 1421f170dda14115b74fc99da0677dd0
+#: 1482d0dac96c48c8b1bb0dce224529d0 8952741edda84494bcfae184b40ee925
+#: 945e5f09e44846099bed06226fea7e3c e66e25b175364ceaa38d783792c06022 of
+#: sds.linear.list.CircularLinkedList.__contains__:1
+#: sds.linear.list.DoublyLinkedList.__contains__:1
+#: sds.linear.list.LinkedList.__contains__:1
+msgid "Return True if item is in the list."
+msgstr ""
+
+#: 1ba0e68fcc384910b2ddd07d4acaf643 5d8b7d0abe184e508ea77a2cefae808e
+#: 5f398f0b2bda401e930fca30b003fdc0 90b32d4b3c3d46d882c3aaa5f82e5fb4
+#: ab56087d0974496799b36e0a0e9a9b24 ad68542fd576417d954be2142c085e95 of
+#: sds.linear.list.CircularLinkedList.__contains__:3
+#: sds.linear.list.DoublyLinkedList.__contains__:3
+#: sds.linear.list.LinkedList.__contains__:3
+msgid "The item to search for."
+msgstr ""
+
+#: 4abe6a24be6a418fbee4f010f3b41925 9064505f42e744afaebaaf66523b36d5
+#: c9090adbd0ff45cda755085574c35d20 d9acb8d03cd845d8a8add4090852710a of
+#: sds.linear.list.CircularLinkedList.__contains__:6
+#: sds.linear.list.LinkedList.__contains__:6
+msgid "True if the item is found, False otherwise."
+msgstr ""
+
+#: 40cd16f9f32a42fc856842b5aafdef2b 5af9a4aa6a8946c0b5ddce38654b931e of
+#: sds.linear.list.LinkedList.__contains__:21
+msgid "Time complexity: O(n) This performs a linear search through the list."
+msgstr ""
+
+#: 1c579fbbbfc9431899947ae35ce4c56e 44ce1036a49d45b9974c7e4a5716cd80
+#: 612863c9538a4945b67f3130ba6f11dc 95ba35c7d1f34038976e6c29671e451e
+#: 9f22c7a52de0449892bf50e8f5d6f366 f851961edd9849c8a2c7ff49ffac7573 of
+#: sds.linear.list.CircularLinkedList.__getitem__:1
+#: sds.linear.list.DoublyLinkedList.__getitem__:1
+#: sds.linear.list.LinkedList.__getitem__:1
+msgid "Get the item at the specified index."
+msgstr ""
+
+#: 1d48d77ce8134ddea2f1d90dc7a265c7 424258217b52486e984866ba5fee1faa
+#: 58dc0dc1d14c4853bded795ca87ff718 5e67ba799e994d838a7b947436ebbde1
+#: 7ecaccbe18364d4980da5ce49f6f7d2b 82feb9ea1ee041ea91ee381e2231076c
+#: 8bc24f4920c241c78797f22dd31fe823 8e66f2f9b28c4a3d854348d94aad569e
+#: aa0b5e0419ef4454ad23e5a43c9da141 ab0ef642543e475bb6207d564be13ea9
+#: b7ab9aaad4f34647816d6498c75db545 f7916ade699241d985177d6bb9d6608a of
+#: sds.linear.list.CircularLinkedList.__getitem__:3
+#: sds.linear.list.CircularLinkedList.__setitem__:3
+#: sds.linear.list.DoublyLinkedList.__getitem__:3
+#: sds.linear.list.DoublyLinkedList.__setitem__:3
+#: sds.linear.list.LinkedList.__getitem__:3
+#: sds.linear.list.LinkedList.__setitem__:3
+msgid "The index (supports negative indexing)."
+msgstr ""
+
+#: 4a8c284cb7684329afe14990bb59ff6b 7908bca6a8b54fe590a6cfe6cd9276c4
+#: 7ce102bccc414818b8ae105d11e304e8 995de80fddca46cd915322452a8feac8
+#: a78941501f814afd8cb328227cbc75ab eac7becd729e4595b0815904863ac2a5 of
+#: sds.linear.list.CircularLinkedList.__getitem__:6
+#: sds.linear.list.DoublyLinkedList.__getitem__:6
+#: sds.linear.list.LinkedList.__getitem__:6
+msgid "The item at the specified index."
+msgstr ""
+
+#: 129be5a20d1f4275859af611e2c00f40 745ade5bbb7748b992a32e6ea36a7c43
+#: b403c6dd2c544c87a7baa57adc5c3baa b99249543d404d1583b9b07a69be6532
+#: e577ffe07bb147fbbafae047185622ba f10ca6db9bf4480c8c00326e9385cab1 of
+#: sds.linear.list.CircularLinkedList.__setitem__:1
+#: sds.linear.list.DoublyLinkedList.__setitem__:1
+#: sds.linear.list.LinkedList.__setitem__:1
+msgid "Set the item at the specified index."
+msgstr ""
+
+#: 21f009a574e54e329dc0368ecf3d7c5e 25b401ca85314cd999fa07b4b37a067c
+#: 40355fb395b9418aa786af071b492678 775140744a8d492ca3726d682406f5d7
+#: 96ff0712d34a4a9388fd1c2e5eba8465 cb0f2ad7f3b04a66b5d1262c6cdf8802 of
+#: sds.linear.list.CircularLinkedList.__setitem__:5
+#: sds.linear.list.DoublyLinkedList.__setitem__:5
+#: sds.linear.list.LinkedList.__setitem__:5
+msgid "The new value."
+msgstr ""
+
+#: 1d7368055d4144cda69550ca29f177ee 43f7b043817942eda48273477ee7784e
+#: 97e68f5b480e439fb422fe7e62c3a796 f828244e659a4467be4835bf1815f719 of
+#: sds.linear.list.CircularLinkedList.__repr__:1
+#: sds.linear.list.LinkedList.__repr__:1
+msgid "Return a detailed string representation of the list."
+msgstr ""
+
+#: 37d6404bcc7043119769c6f8231fd60e 93d7d23031314fc6972a53c4bcc32663 of
+#: sds.linear.list.LinkedList.__repr__:3
+msgid "String in the form \"LinkedList([item1, item2, ...])\"."
+msgstr ""
+
+#: 19994d698f53401694021ba444325847 ae55d9c264f4433db2accdabf3812d07
+#: b9856de03f874cf9a7d62c3b73c41190 e02382831a474e02804794ba479f1d3b of
+#: sds.linear.list.CircularLinkedList.__str__:1
+#: sds.linear.list.LinkedList.__str__:1
+msgid "Return a simple string representation of the list."
+msgstr ""
+
+#: ae587d5354a64719b02bda2b2ed30c8c c728d69e14b4438882b06062204f8d46 of
+#: sds.linear.list.LinkedList.__str__:3
+msgid "String showing the list structure with arrows."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:105 ../../source/api/linear/list.rst:643
+#: ../../source/api/linear/list.rst:710 3890db7a33444434a822dabfc5304ef2
+#: 517251b9c35b41899d6e098502ce7afe 60f8f1ef6bf84bfba20e9f77376744ab
+msgid "DoublyLinkedList"
+msgstr ""
+
+#: fcf3c4cbe8e640d2bfbda5e443e40273 of sds.linear.list.DoublyLinkedList:3
+msgid ""
+"A doubly linked list is a linear collection where each element (node) "
+"contains data and references to both the next and previous nodes in the "
+"sequence. This implementation maintains both head and tail pointers for "
+"efficient operations at both ends."
+msgstr ""
+
+#: c10f96de4e184cc19f2cc7b0899c73be cad4a1be1c594a1f875050048e5171b5 of
+#: sds.linear.list.DoublyLinkedList:12 sds.linear.list.DoublyLinkedList:18
+msgid "DoublyNode or None"
+msgstr ""
+
+#: 92289e190c5d4d5488d804a3161c9373 of sds.linear.list.DoublyLinkedList:16
+msgid "The last node in the list (read-only property)."
+msgstr ""
+
+#: 0cbf387a3ecc410ba87890516020ac2d of sds.linear.list.DoublyLinkedList:38
+msgid "O(n), optimized to O(n/2) by starting from nearest end"
+msgstr ""
+
+#: 2dcf9f1bd6b04b59bc31a43c39627917 of sds.linear.list.DoublyLinkedList:81
+msgid "Bidirectional traversal:"
+msgstr ""
+
+#: 7967f11cf1ca4dbd8cfc85f398a917a1 of sds.linear.list.DoublyLinkedList:88
+msgid "Efficient operations at both ends:"
+msgstr ""
+
+#: 005998e678f044c79eed7d075803ef15 of sds.linear.list.DoublyLinkedList:101
+msgid ""
+"The doubly linked structure allows for O(1) operations at both ends and "
+"enables backward traversal. This comes at the cost of additional memory "
+"per node (for the prev pointer) and more complex link management."
+msgstr ""
+
+#: 49f3b628d2044754835d39f1daa39dd6 6d8f4fba1054472f9546aec3cca46fa3 of
+#: sds.linear.list.CircularLinkedList:108 sds.linear.list.DoublyLinkedList:107
+msgid ":obj:`LinkedList`"
+msgstr ""
+
+#: 67e0d41b6ac4479faab1b8bf56fabee2 of sds.linear.list.DoublyLinkedList:108
+msgid "Singly linked list with simpler structure."
+msgstr ""
+
+#: a4eccbd9a723462eb7a388eb2f77491a of sds.linear.list.DoublyLinkedList:110
+msgid ":obj:`Deque`"
+msgstr ""
+
+#: 8a951d39dd5049ae8a12c7e8ab729b66 of sds.linear.list.DoublyLinkedList:111
+msgid "Uses doubly linked list for double-ended queue operations."
+msgstr ""
+
+#: edf92066e3734868bff23a7aad722b9b f164c9fc6f3a45169d916a09a604e42b of
+#: sds.linear.list.DoublyLinkedList.__init__:1
+msgid "Initialize an empty doubly linked list."
+msgstr ""
+
+#: 6be094ce424a435290e24641612ade85 7b09318506674bd4acef6f327ac20d42
+#: d5468efd3dde4520bf159b279d52239e f396a7091c1c4b70b78649d2a565f71b of
+#: sds.linear.list.DoublyLinkedList.head:17
+#: sds.linear.list.DoublyLinkedList.tail:18
+msgid "This property is read-only."
+msgstr ""
+
+#: 2639ea75e8984b29968180b5f3521b39 37388044a15e44f9bb7bec2e0694a784
+#: ee05b053e98247adba77f4d78f9f883c f92b8519edad4cce9a4392cd27478079 of
+#: sds.linear.list.CircularLinkedList.tail:1
+#: sds.linear.list.DoublyLinkedList.tail:1
+msgid "Get the last node in the list."
+msgstr ""
+
+#: 288e11eb84544e43abec2208c2f52cab 4dffb586824e4d82ba816e9eac2b401d
+#: 52bd22683235479ebf4741e67acc96c2 ebecf6bf542149d3b3904dc4183cc619 of
+#: sds.linear.list.CircularLinkedList.tail:3
+#: sds.linear.list.DoublyLinkedList.tail:3
+msgid "The last node, or None if the list is empty."
+msgstr ""
+
+#: 098ff38ad987477998436ef814a7b028 bce728546bc14c9ba42dc83040281676 of
+#: sds.linear.list.DoublyLinkedList.insert_at:3
+msgid "The index where to insert."
+msgstr ""
+
+#: 92151bd85ca44ae28f1af8e4efba2b60 997ecd3d2db94bc1866076b915f9ba4d of
+#: sds.linear.list.DoublyLinkedList.__iter__:1
+msgid "Iterate over the elements in forward direction."
+msgstr ""
+
+#: 034debfc98c14d9ba0e23ba24b49274f 0852547b78b54f8fac23ed629f96daaa of
+#: sds.linear.list.DoublyLinkedList.__iter__:3
+msgid "*Any* -- Elements from head to tail."
+msgstr ""
+
+#: ae498f3d390a49efbeaac7f4dccc2a34 d74975b4216342be8278921dbc741e91
+#: dbb59cec751f42249fbe9e0b0a135f9b e34c5dfff0a447f0a5735452575a783e of
+#: sds.linear.list.DoublyLinkedList.__iter__:16
+#: sds.linear.list.DoublyLinkedList.__reversed__:16
+msgid "Time complexity: O(n) for complete iteration"
+msgstr ""
+
+#: aa9ba198e8f44108b0b9a92950ff2e65 ec7ae1141e064436a776d1cd15d7766e of
+#: sds.linear.list.DoublyLinkedList.__reversed__:1
+msgid "Iterate over the elements in backward direction."
+msgstr ""
+
+#: 216448101359425fa610fdcd252bf4f3 b3fa016d30ec4a629f07775a86e4402f of
+#: sds.linear.list.DoublyLinkedList.__reversed__:3
+msgid "*Any* -- Elements from tail to head."
+msgstr ""
+
+#: 4348c47aace6421d94db1edf86b5ea93 5a52f00792ca409dbe992a8fc51b9834 of
+#: sds.linear.list.DoublyLinkedList.__contains__:6
+msgid "True if found, False otherwise."
+msgstr ""
+
+#: 4422f3b9402d4d4db5c6ad7e5dc625d2 f06331cf288845d38309edfaa4ea8f26 of
+#: sds.linear.list.DoublyLinkedList.__getitem__:23
+msgid "Time complexity: O(n), optimized to O(n/2) by starting from nearest end"
+msgstr ""
+
+#: b929116c6df241018318803a1626a0c6 cd71e20023ce4aaf89f108edf49a12ea of
+#: sds.linear.list.DoublyLinkedList.__setitem__:20
+msgid "Time complexity: O(n), optimized to O(n/2)"
+msgstr ""
+
+#: 1d21351e9f4d439d8728f9a7819e136b 26c15894b04343898eba9c3d53b404f4 of
+#: sds.linear.list.DoublyLinkedList.__repr__:1
+msgid "Return a detailed string representation."
+msgstr ""
+
+#: 4765427229264f3f9f76ff6b3d62616f a3eeee73a41746679dc8b3ad50b8fffd of
+#: sds.linear.list.DoublyLinkedList.__repr__:3
+msgid "String in the form \"DoublyLinkedList([item1, item2, ...])\"."
+msgstr ""
+
+#: 3a014d88dc2841ab9b36575b57e14905 ed01d3eecf234b95be0a2a6ffba2dd7e of
+#: sds.linear.list.DoublyLinkedList.__str__:1
+msgid "Return a simple string representation."
+msgstr ""
+
+#: e5c8772f1e444c0fa0e39131cc7403ad ffe71c199bce4cb7bfb9bddc1d8a243d of
+#: sds.linear.list.DoublyLinkedList.__str__:3
+msgid "String showing bidirectional structure."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:157 ../../source/api/linear/list.rst:644
+#: ../../source/api/linear/list.rst:711 0149519607664c07bc08780e5d255ccf
+#: 65033b4e5c9a4d1b8609899bfa52fb0c eb00b349804c4484a8bcce464ab250cc
+msgid "CircularLinkedList"
+msgstr ""
+
+#: 82f99dc20e7c4fa8b45034e896df063e of sds.linear.list.CircularLinkedList:3
+msgid ""
+"A circular linked list is a variation of a linked list where the last "
+"node points back to the first node, forming a circle. This implementation"
+" maintains a tail pointer for efficient operations at both ends."
+msgstr ""
+
+#: 9c46458db80547f89aa3b11c5443504a of sds.linear.list.CircularLinkedList:9
+msgid "The last node in the list (read-only property). The head is tail.next."
+msgstr ""
+
+#: ce899ea11850481ab70023524f2083cf of sds.linear.list.CircularLinkedList:15
+msgid "The first node in the list (read-only property). Equivalent to tail.next."
+msgstr ""
+
+#: 6c51a8768663454e9b7164f7702d03e4 of sds.linear.list.CircularLinkedList:77
+msgid "Create and populate a circular list:"
+msgstr ""
+
+#: cfe32d008b354a14a0e2037620a574c3 of sds.linear.list.CircularLinkedList:86
+msgid "The list is circular - tail points to head:"
+msgstr ""
+
+#: ee1c07cf248f41e1b1325ea4da443a34 of sds.linear.list.CircularLinkedList:91
+msgid "Rotate the list:"
+msgstr ""
+
+#: 66768687bf694685a1c044f25c58eef5 of sds.linear.list.CircularLinkedList:102
+msgid ""
+"The circular structure means the last node's next pointer is never None "
+"(except for an empty list). Iteration must explicitly stop after visiting"
+" all nodes to avoid infinite loops."
+msgstr ""
+
+#: 5232b366a2fb45f0a4f23196f9397b11 of sds.linear.list.CircularLinkedList:109
+msgid "Singly linked list without circular connection."
+msgstr ""
+
+#: 7931fabb463347fbbb6000c492652815 of sds.linear.list.CircularLinkedList:112
+msgid "Doubly linked list with bidirectional traversal."
+msgstr ""
+
+#: 0968bd707ac34d0f9a679143b5dd21cc b150870631d34a1987e41a58a5b0632f of
+#: sds.linear.list.CircularLinkedList.__init__:1
+msgid "Initialize an empty circular linked list."
+msgstr ""
+
+#: 8b4f6bd735a24a2a881c71e8a787aade d91143237b1240d181b60191d2c1d2d0 of
+#: sds.linear.list.CircularLinkedList.tail:20
+msgid ""
+"The head can be accessed as tail.next when the list is not empty. This "
+"property is read-only."
+msgstr ""
+
+#: 5f376f442dc04595ab0c6a4cd9e0d81d faefe061b1ec4d8fbfe0581c1b09d0cc of
+#: sds.linear.list.CircularLinkedList.head:3
+msgid "The first node (tail.next), or None if the list is empty."
+msgstr ""
+
+#: 2f86b63f6e784d22bbfbdc6fc56c3a5c 993c83acdf224ec8af734169ca724591 of
+#: sds.linear.list.CircularLinkedList.head:17
+msgid ""
+"The head is always tail.next in a circular list. This property is read-"
+"only."
+msgstr ""
+
+#: a48c284d56544782a21a47234b6f1848 e7a2a1a6c5314932a191fd9acacf053a of
+#: sds.linear.list.CircularLinkedList.reverse:17
+msgid ""
+"Time complexity: O(n) Space complexity: O(1) The circular structure is "
+"maintained after reversal."
+msgstr ""
+
+#: 1c657bf96acb478d86975ab4352e0a08 559771fd34f94ba4a87804e1f5ccd39a of
+#: sds.linear.list.CircularLinkedList.rotate:1
+msgid "Rotate the list by moving the tail forward by steps positions."
+msgstr ""
+
+#: 624d209d91ac4d00993dabbf083e06d0 94a88208754745d89cb5aec5aa6ccb90 of
+#: sds.linear.list.CircularLinkedList.rotate:3
+msgid ""
+"Positive steps rotate forward (tail moves right), negative steps rotate "
+"backward (tail moves left)."
+msgstr ""
+
+#: 3952c1184fc7453987cc85c099cc7314 95ceed9c391545cd9b9c77f14f573f04 of
+#: sds.linear.list.CircularLinkedList.rotate:6
+msgid ""
+"Number of positions to rotate. Default is 1. Positive for forward, "
+"negative for backward."
+msgstr ""
+
+#: 7734bf882a8f4a5bb21baee70a050058 a4d61588b9fd42f48feb54157bf54fd3 of
+#: sds.linear.list.CircularLinkedList.rotate:19
+msgid "Rotate forward:"
+msgstr ""
+
+#: 1c55866fa34f4e7597803701a910414c 354dd2f0ab9e471e912945ac82a01a8e of
+#: sds.linear.list.CircularLinkedList.rotate:25
+msgid "Rotate backward:"
+msgstr ""
+
+#: 1d76475fb57344a492d196ed064a1c52 e4b1f65af3294cf9b2cdb8db5a8511fb of
+#: sds.linear.list.CircularLinkedList.rotate:33
+#, python-format
+msgid ""
+"Time complexity: O(steps % size) This operation is very efficient for "
+"circular lists as it only requires moving the tail pointer."
+msgstr ""
+
+#: 357eacc6e79a49dbbaeaa648caa04554 56f9f6fad562445ba6590b9d792ec676 of
+#: sds.linear.list.CircularLinkedList.rotate:37
+msgid "Rotating by size (or multiples of size) returns to the same state."
+msgstr ""
+
+#: 024f6b9f80654318adf75fd214a1ea49 a611b8e197e045db8b5aa19bd7c80909 of
+#: sds.linear.list.CircularLinkedList.__iter__:3
+msgid ""
+"*Any* -- Elements from the list in order, iterating exactly once through "
+"the circle."
+msgstr ""
+
+#: 1dc21554b3934e47988dc9c2443ea4d4 a5409fb7bdd34e149aa29ea8c92960dc of
+#: sds.linear.list.CircularLinkedList.__iter__:16
+msgid ""
+"Time complexity: O(n) for complete iteration The iteration explicitly "
+"stops after visiting all nodes to prevent infinite loops."
+msgstr ""
+
+#: 1aeb2f75702347aaafbfdeb494c0dc47 4b227587c73147c09b0cbd127706f43a of
+#: sds.linear.list.CircularLinkedList.__repr__:3
+msgid "String in the form \"CircularLinkedList([item1, item2, ...])\"."
+msgstr ""
+
+#: 41b041079abc44a19b656fb49f59a9ea dcac8181b2e3469eba4014000ce3633f of
+#: sds.linear.list.CircularLinkedList.__str__:3
+msgid "String showing the circular structure."
+msgstr ""
+
+#: ../../source/api/linear/list.rst:209 3c460478a18243e8a026ce691095f410
+msgid "Usage Examples"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:212 8046192ad4874a3c8bacd819fd48ba41
+msgid "LinkedList Examples"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:215 ../../source/api/linear/list.rst:312
+#: ../../source/api/linear/list.rst:382 40e016bd9fa349c7a9b7b60a6a1b1471
+#: a78047a3c0f0454fa9953ae25b43b70f e6a0a93b3365404b8c2a0da0bb5038af
+msgid "Basic Operations"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:231 1ebb0a500c074f9bbf88cdeb7fee7e80
+msgid "Insertion"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:252 515b8e1e13d7497a9ae0e762542bd094
+msgid "Removal"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:273 bdf54feba6dd4b88aa4081c56375aaca
+msgid "Access and Search"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:295 39b42720567f4d19b79a0be7299d864a
+msgid "Reversal"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:309 c55423e52a3a4c46864229dce444f700
+msgid "DoublyLinkedList Examples"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:328 3617f2db83684481b2b9c1d50467165b
+msgid "Bidirectional Traversal"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:343 a89be6dd741e4d41b2afaa267381ba6b
+msgid "Efficient End Operations"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:365 6c63c6f043964b43b15468e91dbc8fe5
+msgid "Optimized Index Access"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:379 b4b5fff0cbe54a128f0eec8a98d39974
+msgid "CircularLinkedList Examples"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:398 512cea53858c4672b9859dd7fa35c61a
+msgid "Circular Structure"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:413 8312bf08dc094d76bf4f7cd6fed43118
+msgid "Rotation"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:435 4766a458f8e24f07bab3184feb60f48b
+msgid "Round-Robin Processing"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:458 2cba30940ccc4f7e8d84b6af56acb935
+msgid "Real-World Examples"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:461 d0ffbae353cd4a40bc8c61987d6e5ed7
+msgid "Example 1: Browser History (LinkedList)"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:516 8eff9217bef84b9c8f0663973f3000dc
+msgid "Example 2: LRU Cache (DoublyLinkedList)"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:572 c01210b239a8424bba7187eb17d21a53
+msgid "Example 3: Music Playlist (CircularLinkedList)"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:632 e25a8c0bcd5848db89ec482e73756062
+msgid "Performance Characteristics"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:635 aeea9b355b4f483bb42ad228320f3c16
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:641 64ad693f99964d2fa8d2fb248cbb0ef0
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:645 641f7cbfd1bd4633b8c12f47b490e8f6
+msgid "``prepend()``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:649 c6cea2833de24a2fbb75a3f6b3a60442
+msgid "``append()``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:653 56b005288d394cf69fd8e1d83ced7ac4
+msgid "``insert_at(i)``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:657 2a8ba307221c4a7baa20da64b113a203
+msgid "``remove_first()``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:661 54686ebd890e4610ba6e24387ae47258
+msgid "``remove_last()``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:665 155e9f4627024783a720c32ef5280cb4
+msgid "``remove_at(i)``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:669 c309e8aacd1a4c8683ca7ff398e7fc7a
+msgid "``remove(item)``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:673 622635f9e1364be3b3ee0fddb99d095c
+msgid "``find(item)``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:677 15ef9b2cf37f4da09a2d2f6e1c611d63
+msgid "``reverse()``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:681 c14abc8f43364552bfe94be5d44d4bce
+msgid "``rotate(k)``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:682 ../../source/api/linear/list.rst:683
+#: 0ba02f04830a46a6b616aeed70ddc483 579c6b5882174bfa968c5f70d51cdd10
+msgid "N/A"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:684 0ca97391f96e4394b93c547feeb278fd
+msgid "O(k)"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:685 bd839894cd0646ba92f54e270a0770ee
+msgid "``__getitem__[i]``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:687 ../../source/api/linear/list.rst:691
+#: ac55d3c8df6e4ff794ed1798dd48a44f b1bc05d5fc9e456ab0d85b258d717b95
+msgid "O(n/2)"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:689 6836b6236968428986c6fa48f8dfe7b6
+msgid "``__setitem__[i]``"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:695 f6a41244cbf741d990865dbe4f724271
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:697 20d1149a8b6e4bf686ed7d3cf3869165
+msgid "**LinkedList**: O(n) + O(n) for references"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:698 ea6ab81374fc43c7888675534a883610
+msgid "**DoublyLinkedList**: O(n) + O(2n) for references"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:699 1834edcf7052483f8c60ae4a64008167
+msgid "**CircularLinkedList**: O(n) + O(n) for references"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:702 c6ee645a52c04d9faf1ddb9a84cd2dde
+msgid "Comparison Summary"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:708 0abf792ab86146988fd5198de53801a2
+msgid "Feature"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:712 2185ca3ff2334a3ca7186734fe00843c
+msgid "**Memory**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:713 9a8f856bafe74b01acb93b781390c102
+msgid "Lowest"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:714 0144917bfb5743e6ad111ba883c39d3b
+msgid "Highest"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:715 7e99df2bac7f453e84d9498251ae2725
+msgid "Medium"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:716 714c659ad0244e39af9533413507335c
+msgid "**Append**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:720 20476fd6f3c54caea8c49d7558bd4d7d
+msgid "**Remove Last**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:724 f9ba76cc55a04f36855ad97e5e5c2eb5
+msgid "**Backward Iter**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:725 ../../source/api/linear/list.rst:727
+#: ../../source/api/linear/list.rst:729 ../../source/api/linear/list.rst:730
+#: 8e267abccf18464eb073a68df0fdb656 9c8f5660650b4a168da810ba38dd9366
+#: b381b817232f47fc8832baff4412c720 efc45eb09cdc4c889c0d888e811efd76
+msgid "No"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:726 6e4359c43b944d92be7b167de20b3aff
+msgid "Yes"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:728 19c7da46b28c4b82b520f8fad9ab1214
+msgid "**Rotation**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:731 b1985e8ef4e74591b00401a9e5e7547a
+msgid "Yes O(k)"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:732 1a82cc91a538474a8c2211381631ea87
+msgid "**Best For**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:733 7c3e82c7ae384a7c9deb503e3ff2ba5f
+msgid "Simple cases"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:734 1ea7eb1013cd43f79b75e3c28227a469
+msgid "Bidirectional"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:735 39d33b8743814f49a720c9c9e246782e
+msgid "Circular ops"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:738 e83a02bb8aec406493e8b6c57ac220bf
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:741 4fd8dc98d7674cde9b7d4a8b72411d21
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:743 f34fbae0e1a649da829dea9628fc789d
+msgid "✅ **Choose based on operations**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:756 1f3d8a84fe274709bf65932fe2b81dc8
+msgid "✅ **Use iteration, not indexing**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:768 65a5a534de2548ed9456fb288dca7277
+msgid "✅ **Cache frequently accessed elements**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:777 a6e8ef11e9ee43c9956a2e62b6366843
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:779 ea52f873f3394b0088b9713ef0f9a026
+msgid "❌ **Don't use for random access**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:788 1ca6985e7b2c41ef8371167ccd756ff8
+msgid "❌ **Don't forget complexity differences**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:796 e8529706db064cdabd9323bb2c54191b
+msgid "❌ **Don't modify during iteration**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:810 f536614905ab41b0bf3c54aeea0f9007
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:812 6e2f76af29e344a0be0f6e9d45d194b6
+msgid "**Using wrong list type**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:819 cda56b5c7df0425ca2d4d9818dd3e6b9
+msgid "**Repeated indexing**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:831 f216a75dee4c4cd2927e610490188ba9
+msgid "**Ignoring negative indices**"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:839 c18723c1964a453190f29831b77d2e7b
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:841 9520e52471994fab93a872282057f039
+msgid ":doc:`interfaces` - Abstract linked list interface"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:842 b399bd718c68442fbd26c5a06b8bea15
+msgid ":doc:`node` - Node implementations"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:843 5c187fce2c424c458cb148b6cac49432
+msgid ":doc:`../../guide/linear_structures/linked_list` - Linked list guide"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:846 f7d79b4b081c4bf2a329df72c45c5842
+msgid "References"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:848 336100bf82004bda84cb4394cf4a7f88
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 1\", Section 2.2"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:849 ef0806f9191646048e91d27b97c4ac4b
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 10"
+msgstr ""
+
+#: ../../source/api/linear/list.rst:850 a016c4fab7264b94b9b4188e2806f91e
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Section 1.3"
+msgstr ""
+
+#~ msgid ""
+#~ "This module provides concrete implementations"
+#~ " of linked list variants. Linked "
+#~ "lists are fundamental linear data "
+#~ "structures where elements are connected "
+#~ "via references rather than stored "
+#~ "contiguously in memory."
+#~ msgstr ""
+
+#~ msgid "Visual Comparison"
+#~ msgstr ""
+
+#~ msgid "**Basic Usage:**"
+#~ msgstr ""
+
+#~ msgid "Performance Comparison"
+#~ msgstr ""
+
+#~ msgid "Array"
+#~ msgstr ""
+
+#~ msgid "**Access by index**"
+#~ msgstr ""
+
+#~ msgid "O(n/2)*"
+#~ msgstr ""
+
+#~ msgid "**Search**"
+#~ msgstr ""
+
+#~ msgid "**Prepend**"
+#~ msgstr ""
+
+#~ msgid "**Insert at index**"
+#~ msgstr ""
+
+#~ msgid "**Delete first**"
+#~ msgstr ""
+
+#~ msgid "**Delete last**"
+#~ msgstr ""
+
+#~ msgid "**Reverse**"
+#~ msgstr ""
+
+#~ msgid "\\* DoublyLinkedList can start from nearest end"
+#~ msgstr ""
+
+#~ msgid "**LinkedList**: O(n) - one next pointer per node"
+#~ msgstr ""
+
+#~ msgid "**DoublyLinkedList**: O(n) - next + prev pointers per node"
+#~ msgstr ""
+
+#~ msgid "**CircularLinkedList**: O(n) - one next pointer per node"
+#~ msgstr ""
+
+#~ msgid "**Array**: O(n) - contiguous memory"
+#~ msgstr ""
+
+#~ msgid "When to Use Each"
+#~ msgstr ""
+
+#~ msgid "**Use when:**"
+#~ msgstr ""
+
+#~ msgid "✅ Frequent insertions/deletions at the beginning"
+#~ msgstr ""
+
+#~ msgid "✅ Memory efficiency is important (no prev pointer)"
+#~ msgstr ""
+
+#~ msgid "✅ Simple forward traversal is sufficient"
+#~ msgstr ""
+
+#~ msgid "**Don't use when:**"
+#~ msgstr ""
+
+#~ msgid "❌ Need bidirectional traversal"
+#~ msgstr ""
+
+#~ msgid "❌ Frequent appends (O(n) without tail pointer)"
+#~ msgstr ""
+
+#~ msgid "❌ Random access is common"
+#~ msgstr ""
+
+#~ msgid "✅ Need bidirectional traversal"
+#~ msgstr ""
+
+#~ msgid "✅ Frequent operations at both ends"
+#~ msgstr ""
+
+#~ msgid "✅ Implementing deque or LRU cache"
+#~ msgstr ""
+
+#~ msgid "❌ Memory is very constrained"
+#~ msgstr ""
+
+#~ msgid "❌ Only need forward traversal"
+#~ msgstr ""
+
+#~ msgid "✅ Implementing round-robin scheduling"
+#~ msgstr ""
+
+#~ msgid "✅ Need circular iteration"
+#~ msgstr ""
+
+#~ msgid "✅ Implementing circular buffers"
+#~ msgstr ""
+
+#~ msgid "❌ Need clear start/end points"
+#~ msgstr ""
+
+#~ msgid "❌ Risk of infinite loops is problematic"
+#~ msgstr ""
+
+#~ msgid "Example 1: Music Playlist (CircularLinkedList)"
+#~ msgstr ""
+
+#~ msgid "Example 3: Polynomial Addition (LinkedList)"
+#~ msgstr ""
+
+#~ msgid "Memory Management"
+#~ msgstr ""
+
+#~ msgid "Index Validation"
+#~ msgstr ""
+
+#~ msgid "Efficient Iteration"
+#~ msgstr ""
+
+#~ msgid ":doc:`interfaces` - Abstract base class"
+#~ msgstr ""
+
+#~ msgid ":doc:`../../guide/linear_structures/linked_list` - User guide"
+#~ msgstr ""
+

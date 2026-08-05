@@ -1,0 +1,416 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:2
+#: 438e6275288f4910ab87e03974bd17d0
+msgid "sds.graph.UndirectedGraph"
+msgstr ""
+
+#: 8a494338986445acb10512d93a34dd89 of sds.graph.directed.UndirectedGraph:1
+msgid "Undirected graph with explicit edge type validation."
+msgstr ""
+
+#: dc4ead5b52ed48ffb47ddaddb6112919 of sds.graph.directed.UndirectedGraph:3
+msgid ""
+"This class extends Graph to explicitly validate that only undirected "
+"edges (Edge instances, not DirectedEdge) are added. While Graph also "
+"works with undirected edges, UndirectedGraph makes this requirement "
+"explicit and enforces it through type checking."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst
+#: 12d45e8785934d0c8d71cc7bef743b37 4d0e71b680c147da8448e6c15aca2e5f
+#: bd8b04e1e0f04ccd9de62f8ba2c5512f f53f3b3624e14c4aa34158a093b99434
+msgid "Parameters"
+msgstr ""
+
+#: 4bfeb6479eef4ef48ecdab241880bcd6 of sds.graph.directed.UndirectedGraph:8
+msgid ""
+"If True, allows multiple edges between the same pair of nodes. Default is"
+" False."
+msgstr ""
+
+#: 4e2dc8d628de477b9b2f5bb3a251493b of sds.graph.directed.UndirectedGraph:14
+msgid "Whether multiple edges are allowed (read-only property)."
+msgstr ""
+
+#: e358548165344feebed8eed5eaf18132 of sds.graph.directed.UndirectedGraph
+msgid "type"
+msgstr ""
+
+#: 6fc9e4687cd44a9f96471cfbbd369771 of sds.graph.directed.UndirectedGraph:16
+msgid "bool"
+msgstr ""
+
+#: 3356de4c90b04e89bbfdf4712874253d 63f1a118640641dc96692f438e8fba1b
+#: 7259292cbbca4fa48008aed5001eb950 9c33f0b5346247709eb806d64c6f7d17
+#: a2e0ccfd3ae94828a2b12f05855fd4e0 d170e01394164c8e903f420ac077b599 of
+#: sds.graph.directed.UndirectedGraph:18
+#: sds.graph.directed.UndirectedGraph.__init__:6
+#: sds.graph.directed.UndirectedGraph.__repr__:6
+#: sds.graph.directed.UndirectedGraph.__str__:6
+#: sds.graph.directed.UndirectedGraph.add_edge:9
+msgid "Examples"
+msgstr ""
+
+#: d50610176c194e9b96f8aa49e9b1cf6c of sds.graph.directed.UndirectedGraph:20
+msgid "Create and use an undirected graph:"
+msgstr ""
+
+#: 54f0ec99b1c44a6ea1191ea7d05be8c6 ac301f7dcf354a62b024ad355d059945 of
+#: sds.graph.directed.UndirectedGraph:33
+#: sds.graph.directed.UndirectedGraph.add_edge:20
+msgid "Directed edges are rejected:"
+msgstr ""
+
+#: fc173d14dbf44f4680436331373342d9 of sds.graph.directed.UndirectedGraph:40
+msgid "Multi-edges supported:"
+msgstr ""
+
+#: 7c98e219209c4d8882022425801d81f8 f0eea6e7ab3c4a2fa3418fe4c0b143f2 of
+#: sds.graph.directed.UndirectedGraph:50
+#: sds.graph.directed.UndirectedGraph.add_edge:27
+msgid "Notes"
+msgstr ""
+
+#: 056da68e3f6a4fcaa9b2f5981ceea459 of sds.graph.directed.UndirectedGraph:52
+msgid ""
+"UndirectedGraph inherits all functionality from Graph and adds only edge "
+"type validation. All operations (add_node, remove_node, neighbors, "
+"degree, is_connected, etc.) work identically to Graph."
+msgstr ""
+
+#: 9258861cfa9642be8a5095da5dfb1add of sds.graph.directed.UndirectedGraph:56
+msgid ""
+"Time and space complexity are identical to Graph: - add_edge: O(1) for "
+"multigraph, O(degree) for simple graph - All other operations: same as "
+"Graph"
+msgstr ""
+
+#: 9091779a881d43b58df17eb09f92eb53 of sds.graph.directed.UndirectedGraph:60
+msgid ""
+"The main benefit is semantic clarity and type safety: using "
+"UndirectedGraph makes it explicit that the graph must be undirected."
+msgstr ""
+
+#: 1269dfb9595249fe8362e75b1e89c7e8 of sds.graph.directed.UndirectedGraph:65
+msgid ":obj:`Graph`"
+msgstr ""
+
+#: dd6d126c2845451089f0cc6dbed31ed8 of sds.graph.directed.UndirectedGraph:66
+msgid "Base implementation without explicit edge type checking."
+msgstr ""
+
+#: 7b9febb4a6ef42edbd61d34dbdaad575 of sds.graph.directed.UndirectedGraph:68
+msgid ":obj:`DirectedGraph`"
+msgstr ""
+
+#: 1121f5b60557411e935192b6884aef12 of sds.graph.directed.UndirectedGraph:69
+msgid "For graphs with directed edges."
+msgstr ""
+
+#: 316b41b1847d4f28a98be2e29ad1b664 of sds.graph.directed.UndirectedGraph:71
+msgid ":obj:`WeightedGraph`"
+msgstr ""
+
+#: 94373ae942844d74ac9f17023105af1a of sds.graph.directed.UndirectedGraph:72
+msgid "For weighted undirected graphs."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 1f92f69bb2bd484d9b0a71e9a2a09232 2fd1e2e4fa074fee9c37ad417f8b40d6
+#: c21d58d4d72c4c6ebfb75d764bf29d23 of
+#: sds.graph.directed.UndirectedGraph.__init__:1
+msgid "Initialize an empty undirected graph."
+msgstr ""
+
+#: 5354fd89a6a34c829584652fe3ed16b3 f5f24f5aa4e347d3aff03653a44abb3f of
+#: sds.graph.directed.UndirectedGraph.__init__:3
+msgid "Allow multiple edges between same nodes. Default is False."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:13
+#: 70e5508d5beb46be9bd4d16c7ccd0b16
+msgid "Methods"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 9d099467b0cb47baba7eacc33ed2c665
+msgid ""
+":py:obj:`__init__ <sds.graph.UndirectedGraph.__init__>`\\ "
+"\\(\\[allow\\_multi\\_edges\\]\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 791418a87145494994ccf194f403de0d
+msgid ":py:obj:`add_edge <sds.graph.UndirectedGraph.add_edge>`\\ \\(edge\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 01bb62e56cd3442aa07d82c2b4b08299 c353aaa01a6e4c1abc140418c43346ad of
+#: sds.graph.directed.UndirectedGraph.add_edge:1
+msgid "Add an undirected edge to the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 8a859073217f43198e69fa6af4294597
+msgid ":py:obj:`add_node <sds.graph.UndirectedGraph.add_node>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: bfccbaa1cfa4478886d647ea7ed61d18
+msgid "Add a node to the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 68af2bd6f012437e835476695dcebfab
+msgid ":py:obj:`clear <sds.graph.UndirectedGraph.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 6932be2d84c440d3842697f7853bdd57
+msgid "Remove all nodes and edges from the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 8125810b34944d4c87024184cce26258
+msgid ":py:obj:`degree <sds.graph.UndirectedGraph.degree>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: bdc34c3fc38f4bb2b7262fa85cb37202
+msgid "Get the degree of a node (number of incident edges)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 9e867c7283f84b5785fac1bc608f56af
+msgid ":py:obj:`edge_count <sds.graph.UndirectedGraph.edge_count>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 93864d17b4ea4699942082bd7a477f5b
+msgid "Get the number of edges in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: e0e7ce0db10a43a2a8317e3ca0b32c56
+msgid ":py:obj:`edges <sds.graph.UndirectedGraph.edges>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: ec40714118a242129ee2e601a2423837
+msgid "Get all edges in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: aa96b9e70df64dffbc226a57dd0a8080
+msgid ""
+":py:obj:`get_edge <sds.graph.UndirectedGraph.get_edge>`\\ \\(node1\\, "
+"node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: ed1ddcdb390e4424a747f688eedf194b
+msgid "Get the edge between two nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 87a2642795644ec1aed5ff8c6e6ef4e8
+msgid ""
+":py:obj:`get_node_by_id <sds.graph.UndirectedGraph.get_node_by_id>`\\ "
+"\\(node\\_id\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: a593204cff66487782be5b127b982305
+msgid "Get a node by its ID."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: eb2e7d626ec243ca94643b38b49dc862
+msgid ""
+":py:obj:`has_edge <sds.graph.UndirectedGraph.has_edge>`\\ \\(node1\\, "
+"node2\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: ce6f1b41daed478684afb404494f1b49
+msgid "Check if an edge exists between two nodes."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 2e8c66f2a93043f7a6844ff2f47b9d4a
+msgid ":py:obj:`has_node <sds.graph.UndirectedGraph.has_node>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 2b7d16c72a874dcb8df1864d78c753cb
+msgid "Check if node exists in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: f2b5b758444a4525a37bf0c8c3795189
+msgid ":py:obj:`is_connected <sds.graph.UndirectedGraph.is_connected>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 7b64d79bf6494d3481691313baf53c38
+msgid "Check if the graph is connected."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: cada56ab898b44f3bf41e6545cd00b7d
+msgid ":py:obj:`is_empty <sds.graph.UndirectedGraph.is_empty>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 8fe1b0770a744b9c860c4b252302d3c2
+msgid "Check if the graph is empty (no nodes)."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: a99b6a7ae8614d579d8bb0f75aed0f37
+msgid ":py:obj:`neighbors <sds.graph.UndirectedGraph.neighbors>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 4bb3bbe963924253947dbd577d5f0855
+msgid "Get all neighbors of a node."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: e4f20f9053884aceb0dc32d78dacd656
+msgid ":py:obj:`node_count <sds.graph.UndirectedGraph.node_count>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: c2f2c468de7b43d3aea53a949ad3575e
+msgid "Get the number of nodes in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 85a40a37e6ad44f798fd63987bca2e24
+msgid ":py:obj:`nodes <sds.graph.UndirectedGraph.nodes>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 89dd51b1307d4c4ab4289b91de504277
+msgid "Get all nodes in the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: ed10fc82201d48d7aa9a60b06409498c
+msgid ":py:obj:`remove_edge <sds.graph.UndirectedGraph.remove_edge>`\\ \\(edge\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 34b10aa6e2a2406c81248108a58a45cb
+msgid "Remove an edge from the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 2a987de2b29442c0bb74133de363b12d
+msgid ":py:obj:`remove_node <sds.graph.UndirectedGraph.remove_node>`\\ \\(node\\)"
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:38:<autosummary>:1
+#: 2e2553b636904ad1ba2d87cdc4e917a6
+msgid "Remove a node and all its incident edges from the graph."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst:40
+#: 2741d5a31ee043a0af24db3a9fa7e564
+msgid "Attributes"
+msgstr ""
+
+#: 390d6021a8ce4260a0842483c1ea1186 of
+#: sds.graph.directed.UndirectedGraph.__init__:1:<autosummary>:1
+msgid ""
+":py:obj:`allow_multi_edges "
+"<sds.graph.UndirectedGraph.allow_multi_edges>`\\"
+msgstr ""
+
+#: 2db53d16747f4002a4af7cd8287b83c5 of
+#: sds.graph.directed.UndirectedGraph.__init__:1:<autosummary>:1
+msgid "Check if multigraph mode is enabled."
+msgstr ""
+
+#: ced6377c70d84bc9b4552ee1805ecc7e of
+#: sds.graph.directed.UndirectedGraph.add_edge:3
+msgid "Undirected edge to add. Must be Edge, not DirectedEdge."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst
+#: 8285df72ea554d2989285b150d2caea0
+msgid "Raises"
+msgstr ""
+
+#: 9458dd259d9a4ac887eedbfe750e2b43 of
+#: sds.graph.directed.UndirectedGraph.add_edge:6
+msgid "If edge is a DirectedEdge or not an Edge instance."
+msgstr ""
+
+#: e68c9313ca6b458b8a96dc67cbbc7dd6 of
+#: sds.graph.directed.UndirectedGraph.add_edge:7
+msgid ""
+"If either node is not in the graph, or if edge already exists     and "
+"multigraph mode is disabled."
+msgstr ""
+
+#: 48e8c1aca9164e57869212852ad1518c of
+#: sds.graph.directed.UndirectedGraph.add_edge:29
+msgid "Time complexity: O(1) for multigraph, O(degree(node)) for simple graph."
+msgstr ""
+
+#: 1668089d303b42338c45f4bedc21c689 of
+#: sds.graph.directed.UndirectedGraph.add_edge:31
+msgid ""
+"This method overrides Graph.add_edge() to add explicit type checking that"
+" rejects DirectedEdge instances."
+msgstr ""
+
+#: 1402cb55c7db4541b7d28df45933ccc2 of
+#: sds.graph.directed.UndirectedGraph.__repr__:1
+msgid "Return detailed string representation."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst
+#: 3dd948bac87a4bc7ad77de2d5d081d8f a7dcf79ff6d844f588c603b5cbb11bee
+msgid "Returns"
+msgstr ""
+
+#: 2f92dcb2c64b4e44857569eacb29afe7 f38bbfd470494ab2adbf3228c57654f4 of
+#: sds.graph.directed.UndirectedGraph.__repr__:3
+#: sds.graph.directed.UndirectedGraph.__str__:3
+msgid "String representation."
+msgstr ""
+
+#: ../../source/api/graph/_autosummary/sds.graph.UndirectedGraph.rst
+#: 34b0743db72046859bdc88abcb4e81af d2c099a83ff444e692b1c13f6b3dfcd6
+msgid "Return type"
+msgstr ""
+
+#: cca9ab0760184e248c12edbb468b63f6 of
+#: sds.graph.directed.UndirectedGraph.__str__:1
+msgid "Return simple string representation."
+msgstr ""
+

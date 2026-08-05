@@ -1,0 +1,789 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-13 17:05+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/guide/linear_structures/stack.rst:3
+#: 5ddf19d2732a4003b1d42cbfee719493
+msgid "Stack Guide"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:8
+#: b2a538ac3d5643b1a089c40678f5c4a2
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:10
+#: aaf3a5fd7e57404f94b09d72907a45c7
+msgid ""
+"A **stack** is a fundamental linear data structure that follows the "
+"**Last-In-First-Out (LIFO)** principle. Think of it like a stack of "
+"plates: you can only add or remove plates from the top."
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:33
+#: a26f6bba36b545e1bdf0d26a2206f8ac
+msgid ""
+"This guide covers the theoretical foundations, algorithmic "
+"implementation, and practical usage of stacks in the SDS library."
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:37
+#: 7b7d846868ff4b83946cf47391fb326e
+msgid "Mathematical Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:40
+#: 76b606d2fd364304a2be6ec4994e6950
+msgid "Formal Definition"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:42
+#: d7d607f4ba7b4838b1b47fa6a5ccd903
+msgid ""
+"A stack :math:`S` can be formally defined as an ordered collection with "
+"the following properties:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:44
+#: 6ae05aed43d74be9bc7410643eb84ae9
+msgid "S = \\langle e_1, e_2, \\ldots, e_n \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:48
+#: a5fa3bc3f24a4f54a3cd08cc14e76e73
+msgid ""
+"where :math:`e_n` is the **top** element (most recently added) and "
+":math:`e_1` is the **bottom** element (first added)."
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:51
+#: f8869ddb8bd34081999561217bddf81d
+msgid "Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:54
+#: 3809311b8088404b99fb7d9b5d9d26de
+msgid "Push Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:56
+#: e3263c35d4ec441da7f72d44f6706aa5
+msgid "The push operation adds an element to the top of the stack:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:58
+#: c85a742342094ddcb48266bf8b940264
+msgid "push(S, x) = \\langle e_1, e_2, \\ldots, e_n, x \\rangle"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:62
+#: 755fbc6ae5be45daad55ce834da68c0d
+msgid "where :math:`x` becomes the new top element."
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:64
+#: ../../source/guide/linear_structures/stack.rst:78
+#: ../../source/guide/linear_structures/stack.rst:93
+#: 1d10b0cf331d42518b805e3662acdc06 9c4cf5d9467c44f5933abd353d72267b
+#: d78a12286f3a4500813a576f1c7fb22e
+msgid "**Properties:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:65
+#: ../../source/guide/linear_structures/stack.rst:79
+#: ../../source/guide/linear_structures/stack.rst:94
+#: 116ced638d5848dbaa40ebf0c12efd9c 146c84843b3d467fae45e8d6bb2c6637
+#: c4b25c5115314b66a1cf8e108a021dfb
+msgid "Time complexity: :math:`O(1)`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:66
+#: 30a6f8d0bed041dabd5719b90a66e289
+msgid "The size increases: :math:`|S'| = |S| + 1`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:67
+#: fdf83b6a0b7049569ff1fb1a851c97ee
+msgid "Previous top becomes second element: :math:`top(S') = x`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:70
+#: 97af17a4b0034959ba10a65b24ee8d81
+msgid "Pop Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:72
+#: cc70370144e24649aca6b76c3258742e
+msgid "The pop operation removes and returns the top element:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:74
+#: e63143f342b746f0bb7e9795953d1b43
+#, python-brace-format
+msgid ""
+"pop(\\langle e_1, e_2, \\ldots, e_n \\rangle) = (e_n, \\langle e_1, e_2, "
+"\\ldots, e_{n-1} \\rangle)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:80
+#: 4a00e2902b7546edba4f17dd2d1fdb60
+msgid "Returns both the element and the modified stack"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:81
+#: 41df8fc417f54ee8a73f59a174303979
+msgid "Undefined for empty stack: :math:`pop(\\emptyset)` raises error"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:82
+#: 3c2626ae53e54b0dad1af334697eed00
+msgid "The size decreases: :math:`|S'| = |S| - 1`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:85
+#: d059313163bf4e6891edc5563fb30286
+msgid "Peek Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:87
+#: 99f1e3a4103044ec847ae3e602832c71
+msgid "The peek operation returns the top element without removing it:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:89
+#: 2f43b25bb94942f9b8b7fb558d5241cd
+msgid "peek(\\langle e_1, e_2, \\ldots, e_n \\rangle) = e_n"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:95
+#: 126f47d198b54070ba697f669e29275c
+msgid ""
+"Non-destructive: :math:`peek(S) \\rightarrow e_n` where :math:`S` "
+"unchanged"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:96
+#: 688e2fab69314e10a35bcaf0776d89f4
+msgid "Undefined for empty stack"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:99
+#: 510d22b320db45c885f4226c306354c6
+msgid "Stack Invariants"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:101
+#: 6d70f5f856214a988b38c8bd272c9e68
+msgid "A valid stack maintains these invariants:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:103
+#: 01463c73860f472fb76c7cf5a304b381
+msgid "**LIFO ordering**:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:105
+#: 65cabddcd02849c08483db0769993587
+#, python-brace-format
+msgid ""
+"\\forall i, j : i < j \\implies push_i \\text{ before } push_j \\implies "
+"pop_j \\text{ before } pop_i"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:109
+#: d7c6f56aaa1b41dfb597de43e22630a9
+msgid "**Size constraint**:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:111
+#: ef0c34202bb14ca68a4e2c0eb645a0eb
+msgid "|S| \\geq 0"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:115
+#: 832987b2aac144e4a025fa17434d57a7
+msgid "**Empty state**:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:117
+#: e0fd5e9aecd549778fdf1a0efd791142
+#, python-brace-format
+msgid "pop(\\emptyset) \\text{ is undefined}"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:121
+#: 2beada6b9607413394a5c0779466d0ce
+msgid "**Top element accessibility**:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:123
+#: 97fb4b0b0ce54a3c8a5b9ec4f9293c2b
+#, python-brace-format
+msgid "\\text{If } |S| > 0 \\text{ then } \\exists e : e = top(S)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:128
+#: 85d487d04f634e3991cee39484121e60
+msgid "Algebraic Properties"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:130
+#: 584b8eb1ab444a1bbb4d08c70c04418b
+msgid "Stacks satisfy several algebraic properties:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:132
+#: aa89877b91e047fd8817a283194da882
+msgid "**Identity Law:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:134
+#: 419ae2bd449c4fdfb3778bf62df1c09b
+msgid "pop(push(S, x)) = (x, S)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:138
+#: 365461009d8e473cba8eabdeed01442d
+msgid "**Associativity (of operations sequence):**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:140
+#: 029b752210ce40f9bc8f8949c97da1b3
+msgid "pop(pop(push(push(S, x), y))) = pop(push(S, x))"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:144
+#: 561ecb0d08f442c4970ec2896305df93
+msgid "**Size preservation:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:146
+#: 88a1d0b33d9b4014957242fdd214eeb1
+msgid "|push(pop(S)_1, pop(S)_0)| = |S|"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:150
+#: 97dd9dddf49144708716e0018c510a82
+msgid ""
+"where :math:`pop(S)_0` is the returned element and :math:`pop(S)_1` is "
+"the resulting stack."
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:153
+#: 3f857ea517f94b6b97de9f3d3962387f
+msgid "Algorithmic Model"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:156
+#: 51142bd4f2e9442a998dc11b10051ebd
+msgid "Abstract Data Type (ADT)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:158
+#: 61130127e00e4075a8f65ddd3fa949ae
+msgid "The Stack ADT defines the following interface:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:182
+#: 272a11365bc64c15ab74e846098c782e
+msgid "Implementation Strategies"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:185
+#: e932a65a775c441ca64ef57683baae11
+msgid "Array-Based Implementation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:187
+#: 1ae43050dbc74044bf5c33693e92362e
+msgid "Using a dynamic array (Python list):"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:202
+#: ../../source/guide/linear_structures/stack.rst:252
+#: bcf4290873e440d899241840610badc4 fca9cf1c98764f8ca8a996571063365f
+msgid "**Advantages:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:203
+#: 2426c1f313db4507aa6905324287d342
+msgid "Cache-friendly (contiguous memory)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:204
+#: bc202210b6a9438db87dfcaf32206c53
+msgid "Simple implementation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:205
+#: 601eaef6d7194339a881d0114443fe38
+msgid ":math:`O(1)` amortized push/pop"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:207
+#: ../../source/guide/linear_structures/stack.rst:258
+#: 5dfa6456902e425a878dd03fe5e0d9f3 f5cc19c4280449f08059a5d09be5addb
+msgid "**Disadvantages:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:208
+#: d5c442ff7d604a7da1dc7c167b573235
+msgid "Possible reallocation cost"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:209
+#: ac8362b3a0a84aafbc22259588c60b84
+msgid "Wasted space if stack shrinks"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:210
+#: 6bf381f926a045188ef5eb3d82258756
+msgid "Fixed maximum size (without reallocation)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:212
+#: ../../source/guide/linear_structures/stack.rst:263
+#: 10b25f81924c4f52900932c6c849464d c53edf40e8f3410f8df0dce9e8a91c01
+msgid "**Pseudocode:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:237
+#: bf2eca707bc8455e8315d9cf785537c0
+msgid "Linked List Implementation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:239
+#: dfca4daa4a7b4845895b9a22ae09bda6
+msgid "Using a singly linked list:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:253
+#: 58990e54853b4af38e463ccaa1fa3fa6
+msgid "No reallocation needed"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:254
+#: 181f4b576dc24bdb8b4346a619639b11
+msgid "True :math:`O(1)` for all operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:255
+#: d1209a1db5494a1db16c042cf5c6acf2
+msgid "Memory allocated on-demand"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:256
+#: 820be8132a184b0c8317595a8350c613
+msgid "No maximum size"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:259
+#: 965b09d9770b41dd95e35e4d1bbe2ad8
+msgid "Extra memory for pointers"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:260
+#: c5542d228c0a4c26a15ab0ff29346108
+msgid "Less cache-friendly"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:261
+#: af87546a17f5441990d4fd55f2473c94
+msgid "Slightly more complex code"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:290
+#: 19976c6ec5414a459315c0dac70eebb1
+msgid "Algorithm Pseudocode"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:293
+#: 6eb3eb5b21734e9a9077871d9bf42383
+msgid "Core Operations"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:295
+#: d4c733c67f6b40af97c252796f421c7b
+msgid "**Push Algorithm:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:308
+#: ac8e8b31bd594a3c925791a9c49069f8
+msgid "**Pop Algorithm:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:325
+#: 143304e7bc984230bfcead02ff065101
+msgid "**Peek Algorithm:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:340
+#: 778cec2aae7c4fb291307d05bf2e7309
+msgid "Complexity Analysis"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:343
+#: 56a15390dcca43e7b8af5d20c7f4d5e1
+msgid "Time Complexity"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:349
+#: 2b4390f697ac47738cd1bb353cb0d82a
+msgid "Operation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:350
+#: 8de785e458ee4274a349da28d78c6ef2
+msgid "Best Case"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:351
+#: c74a3f2a313c45e9beae56bfa9bcd6c7
+msgid "Average Case"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:352
+#: 169de24fc6634b1bbd11eb3fb6106b88
+msgid "Worst Case"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:353
+#: 6ff7044291754d749e5463a80c777dd2
+msgid "**Push**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:354
+#: ../../source/guide/linear_structures/stack.rst:355
+#: ../../source/guide/linear_structures/stack.rst:358
+#: ../../source/guide/linear_structures/stack.rst:359
+#: ../../source/guide/linear_structures/stack.rst:362
+#: ../../source/guide/linear_structures/stack.rst:363
+#: ../../source/guide/linear_structures/stack.rst:364
+#: ../../source/guide/linear_structures/stack.rst:366
+#: ../../source/guide/linear_structures/stack.rst:367
+#: ../../source/guide/linear_structures/stack.rst:368
+#: ../../source/guide/linear_structures/stack.rst:370
+#: ../../source/guide/linear_structures/stack.rst:371
+#: ../../source/guide/linear_structures/stack.rst:372
+#: 1fc14d870a6b49928c08582708956fee 2069dfae1be84e6e91e6c2563489d5c4
+#: 24ce4ef5b46d4b7a826d37bdd312b0b8 471e0d487fd8499ab3f7ff31db48ce89
+#: 6aab1488da29435aa25603d4fc78c342 7794e3f0f6d946949824146b632e91fc
+#: 7e1df23b9c28419292009eab7c76a51c 8a30b902f3794e91845396692ffabbeb
+#: 9cb1320ce80f415690158da267aa18fe a3b15ae920c048df827ef808f02a0cbe
+#: af6c61b8ad0a4e968f68a4e27e8798b6 b6a5095fbeac4ed79d4635a9639b70f1
+#: e72b083fce6e4a57aa7b85633048454d
+msgid ":math:`O(1)`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:356
+#: ../../source/guide/linear_structures/stack.rst:360
+#: 4af97e1d308f4f9fb5623b2e2aa69f39 8f4be6efb963485280c59329c6cf46cd
+msgid ":math:`O(n)` *"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:357
+#: fbbc260591b84a76a66e067c29232c57
+msgid "**Pop**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:361
+#: cb28cf06645f4480b2d1eb7228be7eec
+msgid "**Peek**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:365
+#: ef3abbb341184d92b7ee800cb616bdf3
+msgid "**Is Empty**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:369
+#: 364a1dad53c340da95c575c3a7197fe5
+msgid "**Size**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:374
+#: bcfede01ddc444848a4e0b9b02c42db6
+msgid ""
+"\\* For array-based implementation during resizing. With **amortized "
+"analysis**, push and pop are :math:`O(1)`."
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:376
+#: 90954cfb560c4bc39f065b0a45433746
+msgid "**Amortized Analysis:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:378
+#: 0f21ad1fd33d472a9a2edf27419fed63
+msgid "Consider :math:`n` push operations on an initially empty stack:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:380
+#: 6e0a2813ec8e4806b51fe2a82fbbf5d2
+#, python-brace-format
+msgid "T(n) = n + \\sum_{i=0}^{\\lfloor \\log_2 n \\rfloor} 2^i = n + 2n - 1 < 3n"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:384
+#: 8f4ff6160cc747a1b4318b9d2e725d41
+#, python-brace-format
+msgid "Therefore, amortized cost per operation: :math:`\\frac{3n}{n} = O(1)`"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:387
+#: 0ac30a9ce38940acb4dd2d2d6918d008
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:389
+#: cb04cc46235140ec9e2a168157d1fc35
+msgid "**Array-based**: :math:`O(n)` with potential waste if stack shrinks"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:390
+#: 1247c79756e64476b26c3ea2e5c4357e
+msgid "**Linked list**: :math:`O(n)` with exact memory usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:391
+#: b375c3b9d07441909dab3d44596bc5f3
+msgid "**Space for operations**: :math:`O(1)` auxiliary space"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:394
+#: 1912c41ad94c44f0bcb745f9cc995f97
+msgid "Practical Usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:397
+#: f8b36488240c4935967841d1f0848615
+msgid "Installation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:404
+#: de077c7e86ea4c43b58040603885ab40
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:407
+#: c76a42d5d5504f12ac44d086addfd6a1
+msgid "Creating a Stack"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:421
+#: fd4725892a964e4c948a6469e93351c1
+msgid "Adding Elements"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:436
+#: b4a9816ad1d74279a914a93e554d7553
+msgid "Removing Elements"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:449
+#: ba314d4309724148b0f6fd1f1e075015
+msgid "Iteration"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:465
+#: 99794187206146b2bee722949457169a
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:468
+#: 5b8371b639014de1a47f6ddc8fb1fa20
+msgid "Application 1: Function Call Stack"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:470
+#: 55c4b6f077b64e6c9296f73cec7c8fe5
+msgid "Understanding recursion through stack visualization:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:531
+#: 4de6d86d85984c59b464c23e54ab7881
+msgid "Application 2: Expression Evaluation"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:533
+#: 5adbd58609ae406fbf9752d39729ce0e
+msgid "**Infix to Postfix Conversion:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:594
+#: b43a8e29c3da4799a23d418d191c5d3e
+msgid "**Postfix Evaluation:**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:629
+#: 852f45c84a0f4488997e71c304b98948
+msgid "Application 3: Backtracking (Maze Solver)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:695
+#: 70a2dcfdca424d25a05af13ec36359d2
+msgid "Application 4: Undo/Redo System"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:767
+#: 18b022af90d84c249713444ef70c0f61
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:770
+#: a3430bdefc5542f6a1af0aeb6f2350b9
+msgid "Do's"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:772
+#: d5c13335f99342419962310c23b9e63c
+msgid "✅ **Always check before popping**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:781
+#: 89a4dd0d899a411bae6f28f92c312ba1
+msgid "✅ **Use peek for inspection**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:789
+#: 1d47aa3b9fe94bfb8213efb2fdec9b6f
+msgid "✅ **Handle exceptions properly**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:800
+#: 60e7d2ae881c4cd8b9d81e788df41c7a
+msgid "✅ **Clear when done**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:808
+#: 18743443cc0340789b860482745876d9
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:810
+#: 83923a76b44d48baaee0e5227b514290
+msgid "❌ **Don't access by index**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:824
+#: a9232ca844ea478a9c4df51ca5ca26e8
+msgid "❌ **Don't iterate destructively unnecessarily**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:836
+#: 52a8b83a0e6f4bc292105726d9208574
+msgid "❌ **Don't forget error handling**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:848
+#: dbaf59727ef84c6281afdecf7bfc9522
+msgid "Performance Tips"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:850
+#: 9f7faf8834be4c93b51f84b9832c8213
+msgid "**Pre-size if possible**: Know the maximum size ahead of time"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:851
+#: 1eacefafc0e7475a8a76e23e776a38a5
+msgid "**Batch operations**: Group multiple operations when possible"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:852
+#: 156a7f63a5074180a4b746bbded6423a
+msgid ""
+"**Avoid frequent is_empty checks**: Cache the result if checking "
+"repeatedly"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:853
+#: a37a9bcb9b0644a4840641074332b416
+msgid ""
+"**Use iteration over index access**: Iteration is O(n), indexed access "
+"would be O(n²)"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:856
+#: 300d1d0733fc41caaa0b8c744d0239e5
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:858
+#: aaa0b889b7ab415db4a073cf1c21d675
+msgid "**Stack Overflow**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:860
+#: b7e8ae1940444064b14cb16b60fbf3dc
+msgid "Be aware of recursion depth limits:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:867
+#: 3f61be3801b0451b875770ce19d5ecfc
+msgid "**Memory Leaks**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:869
+#: e1e04ab7fe5f4f28aeebbbd2c19ecaaa
+msgid "Clear stacks when done:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:875
+#: e300d274b7804592b80de0db981697ae
+msgid "**LIFO Confusion**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:877
+#: bba53b0d989542a0b5520a76d90a8725
+msgid "Remember the order:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:886
+#: a39a2261356449bb8cae3a398b618168
+msgid "**Peek vs Pop**"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:888
+#: 2b02ac0d4d3046a7ab9c2b99d8f90f0b
+msgid "Don't confuse them:"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:896
+#: f12df012b82743e88734a9eeea5464e7
+msgid "Further Reading"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:898
+#: bda3019577ed499cba75b39154d2563e
+msgid ":doc:`/api/linear/stack` - Complete API reference"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:899
+#: 498a0c82fa614306b4dd76e157bdc7e6
+msgid ":doc:`queue` - FIFO alternative"
+msgstr ""
+
+#: ../../source/guide/linear_structures/stack.rst:900
+#: 5bd8a9fa0f1540ccbe05781249736c7c
+msgid ":doc:`linked_list` - Underlying implementation"
+msgstr ""
+

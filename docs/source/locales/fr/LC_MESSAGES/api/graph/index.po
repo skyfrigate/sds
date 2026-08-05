@@ -1,0 +1,981 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/graph/index.rst:5 0b714a866b9e4998beb2b457f4349897
+msgid "Graph Structures (sds.graph)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:9 a9ce00e522a74319af6a766c1ef5b701
+msgid ""
+"Graph data structures represent relationships between entities as "
+"collections of nodes (vertices) connected by edges. They are fundamental "
+"for modeling networks, relationships, and interconnected systems."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:14 72f059210fc84e0b8a9ec415b51d5487
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:16 e5f4e42c94b4499f8e4ef4bed3784d8f
+msgid ""
+"The graph module provides comprehensive implementations of graph data "
+"structures:"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:18 0d21c906db294e48ae90f1c7c242f946
+msgid "**Basic Graphs** - Simple undirected graphs"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:19 864b9af460484493b1d5015e89f07a30
+msgid "**Directed Graphs** - Graphs with directed edges (digraphs)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:20 4a04e4ceb7994ad0990bd0d1c79bb32d
+msgid "**Weighted Graphs** - Graphs with edge weights"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:21 50e6578ae2a74c459e865c100ea22bd9
+msgid "**Adjacency Representations** - List and matrix implementations"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:22 2763222f0e1e4b1bab26c59e6cbe4132
+msgid "**Specialized Graphs** - DAGs, trees as graphs, and more"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:25 41dfda46f4594687ad498ba2d6ac74e2
+msgid "Key Features"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:27 9571ada8ee0742c58d701989400d962d
+msgid ""
+"✓ **Flexible representations** - Adjacency list, matrix, and edge list "
+"formats ✓ **Multiple edge types** - Undirected, directed, weighted, and "
+"combinations ✓ **Efficient operations** - Optimized for common graph "
+"algorithms ✓ **Rich node/edge data** - Store arbitrary data on vertices "
+"and edges ✓ **Multi-graph support** - Allow multiple edges between same "
+"nodes ✓ **Consistent API** - Uniform interface across all graph types"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:35 7d6fb7a6abc8479097a66cc2ed2df4c4
+msgid "Module Contents"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:38 8bc4d7d109cc4c3dad29bc2ac1f8abc9
+msgid "Node and Edge Classes"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:49:<autosummary>:1
+#: 7803c9b05f204d33ae121586bb7d0760
+msgid ":py:obj:`GraphNode <sds.graph.GraphNode>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:49:<autosummary>:1
+#: 7d4d7322e7934fb9931175a2be7d6e0d
+msgid "A node for graph data structures."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:49:<autosummary>:1
+#: 9f4e0548718a483cb94db7fb8b612fc4
+msgid ":py:obj:`Edge <sds.graph.Edge>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:49:<autosummary>:1
+#: ad2756fe1ece42efbdd4c21088932d72
+msgid "Base class for undirected, unweighted edges."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:49:<autosummary>:1
+#: 3e1497d54348442ea5e19538e88481cf
+msgid ":py:obj:`DirectedEdge <sds.graph.DirectedEdge>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:49:<autosummary>:1
+#: fa95e1eec5a44de08c3d2133db3378ca
+msgid "Edge with a direction from source to target."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:49:<autosummary>:1
+#: a16fc5cf3ea44397a6bd7ecbd3a1144a
+msgid ":py:obj:`WeightedEdge <sds.graph.WeightedEdge>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:49:<autosummary>:1
+#: 97bb5c26fe1f41e3bb7e824eb04b59f2
+msgid "Edge with an associated weight value."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:49:<autosummary>:1
+#: 58560486dc0c46bc99543854e28cd28c
+msgid ":py:obj:`WeightedDirectedEdge <sds.graph.WeightedDirectedEdge>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:49:<autosummary>:1
+#: 9758b7f547e9423ea280d2de9c83596b
+msgid "Edge that is both weighted and directed."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:51 922f252c99af45ad8a5848f9f7c5d77e
+msgid "Basic Graph Structures"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:60:<autosummary>:1
+#: 1b35a514a73d41238e5745a465cf9073
+msgid ":py:obj:`Graph <sds.graph.Graph>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:60:<autosummary>:1
+#: 17384dcddd8343fcbda416394fd0eb13
+msgid "Undirected graph using adjacency list representation."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:60:<autosummary>:1
+#: c78aef1f674245c4a3f27c8523702cc4
+msgid ":py:obj:`DirectedGraph <sds.graph.DirectedGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:60:<autosummary>:1
+#: a1598c3024034b699afc4e3fa17e1e88
+msgid "Directed graph using adjacency list representation."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:60:<autosummary>:1
+#: 718f2a3540c34f898998fe49744866a6
+msgid ":py:obj:`UndirectedGraph <sds.graph.UndirectedGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:60:<autosummary>:1
+#: 7c458b5e761e4ddea7e7257873971c28
+msgid "Undirected graph with explicit edge type validation."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:62 64725417121d44179f80ae681b1586a3
+msgid "Weighted Graphs"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:70:<autosummary>:1
+#: c578a32fbf194db5ab8efa1e4e5add9a
+msgid ":py:obj:`WeightedGraph <sds.graph.WeightedGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:70:<autosummary>:1
+#: bccc806818814b2199d636df617a4369
+msgid "Weighted undirected graph implementation."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:70:<autosummary>:1
+#: ea2c76424bff4a019550c20cc5e18dea
+msgid ":py:obj:`WeightedDirectedGraph <sds.graph.WeightedDirectedGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:70:<autosummary>:1
+#: 6e63c71917964f099c0351205ab5afde
+msgid "Directed graph with weighted edges."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:72 37ac00026e624da1ab3d395bf7538ac8
+msgid "Adjacency Representations"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:80:<autosummary>:1
+#: 4056269c450346f5b5d863f3435584be
+msgid ":py:obj:`AdjacencyListGraph <sds.graph.AdjacencyListGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:80:<autosummary>:1
+#: d0d1fee9fc724e0794cafe5945afbd24
+msgid "Explicit adjacency list graph implementation."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:80:<autosummary>:1
+#: f4c65ca59402410abe9d70ae9a0f821f
+msgid ":py:obj:`AdjacencyMatrixGraph <sds.graph.AdjacencyMatrixGraph>`"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:80:<autosummary>:1
+#: fe779913948b401f9308d1a364168a9f
+msgid "Graph implementation using adjacency matrix representation."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:82 134d446e2ec0434cb9be3b916c1ae801
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:96 76c2911744e24378be0182c629303dc6
+msgid "Graph Type Comparison"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:98 c0341ba8a3f746b9945adbc974f42739
+msgid "Graph Structure Comparison"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:102 23f5bd3420f24d0a8645bb42740b56ac
+msgid "Structure"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:103 ../../source/api/graph/index.rst:419
+#: 0c95fce2bf3549b3b3d37f9b569fabce 81f6dbcf056143de85b1641cee0f5f7b
+msgid "Add Edge"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:104 ../../source/api/graph/index.rst:420
+#: 5bcd47572b134c0d852b8306a0c0f274 da76f9a1fa0444e5bac2f59d8dafb5e6
+msgid "Check Edge"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:105 ../../source/api/graph/index.rst:422
+#: 5e751489e88745109525de5d2189e348 f92aa6808cb64224a6684fe87a85e138
+msgid "Space"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:106 60655f2ba1094f80be3e4cec85b1afff
+msgid "Best Use Case"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:107 8ed401307913404ab59676b5bcddf94b
+msgid "Graph"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:108 ../../source/api/graph/index.rst:113
+#: ../../source/api/graph/index.rst:118 ../../source/api/graph/index.rst:123
+#: ../../source/api/graph/index.rst:128 ../../source/api/graph/index.rst:129
+#: ../../source/api/graph/index.rst:424 ../../source/api/graph/index.rst:425
+#: ../../source/api/graph/index.rst:430 ../../source/api/graph/index.rst:431
+#: ../../source/api/graph/index.rst:432 ../../source/api/graph/index.rst:436
+#: ../../source/api/graph/index.rst:437 04cb7c7b84d94b7193f5764333aa5252
+#: 398022d655164da39d5f59684f854298 3c5532ca6aff400ab278a8563ee6febb
+#: 529ca74fd71c416ba3d2dffe88102281 67545917030845959c449f141b72e354
+#: 6a7c59d5b8d842a286ac4d6542f9792d 8a72be84c6264590a7d32099cc3385e0
+#: a573ee0ae9f64347b4fe6deb92fcb8a2 a6bdfcea685d440182b3d412bd92dade
+#: ad4a1721b9d8474186551e696bcdb188 bf5ca8436bf043ca966d35839567927f
+#: cad558bc96414ecb905aebccacd6805e d05c1cafe68847dc90395046e6cd0d2b
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:109 ../../source/api/graph/index.rst:119
+#: ../../source/api/graph/index.rst:124 ../../source/api/graph/index.rst:426
+#: ../../source/api/graph/index.rst:427 ../../source/api/graph/index.rst:438
+#: ../../source/api/graph/index.rst:439 0b91a32a4a904c33beb04605fb91ad1c
+#: 829b7d88a49e4bac9f957d872d0f70a8 a1caa2487db04f2e8485f127e021e36c
+#: c8e729ab8feb4ecebbe8c4b78f3292e5 df78a8da7b274e0ab176d06f6408c053
+#: edd266dd25f94fb5a9b617017cb6876c f7a1fa2b182048a8b9f678463dc4f219
+msgid "O(deg)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:110 ../../source/api/graph/index.rst:115
+#: ../../source/api/graph/index.rst:120 ../../source/api/graph/index.rst:125
+#: 62eec596dc434730ac4f0f970608858b b173648561254035bce889a77c577a05
+#: b9abc87fec3c4c0a84ff824e369cb604 fb4d2720bb7c4c83a661468d135e080e
+msgid "O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:111 6674b04b653e43d58e332fb373d26000
+msgid "General purpose"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:112 956f7048a0ea4cfc81742c2551a44919
+msgid "DirectedGraph"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:114 f54c86aabf5e413fafc7aad0dbc4296c
+msgid "O(1)*"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:116 a5027b1db551489e8bf8e45b2fc2300f
+msgid "Dependencies, flows"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:117 68d42cc4f40c4228a0269949138e5e87
+msgid "WeightedGraph"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:121 9d5e7abfdd284baea9b6e8de1d24deab
+msgid "Distances, costs"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:122 37a8957965ff45b8bd8ce413bac071fa
+msgid "AdjacencyList"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:126 7afb31c136cd4d2585a759151808ea61
+msgid "Sparse graphs"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:127 8deafcfdfd3f4694a1730fbb451c4064
+msgid "AdjacencyMatrix"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:130 ../../source/api/graph/index.rst:434
+#: 22bb102687554256801571d66f1e304d 9032c786198a4283a33bb690a9dc8741
+msgid "O(V²)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:131 48ccb2247b9e4cae8b3190781fd47089
+msgid "Dense graphs"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:133 7001cc1c5abc42b9822cfd27d1e6aec7
+msgid "\\* With adjacency set; deg = degree of node"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:136 09d75b5b5ca44753a663f07e4a0cb155
+msgid "Edge Type Comparison"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:138 1d08dfbad8ad4cfa91d413cc5ed27204
+msgid "Edge Types and Applications"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:142 fbe8d62db45441488354ab0c0e5e1355
+msgid "Edge Type"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:143 df73dbc0353243868852ce0782659730
+msgid "Properties"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:144 ../../source/api/graph/index.rst:209
+#: 22b9814986544e8f9d7390e4c5095827 788d0aad14854d32b6fd2638a54813d9
+msgid "Common Use Cases"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:145 20e34ad40bdb43b6b32ad1b195aa9fc2
+msgid "**Edge**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:146 d6c1ab349dff4dc19cb21162e82fdb82
+msgid "Undirected, unweighted"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:147 87c3b8d7dfaf4d779099ed91e092525c
+msgid "Friendships, physical connections"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:148 32dd247a2a6d49d186645397e7fec148
+msgid "**DirectedEdge**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:149 baa2b638560b46bfac2e39243f9f2e41
+msgid "Directed, unweighted"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:150 18e027c769914e11ba69f74510482094
+msgid "Follows, citations, dependencies"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:151 1bd798aed154401ba69afdc97ca682c6
+msgid "**WeightedEdge**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:152 f607695c0c374218b51a06754b359309
+msgid "Undirected, weighted"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:153 4c4d5bc16541494596ea93f469920b6d
+msgid "Distances, similarities, costs"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:154 401e782786a947bc81a38c2027dd1bfa
+msgid "**WeightedDirectedEdge**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:155 f8dc9174605d419eae6f110f70761b9d
+msgid "Directed, weighted"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:156 0f7c0d62ec1940d990e4642b536a7c78
+msgid "Network flows, weighted paths"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:159 42f90c4849eb4b5d8518bc49f58741b5
+msgid "Graph Representations"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:162 6a7197cd706b4d468018b6be0490a404
+msgid "Adjacency List vs Matrix"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:181 f02957533a364abaa321c287be568bf6
+msgid "**When to use each:**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:183 34b9d2ee9cc64cf7b98d814203414c79
+msgid "**Adjacency List**: Sparse graphs (E << V²), need to iterate neighbors"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:184 2d4990751734478ebff35affe9b70da2
+msgid ""
+"**Adjacency Matrix**: Dense graphs (E ≈ V²), frequent edge existence "
+"checks"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:187 e79803b264e6475aabf1ae496ae0ec70
+msgid "Directed vs Undirected"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:212 ../../source/api/graph/index.rst:373
+#: 68b55d6c100a4bd9a989a9417afcf7cf 81e051fa1b9d44d68eee4ce832b45957
+msgid "Social Networks"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:239 9cee3a2c279944f687cebc3d3594504c
+msgid "Transportation Networks"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:266 c5f5eb0eb90047fb82c030a8934aea68
+msgid "Task Dependencies (DAG)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:293 b87702f13f1242f0acc17e4c79da3ca9
+msgid "Web Page Links"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:319 e9b9b319cf3f4e93a78dece242c239e2
+msgid "When to Use Each Graph Type"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:322 e90a0e12aa224c7a814ad72e6ca8cd8b
+msgid "Decision Guide"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:348 9e2524c07f5b4174bdb71a6fce1223d4
+msgid "**Selection criteria:**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:354 1bc7848f192e41bd8285baa88c9b3830
+msgid "Graph Type"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:355 619bf14cc18b4a23898c871661334d9f
+msgid "Use When..."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:356 ../../source/api/graph/index.rst:435
+#: 262e70883d1044d1a0a311767fc74473 ad3433f422534869899b53d26fc48889
+msgid "**Graph**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:357 c902172e41c94151970dc8d65186ddee
+msgid "Symmetric relationships, no direction needed"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:358 b8b5d0ceabb2413eb4f4bcca8ccce709
+msgid "**DirectedGraph**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:359 92b31d309f2641a3919fb1da5f09d6f3
+msgid "Asymmetric relationships, direction matters"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:360 878c1c9ec65342cbada08c8f85d16977
+msgid "**WeightedGraph**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:361 c066ca88348643398edb8363adb2f546
+msgid "Distances, costs, or similarities between nodes"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:362 6acd30543a6740d8a4ce001a03ae7cf2
+msgid "**WeightedDirectedGraph**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:363 df3f057a44044b0194a10c90428c48cf
+msgid "Flow networks, shortest paths with direction"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:364 2eff8c71d04c404888c454c5aa518682
+msgid "**AdjacencyListGraph**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:365 d125ab7dfed6437bac702fa2f0a39b49
+msgid "Sparse graphs (E << V²), memory efficient"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:366 cbf0c1e520474cd0a6dc8260b2238c8d
+msgid "**AdjacencyMatrixGraph**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:367 b0f1a2201f664ede9c8431b829ab4f3d
+msgid "Dense graphs (E ≈ V²), fast edge lookups"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:370 9b163998c9914ee5be1137ba78198cf5
+msgid "Real-World Application Domains"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:375 6f3cc345b76c40acb6d9aec7ab582b49
+msgid "**Friendship graphs**: Undirected Graph"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:376 5541c54f9be54548bfca487232285639
+msgid "**Follow relationships**: DirectedGraph"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:377 2e3f02f7c5c049e784a52e4a1d77c9fc
+msgid "**Influence weights**: WeightedDirectedGraph"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:380 577ef241da3442889acd85b2f4566ca3
+msgid "Transportation"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:382 a1839777441f49efa697a54ee3830dc0
+msgid "**Road networks**: WeightedGraph (bidirectional roads)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:383 809f67d3cd60474ba0a54bab99d8303d
+msgid "**Flight routes**: WeightedDirectedGraph (one-way, with distances)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:384 0491d09996ca42bcaa0c55ecfea5cb22
+msgid "**Public transit**: DirectedGraph (scheduled routes)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:387 847d0a1f4e7f400d9faffadafb2bf1ce
+msgid "Computer Science"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:389 40a269d03cb040159c35fd9cfe4ed40b
+msgid "**Dependencies**: DirectedGraph (package/module dependencies)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:390 c26717cd64e640459f49bbbe5d23f493
+msgid "**Call graphs**: DirectedGraph (function calls)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:391 c6952c5b5dcc4b378fe03accbac40145
+msgid "**Data flow**: DirectedGraph (information flow)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:394 8712abe9e4c94628a06685eb406fa0a2
+msgid "Biology"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:396 b2388003091b4994a19671afad6b59e5
+msgid "**Protein interactions**: Graph (undirected interactions)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:397 005fa09ca9f7423a941f813671910a8a
+msgid "**Food webs**: DirectedGraph (predator-prey)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:398 ad5c3b0cf3f146d1889f00bbe8a22749
+msgid "**Neural networks**: WeightedDirectedGraph (synaptic weights)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:401 968484ca1ac143fd887df7274b1f77df
+msgid "Web & Internet"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:403 0df99243a3fc473c983c9e86443159f2
+msgid "**Hyperlinks**: DirectedGraph (one-way links)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:404 6216bc5bf9a1455db198f01d59fa9f4b
+msgid "**Social media**: DirectedGraph (follows, likes)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:405 4ff896f58f84481fa5fe41a72ea556db
+msgid "**Network topology**: Graph (physical connections)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:408 baae2b8a86fe4c70a2fa5cbe57017705
+msgid "Performance Guidelines"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:411 9f60d992c26a465c98dbc3a2fe52611a
+msgid "Time Complexity Summary"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:417 c2a386ef66d44b36bc6150832b05737a
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:418 0110f84f3c074682a391ab80530464a6
+msgid "Add Node"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:421 8c24dbafe5f8482380a6f7c977f30cb9
+msgid "Get Neighbors"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:423 13fe4286b558493f86d7c699c52aa360
+msgid "**AdjacencyList**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:428 ../../source/api/graph/index.rst:440
+#: abba96eb0f6a4ebb9c2a2b1275ef71f0 cde9f292e5e647bdb43d68f51961dd42
+msgid "O(V+E)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:429 d92671d73a7044ec8eb80c547f6b7dcc
+msgid "**AdjacencyMatrix**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:433 66a902dbb70347ca9f7d9e9cd52e7d3a
+msgid "O(V)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:442 a9f2041333fb4c97a3aea67f4d901900
+msgid "**Key insights:**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:444 2d22a07e4e1b4e6d8bea9a8b4662104e
+msgid "**Adjacency List**: Best for sparse graphs, efficient neighbor iteration"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:445 02a23c5f893841a79e0a682ab6c79714
+msgid "**Adjacency Matrix**: Best for dense graphs, O(1) edge existence checks"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:446 960b2dce5d79486cb4714e71c0f6d918
+msgid "**deg**: Degree of node (typically << V for sparse graphs)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:449 db833cc1087c40ca9a9b82a7274b0597
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:451 7ce4fb86404b402fb2b47287b0be149f
+msgid "All graph structures store:"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:453 467cb1d510724e4fbc7ca0b93af3f575
+msgid "**Nodes**: O(V) space"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:454 4e5dfd02ee4b4362a11f425f3beaab13
+msgid "**Edges**: * Adjacency List: O(E) * Adjacency Matrix: O(V²)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:457 dbb5f879a8304ff89b89cc583398410e
+msgid "**Additional data**: O(V + E) for node/edge data"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:460 9e1296fdc516482cacfcf377a7091f87
+msgid "Graph Algorithms Support"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:463 91e3059703cd45358a1108d364698655
+msgid "Common Graph Algorithms"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:465 17d84d5d76fe48918dcd822b3ef25bd3
+msgid "The graph structures support efficient implementation of:"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:467 0d52e58a9dfc4583a47bb2603fac7fa2
+msgid "**Traversal Algorithms:**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:469 efc2b61c1f794faaa5c010212164871f
+msgid "Breadth-First Search (BFS): O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:470 6d72c6c70b664391b6c5382c96e274d7
+msgid "Depth-First Search (DFS): O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:472 941853b64592497fabd7e564088e40ca
+msgid "**Shortest Path:**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:474 a5d42b1160a9414aafc97f1c78874794
+msgid "Dijkstra's Algorithm: O((V + E) log V)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:475 90629e7b5b2442c5980dbde56ebad303
+msgid "Bellman-Ford: O(VE)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:477 fa81937601c847b683769e48ff79f1a9
+msgid "**Minimum Spanning Tree:**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:479 e2bd37ea5ca64f9699bfc7fa9444ea59
+msgid "Kruskal's Algorithm: O(E log E)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:480 643f5bed9f4843138510eea3e5e94255
+msgid "Prim's Algorithm: O((V + E) log V)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:482 95a97a773968438eb115708bdbf4ca43
+msgid "**Connectivity:**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:484 5bb95473dcf04a5abce3ce765f45941d
+msgid "Connected Components: O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:485 1a1310c625fa4e5f909bcf5714102bb2
+msgid "Strongly Connected Components: O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:487 89be366912534e42bb283999d25a53fc
+msgid "**Topological Sort:**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:489 cc917f20bb7747f3b5326880a2efd4d8
+msgid "DAG Ordering: O(V + E)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:492 b85e050cb42548a7bfea209bf2de6f99
+msgid "Example: BFS Implementation"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:522 986628cf54d04a42ae4544e5c653c03b
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:525 5d848a4f33be408e8b6b17ecdd276400
+msgid "Graph Design"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:527 509e986bced24359a4242abbe5dcc20c
+msgid "✅ **Choose appropriate representation**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:538 cdbef02069fe4f6c86cbfd30abe3a89d
+msgid "✅ **Use meaningful node IDs**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:549 668f5a7ab3bb4480b46e703c0de45ed3
+msgid "✅ **Store rich data in nodes and edges**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:567 eff2ee129c604040ae32502d029a5d73
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:569 57e3c195fdbf4b9f863392923d688997
+msgid "✗ **Don't mix directed and undirected edges**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:582 d846a4a30fa14cf6a6034b561c6f5282
+msgid "✗ **Don't forget to check for self-loops**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:595 b346c0313dba4253b7851779640995a2
+msgid "✗ **Don't assume graph is connected**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:612 5f97803072034d248e1c4310deacd2dd
+msgid "Comparison with Other Structures"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:615 79b254cc47fa41739d482f23d09447e5
+msgid "Graphs vs Trees"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:621 18298fbdcb2346afa76b3c562e5a5d68
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:622 c3060bce27cc4240b22c2d4624ad65ee
+msgid "Trees"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:623 aa1022d74c3a458ab68d721628857b1c
+msgid "Graphs"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:624 f0c1cc96230e4088ac83d2fea638a809
+msgid "**Cycles**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:625 abfcf486c3d246389d2e00f457ebe65e
+msgid "Never (acyclic)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:626 ba3cd230db5a466fb1093546bcd677bd
+msgid "May have cycles"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:627 9aa467e46df74b57bed233de2535354c
+msgid "**Parent nodes**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:628 c919ac98244148f09bd136ab2734ac56
+msgid "Exactly one (except root)"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:629 ab72ef0debee4f12870fa66f0cb2643c
+msgid "Any number"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:630 038704c640714c30947b8e2db0781dca
+msgid "**Structure**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:631 b6b81996c27b43199f7f4c3ab3f4174f
+msgid "Hierarchical"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:632 adaff6d07e7a4241b8dddb7441ac8b82
+msgid "Network/mesh"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:633 12bf632fb23149209f22a830e03094f4
+msgid "**Use cases**"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:634 b7d253ffe899437d987387ecbd9f4e1a
+msgid "Hierarchies, XML/DOM"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:635 466dd70daef54fc0be95598bc376bd2d
+msgid "Networks, relationships"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:637 4d5735bf04ab4a01bb15405f65760129
+msgid "Trees are special cases of graphs (directed, acyclic, connected)."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:640 db9859f94cfa465b97f14e6634e41eb6
+msgid "Related Modules"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:642 f8f4bbac68aa456996716871ad218314
+msgid ""
+":doc:`../../guide/graph_structures/index` - User guide for graph "
+"structures"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:643 f4cc02b518634ab8aa6984474eeba388
+msgid ":doc:`../core/index` - Core abstractions"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:644 7d38de0b99d24e4fb7f8cbe57f185ead
+msgid ":doc:`../linear/index` - Linear structures"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:645 b4177ea17e824f7aa401d2da9adf62b9
+msgid ":doc:`../tree/index` - Tree structures"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:648 24d21fc31242485b88130b6d537fab58
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:651 7c2f37af671f45ddafc0cda0e0f5a969
+msgid "External Resources"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:653 915d788e539a4d9897bac538dd2e7515
+msgid ""
+"`Wikipedia: Graph (discrete mathematics) "
+"<https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)>`_"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:654 e1439386f55c4ebfadf3205b6a982907
+msgid "`Wikipedia: Graph theory <https://en.wikipedia.org/wiki/Graph_theory>`_"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:655 33c7e046720243fd865c40f66c59f10d
+msgid "`VisuAlgo: Graph Data Structures <https://visualgo.net/en/graphds>`_"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:656 9d95bf392f564af38d65e1962e185293
+msgid ""
+"`Graph Online <https://graphonline.ru/en/>`_ - Interactive graph "
+"visualizer"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:659 440697050b4443eda24d0fbdc2aa6753
+msgid "Interactive Visualizations"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:661 f7b4e3f8cb0c457697a18a92c28f0f07
+msgid ""
+"`USFCA Graph Visualization "
+"<https://www.cs.usfca.edu/~galles/visualization/>`_"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:662 4f0b24a7372f49dca949181f5100822c
+msgid "`Algorithm Visualizer <https://algorithm-visualizer.org/>`_"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:665 d1c16324662e435cb39eb401d496e55a
+msgid "Academic References"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:667 ece4ce56d4de4c76afdc3a84adfcefe6
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, Part "
+"VI: Graph Algorithms"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:668 9cfafedfc51940a0a432a4e8acec26b1
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Chapters 4.1-4.4"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:669 7aff831984c44db78cc0e1982b742ebb
+msgid "West, D. B. \"Introduction to Graph Theory\", 2nd Edition, Prentice Hall"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:670 97b50dc208dc400e88b37bebdbe636ea
+msgid ""
+"Bondy, J. A., Murty, U. S. R. \"Graph Theory\", Graduate Texts in "
+"Mathematics"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:671 9814bbe9f9d54f5ba6f8c7bf641a4b22
+msgid ""
+"Diestel, R. \"Graph Theory\", 5th Edition, Springer Graduate Texts in "
+"Mathematics"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:674 16e10651d2ba4785be2b25e43a58bb0d
+msgid "Open Educational Resources"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:676 e906c8a8dae84d57b3a8332ce527fc74
+msgid ""
+"MIT OpenCourseWare. \"6.042J Mathematics for Computer Science\" "
+"https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-"
+"fall-2010/"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:679 fe732efa78154be0a9b29c3efcf222c4
+msgid "Excellent coverage of graph theory fundamentals in lectures 6-10."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:681 59b79850cf9d4e0bbb0fe7451e904539
+msgid ""
+"Stanford University. \"CS161: Design and Analysis of Algorithms\" "
+"http://web.stanford.edu/class/cs161/"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:684 423ffdf88a364e92908c0e81ecb23328
+msgid "Comprehensive lecture notes on graph algorithms."
+msgstr ""
+
+#: ../../source/api/graph/index.rst:686 0f88731e267e4591ae7d69e67df97c02
+msgid ""
+"Erickson, J. \"Algorithms\", 2019 "
+"http://jeffe.cs.illinois.edu/teaching/algorithms/"
+msgstr ""
+
+#: ../../source/api/graph/index.rst:689 00d3d2d1fb0d408aa2018bbcf83a260e
+msgid "Free textbook with detailed graph algorithms coverage (Chapters 5-8)."
+msgstr ""
+

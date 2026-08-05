@@ -14,9 +14,9 @@ copyright = "2019-2024, skyfrigate & biface"
 author = "skyfrigate & biface"
 
 # The short X.Y version
-version = "0.1"
+version = "0.6"
 # The full version, including alpha/beta/rc tags
-release = "0.1.0"
+release = "0.6.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

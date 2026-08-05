@@ -1,0 +1,745 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2024, skyfrigate & biface
+# This file is distributed under the same license as the SDS Tools - Simple
+# Data Structures Toolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SDS Tools - Simple Data Structures Toolbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 08:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/api/linear/index.rst:5 5ca100c5143d47e49bd826ad6addd4e9
+msgid "Linear Structures (sds.linear)"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:9 f1bb387079d7436ea5981cd9efb43e1f
+msgid ""
+"Linear data structures organize elements in a sequential manner, where "
+"each element (except the first and last) has exactly one predecessor and "
+"one successor."
+msgstr ""
+
+#: ../../source/api/linear/index.rst:13 222763074da54c26b0d70c5d285b3e80
+msgid "Overview"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:15 460b1d09fdf64865bdfd7da06f8bd89a
+msgid ""
+"The linear module provides implementations of fundamental sequential data"
+" structures:"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:17 9ea1f186a6f74d6296c8ecd0d18100c9
+msgid "**Linked Lists** - Singly, doubly, and circular linked lists"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:18 7b090bc1e0e946a0ad8ba96e5f954896
+msgid "**Stacks** - LIFO (Last In First Out) structures"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:19 29ba429294984a60a9558f0f5e021717
+msgid "**Queues** - FIFO (First In First Out) structures"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:20 eb28ee6ebd48458ca2fbd0e46360aaae
+msgid "**Deques** - Double-ended queues"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:21 8bdbbcdb0f51489383c8be1cf9b4125f
+msgid "**Priority Queues** - Queues with priority-based ordering"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:24 73cc53cf4d474c52b5153aa16c8f8c65
+msgid "Key Features"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:26 99f6e65efcda49cf86825b8b336cecd3
+msgid ""
+"✓ **Flexible insertion/deletion** - O(1) at beginning/end for most "
+"structures ✓ **Dynamic size** - No pre-allocation needed ✓ **Iterator "
+"support** - Pythonic iteration over elements ✓ **Type hints** - Full type"
+" annotation support ✓ **Consistent API** - Uniform interface across all "
+"linear structures"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:33 6d963917051b46de8f6219af6ab9336b
+msgid "Module Contents"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:36 bff7dcce240c4fb58b66a282ef1520fb
+msgid "Node Classes"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:44:<autosummary>:1
+#: 16346dfee8ec45e4a41ec8fec7e2d105
+msgid ":py:obj:`SimpleNode <sds.linear.SimpleNode>`"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:44:<autosummary>:1
+#: db57cf7641404419a6c7fad9a4a3011a
+msgid "A node for singly linked lists."
+msgstr ""
+
+#: ../../source/api/linear/index.rst:44:<autosummary>:1
+#: d889fe46ee044d8eb0e3dec6ca4ee301
+msgid ":py:obj:`DoublyNode <sds.linear.DoublyNode>`"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:44:<autosummary>:1
+#: 6064f31d88de48869e963819a6f502f1
+msgid "A node for doubly linked lists."
+msgstr ""
+
+#: ../../source/api/linear/index.rst:46 039218700e4548e78be1b18b65e4212a
+msgid "Linked List Structures"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:55:<autosummary>:1
+#: ee5191a6233941979694baa37be25e9e
+msgid ":py:obj:`LinkedList <sds.linear.LinkedList>`"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:55:<autosummary>:1
+#: 81c6491273e742a6b37ff22b34cbd4db
+msgid "A singly linked list implementation."
+msgstr ""
+
+#: ../../source/api/linear/index.rst:55:<autosummary>:1
+#: 96dc86605ae44da8bfbb0e986a7229de
+msgid ":py:obj:`DoublyLinkedList <sds.linear.DoublyLinkedList>`"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:55:<autosummary>:1
+#: f20222b6c81b42d4aac372a185ce9c92
+msgid "A doubly linked list implementation."
+msgstr ""
+
+#: ../../source/api/linear/index.rst:55:<autosummary>:1
+#: 86f27eaa7b994e49ac9e73b1cbcedf28
+msgid ":py:obj:`CircularLinkedList <sds.linear.CircularLinkedList>`"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:55:<autosummary>:1
+#: 894307a7a80b4349be59ddaf28514c64
+msgid "A circular singly linked list implementation."
+msgstr ""
+
+#: ../../source/api/linear/index.rst:57 edaf1b61788c469f9540c178647b2571
+msgid "Stack and Queue Structures"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:67:<autosummary>:1
+#: d97c93fe09f44c6ebbdf9c19f64d1f0e
+msgid ":py:obj:`Stack <sds.linear.Stack>`"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:67:<autosummary>:1
+#: 3fc89a2792da4143bd796b8bc7a1978c
+msgid "A Stack (LIFO - Last In First Out) implementation."
+msgstr ""
+
+#: ../../source/api/linear/index.rst:67:<autosummary>:1
+#: cb60362a35be407cb1ca1d048c7a2090
+msgid ":py:obj:`Queue <sds.linear.Queue>`"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:67:<autosummary>:1
+#: 7a42a05e26184ff58d7c4dfdc84ed53e
+msgid "A Queue (FIFO - First In First Out) implementation."
+msgstr ""
+
+#: ../../source/api/linear/index.rst:67:<autosummary>:1
+#: 39b068f6b48149c0a733a65e512bab21
+msgid ":py:obj:`Deque <sds.linear.Deque>`"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:67:<autosummary>:1
+#: b20f035bb82d41678ed87788a220ee76
+msgid "A Deque (Double-ended queue) implementation."
+msgstr ""
+
+#: ../../source/api/linear/index.rst:67:<autosummary>:1
+#: 4ddc85e104b74a148ab81750a440058a
+msgid ":py:obj:`PriorityQueue <sds.linear.PriorityQueue>`"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:67:<autosummary>:1
+#: 1797b644842443bda5f590703e61beec
+msgid "A Priority Queue implementation using a sorted linked list."
+msgstr ""
+
+#: ../../source/api/linear/index.rst:69 32c645b32b2b47bcb5d5e1be05bae6a5
+msgid "Detailed Documentation"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:81 83d2f823bb3e4d92880d1d3d89270032
+msgid "Structure Comparison"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:83 3a8adfa8207747fdb96c3f429fe624f8
+msgid "Linear Structure Comparison"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:87 5f2fbf96e6eb4222a5a7137b022659d5
+msgid "Structure"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:88 e66e6ef0d2294ef4a62fed881fdeba14
+msgid "Insert (front)"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:89 d05c1adc1b71497eb2d162ff2928f77c
+msgid "Insert (back)"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:90 ../../source/api/linear/index.rst:264
+#: a1a479d1d0b143c19a72286a09ff08fb c54c89ec484042cd87d5c3d08053c861
+msgid "Access"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:91 f05c42cba2cb4068be4bc2d08805b914
+msgid "Best Use Case"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:92 0147fd939d1745768105fae2e3bb943f
+msgid "**LinkedList**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:93 ../../source/api/linear/index.rst:98
+#: ../../source/api/linear/index.rst:99 ../../source/api/linear/index.rst:103
+#: ../../source/api/linear/index.rst:104 ../../source/api/linear/index.rst:108
+#: ../../source/api/linear/index.rst:118 ../../source/api/linear/index.rst:119
+#: ../../source/api/linear/index.rst:357 ../../source/api/linear/index.rst:358
+#: ../../source/api/linear/index.rst:359 ../../source/api/linear/index.rst:363
+#: ../../source/api/linear/index.rst:364 ../../source/api/linear/index.rst:367
+#: ../../source/api/linear/index.rst:368 ../../source/api/linear/index.rst:369
+#: ../../source/api/linear/index.rst:373 03ec3b04a0a44470a7c7f2b4c2d4af21
+#: 0a86fe2117d84ae6b4977f87d0e92fa7 117fd94bb4764a3aabdd37f99f1cf9f6
+#: 33b998af469b447eae364bb49838f9c3 34744128de5c4dc386906b97e76b9d60
+#: 5a813e3ac9f44baeb2154b837431c73c 5c8ab28e305a4b308e5b5d1d80a61249
+#: 85a3f624b25c491c91cfb8b829ee2b5e a4abc1b8886645d3b075fff513a3d058
+#: acb523c65b6444cabe5e210bf798b529 bf9fe477e8e04058bf704b11dcc28cec
+#: c18731a21521488fa88944580567ba19 c19a69b11b5e44cd9fcf943c56bfc343
+#: cd701aee1f58465497f29dd80b0d74fd d5fd4e160ed04916abbfa5dc11c20bb3
+#: ddd6edbf234d47c0ab3a8177e8b57850 de009ab807f64622858d10e7e740ba95
+msgid "O(1)"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:94 ../../source/api/linear/index.rst:95
+#: ../../source/api/linear/index.rst:100 ../../source/api/linear/index.rst:105
+#: ../../source/api/linear/index.rst:114 ../../source/api/linear/index.rst:123
+#: ../../source/api/linear/index.rst:124 ../../source/api/linear/index.rst:362
+#: ../../source/api/linear/index.rst:372 ../../source/api/linear/index.rst:374
+#: ../../source/api/linear/index.rst:377 ../../source/api/linear/index.rst:378
+#: ../../source/api/linear/index.rst:379 ../../source/api/linear/index.rst:382
+#: ../../source/api/linear/index.rst:383 ../../source/api/linear/index.rst:384
+#: ../../source/api/linear/index.rst:387 ../../source/api/linear/index.rst:388
+#: ../../source/api/linear/index.rst:389 ../../source/api/linear/index.rst:392
+#: ../../source/api/linear/index.rst:394 0369d1d4c2c04b11b4c2126b8002554a
+#: 30e19cfca11e4517987d0086d918f436 34b70905770f440c9a307ef80f1c2acc
+#: 434c1fe318a1456096eeab1512245dfe 5bdf12d5c24e42e9b6984057a5036ca2
+#: 8aa80312c38f4143b84596baa5cb3ce9 8e50f34e6e3240a19f8bb3fd2d0eb988
+#: 98e47971cafb423c80707a79861bb2aa 9c08088a66e74023b59139438cb8f04e
+#: a6f1fa5434af4498b94efb1d600ac658 b2954741f8be47da90785ee1fdb85539
+#: b9fdbd0b01bb447dacaebbe1d24c2456 c65a5fb80d0b4fc7bf7df611c16022f0
+#: c8ac3b2c92114790bfe0c47d54a6b33a cbf8bbc1afef4665b04c878b5ae51638
+#: d690e44cec2a40a49adbddc071b186b9 e3d328ff5fbc451c854db60212546b68
+#: e517b50c4371418596de7b96235ecf30 f60dade5ae4a46b8a282495db68bdc39
+#: f93aaabc5d9f4191b5b01d84e55cd651 fe1e152e473b485ba31fd0ac9fdc7078
+msgid "O(n)"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:96 8780d93ae089452cbccc3e651fabd65b
+msgid "Frequent front insertions"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:97 e4a7fe4933c84032b9cca66ad0ed57a9
+msgid "**DoublyLinkedList**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:101 1193f29bfefb4e23912dbe433e795874
+msgid "Bidirectional traversal"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:102 50bf3cbc354644d18cc3196fc7e55e63
+msgid "**CircularLinkedList**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:106 292afbbf655e4aa3910a270a1a38b805
+msgid "Round-robin scheduling"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:107 178f73e280eb41689c480fc51d2cf938
+msgid "**Stack**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:109 ../../source/api/linear/index.rst:113
+#: 870d7f4acf4c47cca7f56241e21dcf70 d699d544e4c24111821fd3e6cdf7b077
+msgid "N/A"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:110 e802ba2d7c0044ee8c8faff6e83cf4ae
+msgid "O(1) top"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:111 a010d3f5b6614e4d9cd8c5fe51b5b260
+msgid "LIFO operations"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:112 d3a395db8ab24e4292583a05afceb878
+msgid "**Queue**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:115 34440bd7dd244e2f8def3462051a3b2b
+msgid "O(1) front"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:116 04b4153fb09b4363924d80dded11ab6f
+msgid "FIFO operations"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:117 1343a64f807b4d6693e8ad8c0d98b1c7
+msgid "**Deque**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:120 a61976f7adbb48f4b0d5551065473e25
+msgid "O(1) ends"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:121 bad9c4dd09b14add8889e886d8eda06b
+msgid "Both-end operations"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:122 4c1dbeb7f98f4dd3972a70771709e0c6
+msgid "**PriorityQueue**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:125 b51e33eac8b94d20a81d9c67a9824771
+msgid "O(1) min"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:126 8b885a3f3818431db480f42e0644f174
+msgid "Priority-based processing"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:129 5aaaed02f613438c9c35cb0fda2d3715
+msgid "Quick Start Examples"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:132 e688ba37954a49d49c67bc48fb84f265
+msgid "Linked Lists"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:160 a41e900545db45398533a77ff0d60f8d
+msgid "Stacks"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:177 28dcb774470f429aac2a20786ca622e5
+msgid "Queues"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:203 5759d4c49c0f47529b8f65a4545bd873
+msgid "Visual Representation"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:230 d14b70f7f4bb4dd4a4e1a7de265edf28
+msgid "Common Operations"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:233 debc028e6ef84fac85cf473d2d7111c4
+msgid "Insertion"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:247 fc5c2c3582a3499aa7170598147e467b
+msgid "Removal"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:280 6dba99efb12b41bfb91928fcd2ca678c
+msgid "Traversal"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:293 3c0769bf0e1d4cebad247932dc622c17
+msgid "When to Use Each Structure"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:296 db7d84b0ccde4b3cabd92a32316716f8
+msgid "Decision Guide"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:325 85085cc4cf134c95bbaa7b052a408540
+msgid "Use Cases"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:327 a74600be7dd44486b5a7ef85c4838598
+msgid "**LinkedList**: Browser history, undo functionality, music playlists"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:329 664003f5b1e3433b869df5de84657dde
+msgid "**DoublyLinkedList**: LRU cache, text editors, navigation systems"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:331 63fd7b8acf9e46e78d44b450396604f6
+msgid "**CircularLinkedList**: Round-robin scheduling, buffer management"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:333 2a64dabdd6004c418f6287bdcae264c7
+msgid "**Stack**: Expression evaluation, backtracking, function calls"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:335 8887b56366e64f33b1a32cf9248cbd89
+msgid "**Queue**: Task scheduling, breadth-first search, print spooler"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:337 c4ab125fc6e045dcb83764fe69c29d28
+msgid "**Deque**: Palindrome checking, sliding window problems"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:339 1652ba6af37245508ea4d453de95a668
+msgid "**PriorityQueue**: Dijkstra's algorithm, event simulation, A* search"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:342 e7af2f83ecd1436a91ad1eb6cce2bde9
+msgid "Performance Guidelines"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:345 0bcbab1ff2284561b4b89c698d3a9a53
+msgid "Time Complexity Summary"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:351 9674f28d829c4704a7e8ed30f4e65f81
+msgid "Operation"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:352 40ba091919574a26baec0c5778c1e05c
+msgid "LinkedList"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:353 f2b4356afea5480790cb929deabeffe0
+msgid "DoublyLinkedList"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:354 bdbfc569121241109e0c2a2cb7e29499
+msgid "CircularLinkedList"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:355 976ad86deb984a5eb4b806c0a12bd0c6
+msgid "Notes"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:356 f308708b5c244cda87642827b1895963
+msgid "``prepend()``"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:360 ../../source/api/linear/index.rst:370
+#: d1133cd32c674ff0b62a5e7ef31221cf f7e31eee559345cf99ca5c6f6f383c08
+msgid "Always fast"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:361 62fe193db0574a1aa7ccd60bf4b488e0
+msgid "``append()``"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:365 970defb3a98f4585898dc4d0e2062da8
+msgid "LinkedList has no tail"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:366 8fa53fb9fb80442a9ec155d7a4d54c93
+msgid "``remove_first()``"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:371 33d7b9a4e41244509dcbbde20ab2743f
+msgid "``remove_last()``"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:375 256c7f3c16fc4b72937c9d60e2f98c0a
+msgid "Need to traverse"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:376 9e530b9dd935427cb64e9ca9f95b7776
+msgid "``insert_at(i)``"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:380 ../../source/api/linear/index.rst:385
+#: 5443c46bd17a4be8ba16fa8622d89984 be2a3206bb2948e7a6bfcdb67ff49555
+msgid "Must reach index"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:381 2747722237ea4280913cc0d27f8a63a6
+msgid "``remove_at(i)``"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:386 2c8250e5848540c7973bc5640af71d7d
+msgid "``find(item)``"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:390 7cc2bc983e1a410b94cf9c7c3c873412
+msgid "Linear search"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:391 25952dbbf38d41979575ce01e231d947
+msgid "``__getitem__[i]``"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:393 6c4b61ad7f354f03a7aa67a63fa64ec4
+msgid "O(n/2)"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:395 070dd5bdd1d0422ba7954044752ad3aa
+msgid "DoublyLinkedList optimized"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:398 953f9ecda83546c1a23274fd69d2cb89
+msgid "Space Complexity"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:400 fb4bc2d427dc4fc59b60e4823be81a75
+msgid "All linear structures have:"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:402 f680dbfc1b8c44fbabdd408e83826bb5
+msgid "**Storage**: O(n) for n elements"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:403 0226c26c38344203a1fb5bd1f73b9e40
+msgid ""
+"**Per-node overhead**: - SimpleNode: 1 reference (next) - DoublyNode: 2 "
+"references (next, prev)"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:406 6f23c438a4d649eea346e2e075ff32f4
+msgid "**No contiguous memory**: Unlike arrays"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:409 4cf64e4692ec4ea9a18035519edffcbf
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:412 90fcb1ab08034775bcafc706a24d8a79
+msgid "Do's"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:414 b69b7af7a91f4869876a066a648dbc07
+msgid "✅ **Choose the right structure for your access pattern**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:427 d23da557e3c543fab7f9e7f59d3a1d5e
+msgid "✅ **Use appropriate methods**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:438 2f78a7f5d18f479485bde3551db50e49
+msgid "✅ **Check emptiness before operations**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:446 bc630b17d90548a89c4303e162c6de42
+msgid "Don'ts"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:448 4dcf9fde47674abba0afbad0c97d15d9
+msgid "❌ **Don't use linked lists for random access**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:460 6158e3d086924047930eeb9dca36a49a
+msgid "❌ **Don't forget about space overhead**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:467 44bce9cf11764b5397f1168c99b10603
+msgid "❌ **Don't mix LIFO/FIFO operations**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:480 2e501857581d433da25b19063bc8e142
+msgid "Common Pitfalls"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:482 d91b672515b344f0bda128a22c995f80
+msgid "**Using wrong list type**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:489 8ce9da42031b4820b80da967fdde6666
+msgid "**Not considering traversal cost**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:496 4da01e85143547b3abf05784e46d75d7
+msgid "**Ignoring iterator performance**"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:509 0fa8d282e15749b39acd331aabb54f20
+msgid "Related Guides"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:511 f6ccf95623b8444b98421156b0fe02aa
+msgid ""
+":doc:`../../guide/linear_structures/index` - User guide for linear "
+"structures"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:512 761c966951b740338754d38fbd9eaef1
+msgid ":doc:`../core/index` - Core abstractions"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:513 ad24794b66f04d71a929b0aab2894523
+msgid ":doc:`../tree/index` - Tree structures"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:516 fd03c7e3eeee4db2a848ee5f9c4328a1
+msgid "See Also"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:519 e8733ea569cf427ca0e928f98d3c137b
+msgid "External Resources"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:521 015ca871fad0490484359f5aecf3850a
+msgid "`Wikipedia: Linked List <https://en.wikipedia.org/wiki/Linked_list>`_"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:522 7ae7fbaebd414a89b7a2baaac0da8353
+msgid "`VisuAlgo: Linked List <https://visualgo.net/en/list>`_"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:523 dbe0e3f2b19b460b9a7544cb4232e088
+msgid ""
+"`Python Data Structures "
+"<https://docs.python.org/3/tutorial/datastructures.html>`_"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:526 ad668bf6ef03459288e50b0afa68a23c
+msgid "Academic References"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:528 119b071072224a6099b6ddcadb92a890
+msgid ""
+"Cormen, T. H., et al. \"Introduction to Algorithms\", 3rd Edition, "
+"Chapter 10"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:529 b3e3eedf537c435ba22a35f91f078d86
+msgid "Knuth, D. E. \"The Art of Computer Programming, Volume 1\", Section 2.2"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:530 305b998a6e434ec9b4118a245a3a5b92
+msgid "Sedgewick, R., Wayne, K. \"Algorithms\", 4th Edition, Section 1.3"
+msgstr ""
+
+#: ../../source/api/linear/index.rst:531 2e701ddcf2304be69ab0a47a3ba165ef
+msgid "Weiss, M. A. \"Data Structures and Algorithm Analysis\", Chapter 3"
+msgstr ""
+
+#~ msgid ""
+#~ "Linear data structures organize elements "
+#~ "in a sequential manner, where each "
+#~ "element has a unique predecessor and "
+#~ "successor (except for the first and "
+#~ "last elements)."
+#~ msgstr ""
+
+#~ msgid "**Stack** - Last-In-First-Out (LIFO) structure"
+#~ msgstr ""
+
+#~ msgid "**Queue** - First-In-First-Out (FIFO) structure"
+#~ msgstr ""
+
+#~ msgid "**Deque** - Double-ended queue"
+#~ msgstr ""
+
+#~ msgid "**Priority Queue** - Elements with associated priorities"
+#~ msgstr ""
+
+#~ msgid "**Linked Lists** - Various linked list implementations"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "✓ **Generic implementations** - Work "
+#~ "with any data type ✓ **Consistent "
+#~ "API** - Uniform interface across all "
+#~ "structures ✓ **Performance optimized** - "
+#~ "Efficient implementations ✓ **Well-tested**"
+#~ " - Comprehensive test coverage"
+#~ msgstr ""
+
+#~ msgid "Data Structures"
+#~ msgstr ""
+
+#~ msgid "Linked List Variants"
+#~ msgstr ""
+
+#~ msgid "Comparison Table"
+#~ msgstr ""
+
+#~ msgid "Access Order"
+#~ msgstr ""
+
+#~ msgid "Insert"
+#~ msgstr ""
+
+#~ msgid "Delete"
+#~ msgstr ""
+
+#~ msgid "Use Case"
+#~ msgstr ""
+
+#~ msgid "Stack"
+#~ msgstr ""
+
+#~ msgid "LIFO"
+#~ msgstr ""
+
+#~ msgid "Undo, recursion"
+#~ msgstr ""
+
+#~ msgid "Queue"
+#~ msgstr ""
+
+#~ msgid "FIFO"
+#~ msgstr ""
+
+#~ msgid "Scheduling, BFS"
+#~ msgstr ""
+
+#~ msgid "Deque"
+#~ msgstr ""
+
+#~ msgid "Both ends"
+#~ msgstr ""
+
+#~ msgid "Sliding window"
+#~ msgstr ""
+
+#~ msgid "Priority Queue"
+#~ msgstr ""
+
+#~ msgid "By priority"
+#~ msgstr ""
+
+#~ msgid "O(log n)"
+#~ msgstr ""
+
+#~ msgid "Dijkstra, events"
+#~ msgstr ""
+
+#~ msgid "Linked List"
+#~ msgstr ""
+
+#~ msgid "Sequential"
+#~ msgstr ""
+
+#~ msgid "O(1)*"
+#~ msgstr ""
+
+#~ msgid "Dynamic data"
+#~ msgstr ""
+
+#~ msgid "\\* At known position"
+#~ msgstr ""
+
