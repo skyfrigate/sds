@@ -1,248 +1,265 @@
-# SDS - Simple Data Structures
+# SDS Tools - Simple Data Structures
 
+[![PyPI version](https://img.shields.io/pypi/v/pysds-tools.svg)](https://pypi.org/project/pysds-tools/)
+[![Documentation](https://readthedocs.org/projects/pysds-tools/badge/?version=latest)](https://pysds-tools.readthedocs.io/en/latest/?badge=latest)
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Type Checked](https://img.shields.io/badge/type%20checked-mypy-informational)](http://mypy-lang.org/)
 [![Code Style](https://img.shields.io/badge/code%20style-flake8-informational)](https://flake8.pycqa.org/)
 [![Static Badge](https://img.shields.io/badge/security-bandit-informational)](https://github.com/PyCQA/bandit)
 
+Une bibliothèque Python complète et pédagogique de structures de données fondamentales
+— des listes chaînées aux modèles graphiques probabilistes — implémentées avec des
+principes de programmation orientée objet et une documentation exhaustive de style
+académique.
 
-Une bibliothèque Python complète et pédagogique de structures de données fondamentales, implémentées avec des principes de programmation orientée objet et une documentation exhaustive.
+> **Note sur le nom du package** : la distribution PyPI/pip s'appelle
+> **`pysds-tools`** (`sds-tools` entre en collision avec un package existant, sans
+> rapport, une fois le nom normalisé par PyPI). Le module importable n'est pas
+> affecté — il reste `sds` (`import sds.linear`, `import sds.probabilistic`, ...).
 
 ## Objectifs
 
-- **Pédagogique** : Code clair et bien documenté pour l'apprentissage
-- **Complet** : Couverture exhaustive des structures de données classiques
-- **Typé** : Support complet de MyPy avec type hints stricts
-- **Testé** : Couverture de tests complète avec pytest
-- **Performant** : Utilisation de `__slots__` pour l'optimisation mémoire
+- **Pédagogique** : Code clair et bien documenté pour l'apprentissage — pas
+  seulement du code qui fonctionne, mais du code qui explique le *pourquoi*
+- **Complet** : Couverture exhaustive des structures de données classiques et avancées
+- **Typé** : Support complet de MyPy en mode strict, compatible pyright/basedpyright
+- **Testé** : Objectif de couverture 80–90 %+ par module, vérifié via pytest-cov
+- **Performant** : `__slots__` sur chaque classe de nœud et de structure
+
+## Installation
+
+```bash
+pip install pysds-tools
+```
+
+## Démarrage rapide
+
+```python
+from sds.linear import Stack
+from sds.graph import DirectedGraph, GraphNode, DirectedEdge
+from sds.probabilistic import BayesianNetwork, Factor, RandomVariable
+
+# Structures linéaires
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.pop()  # 2
+
+# Graphes
+task_graph = DirectedGraph()
+design, backend = GraphNode("Design"), GraphNode("Backend")
+task_graph.add_node(design)
+task_graph.add_node(backend)
+task_graph.add_edge(DirectedEdge(design, backend))
+task_graph.is_acyclic()  # True
+
+# Modèles graphiques probabilistes
+rain = RandomVariable("Rain", ("true", "false"))
+bn = BayesianNetwork()
+bn.add_variable(rain)
+bn.set_cpt(rain, Factor((rain,), {("true",): 0.2, ("false",): 0.8}))
+```
 
 ## Architecture
 
-Le projet est organisé en modules thématiques :
+Le projet est organisé en modules thématiques, un par famille de structures :
 
-```
-sds/
-├── core/           # Composants fondamentaux (Node abstraite, interfaces, exceptions)
-├── linear/         # Structures linéaires (listes, piles, files)
-├── trees/          # Structures arborescentes (arbres binaires, BST, AVL, heaps)
-└── graphs/         # Structures de graphes (graphes, arêtes, algorithmes)
+```plaintext
+src/sds/
+├── core/           # Fondations : AbstractNode, AbstractContainer, exceptions
+├── linear/         # Structures linéaires (liste chaînée, pile, file)
+├── tree/           # Structures arborescentes (binaire, AVL, heaps, B-tree, trie, segment tree)
+├── graph/          # Structures de graphes (dirigés, pondérés, représentations d'adjacence)
+├── advanced/       # Structures avancées déterministes (disjoint set, Bloom filter, ...)
+├── probabilistic/  # Modèles graphiques probabilistes (réseaux bayésiens, MRF, HMM)
+├── algorithms/      # (prévu) tri, algorithmes de graphes, parcours d'arbres, inférence
+└── utils/          # (prévu) visualiseur, exceptions étendues
 ```
 
 ## Structures disponibles
 
-### Nœuds (Nodes) - `sds.core.node`
+### `sds.core` — Fondations
 
-Tous les types de nœuds héritent d'une classe abstraite `Node` commune utilisant un système unifié de références (`_refs`).
+Abstractions de base partagées par tous les autres modules : `AbstractNode`,
+`AbstractContainer`, et la hiérarchie d'exceptions commune. Ne contient aucune
+structure de données concrète par conception — tous les autres modules
+importent depuis `core`, jamais l'inverse.
 
-#### Nœuds linéaires - `sds.linear.node`
-- **`SimpleNode`** : Nœud pour listes chaînées simples (référence `next`)
-- **`DoublyNode`** : Nœud pour listes doublement chaînées (références `next` et `prev`)
+### `sds.linear` — Structures linéaires
 
-#### Nœuds arborescents - `sds.trees.node`
-- **`BinaryNode`** : Nœud pour arbres binaires (références `left` et `right`)
-- **`TreeNode`** : Nœud pour arbres généraux (liste de `children`)
+- **`LinkedList`** : liste doublement chaînée — O(1) ajout en tête/queue
+- **`Stack`** : LIFO — `push()`, `pop()`, `peek()`, tout en O(1)
+- **`Queue`** : FIFO — `enqueue()`, `dequeue()`, tout en O(1)
 
-#### Nœuds de graphes - `sds.graphs.node`
-- **`GraphNode`** : Nœud pour graphes (identifiant unique, pas de références internes)
+### `sds.tree` — Structures arborescentes
 
-### Structures linéaires - `sds.linear`
+- **`BinaryTree`**, **`AVLTree`** (auto-équilibré, O(log n) garanti),
+  **`GeneralTree`** (n-aire)
+- **`MinHeap`**, **`MaxHeap`**
+- **`BTree`**, **`Trie`** (recherche par préfixe), **`SegmentTree`** (requêtes sur intervalle)
 
-#### Listes chaînées - `sds.linear.list`
-- **`LinkedList`** : Liste chaînée simple
-  - Complexité : O(1) prepend, O(n) append, O(n) accès par index
-  - Utilise `SimpleNode`
-- **`DoublyLinkedList`** : Liste doublement chaînée
-  - Complexité : O(1) prepend/append, O(n/2) accès par index optimisé
-  - Utilise `DoublyNode`
-  - Support de `__reversed__()` pour itération inverse
-- **`CircularLinkedList`** : Liste chaînée circulaire
-  - Méthode `rotate()` pour rotation en O(1)
-  - Dernier nœud pointe vers le premier
+### `sds.graph` — Structures de graphes
 
-#### Pile - `sds.linear.stack`
-- **`Stack`** : Pile LIFO (Last In First Out)
-  - Opérations : `push()`, `pop()`, `peek()`
-  - Toutes les opérations en O(1)
-  - Utilise `LinkedList` en interne
+- **`Graph`**, **`DirectedGraph`**, **`UndirectedGraph`** (wrapper strict —
+  rejette explicitement les arêtes dirigées plutôt que de les convertir silencieusement)
+- **`WeightedGraph`**, **`WeightedDirectedGraph`**
+- **`AdjacencyListGraph`** (creux, espace O(V+E)), **`AdjacencyMatrixGraph`**
+  (dense, recherche d'arête O(1))
 
-#### Files - `sds.linear.queue`
-- **`Queue`** : File FIFO (First In First Out)
-  - Opérations : `enqueue()`, `dequeue()`, `front()`, `rear()`
-  - Utilise `LinkedList` en interne
-- **`Deque`** : File à double entrée
-  - Opérations : `add_front()`, `add_rear()`, `remove_front()`, `remove_rear()`
-  - Toutes les opérations en O(1)
-  - Utilise `DoublyLinkedList` en interne
-- **`PriorityQueue`** : File avec priorité
-  - Élément avec priorité minimale défilé en premier
-  - `enqueue()` en O(n), `dequeue()` en O(1)
+### `sds.advanced` — Structures avancées
 
-### Structures arborescentes - `sds.trees`
+Structures déterministes qui ne rentrent pas naturellement dans linear/tree/graph :
 
-#### Arbres de base
-- **`BinaryTree`** : Arbre binaire simple
-  - Parcours : inorder, preorder, postorder, level-order
-  - Opérations : hauteur, nombre de nœuds, recherche
-- **`BinarySearchTree` (BST)** : Arbre binaire de recherche
-  - Propriété : left < parent < right
-  - Recherche, insertion, suppression
-  - O(log n) en moyenne, O(n) pire cas
-- **`GeneralTree`** : Arbre général (n-aire)
-  - Nombre variable d'enfants par nœud
-  - Parcours DFS/BFS
+- **`DisjointSet`** (Union-Find, path compression + union-by-rank — O(α(n)) amorti)
+- **`BloomFilter`** (appartenance probabiliste), **`SkipList`** (structure triée probabiliste)
+- **`HashTableChaining`**, **`HashTableOpenAddressing`**
+- **`LRUCache`**, **`FenwickTree`** (arbre indexé binaire), **`CountMinSketch`**
+  (estimation de fréquence sur flux)
 
-#### Arbres équilibrés
-- **`AVLTree`** : Arbre AVL auto-équilibré
-  - Garantie O (log n) pour toutes les opérations
-  - Rotations automatiques après insertion/suppression
-- **`RedBlackTree`** : Arbre Rouge-Noir
-  - Auto-équilibré avec propriétés de couleur
-  - Moins de rotations que pour un AVLTree
+### `sds.probabilistic` — Modèles graphiques probabilistes
 
-#### Tas (Heaps)
-- **`MinHeap`** : Tas minimum
-  - Parent ≤ enfants
-  - Extract-min en O(log n)
-- **`MaxHeap`** : Tas maximum
-  - Parent ≥ enfants
-  - Extract-max en O(log n)
+Structures encodant des distributions de probabilité sur des variables aléatoires
+discrètes. Aucune logique d'inférence (requêtes marginales, explication la plus
+probable) n'est implémentée ici — c'est prévu pour `sds.algorithms`.
 
-#### Arbres spécialisés
-- **`Trie`** : Arbre préfixe pour chaînes
-  - Auto-complétion, recherche de préfixe
-- **`SegmentTree`** : Arbre de segments
-  - Requêtes de plage efficaces
-- **`BTree`** : Arbre B pour bases de données
+- **`RandomVariable`**, **`Factor`** : briques de base partagées (une variable
+  discrète et une table de potentiel/CPT sur une portée de variables)
+- **`BayesianNetwork`** : modèle graphique dirigé acyclique avec CPT
+  localement normalisées, compose `sds.graph.DirectedGraph` pour la topologie
+- **`MarkovRandomField`** : modèle graphique non dirigé (cycles autorisés)
+  avec potentiels non normalisés, compose `sds.graph.Graph`
+- **`HiddenMarkovModel`** : modèle séquentiel sur une paire fixe
+  états/observations, avec composantes initiale/transition/émission
 
-### Structures de graphes - `sds.graphs`
+## Documentation
 
-#### Nœuds et arêtes
-- **`GraphNode`** : Nœud de graphe avec identifiant unique
-- **`Edge`** : Arête entre deux nœuds
-- **`DirectedEdge`** : Arc orienté
-- **`WeightedEdge`** : Arête pondérée
+Référence API complète et guide utilisateur, avec fondements mathématiques,
+diagrammes Mermaid, tables de complexité et exemples concrets pour chaque module :
 
-#### Graphes
-- **`Graph`** : Graphe de base
-- **`DirectedGraph`** : Graphe orienté
-- **`UndirectedGraph`** : Graphe non orienté
-- **`WeightedGraph`** : Graphe pondéré
-- **`WeightedDirectedGraph`**: Graphe pondéré et orienté
-- **`AdjacencyListGraph`**: Liste d'adjacence (famille des graphes)
-- **`AdjacencyMatrixGraph`**: Matrice d'adjacence (famille des graphes finis)
+**https://pysds-tools.readthedocs.io**
 
 ## Tests
-
-Le projet utilise pytest avec une couverture de tests complète :
 
 ```bash
 # Exécuter tous les tests
 pytest
 
-# Exécuter avec couverture
+# Avec couverture
 pytest --cov=sds --cov-report=html
 
-# Exécuter les tests d'un module spécifique
-pytest tests/02_linear/
+# Tests d'un module spécifique
+pytest tests/06_Probabilistic/
 
-# Exécuter en verbose
+# Mode verbeux
 pytest -v
 ```
 
-Structure des tests :
-```
+Organisation de la suite de tests (miroir de l'arborescence source, un dossier par module) :
+
+```plaintext
 tests/
-├── 01_Core/        # Tests pour core (Node abstraite, interfaces, exceptions)
-├── 02_Linear/      # Tests pour structures linéaires
-├── 03_Tree/       # Tests pour structures arborescentes
-└── 04_Graph/      # Tests pour structures de graphes
+├── 01_Core/
+├── 02_Linear/
+├── 03_Tree/
+├── 04_Graph/
+├── 05_Advanced/
+└── 06_Probabilistic/
 ```
 
 ## Analyse statique
 
-Le projet est entièrement typé et vérifié avec MyPy et Flake8 :
+Le projet est entièrement typé et vérifié avec mypy, flake8 et bandit :
 
 ```bash
-# Vérification des types avec MyPy (mode strict)
-mypy --strict sds/
-
-# Vérification du style avec Flake8
-flake8 sds/ --max-line-length=88
-
-# Vérification combinée
-mypy --strict sds/ && flake8 sds/ --max-line-length=88
+mypy src/sds/
+flake8 src/sds/
+bandit -r src/sds/
 ```
 
-## Contribution
+Ou, via `tox` :
 
-Les contributions sont les bienvenues ! Veuillez suivre ces guidelines :
+```bash
+tox -e mypy,flake8,bandit
+```
 
-1. **Fork** le projet
-2. Créer une **branche** pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`)
-3. **Commiter** vos changements (`git commit -m 'Add some AmazingFeature'`)
-4. **Pousser** vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrir un **Pull Request**
+## Contribuer
+
+Les contributions sont les bienvenues !
+
+1. **Forkez** le projet
+2. Créez une **branche** pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`)
+3. **Committez** vos changements en suivant [Conventional Commits](https://www.conventionalcommits.org/)
+4. **Poussez** la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une **Pull Request**
+
+L'ensemble des conventions du projet (labels, templates d'issues, format de
+commit, versioning, releases) est documenté dans
+[`CONVENTIONS.md`](https://github.com/skyfrigate/.github/blob/main/CONVENTIONS.md)
+dans le dépôt partagé `.github`.
 
 ### Standards de qualité
 
-- ✅ Code typé avec MyPy (strict mode)
-- ✅ Style conforme à Flake8 (PEP 8)
-- ✅ Tests avec pytest (couverture > 90%)
+- ✅ Typage vérifié avec mypy (mode strict)
+- ✅ Style conforme à flake8
+- ✅ Sécurité vérifiée avec bandit
+- ✅ Tests avec pytest (objectif de couverture 80–90 %+)
 - ✅ Docstrings au format NumPy
-- ✅ Utilisation de `__slots__` pour optimisation mémoire
+- ✅ `__slots__` sur toutes les classes de nœuds et de structures
 
-## Roadmap
+## Feuille de route
 
-### Phase 1 : Fondations (Complétée)
-- [x] Architecture modulaire
-- [x] Nœuds abstraits avec système `_refs` unifié
-- [x] Nœuds pour listes (SimpleNode, DoublyNode)
-- [x] Nœuds pour arbres (BinaryNode, TreeNode)
-- [x] Nœuds pour graphes (GraphNode)
-- [x] Structures linéaires complètes
-- [x] Tests exhaustifs pour linear
+### `v0.1.0`–`v0.5.0` — Fondations à Structures avancées ✅ *Terminé*
 
-### Phase 2 : Arbres (Complétée)
-- [x] Interfaces abstraites (AbstractTree, AbstractBinaryTree)
-- [x] BinaryTree et BinarySearchTree
-- [x] B-Tree
-- [x] MinHeap et MaxHeap
-- [x] AVLTree
-- [x] RedBlackTree
-- [x] Segment Tree
-- [x] Trie
-- [x] Tests exhaustifs pour trees
+- `sds.core`, `sds.linear`, `sds.tree`, `sds.graph`, `sds.advanced` —
+  entièrement implémentés, testés et documentés
 
-### Phase 3 : Graphes (Complétée)
-- [x] Edge, DirectedEdge, WeightedEdge
-- [x] Graph, DirectedGraph, UndirectedGraph
-- [x] Algorithmes : DFS, BFS, Dijkstra, Kruskal
-- [x] Tests exhaustifs pour graphs
+### `v0.6.0` — Structures probabilistes ✅ *Terminé (cette release)*
 
-### Phase 4 : Structures avancées (Planifiée)
-- [ ] Union-Find (Disjoint Set)
-- [ ] Bloom Filter
-- [ ] Skip List
+- `sds.probabilistic` : `BayesianNetwork`, `MarkovRandomField`, `HiddenMarkovModel`
+
+### `v0.7.0` — Algorithmes *Prévu*
+
+- Tri (QuickSort, MergeSort), algorithmes de graphes (DFS, BFS, Dijkstra,
+  Kruskal), parcours d'arbres — et inférence probabiliste (Variable
+  Elimination, Belief Propagation, Forward, Viterbi)
+
+### `v0.8.0` — Utilitaires *Prévu*
+
+- Visualiseur partagé, hiérarchie d'exceptions étendue
+
+### `v0.9.0`–`v1.0.0` — Consolidation qualité & Release stable *Prévu*
+
+- Passe complète couverture/mypy, polissage documentaire, première API stable
+
+### `v1.1.0`–`v1.2.0` — Traduction française *Prévu*
+
+- Documentation bilingue via un projet ReadTheDocs dédié
 
 ## Licence
 
-Ce projet est sous licence Apache 2.0 - voir le fichier [LICENSE](LICENSE.md) pour plus de détails.
+Ce projet est sous licence Apache License 2.0 — voir le fichier
+[LICENSE](LICENSE.md) pour les détails. La documentation est sous licence
+séparée CC BY-NC 4.0 — voir [`docs/source/license.rst`](docs/source/license.rst).
 
 ## Remerciements
 
-- Inspiré par les cours de structures de données classiques
-- Conçu pour l'apprentissage et l'enseignement
-- Merci à la communauté Python pour les outils exceptionnels ([pytest](https://docs.pytest.org/en/stable/), 
-  [mypy](https://mypy-lang.org/), [flake8](https://flake8.pycqa.org/en/latest/), 
-  [bandit](https://bandit.readthedocs.io/en/latest/))
+- Inspiré par les cours classiques de structures de données et d'algorithmes
+- Conçu pour l'apprentissage
+- Merci à la communauté Python pour ses outils exceptionnels
+  ([pytest](https://docs.pytest.org/en/stable/),
+  [mypy](https://mypy-lang.org/), [flake8](https://flake8.pycqa.org/en/latest/),
+  [bandit](https://bandit.readthedocs.io/en/latest/), [Sphinx](https://www.sphinx-doc.org/),
+  [Furo](https://pradyunsg.me/furo/))
 
-## 📚 Ressources
+## Ressources
 
 - [Documentation Python](https://docs.python.org/3/)
-- [Type Hints PEP 484](https://www.python.org/dev/peps/pep-0484/)
-- [NumPy Docstring Guide](https://numpydoc.readthedocs.io/en/latest/format.html)
+- [Type Hints — PEP 484](https://www.python.org/dev/peps/pep-0484/)
+- [Guide docstring NumPy](https://numpydoc.readthedocs.io/en/latest/format.html)
+- [Modèles graphiques probabilistes — notes Stanford CS228](https://ermongroup.github.io/cs228-notes/)
+  (référence en accès libre pour `sds.probabilistic`)
 
 ---
 
-**Note** : Ce projet est en développement actif. Les fonctionnalités marquées *(à venir)* sont planifiées, mais pas encore implémentées.
+**Miroir GitLab** : https://gitlab.com/open-works/sds
