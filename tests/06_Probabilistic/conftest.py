@@ -59,6 +59,19 @@ def weather() -> RandomVariable:
 
 
 @pytest.fixture
+def cloudy() -> RandomVariable:
+    """Binary RandomVariable: Cloudy in {true, false}.
+
+    Returns
+    -------
+    RandomVariable
+        A binary variable named "Cloudy", used as a third node for MRF
+        clique tests.
+    """
+    return RandomVariable("Cloudy", ("true", "false"))
+
+
+@pytest.fixture
 def binary_cpt_table() -> dict[tuple[str, str], float]:
     """Complete 2x2 joint table for (Rain, Sprinkler), summing to 1.
 
