@@ -15,7 +15,8 @@
 """Abstract interfaces for probabilistic graphical model structures.
 
 This module provides the abstract base classes that define the contract for
-``sds.probabilistic`` structures: Bayesian networks and Markov random fields.
+``sds.probabilistic`` structures: Bayesian networks, Markov random fields,
+and hidden Markov models.
 
 These structures encode probability distributions over discrete random
 variables (GitHub issue #26), backed by ``RandomVariable`` and ``Factor``.
@@ -29,23 +30,42 @@ reimplementing adjacency locally.
 Classes
 -------
 AbstractGraphicalModel
-    Common base: manages variables and factors, evaluates a joint
-    assignment's potential.
+    Common base for Bayesian networks and Markov random fields: manages
+    variables and factors, evaluates a joint assignment's potential.
 AbstractBayesianNetwork
     Directed, acyclic graphical model with locally normalized CPTs.
 AbstractMarkovRandomField
     Undirected graphical model with (generally unnormalized) potentials;
     may contain cycles.
+AbstractHiddenMarkovModel
+    Sequential model over a fixed pair of variables (states, observations)
+    with an initial distribution, a transition model and an emission
+    model. Deliberately **not** part of the ``AbstractGraphicalModel``
+    hierarchy (see Notes).
 
 Notes
 -----
-``HiddenMarkovModel`` is deliberately **not** part of this hierarchy. Its
-sequential structure (hidden states, observations, transition/emission
-matrices) does not map cleanly onto a generic scope-of-variables factor
-model, and forcing it into ``AbstractGraphicalModel`` would require
-meaningless implementations of ``add_factor``/``scope`` for a chain. It is
-expected to get its own, separate interface once this hierarchy is
-validated.
+``AbstractHiddenMarkovModel`` inherits directly from ``Collection``, not
+from ``AbstractGraphicalModel``. An HMM does not hold an open set of
+variables and factors the way a Bayesian network or Markov random field
+does — it has exactly two fixed variables (states, observations) and
+exactly three fixed components (initial distribution, transition model,
+emission model). Forcing it under ``AbstractGraphicalModel`` would require
+degenerate implementations of ``add_variable``/``variables()`` (there is no
+open variable set to add to) and ``joint(assignment: Mapping[...])`` (which
+cannot represent a time sequence), the same category of Liskov violation
+DD-006 already avoided for ``AbstractDirectedGraph``.
+
+The transition model conditions ``states`` on the state at the *previous*
+time step — the same ``RandomVariable`` cannot appear twice in one
+``Factor.scope`` (its mapping-based value lookup would collide). Each
+concrete implementation therefore derives a second variable,
+``previous_states``, sharing the same domain as ``states``, exposed
+alongside it. With this in place, all three HMM components become
+structurally identical to a Bayesian network CPT: ``initial_distribution``
+is a parent-less CPT for ``states``; ``transition_model`` is ``states``
+conditioned on ``previous_states``; ``emission_model`` is ``observations``
+conditioned on ``states``.
 
 See Also
 --------
@@ -56,7 +76,7 @@ sds.core.interfaces : Collection, the root interface.
 """
 
 from abc import ABC, abstractmethod
-from typing import Any, Iterator, Mapping
+from typing import Any, Iterator, Mapping, Sequence
 
 from ..core.interfaces import Collection
 from .factor import Factor
@@ -66,6 +86,7 @@ __all__ = [
     "AbstractGraphicalModel",
     "AbstractBayesianNetwork",
     "AbstractMarkovRandomField",
+    "AbstractHiddenMarkovModel",
 ]
 
 
@@ -406,5 +427,268 @@ class AbstractMarkovRandomField(AbstractGraphicalModel, ABC):
         ------
         RandomVariable
             Each neighbor of ``variable`` in the dependency graph.
+        """
+        pass
+
+
+class AbstractHiddenMarkovModel(Collection, ABC):
+    """Abstract base class for hidden Markov model implementations.
+
+    A hidden Markov model has exactly two fixed variables — ``states``
+    (the hidden variable) and ``observations`` — and exactly three fixed
+    components: an initial distribution over ``states``, a transition
+    model for ``states`` conditioned on the previous time step, and an
+    emission model for ``observations`` conditioned on ``states``.
+
+    Notes
+    -----
+    Deliberately independent from ``AbstractGraphicalModel`` — see the
+    module-level docstring for the rationale. ``Collection`` semantics
+    (``__len__``, ``is_empty``, ``clear``, ``__iter__``, ``__contains__``)
+    are expected to operate over the model's configuration: ``__len__``
+    counts how many of the five components (states, observations, initial
+    distribution, transition model, emission model) have been set;
+    ``__iter__`` yields ``states()`` and ``observations()`` once set (not
+    ``previous_states()``, which is a derived implementation detail, not
+    a variable the caller declared); ``__contains__`` checks membership
+    against ``states()``/``observations()``.
+
+    See Also
+    --------
+    AbstractBayesianNetwork : The CPT-validation pattern mirrored here for
+        the initial/transition/emission components.
+    """
+
+    @abstractmethod
+    def set_states(self, variable: RandomVariable) -> None:
+        """Register the hidden state variable.
+
+        Also derives and exposes ``previous_states()``, a second variable
+        sharing ``variable``'s domain, used as the conditioning variable
+        in the transition model's scope.
+
+        Parameters
+        ----------
+        variable : RandomVariable
+            The hidden state variable.
+
+        Raises
+        ------
+        ValueError
+            If the states variable has already been set.
+        """
+        pass
+
+    @abstractmethod
+    def set_observations(self, variable: RandomVariable) -> None:
+        """Register the observation variable.
+
+        Parameters
+        ----------
+        variable : RandomVariable
+            The observation variable.
+
+        Raises
+        ------
+        ValueError
+            If the observations variable has already been set.
+        """
+        pass
+
+    @abstractmethod
+    def states(self) -> RandomVariable:
+        """Return the hidden state variable.
+
+        Returns
+        -------
+        RandomVariable
+            The variable registered via :meth:`set_states`.
+
+        Raises
+        ------
+        ValueError
+            If :meth:`set_states` has not been called yet.
+        """
+        pass
+
+    @abstractmethod
+    def previous_states(self) -> RandomVariable:
+        """Return the derived "previous time step" state variable.
+
+        Returns
+        -------
+        RandomVariable
+            A variable sharing ``states()``'s domain, distinct from it,
+            used as the conditioning variable in the transition model's
+            scope.
+
+        Raises
+        ------
+        ValueError
+            If :meth:`set_states` has not been called yet.
+        """
+        pass
+
+    @abstractmethod
+    def observations(self) -> RandomVariable:
+        """Return the observation variable.
+
+        Returns
+        -------
+        RandomVariable
+            The variable registered via :meth:`set_observations`.
+
+        Raises
+        ------
+        ValueError
+            If :meth:`set_observations` has not been called yet.
+        """
+        pass
+
+    @abstractmethod
+    def set_initial_distribution(self, factor: Factor) -> None:
+        """Assign the initial distribution P(states at t=0).
+
+        Parameters
+        ----------
+        factor : Factor
+            A factor with scope exactly ``(states(),)``, normalized to
+            sum to 1 over ``states()``'s domain.
+
+        Raises
+        ------
+        ValueError
+            If ``states()`` has not been set, if ``factor.scope`` does not
+            match ``(states(),)``, or if ``factor`` is not normalized.
+        """
+        pass
+
+    @abstractmethod
+    def set_transition_model(self, factor: Factor) -> None:
+        """Assign the transition model P(states at t | states at t-1).
+
+        Parameters
+        ----------
+        factor : Factor
+            A factor with scope exactly ``(states(), previous_states())``,
+            normalized so that, for every state of ``previous_states()``,
+            the values over ``states()``'s states sum to 1.
+
+        Raises
+        ------
+        ValueError
+            If ``states()`` has not been set, if ``factor.scope`` does not
+            match ``(states(), previous_states())``, or if ``factor`` is
+            not normalized per previous-state configuration.
+        """
+        pass
+
+    @abstractmethod
+    def set_emission_model(self, factor: Factor) -> None:
+        """Assign the emission model P(observations at t | states at t).
+
+        Parameters
+        ----------
+        factor : Factor
+            A factor with scope exactly ``(observations(), states())``,
+            normalized so that, for every state of ``states()``, the
+            values over ``observations()``'s states sum to 1.
+
+        Raises
+        ------
+        ValueError
+            If ``states()`` or ``observations()`` have not been set, if
+            ``factor.scope`` does not match ``(observations(), states())``,
+            or if ``factor`` is not normalized per state configuration.
+        """
+        pass
+
+    @abstractmethod
+    def initial_distribution(self) -> Factor:
+        """Return the initial distribution.
+
+        Returns
+        -------
+        Factor
+            The factor assigned via :meth:`set_initial_distribution`.
+
+        Raises
+        ------
+        ValueError
+            If :meth:`set_initial_distribution` has not been called yet.
+        """
+        pass
+
+    @abstractmethod
+    def transition_model(self) -> Factor:
+        """Return the transition model.
+
+        Returns
+        -------
+        Factor
+            The factor assigned via :meth:`set_transition_model`.
+
+        Raises
+        ------
+        ValueError
+            If :meth:`set_transition_model` has not been called yet.
+        """
+        pass
+
+    @abstractmethod
+    def emission_model(self) -> Factor:
+        """Return the emission model.
+
+        Returns
+        -------
+        Factor
+            The factor assigned via :meth:`set_emission_model`.
+
+        Raises
+        ------
+        ValueError
+            If :meth:`set_emission_model` has not been called yet.
+        """
+        pass
+
+    @abstractmethod
+    def joint(
+        self,
+        states_sequence: Sequence[str],
+        observations_sequence: Sequence[str],
+    ) -> float:
+        """Evaluate the joint probability of a fully observed sequence.
+
+        Computes ``P(states) x P(observations | states)`` for a specific,
+        fully known sequence of hidden states and observations:
+        ``P(s_0) x prod_t P(s_t | s_{t-1}) x prod_t P(o_t | s_t)``.
+
+        Parameters
+        ----------
+        states_sequence : sequence of str
+            The hidden state at each time step, ``states()``'s domain.
+        observations_sequence : sequence of str
+            The observation at each time step, ``observations()``'s
+            domain. Must be the same length as ``states_sequence``.
+
+        Returns
+        -------
+        float
+            The joint probability of the given sequence.
+
+        Notes
+        -----
+        This is a direct O(n) product over stored factors — the same kind
+        of structural computation as ``AbstractGraphicalModel.joint``, not
+        an inference algorithm. Recovering the *marginal* likelihood
+        P(observations) by summing over every possible hidden state
+        sequence (the actual Forward algorithm), or the most likely hidden
+        sequence (Viterbi), is inference and belongs to ``sds.algorithms``.
+
+        Raises
+        ------
+        ValueError
+            If the two sequences have different lengths, if either is
+            empty, or if any of the three components has not been set.
         """
         pass
