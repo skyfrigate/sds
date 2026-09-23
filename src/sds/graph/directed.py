@@ -78,6 +78,7 @@ sds.graphs.weighted : Weighted graph implementations.
 from collections import deque
 from typing import Dict, Iterator, List, Optional, Set
 
+from ._incidence import IncidenceIndex
 from .edge import DirectedEdge, Edge
 from .graph import Graph
 from .interfaces import AbstractDirectedGraph
@@ -177,8 +178,8 @@ class DirectedGraph(AbstractDirectedGraph):
         self._nodes: Dict[str, GraphNode] = {}
 
         # Separate adjacency lists for in and out edges
-        self._out_adjacency: Dict[str, Set[str]] = {}  # source -> targets
-        self._in_adjacency: Dict[str, Set[str]] = {}  # target -> sources
+        self._out_adjacency: IncidenceIndex[DirectedEdge] = IncidenceIndex()
+        self._in_adjacency: IncidenceIndex[DirectedEdge] = IncidenceIndex()
 
         self._edges: List[DirectedEdge] = []
 
@@ -244,8 +245,8 @@ class DirectedGraph(AbstractDirectedGraph):
             raise ValueError(f"Node {node.id} already exists in graph")
 
         self._nodes[node.id] = node
-        self._out_adjacency[node.id] = set()
-        self._in_adjacency[node.id] = set()
+        self._out_adjacency.add_node(node.id)
+        self._in_adjacency.add_node(node.id)
         self._invalidate_cache()
 
     def remove_node(self, node: GraphNode) -> None:
@@ -286,16 +287,16 @@ class DirectedGraph(AbstractDirectedGraph):
         ]
 
         # Update adjacency lists for neighbors
-        for source_id in self._in_adjacency[node.id]:
-            self._out_adjacency[source_id].discard(node.id)
+        for source_id in self._in_adjacency.pop_node(node.id):
+            if source_id != node.id:
+                self._out_adjacency.drop_neighbor(source_id, node.id)
 
-        for target_id in self._out_adjacency[node.id]:
-            self._in_adjacency[target_id].discard(node.id)
+        for target_id in self._out_adjacency.pop_node(node.id):
+            if target_id != node.id:
+                self._in_adjacency.drop_neighbor(target_id, node.id)
 
         # Remove node
         del self._nodes[node.id]
-        del self._out_adjacency[node.id]
-        del self._in_adjacency[node.id]
         self._invalidate_cache()
 
     def has_node(self, node: GraphNode) -> bool:
@@ -380,8 +381,8 @@ class DirectedGraph(AbstractDirectedGraph):
         self._edges.append(edge)
 
         # Update adjacency lists
-        self._out_adjacency[edge.source.id].add(edge.target.id)
-        self._in_adjacency[edge.target.id].add(edge.source.id)
+        self._out_adjacency.link(edge.source.id, edge.target.id, edge)
+        self._in_adjacency.link(edge.target.id, edge.source.id, edge)
 
         self._invalidate_cache()
 
@@ -413,72 +414,36 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Notes
         -----
-        Time complexity: O(E) to find edge, O(1) to update adjacency.
+        Time complexity: O(E) to find edge, O(k) to update adjacency (k parallel
+        edges between source and target).
         """
-        # Check membership against directed edges list
-        if edge not in self._edges:
-            # If the provided edge is not a DirectedEdge, try to locate the
-            # corresponding directed edge instance before failing.
-            if isinstance(edge, DirectedEdge):
+        if isinstance(edge, DirectedEdge):
+            if edge not in self._edges:
                 raise ValueError(
                     f"Edge from {edge.node1.id} to {edge.node2.id} not in graph"
                 )
-            match = next(
+            position = self._edges.index(edge)
+        else:
+            # An undirected Edge is read as node1 -> node2.
+            found = next(
                 (
-                    e
-                    for e in self._edges
+                    i
+                    for i, e in enumerate(self._edges)
                     if e.source.id == edge.node1.id and e.target.id == edge.node2.id
                 ),
                 None,
             )
-            if match is None:
+            if found is None:
                 raise ValueError(
                     f"Edge from {edge.node1.id} to {edge.node2.id} not in graph"
                 )
-            # Remove the matched directed edge
-            self._edges.remove(match)
-            source_id = match.source.id
-            target_id = match.target.id
-        else:
-            # Safe remove only when the exact DirectedEdge object is present
-            # in the underlying List[DirectedEdge]
-            if isinstance(edge, DirectedEdge):
-                self._edges.remove(edge)
-                source_id = edge.source.id
-                target_id = edge.target.id
-            else:
-                # Edge is undirected but equals() succeeded against DirectedEdge
-                # list membership check above (unlikely since __eq__ is class-specific),
-                # still resolve ids from undirected view.
-                # Fallback to remove by identity via a search
-                match = next(
-                    (
-                        e
-                        for e in self._edges
-                        if e.source.id == edge.node1.id and e.target.id == edge.node2.id
-                    ),
-                    None,
-                )
-                if match is not None:
-                    self._edges.remove(match)
-                    source_id = match.source.id
-                    target_id = match.target.id
-                else:
-                    # Should not happen after membership check, but keep safe
-                    raise ValueError(
-                        f"Edge from {edge.node1.id} to {edge.node2.id} not in graph"
-                    )
+            position = found
 
-        has_other_edge = any(
-            isinstance(e, DirectedEdge)
-            and e.source.id == source_id
-            and e.target.id == target_id
-            for e in self._edges
-        )
-
-        if not has_other_edge:
-            self._out_adjacency[source_id].discard(target_id)
-            self._in_adjacency[target_id].discard(source_id)
+        # Pop the stored instance itself: in a multi-digraph, parallel edges
+        # compare equal but the adjacency index tracks them by identity.
+        removed = self._edges.pop(position)
+        self._out_adjacency.unlink(removed.source.id, removed.target.id, removed)
+        self._in_adjacency.unlink(removed.target.id, removed.source.id, removed)
 
         self._invalidate_cache()
 
@@ -512,11 +477,11 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Notes
         -----
-        Time complexity: O(1) amortized using adjacency set.
+        Time complexity: O(1) amortized using the adjacency index.
         """
         if not self.has_node(node1) or not self.has_node(node2):
             return False
-        return node2.id in self._out_adjacency[node1.id]
+        return self._out_adjacency.has_link(node1.id, node2.id)
 
     def get_edge(self, node1: GraphNode, node2: GraphNode) -> Optional[Edge]:
         """Get the directed edge from node1 to node2.
@@ -638,7 +603,9 @@ class DirectedGraph(AbstractDirectedGraph):
             raise ValueError(f"Node {node.id} not in graph")
 
         if not self._allow_multi_edges:
-            return len(self._in_adjacency[node.id]) + len(self._out_adjacency[node.id])
+            return self._in_adjacency.neighbor_count(
+                node.id
+            ) + self._out_adjacency.neighbor_count(node.id)
         else:
             # For multi-digraphs, count actual edges
             return sum(
@@ -687,7 +654,7 @@ class DirectedGraph(AbstractDirectedGraph):
             raise ValueError(f"Node {node.id} not in graph")
 
         if not self._allow_multi_edges:
-            return len(self._in_adjacency[node.id])
+            return self._in_adjacency.neighbor_count(node.id)
         else:
             # For multi-digraphs, count actual edges
             return sum(
@@ -735,7 +702,7 @@ class DirectedGraph(AbstractDirectedGraph):
             raise ValueError(f"Node {node.id} not in graph")
 
         if not self._allow_multi_edges:
-            return len(self._out_adjacency[node.id])
+            return self._out_adjacency.neighbor_count(node.id)
         else:
             # For multi-digraphs, count actual edges
             return sum(
@@ -779,11 +746,14 @@ class DirectedGraph(AbstractDirectedGraph):
         Notes
         -----
         Time complexity: O(in_degree(node))
+
+        Predecessors are yielded in the order their first incoming
+        edge was added (see :meth:`Graph.neighbors`).
         """
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
 
-        for predecessor_id in self._in_adjacency[node.id]:
+        for predecessor_id in self._in_adjacency.neighbor_ids(node.id):
             yield self._nodes[predecessor_id]
 
     def successors(self, node: GraphNode) -> Iterator[GraphNode]:
@@ -821,11 +791,14 @@ class DirectedGraph(AbstractDirectedGraph):
         Notes
         -----
         Time complexity: O(out_degree(node))
+
+        Successors are yielded in the order their first outgoing
+        edge was added (see :meth:`Graph.neighbors`).
         """
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
 
-        for successor_id in self._out_adjacency[node.id]:
+        for successor_id in self._out_adjacency.neighbor_ids(node.id):
             yield self._nodes[successor_id]
 
     def is_acyclic(self) -> bool:
@@ -881,7 +854,7 @@ class DirectedGraph(AbstractDirectedGraph):
             """DFS to detect cycle from node."""
             color[node_id] = 1  # Mark as visiting (gray)
 
-            for successor_id in self._out_adjacency[node_id]:
+            for successor_id in self._out_adjacency.neighbor_ids(node_id):
                 if color[successor_id] == 1:  # Back edge found!
                     return True
                 if color[successor_id] == 0:  # Unvisited
