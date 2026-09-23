@@ -31,6 +31,7 @@
       ~WeightedGraph.neighbors
       ~WeightedGraph.node_count
       ~WeightedGraph.nodes
+      ~WeightedGraph.outgoing_edges
       ~WeightedGraph.remove_edge
       ~WeightedGraph.remove_node
       ~WeightedGraph.total_weight
