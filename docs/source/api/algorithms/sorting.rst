@@ -106,6 +106,21 @@ on the smaller part only (the call stack stays :math:`O(\log n)` deep).
 
 .. autofunction:: quick_sort
 
+.. warning::
+
+   ``quick_sort`` is **not stable**: three records with the same key are
+   enough for it to reorder them. When the order of ties matters, use
+   ``merge_sort``. To get a stable sort that still updates the caller's
+   list object, assign the result back into it:
+
+   .. code-block:: python
+
+      records[:] = merge_sort(records, key=lambda r: r.department)
+
+   No stable variant of quicksort is provided on purpose: breaking ties
+   by original position would cost :math:`O(n)` extra memory, the same as
+   merge sort, while keeping quicksort's :math:`O(n^2)` worst case.
+
 Comparison
 ==========
 
@@ -184,6 +199,9 @@ Best Practices
 original list must stay untouched.
 
 ✅ Use ``quick_sort`` when memory matters and stability does not.
+
+✅ Need both stability and an in-place update? Write
+``items[:] = merge_sort(items)``.
 
 ✅ Pass ``key`` rather than pre-building ``(key, item)`` tuples: the key is
 computed once per item and items themselves are never compared.
