@@ -492,3 +492,73 @@ class TestClearOperation:
         assert g.is_empty()
         assert g.node_count() == 0
         assert g.edge_count() == 0
+
+
+class TestOutgoingEdges:
+    """Test WeightedDirectedGraph.outgoing_edges() (#88)."""
+
+    @staticmethod
+    def _build() -> tuple[WeightedDirectedGraph, list[GraphNode]]:
+        a, d, b, c = (GraphNode(i, i) for i in ("a", "d", "b", "c"))
+        g = WeightedDirectedGraph()
+        for n in (a, b, c, d):
+            g.add_node(n)
+        g.add_edge(WeightedDirectedEdge(a, d, 4.0))
+        g.add_edge(WeightedDirectedEdge(b, a, 2.0))  # incoming to a
+        g.add_edge(WeightedDirectedEdge(a, c, 7.0))
+        g.add_edge(WeightedDirectedEdge(a, b, 1.0))
+        return g, [a, d, b, c]
+
+    def test_only_outgoing(self) -> None:
+        """Incoming arcs are excluded, unlike incident_edges()."""
+        g, (a, _, _, _) = self._build()
+        out = list(g.outgoing_edges(a))
+        assert [(e.target.id, e.weight) for e in out] == [
+            ("d", 4.0),
+            ("c", 7.0),
+            ("b", 1.0),
+        ]
+        assert all(e.source is a for e in out)
+        assert len(g.incident_edges(a)) == 4
+
+    def test_matches_out_degree(self) -> None:
+        """The number of outgoing edges equals out_degree()."""
+        g, nodes = self._build()
+        for n in nodes:
+            assert len(list(g.outgoing_edges(n))) == g.out_degree(n)
+
+    def test_sink_has_none(self) -> None:
+        """A sink node has no outgoing edges."""
+        g, (_, d, _, _) = self._build()
+        assert list(g.outgoing_edges(d)) == []
+
+    def test_missing_node_raises(self) -> None:
+        """A node absent from the graph raises ValueError."""
+        g = WeightedDirectedGraph()
+        with pytest.raises(ValueError):
+            list(g.outgoing_edges(GraphNode("x", "x")))
+
+    def test_parallel_arcs(self) -> None:
+        """Parallel arcs are all yielded, grouped by target."""
+        a, b, c = (GraphNode(i, i) for i in ("a", "b", "c"))
+        g = WeightedDirectedGraph(allow_multi_edges=True)
+        for n in (a, b, c):
+            g.add_node(n)
+        g.add_edge(WeightedDirectedEdge(a, b, 1.0))
+        g.add_edge(WeightedDirectedEdge(a, c, 5.0))
+        g.add_edge(WeightedDirectedEdge(a, b, 3.0))
+        assert [e.weight for e in g.outgoing_edges(a)] == [1.0, 3.0, 5.0]
+        g.remove_edge(WeightedDirectedEdge(a, b, 1.0))
+        assert [e.weight for e in g.outgoing_edges(a)] == [3.0, 5.0]
+
+    def test_tracks_node_removal(self) -> None:
+        """Removing a target drops its arcs from outgoing_edges()."""
+        g, (a, _, _, c) = self._build()
+        g.remove_node(c)
+        assert [e.target.id for e in g.outgoing_edges(a)] == ["d", "b"]
+
+    def test_does_not_scan_edge_list(self) -> None:
+        """outgoing_edges() never reads the flat edge list (O(out-degree))."""
+        g, (a, _, _, _) = self._build()
+        g._edges = []  # type: ignore[misc]  # sabotage the O(E) path
+        assert len(list(g.outgoing_edges(a))) == 3

@@ -568,3 +568,36 @@ class AbstractWeightedGraph(AbstractGraph):
             If node is not in the graph.
         """
         pass
+
+    @abstractmethod
+    def outgoing_edges(
+        self, node: GraphNode
+    ) -> Iterator[WeightedEdge | WeightedDirectedEdge]:
+        """Yield the weighted edges leaving a node, in O(degree).
+
+        On an undirected weighted graph every incident edge leaves the node,
+        so this yields all of them; use ``edge.other_node(node)`` to reach
+        the far endpoint. On a directed weighted graph only the edges whose
+        source is ``node`` are yielded, which is what a shortest-path
+        relaxation step needs (see #87).
+
+        Unlike :meth:`incident_edges`, implementations must not scan the
+        full edge set: the cost is proportional to the node's (out-)degree.
+
+        Parameters
+        ----------
+        node : GraphNode
+            Node whose outgoing edges are requested.
+
+        Yields
+        ------
+        WeightedEdge or WeightedDirectedEdge
+            Outgoing weighted edges, grouped by neighbor in the order the
+            neighbor was first connected, parallel edges in insertion order.
+
+        Raises
+        ------
+        ValueError
+            If node is not in the graph.
+        """
+        pass

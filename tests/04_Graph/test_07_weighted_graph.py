@@ -904,3 +904,79 @@ class TestWeightedGraphCounters:
 
         not_found = g.get_node_by_id("n999")
         assert not_found is None
+
+
+class TestWeightedGraphOutgoingEdges:
+    """Test WeightedGraph.outgoing_edges() (#88)."""
+
+    @staticmethod
+    def _star() -> tuple[WeightedGraph, list[GraphNode]]:
+        a, d, b, c = (GraphNode(i, i) for i in ("a", "d", "b", "c"))
+        g = WeightedGraph()
+        for n in (a, b, c, d):
+            g.add_node(n)
+        g.add_edge(WeightedEdge(a, d, 4.0))
+        g.add_edge(WeightedEdge(b, a, 2.0))
+        g.add_edge(WeightedEdge(a, c, 7.0))
+        return g, [a, d, b, c]
+
+    def test_yields_all_incident_edges(self) -> None:
+        """Every incident edge is outgoing on an undirected graph."""
+        g, (a, _, _, _) = self._star()
+        assert [e.weight for e in g.outgoing_edges(a)] == [4.0, 2.0, 7.0]
+
+    def test_same_set_as_incident_edges(self) -> None:
+        """outgoing_edges() and incident_edges() agree up to order."""
+        g, nodes = self._star()
+        for n in nodes:
+            assert set(map(id, g.outgoing_edges(n))) == set(
+                map(id, g.incident_edges(n))
+            )
+
+    def test_other_node_reaches_far_endpoint(self) -> None:
+        """other_node() gives the far endpoint whichever side node sits on."""
+        g, (a, _, _, _) = self._star()
+        assert [e.other_node(a).id for e in g.outgoing_edges(a)] == ["d", "b", "c"]
+
+    def test_edge_objects_are_the_stored_ones(self) -> None:
+        """The stored edge instances are yielded, not copies."""
+        g, (a, d, _, _) = self._star()
+        stored = g.get_edge(a, d)
+        assert any(e is stored for e in g.outgoing_edges(a))
+
+    def test_isolated_node(self) -> None:
+        """An isolated node has no outgoing edges."""
+        g = WeightedGraph()
+        n = GraphNode("x", "x")
+        g.add_node(n)
+        assert list(g.outgoing_edges(n)) == []
+
+    def test_missing_node_raises(self) -> None:
+        """A node absent from the graph raises ValueError."""
+        g = WeightedGraph()
+        with pytest.raises(ValueError):
+            list(g.outgoing_edges(GraphNode("x", "x")))
+
+    def test_parallel_edges(self) -> None:
+        """Parallel edges are all yielded, grouped by neighbor."""
+        a, b, c = (GraphNode(i, i) for i in ("a", "b", "c"))
+        g = WeightedGraph(allow_multi_edges=True)
+        for n in (a, b, c):
+            g.add_node(n)
+        g.add_edge(WeightedEdge(a, b, 1.0))
+        g.add_edge(WeightedEdge(a, c, 5.0))
+        g.add_edge(WeightedEdge(a, b, 3.0))
+        assert [e.weight for e in g.outgoing_edges(a)] == [1.0, 3.0, 5.0]
+
+    def test_tracks_mutations(self) -> None:
+        """Removed edges and nodes disappear from outgoing_edges()."""
+        g, (a, d, b, c) = self._star()
+        g.remove_edge(g.get_edge(a, d))
+        g.remove_node(c)
+        assert [e.other_node(a).id for e in g.outgoing_edges(a)] == ["b"]
+
+    def test_does_not_scan_edge_list(self) -> None:
+        """outgoing_edges() never reads the flat edge list (O(degree))."""
+        g, (a, _, _, _) = self._star()
+        g._edges = []  # type: ignore[misc]  # sabotage the O(E) path
+        assert len(list(g.outgoing_edges(a))) == 3

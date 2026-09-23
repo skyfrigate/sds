@@ -208,6 +208,16 @@ class WeightedGraph(AbstractWeightedGraph):
             raise ValueError(f"Node {node.id} not in graph")
         return [edge for edge in self._edges if edge.incident_to(node)]
 
+    def outgoing_edges(self, node: GraphNode) -> Iterator[WeightedEdge]:
+        """Yield every weighted edge incident to a node, in O(degree).
+
+        The graph is undirected, so each incident edge counts as outgoing;
+        use ``edge.other_node(node)`` to reach the far endpoint.
+        """
+        if not self.has_node(node):
+            raise ValueError(f"Node {node.id} not in graph")
+        yield from self._adjacency.edges_of(node.id)
+
     def neighbors(self, node: GraphNode) -> Iterator[GraphNode]:
         """Get all neighbors of a node."""
         if not self.has_node(node):
@@ -453,6 +463,15 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
             for edge in self._edges
             if edge.source.id == node.id or edge.target.id == node.id
         ]
+
+    def outgoing_edges(self, node: GraphNode) -> Iterator[WeightedDirectedEdge]:
+        """Yield the weighted edges whose source is ``node``, in O(out-degree).
+
+        Unlike :meth:`incident_edges`, incoming edges are not included.
+        """
+        if not self.has_node(node):
+            raise ValueError(f"Node {node.id} not in graph")
+        yield from self._out_adjacency.edges_of(node.id)
 
     def neighbors(self, node: GraphNode) -> Iterator[GraphNode]:
         """Get all successors (outgoing neighbors) of a node."""
