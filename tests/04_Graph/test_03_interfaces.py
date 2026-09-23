@@ -371,7 +371,12 @@ class TestAbstractWeightedGraphInterface:
 
     def test_has_weighted_specific_methods(self) -> None:
         """Test that AbstractWeightedGraph defines weighted-specific methods."""
-        weighted_methods = {"get_edge_weight", "total_weight", "incident_edges"}
+        weighted_methods = {
+            "get_edge_weight",
+            "total_weight",
+            "incident_edges",
+            "outgoing_edges",
+        }
         abstract_methods = {
             name
             for name in dir(AbstractWeightedGraph)
@@ -443,6 +448,11 @@ class TestConcreteWeightedGraphImplementation:
                 self, node: GraphNode
             ) -> List[WeightedEdge | WeightedDirectedEdge]:
                 return [e for e in self._edges if e.incident_to(node)]
+
+            def outgoing_edges(
+                self, node: GraphNode
+            ) -> Iterator[WeightedEdge | WeightedDirectedEdge]:
+                yield from self.incident_edges(node)
 
             def neighbors(self, node: GraphNode) -> Iterator[GraphNode]:
                 for e in self._edges:
