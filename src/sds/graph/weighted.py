@@ -65,6 +65,7 @@ sds.graph.directed : Unweighted directed/undirected graphs.
 from collections import deque
 from typing import Dict, Iterator, List, Optional, Set
 
+from ._incidence import IncidenceIndex
 from .edge import DirectedEdge, WeightedDirectedEdge, WeightedEdge
 from .interfaces import AbstractDirectedGraph, AbstractWeightedGraph
 from .node import GraphNode
@@ -100,7 +101,7 @@ class WeightedGraph(AbstractWeightedGraph):
         super().__init__()
         self._allow_multi_edges = allow_multi_edges
         self._nodes: Dict[str, GraphNode] = {}
-        self._adjacency: Dict[str, Set[str]] = {}
+        self._adjacency: IncidenceIndex[WeightedEdge] = IncidenceIndex()
         self._edges: List[WeightedEdge] = []
         self._connectivity_cache: Optional[bool] = None
         self._total_weight_cache: Optional[float] = None
@@ -124,7 +125,7 @@ class WeightedGraph(AbstractWeightedGraph):
         if node.id in self._nodes:
             raise ValueError(f"Node {node.id} already exists in graph")
         self._nodes[node.id] = node
-        self._adjacency[node.id] = set()
+        self._adjacency.add_node(node.id)
         self._invalidate_cache()
 
     def remove_node(self, node: GraphNode) -> None:
@@ -132,11 +133,8 @@ class WeightedGraph(AbstractWeightedGraph):
         if node.id not in self._nodes:
             raise ValueError(f"Node {node.id} not in graph")
         self._edges = [e for e in self._edges if not e.incident_to(node)]
-        neighbors = self._adjacency[node.id].copy()
-        for neighbor_id in neighbors:
-            self._adjacency[neighbor_id].discard(node.id)
+        self._adjacency.drop_node(node.id)
         del self._nodes[node.id]
-        del self._adjacency[node.id]
         self._invalidate_cache()
 
     def has_node(self, node: GraphNode) -> bool:
@@ -162,8 +160,7 @@ class WeightedGraph(AbstractWeightedGraph):
                 "Use allow_multi_edges=True for multigraph."
             )
         self._edges.append(edge)
-        self._adjacency[edge.node1.id].add(edge.node2.id)
-        self._adjacency[edge.node2.id].add(edge.node1.id)
+        self._adjacency.link_undirected(edge)
         self._invalidate_cache()
 
     def remove_edge(self, edge: WeightedEdge) -> None:  # type: ignore[override]
@@ -172,19 +169,15 @@ class WeightedGraph(AbstractWeightedGraph):
             raise ValueError(
                 f"Edge between {edge.node1.id} and {edge.node2.id} not in graph"
             )
-        self._edges.remove(edge)
-        n1_id, n2_id = edge.node1.id, edge.node2.id
-        has_other = any(e.connects(edge.node1, edge.node2) for e in self._edges)
-        if not has_other:
-            self._adjacency[n1_id].discard(n2_id)
-            self._adjacency[n2_id].discard(n1_id)
+        removed = self._edges.pop(self._edges.index(edge))
+        self._adjacency.unlink_undirected(removed)
         self._invalidate_cache()
 
     def has_edge(self, node1: GraphNode, node2: GraphNode) -> bool:
         """Check if an edge exists between two nodes."""
         if not self.has_node(node1) or not self.has_node(node2):
             return False
-        return node2.id in self._adjacency[node1.id]
+        return self._adjacency.has_link(node1.id, node2.id)
 
     def get_edge(self, node1: GraphNode, node2: GraphNode) -> Optional[WeightedEdge]:
         """Get the weighted edge between two nodes."""
@@ -219,7 +212,7 @@ class WeightedGraph(AbstractWeightedGraph):
         """Get all neighbors of a node."""
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
-        for neighbor_id in self._adjacency[node.id]:
+        for neighbor_id in self._adjacency.neighbor_ids(node.id):
             yield self._nodes[neighbor_id]
 
     def degree(self, node: GraphNode) -> int:
@@ -227,7 +220,7 @@ class WeightedGraph(AbstractWeightedGraph):
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
         if not self._allow_multi_edges:
-            return len(self._adjacency[node.id])
+            return self._adjacency.neighbor_count(node.id)
         else:
             return sum(1 for e in self._edges if e.incident_to(node))
 
@@ -340,8 +333,8 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
         super().__init__()
         self._allow_multi_edges = allow_multi_edges
         self._nodes: Dict[str, GraphNode] = {}
-        self._out_adjacency: Dict[str, Set[str]] = {}
-        self._in_adjacency: Dict[str, Set[str]] = {}
+        self._out_adjacency: IncidenceIndex[WeightedDirectedEdge] = IncidenceIndex()
+        self._in_adjacency: IncidenceIndex[WeightedDirectedEdge] = IncidenceIndex()
         self._edges: List[WeightedDirectedEdge] = []
         self._connectivity_cache: Optional[bool] = None
         self._acyclic_cache: Optional[bool] = None
@@ -367,8 +360,8 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
         if node.id in self._nodes:
             raise ValueError(f"Node {node.id} already exists in graph")
         self._nodes[node.id] = node
-        self._out_adjacency[node.id] = set()
-        self._in_adjacency[node.id] = set()
+        self._out_adjacency.add_node(node.id)
+        self._in_adjacency.add_node(node.id)
         self._invalidate_cache()
 
     def remove_node(self, node: GraphNode) -> None:
@@ -378,13 +371,13 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
         self._edges = [
             e for e in self._edges if e.source.id != node.id and e.target.id != node.id
         ]
-        for source_id in self._in_adjacency[node.id]:
-            self._out_adjacency[source_id].discard(node.id)
-        for target_id in self._out_adjacency[node.id]:
-            self._in_adjacency[target_id].discard(node.id)
+        for source_id in self._in_adjacency.pop_node(node.id):
+            if source_id != node.id:
+                self._out_adjacency.drop_neighbor(source_id, node.id)
+        for target_id in self._out_adjacency.pop_node(node.id):
+            if target_id != node.id:
+                self._in_adjacency.drop_neighbor(target_id, node.id)
         del self._nodes[node.id]
-        del self._out_adjacency[node.id]
-        del self._in_adjacency[node.id]
         self._invalidate_cache()
 
     def has_node(self, node: GraphNode) -> bool:
@@ -405,8 +398,8 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
                 "Use allow_multi_edges=True for multi-digraph."
             )
         self._edges.append(edge)
-        self._out_adjacency[edge.source.id].add(edge.target.id)
-        self._in_adjacency[edge.target.id].add(edge.source.id)
+        self._out_adjacency.link(edge.source.id, edge.target.id, edge)
+        self._in_adjacency.link(edge.target.id, edge.source.id, edge)
         self._invalidate_cache()
 
     def remove_edge(self, edge: WeightedDirectedEdge) -> None:  # type: ignore[override]
@@ -415,21 +408,16 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
             raise ValueError(
                 f"Edge from {edge.source.id} to {edge.target.id} not in graph"
             )
-        self._edges.remove(edge)
-        source_id, target_id = edge.source.id, edge.target.id
-        has_other = any(
-            e.source.id == source_id and e.target.id == target_id for e in self._edges
-        )
-        if not has_other:
-            self._out_adjacency[source_id].discard(target_id)
-            self._in_adjacency[target_id].discard(source_id)
+        removed = self._edges.pop(self._edges.index(edge))
+        self._out_adjacency.unlink(removed.source.id, removed.target.id, removed)
+        self._in_adjacency.unlink(removed.target.id, removed.source.id, removed)
         self._invalidate_cache()
 
     def has_edge(self, node1: GraphNode, node2: GraphNode) -> bool:
         """Check if a directed edge exists from node1 to node2."""
         if not self.has_node(node1) or not self.has_node(node2):
             return False
-        return node2.id in self._out_adjacency[node1.id]
+        return self._out_adjacency.has_link(node1.id, node2.id)
 
     def get_edge(
         self, node1: GraphNode, node2: GraphNode
@@ -475,7 +463,9 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
         if not self._allow_multi_edges:
-            return len(self._in_adjacency[node.id]) + len(self._out_adjacency[node.id])
+            return self._in_adjacency.neighbor_count(
+                node.id
+            ) + self._out_adjacency.neighbor_count(node.id)
         else:
             return sum(
                 1
@@ -488,7 +478,7 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
         if not self._allow_multi_edges:
-            return len(self._in_adjacency[node.id])
+            return self._in_adjacency.neighbor_count(node.id)
         else:
             return sum(1 for e in self._edges if e.target.id == node.id)
 
@@ -497,7 +487,7 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
         if not self._allow_multi_edges:
-            return len(self._out_adjacency[node.id])
+            return self._out_adjacency.neighbor_count(node.id)
         else:
             return sum(1 for e in self._edges if e.source.id == node.id)
 
@@ -505,14 +495,14 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
         """Get all predecessors (nodes with edges to this node)."""
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
-        for predecessor_id in self._in_adjacency[node.id]:
+        for predecessor_id in self._in_adjacency.neighbor_ids(node.id):
             yield self._nodes[predecessor_id]
 
     def successors(self, node: GraphNode) -> Iterator[GraphNode]:
         """Get all successors (nodes with edges from this node)."""
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
-        for successor_id in self._out_adjacency[node.id]:
+        for successor_id in self._out_adjacency.neighbor_ids(node.id):
             yield self._nodes[successor_id]
 
     def is_acyclic(self) -> bool:
@@ -530,7 +520,7 @@ class WeightedDirectedGraph(AbstractDirectedGraph, AbstractWeightedGraph):
 
         def has_cycle_from(node_id: str) -> bool:
             color[node_id] = 1
-            for successor_id in self._out_adjacency[node_id]:
+            for successor_id in self._out_adjacency.neighbor_ids(node_id):
                 if color[successor_id] == 1:
                     return True
                 if color[successor_id] == 0:
