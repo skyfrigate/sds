@@ -36,7 +36,8 @@ before the pivot, then sorts both parts. This implementation uses:
             continue the loop on the larger one
 
 Swapping elements across the pivot breaks the original order of equal
-keys, so quicksort is not stable: use :func:`merge_sort` when that matters.
+keys, so quicksort is not stable: use
+:func:`~sds.algorithms.sorting.merge_sort` when that matters.
 """
 
 from typing import Any, Callable, List, Optional, TypeVar
@@ -89,7 +90,22 @@ def quick_sort(
     ``key`` is given, for the precomputed keys.
 
     The sort is not stable: items with equal keys may end up in any
-    relative order.
+    relative order. Three records sharing one key are enough to show it:
+
+    >>> records = [(0, "a"), (0, "b"), (0, "c")]
+    >>> quick_sort(records, key=lambda r: r[0])
+    >>> records
+    [(0, 'a'), (0, 'c'), (0, 'b')]
+
+    When the order of ties matters, use :func:`merge_sort`, which is
+    stable and O(n log n) in every case. To sort a list in place *and*
+    stably, assign the result back into the same list object::
+
+        items[:] = merge_sort(items, key=key)
+
+    A stable quicksort would need O(n) extra memory to break ties by
+    original position, losing its only advantage over merge sort while
+    keeping its O(n²) worst case, so none is provided.
     """
     if not isinstance(items, list):
         raise TypeError(f"quick_sort expects a list, got {type(items).__name__}")

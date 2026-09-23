@@ -238,3 +238,17 @@ class TestQuickSort:
         records = [(1, "a"), (0, "b"), (1, "c"), (0, "d")] * 5
         quick_sort(records, key=lambda r: r[0])
         assert [r[0] for r in records] == sorted(r[0] for r in records)
+
+    def test_minimal_instability_example(self) -> None:
+        """The documented three-record case reorders ties."""
+        records = [(0, "a"), (0, "b"), (0, "c")]
+        quick_sort(records, key=lambda r: r[0])
+        assert records == [(0, "a"), (0, "c"), (0, "b")]
+
+    def test_stable_in_place_alternative(self) -> None:
+        """The documented stable in-place idiom keeps the list object."""
+        records = [(0, "a"), (0, "b"), (0, "c")]
+        alias = records
+        records[:] = merge_sort(records, key=lambda r: r[0])
+        assert alias is records
+        assert records == [(0, "a"), (0, "b"), (0, "c")]
