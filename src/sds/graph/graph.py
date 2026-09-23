@@ -72,6 +72,7 @@ WeightedGraph : Weighted graph implementation.
 from collections import deque
 from typing import Dict, Iterator, List, Optional, Set
 
+from ._incidence import IncidenceIndex
 from .edge import Edge
 from .interfaces import AbstractGraph
 from .node import GraphNode
@@ -170,7 +171,7 @@ class Graph(AbstractGraph):
         super().__init__()
         self._allow_multi_edges = allow_multi_edges
         self._nodes: Dict[str, GraphNode] = {}
-        self._adjacency: Dict[str, Set[str]] = {}
+        self._adjacency: IncidenceIndex[Edge] = IncidenceIndex()
         self._edges: List[Edge] = []
 
         # Caching for expensive operations
@@ -246,7 +247,7 @@ class Graph(AbstractGraph):
             raise ValueError(f"Node {node.id} already exists in graph")
 
         self._nodes[node.id] = node
-        self._adjacency[node.id] = set()
+        self._adjacency.add_node(node.id)
         self._invalidate_cache()
 
     def remove_node(self, node: GraphNode) -> None:
@@ -288,13 +289,10 @@ class Graph(AbstractGraph):
         self._edges = [e for e in self._edges if not e.incident_to(node)]
 
         # Remove from adjacency lists
-        neighbors = self._adjacency[node.id].copy()
-        for neighbor_id in neighbors:
-            self._adjacency[neighbor_id].discard(node.id)
+        self._adjacency.drop_node(node.id)
 
         # Remove node itself
         del self._nodes[node.id]
-        del self._adjacency[node.id]
         self._invalidate_cache()
 
     def has_node(self, node: GraphNode) -> bool:
@@ -394,8 +392,7 @@ class Graph(AbstractGraph):
         self._edges.append(edge)
 
         # Update adjacency lists (bidirectional for undirected graph)
-        self._adjacency[edge.node1.id].add(edge.node2.id)
-        self._adjacency[edge.node2.id].add(edge.node1.id)
+        self._adjacency.link_undirected(edge)
 
         self._invalidate_cache()
 
@@ -427,7 +424,8 @@ class Graph(AbstractGraph):
 
         Notes
         -----
-        Time complexity: O(E) to find edge, O(degree) to update adjacency.
+        Time complexity: O(E) to find edge, O(k) to update adjacency (k parallel
+        edges between the two endpoints).
         For multigraphs, removes the first matching edge found.
         """
         if edge not in self._edges:
@@ -435,16 +433,10 @@ class Graph(AbstractGraph):
                 f"Edge between {edge.node1.id} and {edge.node2.id} not in graph"
             )
 
-        self._edges.remove(edge)
-
-        # Update adjacency lists only if no other edges exist
-        # between these nodes (important for multigraphs)
-        n1_id, n2_id = edge.node1.id, edge.node2.id
-        has_other_edge = any(e.connects(edge.node1, edge.node2) for e in self._edges)
-
-        if not has_other_edge:
-            self._adjacency[n1_id].discard(n2_id)
-            self._adjacency[n2_id].discard(n1_id)
+        # Pop the stored instance itself: in a multigraph, parallel edges
+        # compare equal but the adjacency index tracks them by identity.
+        removed = self._edges.pop(self._edges.index(edge))
+        self._adjacency.unlink_undirected(removed)
 
         self._invalidate_cache()
 
@@ -480,11 +472,11 @@ class Graph(AbstractGraph):
 
         Notes
         -----
-        Time complexity: O(1) amortized using adjacency set.
+        Time complexity: O(1) amortized using the adjacency index.
         """
         if not self.has_node(node1) or not self.has_node(node2):
             return False
-        return node2.id in self._adjacency[node1.id]
+        return self._adjacency.has_link(node1.id, node2.id)
 
     def get_edge(self, node1: GraphNode, node2: GraphNode) -> Optional[Edge]:
         """Get the edge between two nodes.
@@ -562,11 +554,15 @@ class Graph(AbstractGraph):
         Notes
         -----
         Time complexity: O(degree(node))
+
+        Neighbors are yielded in the order their first connecting edge was
+        added. Removing the last edge to a neighbor and adding it back moves
+        that neighbor to the end.
         """
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
 
-        for neighbor_id in self._adjacency[node.id]:
+        for neighbor_id in self._adjacency.neighbor_ids(node.id):
             yield self._nodes[neighbor_id]
 
     def degree(self, node: GraphNode) -> int:
@@ -609,7 +605,7 @@ class Graph(AbstractGraph):
             raise ValueError(f"Node {node.id} not in graph")
 
         if not self._allow_multi_edges:
-            return len(self._adjacency[node.id])
+            return self._adjacency.neighbor_count(node.id)
         else:
             # For multigraphs, count actual edges
             return sum(1 for e in self._edges if e.incident_to(node))

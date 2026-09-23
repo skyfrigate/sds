@@ -65,6 +65,7 @@ sds.graph.directed : Directed and undirected graph implementations.
 from collections import deque
 from typing import Dict, Iterator, List, Optional, Set
 
+from ._incidence import IncidenceIndex
 from .edge import Edge
 from .interfaces import AbstractGraph
 from .node import GraphNode
@@ -131,7 +132,7 @@ class AdjacencyListGraph(AbstractGraph):
         super().__init__()
         self._allow_multi_edges = allow_multi_edges
         self._nodes: Dict[str, GraphNode] = {}
-        self._adjacency_list: Dict[str, Set[str]] = {}
+        self._adjacency_list: IncidenceIndex[Edge] = IncidenceIndex()
         self._edges: List[Edge] = []
         self._connectivity_cache: Optional[bool] = None
         self._cache_valid = False
@@ -177,7 +178,7 @@ class AdjacencyListGraph(AbstractGraph):
         """
         if node_id not in self._nodes:
             raise ValueError(f"Node {node_id} not in graph")
-        return self._adjacency_list[node_id].copy()
+        return set(self._adjacency_list.neighbor_ids(node_id))
 
     def add_node(self, node: GraphNode) -> None:
         """Add a node to the graph."""
@@ -186,7 +187,7 @@ class AdjacencyListGraph(AbstractGraph):
         if node.id in self._nodes:
             raise ValueError(f"Node {node.id} already exists in graph")
         self._nodes[node.id] = node
-        self._adjacency_list[node.id] = set()
+        self._adjacency_list.add_node(node.id)
         self._invalidate_cache()
 
     def remove_node(self, node: GraphNode) -> None:
@@ -194,11 +195,8 @@ class AdjacencyListGraph(AbstractGraph):
         if node.id not in self._nodes:
             raise ValueError(f"Node {node.id} not in graph")
         self._edges = [e for e in self._edges if not e.incident_to(node)]
-        neighbors = self._adjacency_list[node.id].copy()
-        for neighbor_id in neighbors:
-            self._adjacency_list[neighbor_id].discard(node.id)
+        self._adjacency_list.drop_node(node.id)
         del self._nodes[node.id]
-        del self._adjacency_list[node.id]
         self._invalidate_cache()
 
     def has_node(self, node: GraphNode) -> bool:
@@ -218,8 +216,7 @@ class AdjacencyListGraph(AbstractGraph):
                 f"Edge between {edge.node1.id} and {edge.node2.id} already exists"
             )
         self._edges.append(edge)
-        self._adjacency_list[edge.node1.id].add(edge.node2.id)
-        self._adjacency_list[edge.node2.id].add(edge.node1.id)
+        self._adjacency_list.link_undirected(edge)
         self._invalidate_cache()
 
     def remove_edge(self, edge: Edge) -> None:
@@ -228,19 +225,15 @@ class AdjacencyListGraph(AbstractGraph):
             raise ValueError(
                 f"Edge between {edge.node1.id} and {edge.node2.id} not in graph"
             )
-        self._edges.remove(edge)
-        n1_id, n2_id = edge.node1.id, edge.node2.id
-        has_other = any(e.connects(edge.node1, edge.node2) for e in self._edges)
-        if not has_other:
-            self._adjacency_list[n1_id].discard(n2_id)
-            self._adjacency_list[n2_id].discard(n1_id)
+        removed = self._edges.pop(self._edges.index(edge))
+        self._adjacency_list.unlink_undirected(removed)
         self._invalidate_cache()
 
     def has_edge(self, node1: GraphNode, node2: GraphNode) -> bool:
         """Check if an edge exists between two nodes."""
         if not self.has_node(node1) or not self.has_node(node2):
             return False
-        return node2.id in self._adjacency_list[node1.id]
+        return self._adjacency_list.has_link(node1.id, node2.id)
 
     def get_edge(self, node1: GraphNode, node2: GraphNode) -> Optional[Edge]:
         """Get the edge between two nodes."""
@@ -253,7 +246,7 @@ class AdjacencyListGraph(AbstractGraph):
         """Get all neighbors of a node."""
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
-        for neighbor_id in self._adjacency_list[node.id]:
+        for neighbor_id in self._adjacency_list.neighbor_ids(node.id):
             yield self._nodes[neighbor_id]
 
     def degree(self, node: GraphNode) -> int:
@@ -261,7 +254,7 @@ class AdjacencyListGraph(AbstractGraph):
         if not self.has_node(node):
             raise ValueError(f"Node {node.id} not in graph")
         if not self._allow_multi_edges:
-            return len(self._adjacency_list[node.id])
+            return self._adjacency_list.neighbor_count(node.id)
         return sum(1 for e in self._edges if e.incident_to(node))
 
     def nodes(self) -> Iterator[GraphNode]:
