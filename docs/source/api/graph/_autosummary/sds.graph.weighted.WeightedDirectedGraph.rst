@@ -34,6 +34,7 @@
       ~WeightedDirectedGraph.node_count
       ~WeightedDirectedGraph.nodes
       ~WeightedDirectedGraph.out_degree
+      ~WeightedDirectedGraph.outgoing_edges
       ~WeightedDirectedGraph.predecessors
       ~WeightedDirectedGraph.remove_edge
       ~WeightedDirectedGraph.remove_node

@@ -76,6 +76,7 @@ Detailed Documentation
    list
    stack
    queue
+   convert
 
 Structure Comparison
 ====================
