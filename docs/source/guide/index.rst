@@ -85,6 +85,17 @@ Graphical models representing probability distributions over variables.
 
    probabilistic_structures/index
 
+Algorithms
+==========
+
+Sorting, traversals, shortest paths, spanning trees and probabilistic
+inference, and the design paradigms behind them.
+
+.. toctree::
+   :maxdepth: 2
+
+   algorithms/index
+
 Additional Resources
 ====================
 
