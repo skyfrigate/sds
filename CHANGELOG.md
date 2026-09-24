@@ -25,7 +25,8 @@ Work towards 0.7.0 — Algorithms.
   traversals are iterative and handle trees deeper than the recursion limit.
 - `sds.algorithms.graph_algorithms`: `bfs()` and `dfs()`, iterative and
   lazy, on any graph; `dijkstra()`, shortest distances and paths on weighted
-  graphs with non-negative weights.
+  graphs with non-negative weights; `kruskal()`, minimum spanning forest of
+  an undirected weighted graph.
 - `AbstractBinaryTree.children(node)`: the real `(left, right)` children of a
   node, `None` where absent (the Red-Black `NIL` sentinel is never exposed).
 - `AbstractWeightedGraph.outgoing_edges(node)`: a node's outgoing weighted
