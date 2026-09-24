@@ -23,4 +23,6 @@ Subpackages
 -----------
 sorting
     Comparison sorts on Python lists.
+tree_algorithms
+    Traversals of binary trees.
 """
