@@ -23,6 +23,9 @@ Work towards 0.7.0 — Algorithms.
 - `sds.algorithms.tree_algorithms`: `inorder()`, `preorder()`, `postorder()`
   and `level_order()`, taking any binary tree as argument. The depth-first
   traversals are iterative and handle trees deeper than the recursion limit.
+- `sds.algorithms.tree_algorithms`: `is_balanced()` (AVL criterion, any binary
+  tree) and `rebalance()` (rebuilds a `BinarySearchTree` to minimum height,
+  in place).
 - `sds.algorithms.graph_algorithms`: `bfs()` and `dfs()`, iterative and
   lazy, on any graph; `dijkstra()`, shortest distances and paths on weighted
   graphs with non-negative weights; `kruskal()`, minimum spanning forest of
