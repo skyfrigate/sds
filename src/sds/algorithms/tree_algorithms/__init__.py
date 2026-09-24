@@ -20,6 +20,10 @@ in one of the four classic orders. They walk the tree only through
 binary tree of :mod:`sds.tree`, including those that represent absent
 children with a sentinel node (#89).
 
+:func:`is_balanced` checks the AVL balance criterion on any binary tree;
+:func:`rebalance` rebuilds a plain binary search tree into a balanced
+shape, in place.
+
 Examples
 --------
 >>> from sds.tree import BinarySearchTree
@@ -33,6 +37,14 @@ Examples
 [10, 5, 15, 3]
 """
 
+from .balancing import is_balanced, rebalance
 from .traversals import inorder, level_order, postorder, preorder
 
-__all__ = ["inorder", "preorder", "postorder", "level_order"]
+__all__ = [
+    "inorder",
+    "preorder",
+    "postorder",
+    "level_order",
+    "is_balanced",
+    "rebalance",
+]
