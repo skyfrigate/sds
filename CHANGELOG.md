@@ -23,6 +23,8 @@ Work towards 0.7.0 — Algorithms.
 - `sds.algorithms.tree_algorithms`: `inorder()`, `preorder()`, `postorder()`
   and `level_order()`, taking any binary tree as argument. The depth-first
   traversals are iterative and handle trees deeper than the recursion limit.
+- `sds.algorithms.graph_algorithms`: `bfs()` and `dfs()`, iterative and
+  lazy, on any graph.
 - `AbstractBinaryTree.children(node)`: the real `(left, right)` children of a
   node, `None` where absent (the Red-Black `NIL` sentinel is never exposed).
 - `AbstractWeightedGraph.outgoing_edges(node)`: a node's outgoing weighted

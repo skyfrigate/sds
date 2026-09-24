@@ -12,19 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Algorithms operating on the data structures of ``sds``.
+"""Algorithms on graphs.
 
-Algorithmic logic (searching, sorting, traversing, optimizing) lives here,
-never inside the structure classes (#14). Each function takes the
-structure it works on as a parameter, typed against the broadest abstract
-interface that provides what the algorithm needs (#86).
+- :func:`bfs` and :func:`dfs` (any ``AbstractGraph``): the nodes reachable
+  from a source, in breadth-first or depth-first order.
 
-Subpackages
------------
-sorting
-    Comparison sorts on Python lists.
-tree_algorithms
-    Traversals of binary trees.
-graph_algorithms
-    Traversals, shortest paths and minimum spanning trees on graphs.
+Every function reads the graph through its public interface only
+(``neighbors()``, ``outgoing_edges()``, ``edges()``) and never modifies it.
+Neighbors are visited in the order the graph yields them, which is edge
+insertion order (#91), so every result is reproducible.
+
+The traversals are lazy generators: the graph must not be modified until
+they are exhausted.
 """
+
+from .bfs import bfs
+from .dfs import dfs
+
+__all__ = ["bfs", "dfs"]
