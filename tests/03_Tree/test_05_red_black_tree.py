@@ -20,6 +20,13 @@ from sds.core.exceptions import EmptyStructureError
 from sds.tree import RedBlackNode
 from sds.tree.balanced import RedBlackTree
 
+# The traversal methods exercised below are deprecated (#90) but must keep
+# working until 1.0.0; the warning itself is asserted in
+# test_14_traversal_deprecation.py.
+pytestmark = pytest.mark.filterwarnings(
+    r"ignore:\w+_traversal\(\) is deprecated:DeprecationWarning"
+)
+
 
 class TestRedBlackNodeCreation:
     """Test Red-Black node creation."""
