@@ -98,7 +98,7 @@ Using a Binary Tree:
 >>> tree.insert(10)
 >>> tree.insert(5)
 >>> tree.insert(15)
->>> list(tree.inorder_traversal())
+>>> list(tree)
 [5, 10, 15]
 
 Using a Binary Search Tree:

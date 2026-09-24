@@ -39,9 +39,10 @@ Creating and using a binary tree:
 
 Traversals:
 
->>> list(tree.inorder_traversal())
+>>> from sds.algorithms.tree_algorithms import inorder, preorder
+>>> list(inorder(tree))
 [5, 10, 15]
->>> list(tree.preorder_traversal())
+>>> list(preorder(tree))
 [10, 5, 15]
 
 Notes
@@ -105,7 +106,8 @@ class BinaryTree(AbstractBinaryTree):
 
     Traverse the tree:
 
-    >>> list(tree.level_order_traversal())
+    >>> from sds.algorithms.tree_algorithms import level_order
+    >>> list(level_order(tree))
     [10, 5, 15, 3]
 
     Notes
@@ -406,7 +408,7 @@ class BinaryTree(AbstractBinaryTree):
         >>> list(tree)
         [5, 10, 15]
         """
-        return self.inorder_traversal()
+        return self._inorder_recursive(self._root)
 
     def __contains__(self, item: Any) -> bool:
         """Check if item is in the tree.
@@ -432,29 +434,6 @@ class BinaryTree(AbstractBinaryTree):
         """
         return self.search(item)
 
-    def inorder_traversal(self) -> Iterator[Any]:
-        """Return inorder traversal iterator (left-root-right).
-
-        Yields
-        ------
-        Any
-            Items in inorder.
-
-        Examples
-        --------
-        >>> tree = BinaryTree()
-        >>> tree.insert(10)
-        >>> tree.insert(5)
-        >>> tree.insert(15)
-        >>> list(tree.inorder_traversal())
-        [5, 10, 15]
-
-        Notes
-        -----
-        Time complexity: O(n)
-        """
-        yield from self._inorder_recursive(self._root)
-
     def _inorder_recursive(self, node: Optional[BinaryNode]) -> Iterator[Any]:
         """Inorder traversal helper.
 
@@ -473,109 +452,11 @@ class BinaryTree(AbstractBinaryTree):
             yield node.data
             yield from self._inorder_recursive(node.right)
 
-    def preorder_traversal(self) -> Iterator[Any]:
-        """Return preorder traversal iterator (root-left-right).
+    def _level_order(self) -> Iterator[Any]:
+        """Yield the items level by level, for ``__str__``.
 
-        Yields
-        ------
-        Any
-            Items in preorder.
-
-        Examples
-        --------
-        >>> tree = BinaryTree()
-        >>> tree.insert(10)
-        >>> tree.insert(5)
-        >>> tree.insert(15)
-        >>> list(tree.preorder_traversal())
-        [10, 5, 15]
-
-        Notes
-        -----
-        Time complexity: O(n)
-        """
-        yield from self._preorder_recursive(self._root)
-
-    def _preorder_recursive(self, node: Optional[BinaryNode]) -> Iterator[Any]:
-        """Preorder traversal helper.
-
-        Parameters
-        ----------
-        node : BinaryNode or None
-            Current node.
-
-        Yields
-        ------
-        Any
-            Items in preorder.
-        """
-        if node is not None:
-            yield node.data
-            yield from self._preorder_recursive(node.left)
-            yield from self._preorder_recursive(node.right)
-
-    def postorder_traversal(self) -> Iterator[Any]:
-        """Return postorder traversal iterator (left-right-root).
-
-        Yields
-        ------
-        Any
-            Items in postorder.
-
-        Examples
-        --------
-        >>> tree = BinaryTree()
-        >>> tree.insert(10)
-        >>> tree.insert(5)
-        >>> tree.insert(15)
-        >>> list(tree.postorder_traversal())
-        [5, 15, 10]
-
-        Notes
-        -----
-        Time complexity: O(n)
-        """
-        yield from self._postorder_recursive(self._root)
-
-    def _postorder_recursive(self, node: Optional[BinaryNode]) -> Iterator[Any]:
-        """Postorder traversal helper.
-
-        Parameters
-        ----------
-        node : BinaryNode or None
-            Current node.
-
-        Yields
-        ------
-        Any
-            Items in postorder.
-        """
-        if node is not None:
-            yield from self._postorder_recursive(node.left)
-            yield from self._postorder_recursive(node.right)
-            yield node.data
-
-    def level_order_traversal(self) -> Iterator[Any]:
-        """Return level-order traversal iterator (BFS).
-
-        Yields
-        ------
-        Any
-            Items level by level.
-
-        Examples
-        --------
-        >>> tree = BinaryTree()
-        >>> tree.insert(10)
-        >>> tree.insert(5)
-        >>> tree.insert(15)
-        >>> tree.insert(3)
-        >>> list(tree.level_order_traversal())
-        [10, 5, 15, 3]
-
-        Notes
-        -----
-        Time complexity: O(n)
+        Kept private: level-order traversal as a public operation is
+        :func:`sds.algorithms.tree_algorithms.level_order`.
         """
         if self._root is None:
             return
@@ -626,9 +507,7 @@ class BinaryTree(AbstractBinaryTree):
         """
         if self.is_empty():
             return "BinaryTree: []"
-        elements = ", ".join(
-            str(item) for item in self.level_order_traversal()
-        )  # noqa: E501
+        elements = ", ".join(str(item) for item in self._level_order())  # noqa: E501
         return f"BinaryTree: [{elements}]"
 
 
@@ -662,7 +541,7 @@ class BinarySearchTree(AbstractBinaryTree):
 
     Inorder traversal yields sorted values:
 
-    >>> list(bst.inorder_traversal())
+    >>> list(bst)
     [3, 5, 7, 10, 12, 15, 20]
 
     Search operations:
@@ -685,7 +564,7 @@ class BinarySearchTree(AbstractBinaryTree):
 
     >>> bst.remove(10)
     10
-    >>> list(bst.inorder_traversal())
+    >>> list(bst)
     [3, 5, 7, 12, 15, 20]
 
     Notes
@@ -770,7 +649,7 @@ class BinarySearchTree(AbstractBinaryTree):
         >>> bst.insert(10)
         >>> bst.insert(5)
         >>> bst.insert(15)
-        >>> list(bst.inorder_traversal())
+        >>> list(bst)
         [5, 10, 15]
 
         Notes
@@ -839,7 +718,7 @@ class BinarySearchTree(AbstractBinaryTree):
         >>> bst.insert(15)
         >>> bst.remove(5)
         5
-        >>> list(bst.inorder_traversal())
+        >>> list(bst)
         [10, 15]
 
         Notes
@@ -1084,7 +963,7 @@ class BinarySearchTree(AbstractBinaryTree):
         >>> list(bst)
         [3, 5, 7, 10, 15]
         """
-        return self.inorder_traversal()
+        return self._inorder_recursive(self._root)
 
     def __contains__(self, item: Any) -> bool:
         """Check if item is in the tree.
@@ -1110,29 +989,6 @@ class BinarySearchTree(AbstractBinaryTree):
         """
         return self.search(item)
 
-    def inorder_traversal(self) -> Iterator[Any]:
-        """Return inorder traversal iterator (sorted order for BST).
-
-        Yields
-        ------
-        Any
-            Items in sorted order.
-
-        Examples
-        --------
-        >>> bst = BinarySearchTree()
-        >>> for val in [10, 5, 15, 3, 7]:
-        ...     bst.insert(val)
-        >>> list(bst.inorder_traversal())
-        [3, 5, 7, 10, 15]
-
-        Notes
-        -----
-        Time complexity: O(n)
-        Space complexity: O(h) for recursion stack
-        """
-        yield from self._inorder_recursive(self._root)
-
     def _inorder_recursive(self, node: Optional[BinaryNode]) -> Iterator[Any]:
         """Inorder traversal helper.
 
@@ -1150,120 +1006,6 @@ class BinarySearchTree(AbstractBinaryTree):
             yield from self._inorder_recursive(node.left)
             yield node.data
             yield from self._inorder_recursive(node.right)
-
-    def preorder_traversal(self) -> Iterator[Any]:
-        """Return preorder traversal iterator (root-left-right).
-
-        Yields
-        ------
-        Any
-            Items in preorder.
-
-        Examples
-        --------
-        >>> bst = BinarySearchTree()
-        >>> for val in [10, 5, 15]:
-        ...     bst.insert(val)
-        >>> list(bst.preorder_traversal())
-        [10, 5, 15]
-
-        Notes
-        -----
-        Time complexity: O(n)
-        """
-        yield from self._preorder_recursive(self._root)
-
-    def _preorder_recursive(self, node: Optional[BinaryNode]) -> Iterator[Any]:
-        """Preorder traversal helper.
-
-        Parameters
-        ----------
-        node : BinaryNode or None
-            Current node.
-
-        Yields
-        ------
-        Any
-            Items in preorder.
-        """
-        if node is not None:
-            yield node.data
-            yield from self._preorder_recursive(node.left)
-            yield from self._preorder_recursive(node.right)
-
-    def postorder_traversal(self) -> Iterator[Any]:
-        """Return postorder traversal iterator (left-right-root).
-
-        Yields
-        ------
-        Any
-            Items in postorder.
-
-        Examples
-        --------
-        >>> bst = BinarySearchTree()
-        >>> for val in [10, 5, 15]:
-        ...     bst.insert(val)
-        >>> list(bst.postorder_traversal())
-        [5, 15, 10]
-
-        Notes
-        -----
-        Time complexity: O(n)
-        """
-        yield from self._postorder_recursive(self._root)
-
-    def _postorder_recursive(self, node: Optional[BinaryNode]) -> Iterator[Any]:
-        """Postorder traversal helper.
-
-        Parameters
-        ----------
-        node : BinaryNode or None
-            Current node.
-
-        Yields
-        ------
-        Any
-            Items in postorder.
-        """
-        if node is not None:
-            yield from self._postorder_recursive(node.left)
-            yield from self._postorder_recursive(node.right)
-            yield node.data
-
-    def level_order_traversal(self) -> Iterator[Any]:
-        """Return level-order traversal iterator (BFS).
-
-        Yields
-        ------
-        Any
-            Items level by level.
-
-        Examples
-        --------
-        >>> bst = BinarySearchTree()
-        >>> for val in [10, 5, 15, 3, 7]:
-        ...     bst.insert(val)
-        >>> list(bst.level_order_traversal())
-        [10, 5, 15, 3, 7]
-
-        Notes
-        -----
-        Time complexity: O(n)
-        """
-        if self._root is None:
-            return
-
-        queue: deque[BinaryNode] = deque([self._root])
-
-        while queue:
-            current = queue.popleft()
-            yield current.data
-
-            if current.left:
-                queue.append(current.left)
-            if current.right:
-                queue.append(current.right)
 
     def __repr__(self) -> str:
         """Return string representation.
@@ -1300,5 +1042,5 @@ class BinarySearchTree(AbstractBinaryTree):
         """
         if self.is_empty():
             return "BinarySearchTree: []"
-        elements = ", ".join(str(item) for item in self.inorder_traversal())
+        elements = ", ".join(str(item) for item in self._inorder_recursive(self._root))
         return f"BinarySearchTree: [{elements}]"

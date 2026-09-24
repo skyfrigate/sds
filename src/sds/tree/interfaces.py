@@ -54,11 +54,27 @@ sds.core.interfaces : Core collection interfaces.
 sds.tree.binary_tree : Concrete binary tree implementations.
 """
 
+import warnings
 from abc import abstractmethod
 from typing import Any, Iterator, List, Optional, Tuple
 
 from ..core.interfaces import Collection
 from .node import BinaryNode
+
+
+def _warn_traversal_deprecated(method: str, replacement: str) -> None:
+    """Emit the DeprecationWarning shared by the four traversal methods.
+
+    ``stacklevel=3`` makes the warning point at the caller of the
+    deprecated method, not at this helper or at the method itself.
+    """
+    warnings.warn(
+        f"{method}() is deprecated since 0.7.0 and will be removed in 1.0.0; "
+        f"use sds.algorithms.tree_algorithms.{replacement}(tree) instead.",
+        DeprecationWarning,
+        stacklevel=3,
+    )
+
 
 __all__ = ["AbstractTree", "AbstractBinaryTree", "AbstractSegmentTree"]
 
@@ -350,14 +366,16 @@ class AbstractBinaryTree(AbstractTree):
 
     Methods
     -------
+    children(node)
+        Return the real ``(left, right)`` children of a node.
     inorder_traversal()
-        Return an iterator for inorder traversal (left-root-right).
+        Deprecated since 0.7.0: use ``sds.algorithms.tree_algorithms.inorder``.
     preorder_traversal()
-        Return an iterator for preorder traversal (root-left-right).
+        Deprecated since 0.7.0: use ``sds.algorithms.tree_algorithms.preorder``.
     postorder_traversal()
-        Return an iterator for postorder traversal (left-right-root).
+        Deprecated since 0.7.0: use ``sds.algorithms.tree_algorithms.postorder``.
     level_order_traversal()
-        Return an iterator for level-order traversal (BFS).
+        Deprecated since 0.7.0: use ``sds.algorithms.tree_algorithms.level_order``.
 
     Examples
     --------
@@ -365,13 +383,14 @@ class AbstractBinaryTree(AbstractTree):
     >>> tree.insert(10)
     >>> tree.insert(5)
     >>> tree.insert(15)
-    >>> list(tree.inorder_traversal())
+    >>> list(tree)
     [5, 10, 15]
 
     Notes
     -----
-    Binary trees have specific traversal methods that are not
-    applicable to general trees.
+    Traversal orders (inorder, preorder, postorder, level order) are
+    algorithms and live in :mod:`sds.algorithms.tree_algorithms`, which
+    walks any binary tree through :meth:`root` and :meth:`children`.
 
     See Also
     --------
@@ -449,146 +468,123 @@ class AbstractBinaryTree(AbstractTree):
         """
         return node.left, node.right
 
-    @abstractmethod
     def inorder_traversal(self) -> Iterator[Any]:
-        """Return an iterator for inorder traversal (left-root-right).
+        """Return an iterator over the items in inorder (left, root, right).
 
-        In inorder traversal, we visit:
-        1. Left subtree
-        2. Root
-        3. Right subtree
+        .. deprecated:: 0.7.0
+            Traversals are algorithms and moved to
+            :func:`sds.algorithms.tree_algorithms.inorder`, which takes the
+            tree as argument: ``inorder(tree)``. This method will be removed
+            in 1.0.0 (#89).
 
-        For BST, this yields elements in sorted order.
+        For a binary search tree, this yields the items in ascending order.
 
         Yields
         ------
         Any
-            Items from the tree in inorder.
+            The items of the tree, in inorder.
 
-        Examples
-        --------
-        >>> tree = BinarySearchTree()
-        >>> tree.insert(10)
-        >>> tree.insert(5)
-        >>> tree.insert(15)
-        >>> list(tree.inorder_traversal())
-        [5, 10, 15]
+        Warns
+        -----
+        DeprecationWarning
+            On every call, when the method is called, not when the iterator
+            is first advanced.
 
         Notes
         -----
         Time complexity: O(n)
-        Space complexity: O(h) where h is height (recursion stack)
-
-        See Also
-        --------
-        preorder_traversal : Root-left-right traversal.
-        postorder_traversal : Left-right-root traversal.
         """
-        pass
+        _warn_traversal_deprecated("inorder_traversal", "inorder")
+        from ..algorithms.tree_algorithms import inorder
 
-    @abstractmethod
+        return inorder(self)
+
     def preorder_traversal(self) -> Iterator[Any]:
-        """Return an iterator for preorder traversal (root-left-right).
+        """Return an iterator over the items in preorder (root, left, right).
 
-        In preorder traversal, we visit:
-        1. Root
-        2. Left subtree
-        3. Right subtree
-
-        Useful for creating a copy of the tree.
+        .. deprecated:: 0.7.0
+            Traversals are algorithms and moved to
+            :func:`sds.algorithms.tree_algorithms.preorder`, which takes the
+            tree as argument: ``preorder(tree)``. This method will be removed
+            in 1.0.0 (#89).
 
         Yields
         ------
         Any
-            Items from the tree in preorder.
+            The items of the tree, in preorder.
 
-        Examples
-        --------
-        >>> tree = BinaryTree()
-        >>> tree.insert(10)
-        >>> tree.insert(5)
-        >>> tree.insert(15)
-        >>> list(tree.preorder_traversal())
-        [10, 5, 15]
+        Warns
+        -----
+        DeprecationWarning
+            On every call, when the method is called, not when the iterator
+            is first advanced.
 
         Notes
         -----
         Time complexity: O(n)
-        Space complexity: O(h) where h is height
-
-        See Also
-        --------
-        inorder_traversal : Left-root-right traversal.
         """
-        pass
+        _warn_traversal_deprecated("preorder_traversal", "preorder")
+        from ..algorithms.tree_algorithms import preorder
 
-    @abstractmethod
+        return preorder(self)
+
     def postorder_traversal(self) -> Iterator[Any]:
-        """Return an iterator for postorder traversal (left-right-root).
+        """Return an iterator over the items in postorder (left, right, root).
 
-        In postorder traversal, we visit:
-        1. Left subtree
-        2. Right subtree
-        3. Root
-
-        Useful for deleting the tree (delete children before parent).
+        .. deprecated:: 0.7.0
+            Traversals are algorithms and moved to
+            :func:`sds.algorithms.tree_algorithms.postorder`, which takes the
+            tree as argument: ``postorder(tree)``. This method will be removed
+            in 1.0.0 (#89).
 
         Yields
         ------
         Any
-            Items from the tree in postorder.
+            The items of the tree, in postorder.
 
-        Examples
-        --------
-        >>> tree = BinaryTree()
-        >>> tree.insert(10)
-        >>> tree.insert(5)
-        >>> tree.insert(15)
-        >>> list(tree.postorder_traversal())
-        [5, 15, 10]
+        Warns
+        -----
+        DeprecationWarning
+            On every call, when the method is called, not when the iterator
+            is first advanced.
 
         Notes
         -----
         Time complexity: O(n)
-        Space complexity: O(h) where h is height
-
-        See Also
-        --------
-        inorder_traversal : Left-root-right traversal.
         """
-        pass
+        _warn_traversal_deprecated("postorder_traversal", "postorder")
+        from ..algorithms.tree_algorithms import postorder
 
-    @abstractmethod
+        return postorder(self)
+
     def level_order_traversal(self) -> Iterator[Any]:
-        """Return an iterator for level-order traversal (BFS).
+        """Return an iterator over the items in level order (breadth-first).
 
-        Level-order traversal visits nodes level by level, from left
-        to right at each level. Also known as breadth-first search.
+        .. deprecated:: 0.7.0
+            Traversals are algorithms and moved to
+            :func:`sds.algorithms.tree_algorithms.level_order`, which takes the
+            tree as argument: ``level_order(tree)``. This method will be removed
+            in 1.0.0 (#89).
 
         Yields
         ------
         Any
-            Items from the tree level by level.
+            The items of the tree, in level order.
 
-        Examples
-        --------
-        >>> tree = BinaryTree()
-        >>> tree.insert(10)
-        >>> tree.insert(5)
-        >>> tree.insert(15)
-        >>> list(tree.level_order_traversal())
-        [10, 5, 15]
+        Warns
+        -----
+        DeprecationWarning
+            On every call, when the method is called, not when the iterator
+            is first advanced.
 
         Notes
         -----
         Time complexity: O(n)
-        Space complexity: O(w) where w is maximum width of tree
-
-        See Also
-        --------
-        inorder_traversal : Depth-first inorder traversal.
         """
-        pass
+        _warn_traversal_deprecated("level_order_traversal", "level_order")
+        from ..algorithms.tree_algorithms import level_order
+
+        return level_order(self)
 
 
 class AbstractSegmentTree(Collection):
