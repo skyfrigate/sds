@@ -24,7 +24,8 @@ Work towards 0.7.0 — Algorithms.
   and `level_order()`, taking any binary tree as argument. The depth-first
   traversals are iterative and handle trees deeper than the recursion limit.
 - `sds.algorithms.graph_algorithms`: `bfs()` and `dfs()`, iterative and
-  lazy, on any graph.
+  lazy, on any graph; `dijkstra()`, shortest distances and paths on weighted
+  graphs with non-negative weights.
 - `AbstractBinaryTree.children(node)`: the real `(left, right)` children of a
   node, `None` where absent (the Red-Black `NIL` sentinel is never exposed).
 - `AbstractWeightedGraph.outgoing_edges(node)`: a node's outgoing weighted
