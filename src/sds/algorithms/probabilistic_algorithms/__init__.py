@@ -21,12 +21,16 @@ On Bayesian networks and Markov random fields (any ``AbstractGraphicalModel``):
 
 - :func:`variable_elimination`: the exact distribution of one or more
   variables given evidence.
+- :func:`belief_propagation`: the marginal of every variable given
+  evidence, by message passing; exact on tree-shaped models, approximate
+  (loopy) otherwise.
 
 ``Factor`` has no product or marginalization operation. The algorithms
 copy each factor into a private working table, compute there, and return
 plain ``Factor`` objects.
 """
 
+from .belief_propagation import belief_propagation
 from .variable_elimination import variable_elimination
 
-__all__ = ["variable_elimination"]
+__all__ = ["variable_elimination", "belief_propagation"]
