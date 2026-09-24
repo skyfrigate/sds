@@ -39,6 +39,8 @@ Work towards 0.7.0 — Algorithms.
 - `sds.algorithms.probabilistic_algorithms`: `forward()` (log-likelihood and
   filtered states) and `viterbi()` (most likely state path) for hidden Markov
   models.
+- API reference and user guide for `sds.algorithms`, including a page on
+  design paradigms (divide and conquer, greedy, dynamic programming).
 - `AbstractBinaryTree.children(node)`: the real `(left, right)` children of a
   node, `None` where absent (the Red-Black `NIL` sentinel is never exposed).
 - `AbstractWeightedGraph.outgoing_edges(node)`: a node's outgoing weighted
