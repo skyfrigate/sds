@@ -25,12 +25,20 @@ On Bayesian networks and Markov random fields (any ``AbstractGraphicalModel``):
   evidence, by message passing; exact on tree-shaped models, approximate
   (loopy) otherwise.
 
+On hidden Markov models (any ``AbstractHiddenMarkovModel``):
+
+- :func:`forward`: the log-likelihood of an observation sequence and the
+  filtered state distributions.
+- :func:`viterbi`: the most likely sequence of hidden states.
+
 ``Factor`` has no product or marginalization operation. The algorithms
 copy each factor into a private working table, compute there, and return
 plain ``Factor`` objects.
 """
 
 from .belief_propagation import belief_propagation
+from .forward import forward
 from .variable_elimination import variable_elimination
+from .viterbi import viterbi
 
-__all__ = ["variable_elimination", "belief_propagation"]
+__all__ = ["variable_elimination", "belief_propagation", "forward", "viterbi"]
