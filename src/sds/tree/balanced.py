@@ -51,7 +51,6 @@ See Also
 sds.tree.binary : Basic binary search tree.
 """
 
-from collections import deque
 from typing import Any, Iterator, Optional, Tuple, cast
 
 from ..core.exceptions import EmptyStructureError
@@ -543,15 +542,11 @@ class AVLTree(AbstractBinaryTree):
 
     def __iter__(self) -> Iterator[Any]:
         """Iterate over tree elements (inorder)."""
-        return self.inorder_traversal()
+        return self._inorder_recursive(self._root)
 
     def __contains__(self, item: Any) -> bool:
         """Check if item is in the tree."""
         return self.search(item)
-
-    def inorder_traversal(self) -> Iterator[Any]:
-        """Return inorder traversal iterator."""
-        yield from self._inorder_recursive(self._root)
 
     def _inorder_recursive(self, node: Optional[AVLNode]) -> Iterator[Any]:
         """Inorder traversal helper."""
@@ -559,42 +554,6 @@ class AVLTree(AbstractBinaryTree):
             yield from self._inorder_recursive(node.left)  # type: ignore
             yield node.data
             yield from self._inorder_recursive(node.right)  # type: ignore
-
-    def preorder_traversal(self) -> Iterator[Any]:
-        """Return preorder traversal iterator."""
-        yield from self._preorder_recursive(self._root)
-
-    def _preorder_recursive(self, node: Optional[AVLNode]) -> Iterator[Any]:
-        """Preorder traversal helper."""
-        if node is not None:
-            yield node.data
-            yield from self._preorder_recursive(node.left)  # type: ignore
-            yield from self._preorder_recursive(node.right)  # type: ignore
-
-    def postorder_traversal(self) -> Iterator[Any]:
-        """Return postorder traversal iterator."""
-        yield from self._postorder_recursive(self._root)
-
-    def _postorder_recursive(self, node: Optional[AVLNode]) -> Iterator[Any]:
-        """Postorder traversal helper."""
-        if node is not None:
-            yield from self._postorder_recursive(node.left)  # type: ignore
-            yield from self._postorder_recursive(node.right)  # type: ignore
-            yield node.data
-
-    def level_order_traversal(self) -> Iterator[Any]:
-        """Return level-order traversal iterator."""
-        if self._root is None:
-            return
-
-        queue: deque[AVLNode] = deque([self._root])
-        while queue:
-            current = queue.popleft()
-            yield current.data
-            if current.left:
-                queue.append(current.left)  # type: ignore
-            if current.right:
-                queue.append(current.right)  # type: ignore
 
     def __repr__(self) -> str:
         """Return string representation."""
@@ -604,7 +563,7 @@ class AVLTree(AbstractBinaryTree):
         """Return string showing inorder traversal."""
         if self.is_empty():
             return "AVLTree: []"
-        elements = ", ".join(str(item) for item in self.inorder_traversal())
+        elements = ", ".join(str(item) for item in self._inorder_recursive(self._root))
         return f"AVLTree: [{elements}]"
 
 
@@ -1068,15 +1027,11 @@ class RedBlackTree(AbstractBinaryTree):
 
     def __iter__(self) -> Iterator[Any]:
         """Iterate inorder."""
-        return self.inorder_traversal()
+        return self._inorder_recursive(self._root)
 
     def __contains__(self, item: Any) -> bool:
         """Check membership."""
         return self.search(item)
-
-    def inorder_traversal(self) -> Iterator[Any]:
-        """Inorder traversal."""
-        yield from self._inorder_recursive(self._root)
 
     def _inorder_recursive(self, node: Optional[RedBlackNode]) -> Iterator[Any]:
         """Inorder helper."""
@@ -1084,48 +1039,6 @@ class RedBlackTree(AbstractBinaryTree):
             yield from self._inorder_recursive(cast(Optional[RedBlackNode], node.left))
             yield node.data
             yield from self._inorder_recursive(cast(Optional[RedBlackNode], node.right))
-
-    def preorder_traversal(self) -> Iterator[Any]:
-        """Preorder traversal."""
-        yield from self._preorder_recursive(self._root)
-
-    def _preorder_recursive(self, node: Optional[RedBlackNode]) -> Iterator[Any]:
-        """Preorder helper."""
-        if node and node != self._NIL:
-            yield node.data
-            yield from self._preorder_recursive(cast(Optional[RedBlackNode], node.left))
-            yield from self._preorder_recursive(
-                cast(Optional[RedBlackNode], node.right)
-            )
-
-    def postorder_traversal(self) -> Iterator[Any]:
-        """Postorder traversal."""
-        yield from self._postorder_recursive(self._root)
-
-    def _postorder_recursive(self, node: Optional[RedBlackNode]) -> Iterator[Any]:
-        """Postorder helper."""
-        if node and node != self._NIL:
-            yield from self._postorder_recursive(
-                cast(Optional[RedBlackNode], node.left)
-            )
-            yield from self._postorder_recursive(
-                cast(Optional[RedBlackNode], node.right)
-            )
-            yield node.data
-
-    def level_order_traversal(self) -> Iterator[Any]:
-        """Level order traversal."""
-        if self._root == self._NIL:
-            return
-        queue: deque[RedBlackNode] = deque([cast(RedBlackNode, self._root)])
-        while queue:
-            current = queue.popleft()
-            if current != self._NIL:
-                yield current.data
-                if current.left != self._NIL:
-                    queue.append(cast(RedBlackNode, current.left))
-                if current.right != self._NIL:
-                    queue.append(cast(RedBlackNode, current.right))
 
     def __repr__(self) -> str:
         """Return string representation."""
@@ -1135,5 +1048,5 @@ class RedBlackTree(AbstractBinaryTree):
         """Return string showing inorder traversal."""
         if self.is_empty():
             return "RedBlackTree: []"
-        elements = ", ".join(str(item) for item in self.inorder_traversal())
+        elements = ", ".join(str(item) for item in self._inorder_recursive(self._root))
         return f"RedBlackTree: [{elements}]"
