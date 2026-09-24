@@ -14,6 +14,7 @@
    .. autosummary::
    
       ~AVLTree.__init__
+      ~AVLTree.children
       ~AVLTree.clear
       ~AVLTree.height
       ~AVLTree.inorder_traversal
