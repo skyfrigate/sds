@@ -64,8 +64,9 @@ Module Contents
      - ``merge_sort``, ``quick_sort``
      - Python ``list``
    * - :doc:`tree_algorithms`
-     - ``inorder``, ``preorder``, ``postorder``, ``level_order``
-     - any binary tree
+     - ``inorder``, ``preorder``, ``postorder``, ``level_order``,
+       ``is_balanced``, ``rebalance``
+     - any binary tree (``rebalance``: ``BinarySearchTree``)
    * - :doc:`graph_algorithms`
      - ``bfs``, ``dfs``, ``dijkstra``, ``kruskal``
      - graphs, weighted graphs
