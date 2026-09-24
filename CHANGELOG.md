@@ -30,6 +30,9 @@ Work towards 0.7.0 — Algorithms.
   lazy, on any graph; `dijkstra()`, shortest distances and paths on weighted
   graphs with non-negative weights; `kruskal()`, minimum spanning forest of
   an undirected weighted graph.
+- `sds.algorithms.probabilistic_algorithms`: `variable_elimination()`, the
+  exact distribution of query variables given evidence, on Bayesian networks
+  and Markov random fields.
 - `AbstractBinaryTree.children(node)`: the real `(left, right)` children of a
   node, `None` where absent (the Red-Black `NIL` sentinel is never exposed).
 - `AbstractWeightedGraph.outgoing_edges(node)`: a node's outgoing weighted

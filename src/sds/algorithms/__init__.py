@@ -27,4 +27,7 @@ tree_algorithms
     Traversals of binary trees.
 graph_algorithms
     Traversals, shortest paths and minimum spanning trees on graphs.
+probabilistic_algorithms
+    Inference on Bayesian networks, Markov random fields and hidden Markov
+    models.
 """
