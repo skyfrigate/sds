@@ -55,7 +55,7 @@ sds.tree.binary_tree : Concrete binary tree implementations.
 """
 
 from abc import abstractmethod
-from typing import Any, Iterator, List, Optional
+from typing import Any, Iterator, List, Optional, Tuple
 
 from ..core.interfaces import Collection
 from .node import BinaryNode
@@ -408,6 +408,46 @@ class AbstractBinaryTree(AbstractTree):
         insert() and remove() methods.
         """
         return self._root
+
+    def children(
+        self, node: BinaryNode
+    ) -> Tuple[Optional[BinaryNode], Optional[BinaryNode]]:
+        """Return the real ``(left, right)`` children of a node.
+
+        This is the navigation primitive algorithms use to walk a binary
+        tree without knowing how a given implementation stores absent
+        children. A missing child is always reported as ``None``, even when
+        the implementation represents it with a sentinel node internally
+        (as :class:`~sds.tree.RedBlackTree` does).
+
+        Parameters
+        ----------
+        node : BinaryNode
+            A node of this tree.
+
+        Returns
+        -------
+        tuple of (BinaryNode or None, BinaryNode or None)
+            The left and right children, ``None`` where absent.
+
+        Examples
+        --------
+        >>> from sds.tree import BinarySearchTree
+        >>> bst = BinarySearchTree()
+        >>> for value in (10, 5):
+        ...     bst.insert(value)
+        >>> left, right = bst.children(bst.root)
+        >>> left.data, right
+        (5, None)
+
+        Notes
+        -----
+        Time complexity: O(1)
+
+        Subclasses that use sentinel nodes must override this method so
+        that sentinels never leak out of the structure (#89).
+        """
+        return node.left, node.right
 
     @abstractmethod
     def inorder_traversal(self) -> Iterator[Any]:
