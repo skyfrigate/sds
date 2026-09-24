@@ -40,15 +40,18 @@ accepts any ``AbstractGraph``, whatever its internal representation.
        S[sorting]
        TA[tree_algorithms]
        GA[graph_algorithms]
+       PA[probabilistic_algorithms]
        end
 
        L -- "to_list() / from_list()" --> S
        T -- "root, children()" --> TA
        G -- "neighbors(), outgoing_edges()" --> GA
+       P[sds.probabilistic] -- "factors(), scope, value()" --> PA
 
        style S fill:#3498db,color:#fff
        style TA fill:#3498db,color:#fff
        style GA fill:#3498db,color:#fff
+       style PA fill:#3498db,color:#fff
 
 Module Contents
 ===============
@@ -70,6 +73,10 @@ Module Contents
    * - :doc:`graph_algorithms`
      - ``bfs``, ``dfs``, ``dijkstra``, ``kruskal``
      - graphs, weighted graphs
+   * - :doc:`probabilistic_algorithms`
+     - ``variable_elimination``, ``belief_propagation``, ``forward``,
+       ``viterbi``
+     - Bayesian networks, Markov random fields, HMMs
 
 Detailed Documentation
 ======================
@@ -80,6 +87,7 @@ Detailed Documentation
    sorting
    tree_algorithms
    graph_algorithms
+   probabilistic_algorithms
 
 Related Guides
 ==============
