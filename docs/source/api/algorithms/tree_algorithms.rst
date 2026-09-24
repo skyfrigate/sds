@@ -9,9 +9,10 @@ Tree Algorithms
 Overview
 ========
 
-This subpackage provides the four classic traversals of a binary tree.
-Each function takes the tree itself and yields the data stored in its
-nodes, one at a time:
+This subpackage provides the four classic traversals of a binary tree,
+and two functions about its shape: a balance check and the rebalancing of
+a binary search tree. Each traversal takes the tree itself and yields the
+data stored in its nodes, one at a time:
 
 .. list-table::
    :header-rows: 1
@@ -114,6 +115,12 @@ Complexity
    * - ``level_order``
      - :math:`O(n)`
      - :math:`O(w)`, :math:`w` the widest level (up to about :math:`n/2`)
+   * - ``is_balanced``
+     - :math:`O(n)`
+     - :math:`O(h)`
+   * - ``rebalance``
+     - :math:`O(n \log n)`
+     - :math:`O(n)`
 
 Detailed Documentation
 ======================
@@ -125,6 +132,45 @@ Detailed Documentation
 .. autofunction:: postorder
 
 .. autofunction:: level_order
+
+Balance
+=======
+
+A binary tree is **height-balanced** when, at every node, the heights of
+the two subtrees differ by at most one (the AVL criterion). Its height is
+then :math:`O(\log n)`, which keeps searches logarithmic.
+
+A plain ``BinarySearchTree`` does not stay balanced by itself: inserting
+sorted values builds a chain. :func:`rebalance` rebuilds such a tree in
+place from its sorted content, inserting the median first, then the medians
+of each half, level by level:
+
+.. mermaid::
+
+   graph LR
+       subgraph "Before: insert 1..7 in order"
+       A1((1)) --> A2((2)) --> A3((3)) --> A4((4)) --> A5((5)) --> A6((6)) --> A7((7))
+       end
+
+       subgraph "After rebalance()"
+       B4((4)) --> B2((2))
+       B4 --> B6((6))
+       B2 --> B1((1))
+       B2 --> B3((3))
+       B6 --> B5((5))
+       B6 --> B7((7))
+       end
+
+       style B4 fill:#2ecc71,color:#fff
+
+The result has the minimum possible height, :math:`\lfloor \log_2 n \rfloor`,
+for distinct keys. The self-balancing ``AVLTree`` and ``RedBlackTree`` are
+not accepted: they repair their shape with rotations on every update, and
+those rotations stay inside their classes as part of their invariant.
+
+.. autofunction:: is_balanced
+
+.. autofunction:: rebalance
 
 Usage Example
 =============
