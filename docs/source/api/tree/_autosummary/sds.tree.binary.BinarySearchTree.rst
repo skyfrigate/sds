@@ -14,6 +14,7 @@
    .. autosummary::
    
       ~BinarySearchTree.__init__
+      ~BinarySearchTree.children
       ~BinarySearchTree.clear
       ~BinarySearchTree.find_max
       ~BinarySearchTree.find_min
