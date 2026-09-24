@@ -14,6 +14,7 @@
    .. autosummary::
    
       ~RedBlackTree.__init__
+      ~RedBlackTree.children
       ~RedBlackTree.clear
       ~RedBlackTree.height
       ~RedBlackTree.inorder_traversal

@@ -14,6 +14,7 @@
    .. autosummary::
    
       ~BinaryTree.__init__
+      ~BinaryTree.children
       ~BinaryTree.clear
       ~BinaryTree.height
       ~BinaryTree.inorder_traversal

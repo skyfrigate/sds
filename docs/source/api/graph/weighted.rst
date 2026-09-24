@@ -1048,7 +1048,7 @@ See Also
 * :doc:`graph` - Base unweighted graph
 * :doc:`directed` - Directed graphs without weights
 * :doc:`../../guide/graph_structures/weighted` - Weighted graphs user guide
-* :doc:`../../algorithms/graph_algorithms` - Algorithms for weighted graphs
+* :doc:`../algorithms/graph_algorithms` - Dijkstra and Kruskal on weighted graphs
 
 References
 ==========
