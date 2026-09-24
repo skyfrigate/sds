@@ -52,11 +52,11 @@ sds.tree.binary : Basic binary search tree.
 """
 
 from collections import deque
-from typing import Any, Iterator, Optional, cast
+from typing import Any, Iterator, Optional, Tuple, cast
 
 from ..core.exceptions import EmptyStructureError
 from .interfaces import AbstractBinaryTree
-from .node import AVLNode, RedBlackNode
+from .node import AVLNode, BinaryNode, RedBlackNode
 
 __all__ = ["AVLTree", "RedBlackTree"]
 
@@ -1037,6 +1037,34 @@ class RedBlackTree(AbstractBinaryTree):
         """Remove all nodes from the tree."""
         self._root = self._NIL
         self._size = 0
+
+    def children(
+        self, node: BinaryNode
+    ) -> Tuple[Optional[BinaryNode], Optional[BinaryNode]]:
+        """Return the real ``(left, right)`` children of a node.
+
+        Leaves of a Red-Black tree point to a shared black sentinel
+        (``NIL``) rather than to ``None``. This override reports those
+        sentinels as ``None``, so code walking the tree through
+        :meth:`children` never sees them.
+
+        Parameters
+        ----------
+        node : BinaryNode
+            A node of this tree.
+
+        Returns
+        -------
+        tuple of (BinaryNode or None, BinaryNode or None)
+            The left and right children, ``None`` where absent.
+
+        Notes
+        -----
+        Time complexity: O(1)
+        """
+        left = None if node.left is self._NIL else node.left
+        right = None if node.right is self._NIL else node.right
+        return left, right
 
     def __iter__(self) -> Iterator[Any]:
         """Iterate inorder."""
