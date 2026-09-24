@@ -16,6 +16,8 @@
 
 - :func:`bfs` and :func:`dfs` (any ``AbstractGraph``): the nodes reachable
   from a source, in breadth-first or depth-first order.
+- :func:`dijkstra` (any ``AbstractWeightedGraph``): shortest distances and
+  predecessors from a source, for non-negative weights.
 
 Every function reads the graph through its public interface only
 (``neighbors()``, ``outgoing_edges()``, ``edges()``) and never modifies it.
@@ -28,5 +30,6 @@ they are exhausted.
 
 from .bfs import bfs
 from .dfs import dfs
+from .dijkstra import dijkstra
 
-__all__ = ["bfs", "dfs"]
+__all__ = ["bfs", "dfs", "dijkstra"]
