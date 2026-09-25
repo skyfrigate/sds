@@ -1,0 +1,109 @@
+name: Python CI - Build
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"          # final release:      v0.8.0
+      - "v[0-9]+.[0-9]+.[0-9]+rc[0-9]+"  # release candidate:  v0.8.0rc1
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Verify release metadata and build package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Install build dependencies
+        run: uv pip install --system packaging
+
+      - name: Verify version consistency
+        id: version
+        run: |
+          python - <<'PY'
+          import os, re, sys, tomllib
+          from pathlib import Path
+          from packaging.version import Version
+
+          tag = os.environ["GITHUB_REF_NAME"]
+          tag_version = Version(tag.removeprefix("v"))
+          errors = []
+
+          # 1. pyproject.toml
+          with open("pyproject.toml", "rb") as f:
+              pyproject_version = Version(tomllib.load(f)["project"]["version"])
+          if pyproject_version != tag_version:
+              errors.append(f"pyproject.toml has {pyproject_version}, tag is {tag_version}")
+
+          # 2. __version__ of the top-level package(s), if defined. Only
+          #    src/<package>/__init__.py counts: subpackages may carry their
+          #    own unrelated __version__ (sds.advanced does).
+          for init in sorted(Path("src").glob("*/__init__.py")):
+              match = re.search(r'^__version__\s*=\s*["\']([^"\']+)["\']', init.read_text(), re.M)
+              if match and Version(match.group(1)) != tag_version:
+                  errors.append(f"{init} has {match.group(1)}, tag is {tag_version}")
+
+          # 3. Sphinx release in docs/source/conf.py
+          conf = Path("docs/source/conf.py").read_text()
+          match = re.search(r'^release\s*=\s*["\']([^"\']+)["\']', conf, re.M)
+          if not match:
+              errors.append("docs/source/conf.py defines no release")
+          elif Version(match.group(1)) != tag_version:
+              errors.append(f"docs/source/conf.py release is {match.group(1)}, tag is {tag_version}")
+
+          # 4. A CHANGELOG.md section for this exact version
+          changelog = Path("CHANGELOG.md").read_text()
+          if not re.search(rf"^## \[{re.escape(str(tag_version))}\]", changelog, re.M):
+              errors.append(f"CHANGELOG.md has no '## [{tag_version}]' section")
+
+          print(f"Tag:            {tag}")
+          print(f"pyproject.toml: {pyproject_version}")
+          if errors:
+              for error in errors:
+                  print(f"::error::{error}")
+              sys.exit(1)
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"version={tag_version}\n")
+              out.write(f"tag={tag}\n")
+          print(f"✅ Release metadata consistent: {tag_version}")
+          PY
+        env:
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+
+      - name: Build package
+        run: |
+          uv build
+          ls -la dist/
+
+      - name: Check distributions
+        run: |
+          uvx twine check --strict dist/*
+          # The PEP 561 marker must ship with the wheel ("Typing :: Typed")
+          python -c "import sys, zipfile, glob; \
+          names = zipfile.ZipFile(glob.glob('dist/*.whl')[0]).namelist(); \
+          sys.exit(0 if 'sds/py.typed' in names else '::error::py.typed missing from wheel')"
+          echo "✅ Distributions valid"
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: python-package-distributions
+          path: dist/
+          retention-days: 7
+
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      tag: ${{ steps.version.outputs.tag }}
