@@ -1,0 +1,117 @@
+name: Python CI - Publish TestPyPI
+
+# Runs after "Python CI - Build". Like every workflow_run workflow, this file
+# is only picked up from the default branch (master).
+on:
+  workflow_run:
+    workflows: ["Python CI - Build"]
+    types:
+      - completed
+
+jobs:
+  publish-testpypi:
+    name: Publish release candidate to TestPyPI
+    runs-on: ubuntu-latest
+    # Must match the environment declared in the TestPyPI trusted publisher.
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/pysds-tools
+    permissions:
+      actions: read      # download the artifact of the Build run
+      contents: write    # create the GitHub pre-release
+      id-token: write    # trusted publishing (OIDC)
+    # Only after a successful build of a release-candidate tag (vX.Y.ZrcN)
+    if: |
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      contains(github.event.workflow_run.head_branch, 'rc')
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Extract version from tag
+        id: version
+        run: |
+          TAG="${{ github.event.workflow_run.head_branch }}"
+          VERSION="${TAG#v}"
+          FINAL_VERSION=$(echo "$VERSION" | sed 's/rc[0-9]*$//')
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "final_version=$FINAL_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Tag: $TAG — Version: $VERSION — Final: $FINAL_VERSION"
+
+      - name: Check if version exists on TestPyPI
+        id: check
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          PACKAGE=$(python -c "import tomllib; print(tomllib.load(open('pyproject.toml','rb'))['project']['name'])")
+          echo "package=$PACKAGE" >> "$GITHUB_OUTPUT"
+          if curl -sf "https://test.pypi.org/pypi/$PACKAGE/$VERSION/json" > /dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "✅ $PACKAGE==$VERSION already on TestPyPI — skipping"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "📦 $PACKAGE==$VERSION not on TestPyPI — will publish"
+          fi
+
+      - name: Download build artifacts
+        if: steps.check.outputs.exists == 'false'
+        uses: actions/download-artifact@v8
+        with:
+          name: python-package-distributions
+          path: dist/
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to TestPyPI
+        if: steps.check.outputs.exists == 'false'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          skip-existing: true
+
+      - name: Verify TestPyPI availability
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          PACKAGE="${{ steps.check.outputs.package }}"
+          MAX=20
+          for i in $(seq 1 $MAX); do
+            echo "Attempt $i/$MAX..."
+            if curl -sf "https://test.pypi.org/pypi/$PACKAGE/$VERSION/json" > /dev/null; then
+              echo "✅ $PACKAGE==$VERSION available on TestPyPI"
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "::error::Package did not become available after $MAX attempts"
+          exit 1
+
+      - name: Create GitHub pre-release
+        if: steps.check.outputs.exists == 'false'
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: "RC — ${{ steps.version.outputs.tag }}"
+          prerelease: true
+          files: dist/*
+          body: |
+            📦 **Published to TestPyPI**
+
+            ```bash
+            pip install --index-url https://test.pypi.org/simple/ \
+                        --extra-index-url https://pypi.org/simple/ \
+                        ${{ steps.check.outputs.package }}==${{ steps.version.outputs.version }}
+            ```
+
+            If validation passes, create tag `v${{ steps.version.outputs.final_version }}` to publish to PyPI.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
