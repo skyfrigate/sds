@@ -11,7 +11,9 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
 
 ## [Unreleased]
 
-Work towards 0.7.0 — Algorithms.
+## [0.7.0rc1] - 2026-09-25
+
+Release candidate for 0.7.0 — Algorithms, published on TestPyPI only.
 
 ### Added
 
@@ -173,5 +175,6 @@ Internal milestone, not published.
 - Project tooling: single `pyproject.toml`, pytest with coverage, mypy in
   strict mode, GitHub Actions CI, Sphinx documentation.
 
-[Unreleased]: https://github.com/skyfrigate/sds/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/skyfrigate/sds/compare/v0.7.0rc1...HEAD
+[0.7.0rc1]: https://github.com/skyfrigate/sds/compare/v0.6.0...v0.7.0rc1
 [0.6.0]: https://github.com/skyfrigate/sds/releases/tag/v0.6.0
