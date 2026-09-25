@@ -66,6 +66,12 @@ Work towards 0.7.0 — Algorithms.
   and will be removed in 1.0.0. Iterating over a tree (`for x in tree`) is
   unaffected.
 
+### Fixed
+
+- The package now ships a `py.typed` marker (PEP 561), so type checkers use
+  its inline annotations, as the `Typing :: Typed` classifier already
+  claimed.
+
 ## [0.6.0] - 2026-08-05
 
 First published release.
