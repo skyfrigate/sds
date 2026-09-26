@@ -1,0 +1,142 @@
+name: Python CI - Publish PyPI
+
+# Runs after "Python CI - Build". Like every workflow_run workflow, this file
+# is only picked up from the default branch (master).
+on:
+  workflow_run:
+    workflows: ["Python CI - Build"]
+    types:
+      - completed
+
+jobs:
+  publish-pypi:
+    name: Publish final release to PyPI
+    runs-on: ubuntu-latest
+    # Must match the environment declared in the PyPI trusted publisher.
+    environment:
+      name: pypi
+      url: https://pypi.org/p/pysds-tools
+    permissions:
+      actions: read      # download the artifact of the Build run
+      contents: write    # create the GitHub release, delete the draft
+      id-token: write    # trusted publishing (OIDC)
+    # Only after a successful build of a final-release tag (vX.Y.Z, no 'rc')
+    if: |
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      !contains(github.event.workflow_run.head_branch, 'rc')
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Extract version from tag
+        id: version
+        run: |
+          TAG="${{ github.event.workflow_run.head_branch }}"
+          VERSION="${TAG#v}"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Tag: $TAG — Version: $VERSION"
+
+      - name: Check if version exists on PyPI
+        id: check
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          PACKAGE=$(python -c "import tomllib; print(tomllib.load(open('pyproject.toml','rb'))['project']['name'])")
+          echo "package=$PACKAGE" >> "$GITHUB_OUTPUT"
+          if curl -sf "https://pypi.org/pypi/$PACKAGE/$VERSION/json" > /dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "✅ $PACKAGE==$VERSION already on PyPI — skipping"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "📦 $PACKAGE==$VERSION not on PyPI — will publish"
+          fi
+
+      - name: Download build artifacts
+        if: steps.check.outputs.exists == 'false'
+        uses: actions/download-artifact@v8
+        with:
+          name: python-package-distributions
+          path: dist/
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to PyPI
+        if: steps.check.outputs.exists == 'false'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          skip-existing: true
+
+      - name: Verify PyPI availability
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          PACKAGE="${{ steps.check.outputs.package }}"
+          MAX=20
+          for i in $(seq 1 $MAX); do
+            echo "Attempt $i/$MAX..."
+            if curl -sf "https://pypi.org/pypi/$PACKAGE/$VERSION/json" > /dev/null; then
+              echo "✅ $PACKAGE==$VERSION available on PyPI"
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "::error::Package did not become available after $MAX attempts"
+          exit 1
+
+      - name: Get release draft
+        id: draft
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          DRAFT=$(gh api "repos/${{ github.repository }}/releases" \
+            --jq '[.[] | select(.draft == true)] | first // {}')
+          echo "id=$(echo "$DRAFT" | jq -r '.id // ""')" >> "$GITHUB_OUTPUT"
+          {
+            echo "body<<EOF_DRAFT_BODY"
+            echo "$DRAFT" | jq -r '.body // ""'
+            echo "EOF_DRAFT_BODY"
+          } >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create GitHub release
+        if: steps.check.outputs.exists == 'false'
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          # The tag, not the draft name: Release Drafter's own version guess
+          # can differ from the milestone-driven version actually tagged.
+          name: ${{ steps.version.outputs.tag }}
+          prerelease: false
+          files: dist/*
+          body: |
+            ${{ steps.draft.outputs.body }}
+
+            ---
+
+            🚀 **Published to PyPI**
+
+            ```bash
+            pip install ${{ steps.check.outputs.package }}==${{ steps.version.outputs.version }}
+            ```
+
+            **PyPI:** https://pypi.org/project/${{ steps.check.outputs.package }}/${{ steps.version.outputs.version }}/
+            **Changelog:** https://github.com/${{ github.repository }}/blob/${{ steps.version.outputs.tag }}/CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Delete the consumed release draft
+        # The release above is created on the tag; the draft Release Drafter
+        # kept would otherwise stay behind and accumulate the next changes.
+        if: steps.check.outputs.exists == 'false' && steps.draft.outputs.id != ''
+        run: gh api -X DELETE "repos/${{ github.repository }}/releases/${{ steps.draft.outputs.id }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,50 @@
+# Release Drafter configuration (.github/release-drafter.yml).
+# Pull requests are grouped by their "type: ..." label. The version itself
+# is set by the milestone and the pushed tag, not guessed here: the
+# resolved version below only names the draft.
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+
+categories:
+  - title: "⚠️ Breaking changes"
+    when:
+      label: "type: breaking"
+  - title: "🚀 Features"
+    when:
+      label: "type: feature"
+  - title: "🐛 Bug fixes"
+    when:
+      label: "type: bug"
+  - title: "🔒 Security"
+    when:
+      label: "type: security"
+  - title: "⚡ Performance"
+    when:
+      label: "type: perf"
+  - title: "🗑️ Deprecations"
+    when:
+      label: "type: deprecation"
+  - title: "📚 Documentation"
+    when:
+      label: "type: docs"
+  - title: "🧰 Maintenance"
+    when:
+      labels:
+        - "type: refactor"
+        - "type: test"
+        - "type: ci"
+        - "type: chore"
+  - type: "version-resolver"
+    semver-increment: "minor"
+
+change-template: "- $TITLE (#$NUMBER)"
+change-title-escapes: '\<*_&'
+no-changes-template: "- No labelled changes"
+
+template: |
+  ## What's changed
+
+  $CHANGES
+
+  See [CHANGELOG.md](https://github.com/skyfrigate/sds/blob/master/CHANGELOG.md)
+  for the full list of changes in this release.
