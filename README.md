@@ -9,8 +9,9 @@
 [![Static Badge](https://img.shields.io/badge/security-bandit-informational)](https://github.com/PyCQA/bandit)
 
 A comprehensive and educational Python library of fundamental data structures — from
-linked lists to probabilistic graphical models — implemented with object-oriented
-programming principles and extensive academic-style documentation.
+linked lists to probabilistic graphical models — and of the classic algorithms that
+operate on them, implemented with object-oriented programming principles and
+extensive academic-style documentation.
 
 > **Package name note**: the PyPI/pip distribution is named **`pysds-tools`**
 > (`sds-tools` collides with an existing, unrelated package once PyPI normalizes
@@ -58,6 +59,13 @@ rain = RandomVariable("Rain", ("true", "false"))
 bn = BayesianNetwork()
 bn.add_variable(rain)
 bn.set_cpt(rain, Factor((rain,), {("true",): 0.2, ("false",): 0.8}))
+
+# Algorithms: free functions that take the structure as argument
+from sds.algorithms.graph_algorithms import bfs
+from sds.algorithms.sorting import merge_sort
+
+[node.data for node in bfs(task_graph, design)]  # ['Design', 'Backend']
+merge_sort([3, 1, 2])  # [1, 2, 3]
 ```
 
 ## Architecture
@@ -72,7 +80,7 @@ src/sds/
 ├── graph/          # Graph structures (directed, weighted, adjacency representations)
 ├── advanced/       # Deterministic advanced structures (disjoint set, Bloom filter, ...)
 ├── probabilistic/  # Probabilistic graphical models (Bayesian networks, MRF, HMM)
-├── algorithms/      # (planned) sorting, graph algorithms, tree traversals, inference
+├── algorithms/     # Sorting, tree and graph algorithms, probabilistic inference
 └── utils/          # (planned) visualizer, extended exceptions
 ```
 
@@ -120,7 +128,7 @@ Deterministic structures that don't fit cleanly into linear/tree/graph:
 
 Structures encoding probability distributions over discrete random variables.
 No inference logic (marginal queries, most-likely-explanation) is implemented
-here — that's planned for `sds.algorithms`.
+here — inference lives in `sds.algorithms.probabilistic_algorithms`.
 
 - **`RandomVariable`**, **`Factor`**: shared building blocks (a discrete
   variable and a potential/CPT table over a scope of variables)
@@ -130,6 +138,43 @@ here — that's planned for `sds.algorithms`.
   unnormalized potentials, composes `sds.graph.Graph`
 - **`HiddenMarkovModel`**: sequential model over a fixed states/observations
   pair, with initial/transition/emission components
+
+## Available Algorithms
+
+Algorithms are kept out of the structure classes: each one is a free function
+of `sds.algorithms` that receives the structure it works on, typed against the
+broadest abstract interface that provides what it needs.
+
+### `sds.algorithms.sorting`
+
+- **`merge_sort`** (stable, returns a new list), **`quick_sort`** (in place,
+  not stable) — both with `sorted()`-style `key` and `reverse`
+
+### `sds.algorithms.tree_algorithms`
+
+- **`inorder`**, **`preorder`**, **`postorder`**, **`level_order`**:
+  iterative traversals of any binary tree
+- **`is_balanced`**, **`rebalance`** (rebuilds a `BinarySearchTree` to
+  minimum height)
+
+### `sds.algorithms.graph_algorithms`
+
+- **`bfs`**, **`dfs`**: traversals of any graph, in reproducible order
+- **`dijkstra`**: shortest distances and paths, non-negative weights
+- **`kruskal`**: minimum spanning forest of an undirected weighted graph
+
+### `sds.algorithms.probabilistic_algorithms`
+
+- **`variable_elimination`**: exact posterior of query variables
+- **`belief_propagation`**: every marginal at once (exact on tree-shaped
+  models)
+- **`forward`**, **`viterbi`**: likelihood, filtering and decoding for
+  hidden Markov models
+
+> **Deprecation (0.7.0)**: the `inorder_traversal()`, `preorder_traversal()`,
+> `postorder_traversal()` and `level_order_traversal()` methods of binary trees
+> are deprecated and will be removed in 1.0.0 — use
+> `sds.algorithms.tree_algorithms` instead, e.g. `inorder(tree)`.
 
 ## Documentation
 
@@ -213,15 +258,15 @@ in the shared `.github` repository.
 - `sds.core`, `sds.linear`, `sds.tree`, `sds.graph`, `sds.advanced` — fully
   implemented, tested, and documented
 
-### `v0.6.0` — Probabilistic Structures ✅ *Completed (this release)*
+### `v0.6.0` — Probabilistic Structures ✅ *Completed*
 
 - `sds.probabilistic`: `BayesianNetwork`, `MarkovRandomField`, `HiddenMarkovModel`
 
-### `v0.7.0` — Algorithms *Planned*
+### `v0.7.0` — Algorithms ✅ *Completed (this release)*
 
-- Sorting (QuickSort, MergeSort), graph algorithms (DFS, BFS, Dijkstra,
-  Kruskal), tree traversals — and probabilistic inference (Variable
-  Elimination, Belief Propagation, Forward, Viterbi)
+- `sds.algorithms`: sorting (MergeSort, QuickSort), tree traversals and
+  rebalancing, graph algorithms (BFS, DFS, Dijkstra, Kruskal), probabilistic
+  inference (Variable Elimination, Belief Propagation, Forward, Viterbi)
 
 ### `v0.8.0` — Utilities *Planned*
 
