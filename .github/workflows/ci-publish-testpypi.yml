@@ -12,14 +12,9 @@ jobs:
   publish-testpypi:
     name: Publish release candidate to TestPyPI
     runs-on: ubuntu-latest
-    # Must match the environment declared in the TestPyPI trusted publisher.
-    environment:
-      name: testpypi
-      url: https://test.pypi.org/p/pysds-tools
     permissions:
       actions: read      # download the artifact of the Build run
       contents: write    # create the GitHub pre-release
-      id-token: write    # trusted publishing (OIDC)
     # Only after a successful build of a release-candidate tag (vX.Y.ZrcN)
     if: |
       github.event.workflow_run.conclusion == 'success' &&
@@ -76,6 +71,7 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
           skip-existing: true
 
       - name: Verify TestPyPI availability
