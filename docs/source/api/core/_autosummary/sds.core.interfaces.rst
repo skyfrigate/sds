@@ -15,6 +15,7 @@
    .. autosummary::
    
       ABC
+      Any
       Collection
       LinearCollection
    
