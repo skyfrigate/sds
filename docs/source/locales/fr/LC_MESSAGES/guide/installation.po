@@ -35,7 +35,7 @@ msgid "Requirements"
 msgstr ""
 
 #: ../../source/guide/installation.rst:13 4520ff54927942bfad30125947c28957
-msgid "**Python**: 3.10 or higher"
+msgid "**Python**: 3.11 or higher"
 msgstr ""
 
 #: ../../source/guide/installation.rst:14 4c6bd67a82624937bffeb7f22a6a1f9f

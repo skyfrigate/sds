@@ -10,7 +10,7 @@ development environment.
 Requirements
 ============
 
-* **Python**: 3.10 or higher
+* **Python**: 3.11 or higher
 * **pip**: Latest version recommended
 * **Git**: For installing from source
 
@@ -379,8 +379,8 @@ If using Python from Homebrew:
 
 .. code-block:: bash
 
-   brew install python@3.10
-   python3.10 -m venv sds-env
+   brew install python@3.11
+   python3.11 -m venv sds-env
 
 Linux
 -----

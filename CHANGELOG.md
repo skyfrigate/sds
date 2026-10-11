@@ -11,6 +11,11 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
 
 ## [Unreleased]
 
+### Removed
+
+- Support for Python 3.10, which reaches end of life in October 2026. The
+  minimum supported version is now Python 3.11.
+
 ## [0.7.0] - 2026-09-26
 
 Algorithms. Validated as 0.7.0rc1 on TestPyPI.

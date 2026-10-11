@@ -171,8 +171,8 @@ msgid "✓ **Educational and production-ready**"
 msgstr "✓ **Pédagogique et prêt à l'emploi**"
 
 #: ../../source/index.rst:70 95d8c263fbb94c98b8d1aea6e363aef7
-msgid "✓ **Python 3.10+** support"
-msgstr "✓ Compatible avec **Python 3.10** ou supérieur"
+msgid "✓ **Python 3.11+** support"
+msgstr "✓ Compatible avec **Python 3.11** ou supérieur"
 
 #: ../../source/index.rst:72 a7cafaf3459f4ddf915ccac3a942004c
 msgid "✓ **AI-assisted development** for code quality analysis"

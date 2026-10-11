@@ -67,7 +67,7 @@ Features
 
 ✓ **Educational and production-ready**
 
-✓ **Python 3.10+** support
+✓ **Python 3.11+** support
 
 ✓ **AI-assisted development** for code quality analysis
 

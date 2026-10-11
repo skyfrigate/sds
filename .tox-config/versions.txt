@@ -21,7 +21,6 @@
 # ================================================
 
 # Versions Python à tester (ordre d'exécution)
-py310
 py311
 #py312
 py313

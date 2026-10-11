@@ -2,7 +2,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/pysds-tools.svg)](https://pypi.org/project/pysds-tools/)
 [![Documentation](https://readthedocs.org/projects/pysds-tools/badge/?version=latest)](https://pysds-tools.readthedocs.io/en/latest/?badge=latest)
-[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
+[![Python Version](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Type Checked](https://img.shields.io/badge/type%20checked-mypy-informational)](http://mypy-lang.org/)
 [![Code Style](https://img.shields.io/badge/code%20style-flake8-informational)](https://flake8.pycqa.org/)
