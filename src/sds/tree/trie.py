@@ -182,7 +182,7 @@ class Trie(Collection):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If word is empty.
 
         Examples

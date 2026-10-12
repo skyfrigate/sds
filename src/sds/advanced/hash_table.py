@@ -166,7 +166,7 @@ class HashTableChaining(AbstractHashTable):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If ``capacity < 1`` or ``max_load_factor <= 0``.
 
         Examples
@@ -619,7 +619,7 @@ class HashTableOpenAddressing(AbstractHashTable):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If ``capacity < 2`` or ``max_load_factor`` not in (0, 1).
 
         Examples

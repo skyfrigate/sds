@@ -71,7 +71,7 @@ def viterbi(
 
     Raises
     ------
-    ValueError
+    InvalidParameterError
         If the sequence is empty, contains an unknown symbol, if the model
         is not fully configured, or if every state path has probability
         zero.

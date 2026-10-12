@@ -169,7 +169,7 @@ class AdjacencyListGraph(AbstractGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not in the graph.
 
         Examples

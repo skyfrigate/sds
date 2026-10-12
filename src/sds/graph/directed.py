@@ -58,7 +58,7 @@ Directed edges are rejected in UndirectedGraph:
 >>> g.add_edge(DirectedEdge(n1, n2))
 Traceback (most recent call last):
     ...
-TypeError: UndirectedGraph requires undirected Edge, not DirectedEdge
+sds.core.exceptions.StructureTypeError: UndirectedGraph requires undirected Edge, not DirectedEdge
 
 Notes
 -----
@@ -226,9 +226,9 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Raises
         ------
-        TypeError
+        StructureTypeError
             If node is not a GraphNode.
-        ValueError
+        DuplicateElementError
             If node already exists in the graph.
 
         Examples
@@ -264,7 +264,7 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not in the graph.
 
         Examples
@@ -343,11 +343,12 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Raises
         ------
-        TypeError
+        StructureTypeError
             If edge is not a DirectedEdge.
-        ValueError
-            If source or target node is not in graph, or if edge already
-            exists in simple directed graph.
+        ElementNotFoundError
+            If source or target node is not in graph.
+        DuplicateElementError
+            If edge already exists in simple directed graph.
 
         Examples
         --------
@@ -403,7 +404,7 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If edge is not in the graph.
 
         Examples
@@ -585,7 +586,7 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not in the graph.
 
         Examples
@@ -637,7 +638,7 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not in the graph.
 
         Examples
@@ -685,7 +686,7 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not in the graph.
 
         Examples
@@ -733,7 +734,7 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not in the graph.
 
         Examples
@@ -778,7 +779,7 @@ class DirectedGraph(AbstractDirectedGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not in the graph.
 
         Examples
@@ -1159,7 +1160,7 @@ class UndirectedGraph(Graph):
     >>> g.add_edge(DirectedEdge(n1, n2))
     Traceback (most recent call last):
         ...
-    TypeError: UndirectedGraph requires undirected Edge, not DirectedEdge
+    sds.core.exceptions.StructureTypeError: UndirectedGraph requires undirected Edge, not DirectedEdge
 
     Multi-edges supported:
 
@@ -1221,11 +1222,12 @@ class UndirectedGraph(Graph):
 
         Raises
         ------
-        TypeError
+        StructureTypeError
             If edge is a DirectedEdge or not an Edge instance.
-        ValueError
-            If either node is not in the graph, or if edge already exists
-            and multigraph mode is disabled.
+        ElementNotFoundError
+            If either node is not in the graph.
+        DuplicateElementError
+            If edge already exists and multigraph mode is disabled.
 
         Examples
         --------
@@ -1243,7 +1245,7 @@ class UndirectedGraph(Graph):
         >>> g.add_edge(DirectedEdge(n1, n2))
         Traceback (most recent call last):
             ...
-        TypeError: UndirectedGraph requires undirected Edge, not DirectedEdge
+        sds.core.exceptions.StructureTypeError: UndirectedGraph requires undirected Edge, not DirectedEdge
 
         Notes
         -----

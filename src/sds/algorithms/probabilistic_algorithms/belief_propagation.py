@@ -86,7 +86,7 @@ def belief_propagation(
 
     Raises
     ------
-    ValueError
+    InvalidParameterError
         If the evidence names an unknown variable or state, if
         ``max_iterations`` is not positive, or if the evidence has
         probability zero.

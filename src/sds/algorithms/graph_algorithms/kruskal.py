@@ -71,7 +71,7 @@ def kruskal(graph: WeightedGraph) -> WeightedGraph:
 
     Raises
     ------
-    TypeError
+    StructureTypeError
         If ``graph`` is not a :class:`~sds.graph.WeightedGraph`.
 
     Examples

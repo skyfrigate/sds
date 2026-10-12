@@ -76,9 +76,10 @@ def dijkstra(
 
     Raises
     ------
-    ValueError
-        If ``source`` is not in the graph, or if a negative edge weight is
-        reached from ``source``.
+    ElementNotFoundError
+        If ``source`` is not in the graph.
+    InvalidParameterError
+        If a negative edge weight is reached from ``source``.
 
     Examples
     --------

@@ -64,7 +64,7 @@ def bfs(graph: AbstractGraph, source: GraphNode) -> Iterator[GraphNode]:
 
     Raises
     ------
-    ValueError
+    ElementNotFoundError
         If ``source`` is not in the graph (raised on the first ``next()``).
 
     Examples

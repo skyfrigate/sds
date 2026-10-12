@@ -221,9 +221,9 @@ class Graph(AbstractGraph):
 
         Raises
         ------
-        TypeError
+        StructureTypeError
             If node is not a GraphNode.
-        ValueError
+        DuplicateElementError
             If node already exists in the graph.
 
         Examples
@@ -239,7 +239,7 @@ class Graph(AbstractGraph):
         >>> g.add_node(n1)
         Traceback (most recent call last):
             ...
-        ValueError: Node n1 already exists in graph
+        sds.core.exceptions.DuplicateElementError: Node n1 already exists in graph
 
         Notes
         -----
@@ -265,7 +265,7 @@ class Graph(AbstractGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not in the graph.
 
         Examples
@@ -339,11 +339,12 @@ class Graph(AbstractGraph):
 
         Raises
         ------
-        TypeError
+        StructureTypeError
             If edge is not an Edge instance.
-        ValueError
-            If either node is not in the graph, or if edge already exists
-            and multigraph mode is disabled.
+        ElementNotFoundError
+            If either node is not in the graph.
+        DuplicateElementError
+            If edge already exists and multigraph mode is disabled.
 
         Examples
         --------
@@ -361,7 +362,7 @@ class Graph(AbstractGraph):
         >>> g.add_edge(Edge(n1, n2))
         Traceback (most recent call last):
             ...
-        ValueError: Edge between n1 and n2 already exists...
+        sds.core.exceptions.DuplicateElementError: Edge between n1 and n2 already exists...
 
         But allowed in multigraph:
 
@@ -411,7 +412,7 @@ class Graph(AbstractGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If edge is not in the graph.
 
         Examples
@@ -539,7 +540,7 @@ class Graph(AbstractGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not in the graph.
 
         Examples
@@ -585,7 +586,7 @@ class Graph(AbstractGraph):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not in the graph.
 
         Examples

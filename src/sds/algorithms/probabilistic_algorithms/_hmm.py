@@ -38,7 +38,7 @@ def hmm_accessors(
 
     Raises
     ------
-    ValueError
+    InvalidParameterError
         If the sequence is empty, contains a symbol outside the
         observation domain, or the model is not fully configured.
     """
