@@ -19,6 +19,7 @@ import pytest
 from sds.core.exceptions import (
     DuplicateElementError,
     ElementNotFoundError,
+    InvalidOperationError,
     InvalidParameterError,
 )
 from sds.probabilistic.factor import Factor
@@ -221,7 +222,7 @@ class TestFactorManagement:
         mrf.add_variable(sprinkler)
         # No edge added between rain and sprinkler.
         potential = Factor((rain, sprinkler), binary_cpt_table)
-        with pytest.raises(ValueError, match="not a clique"):
+        with pytest.raises(InvalidOperationError, match="not a clique"):
             mrf.add_factor(potential)
 
     def test_add_factor_over_non_clique_triple_raises(
@@ -243,7 +244,7 @@ class TestFactorManagement:
             for s in sprinkler.domain
             for c in cloudy.domain
         }
-        with pytest.raises(ValueError, match="not a clique"):
+        with pytest.raises(InvalidOperationError, match="not a clique"):
             mrf.add_factor(Factor((rain, sprinkler, cloudy), table))
 
     def test_add_factor_over_full_triangle_clique_succeeds(

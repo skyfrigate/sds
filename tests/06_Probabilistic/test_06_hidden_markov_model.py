@@ -18,7 +18,7 @@ from typing import Callable
 
 import pytest
 
-from sds.core.exceptions import InvalidParameterError
+from sds.core.exceptions import InvalidOperationError, InvalidParameterError
 from sds.probabilistic.factor import Factor
 from sds.probabilistic.hidden_markov_model import HiddenMarkovModel
 from sds.probabilistic.interfaces import AbstractHiddenMarkovModel
@@ -103,13 +103,13 @@ class TestVariableManagement:
         """Test that re-setting the states variable raises ValueError."""
         hmm = HiddenMarkovModel()
         hmm.set_states(weather)
-        with pytest.raises(ValueError, match="already set"):
+        with pytest.raises(InvalidOperationError, match="already set"):
             hmm.set_states(RandomVariable("Weather", ("sunny", "rainy")))
 
     def test_states_unset_raises(self) -> None:
         """Test that states() raises before set_states() is called."""
         hmm = HiddenMarkovModel()
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.states()
 
     def test_set_observations(self, umbrella: RandomVariable) -> None:
@@ -122,13 +122,13 @@ class TestVariableManagement:
         """Test that re-setting the observations variable raises."""
         hmm = HiddenMarkovModel()
         hmm.set_observations(umbrella)
-        with pytest.raises(ValueError, match="already set"):
+        with pytest.raises(InvalidOperationError, match="already set"):
             hmm.set_observations(RandomVariable("Umbrella", ("yes", "no")))
 
     def test_observations_unset_raises(self) -> None:
         """Test that observations() raises before set_observations() is called."""
         hmm = HiddenMarkovModel()
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.observations()
 
     def test_previous_states_derived_automatically(
@@ -144,7 +144,7 @@ class TestVariableManagement:
     def test_previous_states_unset_raises(self) -> None:
         """Test that previous_states() raises before set_states() is called."""
         hmm = HiddenMarkovModel()
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.previous_states()
 
     def test_contains_and_iter(
@@ -188,7 +188,7 @@ class TestComponentValidation:
     ) -> None:
         """Test that setting the initial distribution before states() raises."""
         hmm = HiddenMarkovModel()
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.set_initial_distribution(initial_factor)
 
     def test_set_initial_distribution_wrong_scope_raises(
@@ -215,7 +215,7 @@ class TestComponentValidation:
         """Test that initial_distribution() raises before it is set."""
         hmm = HiddenMarkovModel()
         hmm.set_states(weather)
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.initial_distribution()
 
     def test_set_transition_model(
@@ -242,7 +242,7 @@ class TestComponentValidation:
                 ("rainy", "rainy"): 0.6,
             },
         )
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.set_transition_model(factor)
 
     def test_set_transition_model_wrong_scope_raises(
@@ -287,7 +287,7 @@ class TestComponentValidation:
         """Test that transition_model() raises before it is set."""
         hmm = HiddenMarkovModel()
         hmm.set_states(weather)
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.transition_model()
 
     def test_set_emission_model(
@@ -309,7 +309,7 @@ class TestComponentValidation:
         """Test that setting the emission model before observations() raises."""
         hmm = HiddenMarkovModel()
         hmm.set_states(weather)
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.set_emission_model(emission_factor)
 
     def test_set_emission_model_wrong_scope_raises(
@@ -357,7 +357,7 @@ class TestComponentValidation:
         hmm = HiddenMarkovModel()
         hmm.set_states(weather)
         hmm.set_observations(umbrella)
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.emission_model()
 
 
@@ -465,7 +465,7 @@ class TestJoint:
         hmm = HiddenMarkovModel()
         hmm.set_states(weather)
         hmm.set_observations(umbrella)
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.joint(["sunny"], ["no"])
 
 
@@ -488,9 +488,9 @@ class TestClearAndRepr:
 
         assert len(hmm) == 0
         assert hmm.is_empty()
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.states()
-        with pytest.raises(ValueError, match="not been set"):
+        with pytest.raises(InvalidOperationError, match="not been set"):
             hmm.previous_states()
 
     def test_repr_contains_configured_count(

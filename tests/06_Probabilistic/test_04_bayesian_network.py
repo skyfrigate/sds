@@ -19,6 +19,7 @@ import pytest
 from sds.core.exceptions import (
     DuplicateElementError,
     ElementNotFoundError,
+    InvalidOperationError,
     InvalidParameterError,
 )
 from sds.probabilistic.bayesian_network import BayesianNetwork
@@ -150,7 +151,7 @@ class TestEdgeManagement:
         bn.add_variable(rain)
         bn.add_variable(sprinkler)
         bn.add_edge(rain, sprinkler)
-        with pytest.raises(ValueError, match="cycle"):
+        with pytest.raises(InvalidOperationError, match="cycle"):
             bn.add_edge(sprinkler, rain)
 
     def test_two_node_cycle_does_not_corrupt_state(
@@ -161,7 +162,7 @@ class TestEdgeManagement:
         bn.add_variable(rain)
         bn.add_variable(sprinkler)
         bn.add_edge(rain, sprinkler)
-        with pytest.raises(ValueError, match="cycle"):
+        with pytest.raises(InvalidOperationError, match="cycle"):
             bn.add_edge(sprinkler, rain)
         assert bn.is_acyclic() is True
         assert list(bn.parents(rain)) == []
@@ -178,7 +179,7 @@ class TestEdgeManagement:
             bn.add_variable(var)
         bn.add_edge(rain, sprinkler)
         bn.add_edge(sprinkler, wet_grass)
-        with pytest.raises(ValueError, match="cycle"):
+        with pytest.raises(InvalidOperationError, match="cycle"):
             bn.add_edge(wet_grass, rain)
 
     def test_duplicate_edge_raises(
@@ -484,7 +485,7 @@ class TestJoint:
         bn.add_edge(rain, sprinkler)
         bn.set_cpt(rain, Factor((rain,), {("true",): 0.2, ("false",): 0.8}))
         # Sprinkler's CPT was never set.
-        with pytest.raises(ValueError, match="missing CPT"):
+        with pytest.raises(InvalidOperationError, match="missing CPT"):
             bn.joint({rain: "true", sprinkler: "false"})
 
 
