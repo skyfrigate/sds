@@ -730,27 +730,27 @@ class PriorityItem:
     def __str__(self) -> str:
         return f"{self.data} (priority: {self.priority})"
 
-    def __lt__(self, other: "PriorityItem") -> bool:
+    def __lt__(self, other: object) -> bool:
         if not isinstance(other, PriorityItem):
-            raise NotImplementedError
+            return NotImplemented
         return self.priority < other.priority
 
-    def __le__(self, other: "PriorityItem") -> bool:
+    def __le__(self, other: object) -> bool:
         if not isinstance(other, PriorityItem):
-            raise NotImplementedError
+            return NotImplemented
         return self.priority <= other.priority
 
-    def __gt__(self, other: "PriorityItem") -> bool:
+    def __gt__(self, other: object) -> bool:
         if not isinstance(other, PriorityItem):
-            raise NotImplementedError
+            return NotImplemented
         return self.priority > other.priority
 
-    def __ge__(self, other: "PriorityItem") -> bool:
+    def __ge__(self, other: object) -> bool:
         if not isinstance(other, PriorityItem):
-            raise NotImplementedError
+            return NotImplemented
         return self.priority >= other.priority
 
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, PriorityItem):
-            raise NotImplementedError
+            return NotImplemented
         return self.priority == other.priority

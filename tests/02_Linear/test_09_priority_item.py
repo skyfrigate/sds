@@ -78,23 +78,29 @@ class TestPriorityItemComparison:
         item4 = PriorityItem("Also High", 1)
         assert item2 == item4
 
-    def test_priority_item_comparisons_not_implemented(self, priority_item_list):
+    def test_priority_item_ordering_with_other_type_raises_type_error(
+        self, priority_item_list
+    ):
+        """Ordering against a non-PriorityItem defers to Python: TypeError."""
         item = priority_item_list[0]
 
-        with pytest.raises(NotImplementedError):
+        with pytest.raises(TypeError):
             item > 2
 
-        with pytest.raises(NotImplementedError):
+        with pytest.raises(TypeError):
             item < 1
 
-        with pytest.raises(NotImplementedError):
+        with pytest.raises(TypeError):
             item <= 0
 
-        with pytest.raises(NotImplementedError):
+        with pytest.raises(TypeError):
             item >= 0
 
-        with pytest.raises(NotImplementedError):
-            item != 0
+    def test_priority_item_equality_with_other_type(self, priority_item_list):
+        """Equality against a non-PriorityItem is False, not an error."""
+        item = priority_item_list[0]
 
-        with pytest.raises(NotImplementedError):
-            item == 2
+        assert (item == 2) is False
+        assert (item != 0) is True
+        assert item in [0, item]
+        assert item not in [0, 1]

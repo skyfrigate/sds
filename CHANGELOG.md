@@ -11,6 +11,12 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
 
 ## [Unreleased]
 
+### Fixed
+
+- `PriorityItem` comparisons with an object of another type no longer raise
+  `NotImplementedError`: `==` and `!=` return `False` and `True`, and ordering
+  operators raise `TypeError`, as for built-in types.
+
 ### Removed
 
 - Support for Python 3.10, which reaches end of life in October 2026. The
