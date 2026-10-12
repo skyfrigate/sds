@@ -89,6 +89,7 @@ sds.algorithms.graph.connectivity : Uses DisjointSet for components.
 
 from typing import Any, Dict, Iterator, List, Set
 
+from ..core.exceptions import DuplicateElementError, ElementNotFoundError
 from .interfaces import AbstractDisjointSet
 
 __all__ = ["DisjointSet"]
@@ -281,7 +282,7 @@ class DisjointSet(AbstractDisjointSet):
             raise TypeError(f"Element must be hashable, got {type(element).__name__}")
 
         if element in self._parent:
-            raise ValueError(f"Element {element} already exists in a set")
+            raise DuplicateElementError(f"Element {element} already exists in a set")
 
         self._parent[element] = element
         self._rank[element] = 0
@@ -325,7 +326,7 @@ class DisjointSet(AbstractDisjointSet):
         Path compression flattens the tree structure on each find operation.
         """
         if element not in self._parent:
-            raise ValueError(f"Element {element} is not in any set")
+            raise ElementNotFoundError(f"Element {element} is not in any set")
 
         # Path compression: make all nodes point to root
         if self._parent[element] != element:

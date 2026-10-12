@@ -77,7 +77,7 @@ References
 
 from typing import Iterator, Union
 
-from ..core.exceptions import IndexStructureError
+from ..core.exceptions import IndexStructureError, InvalidParameterError
 from .interfaces import AbstractFenwickTree
 
 __all__ = ["FenwickTree"]
@@ -161,7 +161,7 @@ class FenwickTree(AbstractFenwickTree):
         Time complexity: O(n) — zeroes the internal array.
         """
         if size < 1:
-            raise ValueError(f"size must be at least 1, got {size}")
+            raise InvalidParameterError(f"size must be at least 1, got {size}")
         self._size = size
         # 1-indexed; _tree[0] is unused
         self._tree: list[float] = [0.0] * (size + 1)
@@ -203,7 +203,7 @@ class FenwickTree(AbstractFenwickTree):
         Time complexity: O(n log n).
         """
         if not values:
-            raise ValueError("values must not be empty")
+            raise InvalidParameterError("values must not be empty")
         tree = cls(size=len(values))
         for i, v in enumerate(values, start=1):
             tree.update(i, v)
@@ -368,7 +368,7 @@ class FenwickTree(AbstractFenwickTree):
                 f"right index {right} out of range for FenwickTree of size {self._size}"
             )
         if left > right:
-            raise ValueError(f"left ({left}) must be ≤ right ({right})")
+            raise InvalidParameterError(f"left ({left}) must be ≤ right ({right})")
         if left == 1:
             return self.prefix_sum(right)
         return self.prefix_sum(right) - self.prefix_sum(left - 1)

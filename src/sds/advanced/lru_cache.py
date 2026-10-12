@@ -80,6 +80,7 @@ References
 
 from typing import Any, Iterator, Optional
 
+from ..core.exceptions import InvalidParameterError
 from .interfaces import AbstractLRUCache
 
 __all__ = ["LRUCache"]
@@ -187,7 +188,7 @@ class LRUCache(AbstractLRUCache):
         Time complexity: O(1).
         """
         if capacity < 1:
-            raise ValueError(f"capacity must be at least 1, got {capacity}")
+            raise InvalidParameterError(f"capacity must be at least 1, got {capacity}")
         self._capacity = capacity
         self._evictions = 0
         # key → node

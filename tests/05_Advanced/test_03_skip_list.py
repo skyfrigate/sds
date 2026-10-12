@@ -45,6 +45,7 @@ import random
 import pytest
 
 from sds.advanced import AbstractSkipList, SkipList
+from sds.core.exceptions import InvalidParameterError
 
 # ---------------------------------------------------------------------------
 # TestSkipListCreation
@@ -84,27 +85,27 @@ class TestSkipListCreation:
 
     def test_invalid_max_level_zero(self) -> None:
         """max_level=0 raises ValueError."""
-        with pytest.raises(ValueError, match="max_level"):
+        with pytest.raises(InvalidParameterError, match="max_level"):
             SkipList(max_level=0)
 
     def test_invalid_max_level_negative(self) -> None:
         """Negative max_level raises ValueError."""
-        with pytest.raises(ValueError, match="max_level"):
+        with pytest.raises(InvalidParameterError, match="max_level"):
             SkipList(max_level=-1)
 
     def test_invalid_probability_zero(self) -> None:
         """probability=0.0 raises ValueError."""
-        with pytest.raises(ValueError, match="probability"):
+        with pytest.raises(InvalidParameterError, match="probability"):
             SkipList(probability=0.0)
 
     def test_invalid_probability_one(self) -> None:
         """probability=1.0 raises ValueError."""
-        with pytest.raises(ValueError, match="probability"):
+        with pytest.raises(InvalidParameterError, match="probability"):
             SkipList(probability=1.0)
 
     def test_invalid_probability_above_one(self) -> None:
         """probability > 1.0 raises ValueError."""
-        with pytest.raises(ValueError, match="probability"):
+        with pytest.raises(InvalidParameterError, match="probability"):
             SkipList(probability=2.0)
 
     def test_empty_iteration(self) -> None:

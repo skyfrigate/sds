@@ -49,6 +49,7 @@ TestEdgeCases
 import pytest
 
 from sds.advanced import AbstractLRUCache, LRUCache
+from sds.core.exceptions import InvalidParameterError
 
 # ---------------------------------------------------------------------------
 # TestLRUCacheCreation
@@ -76,12 +77,12 @@ class TestLRUCacheCreation:
 
     def test_invalid_capacity_zero(self) -> None:
         """capacity=0 raises ValueError."""
-        with pytest.raises(ValueError, match="capacity"):
+        with pytest.raises(InvalidParameterError, match="capacity"):
             LRUCache(capacity=0)
 
     def test_invalid_capacity_negative(self) -> None:
         """Negative capacity raises ValueError."""
-        with pytest.raises(ValueError, match="capacity"):
+        with pytest.raises(InvalidParameterError, match="capacity"):
             LRUCache(capacity=-1)
 
     def test_initial_evictions_zero(self) -> None:
