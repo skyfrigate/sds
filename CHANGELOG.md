@@ -11,6 +11,13 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
 
 ## [Unreleased]
 
+### Changed
+
+- `SegmentTree.query()`, `update()` and `get()` raise `IndexStructureError`
+  (an `IndexError`) for out-of-bounds indices, instead of
+  `InvalidOperationError`. `query()` still raises `InvalidOperationError`
+  when `left` is greater than `right` with both bounds valid.
+
 ### Fixed
 
 - `PriorityItem` comparisons with an object of another type no longer raise

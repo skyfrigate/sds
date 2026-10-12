@@ -67,7 +67,7 @@ sds.tree.binary : Binary tree implementations.
 
 from typing import Any, Callable, Iterator, List, Optional, Union
 
-from ..core.exceptions import InvalidOperationError
+from ..core.exceptions import IndexStructureError, InvalidOperationError
 from .interfaces import AbstractSegmentTree
 
 __all__ = ["SegmentTree"]
@@ -317,8 +317,10 @@ class SegmentTree(AbstractSegmentTree):
 
         Raises
         ------
+        IndexStructureError
+            If ``left`` or ``right`` is out of bounds.
         InvalidOperationError
-            If range is invalid.
+            If ``left`` is greater than ``right``.
 
         Examples
         --------
@@ -332,7 +334,11 @@ class SegmentTree(AbstractSegmentTree):
         -----
         Time complexity: O(log n)
         """
-        if left < 0 or right >= self._size or left > right:
+        if not (0 <= left < self._size and 0 <= right < self._size):
+            raise IndexStructureError(
+                f"Invalid range: [{left}, {right}] for array of size {self._size}"
+            )
+        if left > right:
             raise InvalidOperationError(
                 f"Invalid range: [{left}, {right}] for array of size {self._size}"
             )
@@ -396,7 +402,7 @@ class SegmentTree(AbstractSegmentTree):
 
         Raises
         ------
-        InvalidOperationError
+        IndexStructureError
             If index is out of bounds.
 
         Examples
@@ -413,7 +419,7 @@ class SegmentTree(AbstractSegmentTree):
         Time complexity: O(log n)
         """
         if index < 0 or index >= self._size:
-            raise InvalidOperationError(
+            raise IndexStructureError(
                 f"Index {index} out of bounds for array of size {self._size}"
             )
 
@@ -475,7 +481,7 @@ class SegmentTree(AbstractSegmentTree):
 
         Raises
         ------
-        InvalidOperationError
+        IndexStructureError
             If index is out of bounds.
 
         Examples
@@ -489,7 +495,7 @@ class SegmentTree(AbstractSegmentTree):
         Time complexity: O(1)
         """
         if index < 0 or index >= self._size:
-            raise InvalidOperationError(
+            raise IndexStructureError(
                 f"Index {index} out of bounds for array of size {self._size}"
             )
         return self._arr[index]
