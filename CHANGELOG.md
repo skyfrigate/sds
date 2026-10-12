@@ -25,6 +25,12 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
   keeps no dependency. `sds.utils.OptionalDependencyError` (a
   `DataStructureError` and `ImportError`) names the extra to install when a
   feature needs one that is missing (#105).
+- `sds.utils.visualizer`: `to_text()`, `to_mermaid()` and `render()` for
+  linear structures, binary trees (plain, AVL, red-black), general trees,
+  B-trees and graphs; `to_dot()` for graphs; `save_image()` to draw any of
+  them with matplotlib (`image` extra). Output follows the structures'
+  deterministic order, and an optional `label` callable chooses what each
+  node shows (#65).
 
 ### Changed
 
