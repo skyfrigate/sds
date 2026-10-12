@@ -34,11 +34,13 @@ shows ``str(node.data)``, or ``str(item)``.
 
 from typing import Any
 
+from ...core.exceptions import StructureTypeError
+from ._dot import graph_dot
 from ._mermaid import view_mermaid
 from ._text import view_text
-from ._views import Label, build_view
+from ._views import GraphView, Label, build_view
 
-__all__ = ["to_mermaid", "to_text"]
+__all__ = ["to_dot", "to_mermaid", "to_text"]
 
 
 def to_text(structure: Any, *, label: Label = None) -> str:
@@ -134,3 +136,51 @@ def to_mermaid(structure: Any, *, label: Label = None) -> str:
         n0 -->|R| n2
     """
     return view_mermaid(build_view(structure, label))
+
+
+def to_dot(graph: Any, *, label: Label = None) -> str:
+    """Render a graph as Graphviz DOT source.
+
+    Directed graphs become a ``digraph`` with ``->`` edges, the others a
+    ``graph`` with ``--`` edges. Nodes are identified by their ``id`` and
+    labelled with ``label``; weights become edge labels. Producing the
+    source needs no Graphviz install; rendering it does.
+
+    Parameters
+    ----------
+    graph : AbstractGraph
+        The graph to render.
+    label : Callable[[Any], str], optional
+        Labelling function; it receives each node.
+
+    Returns
+    -------
+    str
+        The DOT source.
+
+    Raises
+    ------
+    StructureTypeError
+        If ``graph`` is not a graph: DOT is offered for graphs only.
+
+    Examples
+    --------
+    >>> from sds.graph import DirectedEdge, DirectedGraph, GraphNode
+    >>> graph = DirectedGraph()
+    >>> a, b = GraphNode("A", "n1"), GraphNode("B", "n2")
+    >>> graph.add_node(a)
+    >>> graph.add_node(b)
+    >>> graph.add_edge(DirectedEdge(a, b))
+    >>> print(to_dot(graph))
+    digraph {
+        "n1" [label="A"];
+        "n2" [label="B"];
+        "n1" -> "n2";
+    }
+    """
+    view = build_view(graph, label)
+    if not isinstance(view, GraphView):
+        raise StructureTypeError(
+            f"DOT output is for graphs only, not {type(graph).__name__}"
+        )
+    return graph_dot(view)
