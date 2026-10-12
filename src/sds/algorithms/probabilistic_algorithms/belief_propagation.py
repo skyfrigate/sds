@@ -43,6 +43,7 @@ Messages start uniform and are all recomputed at every iteration (the
 import warnings
 from typing import Dict, List, Mapping, Optional, Tuple
 
+from ...core.exceptions import InvalidParameterError
 from ...probabilistic.factor import Factor
 from ...probabilistic.interfaces import AbstractGraphicalModel
 from ...probabilistic.variable import RandomVariable
@@ -129,7 +130,9 @@ def belief_propagation(
     evidence = dict(evidence or {})
     check_evidence(model, evidence)
     if max_iterations < 1:
-        raise ValueError(f"max_iterations must be positive, got {max_iterations}")
+        raise InvalidParameterError(
+            f"max_iterations must be positive, got {max_iterations}"
+        )
 
     variables = list(model.variables())
     tables: List[Table] = [Table.from_factor(f) for f in model.factors()]
@@ -200,7 +203,7 @@ def _uniform(variable: RandomVariable) -> Message:
 def _normalize(message: Message, variable: RandomVariable) -> Message:
     total = sum(message.values())
     if total <= 0.0:
-        raise ValueError(
+        raise InvalidParameterError(
             f"Belief propagation reached a zero message for '{variable.name}': "
             "the evidence has probability zero under the model"
         )

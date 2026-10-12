@@ -34,6 +34,7 @@ of the graph is no longer bounded by Python's recursion limit.
 
 from typing import Iterator, List, Set
 
+from ...core.exceptions import ElementNotFoundError
 from ...graph.interfaces import AbstractGraph
 from ...graph.node import GraphNode
 
@@ -81,7 +82,7 @@ def dfs(graph: AbstractGraph, source: GraphNode) -> Iterator[GraphNode]:
     Space complexity: O(V) for the visited set and the stack.
     """
     if not graph.has_node(source):
-        raise ValueError(f"Node {source.id} not in graph")
+        raise ElementNotFoundError(f"Node {source.id} not in graph")
     visited: Set[GraphNode] = {source}
     yield source
     stack: List[Iterator[GraphNode]] = [graph.neighbors(source)]

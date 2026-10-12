@@ -21,6 +21,7 @@ from typing import Any, Callable, List, Tuple
 import pytest
 
 from sds.algorithms.sorting import merge_sort, quick_sort
+from sds.core.exceptions import StructureTypeError
 from sds.linear import LinkedList
 
 # Inputs shared by both algorithms: (id, data)
@@ -123,7 +124,7 @@ class TestSortingContract:
     )
     def test_rejects_non_list(self, sorter: Callable[..., List[Any]], bad: Any) -> None:
         """Only Python lists are accepted (#93)."""
-        with pytest.raises(TypeError, match="expects a list"):
+        with pytest.raises(StructureTypeError, match="expects a list"):
             if sorter is merge_sort:
                 merge_sort(bad)
             else:
@@ -134,7 +135,7 @@ class TestSortingContract:
         lst = LinkedList()
         lst.append(2)
         lst.append(1)
-        with pytest.raises(TypeError, match="expects a list"):
+        with pytest.raises(StructureTypeError, match="expects a list"):
             if sorter is merge_sort:
                 merge_sort(lst)  # type: ignore[arg-type]
             else:

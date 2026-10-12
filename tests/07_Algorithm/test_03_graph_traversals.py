@@ -22,6 +22,7 @@ from typing import Any, Callable, Dict, Iterator, List, Set, Tuple
 import pytest
 
 from sds.algorithms.graph_algorithms import bfs, dfs
+from sds.core.exceptions import ElementNotFoundError
 from sds.graph import (
     AdjacencyListGraph,
     AdjacencyMatrixGraph,
@@ -166,7 +167,7 @@ class TestTraversalContract:
     def test_missing_source(self, traversal: Traversal) -> None:
         """A source outside the graph raises ValueError."""
         g, _ = _build(Graph, Edge, "ab", [("a", "b")])
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             list(traversal(g, GraphNode("z", "z")))
 
     def test_is_lazy(self, traversal: Traversal) -> None:
