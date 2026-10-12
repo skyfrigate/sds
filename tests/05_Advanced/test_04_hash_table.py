@@ -58,6 +58,7 @@ from sds.advanced import (
     HashTableChaining,
     HashTableOpenAddressing,
 )
+from sds.core.exceptions import InvalidParameterError
 
 # ---------------------------------------------------------------------------
 # Parametrisation fixture
@@ -96,22 +97,22 @@ class TestHashTableChainingCreation:
 
     def test_invalid_capacity_zero(self) -> None:
         """capacity=0 raises ValueError."""
-        with pytest.raises(ValueError, match="capacity"):
+        with pytest.raises(InvalidParameterError, match="capacity"):
             HashTableChaining(capacity=0)
 
     def test_invalid_capacity_negative(self) -> None:
         """Negative capacity raises ValueError."""
-        with pytest.raises(ValueError, match="capacity"):
+        with pytest.raises(InvalidParameterError, match="capacity"):
             HashTableChaining(capacity=-1)
 
     def test_invalid_load_factor_zero(self) -> None:
         """max_load_factor=0 raises ValueError."""
-        with pytest.raises(ValueError, match="max_load_factor"):
+        with pytest.raises(InvalidParameterError, match="max_load_factor"):
             HashTableChaining(max_load_factor=0)
 
     def test_invalid_load_factor_negative(self) -> None:
         """Negative max_load_factor raises ValueError."""
-        with pytest.raises(ValueError, match="max_load_factor"):
+        with pytest.raises(InvalidParameterError, match="max_load_factor"):
             HashTableChaining(max_load_factor=-0.5)
 
     def test_load_factor_empty(self) -> None:
@@ -144,27 +145,27 @@ class TestHashTableOpenAddressingCreation:
 
     def test_invalid_capacity_one(self) -> None:
         """capacity=1 raises ValueError (must be ≥ 2)."""
-        with pytest.raises(ValueError, match="capacity"):
+        with pytest.raises(InvalidParameterError, match="capacity"):
             HashTableOpenAddressing(capacity=1)
 
     def test_invalid_capacity_zero(self) -> None:
         """capacity=0 raises ValueError."""
-        with pytest.raises(ValueError, match="capacity"):
+        with pytest.raises(InvalidParameterError, match="capacity"):
             HashTableOpenAddressing(capacity=0)
 
     def test_invalid_load_factor_zero(self) -> None:
         """max_load_factor=0.0 raises ValueError."""
-        with pytest.raises(ValueError, match="max_load_factor"):
+        with pytest.raises(InvalidParameterError, match="max_load_factor"):
             HashTableOpenAddressing(max_load_factor=0.0)
 
     def test_invalid_load_factor_one(self) -> None:
         """max_load_factor=1.0 raises ValueError."""
-        with pytest.raises(ValueError, match="max_load_factor"):
+        with pytest.raises(InvalidParameterError, match="max_load_factor"):
             HashTableOpenAddressing(max_load_factor=1.0)
 
     def test_invalid_load_factor_above_one(self) -> None:
         """max_load_factor > 1.0 raises ValueError."""
-        with pytest.raises(ValueError, match="max_load_factor"):
+        with pytest.raises(InvalidParameterError, match="max_load_factor"):
             HashTableOpenAddressing(max_load_factor=1.5)
 
     def test_load_factor_empty(self) -> None:

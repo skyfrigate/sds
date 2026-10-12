@@ -77,6 +77,7 @@ References
 import random
 from typing import Any, Iterator, Optional
 
+from ..core.exceptions import InvalidParameterError
 from .interfaces import AbstractSkipList
 
 __all__ = ["SkipList"]
@@ -215,9 +216,13 @@ class SkipList(AbstractSkipList):
         Time complexity: O(max_level).
         """
         if max_level < 1:
-            raise ValueError(f"max_level must be at least 1, got {max_level}")
+            raise InvalidParameterError(
+                f"max_level must be at least 1, got {max_level}"
+            )
         if not (0.0 < probability < 1.0):
-            raise ValueError(f"probability must be in (0.0, 1.0), got {probability}")
+            raise InvalidParameterError(
+                f"probability must be in (0.0, 1.0), got {probability}"
+            )
 
         self._max_level = max_level
         self._probability = probability

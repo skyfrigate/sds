@@ -79,6 +79,7 @@ import hashlib
 import math
 from typing import Any, Iterator
 
+from ..core.exceptions import InvalidParameterError
 from ..core.interfaces import Collection
 
 __all__ = ["CountMinSketch"]
@@ -172,9 +173,9 @@ class CountMinSketch(Collection):
         Time complexity: O(d × w).
         """
         if not (0.0 < epsilon < 1.0):
-            raise ValueError(f"epsilon must be in (0.0, 1.0), got {epsilon}")
+            raise InvalidParameterError(f"epsilon must be in (0.0, 1.0), got {epsilon}")
         if not (0.0 < delta < 1.0):
-            raise ValueError(f"delta must be in (0.0, 1.0), got {delta}")
+            raise InvalidParameterError(f"delta must be in (0.0, 1.0), got {delta}")
         self._epsilon = epsilon
         self._delta = delta
         self._width = math.ceil(math.e / epsilon)
@@ -221,9 +222,9 @@ class CountMinSketch(Collection):
         Time complexity: O(d × w).
         """
         if width < 1:
-            raise ValueError(f"width must be at least 1, got {width}")
+            raise InvalidParameterError(f"width must be at least 1, got {width}")
         if depth < 1:
-            raise ValueError(f"depth must be at least 1, got {depth}")
+            raise InvalidParameterError(f"depth must be at least 1, got {depth}")
         # Use a tiny epsilon/delta that yield at least width × depth
         # via the standard formula — then override.
         instance = object.__new__(cls)
@@ -334,7 +335,7 @@ class CountMinSketch(Collection):
         Time complexity: O(d).
         """
         if count < 1:
-            raise ValueError(f"count must be at least 1, got {count}")
+            raise InvalidParameterError(f"count must be at least 1, got {count}")
         for row in range(self._depth):
             self._table[row][self._hash(item, row)] += count
         self._total += count
@@ -411,7 +412,7 @@ class CountMinSketch(Collection):
         Time complexity: O(d × w).
         """
         if self._width != other._width or self._depth != other._depth:
-            raise ValueError(
+            raise InvalidParameterError(
                 "Cannot merge sketches with different dimensions. "
                 f"Got ({self._width}×{self._depth}) and "
                 f"({other._width}×{other._depth})."
