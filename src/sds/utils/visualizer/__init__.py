@@ -35,7 +35,7 @@ shows ``str(node.data)``, or ``str(item)``.
 import os
 from typing import Any, Union
 
-from ...core.exceptions import StructureTypeError
+from ...core.exceptions import InvalidParameterError, StructureTypeError
 from ._dot import graph_dot
 from ._image import save_drawing
 from ._layout import layout
@@ -43,7 +43,10 @@ from ._mermaid import view_mermaid
 from ._text import view_text
 from ._views import GraphView, Label, build_view
 
-__all__ = ["save_image", "to_dot", "to_mermaid", "to_text"]
+__all__ = ["FORMATS", "render", "save_image", "to_dot", "to_mermaid", "to_text"]
+
+#: Text formats accepted by :func:`render`.
+FORMATS = ("text", "mermaid", "dot")
 
 
 def to_text(structure: Any, *, label: Label = None) -> str:
@@ -227,3 +230,55 @@ def save_image(
     the global pyplot state is not touched.
     """
     save_drawing(layout(build_view(structure, label)), path)
+
+
+def render(structure: Any, fmt: str = "text", *, label: Label = None) -> str:
+    """Render a structure in one of the text formats.
+
+    Dispatches to :func:`to_text`, :func:`to_mermaid` or :func:`to_dot`;
+    the command line uses it to honour its format option.
+
+    Parameters
+    ----------
+    structure : Any
+        A supported structure (see the module documentation).
+    fmt : str, default "text"
+        One of :data:`FORMATS`: ``"text"``, ``"mermaid"`` or ``"dot"``.
+    label : Callable[[Any], str], optional
+        Labelling function; see the module documentation.
+
+    Returns
+    -------
+    str
+        The rendering.
+
+    Raises
+    ------
+    InvalidParameterError
+        If ``fmt`` is not one of :data:`FORMATS`.
+    StructureTypeError
+        If the structure is not supported, or ``fmt`` is ``"dot"`` and the
+        structure is not a graph.
+
+    Examples
+    --------
+    >>> from sds.linear import Queue
+    >>> queue = Queue()
+    >>> for item in (1, 2):
+    ...     queue.enqueue(item)
+    >>> print(render(queue))
+    front: 1 -> 2 :rear
+    >>> render(queue, "svg")
+    Traceback (most recent call last):
+        ...
+    sds.core.exceptions.InvalidParameterError: Unknown format 'svg': use one of text, mermaid, dot
+    """
+    if fmt == "text":
+        return to_text(structure, label=label)
+    if fmt == "mermaid":
+        return to_mermaid(structure, label=label)
+    if fmt == "dot":
+        return to_dot(structure, label=label)
+    raise InvalidParameterError(
+        f"Unknown format {fmt!r}: use one of {', '.join(FORMATS)}"
+    )
