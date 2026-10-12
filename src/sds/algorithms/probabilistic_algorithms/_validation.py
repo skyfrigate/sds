@@ -16,6 +16,7 @@
 
 from typing import Iterable, Mapping
 
+from ...core.exceptions import ElementNotFoundError
 from ...probabilistic.interfaces import AbstractGraphicalModel
 from ...probabilistic.variable import RandomVariable
 
@@ -35,4 +36,6 @@ def check_variables(
     """Raise ValueError unless every variable belongs to ``model``."""
     for variable in variables:
         if not model.has_variable(variable):
-            raise ValueError(f"'{variable.name}' is not a variable of the model")
+            raise ElementNotFoundError(
+                f"'{variable.name}' is not a variable of the model"
+            )

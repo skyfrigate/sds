@@ -22,6 +22,7 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 import pytest
 
 from sds.algorithms.graph_algorithms import dijkstra
+from sds.core.exceptions import ElementNotFoundError, InvalidParameterError
 from sds.graph import (
     GraphNode,
     WeightedDirectedEdge,
@@ -177,7 +178,7 @@ class TestDijkstra:
             "abc",
             [("a", "b", 1.0), ("b", "c", -1.0)],
         )
-        with pytest.raises(ValueError, match="Negative weight"):
+        with pytest.raises(InvalidParameterError, match="Negative weight"):
             dijkstra(g, n["a"])
 
     def test_unreachable_negative_weight_ignored(self) -> None:
@@ -192,7 +193,7 @@ class TestDijkstra:
 
     def test_missing_source(self) -> None:
         """A source outside the graph raises ValueError."""
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             dijkstra(WeightedGraph(), GraphNode("z", "z"))
 
     def test_uses_outgoing_edges_only(self) -> None:

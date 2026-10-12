@@ -16,6 +16,7 @@
 
 from typing import Callable, List, Sequence, Tuple
 
+from ...core.exceptions import InvalidParameterError
 from ...probabilistic.interfaces import AbstractHiddenMarkovModel
 
 # (initial(s), transition(s, previous), emission(o, s))
@@ -43,7 +44,7 @@ def hmm_accessors(
     """
     sequence = list(observations)
     if not sequence:
-        raise ValueError("observations must contain at least one symbol")
+        raise InvalidParameterError("observations must contain at least one symbol")
     states = hmm.states()
     previous = hmm.previous_states()
     symbols = hmm.observations()

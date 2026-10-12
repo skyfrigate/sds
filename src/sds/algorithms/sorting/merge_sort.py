@@ -33,6 +33,8 @@ elements in total, hence ``O(n log n)`` comparisons whatever the input.
 
 from typing import Any, Callable, List, Optional, Tuple, TypeVar
 
+from ...core.exceptions import StructureTypeError
+
 T = TypeVar("T")
 
 _Pair = Tuple[Any, T]
@@ -87,7 +89,9 @@ def merge_sort(
     for the same element.
     """
     if not isinstance(items, list):
-        raise TypeError(f"merge_sort expects a list, got {type(items).__name__}")
+        raise StructureTypeError(
+            f"merge_sort expects a list, got {type(items).__name__}"
+        )
     pairs: List[_Pair[T]] = [
         (item if key is None else key(item), item) for item in items
     ]

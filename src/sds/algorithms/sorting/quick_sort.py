@@ -42,6 +42,8 @@ keys, so quicksort is not stable: use
 
 from typing import Any, Callable, List, Optional, TypeVar
 
+from ...core.exceptions import StructureTypeError
+
 T = TypeVar("T")
 
 
@@ -108,7 +110,9 @@ def quick_sort(
     keeping its O(n²) worst case, so none is provided.
     """
     if not isinstance(items, list):
-        raise TypeError(f"quick_sort expects a list, got {type(items).__name__}")
+        raise StructureTypeError(
+            f"quick_sort expects a list, got {type(items).__name__}"
+        )
     keys: List[Any] = items if key is None else [key(item) for item in items]
     _Sorter(items, keys, reverse).sort(0, len(items) - 1)
 

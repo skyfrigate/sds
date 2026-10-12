@@ -42,6 +42,7 @@ Kruskal keeps is the lightest one crossing the cut between its two trees.
 from typing import List
 
 from ...advanced.disjoint_set import DisjointSet
+from ...core.exceptions import StructureTypeError
 from ...graph.edge import WeightedEdge
 from ...graph.weighted import WeightedGraph
 from ..sorting import merge_sort
@@ -102,7 +103,9 @@ def kruskal(graph: WeightedGraph) -> WeightedGraph:
     ``graph`` is considered first, so the forest returned is deterministic.
     """
     if not isinstance(graph, WeightedGraph):
-        raise TypeError(f"kruskal expects a WeightedGraph, got {type(graph).__name__}")
+        raise StructureTypeError(
+            f"kruskal expects a WeightedGraph, got {type(graph).__name__}"
+        )
 
     forest = WeightedGraph(allow_multi_edges=False)
     components = DisjointSet()

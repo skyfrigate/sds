@@ -44,6 +44,7 @@ chooses it.
 
 from typing import Dict, List, Mapping, Optional, Sequence, Set
 
+from ...core.exceptions import InvalidParameterError
 from ...probabilistic.factor import Factor
 from ...probabilistic.interfaces import AbstractGraphicalModel
 from ...probabilistic.variable import RandomVariable
@@ -127,14 +128,14 @@ def variable_elimination(
     evidence = dict(evidence or {})
     query = list(query)
     if not query:
-        raise ValueError("query must contain at least one variable")
+        raise InvalidParameterError("query must contain at least one variable")
     if len(set(query)) != len(query):
-        raise ValueError("query contains the same variable twice")
+        raise InvalidParameterError("query contains the same variable twice")
     check_variables(model, query)
     check_evidence(model, evidence)
     observed = [v.name for v in query if v in evidence]
     if observed:
-        raise ValueError(f"query variable(s) {observed} are also observed")
+        raise InvalidParameterError(f"query variable(s) {observed} are also observed")
 
     tables: List[Table] = [
         Table.from_factor(factor).reduce(evidence) for factor in model.factors()
@@ -179,7 +180,7 @@ def _elimination_order(
         order = list(order)
         if len(order) != len(set(order)) or set(order) != set(hidden):
             names = sorted(v.name for v in hidden)
-            raise ValueError(
+            raise InvalidParameterError(
                 f"order must list each hidden variable exactly once: {names}"
             )
         return order

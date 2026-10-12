@@ -24,6 +24,7 @@ from sds.algorithms.probabilistic_algorithms import (
     belief_propagation,
     variable_elimination,
 )
+from sds.core.exceptions import ElementNotFoundError, InvalidParameterError
 from sds.probabilistic import Factor, MarkovRandomField, RandomVariable
 
 
@@ -154,17 +155,17 @@ class TestContract:
     def test_zero_probability_evidence(self, pgm: ModuleType) -> None:
         """Contradictory evidence raises ValueError."""
         bn, v = pgm.sprinkler()
-        with pytest.raises(ValueError, match="probability zero"):
+        with pytest.raises(InvalidParameterError, match="probability zero"):
             belief_propagation(bn, {v["S"]: "false", v["R"]: "false", v["W"]: "true"})
 
     def test_bad_iterations(self, pgm: ModuleType) -> None:
         """max_iterations must be positive."""
         bn, _ = pgm.alarm()
-        with pytest.raises(ValueError, match="positive"):
+        with pytest.raises(InvalidParameterError, match="positive"):
             belief_propagation(bn, max_iterations=0)
 
     def test_unknown_evidence_variable(self, pgm: ModuleType) -> None:
         """Evidence on a foreign variable is rejected."""
         bn, _ = pgm.alarm()
-        with pytest.raises(ValueError, match="not a variable"):
+        with pytest.raises(ElementNotFoundError, match="not a variable"):
             belief_propagation(bn, {RandomVariable("X", ("a", "b")): "a"})

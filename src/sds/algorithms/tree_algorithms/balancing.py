@@ -55,6 +55,7 @@ from __future__ import annotations
 from collections import deque
 from typing import TYPE_CHECKING, Any, Deque, Dict, List, Tuple
 
+from ...core.exceptions import StructureTypeError
 from ...tree.binary import BinarySearchTree
 from .traversals import inorder
 
@@ -177,7 +178,7 @@ def rebalance(tree: BinarySearchTree) -> None:
     the items are still all kept, in order.
     """
     if not isinstance(tree, BinarySearchTree):
-        raise TypeError(
+        raise StructureTypeError(
             f"rebalance expects a BinarySearchTree, got {type(tree).__name__}"
         )
     items: List[Any] = list(inorder(tree))
