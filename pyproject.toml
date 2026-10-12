@@ -38,6 +38,14 @@ classifiers = [
 dependencies = [
 ]
 
+[project.optional-dependencies]
+image = [
+    "matplotlib>=3.10",
+]
+yaml = [
+    "pyyaml>=6.0",
+]
+
 [project.urls]
 Homepage = "https://github.com/skyfrigate/sds"
 Repository = "https://github.com/skyfrigate/sds"
