@@ -6,7 +6,11 @@ ensuring proper functionality of all methods and B-Tree properties.
 
 import pytest
 
-from sds.core.exceptions import EmptyStructureError
+from sds.core.exceptions import (
+    ElementNotFoundError,
+    EmptyStructureError,
+    InvalidParameterError,
+)
 from sds.tree.btree import BTree
 
 
@@ -31,17 +35,17 @@ class TestBTreeInit:
 
     def test_init_invalid_t_zero(self):
         """Test that t=0 raises ValueError."""
-        with pytest.raises(ValueError, match="at least 2"):
+        with pytest.raises(InvalidParameterError, match="at least 2"):
             BTree(t=0)
 
     def test_init_invalid_t_one(self):
         """Test that t=1 raises ValueError."""
-        with pytest.raises(ValueError, match="at least 2"):
+        with pytest.raises(InvalidParameterError, match="at least 2"):
             BTree(t=1)
 
     def test_init_invalid_t_negative(self):
         """Test that negative t raises ValueError."""
-        with pytest.raises(ValueError, match="at least 2"):
+        with pytest.raises(InvalidParameterError, match="at least 2"):
             BTree(t=-5)
 
 
@@ -283,7 +287,7 @@ class TestBTreeRemoveLeaf:
         tree.insert(10)
         tree.insert(20)
 
-        with pytest.raises(ValueError, match="not found"):
+        with pytest.raises(ElementNotFoundError, match="not found"):
             tree.remove(30)
 
 

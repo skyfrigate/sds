@@ -67,7 +67,11 @@ sds.tree.node.TreeNode : Node class used internally.
 from collections import deque
 from typing import Any, Iterator, List, Optional, cast
 
-from ..core.exceptions import EmptyStructureError, InvalidOperationError
+from ..core.exceptions import (
+    ElementNotFoundError,
+    EmptyStructureError,
+    InvalidOperationError,
+)
 from .interfaces import AbstractTree
 from .node import TreeNode
 
@@ -329,7 +333,7 @@ class Tree(AbstractTree):
         """
         parent = self.find_node(parent_data)
         if parent is None:
-            raise ValueError(f"Parent node with data {parent_data} not found")
+            raise ElementNotFoundError(f"Parent node with data {parent_data} not found")
 
         return self.add_child(child_data, parent)
 
@@ -425,7 +429,7 @@ class Tree(AbstractTree):
         # Find parent of node to remove
         node_to_remove = self.find_node(data)
         if node_to_remove is None:
-            raise ValueError(f"Node with data {data} not found")
+            raise ElementNotFoundError(f"Node with data {data} not found")
 
         if node_to_remove.parent is None:
             raise InvalidOperationError("Cannot remove root this way")
@@ -750,7 +754,7 @@ class Tree(AbstractTree):
         """
         node = self.find_node(data)
         if node is None:
-            raise ValueError(f"Node with data {data} not found")
+            raise ElementNotFoundError(f"Node with data {data} not found")
         return node.children.copy()
 
     def get_parent(self, data: Any) -> Optional[TreeNode]:
@@ -818,7 +822,7 @@ class Tree(AbstractTree):
         """
         node = self.find_node(data)
         if node is None:
-            raise ValueError(f"Node with data {data} not found")
+            raise ElementNotFoundError(f"Node with data {data} not found")
         return len(node.children)
 
     def is_leaf(self, data: Any) -> bool:
@@ -855,7 +859,7 @@ class Tree(AbstractTree):
         """
         node = self.find_node(data)
         if node is None:
-            raise ValueError(f"Node with data {data} not found")
+            raise ElementNotFoundError(f"Node with data {data} not found")
         return node.is_leaf()
 
     def leaves(self) -> List[Any]:

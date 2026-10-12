@@ -16,7 +16,7 @@
 
 import pytest
 
-from sds.core.exceptions import EmptyStructureError
+from sds.core.exceptions import ElementNotFoundError, EmptyStructureError
 from sds.tree import AVLNode
 from sds.tree.balanced import AVLTree
 
@@ -215,7 +215,7 @@ class TestAVLTreeRemoval:
         """Test removing non-existing element."""
         avl = AVLTree()
         avl.insert(10)
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             avl.remove(5)
 
     def test_remove_leaf(self) -> None:
