@@ -90,7 +90,7 @@ Full License Text
 The complete Apache 2.0 license is available at:
 
 * Online: https://www.apache.org/licenses/LICENSE-2.0
-* Repository: `LICENSE.md <https://github.com/skyfrigate/sds-tools/blob/master/LICENSE.md>`_
+* Repository: `LICENSE.md <https://github.com/skyfrigate/sds/blob/master/LICENSE.md>`_
 
 Documentation License (CC BY-NC 4.0)
 ====================================

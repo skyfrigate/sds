@@ -400,7 +400,7 @@ Installation
 
 .. code-block:: bash
 
-   pip install sds-tools
+   pip install pysds-tools
 
 Basic Usage
 -----------

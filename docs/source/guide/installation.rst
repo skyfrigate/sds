@@ -21,7 +21,7 @@ For most users, installing from PyPI is the simplest method:
 
 .. code-block:: bash
 
-   pip install sds-tools
+   pip install pysds-tools
 
 This will install the latest stable release of SDS-Tools and its dependencies.
 
@@ -63,7 +63,7 @@ Python's built-in ``venv`` module provides a simple way to create virtual enviro
 
 .. code-block:: bash
 
-   pip install sds-tools
+   pip install pysds-tools
 
 **Deactivate when done:**
 
@@ -99,7 +99,7 @@ Using virtualenv
 
 .. code-block:: bash
 
-   pip install sds-tools
+   pip install pysds-tools
 
 Using uv (Recommended for Speed)
 ---------------------------------
@@ -138,10 +138,10 @@ It's significantly faster than pip.
 .. code-block:: bash
 
    # Install SDS-Tools
-   uv pip install sds-tools
+   uv pip install pysds-tools
 
    # Or directly with uv (faster)
-   uv pip install sds-tools --resolution highest
+   uv pip install pysds-tools --resolution highest
 
 **Why use uv?**
 
@@ -193,8 +193,8 @@ To contribute to SDS-Tools, install development dependencies:
 
 .. code-block:: bash
 
-   # Install with dev dependencies (if using optional-dependencies)
-   pip install -e ".[dev]"
+   # Dependency groups (PEP 735) need pip 25.1 or later
+   pip install -e . --group dev
 
 **Using uv with dependency groups (PEP 735):**
 
@@ -225,7 +225,7 @@ To build the documentation locally:
 
 .. code-block:: bash
 
-   pip install -e ".[docs]"
+   pip install --group docs  # pip 25.1 or later
 
 **Using uv:**
 
@@ -306,10 +306,10 @@ Upgrade to the Latest Version
 .. code-block:: bash
 
    # Using pip
-   pip install --upgrade sds-tools
+   pip install --upgrade pysds-tools
 
    # Using uv
-   uv pip install --upgrade sds-tools
+   uv pip install --upgrade pysds-tools
 
 Upgrade from Source
 -------------------
@@ -329,10 +329,10 @@ Remove SDS-Tools
 .. code-block:: bash
 
    # Using pip
-   pip uninstall sds-tools
+   pip uninstall pysds-tools
 
    # Using uv
-   uv pip uninstall sds-tools
+   uv pip uninstall pysds-tools
 
 Remove Virtual Environment
 ---------------------------
@@ -411,8 +411,8 @@ Import Errors
 **Solution:**
 
 1. Ensure you're in the correct virtual environment
-2. Verify installation: ``pip list | grep sds-tools``
-3. Reinstall: ``pip install --force-reinstall sds-tools``
+2. Verify installation: ``pip list | grep pysds-tools``
+3. Reinstall: ``pip install --force-reinstall pysds-tools``
 
 Permission Errors
 -----------------
@@ -422,7 +422,7 @@ Permission Errors
 **Solution:**
 
 1. Use a virtual environment (recommended)
-2. Or install for user only: ``pip install --user sds-tools``
+2. Or install for user only: ``pip install --user pysds-tools``
 
 SSL Certificate Errors
 ----------------------
@@ -437,7 +437,7 @@ SSL Certificate Errors
    pip install --upgrade pip
 
    # Use trusted host (temporary solution)
-   pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org sds-tools
+   pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org pysds-tools
 
 Dependency Conflicts
 --------------------
@@ -455,7 +455,7 @@ Getting Help
 
 If you encounter issues:
 
-* **Documentation**: https://sds-tools.readthedocs.io
+* **Documentation**: https://pysds-tools.readthedocs.io
 * **Issue Tracker**: https://github.com/skyfrigate/sds/issues
 * **Discussions**: https://github.com/skyfrigate/sds/discussions
 

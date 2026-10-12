@@ -485,7 +485,7 @@ Installation and Import
 .. code-block:: python
 
    # Install
-   pip install sds-tools
+   pip install pysds-tools
    
    # Import
    from sds.graphs import Graph, GraphNode, Edge
