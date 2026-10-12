@@ -84,6 +84,31 @@ from sds.algorithms.sorting import merge_sort
 merge_sort([3, 1, 2])  # [1, 2, 3]
 ```
 
+## Visualisation
+
+`sds.utils.visualizer` renders linear structures, trees and graphs as text,
+as Mermaid or, for graphs, as Graphviz DOT source, with no dependency;
+`save_image()` draws them with matplotlib (`image` extra).
+
+```python
+from sds.tree import BinarySearchTree
+from sds.utils.visualizer import save_image, to_mermaid, to_text
+
+tree = BinarySearchTree()
+for key in (50, 30, 70, 20, 40):
+    tree.insert(key)
+
+print(to_text(tree))
+# 50
+# ├── L: 30
+# │   ├── L: 20
+# │   └── R: 40
+# └── R: 70
+
+to_mermaid(tree)              # "flowchart TD\n    n0[\"50\"]\n..."
+save_image(tree, "tree.png")  # needs pysds-tools[image]
+```
+
 ## Architecture
 
 The project is organized into thematic modules, one per family of structures:
