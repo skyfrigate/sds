@@ -19,7 +19,7 @@ import random
 
 import pytest
 
-from sds.core.exceptions import InvalidOperationError
+from sds.core.exceptions import IndexStructureError, InvalidOperationError
 from sds.tree.segment_tree import SegmentTree
 
 
@@ -197,13 +197,13 @@ class TestSegmentTreeUpdate:
     def test_update_out_of_bounds_raises_error(self) -> None:
         """Test updating out of bounds raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError, match="Index 5 out of bounds"):
+        with pytest.raises(IndexStructureError, match="Index 5 out of bounds"):
             tree.update(5, 10)
 
     def test_update_negative_index_raises_error(self) -> None:
         """Test updating negative index raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError, match="Index -1 out of bounds"):
+        with pytest.raises(IndexStructureError, match="Index -1 out of bounds"):
             tree.update(-1, 10)
 
     def test_update_affects_only_relevant_queries(self) -> None:
@@ -227,20 +227,36 @@ class TestSegmentTreeQueryValidation:
     def test_query_out_of_bounds_raises_error(self) -> None:
         """Test querying out of bounds raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError, match="Invalid range"):
+        with pytest.raises(IndexStructureError, match="Invalid range"):
             tree.query(0, 5)
 
     def test_query_negative_index_raises_error(self) -> None:
         """Test querying negative index raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError, match="Invalid range"):
+        with pytest.raises(IndexStructureError, match="Invalid range"):
             tree.query(-1, 2)
 
     def test_query_both_indices_out_of_bounds(self) -> None:
         """Test querying with both indices out of bounds."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError, match="Invalid range"):
+        with pytest.raises(IndexStructureError, match="Invalid range"):
             tree.query(10, 20)
+
+    def test_query_left_beyond_size_is_index_error(self) -> None:
+        """A left bound past the end is an index error, not an inverted range."""
+        tree = SegmentTree([1, 2, 3])
+        with pytest.raises(IndexStructureError, match="Invalid range"):
+            tree.query(5, 1)
+
+    def test_out_of_bounds_is_an_index_error(self) -> None:
+        """Out-of-bounds access is catchable as the built-in IndexError."""
+        tree = SegmentTree([1, 2, 3])
+        with pytest.raises(IndexError):
+            tree.query(0, 5)
+        with pytest.raises(IndexError):
+            tree.get(3)
+        with pytest.raises(IndexError):
+            tree.update(-1, 0)
 
 
 class TestSegmentTreeGetSet:
@@ -256,13 +272,13 @@ class TestSegmentTreeGetSet:
     def test_get_out_of_bounds_raises_error(self) -> None:
         """Test getting out of bounds raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError, match="Index 5 out of bounds"):
+        with pytest.raises(IndexStructureError, match="Index 5 out of bounds"):
             tree.get(5)
 
     def test_get_negative_index_raises_error(self) -> None:
         """Test getting negative index raises error."""
         tree = SegmentTree([1, 2, 3])
-        with pytest.raises(InvalidOperationError, match="Index -1 out of bounds"):
+        with pytest.raises(IndexStructureError, match="Index -1 out of bounds"):
             tree.get(-1)
 
     def test_array_indexing_get(self) -> None:
