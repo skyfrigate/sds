@@ -16,6 +16,7 @@
 
 import pytest
 
+from sds.core.exceptions import InvalidParameterError
 from sds.probabilistic.factor import Factor
 from sds.probabilistic.variable import RandomVariable
 
@@ -40,17 +41,17 @@ class TestFactorCreation:
 
     def test_empty_scope_raises(self) -> None:
         """Test that an empty scope raises ValueError."""
-        with pytest.raises(ValueError, match="at least one variable"):
+        with pytest.raises(InvalidParameterError, match="at least one variable"):
             Factor((), {})
 
     def test_missing_entries_raise(self, rain: RandomVariable) -> None:
         """Test that an incomplete table (missing a combination) raises."""
-        with pytest.raises(ValueError, match="incomplete or invalid"):
+        with pytest.raises(InvalidParameterError, match="incomplete or invalid"):
             Factor((rain,), {("true",): 0.2})  # missing ("false",)
 
     def test_unknown_key_raises(self, rain: RandomVariable) -> None:
         """Test that a table with a key outside the domain raises."""
-        with pytest.raises(ValueError, match="incomplete or invalid"):
+        with pytest.raises(InvalidParameterError, match="incomplete or invalid"):
             Factor(
                 (rain,),
                 {("true",): 0.2, ("false",): 0.7, ("maybe",): 0.1},
@@ -58,7 +59,7 @@ class TestFactorCreation:
 
     def test_negative_value_raises(self, rain: RandomVariable) -> None:
         """Test that a negative table value raises ValueError."""
-        with pytest.raises(ValueError, match="non-negative"):
+        with pytest.raises(InvalidParameterError, match="non-negative"):
             Factor((rain,), {("true",): -0.1, ("false",): 1.1})
 
     def test_full_cartesian_product_required_for_two_variables(
@@ -71,7 +72,7 @@ class TestFactorCreation:
             ("false", "true"): 0.4,
             # missing ("false", "false")
         }
-        with pytest.raises(ValueError, match="incomplete or invalid"):
+        with pytest.raises(InvalidParameterError, match="incomplete or invalid"):
             Factor((rain, sprinkler), incomplete)
 
 

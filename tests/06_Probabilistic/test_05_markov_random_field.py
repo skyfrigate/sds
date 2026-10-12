@@ -16,7 +16,11 @@
 
 import pytest
 
-from sds.core.exceptions import DuplicateElementError
+from sds.core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    InvalidParameterError,
+)
 from sds.probabilistic.factor import Factor
 from sds.probabilistic.interfaces import AbstractMarkovRandomField
 from sds.probabilistic.markov_random_field import MarkovRandomField
@@ -50,7 +54,7 @@ class TestVariableManagement:
         """Test that re-adding the same variable name raises ValueError."""
         mrf = MarkovRandomField()
         mrf.add_variable(rain)
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             mrf.add_variable(RandomVariable("Rain", ("true", "false")))
 
     def test_has_variable(
@@ -118,7 +122,7 @@ class TestEdgeManagement:
         """Test that referencing an unregistered variable raises ValueError."""
         mrf = MarkovRandomField()
         mrf.add_variable(sprinkler)
-        with pytest.raises(ValueError, match="not in the field"):
+        with pytest.raises(ElementNotFoundError, match="not in the field"):
             mrf.add_edge(rain, sprinkler)
 
     def test_add_edge_unknown_second_raises(
@@ -127,14 +131,14 @@ class TestEdgeManagement:
         """Test that referencing an unregistered second variable raises ValueError."""
         mrf = MarkovRandomField()
         mrf.add_variable(rain)
-        with pytest.raises(ValueError, match="not in the field"):
+        with pytest.raises(ElementNotFoundError, match="not in the field"):
             mrf.add_edge(rain, sprinkler)
 
     def test_self_loop_raises(self, rain: RandomVariable) -> None:
         """Test that a variable cannot neighbor itself."""
         mrf = MarkovRandomField()
         mrf.add_variable(rain)
-        with pytest.raises(ValueError, match="Self-loop"):
+        with pytest.raises(InvalidParameterError, match="Self-loop"):
             mrf.add_edge(rain, rain)
 
     def test_cycle_is_allowed(
@@ -192,7 +196,7 @@ class TestFactorManagement:
     def test_add_factor_unknown_variable_raises(self, rain: RandomVariable) -> None:
         """Test that a factor over an unregistered variable raises."""
         mrf = MarkovRandomField()
-        with pytest.raises(ValueError, match="not in the field"):
+        with pytest.raises(ElementNotFoundError, match="not in the field"):
             mrf.add_factor(Factor((rain,), {("true",): 0.3, ("false",): 0.7}))
 
     def test_add_factor_over_single_variable_never_needs_a_clique_check(
@@ -294,7 +298,7 @@ class TestFactorManagement:
     def test_factors_for_unknown_variable_raises(self, rain: RandomVariable) -> None:
         """Test that factors_for() on an unregistered variable raises."""
         mrf = MarkovRandomField()
-        with pytest.raises(ValueError, match="not in the field"):
+        with pytest.raises(ElementNotFoundError, match="not in the field"):
             list(mrf.factors_for(rain))
 
 

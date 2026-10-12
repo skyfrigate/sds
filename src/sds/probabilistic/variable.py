@@ -49,6 +49,8 @@ sds.graph.node : Structural precedent (``GraphNode``) for this pattern.
 
 from typing import Tuple
 
+from ..core.exceptions import ElementNotFoundError, InvalidParameterError
+
 __all__ = ["RandomVariable"]
 
 
@@ -98,12 +100,14 @@ class RandomVariable:
 
     def __init__(self, name: str, domain: Tuple[str, ...]) -> None:
         if len(domain) < 2:
-            raise ValueError(
+            raise InvalidParameterError(
                 f"RandomVariable '{name}' domain must have at least 2 states, "
                 f"got {len(domain)}"
             )
         if len(set(domain)) != len(domain):
-            raise ValueError(f"RandomVariable '{name}' domain contains duplicates")
+            raise InvalidParameterError(
+                f"RandomVariable '{name}' domain contains duplicates"
+            )
         self._name = name
         self._domain = tuple(domain)
 
@@ -143,7 +147,7 @@ class RandomVariable:
         try:
             return self._domain.index(state)
         except ValueError as exc:
-            raise ValueError(
+            raise ElementNotFoundError(
                 f"'{state}' is not a valid state of RandomVariable '{self._name}' "
                 f"(domain={self._domain})"
             ) from exc

@@ -63,6 +63,11 @@ sds.graph.graph.Graph : Composed for topology.
 
 from typing import Any, Dict, Iterator, List, Mapping
 
+from ..core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    InvalidParameterError,
+)
 from ..graph import Edge, Graph, GraphNode
 from .factor import Factor
 from .interfaces import AbstractMarkovRandomField
@@ -130,7 +135,7 @@ class MarkovRandomField(AbstractMarkovRandomField):
     def add_variable(self, variable: RandomVariable) -> None:
         """See AbstractGraphicalModel.add_variable."""
         if variable.name in self._variables:
-            raise ValueError(f"Variable '{variable.name}' already exists")
+            raise DuplicateElementError(f"Variable '{variable.name}' already exists")
         node = GraphNode(variable, variable.name)
         self._graph.add_node(node)
         self._variables[variable.name] = variable
@@ -155,11 +160,11 @@ class MarkovRandomField(AbstractMarkovRandomField):
     def add_edge(self, first: RandomVariable, second: RandomVariable) -> None:
         """See AbstractMarkovRandomField.add_edge."""
         if not self.has_variable(first):
-            raise ValueError(f"'{first.name}' is not in the field")
+            raise ElementNotFoundError(f"'{first.name}' is not in the field")
         if not self.has_variable(second):
-            raise ValueError(f"'{second.name}' is not in the field")
+            raise ElementNotFoundError(f"'{second.name}' is not in the field")
         if first == second:
-            raise ValueError(f"Self-loop is not allowed ('{first.name}')")
+            raise InvalidParameterError(f"Self-loop is not allowed ('{first.name}')")
 
         edge = Edge(self._nodes[first.name], self._nodes[second.name])
         self._graph.add_edge(edge)
@@ -186,7 +191,7 @@ class MarkovRandomField(AbstractMarkovRandomField):
         """
         for variable in factor.scope:
             if not self.has_variable(variable):
-                raise ValueError(f"'{variable.name}' is not in the field")
+                raise ElementNotFoundError(f"'{variable.name}' is not in the field")
         self._validate_clique(factor)
         self._factors.append(factor)
 
@@ -213,7 +218,7 @@ class MarkovRandomField(AbstractMarkovRandomField):
     def factors_for(self, variable: RandomVariable) -> Iterator[Factor]:
         """See AbstractGraphicalModel.factors_for."""
         if not self.has_variable(variable):
-            raise ValueError(f"'{variable.name}' is not in the field")
+            raise ElementNotFoundError(f"'{variable.name}' is not in the field")
         for factor in self._factors:
             if variable in factor.scope:
                 yield factor

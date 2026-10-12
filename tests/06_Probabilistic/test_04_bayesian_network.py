@@ -16,7 +16,11 @@
 
 import pytest
 
-from sds.core.exceptions import DuplicateElementError
+from sds.core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    InvalidParameterError,
+)
 from sds.probabilistic.bayesian_network import BayesianNetwork
 from sds.probabilistic.factor import Factor
 from sds.probabilistic.interfaces import AbstractBayesianNetwork
@@ -51,7 +55,7 @@ class TestVariableManagement:
         """Test that re-adding the same variable name raises ValueError."""
         bn = BayesianNetwork()
         bn.add_variable(rain)
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             bn.add_variable(RandomVariable("Rain", ("true", "false")))
 
     def test_has_variable(
@@ -119,7 +123,7 @@ class TestEdgeManagement:
         """Test that referencing an unregistered parent raises ValueError."""
         bn = BayesianNetwork()
         bn.add_variable(sprinkler)
-        with pytest.raises(ValueError, match="not in the network"):
+        with pytest.raises(ElementNotFoundError, match="not in the network"):
             bn.add_edge(rain, sprinkler)
 
     def test_add_edge_unknown_child_raises(
@@ -128,14 +132,14 @@ class TestEdgeManagement:
         """Test that referencing an unregistered child raises ValueError."""
         bn = BayesianNetwork()
         bn.add_variable(rain)
-        with pytest.raises(ValueError, match="not in the network"):
+        with pytest.raises(ElementNotFoundError, match="not in the network"):
             bn.add_edge(rain, sprinkler)
 
     def test_self_loop_raises(self, rain: RandomVariable) -> None:
         """Test that a variable cannot be its own parent."""
         bn = BayesianNetwork()
         bn.add_variable(rain)
-        with pytest.raises(ValueError, match="Self-loop"):
+        with pytest.raises(InvalidParameterError, match="Self-loop"):
             bn.add_edge(rain, rain)
 
     def test_two_node_cycle_raises(
@@ -252,7 +256,7 @@ class TestConditionalProbabilityTables:
     def test_set_cpt_unknown_variable_raises(self, rain: RandomVariable) -> None:
         """Test that setting a CPT for an unregistered variable raises."""
         bn = BayesianNetwork()
-        with pytest.raises(ValueError, match="not in the network"):
+        with pytest.raises(ElementNotFoundError, match="not in the network"):
             bn.set_cpt(rain, Factor((rain,), {("true",): 0.2, ("false",): 0.8}))
 
     def test_set_cpt_wrong_leading_variable_raises(
@@ -272,7 +276,7 @@ class TestConditionalProbabilityTables:
                 ("false", "false"): 0.6,
             },
         )
-        with pytest.raises(ValueError, match="must start with"):
+        with pytest.raises(InvalidParameterError, match="must start with"):
             bn.set_cpt(sprinkler, wrong_scope_factor)
 
     def test_set_cpt_missing_parent_in_scope_raises(
@@ -284,7 +288,7 @@ class TestConditionalProbabilityTables:
         bn.add_variable(sprinkler)
         bn.add_edge(rain, sprinkler)
         no_parent_factor = Factor((sprinkler,), {("true",): 0.3, ("false",): 0.7})
-        with pytest.raises(ValueError, match="parents"):
+        with pytest.raises(InvalidParameterError, match="parents"):
             bn.set_cpt(sprinkler, no_parent_factor)
 
     def test_set_cpt_extra_variable_in_scope_raises(
@@ -304,7 +308,7 @@ class TestConditionalProbabilityTables:
                 ("false", "false"): 0.7,
             },
         )
-        with pytest.raises(ValueError, match="parents"):
+        with pytest.raises(InvalidParameterError, match="parents"):
             bn.set_cpt(sprinkler, factor_with_unrelated_scope)
 
     def test_set_cpt_not_normalized_raises(self, rain: RandomVariable) -> None:
@@ -312,7 +316,7 @@ class TestConditionalProbabilityTables:
         bn = BayesianNetwork()
         bn.add_variable(rain)
         bad_factor = Factor((rain,), {("true",): 0.5, ("false",): 0.9})
-        with pytest.raises(ValueError, match="not normalized"):
+        with pytest.raises(InvalidParameterError, match="not normalized"):
             bn.set_cpt(rain, bad_factor)
 
     def test_set_cpt_normalization_checked_per_parent_configuration(
@@ -334,7 +338,7 @@ class TestConditionalProbabilityTables:
             ("true", "false"): 0.5,
             ("false", "false"): 0.9,  # sums to 1.4, not 1.0
         }
-        with pytest.raises(ValueError, match="not normalized"):
+        with pytest.raises(InvalidParameterError, match="not normalized"):
             bn.set_cpt(sprinkler, Factor((sprinkler, rain), broken_table))
 
     def test_add_factor_delegates_to_set_cpt(self, rain: RandomVariable) -> None:
@@ -404,7 +408,7 @@ class TestConditionalProbabilityTables:
     def test_factors_for_unknown_variable_raises(self, rain: RandomVariable) -> None:
         """Test that factors_for() on an unregistered variable raises."""
         bn = BayesianNetwork()
-        with pytest.raises(ValueError, match="not in the network"):
+        with pytest.raises(ElementNotFoundError, match="not in the network"):
             list(bn.factors_for(rain))
 
     def test_factors_for_empty_before_any_cpt_set(self, rain: RandomVariable) -> None:

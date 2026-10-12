@@ -65,6 +65,11 @@ import math
 from itertools import product
 from typing import Any, Dict, Iterator, List, Mapping, Tuple
 
+from ..core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    InvalidParameterError,
+)
 from ..graph import DirectedEdge, DirectedGraph, GraphNode
 from .factor import Factor
 from .interfaces import AbstractBayesianNetwork
@@ -130,7 +135,7 @@ class BayesianNetwork(AbstractBayesianNetwork):
     def add_variable(self, variable: RandomVariable) -> None:
         """See AbstractGraphicalModel.add_variable."""
         if variable.name in self._variables:
-            raise ValueError(f"Variable '{variable.name}' already exists")
+            raise DuplicateElementError(f"Variable '{variable.name}' already exists")
         node = GraphNode(variable, variable.name)
         self._graph.add_node(node)
         self._variables[variable.name] = variable
@@ -155,11 +160,11 @@ class BayesianNetwork(AbstractBayesianNetwork):
     def add_edge(self, parent: RandomVariable, child: RandomVariable) -> None:
         """See AbstractBayesianNetwork.add_edge."""
         if not self.has_variable(parent):
-            raise ValueError(f"'{parent.name}' is not in the network")
+            raise ElementNotFoundError(f"'{parent.name}' is not in the network")
         if not self.has_variable(child):
-            raise ValueError(f"'{child.name}' is not in the network")
+            raise ElementNotFoundError(f"'{child.name}' is not in the network")
         if parent == child:
-            raise ValueError(f"Self-loop is not allowed ('{parent.name}')")
+            raise InvalidParameterError(f"Self-loop is not allowed ('{parent.name}')")
 
         edge = DirectedEdge(self._nodes[parent.name], self._nodes[child.name])
         self._graph.add_edge(edge)
@@ -194,16 +199,16 @@ class BayesianNetwork(AbstractBayesianNetwork):
     def set_cpt(self, variable: RandomVariable, factor: Factor) -> None:
         """See AbstractBayesianNetwork.set_cpt."""
         if not self.has_variable(variable):
-            raise ValueError(f"'{variable.name}' is not in the network")
+            raise ElementNotFoundError(f"'{variable.name}' is not in the network")
 
         parent_set = set(self.parents(variable))
         if len(factor.scope) == 0 or factor.scope[0] != variable:
-            raise ValueError(
+            raise InvalidParameterError(
                 f"CPT scope for '{variable.name}' must start with '{variable.name}' "
                 f"itself, got scope={[v.name for v in factor.scope]}"
             )
         if set(factor.scope[1:]) != parent_set:
-            raise ValueError(
+            raise InvalidParameterError(
                 f"CPT scope for '{variable.name}' must be "
                 f"{{'{variable.name}'}} \u222a parents "
                 f"({sorted(v.name for v in parent_set)}), "
@@ -229,7 +234,7 @@ class BayesianNetwork(AbstractBayesianNetwork):
                 assignment[variable] = state
                 total += factor.value(assignment)
             if not math.isclose(total, 1.0, abs_tol=_NORMALIZATION_TOLERANCE):
-                raise ValueError(
+                raise InvalidParameterError(
                     f"CPT for '{variable.name}' is not normalized: values for "
                     f"parent configuration {dict(zip((v.name for v in parent_vars), parent_states))} "
                     f"sum to {total}, expected 1.0"
@@ -243,7 +248,9 @@ class BayesianNetwork(AbstractBayesianNetwork):
         :meth:`set_cpt`.
         """
         if len(factor.scope) == 0:
-            raise ValueError("Factor scope must contain at least one variable")
+            raise InvalidParameterError(
+                "Factor scope must contain at least one variable"
+            )
         self.set_cpt(factor.scope[0], factor)
 
     def factors(self) -> Iterator[Factor]:
@@ -258,7 +265,7 @@ class BayesianNetwork(AbstractBayesianNetwork):
         parent — not just ``get_cpt(variable)``.
         """
         if not self.has_variable(variable):
-            raise ValueError(f"'{variable.name}' is not in the network")
+            raise ElementNotFoundError(f"'{variable.name}' is not in the network")
         for factor in self._cpts.values():
             if variable in factor.scope:
                 yield factor
