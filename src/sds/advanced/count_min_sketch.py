@@ -152,7 +152,7 @@ class CountMinSketch(Collection):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If *epsilon* or *delta* is not in (0.0, 1.0).
 
         Examples
@@ -208,7 +208,7 @@ class CountMinSketch(Collection):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If *width* or *depth* is less than 1.
 
         Examples
@@ -320,7 +320,7 @@ class CountMinSketch(Collection):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If *count* < 1.
 
         Examples
@@ -394,7 +394,7 @@ class CountMinSketch(Collection):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If the two sketches have different *width* or *depth*.
 
         Examples

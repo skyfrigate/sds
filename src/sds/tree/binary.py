@@ -250,7 +250,7 @@ class BinaryTree(AbstractBinaryTree):
         ------
         EmptyStructureError
             If the tree is empty.
-        ValueError
+        ElementNotFoundError
             If the item is not found.
 
         Examples
@@ -707,7 +707,7 @@ class BinarySearchTree(AbstractBinaryTree):
         ------
         EmptyStructureError
             If the tree is empty.
-        ValueError
+        ElementNotFoundError
             If the item is not found.
 
         Examples

@@ -147,7 +147,7 @@ class FenwickTree(AbstractFenwickTree):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If ``size < 1``.
 
         Examples
@@ -187,7 +187,7 @@ class FenwickTree(AbstractFenwickTree):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If *values* is empty.
 
         Examples
@@ -342,7 +342,7 @@ class FenwickTree(AbstractFenwickTree):
         ------
         IndexError
             If *left* or *right* is out of ``[1, size]``.
-        ValueError
+        InvalidParameterError
             If *left* > *right*.
 
         Examples

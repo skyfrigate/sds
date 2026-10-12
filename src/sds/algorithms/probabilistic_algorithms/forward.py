@@ -74,7 +74,7 @@ def forward(
 
     Raises
     ------
-    ValueError
+    InvalidParameterError
         If the sequence is empty, contains an unknown symbol, if the model
         is not fully configured, or if the sequence has probability zero
         under the model.

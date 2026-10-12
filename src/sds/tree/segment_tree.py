@@ -197,7 +197,7 @@ class SegmentTree(AbstractSegmentTree):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If array is empty or operation is invalid.
         """
         super().__init__()
@@ -235,7 +235,7 @@ class SegmentTree(AbstractSegmentTree):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If operation is not recognized.
         """
         if operation == "sum":

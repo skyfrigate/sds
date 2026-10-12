@@ -990,7 +990,7 @@ class BTreeNode(Node):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If t < 2.
 
         Examples

@@ -139,7 +139,7 @@ def rebalance(tree: BinarySearchTree) -> None:
 
     Raises
     ------
-    TypeError
+    StructureTypeError
         If ``tree`` is not a ``BinarySearchTree``. ``AVLTree`` and
         ``RedBlackTree`` are rejected too: they keep themselves balanced.
 

@@ -70,7 +70,7 @@ def quick_sort(
 
     Raises
     ------
-    TypeError
+    StructureTypeError
         If ``items`` is not a ``list``, or if two keys cannot be compared.
 
     Examples

@@ -300,7 +300,7 @@ class BayesianNetwork(AbstractBayesianNetwork):
 
         Raises
         ------
-        ValueError
+        InvalidOperationError
             If one or more variables do not have a CPT assigned yet — the
             product would silently omit their contribution otherwise.
         """

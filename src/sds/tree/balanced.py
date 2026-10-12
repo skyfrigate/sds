@@ -387,7 +387,7 @@ class AVLTree(AbstractBinaryTree):
         ------
         EmptyStructureError
             If the tree is empty.
-        ValueError
+        ElementNotFoundError
             If the item is not found.
 
         Examples
@@ -826,7 +826,7 @@ class RedBlackTree(AbstractBinaryTree):
         ------
         EmptyStructureError
             If tree is empty.
-        ValueError
+        ElementNotFoundError
             If item not found.
 
         Notes

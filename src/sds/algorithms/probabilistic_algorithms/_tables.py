@@ -116,7 +116,7 @@ class Table:
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If every value is zero (e.g. evidence of probability zero).
         """
         z = self.total()
