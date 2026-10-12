@@ -66,6 +66,7 @@ from typing import Any, Dict, Iterator, List, Mapping
 from ..core.exceptions import (
     DuplicateElementError,
     ElementNotFoundError,
+    InvalidOperationError,
     InvalidParameterError,
 )
 from ..graph import Edge, Graph, GraphNode
@@ -205,7 +206,7 @@ class MarkovRandomField(AbstractMarkovRandomField):
                 node_first = self._nodes[first.name]
                 node_second = self._nodes[second.name]
                 if not self._graph.has_edge(node_first, node_second):
-                    raise ValueError(
+                    raise InvalidOperationError(
                         f"Factor scope {[v.name for v in scope]} is not a "
                         f"clique: no edge between '{first.name}' and "
                         f"'{second.name}'"

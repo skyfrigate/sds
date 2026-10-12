@@ -68,6 +68,7 @@ from typing import Any, Dict, Iterator, List, Mapping, Tuple
 from ..core.exceptions import (
     DuplicateElementError,
     ElementNotFoundError,
+    InvalidOperationError,
     InvalidParameterError,
 )
 from ..graph import DirectedEdge, DirectedGraph, GraphNode
@@ -171,7 +172,7 @@ class BayesianNetwork(AbstractBayesianNetwork):
 
         if not self._graph.is_acyclic():
             self._graph.remove_edge(edge)
-            raise ValueError(
+            raise InvalidOperationError(
                 f"Adding edge '{parent.name}' -> '{child.name}' "
                 "would introduce a cycle"
             )
@@ -305,7 +306,7 @@ class BayesianNetwork(AbstractBayesianNetwork):
         """
         missing = [name for name in self._variables if name not in self._cpts]
         if missing:
-            raise ValueError(
+            raise InvalidOperationError(
                 f"Cannot compute joint(): missing CPT for variable(s) {missing}"
             )
 
