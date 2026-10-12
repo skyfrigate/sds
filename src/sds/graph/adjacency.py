@@ -68,6 +68,7 @@ from typing import Dict, Iterator, List, Optional, Set
 from ..core.exceptions import (
     DuplicateElementError,
     ElementNotFoundError,
+    FullStructureError,
     InvalidParameterError,
     StructureTypeError,
 )
@@ -463,7 +464,9 @@ class AdjacencyMatrixGraph(AbstractGraph):
         if node.id in self._nodes:
             raise DuplicateElementError(f"Node {node.id} already exists in graph")
         if self._next_index >= self._max_nodes:
-            raise ValueError(f"Graph is full. Maximum {self._max_nodes} nodes allowed")
+            raise FullStructureError(
+                f"Graph is full. Maximum {self._max_nodes} nodes allowed"
+            )
         self._nodes[node.id] = node
         self._node_indices[node.id] = self._next_index
         self._index_to_node[self._next_index] = node.id
