@@ -59,6 +59,7 @@ sds.graph.edge : Structural precedent (``Edge``) for this pattern.
 
 from typing import Dict, Mapping, Tuple
 
+from ..core.exceptions import InvalidParameterError
 from .variable import RandomVariable
 
 __all__ = ["Factor"]
@@ -116,20 +117,22 @@ class Factor:
         table: Mapping[Tuple[str, ...], float],
     ) -> None:
         if len(scope) == 0:
-            raise ValueError("Factor scope must contain at least one variable")
+            raise InvalidParameterError(
+                "Factor scope must contain at least one variable"
+            )
 
         expected_keys = self._cartesian_product(scope)
         actual_keys = set(table.keys())
         if actual_keys != expected_keys:
             missing = expected_keys - actual_keys
             unknown = actual_keys - expected_keys
-            raise ValueError(
+            raise InvalidParameterError(
                 f"Factor table over scope {[v.name for v in scope]} is incomplete "
                 f"or invalid (missing={len(missing)}, unknown={len(unknown)})"
             )
         for key, value in table.items():
             if value < 0:
-                raise ValueError(
+                raise InvalidParameterError(
                     f"Factor value for assignment {key} must be non-negative, "
                     f"got {value}"
                 )
