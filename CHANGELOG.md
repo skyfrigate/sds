@@ -21,6 +21,10 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
   exceptions they replace, so `except DataStructureError` now catches any
   error the library reports about elements, arguments or types, and existing
   `except ValueError` / `except TypeError` clauses keep working (#104).
+- Optional extras `image` (matplotlib) and `yaml` (PyYAML); the base install
+  keeps no dependency. `sds.utils.OptionalDependencyError` (a
+  `DataStructureError` and `ImportError`) names the extra to install when a
+  feature needs one that is missing (#105).
 
 ### Changed
 
@@ -41,6 +45,8 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
 
 ### Fixed
 
+- The documentation told users to `pip install sds-tools`, a name PyPI
+  resolves to an unrelated package; it now says `pysds-tools`.
 - `PriorityItem` comparisons with an object of another type no longer raise
   `NotImplementedError`: `==` and `!=` return `False` and `True`, and ordering
   operators raise `TypeError`, as for built-in types.

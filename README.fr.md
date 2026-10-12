@@ -33,6 +33,22 @@ orientée objet et une documentation exhaustive de style académique.
 pip install pysds-tools
 ```
 
+L'installation de base n'a aucune dépendance. Deux extras optionnels ajoutent
+des paquets tiers pour des fonctionnalités précises :
+
+| Extra | Installe | Pour |
+|---|---|---|
+| `image` | matplotlib | Export image du visualiseur |
+| `yaml` | PyYAML | Entrée YAML de la commande `pysds` |
+
+```bash
+pip install "pysds-tools[image]"
+pip install "pysds-tools[image,yaml]"
+```
+
+Utiliser une fonctionnalité sans son extra lève une erreur qui donne la
+commande d'installation.
+
 ## Démarrage rapide
 
 ```python
