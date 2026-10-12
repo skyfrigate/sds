@@ -1,0 +1,90 @@
+# Copyright 2024-2026, skyfrigate, biface
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""Text, Mermaid, DOT and image rendering of data structures.
+
+The visualiser is a set of free functions (#102): presentation stays out
+of the structure classes (#14), and the text formats need no dependency.
+Rendering reads public accessors only, so the output order is the one of
+the structures themselves, deterministic since #91.
+
+Supported structures: every linear structure, binary search trees (plain,
+AVL, red-black), general trees, B-trees, and every graph. Heaps, tries,
+segment trees and the structures of ``sds.advanced`` and
+``sds.probabilistic`` are not supported yet.
+
+Labels
+------
+Every function takes an optional ``label`` callable. It receives the
+node for trees and graphs, the item for linear structures and the key
+for B-trees, and returns the text to display. By default the visualiser
+shows ``str(node.data)``, or ``str(item)``.
+"""
+
+from typing import Any
+
+from ._text import view_text
+from ._views import Label, build_view
+
+__all__ = ["to_text"]
+
+
+def to_text(structure: Any, *, label: Label = None) -> str:
+    """Render a structure as plain text.
+
+    Linear structures render on one line, with named ends where they have
+    a meaning (``top`` of a stack, ``front``/``rear`` of a queue). Trees
+    render one node per line with box-drawing branches; children of a
+    binary tree are tagged ``L``/``R``. Graphs render as an adjacency list
+    in insertion order, with ``->`` for directed and ``--`` for undirected
+    graphs, and the weight of each edge in parentheses.
+
+    Parameters
+    ----------
+    structure : Any
+        A supported structure (see the module documentation).
+    label : Callable[[Any], str], optional
+        Labelling function; see the module documentation.
+
+    Returns
+    -------
+    str
+        The rendering, ``(empty)`` for an empty structure.
+
+    Raises
+    ------
+    StructureTypeError
+        If the structure is not supported.
+
+    Examples
+    --------
+    >>> from sds.linear import Stack
+    >>> stack = Stack()
+    >>> for item in (1, 2, 3):
+    ...     stack.push(item)
+    >>> print(to_text(stack))
+    top: 3 -> 2 -> 1
+
+    >>> from sds.tree import BinarySearchTree
+    >>> tree = BinarySearchTree()
+    >>> for key in (50, 30, 70, 20, 40):
+    ...     tree.insert(key)
+    >>> print(to_text(tree))
+    50
+    ├── L: 30
+    │   ├── L: 20
+    │   └── R: 40
+    └── R: 70
+    """
+    return view_text(build_view(structure, label))
