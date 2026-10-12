@@ -14,9 +14,10 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
 ### Added
 
 - `sds.core.exceptions`: `ElementNotFoundError`, `DuplicateElementError` and
-  `InvalidParameterError` (each also a `ValueError`), and `StructureTypeError`
-  (also a `TypeError`), all deriving from `DataStructureError` and exported
-  from `sds.core`. Every module raises them in place of the built-in
+  `InvalidParameterError` (each also a `ValueError`), and
+  `StructureTypeError` (also a `TypeError`), all deriving from
+  `DataStructureError` and exported from `sds.core` together with their base
+  `DataStructureError`. Every module raises them in place of the built-in
   exceptions they replace, so `except DataStructureError` now catches any
   error the library reports about elements, arguments or types, and existing
   `except ValueError` / `except TypeError` clauses keep working (#104).

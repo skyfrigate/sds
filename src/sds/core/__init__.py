@@ -8,6 +8,7 @@ This module provides the fundamental building blocks used across all data struct
 """
 
 from .exceptions import (
+    DataStructureError,
     DuplicateElementError,
     ElementNotFoundError,
     EmptyStructureError,
@@ -27,6 +28,7 @@ __all__ = [
     "Collection",
     "LinearCollection",
     # Exceptions
+    "DataStructureError",
     "EmptyStructureError",
     "FullStructureError",
     "IndexStructureError",
