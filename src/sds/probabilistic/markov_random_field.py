@@ -185,7 +185,7 @@ class MarkovRandomField(AbstractMarkovRandomField):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If any variable in ``factor.scope`` is not part of the field,
             or if ``factor.scope`` is not a clique of the underlying graph
             (some pair of variables in the scope has no edge between them).

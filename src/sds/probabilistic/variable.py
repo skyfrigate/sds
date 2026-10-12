@@ -141,7 +141,7 @@ class RandomVariable:
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If ``state`` is not part of the domain.
         """
         try:

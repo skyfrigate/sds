@@ -87,7 +87,7 @@ def variable_elimination(
 
     Raises
     ------
-    ValueError
+    InvalidParameterError
         If ``query`` is empty, contains duplicates, a variable outside the
         model, or an observed variable; if the evidence names an unknown
         variable or state; if ``order`` does not list exactly the hidden

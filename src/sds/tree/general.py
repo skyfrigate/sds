@@ -316,7 +316,7 @@ class Tree(AbstractTree):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If parent node is not found.
 
         Examples
@@ -396,7 +396,7 @@ class Tree(AbstractTree):
         ------
         EmptyStructureError
             If tree is empty.
-        ValueError
+        ElementNotFoundError
             If node is not found.
         InvalidOperationError
             If attempting to remove root without replacement.
@@ -734,7 +734,7 @@ class Tree(AbstractTree):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not found.
 
         Examples
@@ -803,7 +803,7 @@ class Tree(AbstractTree):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not found.
 
         Examples
@@ -840,7 +840,7 @@ class Tree(AbstractTree):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not found.
 
         Examples

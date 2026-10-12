@@ -85,7 +85,7 @@ def to_list(structure: LinearCollection) -> List[Any]:
 
     Raises
     ------
-    TypeError
+    StructureTypeError
         If ``structure`` is not a ``LinearCollection``.
 
     Examples
@@ -134,7 +134,7 @@ def from_list(cls: Type[C], items: Iterable[Any], **kwargs: Any) -> C:
 
     Raises
     ------
-    TypeError
+    StructureTypeError
         If ``cls`` is not a ``LinearCollection`` subclass, or if
         ``kwargs`` does not match its constructor.
 

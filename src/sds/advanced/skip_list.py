@@ -202,7 +202,7 @@ class SkipList(AbstractSkipList):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If ``max_level < 1`` or ``probability`` not in (0, 1).
 
         Examples

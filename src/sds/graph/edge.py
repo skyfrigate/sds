@@ -149,9 +149,9 @@ class Edge:
 
         Raises
         ------
-        TypeError
+        StructureTypeError
             If node1 or node2 is not a GraphNode.
-        ValueError
+        InvalidParameterError
             If node1 and node2 are the same and allow_self_loop is False.
         """
         if not isinstance(node1, GraphNode):
@@ -270,7 +270,7 @@ class Edge:
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If node is not part of this edge.
 
         Examples
@@ -608,7 +608,7 @@ class WeightedEdge(Edge):
 
         Raises
         ------
-        TypeError
+        StructureTypeError
             If weight is not numeric.
         """
         super().__init__(node1, node2, data)

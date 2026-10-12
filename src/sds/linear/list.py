@@ -616,7 +616,7 @@ class LinkedList(AbstractLinkedList):
         ------
         EmptyStructureError
             If the list is empty.
-        ValueError
+        ElementNotFoundError
             If the item is not found.
 
         Examples
@@ -1367,7 +1367,7 @@ class DoublyLinkedList(AbstractLinkedList):
         ------
         EmptyStructureError
             If the list is empty.
-        ValueError
+        ElementNotFoundError
             If the item is not found.
 
         Examples
@@ -2101,7 +2101,7 @@ class CircularLinkedList(AbstractLinkedList):
         ------
         EmptyStructureError
             If the list is empty.
-        ValueError
+        ElementNotFoundError
             If the item is not found.
 
         Examples

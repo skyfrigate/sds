@@ -183,7 +183,7 @@ class BTree(AbstractTree):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If t < 2.
 
         Examples
@@ -492,7 +492,7 @@ class BTree(AbstractTree):
         ------
         EmptyStructureError
             If tree is empty.
-        ValueError
+        ElementNotFoundError
             If key is not found.
 
         Examples

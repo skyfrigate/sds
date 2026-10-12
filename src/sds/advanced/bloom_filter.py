@@ -165,7 +165,7 @@ class BloomFilter(AbstractProbabilisticSet):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If ``size`` or ``num_hashes`` is less than 1.
 
         Examples
@@ -274,7 +274,7 @@ class BloomFilter(AbstractProbabilisticSet):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If ``n`` is not positive or ``fp_rate`` is not in (0, 1).
 
         Examples
@@ -491,7 +491,7 @@ class BloomFilter(AbstractProbabilisticSet):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If the two filters have different ``size`` or ``num_hashes``.
 
         Examples
@@ -541,7 +541,7 @@ class BloomFilter(AbstractProbabilisticSet):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If the two filters have different ``size`` or ``num_hashes``.
 
         Examples

@@ -174,7 +174,7 @@ class LRUCache(AbstractLRUCache):
 
         Raises
         ------
-        ValueError
+        InvalidParameterError
             If ``capacity < 1``.
 
         Examples

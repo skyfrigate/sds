@@ -252,7 +252,7 @@ class DisjointSet(AbstractDisjointSet):
         ------
         TypeError
             If element is not hashable.
-        ValueError
+        DuplicateElementError
             If element already exists in a set.
 
         Examples
@@ -268,7 +268,7 @@ class DisjointSet(AbstractDisjointSet):
         >>> ds.make_set(1)
         Traceback (most recent call last):
             ...
-        ValueError: Element 1 already exists in a set
+        sds.core.exceptions.DuplicateElementError: Element 1 already exists in a set
 
         Notes
         -----
@@ -306,7 +306,7 @@ class DisjointSet(AbstractDisjointSet):
 
         Raises
         ------
-        ValueError
+        ElementNotFoundError
             If element is not in any set.
 
         Examples
