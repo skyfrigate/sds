@@ -2,6 +2,7 @@ import re
 
 import pytest
 
+import sds.core
 from sds.core.exceptions import (
     DataStructureError,
     DuplicateElementError,
@@ -157,3 +158,20 @@ def test_extended_exception_caught_as_native(class_name, native):
 def test_structure_state_exceptions_are_not_value_errors(class_name):
     """State errors are not ValueError: the structure, not the value, is at fault."""
     assert not issubclass(class_name, ValueError)
+
+
+def test_exception_hierarchy_exported_from_sds_core():
+    """Every exception class, base included, is importable from sds.core."""
+    for cls in (
+        DataStructureError,
+        EmptyStructureError,
+        FullStructureError,
+        IndexStructureError,
+        InvalidOperationError,
+        ElementNotFoundError,
+        DuplicateElementError,
+        InvalidParameterError,
+        StructureTypeError,
+    ):
+        assert getattr(sds.core, cls.__name__) is cls
+        assert cls.__name__ in sds.core.__all__
