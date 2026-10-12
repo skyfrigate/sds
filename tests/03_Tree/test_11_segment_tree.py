@@ -21,7 +21,6 @@ import pytest
 
 from sds.core.exceptions import (
     IndexStructureError,
-    InvalidOperationError,
     InvalidParameterError,
 )
 from sds.tree.segment_tree import SegmentTree
@@ -228,7 +227,7 @@ class TestSegmentTreeQueryValidation:
     def test_query_invalid_range_raises_error(self) -> None:
         """Test querying invalid range raises error."""
         tree = SegmentTree([1, 2, 3, 4, 5])
-        with pytest.raises(InvalidOperationError, match="Invalid range"):
+        with pytest.raises(InvalidParameterError, match="Invalid range"):
             tree.query(3, 1)  # left > right
 
     def test_query_out_of_bounds_raises_error(self) -> None:
