@@ -34,10 +34,11 @@ shows ``str(node.data)``, or ``str(item)``.
 
 from typing import Any
 
+from ._mermaid import view_mermaid
 from ._text import view_text
 from ._views import Label, build_view
 
-__all__ = ["to_text"]
+__all__ = ["to_mermaid", "to_text"]
 
 
 def to_text(structure: Any, *, label: Label = None) -> str:
@@ -88,3 +89,48 @@ def to_text(structure: Any, *, label: Label = None) -> str:
     └── R: 70
     """
     return view_text(build_view(structure, label))
+
+
+def to_mermaid(structure: Any, *, label: Label = None) -> str:
+    """Render a structure as a Mermaid flowchart.
+
+    Linear structures and graphs are drawn left to right (``flowchart LR``),
+    trees top-down (``flowchart TD``). Directed graphs use ``-->``,
+    undirected graphs ``---``; weights and the L/R side of binary-tree
+    children become edge labels. Named ends of stacks and queues become
+    rounded nodes. Node ids are generated (``n0``, ``n1``...) and labels
+    are escaped, so any label is safe to embed in a Markdown or reST page.
+
+    Parameters
+    ----------
+    structure : Any
+        A supported structure (see the module documentation).
+    label : Callable[[Any], str], optional
+        Labelling function; see the module documentation.
+
+    Returns
+    -------
+    str
+        The Mermaid source, without the surrounding code fence. An empty
+        structure gives the ``flowchart`` line alone.
+
+    Raises
+    ------
+    StructureTypeError
+        If the structure is not supported.
+
+    Examples
+    --------
+    >>> from sds.tree import BinarySearchTree
+    >>> tree = BinarySearchTree()
+    >>> for key in (2, 1, 3):
+    ...     tree.insert(key)
+    >>> print(to_mermaid(tree))
+    flowchart TD
+        n0["2"]
+        n1["1"]
+        n0 -->|L| n1
+        n2["3"]
+        n0 -->|R| n2
+    """
+    return view_mermaid(build_view(structure, label))
