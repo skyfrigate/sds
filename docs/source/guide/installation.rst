@@ -23,7 +23,50 @@ For most users, installing from PyPI is the simplest method:
 
    pip install pysds-tools
 
-This will install the latest stable release of SDS-Tools and its dependencies.
+This installs the latest stable release of SDS-Tools. The base install has no
+dependency.
+
+Optional Extras
+===============
+
+A few features need third-party packages. They are installed through extras
+of the ``pysds-tools`` distribution, so that the base install stays free of
+dependencies:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 25 60
+
+   * - Extra
+     - Installs
+     - For
+   * - ``image``
+     - matplotlib
+     - Image export of the visualiser
+   * - ``yaml``
+     - PyYAML
+     - YAML input of the ``pysds`` command
+
+.. code-block:: bash
+
+   pip install "pysds-tools[image]"
+   pip install "pysds-tools[image,yaml]"
+
+   # With uv
+   uv pip install "pysds-tools[image,yaml]"
+
+The quotes keep shells such as zsh from expanding the square brackets.
+
+Using a feature without its extra raises
+:class:`~sds.utils.OptionalDependencyError`, an ``ImportError`` whose message
+gives the command to run:
+
+.. code-block:: text
+
+   matplotlib is required for this feature: pip install "pysds-tools[image]"
+
+From a clone of the repository, ``uv sync --all-extras`` installs every
+extra in the development environment.
 
 Installing in a Virtual Environment
 ====================================
