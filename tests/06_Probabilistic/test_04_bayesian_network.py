@@ -16,6 +16,7 @@
 
 import pytest
 
+from sds.core.exceptions import DuplicateElementError
 from sds.probabilistic.bayesian_network import BayesianNetwork
 from sds.probabilistic.factor import Factor
 from sds.probabilistic.interfaces import AbstractBayesianNetwork
@@ -184,7 +185,7 @@ class TestEdgeManagement:
         bn.add_variable(rain)
         bn.add_variable(sprinkler)
         bn.add_edge(rain, sprinkler)
-        with pytest.raises(ValueError):
+        with pytest.raises(DuplicateElementError):
             bn.add_edge(rain, sprinkler)
 
     def test_multiple_parents(

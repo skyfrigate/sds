@@ -78,6 +78,11 @@ sds.graphs.weighted : Weighted graph implementations.
 from collections import deque
 from typing import Dict, Iterator, List, Optional, Set
 
+from ..core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    StructureTypeError,
+)
 from ._incidence import IncidenceIndex
 from .edge import DirectedEdge, Edge
 from .graph import Graph
@@ -239,10 +244,10 @@ class DirectedGraph(AbstractDirectedGraph):
         Time complexity: O(1)
         """
         if not isinstance(node, GraphNode):
-            raise TypeError(f"Expected GraphNode, got {type(node).__name__}")
+            raise StructureTypeError(f"Expected GraphNode, got {type(node).__name__}")
 
         if node.id in self._nodes:
-            raise ValueError(f"Node {node.id} already exists in graph")
+            raise DuplicateElementError(f"Node {node.id} already exists in graph")
 
         self._nodes[node.id] = node
         self._out_adjacency.add_node(node.id)
@@ -279,7 +284,7 @@ class DirectedGraph(AbstractDirectedGraph):
         Time complexity: O(in_degree + out_degree + E)
         """
         if node.id not in self._nodes:
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
 
         # Remove all edges involving this node
         self._edges = [
@@ -362,17 +367,19 @@ class DirectedGraph(AbstractDirectedGraph):
         Time complexity: O(1) for multi-digraph, O(out_degree) for simple.
         """
         if not isinstance(edge, DirectedEdge):
-            raise TypeError(f"Expected DirectedEdge, got {type(edge).__name__}")
+            raise StructureTypeError(
+                f"Expected DirectedEdge, got {type(edge).__name__}"
+            )
 
         # Validate nodes exist
         if not self.has_node(edge.source):
-            raise ValueError(f"Source node {edge.source.id} not in graph")
+            raise ElementNotFoundError(f"Source node {edge.source.id} not in graph")
         if not self.has_node(edge.target):
-            raise ValueError(f"Target node {edge.target.id} not in graph")
+            raise ElementNotFoundError(f"Target node {edge.target.id} not in graph")
 
         # Check for duplicate edges in simple graph
         if not self._allow_multi_edges and self.has_edge(edge.source, edge.target):
-            raise ValueError(
+            raise DuplicateElementError(
                 f"Edge from {edge.source.id} to {edge.target.id} already exists. "
                 "Use allow_multi_edges=True for multi-digraph."
             )
@@ -419,7 +426,7 @@ class DirectedGraph(AbstractDirectedGraph):
         """
         if isinstance(edge, DirectedEdge):
             if edge not in self._edges:
-                raise ValueError(
+                raise ElementNotFoundError(
                     f"Edge from {edge.node1.id} to {edge.node2.id} not in graph"
                 )
             position = self._edges.index(edge)
@@ -434,7 +441,7 @@ class DirectedGraph(AbstractDirectedGraph):
                 None,
             )
             if found is None:
-                raise ValueError(
+                raise ElementNotFoundError(
                     f"Edge from {edge.node1.id} to {edge.node2.id} not in graph"
                 )
             position = found
@@ -600,7 +607,7 @@ class DirectedGraph(AbstractDirectedGraph):
         For multi-digraphs, counts each edge separately.
         """
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
 
         if not self._allow_multi_edges:
             return self._in_adjacency.neighbor_count(
@@ -651,7 +658,7 @@ class DirectedGraph(AbstractDirectedGraph):
         Time complexity: O(1) amortized.
         """
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
 
         if not self._allow_multi_edges:
             return self._in_adjacency.neighbor_count(node.id)
@@ -699,7 +706,7 @@ class DirectedGraph(AbstractDirectedGraph):
         Time complexity: O(1) amortized.
         """
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
 
         if not self._allow_multi_edges:
             return self._out_adjacency.neighbor_count(node.id)
@@ -751,7 +758,7 @@ class DirectedGraph(AbstractDirectedGraph):
         edge was added (see :meth:`Graph.neighbors`).
         """
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
 
         for predecessor_id in self._in_adjacency.neighbor_ids(node.id):
             yield self._nodes[predecessor_id]
@@ -796,7 +803,7 @@ class DirectedGraph(AbstractDirectedGraph):
         edge was added (see :meth:`Graph.neighbors`).
         """
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
 
         for successor_id in self._out_adjacency.neighbor_ids(node.id):
             yield self._nodes[successor_id]
@@ -1247,7 +1254,7 @@ class UndirectedGraph(Graph):
         """
         # Check if it's a DirectedEdge (which is a subclass of Edge)
         if isinstance(edge, DirectedEdge):
-            raise TypeError(
+            raise StructureTypeError(
                 f"UndirectedGraph requires undirected Edge, not {type(edge).__name__}"
             )
 

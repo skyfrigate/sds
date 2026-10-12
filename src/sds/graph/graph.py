@@ -72,6 +72,11 @@ WeightedGraph : Weighted graph implementation.
 from collections import deque
 from typing import Dict, Iterator, List, Optional, Set
 
+from ..core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    StructureTypeError,
+)
 from ._incidence import IncidenceIndex
 from .edge import Edge
 from .interfaces import AbstractGraph
@@ -241,10 +246,10 @@ class Graph(AbstractGraph):
         Time complexity: O(1)
         """
         if not isinstance(node, GraphNode):
-            raise TypeError(f"Expected GraphNode, got {type(node).__name__}")
+            raise StructureTypeError(f"Expected GraphNode, got {type(node).__name__}")
 
         if node.id in self._nodes:
-            raise ValueError(f"Node {node.id} already exists in graph")
+            raise DuplicateElementError(f"Node {node.id} already exists in graph")
 
         self._nodes[node.id] = node
         self._adjacency.add_node(node.id)
@@ -283,7 +288,7 @@ class Graph(AbstractGraph):
         All edges incident to the node are also removed.
         """
         if node.id not in self._nodes:
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
 
         # Remove all edges incident to this node
         self._edges = [e for e in self._edges if not e.incident_to(node)]
@@ -373,17 +378,17 @@ class Graph(AbstractGraph):
         Time complexity: O(1) for multigraph, O(degree(node)) for simple graph.
         """
         if not isinstance(edge, Edge):
-            raise TypeError(f"Expected Edge, got {type(edge).__name__}")
+            raise StructureTypeError(f"Expected Edge, got {type(edge).__name__}")
 
         # Validate nodes exist
         if not self.has_node(edge.node1):
-            raise ValueError(f"Node {edge.node1.id} not in graph")
+            raise ElementNotFoundError(f"Node {edge.node1.id} not in graph")
         if not self.has_node(edge.node2):
-            raise ValueError(f"Node {edge.node2.id} not in graph")
+            raise ElementNotFoundError(f"Node {edge.node2.id} not in graph")
 
         # Check for duplicate edges in simple graph
         if not self._allow_multi_edges and self.has_edge(edge.node1, edge.node2):
-            raise ValueError(
+            raise DuplicateElementError(
                 f"Edge between {edge.node1.id} and {edge.node2.id} already exists. "
                 "Use allow_multi_edges=True for multigraph."
             )
@@ -429,7 +434,7 @@ class Graph(AbstractGraph):
         For multigraphs, removes the first matching edge found.
         """
         if edge not in self._edges:
-            raise ValueError(
+            raise ElementNotFoundError(
                 f"Edge between {edge.node1.id} and {edge.node2.id} not in graph"
             )
 
@@ -560,7 +565,7 @@ class Graph(AbstractGraph):
         that neighbor to the end.
         """
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
 
         for neighbor_id in self._adjacency.neighbor_ids(node.id):
             yield self._nodes[neighbor_id]
@@ -602,7 +607,7 @@ class Graph(AbstractGraph):
         For multigraphs, counts each edge separately.
         """
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
 
         if not self._allow_multi_edges:
             return self._adjacency.neighbor_count(node.id)
