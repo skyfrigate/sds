@@ -27,6 +27,15 @@ Exception Hierarchy
        B --> D[FullStructureError]
        B --> E[InvalidOperationError]
        B --> F[IndexStructureError]
+       B --> G[ElementNotFoundError]
+       B --> H[DuplicateElementError]
+       B --> I[InvalidParameterError]
+       B --> J[StructureTypeError]
+       K[IndexError] --> F
+       L[ValueError] --> G
+       L --> H
+       L --> I
+       M[TypeError] --> J
 
        style A fill:#f9f,stroke:#333
        style B fill:#bbf,stroke:#333
@@ -34,6 +43,20 @@ Exception Hierarchy
        style D fill:#bfb,stroke:#333
        style E fill:#bfb,stroke:#333
        style F fill:#bfb,stroke:#333
+       style G fill:#bfb,stroke:#333
+       style H fill:#bfb,stroke:#333
+       style I fill:#bfb,stroke:#333
+       style J fill:#bfb,stroke:#333
+       style K fill:#fdd,stroke:#333
+       style L fill:#fdd,stroke:#333
+       style M fill:#fdd,stroke:#333
+
+Classes that report a problem with an argument also derive from the built-in
+exception Python code would expect (``ValueError``, ``TypeError``,
+``IndexError``), so an ``except ValueError`` clause still catches them.
+Classes that report a problem with the state of the structure
+(``EmptyStructureError``, ``FullStructureError``, ``InvalidOperationError``)
+derive from ``DataStructureError`` only.
 
 Exception Classes
 =================
@@ -113,38 +136,27 @@ FullStructureError
 
 Raised when attempting to add to a full structure.
 
+Reserved for structures with a bounded capacity.
+
 **Common Scenarios:**
 
-* Adding to a bounded queue at capacity
-* Pushing to a fixed-size stack that's full
-* Inserting into a structure with maximum capacity
+* Adding a node to an ``AdjacencyMatrixGraph`` that already holds
+  ``max_nodes`` nodes
 
 **Example:**
 
 .. code-block:: python
 
    from sds.core.exceptions import FullStructureError
-   from sds.linear import BoundedStack
+   from sds.graph import AdjacencyMatrixGraph, GraphNode
 
-   stack = BoundedStack(max_size=3)
-   stack.push(1)
-   stack.push(2)
-   stack.push(3)
-
+   graph = AdjacencyMatrixGraph(max_nodes=5)
    try:
-       stack.push(4)
+       for i in range(10):
+           graph.add_node(GraphNode(i, f"n{i}"))
    except FullStructureError as e:
        print(f"Error: {e.message}")
-       # Output: Error: Cannot add to full structure
-
-**Custom Message:**
-
-.. code-block:: python
-
-   try:
-       stack.push(4)
-   except FullStructureError:
-       raise FullStructureError(f"Stack is full (capacity: {stack.capacity})")
+       # Output: Error: Graph is full. Maximum 5 nodes allowed
 
 InvalidOperationError
 ---------------------
@@ -153,28 +165,35 @@ InvalidOperationError
    :members:
    :show-inheritance:
 
-Raised when an invalid operation is attempted.
+Raised when the arguments are valid but the current state of the structure
+forbids the operation.
 
 **Common Scenarios:**
 
-* Removing a node that doesn't exist
-* Invalid state transitions
-* Operations not supported by the structure
-* Violating structural invariants
+* An edge that would close a cycle in a Bayesian network
+* A Markov random field factor whose scope is not a clique
+* A hidden Markov model component set twice, or read before being set
+* Removing the root of a general tree without a replacement
 
 **Example:**
 
 .. code-block:: python
 
    from sds.core.exceptions import InvalidOperationError
-   from sds.tree import BinarySearchTree
+   from sds.probabilistic import BayesianNetwork, RandomVariable
 
-   bst = BinarySearchTree()
+   rain = RandomVariable("Rain", ("yes", "no"))
+   wet = RandomVariable("WetGrass", ("yes", "no"))
+   bn = BayesianNetwork()
+   bn.add_variable(rain)
+   bn.add_variable(wet)
+   bn.add_edge(rain, wet)
 
    try:
-       bst.remove(42)  # Removing non-existent value
+       bn.add_edge(wet, rain)
    except InvalidOperationError as e:
        print(f"Error: {e.message}")
+       # Output: Error: Adding edge 'WetGrass' -> 'Rain' would introduce a cycle
 
 **Custom Message:**
 
@@ -223,6 +242,114 @@ Raised when an invalid index is accessed.
        raise IndexStructureError(
            f"Index {index} out of range for list of size {self._size}"
        )
+
+ElementNotFoundError
+--------------------
+
+.. autoclass:: ElementNotFoundError
+   :members:
+   :show-inheritance:
+
+Raised when the element designated by an argument is not in the structure:
+a list item, a tree key, a graph node or edge, a model variable or state.
+Also a ``ValueError``.
+
+**Example:**
+
+.. code-block:: python
+
+   from sds.core.exceptions import ElementNotFoundError
+   from sds.tree import BinarySearchTree
+
+   bst = BinarySearchTree()
+   bst.insert(10)
+   bst.insert(5)
+
+   try:
+       bst.remove(42)
+   except ElementNotFoundError as e:
+       print(f"Error: {e.message}")
+       # Output: Error: Item 42 not found in tree
+
+DuplicateElementError
+---------------------
+
+.. autoclass:: DuplicateElementError
+   :members:
+   :show-inheritance:
+
+Raised when adding an element that a structure rejecting duplicates already
+holds (graph nodes and edges, model variables, disjoint-set elements). A
+duplicate *inside an argument* is an :class:`InvalidParameterError`. Also a
+``ValueError``.
+
+**Example:**
+
+.. code-block:: python
+
+   from sds.core.exceptions import DuplicateElementError
+   from sds.graph import Graph, GraphNode
+
+   graph = Graph()
+   node = GraphNode("A", "n1")
+   graph.add_node(node)
+
+   try:
+       graph.add_node(node)
+   except DuplicateElementError as e:
+       print(f"Error: {e.message}")
+       # Output: Error: Node n1 already exists in graph
+
+InvalidParameterError
+---------------------
+
+.. autoclass:: InvalidParameterError
+   :members:
+   :show-inheritance:
+
+Raised when an argument is invalid in itself, whatever the state of the
+structure: a bound out of range, an empty input, incompatible dimensions,
+evidence with probability zero under a model. Also a ``ValueError``.
+
+**Example:**
+
+.. code-block:: python
+
+   from sds.advanced import BloomFilter
+   from sds.core.exceptions import InvalidParameterError
+
+   try:
+       BloomFilter(size=0, num_hashes=3)
+   except InvalidParameterError as e:
+       print(f"Error: {e.message}")
+       # Output: Error: size must be a positive integer, got 0
+
+StructureTypeError
+------------------
+
+.. autoclass:: StructureTypeError
+   :members:
+   :show-inheritance:
+
+Raised by explicit type checks on an argument: a node, an edge, a weight, or
+the structure an algorithm expects. Also a ``TypeError``. Python protocols
+keep their own exceptions: iterating a ``BloomFilter`` raises a plain
+``TypeError``, and a missing key in a hash table raises ``KeyError``.
+
+**Example:**
+
+.. code-block:: python
+
+   from sds.core.exceptions import StructureTypeError
+   from sds.graph import Graph
+
+   graph = Graph()
+
+   try:
+       graph.add_node("A")
+   except StructureTypeError as e:
+       print(f"Error: {e.message}")
+       # Output: Error: Expected GraphNode, got str
 
 Usage Patterns
 ==============
@@ -438,20 +565,32 @@ Mapping to Built-ins
    :widths: 40 30 30
 
    * - SDS Exception
-     - Similar Built-in
-     - Why Custom?
+     - Also catchable as
+     - Reports
    * - ``EmptyStructureError``
-     - ``IndexError``
-     - More semantic
+     - —
+     - Operation on an empty structure
    * - ``FullStructureError``
-     - ``OverflowError``
-     - More specific
+     - —
+     - Addition beyond a bounded capacity
    * - ``InvalidOperationError``
-     - ``ValueError``
-     - Clearer intent
+     - —
+     - Operation forbidden by the structure's state
    * - ``IndexStructureError``
      - ``IndexError``
-     - Consistent naming
+     - Index out of range
+   * - ``ElementNotFoundError``
+     - ``ValueError``
+     - Element absent from the structure
+   * - ``DuplicateElementError``
+     - ``ValueError``
+     - Element already in the structure
+   * - ``InvalidParameterError``
+     - ``ValueError``
+     - Argument invalid in itself
+   * - ``StructureTypeError``
+     - ``TypeError``
+     - Argument of the wrong type
 
 Performance Considerations
 ==========================

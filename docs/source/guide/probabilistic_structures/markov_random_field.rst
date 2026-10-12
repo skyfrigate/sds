@@ -138,10 +138,10 @@ Algorithm: Attaching a Valid Potential
    procedure ADD_FACTOR(field, factor):
        for v in factor.scope:
            if not field.has_variable(v):
-               raise ValueError
+               raise ElementNotFoundError
        for (v_i, v_j) in pairs(factor.scope):        # O(k^2), k = scope size
            if not field.graph.has_edge(v_i, v_j):
-               raise ValueError("not a clique")
+               raise InvalidOperationError("not a clique")
        field.factors.append(factor)
 
 Complexity Summary
@@ -218,7 +218,7 @@ Common Pitfalls
 ==================
 
 1. **Forgetting the clique requirement** — a potential over
-   non-fully-connected variables raises ``ValueError``, by design.
+   non-fully-connected variables raises ``InvalidOperationError``, by design.
 2. **Confusing potential magnitude with probability** — a higher ``joint()``
    value only means "more likely relative to other assignments *for this
    unnormalized model*", not an actual probability.

@@ -124,7 +124,7 @@ which depends on X). ``add_edge()`` checks this immediately:
 
 .. code-block:: python
 
-   bn.add_edge(wet_grass, rain)  # ValueError: would introduce a cycle
+   bn.add_edge(wet_grass, rain)  # InvalidOperationError: would introduce a cycle
 
 Algorithm: Constructing a Valid Network
 ==============================================
