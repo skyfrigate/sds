@@ -23,7 +23,7 @@ from typing import Dict, List, Tuple
 import pytest
 
 from sds.algorithms.probabilistic_algorithms import forward, viterbi
-from sds.core.exceptions import ElementNotFoundError
+from sds.core.exceptions import ElementNotFoundError, InvalidParameterError
 from sds.probabilistic import Factor, HiddenMarkovModel, RandomVariable
 
 
@@ -66,7 +66,7 @@ class TestForward:
         obs = _random_observations(hmm, seed)
         likelihood = _brute_likelihood(hmm, obs)
         if likelihood == 0.0:
-            with pytest.raises(ValueError, match="probability zero"):
+            with pytest.raises(InvalidParameterError, match="probability zero"):
                 forward(hmm, obs)
             return
         log_p, filtered = forward(hmm, obs)
@@ -120,7 +120,7 @@ class TestViterbi:
         scores = {s: hmm.joint(list(s), obs) for s in _sequences(hmm, len(obs))}
         best = max(scores.values())
         if best == 0.0:
-            with pytest.raises(ValueError, match="probability zero"):
+            with pytest.raises(InvalidParameterError, match="probability zero"):
                 viterbi(hmm, obs)
             return
         path, log_p = viterbi(hmm, obs)
@@ -160,7 +160,7 @@ class TestHmmArguments:
     def test_empty_sequence(self, pgm: ModuleType, algorithm) -> None:  # type: ignore[no-untyped-def]
         """At least one observation is required."""
         hmm, _ = pgm.umbrella()
-        with pytest.raises(ValueError, match="at least one"):
+        with pytest.raises(InvalidParameterError, match="at least one"):
             algorithm(hmm, [])
 
     def test_unknown_symbol(self, pgm: ModuleType, algorithm) -> None:  # type: ignore[no-untyped-def]
@@ -197,5 +197,5 @@ class TestHmmArguments:
                 },
             )
         )
-        with pytest.raises(ValueError, match="probability zero"):
+        with pytest.raises(InvalidParameterError, match="probability zero"):
             algorithm(hmm, ["x", "y"])

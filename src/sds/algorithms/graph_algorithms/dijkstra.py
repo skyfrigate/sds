@@ -44,6 +44,7 @@ import heapq
 from itertools import count
 from typing import Dict, List, Optional, Set, Tuple
 
+from ...core.exceptions import ElementNotFoundError, InvalidParameterError
 from ...graph.interfaces import AbstractWeightedGraph
 from ...graph.node import GraphNode
 
@@ -117,7 +118,7 @@ def dijkstra(
     graphs.
     """
     if not graph.has_node(source):
-        raise ValueError(f"Node {source.id} not in graph")
+        raise ElementNotFoundError(f"Node {source.id} not in graph")
 
     distances: Dict[GraphNode, float] = {source: 0.0}
     predecessors: Dict[GraphNode, Optional[GraphNode]] = {source: None}
@@ -134,7 +135,7 @@ def dijkstra(
         settled.add(node)
         for edge in graph.outgoing_edges(node):
             if edge.weight < 0:
-                raise ValueError(
+                raise InvalidParameterError(
                     f"Negative weight {edge.weight} on an edge leaving "
                     f"{node.id}; Dijkstra requires non-negative weights"
                 )

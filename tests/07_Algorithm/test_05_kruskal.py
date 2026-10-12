@@ -23,6 +23,7 @@ from typing import Any, Callable, Dict, List, Set, Tuple
 import pytest
 
 from sds.algorithms.graph_algorithms import bfs, kruskal
+from sds.core.exceptions import StructureTypeError
 from sds.graph import (
     Graph,
     GraphNode,
@@ -175,7 +176,7 @@ class TestKruskal:
     )
     def test_rejects_non_weighted_undirected(self, bad: Any) -> None:
         """Only undirected weighted graphs are accepted (#86)."""
-        with pytest.raises(TypeError, match="WeightedGraph"):
+        with pytest.raises(StructureTypeError, match="WeightedGraph"):
             kruskal(bad)
 
     @pytest.mark.parametrize("seed", range(20))

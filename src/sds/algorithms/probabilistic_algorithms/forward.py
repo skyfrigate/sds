@@ -43,6 +43,7 @@ of the likelihood is the sum of the logs of the scaling constants.
 import math
 from typing import Dict, List, Sequence, Tuple
 
+from ...core.exceptions import InvalidParameterError
 from ...probabilistic.factor import Factor
 from ...probabilistic.interfaces import AbstractHiddenMarkovModel
 from ._hmm import hmm_accessors
@@ -126,7 +127,7 @@ def forward(
             }
         scale = sum(alpha.values())
         if scale <= 0.0:
-            raise ValueError(
+            raise InvalidParameterError(
                 f"The observation sequence has probability zero under the model "
                 f"(no hidden state can emit '{symbol}' at step {t})"
             )

@@ -36,6 +36,7 @@ enters the queue at most once.
 from collections import deque
 from typing import Deque, Iterator, Set
 
+from ...core.exceptions import ElementNotFoundError
 from ...graph.interfaces import AbstractGraph
 from ...graph.node import GraphNode
 
@@ -87,7 +88,7 @@ def bfs(graph: AbstractGraph, source: GraphNode) -> Iterator[GraphNode]:
     again from one of them to explore another connected component.
     """
     if not graph.has_node(source):
-        raise ValueError(f"Node {source.id} not in graph")
+        raise ElementNotFoundError(f"Node {source.id} not in graph")
     visited: Set[GraphNode] = {source}
     queue: Deque[GraphNode] = deque([source])
     while queue:

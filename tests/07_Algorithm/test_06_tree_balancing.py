@@ -26,6 +26,7 @@ from sds.algorithms.tree_algorithms import (
     level_order,
     rebalance,
 )
+from sds.core.exceptions import StructureTypeError
 from sds.tree import AVLTree, BinaryNode, BinarySearchTree, BinaryTree, RedBlackTree
 
 
@@ -182,5 +183,5 @@ class TestRebalance:
     )
     def test_rejects_other_types(self, bad: Any) -> None:
         """Only plain BinarySearchTree is accepted (#86)."""
-        with pytest.raises(TypeError, match="BinarySearchTree"):
+        with pytest.raises(StructureTypeError, match="BinarySearchTree"):
             rebalance(bad)

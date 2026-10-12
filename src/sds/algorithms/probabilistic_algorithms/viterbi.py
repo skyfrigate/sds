@@ -35,6 +35,7 @@ runs on logarithms: products become sums, and a zero probability becomes
 import math
 from typing import Dict, List, Sequence, Tuple
 
+from ...core.exceptions import InvalidParameterError
 from ...probabilistic.interfaces import AbstractHiddenMarkovModel
 from ._hmm import hmm_accessors
 
@@ -130,7 +131,7 @@ def viterbi(
 
     last = max(domain, key=lambda s: (delta[s], -domain.index(s)))
     if delta[last] == -math.inf:
-        raise ValueError(
+        raise InvalidParameterError(
             "The observation sequence has probability zero under the model"
         )
     path = [last]

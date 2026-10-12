@@ -22,7 +22,7 @@ from typing import Any, Dict, Tuple
 import pytest
 
 from sds.algorithms.probabilistic_algorithms import variable_elimination
-from sds.core.exceptions import ElementNotFoundError
+from sds.core.exceptions import ElementNotFoundError, InvalidParameterError
 from sds.probabilistic import Factor, RandomVariable
 
 
@@ -144,7 +144,7 @@ class TestEdgeCases:
         """Impossible evidence raises ValueError."""
         bn, v = pgm.sprinkler()
         # W is certainly false when S and R are both false.
-        with pytest.raises(ValueError, match="probability zero"):
+        with pytest.raises(InvalidParameterError, match="probability zero"):
             variable_elimination(
                 bn, [v["C"]], {v["S"]: "false", v["R"]: "false", v["W"]: "true"}
             )
@@ -152,25 +152,25 @@ class TestEdgeCases:
     def test_empty_query(self, pgm: ModuleType) -> None:
         """At least one query variable is required."""
         bn, _ = pgm.alarm()
-        with pytest.raises(ValueError, match="at least one"):
+        with pytest.raises(InvalidParameterError, match="at least one"):
             variable_elimination(bn, [])
 
     def test_duplicate_query(self, pgm: ModuleType) -> None:
         """A variable cannot be queried twice."""
         bn, v = pgm.alarm()
-        with pytest.raises(ValueError, match="twice"):
+        with pytest.raises(InvalidParameterError, match="twice"):
             variable_elimination(bn, [v["A"], v["A"]])
 
     def test_query_observed(self, pgm: ModuleType) -> None:
         """A query variable cannot also be observed."""
         bn, v = pgm.alarm()
-        with pytest.raises(ValueError, match="also observed"):
+        with pytest.raises(InvalidParameterError, match="also observed"):
             variable_elimination(bn, [v["A"]], {v["A"]: "true"})
 
     def test_unknown_variable(self, pgm: ModuleType) -> None:
         """Variables outside the model are rejected."""
         bn, _ = pgm.alarm()
-        with pytest.raises(ValueError, match="not a variable"):
+        with pytest.raises(ElementNotFoundError, match="not a variable"):
             variable_elimination(bn, [RandomVariable("X", ("a", "b"))])
 
     def test_unknown_state(self, pgm: ModuleType) -> None:
@@ -182,5 +182,5 @@ class TestEdgeCases:
     def test_bad_order(self, pgm: ModuleType) -> None:
         """An order must list exactly the hidden variables."""
         bn, v = pgm.sprinkler()
-        with pytest.raises(ValueError, match="hidden variable"):
+        with pytest.raises(InvalidParameterError, match="hidden variable"):
             variable_elimination(bn, [v["W"]], order=[v["C"], v["S"]])

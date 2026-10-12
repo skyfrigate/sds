@@ -26,6 +26,7 @@ This module is internal: nothing in it is part of the public API.
 from itertools import product
 from typing import Dict, Iterator, Mapping, Optional, Sequence, Tuple
 
+from ...core.exceptions import InvalidParameterError
 from ...probabilistic.factor import Factor
 from ...probabilistic.variable import RandomVariable
 
@@ -120,7 +121,7 @@ class Table:
         """
         z = self.total()
         if z <= 0.0:
-            raise ValueError(
+            raise InvalidParameterError(
                 f"Cannot normalize {what or 'the result'}: total mass is zero "
                 "(the evidence has probability zero under the model)"
             )
