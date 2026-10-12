@@ -38,8 +38,8 @@ Development Setup
 .. code-block:: bash
 
    # Clone repository
-   git clone https://github.com/yourusername/sds-tools.git
-   cd sds-tools
+   git clone https://github.com/yourusername/sds.git
+   cd sds
 
    # Install in development mode
    pip install -e ".[dev]"

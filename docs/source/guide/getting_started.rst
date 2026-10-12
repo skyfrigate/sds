@@ -567,7 +567,7 @@ Practice Exercises
 Getting Help
 ============
 
-* **Documentation**: https://sds-tools.readthedocs.io
+* **Documentation**: https://pysds-tools.readthedocs.io
 * **API Reference**: :ref:`api-reference`
 * **Examples**: https://github.com/skyfrigate/sds/tree/main/examples
 * **Issues**: https://github.com/skyfrigate/sds/issues

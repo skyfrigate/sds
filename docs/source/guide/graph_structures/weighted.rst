@@ -531,7 +531,7 @@ Installation and Import
 .. code-block:: python
 
    # Install
-   pip install sds-tools
+   pip install pysds-tools
    
    # Import
    from sds.graph import WeightedGraph, WeightedDirectedGraph
