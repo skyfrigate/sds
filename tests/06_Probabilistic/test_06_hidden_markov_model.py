@@ -18,6 +18,7 @@ from typing import Callable
 
 import pytest
 
+from sds.core.exceptions import InvalidParameterError
 from sds.probabilistic.factor import Factor
 from sds.probabilistic.hidden_markov_model import HiddenMarkovModel
 from sds.probabilistic.interfaces import AbstractHiddenMarkovModel
@@ -197,7 +198,7 @@ class TestComponentValidation:
         hmm = HiddenMarkovModel()
         hmm.set_states(weather)
         wrong = Factor((umbrella,), {("yes",): 0.5, ("no",): 0.5})
-        with pytest.raises(ValueError, match="Initial distribution scope"):
+        with pytest.raises(InvalidParameterError, match="Initial distribution scope"):
             hmm.set_initial_distribution(wrong)
 
     def test_set_initial_distribution_not_normalized_raises(
@@ -207,7 +208,7 @@ class TestComponentValidation:
         hmm = HiddenMarkovModel()
         hmm.set_states(weather)
         bad = Factor((weather,), {("sunny",): 0.5, ("rainy",): 0.9})
-        with pytest.raises(ValueError, match="not normalized"):
+        with pytest.raises(InvalidParameterError, match="not normalized"):
             hmm.set_initial_distribution(bad)
 
     def test_initial_distribution_unset_raises(self, weather: RandomVariable) -> None:
@@ -260,7 +261,7 @@ class TestComponentValidation:
                 ("rainy", "rainy"): 0.6,
             },
         )
-        with pytest.raises(ValueError, match="Transition model scope"):
+        with pytest.raises(InvalidParameterError, match="Transition model scope"):
             hmm.set_transition_model(wrong)
 
     def test_set_transition_model_not_normalized_raises(
@@ -279,7 +280,7 @@ class TestComponentValidation:
                 ("rainy", "rainy"): 0.6,
             },
         )
-        with pytest.raises(ValueError, match="not normalized"):
+        with pytest.raises(InvalidParameterError, match="not normalized"):
             hmm.set_transition_model(bad)
 
     def test_transition_model_unset_raises(self, weather: RandomVariable) -> None:
@@ -327,7 +328,7 @@ class TestComponentValidation:
                 ("rainy", "no"): 0.2,
             },
         )
-        with pytest.raises(ValueError, match="Emission model scope"):
+        with pytest.raises(InvalidParameterError, match="Emission model scope"):
             hmm.set_emission_model(wrong)
 
     def test_set_emission_model_not_normalized_raises(
@@ -346,7 +347,7 @@ class TestComponentValidation:
                 ("no", "rainy"): 0.2,
             },
         )
-        with pytest.raises(ValueError, match="not normalized"):
+        with pytest.raises(InvalidParameterError, match="not normalized"):
             hmm.set_emission_model(bad)
 
     def test_emission_model_unset_raises(
@@ -439,7 +440,7 @@ class TestJoint:
         hmm = _build_full_model(
             weather, umbrella, initial_factor, transition_factor, emission_factor
         )
-        with pytest.raises(ValueError, match="same length"):
+        with pytest.raises(InvalidParameterError, match="same length"):
             hmm.joint(["sunny", "rainy"], ["no"])
 
     def test_joint_empty_sequences_raise(
@@ -454,7 +455,7 @@ class TestJoint:
         hmm = _build_full_model(
             weather, umbrella, initial_factor, transition_factor, emission_factor
         )
-        with pytest.raises(ValueError, match="at least one time step"):
+        with pytest.raises(InvalidParameterError, match="at least one time step"):
             hmm.joint([], [])
 
     def test_joint_missing_component_raises(

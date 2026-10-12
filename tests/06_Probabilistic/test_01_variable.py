@@ -16,6 +16,7 @@
 
 import pytest
 
+from sds.core.exceptions import ElementNotFoundError, InvalidParameterError
 from sds.probabilistic.variable import RandomVariable
 
 
@@ -35,17 +36,17 @@ class TestRandomVariableCreation:
 
     def test_domain_with_single_state_raises(self) -> None:
         """Test that a domain with fewer than 2 states raises ValueError."""
-        with pytest.raises(ValueError, match="at least 2 states"):
+        with pytest.raises(InvalidParameterError, match="at least 2 states"):
             RandomVariable("Constant", ("only",))
 
     def test_domain_empty_raises(self) -> None:
         """Test that an empty domain raises ValueError."""
-        with pytest.raises(ValueError, match="at least 2 states"):
+        with pytest.raises(InvalidParameterError, match="at least 2 states"):
             RandomVariable("Empty", ())
 
     def test_duplicate_states_raise(self) -> None:
         """Test that duplicate states in the domain raise ValueError."""
-        with pytest.raises(ValueError, match="duplicates"):
+        with pytest.raises(InvalidParameterError, match="duplicates"):
             RandomVariable("Broken", ("true", "true"))
 
     def test_domain_order_is_preserved(self) -> None:
@@ -92,7 +93,7 @@ class TestRandomVariableIndex:
 
     def test_index_of_unknown_state_raises(self, rain: RandomVariable) -> None:
         """Test index() raises ValueError for a state outside the domain."""
-        with pytest.raises(ValueError, match="not a valid state"):
+        with pytest.raises(ElementNotFoundError, match="not a valid state"):
             rain.index("maybe")
 
 

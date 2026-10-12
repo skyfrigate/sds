@@ -22,6 +22,7 @@ from typing import Any, Dict, Tuple
 import pytest
 
 from sds.algorithms.probabilistic_algorithms import variable_elimination
+from sds.core.exceptions import ElementNotFoundError
 from sds.probabilistic import Factor, RandomVariable
 
 
@@ -175,7 +176,7 @@ class TestEdgeCases:
     def test_unknown_state(self, pgm: ModuleType) -> None:
         """Evidence states must belong to the domain."""
         bn, v = pgm.alarm()
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             variable_elimination(bn, [v["B"]], {v["J"]: "maybe"})
 
     def test_bad_order(self, pgm: ModuleType) -> None:

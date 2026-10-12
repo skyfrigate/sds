@@ -23,6 +23,7 @@ from typing import Dict, List, Tuple
 import pytest
 
 from sds.algorithms.probabilistic_algorithms import forward, viterbi
+from sds.core.exceptions import ElementNotFoundError
 from sds.probabilistic import Factor, HiddenMarkovModel, RandomVariable
 
 
@@ -165,7 +166,7 @@ class TestHmmArguments:
     def test_unknown_symbol(self, pgm: ModuleType, algorithm) -> None:  # type: ignore[no-untyped-def]
         """Symbols must belong to the observation domain."""
         hmm, _ = pgm.umbrella()
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             algorithm(hmm, ["yes", "maybe"])
 
     def test_unconfigured_model(self, algorithm) -> None:  # type: ignore[no-untyped-def]

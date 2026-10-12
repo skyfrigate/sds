@@ -80,6 +80,7 @@ import math
 from itertools import product
 from typing import Any, Dict, Iterator, List, Optional, Sequence, Tuple
 
+from ..core.exceptions import InvalidParameterError
 from .factor import Factor
 from .interfaces import AbstractHiddenMarkovModel
 from .variable import RandomVariable
@@ -207,7 +208,7 @@ class HiddenMarkovModel(AbstractHiddenMarkovModel):
         """See AbstractHiddenMarkovModel.set_initial_distribution."""
         states = self.states()
         if factor.scope != (states,):
-            raise ValueError(
+            raise InvalidParameterError(
                 f"Initial distribution scope must be exactly ('{states.name}',), "
                 f"got {[v.name for v in factor.scope]}"
             )
@@ -219,7 +220,7 @@ class HiddenMarkovModel(AbstractHiddenMarkovModel):
         states = self.states()
         previous = self.previous_states()
         if factor.scope != (states, previous):
-            raise ValueError(
+            raise InvalidParameterError(
                 f"Transition model scope must be exactly "
                 f"('{states.name}', '{previous.name}'), "
                 f"got {[v.name for v in factor.scope]}"
@@ -232,7 +233,7 @@ class HiddenMarkovModel(AbstractHiddenMarkovModel):
         observations = self.observations()
         states = self.states()
         if factor.scope != (observations, states):
-            raise ValueError(
+            raise InvalidParameterError(
                 f"Emission model scope must be exactly "
                 f"('{observations.name}', '{states.name}'), "
                 f"got {[v.name for v in factor.scope]}"
@@ -260,7 +261,7 @@ class HiddenMarkovModel(AbstractHiddenMarkovModel):
                 assignment[variable] = state
                 total += factor.value(assignment)
             if not math.isclose(total, 1.0, abs_tol=_NORMALIZATION_TOLERANCE):
-                raise ValueError(
+                raise InvalidParameterError(
                     f"Factor for '{variable.name}' is not normalized: values "
                     f"for configuration "
                     f"{dict(zip((v.name for v in conditioning_vars), conditioning_states))} "
@@ -296,9 +297,9 @@ class HiddenMarkovModel(AbstractHiddenMarkovModel):
     ) -> float:
         """See AbstractHiddenMarkovModel.joint."""
         if len(states_sequence) == 0 or len(observations_sequence) == 0:
-            raise ValueError("Sequences must contain at least one time step")
+            raise InvalidParameterError("Sequences must contain at least one time step")
         if len(states_sequence) != len(observations_sequence):
-            raise ValueError(
+            raise InvalidParameterError(
                 "states_sequence and observations_sequence must have the "
                 f"same length, got {len(states_sequence)} and "
                 f"{len(observations_sequence)}"
