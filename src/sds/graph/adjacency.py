@@ -65,6 +65,12 @@ sds.graph.directed : Directed and undirected graph implementations.
 from collections import deque
 from typing import Dict, Iterator, List, Optional, Set
 
+from ..core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    InvalidParameterError,
+    StructureTypeError,
+)
 from ._incidence import IncidenceIndex
 from .edge import Edge
 from .interfaces import AbstractGraph
@@ -177,15 +183,15 @@ class AdjacencyListGraph(AbstractGraph):
         True
         """
         if node_id not in self._nodes:
-            raise ValueError(f"Node {node_id} not in graph")
+            raise ElementNotFoundError(f"Node {node_id} not in graph")
         return set(self._adjacency_list.neighbor_ids(node_id))
 
     def add_node(self, node: GraphNode) -> None:
         """Add a node to the graph."""
         if not isinstance(node, GraphNode):
-            raise TypeError(f"Expected GraphNode, got {type(node).__name__}")
+            raise StructureTypeError(f"Expected GraphNode, got {type(node).__name__}")
         if node.id in self._nodes:
-            raise ValueError(f"Node {node.id} already exists in graph")
+            raise DuplicateElementError(f"Node {node.id} already exists in graph")
         self._nodes[node.id] = node
         self._adjacency_list.add_node(node.id)
         self._invalidate_cache()
@@ -193,7 +199,7 @@ class AdjacencyListGraph(AbstractGraph):
     def remove_node(self, node: GraphNode) -> None:
         """Remove a node and all its incident edges."""
         if node.id not in self._nodes:
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
         self._edges = [e for e in self._edges if not e.incident_to(node)]
         self._adjacency_list.drop_node(node.id)
         del self._nodes[node.id]
@@ -206,13 +212,13 @@ class AdjacencyListGraph(AbstractGraph):
     def add_edge(self, edge: Edge) -> None:
         """Add an edge to the graph."""
         if not isinstance(edge, Edge):
-            raise TypeError(f"Expected Edge, got {type(edge).__name__}")
+            raise StructureTypeError(f"Expected Edge, got {type(edge).__name__}")
         if not self.has_node(edge.node1):
-            raise ValueError(f"Node {edge.node1.id} not in graph")
+            raise ElementNotFoundError(f"Node {edge.node1.id} not in graph")
         if not self.has_node(edge.node2):
-            raise ValueError(f"Node {edge.node2.id} not in graph")
+            raise ElementNotFoundError(f"Node {edge.node2.id} not in graph")
         if not self._allow_multi_edges and self.has_edge(edge.node1, edge.node2):
-            raise ValueError(
+            raise DuplicateElementError(
                 f"Edge between {edge.node1.id} and {edge.node2.id} already exists"
             )
         self._edges.append(edge)
@@ -222,7 +228,7 @@ class AdjacencyListGraph(AbstractGraph):
     def remove_edge(self, edge: Edge) -> None:
         """Remove an edge from the graph."""
         if edge not in self._edges:
-            raise ValueError(
+            raise ElementNotFoundError(
                 f"Edge between {edge.node1.id} and {edge.node2.id} not in graph"
             )
         removed = self._edges.pop(self._edges.index(edge))
@@ -245,14 +251,14 @@ class AdjacencyListGraph(AbstractGraph):
     def neighbors(self, node: GraphNode) -> Iterator[GraphNode]:
         """Get all neighbors of a node."""
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
         for neighbor_id in self._adjacency_list.neighbor_ids(node.id):
             yield self._nodes[neighbor_id]
 
     def degree(self, node: GraphNode) -> int:
         """Get the degree of a node."""
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
         if not self._allow_multi_edges:
             return self._adjacency_list.neighbor_count(node.id)
         return sum(1 for e in self._edges if e.incident_to(node))
@@ -401,7 +407,7 @@ class AdjacencyMatrixGraph(AbstractGraph):
         """
         super().__init__()
         if max_nodes <= 0:
-            raise ValueError("max_nodes must be positive")
+            raise InvalidParameterError("max_nodes must be positive")
         self._max_nodes = max_nodes
         self._allow_multi_edges = allow_multi_edges
         self._matrix: List[List[int]] = [[0] * max_nodes for _ in range(max_nodes)]
@@ -453,9 +459,9 @@ class AdjacencyMatrixGraph(AbstractGraph):
     def add_node(self, node: GraphNode) -> None:
         """Add a node to the graph."""
         if not isinstance(node, GraphNode):
-            raise TypeError(f"Expected GraphNode, got {type(node).__name__}")
+            raise StructureTypeError(f"Expected GraphNode, got {type(node).__name__}")
         if node.id in self._nodes:
-            raise ValueError(f"Node {node.id} already exists in graph")
+            raise DuplicateElementError(f"Node {node.id} already exists in graph")
         if self._next_index >= self._max_nodes:
             raise ValueError(f"Graph is full. Maximum {self._max_nodes} nodes allowed")
         self._nodes[node.id] = node
@@ -467,7 +473,7 @@ class AdjacencyMatrixGraph(AbstractGraph):
     def remove_node(self, node: GraphNode) -> None:
         """Remove a node and all its incident edges."""
         if node.id not in self._nodes:
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
         idx = self._node_indices[node.id]
 
         # Remove edges involving this node
@@ -510,17 +516,17 @@ class AdjacencyMatrixGraph(AbstractGraph):
     def add_edge(self, edge: Edge) -> None:
         """Add an edge to the graph."""
         if not isinstance(edge, Edge):
-            raise TypeError(f"Expected Edge, got {type(edge).__name__}")
+            raise StructureTypeError(f"Expected Edge, got {type(edge).__name__}")
         if not self.has_node(edge.node1):
-            raise ValueError(f"Node {edge.node1.id} not in graph")
+            raise ElementNotFoundError(f"Node {edge.node1.id} not in graph")
         if not self.has_node(edge.node2):
-            raise ValueError(f"Node {edge.node2.id} not in graph")
+            raise ElementNotFoundError(f"Node {edge.node2.id} not in graph")
 
         idx1 = self._node_indices[edge.node1.id]
         idx2 = self._node_indices[edge.node2.id]
 
         if not self._allow_multi_edges and self._matrix[idx1][idx2] > 0:
-            raise ValueError(
+            raise DuplicateElementError(
                 f"Edge between {edge.node1.id} and {edge.node2.id} already exists"
             )
 
@@ -532,7 +538,7 @@ class AdjacencyMatrixGraph(AbstractGraph):
     def remove_edge(self, edge: Edge) -> None:
         """Remove an edge from the graph."""
         if edge not in self._edges:
-            raise ValueError(
+            raise ElementNotFoundError(
                 f"Edge between {edge.node1.id} and {edge.node2.id} not in graph"
             )
 
@@ -562,7 +568,7 @@ class AdjacencyMatrixGraph(AbstractGraph):
     def neighbors(self, node: GraphNode) -> Iterator[GraphNode]:
         """Get all neighbors of a node."""
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
         idx = self._node_indices[node.id]
         for i in range(self._next_index):
             if self._matrix[idx][i] > 0:
@@ -572,7 +578,7 @@ class AdjacencyMatrixGraph(AbstractGraph):
     def degree(self, node: GraphNode) -> int:
         """Get the degree of a node."""
         if not self.has_node(node):
-            raise ValueError(f"Node {node.id} not in graph")
+            raise ElementNotFoundError(f"Node {node.id} not in graph")
         idx = self._node_indices[node.id]
         return sum(self._matrix[idx][i] for i in range(self._next_index))
 

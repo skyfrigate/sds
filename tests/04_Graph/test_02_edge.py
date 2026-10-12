@@ -16,6 +16,11 @@
 
 import pytest
 
+from sds.core.exceptions import (
+    ElementNotFoundError,
+    InvalidParameterError,
+    StructureTypeError,
+)
 from sds.graph.edge import DirectedEdge, Edge, WeightedDirectedEdge, WeightedEdge
 from sds.graph.node import GraphNode
 
@@ -42,16 +47,16 @@ class TestEdgeCreation:
     def test_create_edge_requires_graphnodes(self) -> None:
         """Test that edge requires GraphNode instances."""
         n1 = GraphNode("A", "n1")
-        with pytest.raises(TypeError, match="must be GraphNode"):
+        with pytest.raises(StructureTypeError, match="must be GraphNode"):
             Edge(n1, "not a node")  # type: ignore[arg-type]
 
-        with pytest.raises(TypeError, match="must be GraphNode"):
+        with pytest.raises(StructureTypeError, match="must be GraphNode"):
             Edge("not a node", n1)  # type: ignore[arg-type]
 
     def test_self_loop_not_allowed(self) -> None:
         """Test that self-loops are not allowed."""
         n1 = GraphNode("A", "n1")
-        with pytest.raises(ValueError, match="Self-loops not allowed"):
+        with pytest.raises(InvalidParameterError, match="Self-loops not allowed"):
             Edge(n1, n1)
 
 
@@ -159,7 +164,7 @@ class TestEdgeOtherNode:
         n2 = GraphNode("B", "n2")
         n3 = GraphNode("C", "n3")
         edge = Edge(n1, n2)
-        with pytest.raises(ValueError, match="not part of this edge"):
+        with pytest.raises(ElementNotFoundError, match="not part of this edge"):
             edge.other_node(n3)
 
 
@@ -331,7 +336,7 @@ class TestWeightedEdge:
         """Test that non-numeric weight raises error."""
         n1 = GraphNode("A", "n1")
         n2 = GraphNode("B", "n2")
-        with pytest.raises(TypeError, match="Weight must be numeric"):
+        with pytest.raises(StructureTypeError, match="Weight must be numeric"):
             WeightedEdge(n1, n2, weight="invalid")  # type: ignore[arg-type]
 
     def test_negative_weight_allowed(self) -> None:
