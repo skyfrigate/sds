@@ -24,6 +24,7 @@ import pytest
 from sds.core.exceptions import (
     DuplicateElementError,
     ElementNotFoundError,
+    FullStructureError,
     InvalidParameterError,
     StructureTypeError,
 )
@@ -220,7 +221,7 @@ class TestAdjacencyMatrixBasicOperations:
         g = AdjacencyMatrixGraph(max_nodes=2)
         g.add_node(GraphNode("A", "n1"))
         g.add_node(GraphNode("B", "n2"))
-        with pytest.raises(ValueError, match="full"):
+        with pytest.raises(FullStructureError, match="full"):
             g.add_node(GraphNode("C", "n3"))
 
     def test_add_edge(self) -> None:
