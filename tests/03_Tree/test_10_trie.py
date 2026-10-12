@@ -16,6 +16,7 @@
 
 import pytest
 
+from sds.core.exceptions import InvalidParameterError
 from sds.tree.trie import Trie
 
 
@@ -78,7 +79,7 @@ class TestTrieInsertion:
     def test_insert_empty_string_raises_error(self) -> None:
         """Test inserting empty string raises error."""
         trie = Trie()
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             trie.insert("")
 
     def test_insert_prefix_and_full_word(self) -> None:

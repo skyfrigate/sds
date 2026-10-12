@@ -19,7 +19,11 @@ import random
 
 import pytest
 
-from sds.core.exceptions import IndexStructureError, InvalidOperationError
+from sds.core.exceptions import (
+    IndexStructureError,
+    InvalidOperationError,
+    InvalidParameterError,
+)
 from sds.tree.segment_tree import SegmentTree
 
 
@@ -37,7 +41,7 @@ class TestSegmentTreeCreation:
     def test_create_empty_array_raises_error(self) -> None:
         """Test creating from empty array raises error."""
         with pytest.raises(
-            ValueError, match="Cannot create segment tree from empty array"
+            InvalidParameterError, match="Cannot create segment tree from empty array"
         ):
             SegmentTree([])
 
@@ -58,7 +62,7 @@ class TestSegmentTreeCreation:
 
     def test_create_with_invalid_operation(self) -> None:
         """Test creating with invalid operation raises error."""
-        with pytest.raises(ValueError, match="Unknown operation: invalid"):
+        with pytest.raises(InvalidParameterError, match="Unknown operation: invalid"):
             SegmentTree([1, 2, 3], operation="invalid")
 
     def test_create_with_custom_operation(self) -> None:
@@ -73,13 +77,16 @@ class TestSegmentTreeCreation:
     def test_custom_operation_without_identity_raises_error(self) -> None:
         """Test custom operation without identity raises error."""
         with pytest.raises(
-            ValueError, match="Identity element required for custom operation"
+            InvalidParameterError,
+            match="Identity element required for custom operation",
         ):
             SegmentTree([1, 2, 3], operation=lambda a, b: a + b)
 
     def test_create_with_non_callable_non_string_operation(self) -> None:
         """Test creating with invalid operation type raises error."""
-        with pytest.raises(ValueError, match="Operation must be string or callable"):
+        with pytest.raises(
+            InvalidParameterError, match="Operation must be string or callable"
+        ):
             SegmentTree([1, 2, 3], operation=123)  # type: ignore
 
     def test_original_array_not_modified(self) -> None:

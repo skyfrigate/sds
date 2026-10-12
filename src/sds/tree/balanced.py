@@ -53,7 +53,7 @@ sds.tree.binary : Basic binary search tree.
 
 from typing import Any, Iterator, Optional, Tuple, cast
 
-from ..core.exceptions import EmptyStructureError
+from ..core.exceptions import ElementNotFoundError, EmptyStructureError
 from .interfaces import AbstractBinaryTree
 from .node import AVLNode, BinaryNode, RedBlackNode
 
@@ -406,7 +406,7 @@ class AVLTree(AbstractBinaryTree):
             raise EmptyStructureError("Cannot remove from empty tree")
 
         if not self.search(item):
-            raise ValueError(f"Item {item} not found in tree")
+            raise ElementNotFoundError(f"Item {item} not found in tree")
 
         self._root = self._remove_recursive(self._root, item)
         self._size -= 1
@@ -838,7 +838,7 @@ class RedBlackTree(AbstractBinaryTree):
             raise EmptyStructureError("Cannot remove from empty tree")
 
         if not self.search(item):
-            raise ValueError(f"Item {item} not found in tree")
+            raise ElementNotFoundError(f"Item {item} not found in tree")
 
         # Find node to delete
         z: RedBlackNode = cast(RedBlackNode, self._root)

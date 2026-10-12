@@ -16,7 +16,7 @@
 
 import pytest
 
-from sds.core.exceptions import EmptyStructureError
+from sds.core.exceptions import ElementNotFoundError, EmptyStructureError
 from sds.tree.general import Tree
 from sds.tree.node import TreeNode
 
@@ -146,7 +146,7 @@ class TestTreeAddChildTo:
     def test_add_child_to_non_existent_parent(self) -> None:
         """Test adding to non-existent parent raises error."""
         tree = Tree("Root")
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             tree.add_child_to("NonExistent", "Child")
 
     def test_add_child_to_maintains_hierarchy(self) -> None:
@@ -236,7 +236,7 @@ class TestTreeRemoveNode:
     def test_remove_non_existent(self) -> None:
         """Test removing non-existent node raises error."""
         tree = Tree("Root")
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             tree.remove_node("NotFound")
 
     def test_remove_decrements_size(self) -> None:
@@ -432,7 +432,7 @@ class TestTreeUtilityMethods:
     def test_get_children_non_existent(self) -> None:
         """Test getting children of non-existent node."""
         tree = Tree("Root")
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             tree.get_children("NotFound")
 
     def test_get_parent(self) -> None:
@@ -472,7 +472,7 @@ class TestTreeUtilityMethods:
     def test_degree_non_existent(self) -> None:
         """Test degree of non-existent node raises error."""
         tree = Tree("Root")
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             tree.degree("NotFound")
 
     def test_is_leaf(self) -> None:
@@ -485,7 +485,7 @@ class TestTreeUtilityMethods:
     def test_is_leaf_non_existent(self) -> None:
         """Test is_leaf on non-existent node raises error."""
         tree = Tree("Root")
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             tree.is_leaf("NotFound")
 
     def test_leaves(self) -> None:

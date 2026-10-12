@@ -59,7 +59,7 @@ sds.tree.interfaces : Abstract tree interfaces.
 from collections import deque
 from typing import Any, Iterator, Optional
 
-from ..core.exceptions import EmptyStructureError
+from ..core.exceptions import ElementNotFoundError, EmptyStructureError
 from .interfaces import AbstractBinaryTree
 from .node import BinaryNode
 
@@ -294,7 +294,7 @@ class BinaryTree(AbstractBinaryTree):
                 queue.append((current.right, current))
 
         if target_node is None:
-            raise ValueError(f"Item {item} not found in tree")
+            raise ElementNotFoundError(f"Item {item} not found in tree")
 
         # Store the value to return
         removed_data = target_node.data
@@ -729,7 +729,7 @@ class BinarySearchTree(AbstractBinaryTree):
             raise EmptyStructureError("Cannot remove from empty tree")
 
         if not self.search(item):
-            raise ValueError(f"Item {item} not found in tree")
+            raise ElementNotFoundError(f"Item {item} not found in tree")
 
         self._root = self._remove_recursive(self._root, item)
         self._size -= 1
