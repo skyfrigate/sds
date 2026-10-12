@@ -80,7 +80,7 @@ import math
 from itertools import product
 from typing import Any, Dict, Iterator, List, Optional, Sequence, Tuple
 
-from ..core.exceptions import InvalidParameterError
+from ..core.exceptions import InvalidOperationError, InvalidParameterError
 from .factor import Factor
 from .interfaces import AbstractHiddenMarkovModel
 from .variable import RandomVariable
@@ -170,7 +170,7 @@ class HiddenMarkovModel(AbstractHiddenMarkovModel):
     def set_states(self, variable: RandomVariable) -> None:
         """See AbstractHiddenMarkovModel.set_states."""
         if self._states is not None:
-            raise ValueError("States variable is already set")
+            raise InvalidOperationError("States variable is already set")
         self._states = variable
         self._previous_states = RandomVariable(
             f"{variable.name}{_PREVIOUS_SUFFIX}", variable.domain
@@ -179,25 +179,25 @@ class HiddenMarkovModel(AbstractHiddenMarkovModel):
     def set_observations(self, variable: RandomVariable) -> None:
         """See AbstractHiddenMarkovModel.set_observations."""
         if self._observations is not None:
-            raise ValueError("Observations variable is already set")
+            raise InvalidOperationError("Observations variable is already set")
         self._observations = variable
 
     def states(self) -> RandomVariable:
         """See AbstractHiddenMarkovModel.states."""
         if self._states is None:
-            raise ValueError("States variable has not been set yet")
+            raise InvalidOperationError("States variable has not been set yet")
         return self._states
 
     def previous_states(self) -> RandomVariable:
         """See AbstractHiddenMarkovModel.previous_states."""
         if self._previous_states is None:
-            raise ValueError("States variable has not been set yet")
+            raise InvalidOperationError("States variable has not been set yet")
         return self._previous_states
 
     def observations(self) -> RandomVariable:
         """See AbstractHiddenMarkovModel.observations."""
         if self._observations is None:
-            raise ValueError("Observations variable has not been set yet")
+            raise InvalidOperationError("Observations variable has not been set yet")
         return self._observations
 
     # ------------------------------------------------------------------
@@ -271,19 +271,19 @@ class HiddenMarkovModel(AbstractHiddenMarkovModel):
     def initial_distribution(self) -> Factor:
         """See AbstractHiddenMarkovModel.initial_distribution."""
         if self._initial is None:
-            raise ValueError("Initial distribution has not been set yet")
+            raise InvalidOperationError("Initial distribution has not been set yet")
         return self._initial
 
     def transition_model(self) -> Factor:
         """See AbstractHiddenMarkovModel.transition_model."""
         if self._transition is None:
-            raise ValueError("Transition model has not been set yet")
+            raise InvalidOperationError("Transition model has not been set yet")
         return self._transition
 
     def emission_model(self) -> Factor:
         """See AbstractHiddenMarkovModel.emission_model."""
         if self._emission is None:
-            raise ValueError("Emission model has not been set yet")
+            raise InvalidOperationError("Emission model has not been set yet")
         return self._emission
 
     # ------------------------------------------------------------------

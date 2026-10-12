@@ -23,7 +23,11 @@ from typing import Dict, List, Tuple
 import pytest
 
 from sds.algorithms.probabilistic_algorithms import forward, viterbi
-from sds.core.exceptions import ElementNotFoundError, InvalidParameterError
+from sds.core.exceptions import (
+    ElementNotFoundError,
+    InvalidOperationError,
+    InvalidParameterError,
+)
 from sds.probabilistic import Factor, HiddenMarkovModel, RandomVariable
 
 
@@ -170,8 +174,8 @@ class TestHmmArguments:
             algorithm(hmm, ["yes", "maybe"])
 
     def test_unconfigured_model(self, algorithm) -> None:  # type: ignore[no-untyped-def]
-        """A model without states raises ValueError."""
-        with pytest.raises(ValueError):
+        """A model without states raises InvalidOperationError."""
+        with pytest.raises(InvalidOperationError):
             algorithm(HiddenMarkovModel(), ["x"])
 
     def test_zero_probability_sequence(self, algorithm) -> None:  # type: ignore[no-untyped-def]
