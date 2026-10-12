@@ -8,10 +8,14 @@ This module provides the fundamental building blocks used across all data struct
 """
 
 from .exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
     EmptyStructureError,
     FullStructureError,
     IndexStructureError,
     InvalidOperationError,
+    InvalidParameterError,
+    StructureTypeError,
 )
 from .interfaces import Collection, LinearCollection
 from .node import Node
@@ -27,4 +31,8 @@ __all__ = [
     "FullStructureError",
     "IndexStructureError",
     "InvalidOperationError",
+    "ElementNotFoundError",
+    "DuplicateElementError",
+    "InvalidParameterError",
+    "StructureTypeError",
 ]
