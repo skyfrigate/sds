@@ -68,7 +68,11 @@ sds.tree.balanced : AVL and Red-Black trees.
 from collections import deque
 from typing import Any, Iterator, List, Optional, Tuple, cast
 
-from ..core.exceptions import EmptyStructureError
+from ..core.exceptions import (
+    ElementNotFoundError,
+    EmptyStructureError,
+    InvalidParameterError,
+)
 from ..core.node import Node
 from .interfaces import AbstractTree
 from .node import BTreeNode
@@ -195,7 +199,7 @@ class BTree(AbstractTree):
         5
         """
         if t < 2:
-            raise ValueError("Minimum degree t must be at least 2")
+            raise InvalidParameterError("Minimum degree t must be at least 2")
 
         super().__init__()
         self._t: int = t
@@ -509,7 +513,7 @@ class BTree(AbstractTree):
             raise EmptyStructureError("Cannot remove from empty tree")
 
         if not self.search(key):
-            raise ValueError(f"Key {key} not found in tree")
+            raise ElementNotFoundError(f"Key {key} not found in tree")
 
         self._remove_from_node(self._root, key)
         self._size -= 1

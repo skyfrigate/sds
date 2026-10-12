@@ -73,6 +73,7 @@ sds.trees : Tree implementations using these nodes.
 from typing import Any, Dict, List, Optional
 
 from ..core import Node
+from ..core.exceptions import InvalidParameterError
 
 __all__ = [
     "AVLNode",
@@ -1005,7 +1006,7 @@ class BTreeNode(Node):
         False
         """
         if t < 2:
-            raise ValueError("Minimum degree t must be at least 2")
+            raise InvalidParameterError("Minimum degree t must be at least 2")
 
         # B-Tree nodes don't have a single data value
         super().__init__(data=None)

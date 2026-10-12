@@ -16,7 +16,7 @@
 
 import pytest
 
-from sds.core.exceptions import EmptyStructureError
+from sds.core.exceptions import ElementNotFoundError, EmptyStructureError
 from sds.tree import RedBlackNode
 from sds.tree.balanced import RedBlackTree
 
@@ -157,7 +157,7 @@ class TestRedBlackTreeRemoval:
         """Test removing non-existing element."""
         rbt = RedBlackTree()
         rbt.insert(10)
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             rbt.remove(5)
 
     def test_remove_single_element(self) -> None:

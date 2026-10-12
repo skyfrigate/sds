@@ -2,7 +2,7 @@
 
 import pytest
 
-from sds.core.exceptions import EmptyStructureError
+from sds.core.exceptions import ElementNotFoundError, EmptyStructureError
 from sds.tree.binary import BinaryTree
 from sds.tree.interfaces import AbstractBinaryTree
 
@@ -127,7 +127,7 @@ class TestBinaryTreeRemoval:
         """Test that removing non-existing item raises error."""
         tree = BinaryTree()
         tree.insert(10)
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             tree.remove(5)
 
     def test_remove_root_from_single_node_tree(self):

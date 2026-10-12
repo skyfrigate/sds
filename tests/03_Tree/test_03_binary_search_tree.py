@@ -16,7 +16,7 @@
 
 import pytest
 
-from sds.core.exceptions import EmptyStructureError
+from sds.core.exceptions import ElementNotFoundError, EmptyStructureError
 from sds.tree.binary import BinarySearchTree
 
 # The traversal methods exercised below are deprecated (#90) but must keep
@@ -214,7 +214,7 @@ class TestBinarySearchTreeRemoval:
         """Test removing non-existing element."""
         bst = BinarySearchTree()
         bst.insert(10)
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             bst.remove(5)
 
     def test_remove_leaf_node(self) -> None:

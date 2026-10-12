@@ -73,6 +73,7 @@ sds.tree.general : General tree structure.
 
 from typing import Iterator, List, Optional
 
+from ..core.exceptions import InvalidParameterError
 from ..core.interfaces import Collection
 from .node import TrieNode
 
@@ -202,7 +203,7 @@ class Trie(Collection):
         on size but ensures the word is marked.
         """
         if not word:
-            raise ValueError("Cannot insert empty string")
+            raise InvalidParameterError("Cannot insert empty string")
 
         node = self._root
         for char in word:

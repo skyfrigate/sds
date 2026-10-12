@@ -2,6 +2,7 @@
 
 import pytest
 
+from sds.core.exceptions import InvalidParameterError
 from sds.core.node import Node
 from sds.tree.node import BinaryNode, BTreeNode, TreeNode, TrieNode
 
@@ -524,17 +525,17 @@ class TestBTreeNodeInit:
 
     def test_init_invalid_t_zero(self):
         """Test that t=0 raises ValueError."""
-        with pytest.raises(ValueError, match="at least 2"):
+        with pytest.raises(InvalidParameterError, match="at least 2"):
             BTreeNode(t=0)
 
     def test_init_invalid_t_one(self):
         """Test that t=1 raises ValueError."""
-        with pytest.raises(ValueError, match="at least 2"):
+        with pytest.raises(InvalidParameterError, match="at least 2"):
             BTreeNode(t=1)
 
     def test_init_invalid_t_negative(self):
         """Test that negative t raises ValueError."""
-        with pytest.raises(ValueError, match="at least 2"):
+        with pytest.raises(InvalidParameterError, match="at least 2"):
             BTreeNode(t=-5)
 
     def test_init_data_is_none(self):

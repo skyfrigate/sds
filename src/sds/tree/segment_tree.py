@@ -67,7 +67,11 @@ sds.tree.binary : Binary tree implementations.
 
 from typing import Any, Callable, Iterator, List, Optional, Union
 
-from ..core.exceptions import IndexStructureError, InvalidOperationError
+from ..core.exceptions import (
+    IndexStructureError,
+    InvalidOperationError,
+    InvalidParameterError,
+)
 from .interfaces import AbstractSegmentTree
 
 __all__ = ["SegmentTree"]
@@ -200,7 +204,7 @@ class SegmentTree(AbstractSegmentTree):
         super().__init__()
 
         if not arr:
-            raise ValueError("Cannot create segment tree from empty array")
+            raise InvalidParameterError("Cannot create segment tree from empty array")
 
         self._size = len(arr)
         self._arr: List[Any] = list(arr)  # Create a copy
@@ -211,10 +215,12 @@ class SegmentTree(AbstractSegmentTree):
         elif callable(operation):
             self._operation: Callable[[Any, Any], Any] = operation
             if identity is None:
-                raise ValueError("Identity element required for custom operation")
+                raise InvalidParameterError(
+                    "Identity element required for custom operation"
+                )
             self._identity: Any = identity
         else:
-            raise ValueError("Operation must be string or callable")
+            raise InvalidParameterError("Operation must be string or callable")
 
         # Build tree (size = 4*n is safe for any n)
         self._tree: List[Any] = [self._identity] * (4 * self._size)
@@ -243,7 +249,7 @@ class SegmentTree(AbstractSegmentTree):
             self._operation = max
             self._identity = float("-inf")
         else:
-            raise ValueError(f"Unknown operation: {operation}")
+            raise InvalidParameterError(f"Unknown operation: {operation}")
 
     @property
     def size(self) -> int:
