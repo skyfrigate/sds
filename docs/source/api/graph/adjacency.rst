@@ -796,11 +796,13 @@ Common Pitfalls
 
 .. code-block:: python
 
+   from sds.core.exceptions import FullStructureError
+
    try:
        matrix = AdjacencyMatrixGraph(max_nodes=5)
        for i in range(10):  # Oops!
            matrix.add_node(GraphNode(i, f"n{i}"))
-   except ValueError as e:
+   except FullStructureError as e:
        print(f"Error: {e}")
 
 2. **Using matrix for dynamic graphs**
