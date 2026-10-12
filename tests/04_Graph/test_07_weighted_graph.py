@@ -16,6 +16,11 @@
 
 import pytest
 
+from sds.core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    StructureTypeError,
+)
 from sds.graph.edge import Edge, WeightedDirectedEdge, WeightedEdge
 from sds.graph.interfaces import AbstractWeightedGraph
 from sds.graph.node import GraphNode
@@ -65,7 +70,7 @@ class TestWeightedGraphNodeOperations:
         g = WeightedGraph()
         n1 = GraphNode("A", "n1")
         g.add_node(n1)
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             g.add_node(n1)
 
     def test_remove_node(self) -> None:
@@ -119,7 +124,7 @@ class TestWeightedGraphEdgeOperations:
         g.add_node(n2)
 
         # Regular Edge should raise TypeError
-        with pytest.raises(TypeError, match="Expected WeightedEdge"):
+        with pytest.raises(StructureTypeError, match="Expected WeightedEdge"):
             g.add_edge(Edge(n1, n2))  # type: ignore[arg-type]
 
     def test_rejects_directed_weighted_edge(self) -> None:
@@ -131,7 +136,7 @@ class TestWeightedGraphEdgeOperations:
         g.add_node(n1)
         g.add_node(n2)
 
-        with pytest.raises(TypeError, match="requires undirected"):
+        with pytest.raises(StructureTypeError, match="requires undirected"):
             g.add_edge(WeightedDirectedEdge(n1, n2, weight=5.0))  # type: ignore[arg-type]
 
     def test_add_duplicate_edge_raises_error(self) -> None:
@@ -143,7 +148,7 @@ class TestWeightedGraphEdgeOperations:
         g.add_node(n2)
 
         g.add_edge(WeightedEdge(n1, n2, weight=5.0))
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             g.add_edge(WeightedEdge(n1, n2, weight=10.0))
 
     def test_multiple_edges_in_multigraph(self) -> None:
@@ -330,7 +335,7 @@ class TestWeightedGraphIncidentEdges:
         g = WeightedGraph()
         n1 = GraphNode("A", "n1")
 
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.incident_edges(n1)
 
 
@@ -954,7 +959,7 @@ class TestWeightedGraphOutgoingEdges:
     def test_missing_node_raises(self) -> None:
         """A node absent from the graph raises ValueError."""
         g = WeightedGraph()
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             list(g.outgoing_edges(GraphNode("x", "x")))
 
     def test_parallel_edges(self) -> None:

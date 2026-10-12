@@ -21,6 +21,11 @@ directed graph properties, and edge cases.
 
 import pytest
 
+from sds.core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    StructureTypeError,
+)
 from sds.graph import (
     GraphNode,
     WeightedDirectedEdge,
@@ -63,13 +68,13 @@ class TestNodeOperations:
         g = WeightedDirectedGraph()
         n1 = GraphNode("A", "n1")
         g.add_node(n1)
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             g.add_node(n1)
 
     def test_add_invalid_node_raises_error(self) -> None:
         """Test that adding non-GraphNode raises TypeError."""
         g = WeightedDirectedGraph()
-        with pytest.raises(TypeError):
+        with pytest.raises(StructureTypeError):
             g.add_node("not a node")  # type: ignore
 
     def test_remove_node(self) -> None:
@@ -102,7 +107,7 @@ class TestNodeOperations:
         """Test removing a node not in graph raises ValueError."""
         g = WeightedDirectedGraph()
         n1 = GraphNode("A", "n1")
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.remove_node(n1)
 
 
@@ -127,7 +132,7 @@ class TestEdgeOperations:
         n1, n2 = GraphNode("A", "n1"), GraphNode("B", "n2")
         g.add_node(n1)
         g.add_node(n2)
-        with pytest.raises(TypeError):
+        with pytest.raises(StructureTypeError):
             g.add_edge(WeightedEdge(n1, n2, weight=1.0))  # type: ignore
 
     def test_add_edge_with_missing_nodes_raises_error(self) -> None:
@@ -135,7 +140,7 @@ class TestEdgeOperations:
         g = WeightedDirectedGraph()
         n1, n2 = GraphNode("A", "n1"), GraphNode("B", "n2")
         g.add_node(n1)
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.add_edge(WeightedDirectedEdge(n1, n2, weight=1.0))
 
     def test_add_duplicate_edge_raises_error(self) -> None:
@@ -145,7 +150,7 @@ class TestEdgeOperations:
         g.add_node(n1)
         g.add_node(n2)
         g.add_edge(WeightedDirectedEdge(n1, n2, weight=1.0))
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             g.add_edge(WeightedDirectedEdge(n1, n2, weight=2.0))
 
     def test_multi_edges_allowed(self) -> None:
@@ -177,7 +182,7 @@ class TestEdgeOperations:
         g.add_node(n1)
         g.add_node(n2)
         edge = WeightedDirectedEdge(n1, n2, weight=1.0)
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.remove_edge(edge)
 
 
@@ -535,7 +540,7 @@ class TestOutgoingEdges:
     def test_missing_node_raises(self) -> None:
         """A node absent from the graph raises ValueError."""
         g = WeightedDirectedGraph()
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             list(g.outgoing_edges(GraphNode("x", "x")))
 
     def test_parallel_arcs(self) -> None:

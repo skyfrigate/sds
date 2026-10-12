@@ -22,6 +22,7 @@ These tests verify that UndirectedGraph:
 
 import pytest
 
+from sds.core.exceptions import DuplicateElementError, StructureTypeError
 from sds.graph.directed import UndirectedGraph
 from sds.graph.edge import DirectedEdge, Edge
 from sds.graph.graph import Graph
@@ -79,7 +80,7 @@ class TestUndirectedGraphEdgeValidation:
         g.add_node(n2)
 
         # Should raise TypeError
-        with pytest.raises(TypeError, match="requires undirected Edge"):
+        with pytest.raises(StructureTypeError, match="requires undirected Edge"):
             g.add_edge(DirectedEdge(n1, n2))  # type: ignore[arg-type]
 
     def test_error_message_includes_type_name(self) -> None:
@@ -90,7 +91,7 @@ class TestUndirectedGraphEdgeValidation:
         g.add_node(n1)
         g.add_node(n2)
 
-        with pytest.raises(TypeError, match="DirectedEdge"):
+        with pytest.raises(StructureTypeError, match="DirectedEdge"):
             g.add_edge(DirectedEdge(n1, n2))  # type: ignore[arg-type]
 
     def test_graph_remains_unchanged_after_rejected_edge(self) -> None:
@@ -229,7 +230,7 @@ class TestUndirectedGraphMultiEdges:
         g.add_node(n2)
 
         g.add_edge(Edge(n1, n2))
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             g.add_edge(Edge(n1, n2))
 
     def test_multiple_edges_allowed_in_multigraph(self) -> None:
@@ -370,7 +371,7 @@ class TestUndirectedGraphVsGraph:
         g.add_node(n2)
 
         # UndirectedGraph rejects DirectedEdge
-        with pytest.raises(TypeError):
+        with pytest.raises(StructureTypeError):
             g.add_edge(DirectedEdge(n1, n2))  # type: ignore[arg-type]
 
     def test_functionality_identical_for_undirected_edges(self) -> None:

@@ -69,6 +69,11 @@ sds.graphs.graph : Graph implementations using edges.
 
 from typing import Any, Optional
 
+from ..core.exceptions import (
+    ElementNotFoundError,
+    InvalidParameterError,
+    StructureTypeError,
+)
 from .node import GraphNode
 
 __all__ = ["Edge", "DirectedEdge", "WeightedEdge", "WeightedDirectedEdge"]
@@ -150,11 +155,11 @@ class Edge:
             If node1 and node2 are the same and allow_self_loop is False.
         """
         if not isinstance(node1, GraphNode):
-            raise TypeError(f"node1 must be GraphNode, got {type(node1)}")
+            raise StructureTypeError(f"node1 must be GraphNode, got {type(node1)}")
         if not isinstance(node2, GraphNode):
-            raise TypeError(f"node2 must be GraphNode, got {type(node2)}")
+            raise StructureTypeError(f"node2 must be GraphNode, got {type(node2)}")
         if node1.id == node2.id and not allow_self_loop:
-            raise ValueError(
+            raise InvalidParameterError(
                 "Self-loops not allowed. Set allow_self_loop=True to enable."
             )
 
@@ -283,7 +288,7 @@ class Edge:
         elif node.id == self._node2.id:
             return self._node1
         else:
-            raise ValueError(f"Node {node.id} is not part of this edge")
+            raise ElementNotFoundError(f"Node {node.id} is not part of this edge")
 
     def is_self_loop(self) -> bool:
         """Check if this edge is a self-loop.
@@ -610,7 +615,9 @@ class WeightedEdge(Edge):
         try:
             self._weight = float(weight)
         except (TypeError, ValueError) as e:
-            raise TypeError(f"Weight must be numeric, got {type(weight)}") from e
+            raise StructureTypeError(
+                f"Weight must be numeric, got {type(weight)}"
+            ) from e
 
     @property
     def weight(self) -> float:
@@ -706,7 +713,9 @@ class WeightedDirectedEdge(DirectedEdge):
         try:
             self._weight = float(weight)
         except (TypeError, ValueError) as e:
-            raise TypeError(f"Weight must be numeric, got {type(weight)}") from e
+            raise StructureTypeError(
+                f"Weight must be numeric, got {type(weight)}"
+            ) from e
 
     @property
     def weight(self) -> float:

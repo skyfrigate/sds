@@ -16,6 +16,11 @@
 
 import pytest
 
+from sds.core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    StructureTypeError,
+)
 from sds.graph.directed import DirectedGraph
 from sds.graph.edge import DirectedEdge, Edge
 from sds.graph.interfaces import AbstractDirectedGraph, AbstractGraph
@@ -76,13 +81,13 @@ class TestDirectedGraphNodeOperations:
         g = DirectedGraph()
         n1 = GraphNode("A", "n1")
         g.add_node(n1)
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             g.add_node(n1)
 
     def test_add_non_graphnode_raises_error(self) -> None:
         """Test that adding non-GraphNode raises TypeError."""
         g = DirectedGraph()
-        with pytest.raises(TypeError, match="Expected GraphNode"):
+        with pytest.raises(StructureTypeError, match="Expected GraphNode"):
             g.add_node("not a node")  # type: ignore[arg-type]
 
     def test_remove_node(self) -> None:
@@ -114,7 +119,7 @@ class TestDirectedGraphNodeOperations:
         """Test removing nonexistent node raises ValueError."""
         g = DirectedGraph()
         n1 = GraphNode("A", "n1")
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.remove_node(n1)
 
     def test_get_node_by_id(self) -> None:
@@ -169,7 +174,7 @@ class TestDirectedGraphEdgeOperations:
         g.add_node(n2)
 
         # Regular Edge should raise TypeError
-        with pytest.raises(TypeError, match="Expected DirectedEdge"):
+        with pytest.raises(StructureTypeError, match="Expected DirectedEdge"):
             g.add_edge(Edge(n1, n2))  # type: ignore[arg-type]
 
     def test_add_edge_with_nonexistent_source(self) -> None:
@@ -179,7 +184,7 @@ class TestDirectedGraphEdgeOperations:
         n2 = GraphNode("B", "n2")
         g.add_node(n2)
         # n1 not added
-        with pytest.raises(ValueError, match="Source node.*not in graph"):
+        with pytest.raises(ElementNotFoundError, match="Source node.*not in graph"):
             g.add_edge(DirectedEdge(n1, n2))
 
     def test_add_edge_with_nonexistent_target(self) -> None:
@@ -189,7 +194,7 @@ class TestDirectedGraphEdgeOperations:
         n2 = GraphNode("B", "n2")
         g.add_node(n1)
         # n2 not added
-        with pytest.raises(ValueError, match="Target node.*not in graph"):
+        with pytest.raises(ElementNotFoundError, match="Target node.*not in graph"):
             g.add_edge(DirectedEdge(n1, n2))
 
     def test_add_duplicate_edge_raises_error(self) -> None:
@@ -200,7 +205,7 @@ class TestDirectedGraphEdgeOperations:
         g.add_node(n1)
         g.add_node(n2)
         g.add_edge(DirectedEdge(n1, n2))
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             g.add_edge(DirectedEdge(n1, n2))
 
     def test_add_multiple_edges_in_multidigraph(self) -> None:
@@ -271,7 +276,7 @@ class TestDirectedGraphEdgeOperations:
         g.add_node(n1)
         g.add_node(n2)
         e = DirectedEdge(n1, n2)
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.remove_edge(e)
 
 
@@ -390,11 +395,11 @@ class TestDirectedGraphDegrees:
         g = DirectedGraph()
         n1 = GraphNode("A", "n1")
 
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.degree(n1)
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.in_degree(n1)
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.out_degree(n1)
 
 
@@ -501,14 +506,14 @@ class TestDirectedGraphPredecessorsSuccessors:
         """Test predecessors of nonexistent node raises ValueError."""
         g = DirectedGraph()
         n1 = GraphNode("A", "n1")
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             list(g.predecessors(n1))
 
     def test_successors_nonexistent_node_raises_error(self) -> None:
         """Test successors of nonexistent node raises ValueError."""
         g = DirectedGraph()
         n1 = GraphNode("A", "n1")
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             list(g.successors(n1))
 
 

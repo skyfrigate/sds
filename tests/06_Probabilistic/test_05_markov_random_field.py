@@ -16,6 +16,7 @@
 
 import pytest
 
+from sds.core.exceptions import DuplicateElementError
 from sds.probabilistic.factor import Factor
 from sds.probabilistic.interfaces import AbstractMarkovRandomField
 from sds.probabilistic.markov_random_field import MarkovRandomField
@@ -160,7 +161,7 @@ class TestEdgeManagement:
         mrf.add_variable(rain)
         mrf.add_variable(sprinkler)
         mrf.add_edge(rain, sprinkler)
-        with pytest.raises(ValueError):
+        with pytest.raises(DuplicateElementError):
             mrf.add_edge(rain, sprinkler)
 
     def test_isolated_variable_has_no_neighbors(self, rain: RandomVariable) -> None:

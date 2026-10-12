@@ -29,6 +29,7 @@ from typing import Callable, List, Union
 
 import pytest
 
+from sds.core.exceptions import ElementNotFoundError
 from sds.graph import (
     AdjacencyListGraph,
     DirectedEdge,
@@ -373,7 +374,7 @@ class TestDirectedGraphUndirectedEdgeRemoval:
         g.add_node(a)
         g.add_node(b)
         g.add_edge(DirectedEdge(b, a))
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             g.remove_edge(Edge(a, b))
 
 

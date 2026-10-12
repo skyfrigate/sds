@@ -21,6 +21,12 @@ internal representations.
 
 import pytest
 
+from sds.core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    InvalidParameterError,
+    StructureTypeError,
+)
 from sds.graph import AdjacencyListGraph, AdjacencyMatrixGraph, Edge, GraphNode
 from sds.linear import SimpleNode
 
@@ -60,7 +66,7 @@ class TestAdjacencyListOperations:
     def test_get_adjacency_list_nonexistent_node(self) -> None:
         """Test getting adjacency list for nonexistent node."""
         g = AdjacencyListGraph()
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.get_adjacency_list("nonexistent")
 
     def test_adjacency_list_isolation(self) -> None:
@@ -90,7 +96,9 @@ class TestAdjacencyListBasicOperations:
         """Test adding invalid nodes."""
         g = AdjacencyListGraph()
         invalid_node = SimpleNode("Not a GraphNode")
-        with pytest.raises(TypeError, match="Expected GraphNode, got SimpleNode"):
+        with pytest.raises(
+            StructureTypeError, match="Expected GraphNode, got SimpleNode"
+        ):
             g.add_node(invalid_node)
 
     def test_add_again_node(self) -> None:
@@ -98,7 +106,9 @@ class TestAdjacencyListBasicOperations:
         g = AdjacencyListGraph()
         n1 = GraphNode("A", "n1")
         g.add_node(n1)
-        with pytest.raises(ValueError, match="Node n1 already exists in graph"):
+        with pytest.raises(
+            DuplicateElementError, match="Node n1 already exists in graph"
+        ):
             g.add_node(n1)
 
     def test_add_edge(self) -> None:
@@ -149,9 +159,9 @@ class TestAdjacencyMatrixGraphCreation:
 
     def test_invalid_max_nodes_raises_error(self) -> None:
         """Test that invalid max_nodes raises ValueError."""
-        with pytest.raises(ValueError, match="must be positive"):
+        with pytest.raises(InvalidParameterError, match="must be positive"):
             AdjacencyMatrixGraph(max_nodes=0)
-        with pytest.raises(ValueError, match="must be positive"):
+        with pytest.raises(InvalidParameterError, match="must be positive"):
             AdjacencyMatrixGraph(max_nodes=-5)
 
 

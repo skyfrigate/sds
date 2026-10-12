@@ -15,6 +15,11 @@
 
 import pytest
 
+from sds.core.exceptions import (
+    DuplicateElementError,
+    ElementNotFoundError,
+    StructureTypeError,
+)
 from sds.graph.edge import Edge
 from sds.graph.graph import Graph
 from sds.graph.interfaces import AbstractGraph
@@ -74,7 +79,7 @@ class TestGraphNodeOperations:
         g = Graph()
         n1 = GraphNode("A", "n1")
         g.add_node(n1)
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             g.add_node(n1)
 
     def test_add_node_with_same_id_raises_error(self) -> None:
@@ -83,13 +88,13 @@ class TestGraphNodeOperations:
         n1 = GraphNode("A", "n1")
         n2 = GraphNode("B", "n1")  # Same ID
         g.add_node(n1)
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             g.add_node(n2)
 
     def test_add_non_graphnode_raises_error(self) -> None:
         """Test that adding non-GraphNode raises TypeError."""
         g = Graph()
-        with pytest.raises(TypeError, match="Expected GraphNode"):
+        with pytest.raises(StructureTypeError, match="Expected GraphNode"):
             g.add_node("not a node")  # type: ignore[arg-type]
 
     def test_has_node_returns_false_for_nonexistent(self) -> None:
@@ -129,7 +134,7 @@ class TestGraphNodeOperations:
         """Test removing nonexistent node raises ValueError."""
         g = Graph()
         n1 = GraphNode("A", "n1")
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.remove_node(n1)
 
     def test_get_node_by_id(self) -> None:
@@ -180,7 +185,7 @@ class TestGraphEdgeOperations:
         n2 = GraphNode("B", "n2")
         g.add_node(n1)
         # n2 not added
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.add_edge(Edge(n1, n2))
 
     def test_add_non_edge_raises_error(self) -> None:
@@ -188,7 +193,7 @@ class TestGraphEdgeOperations:
         g = Graph()
         n1 = GraphNode("A", "n1")
         g.add_node(n1)
-        with pytest.raises(TypeError, match="Expected Edge"):
+        with pytest.raises(StructureTypeError, match="Expected Edge"):
             g.add_edge("not an edge")  # type: ignore[arg-type]
 
     def test_add_duplicate_edge_raises_error(self) -> None:
@@ -199,7 +204,7 @@ class TestGraphEdgeOperations:
         g.add_node(n1)
         g.add_node(n2)
         g.add_edge(Edge(n1, n2))
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             g.add_edge(Edge(n1, n2))
 
     def test_add_multiple_edges_in_multigraph(self) -> None:
@@ -267,7 +272,7 @@ class TestGraphEdgeOperations:
         g.add_node(n1)
         g.add_node(n2)
         e = Edge(n1, n2)
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.remove_edge(e)
 
     def test_remove_edge_in_multigraph(self) -> None:
@@ -331,7 +336,7 @@ class TestGraphNeighborsAndDegree:
         """Test neighbors of nonexistent node raises ValueError."""
         g = Graph()
         n1 = GraphNode("A", "n1")
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             list(g.neighbors(n1))
 
     def test_degree_isolated_node(self) -> None:
@@ -375,7 +380,7 @@ class TestGraphNeighborsAndDegree:
         """Test degree of nonexistent node raises ValueError."""
         g = Graph()
         n1 = GraphNode("A", "n1")
-        with pytest.raises(ValueError, match="not in graph"):
+        with pytest.raises(ElementNotFoundError, match="not in graph"):
             g.degree(n1)
 
 
