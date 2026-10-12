@@ -185,6 +185,19 @@ class TestGraphText:
         """Weights of undirected edges appear at both ends."""
         assert to_text(weighted_undirected) == "A -- B (2.5)\nB -- A (2.5)"
 
+    def test_undirected_self_loop_listed_once(self, nodes: Any) -> None:
+        """A self-loop appears once in its node's adjacency."""
+        from sds.graph import Graph
+        from sds.graph.edge import Edge
+
+        a, b, _, _ = nodes
+        graph = Graph()
+        graph.add_node(a)
+        graph.add_node(b)
+        graph.add_edge(Edge(a, a, allow_self_loop=True))
+        graph.add_edge(Edge(a, b))
+        assert to_text(graph) == "A -- A, B\nB -- A"
+
     def test_label_receives_nodes(self, digraph: Any) -> None:
         """For graphs the label function receives the node."""
         assert to_text(digraph, label=lambda node: node.id) == "n1 -> n2\nn2 -> n1"
