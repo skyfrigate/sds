@@ -57,6 +57,7 @@ Sorting a structure and getting a structure back:
 
 from typing import Any, Iterable, List, Type, TypeVar
 
+from ..core.exceptions import StructureTypeError
 from ..core.interfaces import LinearCollection
 
 C = TypeVar("C", bound=LinearCollection)
@@ -101,7 +102,9 @@ def to_list(structure: LinearCollection) -> List[Any]:
     Time complexity: O(n). Space complexity: O(n).
     """
     if not isinstance(structure, LinearCollection):
-        raise TypeError(f"Expected a LinearCollection, got {type(structure).__name__}")
+        raise StructureTypeError(
+            f"Expected a LinearCollection, got {type(structure).__name__}"
+        )
     return list(structure)
 
 
@@ -150,7 +153,7 @@ def from_list(cls: Type[C], items: Iterable[Any], **kwargs: Any) -> C:
     no tail pointer) and for ``PriorityQueue`` (sorted insertion).
     """
     if not (isinstance(cls, type) and issubclass(cls, LinearCollection)):
-        raise TypeError(f"Expected a LinearCollection subclass, got {cls!r}")
+        raise StructureTypeError(f"Expected a LinearCollection subclass, got {cls!r}")
     structure = cls(**kwargs)
     for item in items:
         structure.add(item)

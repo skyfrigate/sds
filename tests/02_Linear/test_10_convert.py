@@ -18,6 +18,7 @@ from typing import Any, Iterator, List, Type
 
 import pytest
 
+from sds.core.exceptions import StructureTypeError
 from sds.core.interfaces import LinearCollection
 from sds.linear import (
     CircularLinkedList,
@@ -71,7 +72,7 @@ class TestToList:
     @pytest.mark.parametrize("bad", [[1, 2], (1, 2), "ab", None, 42])
     def test_rejects_non_linear_collection(self, bad: Any) -> None:
         """Anything that is not a LinearCollection raises TypeError."""
-        with pytest.raises(TypeError, match="LinearCollection"):
+        with pytest.raises(StructureTypeError, match="LinearCollection"):
             to_list(bad)
 
 
@@ -117,12 +118,12 @@ class TestFromList:
     @pytest.mark.parametrize("bad", [list, dict, int, "Stack", None])
     def test_rejects_non_linear_class(self, bad: Any) -> None:
         """A class outside LinearCollection (or a non-class) raises TypeError."""
-        with pytest.raises(TypeError, match="LinearCollection"):
+        with pytest.raises(StructureTypeError, match="LinearCollection"):
             from_list(bad, [1, 2])
 
     def test_rejects_instance_instead_of_class(self) -> None:
         """Passing an instance rather than the class raises TypeError."""
-        with pytest.raises(TypeError, match="LinearCollection"):
+        with pytest.raises(StructureTypeError, match="LinearCollection"):
             from_list(LinkedList(), [1])  # type: ignore[arg-type]
 
     def test_unexpected_kwarg_raises(self) -> None:

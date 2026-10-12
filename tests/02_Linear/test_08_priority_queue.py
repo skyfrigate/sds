@@ -4,7 +4,7 @@ import re
 
 import pytest
 
-from sds.core.exceptions import EmptyStructureError
+from sds.core.exceptions import ElementNotFoundError, EmptyStructureError
 from sds.core.interfaces import LinearCollection
 from sds.linear.queue import PriorityItem, PriorityQueue
 
@@ -168,7 +168,12 @@ class TestPriorityQueueAlaises:
                 EmptyStructureError,
                 "Cannot remove from empty priority queue",
             ),
-            ("populated_priority_queue", 6, ValueError, "Item 6 not found in queue"),
+            (
+                "populated_priority_queue",
+                6,
+                ElementNotFoundError,
+                "Item 6 not found in queue",
+            ),
         ],
     )
     def test_remove_failed(self, list_name, index, exc, exc_msg, request):
