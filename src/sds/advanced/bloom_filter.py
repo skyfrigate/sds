@@ -80,6 +80,7 @@ import hashlib
 import math
 from typing import Any, Iterator
 
+from ..core.exceptions import InvalidParameterError
 from .interfaces import AbstractProbabilisticSet
 
 __all__ = ["BloomFilter"]
@@ -178,9 +179,11 @@ class BloomFilter(AbstractProbabilisticSet):
         Time complexity: O(m) for bit array initialisation.
         """
         if size < 1:
-            raise ValueError(f"size must be a positive integer, got {size}")
+            raise InvalidParameterError(f"size must be a positive integer, got {size}")
         if num_hashes < 1:
-            raise ValueError(f"num_hashes must be a positive integer, got {num_hashes}")
+            raise InvalidParameterError(
+                f"num_hashes must be a positive integer, got {num_hashes}"
+            )
 
         self._size = size
         self._num_hashes = num_hashes
@@ -295,9 +298,9 @@ class BloomFilter(AbstractProbabilisticSet):
         where :math:`p` is ``fp_rate`` and :math:`m` is rounded up.
         """
         if n < 1:
-            raise ValueError(f"n must be a positive integer, got {n}")
+            raise InvalidParameterError(f"n must be a positive integer, got {n}")
         if not (0.0 < fp_rate < 1.0):
-            raise ValueError(f"fp_rate must be in (0.0, 1.0), got {fp_rate}")
+            raise InvalidParameterError(f"fp_rate must be in (0.0, 1.0), got {fp_rate}")
 
         ln2_sq = math.log(2) ** 2
         m = math.ceil(-n * math.log(fp_rate) / ln2_sq)
@@ -508,7 +511,7 @@ class BloomFilter(AbstractProbabilisticSet):
         Time complexity: O(m/8).
         """
         if self._size != other._size or self._num_hashes != other._num_hashes:
-            raise ValueError(
+            raise InvalidParameterError(
                 "Cannot union filters with different size or num_hashes. "
                 f"Got ({self._size}, {self._num_hashes}) and "
                 f"({other._size}, {other._num_hashes})."
@@ -560,7 +563,7 @@ class BloomFilter(AbstractProbabilisticSet):
         individual filters. Use with caution.
         """
         if self._size != other._size or self._num_hashes != other._num_hashes:
-            raise ValueError(
+            raise InvalidParameterError(
                 "Cannot intersect filters with different size or num_hashes. "
                 f"Got ({self._size}, {self._num_hashes}) and "
                 f"({other._size}, {other._num_hashes})."

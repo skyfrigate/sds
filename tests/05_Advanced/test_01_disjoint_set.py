@@ -21,6 +21,7 @@ verifying correctness, edge cases, and performance characteristics.
 import pytest
 
 from sds.advanced import DisjointSet
+from sds.core.exceptions import DuplicateElementError, ElementNotFoundError
 
 
 class TestDisjointSetCreation:
@@ -79,7 +80,7 @@ class TestMakeSet:
         """Test that duplicate element raises ValueError."""
         ds = DisjointSet()
         ds.make_set(1)
-        with pytest.raises(ValueError, match="already exists"):
+        with pytest.raises(DuplicateElementError, match="already exists"):
             ds.make_set(1)
 
     def test_make_set_unhashable_raises_error(self) -> None:
@@ -109,7 +110,7 @@ class TestFind:
     def test_find_nonexistent_element_raises_error(self) -> None:
         """Test finding nonexistent element raises ValueError."""
         ds = DisjointSet()
-        with pytest.raises(ValueError, match="not in any set"):
+        with pytest.raises(ElementNotFoundError, match="not in any set"):
             ds.find(999)
 
     def test_find_after_union(self) -> None:
@@ -168,7 +169,7 @@ class TestUnion:
         """Test union with nonexistent element raises ValueError."""
         ds = DisjointSet()
         ds.make_set(1)
-        with pytest.raises(ValueError, match="not in any set"):
+        with pytest.raises(ElementNotFoundError, match="not in any set"):
             ds.union(1, 999)
 
     def test_union_reduces_set_count(self) -> None:
@@ -224,7 +225,7 @@ class TestConnected:
         """Test connected with nonexistent element raises ValueError."""
         ds = DisjointSet()
         ds.make_set(1)
-        with pytest.raises(ValueError, match="not in any set"):
+        with pytest.raises(ElementNotFoundError, match="not in any set"):
             ds.connected(1, 999)
 
 
@@ -265,7 +266,7 @@ class TestSize:
     def test_size_nonexistent_element_raises_error(self) -> None:
         """Test size with nonexistent element raises ValueError."""
         ds = DisjointSet()
-        with pytest.raises(ValueError, match="not in any set"):
+        with pytest.raises(ElementNotFoundError, match="not in any set"):
             ds.size(999)
 
 

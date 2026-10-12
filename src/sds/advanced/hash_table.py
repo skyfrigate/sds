@@ -85,6 +85,7 @@ References
 
 from typing import Any, Iterator, Optional
 
+from ..core.exceptions import InvalidParameterError
 from .interfaces import AbstractHashTable
 
 __all__ = ["HashTableChaining", "HashTableOpenAddressing"]
@@ -179,9 +180,11 @@ class HashTableChaining(AbstractHashTable):
         Time complexity: O(capacity).
         """
         if capacity < 1:
-            raise ValueError(f"capacity must be at least 1, got {capacity}")
+            raise InvalidParameterError(f"capacity must be at least 1, got {capacity}")
         if max_load_factor <= 0:
-            raise ValueError(f"max_load_factor must be positive, got {max_load_factor}")
+            raise InvalidParameterError(
+                f"max_load_factor must be positive, got {max_load_factor}"
+            )
         self._capacity = capacity
         self._max_load_factor = max_load_factor
         self._size = 0
@@ -630,9 +633,9 @@ class HashTableOpenAddressing(AbstractHashTable):
         Time complexity: O(capacity).
         """
         if capacity < 2:
-            raise ValueError(f"capacity must be at least 2, got {capacity}")
+            raise InvalidParameterError(f"capacity must be at least 2, got {capacity}")
         if not (0.0 < max_load_factor < 1.0):
-            raise ValueError(
+            raise InvalidParameterError(
                 f"max_load_factor must be in (0.0, 1.0), got {max_load_factor}"
             )
         self._capacity = capacity

@@ -49,6 +49,7 @@ import random
 import pytest
 
 from sds.advanced import AbstractFenwickTree, FenwickTree
+from sds.core.exceptions import InvalidParameterError
 
 # ---------------------------------------------------------------------------
 # TestFenwickTreeCreation
@@ -100,17 +101,17 @@ class TestFenwickTreeCreation:
 
     def test_invalid_size_zero(self) -> None:
         """size=0 raises ValueError."""
-        with pytest.raises(ValueError, match="size"):
+        with pytest.raises(InvalidParameterError, match="size"):
             FenwickTree(size=0)
 
     def test_invalid_size_negative(self) -> None:
         """Negative size raises ValueError."""
-        with pytest.raises(ValueError, match="size"):
+        with pytest.raises(InvalidParameterError, match="size"):
             FenwickTree(size=-1)
 
     def test_from_list_empty_raises(self) -> None:
         """from_list with empty list raises ValueError."""
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             FenwickTree.from_list([])
 
 
@@ -439,12 +440,12 @@ class TestValueErrors:
     def test_range_sum_left_greater_than_right(self) -> None:
         """range_sum(left, right) with left > right raises ValueError."""
         ft = FenwickTree(size=5)
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             ft.range_sum(4, 2)
 
     def test_from_list_empty(self) -> None:
         """from_list([]) raises ValueError."""
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             FenwickTree.from_list([])
 
 

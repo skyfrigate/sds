@@ -44,6 +44,7 @@ import string
 import pytest
 
 from sds.advanced import CountMinSketch
+from sds.core.exceptions import InvalidParameterError
 from sds.core.interfaces import Collection
 
 # ---------------------------------------------------------------------------
@@ -98,32 +99,32 @@ class TestCountMinSketchCreation:
 
     def test_invalid_epsilon_zero(self) -> None:
         """epsilon=0.0 raises ValueError."""
-        with pytest.raises(ValueError, match="epsilon"):
+        with pytest.raises(InvalidParameterError, match="epsilon"):
             CountMinSketch(epsilon=0.0, delta=0.1)
 
     def test_invalid_epsilon_one(self) -> None:
         """epsilon=1.0 raises ValueError."""
-        with pytest.raises(ValueError, match="epsilon"):
+        with pytest.raises(InvalidParameterError, match="epsilon"):
             CountMinSketch(epsilon=1.0, delta=0.1)
 
     def test_invalid_delta_zero(self) -> None:
         """delta=0.0 raises ValueError."""
-        with pytest.raises(ValueError, match="delta"):
+        with pytest.raises(InvalidParameterError, match="delta"):
             CountMinSketch(epsilon=0.1, delta=0.0)
 
     def test_invalid_delta_one(self) -> None:
         """delta=1.0 raises ValueError."""
-        with pytest.raises(ValueError, match="delta"):
+        with pytest.raises(InvalidParameterError, match="delta"):
             CountMinSketch(epsilon=0.1, delta=1.0)
 
     def test_from_dimensions_invalid_width(self) -> None:
         """from_dimensions(width=0, ...) raises ValueError."""
-        with pytest.raises(ValueError, match="width"):
+        with pytest.raises(InvalidParameterError, match="width"):
             CountMinSketch.from_dimensions(width=0, depth=3)
 
     def test_from_dimensions_invalid_depth(self) -> None:
         """from_dimensions(..., depth=0) raises ValueError."""
-        with pytest.raises(ValueError, match="depth"):
+        with pytest.raises(InvalidParameterError, match="depth"):
             CountMinSketch.from_dimensions(width=100, depth=0)
 
 
@@ -169,7 +170,7 @@ class TestAdd:
     def test_add_count_invalid(self) -> None:
         """add with count < 1 raises ValueError."""
         cms = CountMinSketch.from_dimensions(100, 3)
-        with pytest.raises(ValueError, match="count"):
+        with pytest.raises(InvalidParameterError, match="count"):
             cms.add("x", count=0)
 
     def test_add_integer(self) -> None:
@@ -383,14 +384,14 @@ class TestMerge:
         """merge() raises ValueError when widths differ."""
         cms1 = CountMinSketch.from_dimensions(100, 4)
         cms2 = CountMinSketch.from_dimensions(200, 4)
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             cms1.merge(cms2)
 
     def test_merge_mismatched_depth_raises(self) -> None:
         """merge() raises ValueError when depths differ."""
         cms1 = CountMinSketch.from_dimensions(100, 4)
         cms2 = CountMinSketch.from_dimensions(100, 5)
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             cms1.merge(cms2)
 
     def test_merge_no_false_negatives(self) -> None:

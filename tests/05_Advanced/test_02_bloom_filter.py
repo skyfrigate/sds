@@ -50,6 +50,7 @@ import pytest
 
 from sds.advanced import BloomFilter
 from sds.advanced.interfaces import AbstractProbabilisticSet
+from sds.core.exceptions import InvalidParameterError
 
 # ---------------------------------------------------------------------------
 # Fixtures
@@ -98,22 +99,22 @@ class TestBloomFilterCreation:
 
     def test_invalid_size_zero(self) -> None:
         """size=0 raises ValueError."""
-        with pytest.raises(ValueError, match="size"):
+        with pytest.raises(InvalidParameterError, match="size"):
             BloomFilter(size=0, num_hashes=3)
 
     def test_invalid_size_negative(self) -> None:
         """Negative size raises ValueError."""
-        with pytest.raises(ValueError, match="size"):
+        with pytest.raises(InvalidParameterError, match="size"):
             BloomFilter(size=-1, num_hashes=3)
 
     def test_invalid_num_hashes_zero(self) -> None:
         """num_hashes=0 raises ValueError."""
-        with pytest.raises(ValueError, match="num_hashes"):
+        with pytest.raises(InvalidParameterError, match="num_hashes"):
             BloomFilter(size=1000, num_hashes=0)
 
     def test_invalid_num_hashes_negative(self) -> None:
         """Negative num_hashes raises ValueError."""
-        with pytest.raises(ValueError, match="num_hashes"):
+        with pytest.raises(InvalidParameterError, match="num_hashes"):
             BloomFilter(size=1000, num_hashes=-1)
 
     def test_fill_ratio_empty(self) -> None:
@@ -162,27 +163,27 @@ class TestOptimalParams:
 
     def test_invalid_n_zero(self) -> None:
         """n=0 raises ValueError."""
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             BloomFilter.optimal_params(n=0, fp_rate=0.01)
 
     def test_invalid_n_negative(self) -> None:
         """Negative n raises ValueError."""
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             BloomFilter.optimal_params(n=-10, fp_rate=0.01)
 
     def test_invalid_fp_rate_zero(self) -> None:
         """fp_rate=0.0 raises ValueError."""
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             BloomFilter.optimal_params(n=1000, fp_rate=0.0)
 
     def test_invalid_fp_rate_one(self) -> None:
         """fp_rate=1.0 raises ValueError."""
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             BloomFilter.optimal_params(n=1000, fp_rate=1.0)
 
     def test_invalid_fp_rate_above_one(self) -> None:
         """fp_rate > 1.0 raises ValueError."""
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             BloomFilter.optimal_params(n=1000, fp_rate=2.0)
 
     def test_optimal_filter_achieves_target_fp(self) -> None:
@@ -484,14 +485,14 @@ class TestUnion:
         """union() raises ValueError when sizes differ."""
         bf1 = BloomFilter(size=1000, num_hashes=3)
         bf2 = BloomFilter(size=500, num_hashes=3)
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             bf1.union(bf2)
 
     def test_union_mismatched_hashes_raises(self) -> None:
         """union() raises ValueError when num_hashes differ."""
         bf1 = BloomFilter(size=1000, num_hashes=3)
         bf2 = BloomFilter(size=1000, num_hashes=5)
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             bf1.union(bf2)
 
     def test_union_preserves_no_false_negatives(self) -> None:
@@ -542,14 +543,14 @@ class TestIntersection:
         """intersection() raises ValueError when sizes differ."""
         bf1 = BloomFilter(size=1000, num_hashes=3)
         bf2 = BloomFilter(size=500, num_hashes=3)
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             bf1.intersection(bf2)
 
     def test_intersection_mismatched_hashes_raises(self) -> None:
         """intersection() raises ValueError when num_hashes differ."""
         bf1 = BloomFilter(size=1000, num_hashes=3)
         bf2 = BloomFilter(size=1000, num_hashes=5)
-        with pytest.raises(ValueError):
+        with pytest.raises(InvalidParameterError):
             bf1.intersection(bf2)
 
     def test_intersection_empty_gives_empty_result(self) -> None:
