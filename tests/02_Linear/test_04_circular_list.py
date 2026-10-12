@@ -5,9 +5,10 @@ import re
 import pytest
 
 from sds.core.exceptions import (
+    ElementNotFoundError,
     EmptyStructureError,
+    IndexStructureError,
 )
-from sds.core.exceptions import IndexStructureError as SDSIndexError
 from sds.linear.interfaces import AbstractLinkedList
 from sds.linear.list import CircularLinkedList
 
@@ -58,11 +59,11 @@ class TestCircularLinkedListCreation:
     @pytest.mark.parametrize(
         "list_name, index, exc, exc_msg",
         [
-            ("empty_circular_list", 0, SDSIndexError, "List is empty"),
+            ("empty_circular_list", 0, IndexStructureError, "List is empty"),
             (
                 "populated_circular_list",
                 6,
-                SDSIndexError,
+                IndexStructureError,
                 "Index 6 out of range for list of size 5",
             ),
         ],
@@ -212,13 +213,13 @@ class TestCircularLinkedListInsert:
             (
                 "empty_circular_list",
                 1,
-                SDSIndexError,
+                IndexStructureError,
                 "Index 1 out of range for insertion",
             ),
             (
                 "populated_circular_list",
                 -10,
-                SDSIndexError,
+                IndexStructureError,
                 "Index -5 out of range for insertion",
             ),
         ],
@@ -372,7 +373,12 @@ class TestCircularLinkedListRemoveOperations:
                 EmptyStructureError,
                 "Cannot remove from empty list",
             ),
-            ("populated_circular_list", 10, SDSIndexError, "Index 10 out of range"),
+            (
+                "populated_circular_list",
+                10,
+                IndexStructureError,
+                "Index 10 out of range",
+            ),
         ],
     )
     def test_remove_at_failed(self, name_list, index, exc, exc_msg, request):
@@ -415,7 +421,7 @@ class TestCircularLinkedListRemoveOperations:
             (
                 "populated_circular_list",
                 (1, 2),
-                ValueError,
+                ElementNotFoundError,
                 "Item (1, 2) not found in list",
             ),
         ],

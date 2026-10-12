@@ -63,9 +63,10 @@ sds.linear.queue : Queue implementations.
 from typing import Any, Iterator, Optional, cast
 
 from ..core.exceptions import (
+    ElementNotFoundError,
     EmptyStructureError,
+    IndexStructureError,
 )
-from ..core.exceptions import IndexStructureError as SDSIndexError
 from .interfaces import AbstractLinkedList
 from .node import DoublyNode, SimpleNode
 
@@ -392,14 +393,14 @@ class LinkedList(AbstractLinkedList):
         Time complexity: O(n)
         """
         if self.is_empty():
-            raise SDSIndexError("List is empty")
+            raise IndexStructureError("List is empty")
 
         # Handle negative indices
         if index < 0:
             index += self._size
 
         if index < 0 or index >= self._size:
-            raise SDSIndexError(
+            raise IndexStructureError(
                 f"Index {index} out of range for list of size {self._size}"
             )
 
@@ -503,7 +504,7 @@ class LinkedList(AbstractLinkedList):
             index += self._size
 
         if index < 0 or index > self._size:
-            raise SDSIndexError(f"Index {index} out of range for insertion")
+            raise IndexStructureError(f"Index {index} out of range for insertion")
 
         if index == 0:
             self.prepend(item)
@@ -650,7 +651,7 @@ class LinkedList(AbstractLinkedList):
                 return data
             current = nxt
 
-        raise ValueError(f"Item {item} not found in list")
+        raise ElementNotFoundError(f"Item {item} not found in list")
 
     def remove_at(self, index: int) -> Any:
         """Remove and return the item at the specified index.
@@ -694,7 +695,7 @@ class LinkedList(AbstractLinkedList):
             index += self._size
 
         if index < 0 or index >= self._size:
-            raise SDSIndexError(f"Index {index} out of range")
+            raise IndexStructureError(f"Index {index} out of range")
 
         if index == 0:
             return self.remove_first()
@@ -1130,14 +1131,14 @@ class DoublyLinkedList(AbstractLinkedList):
         Time complexity: O(n/2) due to bidirectional optimization
         """
         if self.is_empty():
-            raise SDSIndexError("List is empty")
+            raise IndexStructureError("List is empty")
 
         # Handle negative indices
         if index < 0:
             index += self._size
 
         if index < 0 or index >= self._size:
-            raise SDSIndexError(
+            raise IndexStructureError(
                 f"Index {index} out of range for list of size {self._size}"
             )
 
@@ -1251,7 +1252,7 @@ class DoublyLinkedList(AbstractLinkedList):
             index += self._size
 
         if index < 0 or index > self._size:
-            raise SDSIndexError(f"Index {index} out of range for insertion")
+            raise IndexStructureError(f"Index {index} out of range for insertion")
 
         if index == 0:
             self.prepend(item)
@@ -1407,7 +1408,7 @@ class DoublyLinkedList(AbstractLinkedList):
 
             current = current.next
 
-        raise ValueError(f"Item {item} not found in list")
+        raise ElementNotFoundError(f"Item {item} not found in list")
 
     def remove_at(self, index: int) -> Any:
         """Remove and return the item at the specified index.
@@ -1451,7 +1452,7 @@ class DoublyLinkedList(AbstractLinkedList):
             index += self._size
 
         if index < 0 or index >= self._size:
-            raise SDSIndexError(f"Index {index} out of range")
+            raise IndexStructureError(f"Index {index} out of range")
 
         if index == 0:
             return self.remove_first()
@@ -1870,14 +1871,14 @@ class CircularLinkedList(AbstractLinkedList):
         Time complexity: O(n)
         """
         if self.is_empty():
-            raise SDSIndexError("List is empty")
+            raise IndexStructureError("List is empty")
 
         # Handle negative indices
         if index < 0:
             index += self._size
 
         if index < 0 or index >= self._size:
-            raise SDSIndexError(
+            raise IndexStructureError(
                 f"Index {index} out of range for list of size {self._size}"
             )
 
@@ -1984,7 +1985,7 @@ class CircularLinkedList(AbstractLinkedList):
             index += self._size
 
         if index < 0 or index > self._size:
-            raise SDSIndexError(f"Index {index} out of range for insertion")
+            raise IndexStructureError(f"Index {index} out of range for insertion")
 
         if index == 0:
             self.prepend(item)
@@ -2136,7 +2137,7 @@ class CircularLinkedList(AbstractLinkedList):
                 return data
             current = nxt
 
-        raise ValueError(f"Item {item} not found in list")
+        raise ElementNotFoundError(f"Item {item} not found in list")
 
     def remove_at(self, index: int) -> Any:
         """Remove and return the item at the specified index.
@@ -2180,7 +2181,7 @@ class CircularLinkedList(AbstractLinkedList):
             index += self._size
 
         if index < 0 or index >= self._size:
-            raise SDSIndexError(f"Index {index} out of range")
+            raise IndexStructureError(f"Index {index} out of range")
 
         if index == 0:
             return self.remove_first()
