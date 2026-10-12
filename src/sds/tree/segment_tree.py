@@ -69,7 +69,6 @@ from typing import Any, Callable, Iterator, List, Optional, Union
 
 from ..core.exceptions import (
     IndexStructureError,
-    InvalidOperationError,
     InvalidParameterError,
 )
 from .interfaces import AbstractSegmentTree
@@ -325,7 +324,7 @@ class SegmentTree(AbstractSegmentTree):
         ------
         IndexStructureError
             If ``left`` or ``right`` is out of bounds.
-        InvalidOperationError
+        InvalidParameterError
             If ``left`` is greater than ``right``.
 
         Examples
@@ -345,7 +344,7 @@ class SegmentTree(AbstractSegmentTree):
                 f"Invalid range: [{left}, {right}] for array of size {self._size}"
             )
         if left > right:
-            raise InvalidOperationError(
+            raise InvalidParameterError(
                 f"Invalid range: [{left}, {right}] for array of size {self._size}"
             )
 
