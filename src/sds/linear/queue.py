@@ -58,7 +58,7 @@ sds.linear.list : List implementations used internally.
 
 from typing import Any, Callable, Iterator, Optional, cast
 
-from ..core.exceptions import EmptyStructureError
+from ..core.exceptions import ElementNotFoundError, EmptyStructureError
 from ..core.interfaces import LinearCollection
 from ..core.node import Node
 from . import SimpleNode
@@ -696,7 +696,7 @@ class PriorityQueue(LinearCollection):
                 return data
             current = nxt
 
-        raise ValueError(f"Item {item} not found in queue")
+        raise ElementNotFoundError(f"Item {item} not found in queue")
 
 
 class PriorityItem:

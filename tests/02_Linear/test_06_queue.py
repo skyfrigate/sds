@@ -4,7 +4,7 @@ import re
 
 import pytest
 
-from sds.core.exceptions import EmptyStructureError
+from sds.core.exceptions import ElementNotFoundError, EmptyStructureError
 from sds.core.interfaces import LinearCollection
 from sds.linear.queue import Queue
 
@@ -63,7 +63,12 @@ class TestQueueCreation:
         "q_name, index, exc, exc_msg",
         [
             ("empty_queue", 2, EmptyStructureError, "Cannot remove from empty list"),
-            ("populated_queue", (1, 2), ValueError, "Item (1, 2) not found in list"),
+            (
+                "populated_queue",
+                (1, 2),
+                ElementNotFoundError,
+                "Item (1, 2) not found in list",
+            ),
         ],
     )
     def test_remove_failed(self, q_name, index, exc, exc_msg, request):

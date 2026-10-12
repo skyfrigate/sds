@@ -2,7 +2,7 @@
 
 import pytest
 
-from sds.core.exceptions import EmptyStructureError
+from sds.core.exceptions import ElementNotFoundError, EmptyStructureError
 from sds.core.interfaces import LinearCollection
 from sds.linear.stack import Stack
 
@@ -232,7 +232,7 @@ class TestStackRemove:
 
     def test_remove_nonexistent_item(self, populated_stack):
         """Test removing a non-existent item raises error."""
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             populated_stack.remove(999)
 
     def test_remove_from_empty_stack(self, empty_stack):

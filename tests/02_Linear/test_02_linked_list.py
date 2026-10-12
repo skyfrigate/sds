@@ -3,9 +3,10 @@
 import pytest
 
 from sds.core.exceptions import (
+    ElementNotFoundError,
     EmptyStructureError,
+    IndexStructureError,
 )
-from sds.core.exceptions import IndexStructureError as SDSIndexError
 from sds.linear.interfaces import AbstractLinkedList
 from sds.linear.list import LinkedList
 
@@ -143,10 +144,10 @@ class TestLinkedListInsertAt:
 
     def test_insert_at_invalid_index(self, populated_linked_list):
         """Test inserting at an invalid index."""
-        with pytest.raises(SDSIndexError):
+        with pytest.raises(IndexStructureError):
             populated_linked_list.insert_at(10, 999)
 
-        with pytest.raises(SDSIndexError):
+        with pytest.raises(IndexStructureError):
             populated_linked_list.insert_at(-10, 999)
 
 
@@ -228,7 +229,7 @@ class TestLinkedListRemove:
 
     def test_remove_nonexistent_item(self, populated_linked_list):
         """Test removing a non-existent item raises error."""
-        with pytest.raises(ValueError):
+        with pytest.raises(ElementNotFoundError):
             populated_linked_list.remove(999)
 
     def test_remove_from_empty_list(self, empty_linked_list):
@@ -270,10 +271,10 @@ class TestLinkedListRemoveAt:
 
     def test_remove_at_invalid_index(self, populated_linked_list):
         """Test removing at invalid index raises error."""
-        with pytest.raises(SDSIndexError):
+        with pytest.raises(IndexStructureError):
             populated_linked_list.remove_at(10)
 
-        with pytest.raises(SDSIndexError):
+        with pytest.raises(IndexStructureError):
             populated_linked_list.remove_at(-10)
 
     def test_remove_at_from_empty_list(self, empty_linked_list):
@@ -317,15 +318,15 @@ class TestLinkedListIndexing:
 
     def test_getitem_invalid_index(self, populated_linked_list):
         """Test getting item at invalid index raises error."""
-        with pytest.raises(SDSIndexError):
+        with pytest.raises(IndexStructureError):
             _ = populated_linked_list[10]
 
-        with pytest.raises(SDSIndexError):
+        with pytest.raises(IndexStructureError):
             _ = populated_linked_list[-10]
 
     def test_getitem_from_empty_list(self, empty_linked_list):
         """Test getting from empty list raises error."""
-        with pytest.raises(SDSIndexError):
+        with pytest.raises(IndexStructureError):
             _ = empty_linked_list[0]
 
     def test_setitem_positive_index(self, populated_linked_list):
@@ -344,10 +345,10 @@ class TestLinkedListIndexing:
 
     def test_setitem_invalid_index(self, populated_linked_list):
         """Test setting item at invalid index raises error."""
-        with pytest.raises(SDSIndexError):
+        with pytest.raises(IndexStructureError):
             populated_linked_list[10] = 999
 
-        with pytest.raises(SDSIndexError):
+        with pytest.raises(IndexStructureError):
             populated_linked_list[-10] = 999
 
 
