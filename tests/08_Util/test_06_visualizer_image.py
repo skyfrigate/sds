@@ -89,6 +89,17 @@ class TestSaveImage:
         save_image(structure, str(tmp_path / "circular.png"))
         assert (tmp_path / "circular.png").exists()
 
+    def test_self_loop(self, tmp_path: Path, nodes: Any) -> None:
+        """A self-loop is drawn as a loop mark next to its node."""
+        from sds.graph import Graph
+        from sds.graph.edge import Edge
+
+        graph = Graph()
+        graph.add_node(nodes[0])
+        graph.add_edge(Edge(nodes[0], nodes[0], allow_self_loop=True))
+        save_image(graph, tmp_path / "loop.png")
+        assert (tmp_path / "loop.png").read_bytes().startswith(PNG_SIGNATURE)
+
     def test_format_from_extension(self, tmp_path: Path, bst: Any) -> None:
         """The extension selects the format."""
         save_image(bst, tmp_path / "tree.svg")
