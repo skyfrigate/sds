@@ -32,15 +32,18 @@ for B-trees, and returns the text to display. By default the visualiser
 shows ``str(node.data)``, or ``str(item)``.
 """
 
-from typing import Any
+import os
+from typing import Any, Union
 
 from ...core.exceptions import StructureTypeError
 from ._dot import graph_dot
+from ._image import save_drawing
+from ._layout import layout
 from ._mermaid import view_mermaid
 from ._text import view_text
 from ._views import GraphView, Label, build_view
 
-__all__ = ["to_dot", "to_mermaid", "to_text"]
+__all__ = ["save_image", "to_dot", "to_mermaid", "to_text"]
 
 
 def to_text(structure: Any, *, label: Label = None) -> str:
@@ -184,3 +187,43 @@ def to_dot(graph: Any, *, label: Label = None) -> str:
             f"DOT output is for graphs only, not {type(graph).__name__}"
         )
     return graph_dot(view)
+
+
+def save_image(
+    structure: Any,
+    path: Union[str, "os.PathLike[str]"],
+    *,
+    label: Label = None,
+) -> None:
+    """Draw a structure and save the image to ``path``.
+
+    Needs the ``image`` extra: ``pip install "pysds-tools[image]"``. The
+    format follows the file extension (``.png``, ``.svg``, ``.pdf``, or
+    any other format matplotlib writes). Nodes are placed by the
+    visualiser: a row for linear structures, in-order columns for binary
+    trees, children-centred parents for other trees, a circle for graphs.
+
+    Parameters
+    ----------
+    structure : Any
+        A supported structure (see the module documentation).
+    path : str or os.PathLike
+        Destination file; its extension selects the format.
+    label : Callable[[Any], str], optional
+        Labelling function; see the module documentation.
+
+    Raises
+    ------
+    StructureTypeError
+        If the structure is not supported.
+    OptionalDependencyError
+        If matplotlib is not installed.
+    InvalidParameterError
+        If the extension names no format matplotlib can write.
+
+    Notes
+    -----
+    The figure is built with matplotlib's object API: no window opens and
+    the global pyplot state is not touched.
+    """
+    save_drawing(layout(build_view(structure, label)), path)
