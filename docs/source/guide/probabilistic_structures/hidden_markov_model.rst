@@ -228,7 +228,7 @@ Best Practices
 .. code-block:: python
 
    hmm.set_states(weather)
-   hmm.set_states(other_weather)  # ValueError: already set -- use clear() instead
+   hmm.set_states(other_weather)  # InvalidOperationError: already set -- use clear() instead
 
 Common Pitfalls
 ==================

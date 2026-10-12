@@ -11,12 +11,32 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
 
 ## [Unreleased]
 
+### Added
+
+- `sds.core.exceptions`: `ElementNotFoundError`, `DuplicateElementError` and
+  `InvalidParameterError` (each also a `ValueError`), and `StructureTypeError`
+  (also a `TypeError`), all deriving from `DataStructureError` and exported
+  from `sds.core`. Every module raises them in place of the built-in
+  exceptions they replace, so `except DataStructureError` now catches any
+  error the library reports about elements, arguments or types, and existing
+  `except ValueError` / `except TypeError` clauses keep working (#104).
+
 ### Changed
 
+- **Breaking:** when the arguments are valid but the state of the structure
+  forbids the operation, `InvalidOperationError` is raised instead of
+  `ValueError`: an edge closing a cycle in `BayesianNetwork`, a
+  `MarkovRandomField` factor whose scope is not a clique, a
+  `HiddenMarkovModel` component set twice or read before being set (also
+  reached through `forward()` and `viterbi()`), `BayesianNetwork.joint()`
+  with a CPT missing. `InvalidOperationError` is not a `ValueError` (#104).
+- **Breaking:** `AdjacencyMatrixGraph.add_node()` beyond `max_nodes` raises
+  `FullStructureError` instead of `ValueError` (#104).
+- **Breaking:** `SegmentTree.query()` with `left` greater than `right` raises
+  `InvalidParameterError` instead of `InvalidOperationError` (#104).
 - `SegmentTree.query()`, `update()` and `get()` raise `IndexStructureError`
   (an `IndexError`) for out-of-bounds indices, instead of
-  `InvalidOperationError`. `query()` still raises `InvalidOperationError`
-  when `left` is greater than `right` with both bounds valid.
+  `InvalidOperationError`.
 
 ### Fixed
 
@@ -26,6 +46,8 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
 
 ### Removed
 
+- The `SDSIndexError` alias of `IndexStructureError` in `sds.linear.list`
+  (#104).
 - Support for Python 3.10, which reaches end of life in October 2026. The
   minimum supported version is now Python 3.11.
 
