@@ -38,7 +38,9 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-image = []
+image = [
+    "matplotlib>=3.10",
+]
 yaml = [
     "pyyaml>=6.0",
 ]
