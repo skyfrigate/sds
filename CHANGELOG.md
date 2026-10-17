@@ -31,6 +31,14 @@ neither tagged nor published. 0.6.0 is the first release published on PyPI
   them with matplotlib (`image` extra). Output follows the structures'
   deterministic order, and an optional `label` callable chooses what each
   node shows (#65).
+- `pysds` command (also `python -m sds`): `pysds show FILE` builds the
+  structure described in a JSON file, or a YAML file with the `yaml` extra,
+  and displays it as text, Mermaid or DOT (`--format`), to standard output or
+  a file (`--output`), or draws it to an image (`--image`, `image` extra).
+  `-` reads JSON on standard input. The file names the class in `type`, gives
+  the content in `items`, `root` or `nodes` and `edges`, and constructor
+  arguments in `options`. Exit status 1 reports an input error on one line
+  of standard error, 2 a usage error (#106).
 
 ### Changed
 
