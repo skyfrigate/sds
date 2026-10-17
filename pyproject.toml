@@ -35,9 +35,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Typing :: Typed",
 ]
-dependencies = [
-    "matplotlib>=3.11.2",
-]
+dependencies = []
 
 [project.optional-dependencies]
 image = [
