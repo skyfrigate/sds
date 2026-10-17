@@ -108,6 +108,7 @@ This documentation is organized into several sections:
    guide/advanced_structures/index
    guide/probabilistic_structures/index
    guide/algorithms/index
+   guide/utilities/index
 
 .. toctree::
    :maxdepth: 3
