@@ -96,6 +96,17 @@ inference, and the design paradigms behind them.
 
    algorithms/index
 
+Utilities
+=========
+
+Tooling around the structures: visualizing them, describing them in files
+for the ``pysds`` command, and handling the errors the library reports.
+
+.. toctree::
+   :maxdepth: 2
+
+   utilities/index
+
 Additional Resources
 ====================
 
