@@ -32,4 +32,5 @@ The SDS library is organized into several module families:
    advanced/index
    probabilistic/index
    algorithms/index
+   utils/index
 
