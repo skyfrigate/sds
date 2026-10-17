@@ -109,6 +109,28 @@ to_mermaid(tree)              # "flowchart TD\n    n0[\"50\"]\n..."
 save_image(tree, "tree.png")  # needs pysds-tools[image]
 ```
 
+## Command Line
+
+Installing the package also installs `pysds`, which builds a structure
+described in a JSON or YAML file and displays it:
+
+```bash
+$ cat roads.json
+{"type": "WeightedGraph",
+ "nodes": [{"id": "P", "data": "Paris"}, {"id": "L", "data": "Lyon"}],
+ "edges": [["P", "L", 465]]}
+$ pysds show roads.json
+Paris -- Lyon (465.0)
+Lyon -- Paris (465.0)
+$ pysds show roads.json --format mermaid --output roads.mmd
+$ pysds show roads.json --image roads.svg   # needs pysds-tools[image]
+```
+
+YAML files (`.yaml`, `.yml`) need the `yaml` extra; `-` reads JSON on
+standard input, and `python -m sds` runs the same command. The
+[command-line guide](https://pysds-tools.readthedocs.io/en/latest/guide/utilities/command_line.html)
+describes the file format of each family of structures.
+
 ## Architecture
 
 The project is organized into thematic modules, one per family of structures:
@@ -122,7 +144,7 @@ src/sds/
 ├── advanced/       # Deterministic advanced structures (disjoint set, Bloom filter, ...)
 ├── probabilistic/  # Probabilistic graphical models (Bayesian networks, MRF, HMM)
 ├── algorithms/     # Sorting, tree and graph algorithms, probabilistic inference
-└── utils/          # (planned) visualizer, extended exceptions
+└── utils/          # Visualizer, pysds command, optional-dependency errors
 ```
 
 ## Available Structures
@@ -303,15 +325,17 @@ in the shared `.github` repository.
 
 - `sds.probabilistic`: `BayesianNetwork`, `MarkovRandomField`, `HiddenMarkovModel`
 
-### `v0.7.0` — Algorithms ✅ *Completed (this release)*
+### `v0.7.0` — Algorithms ✅ *Completed*
 
 - `sds.algorithms`: sorting (MergeSort, QuickSort), tree traversals and
   rebalancing, graph algorithms (BFS, DFS, Dijkstra, Kruskal), probabilistic
   inference (Variable Elimination, Belief Propagation, Forward, Viterbi)
 
-### `v0.8.0` — Utilities *Planned*
+### `v0.8.0` — Utilities ✅ *Completed (this release)*
 
-- Shared visualizer, extended exception hierarchy
+- `sds.utils`: visualizer (text, Mermaid, DOT, images), `pysds` command,
+  optional extras `image` and `yaml`
+- Extended exception hierarchy in `sds.core`; Python 3.11 minimum
 
 ### `v0.9.0`–`v1.0.0` — Quality Consolidation & Stable Release *Planned*
 

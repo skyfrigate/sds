@@ -110,6 +110,28 @@ to_mermaid(tree)              # "flowchart TD\n    n0[\"50\"]\n..."
 save_image(tree, "tree.png")  # nécessite pysds-tools[image]
 ```
 
+## Ligne de commande
+
+L'installation du paquet installe aussi la commande `pysds`, qui construit
+une structure décrite dans un fichier JSON ou YAML et l'affiche :
+
+```bash
+$ cat roads.json
+{"type": "WeightedGraph",
+ "nodes": [{"id": "P", "data": "Paris"}, {"id": "L", "data": "Lyon"}],
+ "edges": [["P", "L", 465]]}
+$ pysds show roads.json
+Paris -- Lyon (465.0)
+Lyon -- Paris (465.0)
+$ pysds show roads.json --format mermaid --output roads.mmd
+$ pysds show roads.json --image roads.svg   # nécessite pysds-tools[image]
+```
+
+Les fichiers YAML (`.yaml`, `.yml`) demandent l'extra `yaml` ; `-` lit du
+JSON sur l'entrée standard, et `python -m sds` lance la même commande. Le
+[guide de la ligne de commande](https://pysds-tools.readthedocs.io/en/latest/guide/utilities/command_line.html)
+(en anglais) décrit le format de fichier de chaque famille de structures.
+
 ## Architecture
 
 Le projet est organisé en modules thématiques, un par famille de structures :
@@ -123,7 +145,7 @@ src/sds/
 ├── advanced/       # Structures avancées déterministes (disjoint set, Bloom filter, ...)
 ├── probabilistic/  # Modèles graphiques probabilistes (réseaux bayésiens, MRF, HMM)
 ├── algorithms/     # Tri, algorithmes d'arbres et de graphes, inférence probabiliste
-└── utils/          # (prévu) visualiseur, exceptions étendues
+└── utils/          # Visualiseur, commande pysds, erreurs de dépendance optionnelle
 ```
 
 ## Structures disponibles
@@ -305,15 +327,17 @@ dans le dépôt partagé `.github`.
 
 - `sds.probabilistic` : `BayesianNetwork`, `MarkovRandomField`, `HiddenMarkovModel`
 
-### `v0.7.0` — Algorithmes ✅ *Terminé (cette release)*
+### `v0.7.0` — Algorithmes ✅ *Terminé*
 
 - `sds.algorithms` : tri (MergeSort, QuickSort), parcours et rééquilibrage
   d'arbres, algorithmes de graphes (BFS, DFS, Dijkstra, Kruskal), inférence
   probabiliste (Variable Elimination, Belief Propagation, Forward, Viterbi)
 
-### `v0.8.0` — Utilitaires *Prévu*
+### `v0.8.0` — Utilitaires ✅ *Terminé (cette release)*
 
-- Visualiseur partagé, hiérarchie d'exceptions étendue
+- `sds.utils` : visualiseur (texte, Mermaid, DOT, images), commande `pysds`,
+  extras optionnels `image` et `yaml`
+- Hiérarchie d'exceptions étendue dans `sds.core` ; Python 3.11 minimum
 
 ### `v0.9.0`–`v1.0.0` — Consolidation qualité & Release stable *Prévu*
 
