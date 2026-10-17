@@ -47,6 +47,9 @@ yaml = [
     "pyyaml>=6.0",
 ]
 
+[project.scripts]
+pysds = "sds.utils.cli:main"
+
 [project.urls]
 Homepage = "https://github.com/skyfrigate/sds"
 Repository = "https://github.com/skyfrigate/sds"
