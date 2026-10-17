@@ -18,9 +18,13 @@ import os
 import subprocess
 import sys
 import textwrap
+import tomllib
 from pathlib import Path
 
 import sds
+
+#: pyproject.toml of the source tree the tests run against.
+PYPROJECT = Path(__file__).resolve().parents[2] / "pyproject.toml"
 
 #: Packages installed only by extras of pysds-tools.
 EXTRA_PACKAGES = ("matplotlib", "yaml")
@@ -68,3 +72,14 @@ def test_every_module_imports_without_extras() -> None:
         check=False,
     )
     assert result.returncode == 0, result.stdout + result.stderr
+
+
+def test_base_install_declares_no_dependency() -> None:
+    """[project].dependencies is empty: third-party packages go in extras.
+
+    The import test above blocks the extra packages but cannot see what
+    the distribution declares; this one reads the declaration itself.
+    """
+    with PYPROJECT.open("rb") as stream:
+        project = tomllib.load(stream)["project"]
+    assert project.get("dependencies", []) == []
